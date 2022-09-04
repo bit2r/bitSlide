@@ -1,0 +1,52 @@
+
+##  {auto-animate="true"}
+
+::: {style="margin-top: 100px; color: black"}
+과학기술 Software 사업
+:::
+
+##  {auto-animate="true"}
+
+::: {style="margin-top: 300px; font-size: 4.5em; color: black;"}
+과학기술 S/W 사업
+:::
+
+## R
+
+::: panel-tabset
+### R 코드
+
+<center>![](fig/rstudio/R_Screenshot.png){out.width="100%"}</center>
+
+### R 스크립트
+
+<center>![](fig/rstudio/R_script.png){out.width="100%"}</center>
+
+### LaTeX + R
+
+<center>![](fig/rstudio/LaTex_R.jpg){out.width="100%"}</center>
+
+### RStudio IDE
+
+<center>![](fig/rstudio/rstudio_session_4pane_layout.png){out.width="100%"}</center>
+
+### Posit
+
+<br>
+
+::: {layout-ncol=2}
+![](fig/rstudio/visual-markdown-editor-tips.webp)
+
+![](fig/rstudio/modify-image-size-in-visual-markdown-editor.webp)
+:::
+
+### 과학기술 SW
+
+
+![](fig/rstudio/posit-trend.png)
+
+- **재현성**: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?
+- **회복성**: 소프트웨어가 망하게 되면 대안은 있는가?
+- **참여**: 방법론을 결정하는데 참여할 수 있나?
+
+:::

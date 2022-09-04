@@ -38,6 +38,8 @@ editor_options:
 :::
 :::
 
+{{< include rstudio-history.qmd >}}
+
 {{< include data-science.qmd >}}
 
 {{< include problem.qmd >}}
@@ -45,3 +47,8 @@ editor_options:
 {{< include solution.qmd >}}
 
 {{< include end-slide.qmd >}}
+
+
+
+
+

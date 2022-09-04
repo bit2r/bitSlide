@@ -39,14 +39,14 @@
     "href": "slideshow/202210-hongik/index.html#section",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "데이터 사이언스"
+    "text": "과학기술 Software 사업"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#section-1",
     "href": "slideshow/202210-hongik/index.html#section-1",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "데이터 사이언스"
+    "text": "과학기술 S/W 사업"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#데이터-사이언스",
@@ -67,14 +67,14 @@
     "href": "slideshow/202210-hongik/index.html#section-2",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "데이터 과학 문제"
+    "text": "데이터 사이언스"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#section-3",
     "href": "slideshow/202210-hongik/index.html#section-3",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "데이터 과학 문제"
+    "text": "데이터 사이언스"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#데이터-사이언스---출판",
@@ -123,14 +123,14 @@
     "href": "slideshow/202210-hongik/index.html#section-4",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "데이터 과학 노력들"
+    "text": "데이터 과학 문제"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#section-5",
     "href": "slideshow/202210-hongik/index.html#section-5",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "데이터 과학 노력들"
+    "text": "데이터 과학 문제"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#quarto",
@@ -144,7 +144,7 @@
     "href": "slideshow/202210-hongik/index.html#section-6",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "한국 R 사용자회"
+    "text": "데이터 과학 노력들"
   },
   {
     "objectID": "slideshow/202210-hongik/problem.html",
@@ -229,5 +229,26 @@
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
     "text": "디자인과 아키텍쳐의 중요성\n\n\n\n이광춘, 한국 R 사용자회\n\n\n2022-10-11\n\n\n\n\n   github.com/bit2r/quarto"
+  },
+  {
+    "objectID": "slideshow/202210-hongik/index.html#r",
+    "href": "slideshow/202210-hongik/index.html#r",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "R",
+    "text": "R\n\n\nR 코드\nR 스크립트\nLaTeX + R\nRStudio IDE\nPosit\n과학기술 SW\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n\n참여: 방법론을 결정하는데 참여할 수 있나?"
+  },
+  {
+    "objectID": "slideshow/202210-hongik/index.html#section-7",
+    "href": "slideshow/202210-hongik/index.html#section-7",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "데이터 과학 노력들"
+  },
+  {
+    "objectID": "slideshow/202210-hongik/index.html#section-8",
+    "href": "slideshow/202210-hongik/index.html#section-8",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "한국 R 사용자회"
   }
 ]
