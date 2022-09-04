@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!2021-amia-informatics-summit/"
+    - "!2022-tdw-ehr-lessons/"
+    - "!introduccion-xaringan/"
+    - "!tour-of-the-tidyverse/"
+    - "!tour-of-the-tidyverse-v2/"
+
+website:
+  title: "발표자료 | 한국 R 사용자회"
+  search: false
+  favicon: img/koRea_logo.ico
+  navbar:
+    title: false
+    logo: img/koRea_logo.png
+    logo-alt: "Home" #doesn't seem to show up
+    right:
+      - icon: github
+        href: https://github.com/bit2r/slides
+        aria-label: GitHub repo
+    left:
+      - text: 한국 R 사용자회
+        href: https://r2bit.com
+
+  site-url: https://r2bit.com/bitSlide
+  description: '한국 R 사용자회 발표자료 모음'
+
+  opengraph: true
+
+format:
+  html:
+    theme:
+      - cosmo
+      - assets/quarto.scss
+    mainfont: "Red Hat Text"
+    fontcolor: "#002642"
+    linkcolor: "#A23E02"
+    monofont: "Consolas"
+    monobackgroundcolor: "#FFFFFF"
+    backgroundcolor: "#fffbf2"
+
+    code-link: true
+
+execute:
+  freeze: true

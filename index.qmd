@@ -1,0 +1,18 @@
+---
+title: "발표자료"
+listing:
+  contents:
+    - "metadata.yml"
+  type: grid
+  fields: [date, title, subtitle, image, categories]
+  sort: "date desc"
+  image-height: 100%
+  image-placeholder: img/social-card.png
+  #categories: unnumbered
+page-layout: full
+include-in-header: assets/umami.html
+---
+
+<p class="f6 measure lh-copy tc center">통계(데이터 과학), 기계학습, 딥러닝 관련 발표자료와 앱 공개를 통해 통계 대중화와 디지털 불평등 해소를 위해 함께 노력하고 있습니다.</p>
+
+<p class="f7 measure lh-copy tc center i">한국 R 사용자회</p>
