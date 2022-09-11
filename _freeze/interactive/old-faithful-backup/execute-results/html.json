@@ -1,0 +1,14 @@
+{
+  "hash": "10a45ef8f417d86e7d94d057bad92dd3",
+  "result": {
+    "markdown": "---\ntitle: \"Old Faithful\"\nformat: \n  html:\n    toc: false\n    echo: false\n    keep-hidden: true\n    code-tools: \n      source: https://github.com/quarto-dev/quarto-web/tree/main/docs/interactive/shiny/_examples/old-faithful/shiny-old-faithful.qmd\n---\n\n\nData on eruptions of the Old Faithful geyser in Yellowstone National Park,\nWyoming, USA. The data was collected continuously from August 1st until\nAugust 15th, 1985.\n\n\n\n```{ojs}\n//| panel: input\nviewof waiting_bins = Inputs.range(\n  [43, 96], \n  {value: 50, step: 1, label: \"시간:\"}\n)\n```\n\n\n\n## Data\n\n\n::: {.cell warning.hidden='true' message.hidden='true'}\n\n```{.r .cell-code .hidden}\nlibrary(tidyverse)\n\neruption_tbl <- faithful %>% as_tibble() %>% select(waiting)\n\nfaithful %>% \n  write_csv(\"data/faithful.csv\")\n\nojs_define(eruption_data = eruption_tbl)\n```\n:::\n\n```{ojs}\neruption_data = FileAttachment(\"../data/faithful.csv\").csv({ typed: true })\n```\n\n```{ojs}\nfiltered = eruption_data.filter(function(eruption) {\n  return waiting_bins < eruption.waiting ;\n})\n```\n\n\n\n## Plot\n\n\n```{ojs}\nPlot.rectY( filtered, \n  Plot.binX( \n    {y: \"count\"}, \n    {x: \"waiting\",\n    thresholds: \"sturges\"})\n  )\n  .plot()\n```\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

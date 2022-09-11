@@ -2,10 +2,20 @@
 - title: "데이터 사이언스에서 디자인과 아키텍쳐의 중요성"
   subtitle: "Emerging Creativity Workshop"
   author: "이광춘"
-  date: 2020-10-11
+  date: 2022-10-11
   image: slideshow/202210-hongik/fig/hongik-detail-featured.png
-  path: slideshow/202210-hongik/index.html
+  path: slideshow/202210-hongik/index.qmd
   categories:
     - revealjs
+
+
+- title: "파머 펭귄"
+  subtitle: "Observables JS 인터랙티브 문서"
+  author: "이광춘"
+  date: 2022-09-11
+  image: interactive/fig/derek-oyen-3Xd5j9-drDA-unsplash.jpg
+  path: interactive/palmer-penguins.qmd
+  categories:
+    - observable js
 
 # External slide decks

@@ -1,0 +1,126 @@
+---
+title: "파머 펭귄"
+subtitle: ".csv 파일 (영어)"
+format: 
+  html:
+    toc: true
+    echo: false
+    keep-hidden: true
+    code-tools: true
+editor_options: 
+  chunk_output_type: console
+---
+
+
+![](fig/interactive-workflow.png)
+
+# 파머 펭귄 (국문)
+
+## 데이터 패키지
+
+R 혹은 파이썬에서 데이터를 바로 생성시키고 이를 인터랙티브 시각화에 사용하는 방식도 존재한다. 마찬가지로 외부 데이터 패키지 [`bitData`](https://github.com/bit2r/bitData) 에서 R 환경에서 데이터를 적재시키고 이를 인터랙티브 시각화에 사용하는 방식도 있다.
+
+
+```{r}
+#| eval: false
+#| output: false
+#| warning: false
+#| message: false
+#| echo: false
+
+library(tidyverse)
+
+normal_values <- rnorm(1000)
+
+normal_data <- normal_values %>% 
+  as_tibble()
+
+ojs_define(normal_data = normal_data)
+```
+
+
+# 파머 펭귄 (국문)
+
+## 데이터
+
+[`bitData`](https://github.com/bit2r/bitData) 데이터 패키지 내장된 파머 펭귄 데이터를 번역한 `penguins` 데이터프레임을 `palmer-penguins-korean.csv` 파일로 저장시킨다.
+
+
+```{r}
+#| eval: false
+library(tidyverse)
+
+bitData::penguins  %>% 
+  write_csv("data/palmer-penguins-korean.csv")
+```
+
+
+```{ojs}
+kdata = FileAttachment("../data/palmer-penguins-korean.csv").csv({ typed: true })
+```
+
+UI에서 입력값을 선택하면서 시각화하는 데이터가 달라지기 때문에 이를 반영하여 인터랙티브 대상 시각화 데이터를 제작한다.
+
+```{ojs}
+kfiltered = kdata.filter(function(penguin) {
+  return bill_length_min < penguin.부리_길이 &&
+         섬이름.includes(penguin.섬이름);
+})
+```
+
+
+## UI
+
+인터랙티브 데이터 시각화를 위해서 UI 입력부분을 정의한다. 먼저 슬라이더 입력값(`Input.range()`) 과 체크박스 입력값(`Inputs.checkbox()`)을 넣어둔다.
+
+```{ojs}
+//| panel: input
+viewof bill_length_min = Inputs.range(
+  [32, 50], 
+  {value: 35, step: 1, label: "부리 길이 (최소):"}
+)
+viewof islands = Inputs.checkbox(
+  ["토르거센", "비스코", "드림"], 
+  { value: ["토르거센", "비스코"], 
+    label: "섬이름:"
+  }
+)
+```
+
+## 인터랙티브 그래프
+
+인터랙티브 데이터를 선택한 결과를 실시간 데이터와 그래프로 시각화하여 문서에 담아낸다.
+
+::: {.panel-tabset}
+
+### 시각화
+
+```{ojs}
+Plot.rectY(kfiltered, 
+  Plot.binX(
+    {y: "count"}, 
+    {x: "체중", fill: "종명칭", thresholds: 20}
+  ))
+  .plot({
+    facet: {
+      data: filtered,
+      x: "성별",
+      y: "종명칭",
+      marginRight: 80
+    },
+    marks: [
+      Plot.frame(),
+    ]
+  }
+)
+```
+
+### 표
+
+```{ojs}
+Inputs.table(filtered)
+```
+
+:::
+
+

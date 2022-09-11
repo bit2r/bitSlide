@@ -1,6 +1,9 @@
 [
   {
     "listing": "/index.html",
-    "items": []
+    "items": [
+      "slideshow/202210-hongik/index.html",
+      "interactive/palmer-penguins.html"
+    ]
   }
 ]

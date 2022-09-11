@@ -1,0 +1,71 @@
+---
+title: "Old Faithful"
+format: 
+  html:
+    toc: false
+    echo: false
+    keep-hidden: true
+    code-tools: 
+      source: https://github.com/quarto-dev/quarto-web/tree/main/docs/interactive/shiny/_examples/old-faithful/shiny-old-faithful.qmd
+---
+
+Data on eruptions of the Old Faithful geyser in Yellowstone National Park,
+Wyoming, USA. The data was collected continuously from August 1st until
+August 15th, 1985.
+
+
+```{ojs}
+//| panel: input
+viewof waiting_bins = Inputs.range(
+  [43, 96], 
+  {value: 50, step: 1, label: "시간:"}
+)
+```
+
+
+## Data
+
+```{r}
+#| eval: false
+#| output: false
+#| warning: false
+#| message: false
+#| echo: false
+
+library(tidyverse)
+
+eruption_tbl <- faithful %>% as_tibble() %>% select(waiting)
+
+faithful %>% 
+  write_csv("data/faithful.csv")
+
+ojs_define(eruption_data = eruption_tbl)
+```
+
+
+```{ojs}
+eruption_data = FileAttachment("../data/faithful.csv").csv({ typed: true })
+```
+
+
+```{ojs}
+filtered = eruption_data.filter(function(eruption) {
+  return waiting_bins < eruption.waiting ;
+})
+```
+
+
+## Plot
+
+```{ojs}
+Plot.rectY( filtered, 
+  Plot.binX( 
+    {y: "count"}, 
+    {x: "waiting",
+    thresholds: "sturges"})
+  )
+  .plot()
+```
+
+
+
