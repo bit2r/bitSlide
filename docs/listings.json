@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "slideshow/202210-hongik/index.html",
+      "interactive/climate-crisis.html",
       "interactive/palmer-penguins.html"
     ]
   }

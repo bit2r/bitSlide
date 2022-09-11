@@ -10,11 +10,20 @@
 
 
 - title: "파머 펭귄"
-  subtitle: "Observables JS 인터랙티브 문서"
+  subtitle: "파머 펭귄 데이터로 Observables JS 인터랙티브 문서의 가능성과 한계"
   author: "이광춘"
   date: 2022-09-11
   image: interactive/fig/derek-oyen-3Xd5j9-drDA-unsplash.jpg
   path: interactive/palmer-penguins.qmd
+  categories:
+    - observable js
+
+- title: "기후 위기: CO2"
+  subtitle: "NOAA 하와이섬에서 측정한 CO2 추세를 면밀히 살펴보자."
+  author: "이광춘"
+  date: 2022-09-12
+  image: interactive/fig/cristi-goia-1RsQzyDswqI-unsplash.jpg
+  path: interactive/climate-crisis.qmd
   categories:
     - observable js
 
