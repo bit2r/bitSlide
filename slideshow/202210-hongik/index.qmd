@@ -21,6 +21,7 @@ execute:
   freeze: true  
 editor_options: 
   chunk_output_type: console
+bibliography: references.bib  
 ---
 
 
@@ -45,6 +46,8 @@ editor_options:
 {{< include problem.qmd >}}
 
 {{< include solution.qmd >}}
+
+{{< include references.qmd >}}
 
 {{< include end-slide.qmd >}}
 

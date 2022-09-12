@@ -87,6 +87,25 @@
     code span.va { color: #aa5d00; } /* Variable */
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
   </style>
 <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
 <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -429,9 +448,12 @@
 <li><a data-tabby-default="" href="#tabset-1-1">R 코드</a></li>
 <li><a href="#tabset-1-2">R 스크립트</a></li>
 <li><a href="#tabset-1-3">LaTeX + R</a></li>
-<li><a href="#tabset-1-4">RStudio IDE</a></li>
+<li><a href="#tabset-1-4">IDE</a></li>
 <li><a href="#tabset-1-5">Posit</a></li>
 <li><a href="#tabset-1-6">과학기술 SW</a></li>
+<li><a href="#tabset-1-7">재현성</a></li>
+<li><a href="#tabset-1-8">재현성 상세</a></li>
+<li><a href="#tabset-1-9">Compendium</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1">
@@ -478,6 +500,34 @@
 <strong>참여</strong>: 방법론을 결정하는데 참여할 수 있나?</li>
 </ul>
 </div>
+<div id="tabset-1-7">
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="fig/reproducible-matrix.jpg"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><p><strong>Reproducible</strong>: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.</p></li>
+<li><p><strong>Replicable</strong>: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.</p></li>
+<li><p><strong>Robust</strong>: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.</p></li>
+<li><p><strong>Generalisable</strong>: Combining replicable and robust findings allow us to form generalisable results. <span class="citation" data-cites="turing-2022">(<a href="#/ref-turing-2022" role="doc-biblioref" onclick="return false;">Community and Scriberia 2022</a>)</span> <!-- Note that running an analysis on a different software implementation and with a different dataset does not provide generalised results. There will be many more steps to know how well the work applies to all the different aspects of the research question. Generalisation is an important step towards understanding that the result is not dependent on a particular dataset nor a particular version of the analysis pipeline. --></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="tabset-1-8">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="fig/reproducibility-spectrum.png"></p>
+<p></p><figcaption><span class="citation" data-cites="Peng2011">(<a href="#/ref-Peng2011" role="doc-biblioref" onclick="return false;">Peng 2011</a>)</span></figcaption><p></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-9">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="fig/compendium.png"></p>
+<p></p><figcaption><span class="citation" data-cites="Marwick2018">(<a href="#/ref-Marwick2018" role="doc-biblioref" onclick="return false;">Marwick, Boettiger, and Mullen 2018</a>)</span></figcaption><p></p>
+</figure>
+</div>
+</div>
 </div>
 </div>
 </section><section id="section-2" class="slide level2" data-auto-animate="true"><h2 data-id="quarto-animate-title"></h2>
@@ -491,7 +541,6 @@
 </section><section id="데이터-사이언스" class="slide level2"><h2>데이터 사이언스</h2>
 <div class="r-stack">
 <p><img data-src="fig/horst-eco-r4ds.png" class="fragment"></p>
-<p><img data-src="fig/data-science-overview.png" class="fragment" width="800"></p>
 </div>
 </section><section id="데이터-과학-욕구단계설" class="slide level2"><h2>데이터 과학 욕구단계설</h2>
 <div class="panel-tabset">
@@ -556,6 +605,7 @@
 <li>
 <a href="#tabset-4-2">아래한글 </a><sup>2</sup>
 </li>
+<li><a href="#tabset-4-3">럼스펠트 지식 행렬</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-4-1">
@@ -564,14 +614,56 @@
 <img data-src="fig/xkcd-algorithms.png" width="1000">
 </center>
 </div>
-<div id="tabset-4-2" class="selected">
+<div id="tabset-4-2">
 <center>
 <img data-src="fig/markdown-writing.png">
 </center>
 </div>
+<div id="tabset-4-3">
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="fig/rumsfeld-matrix.png"></p>
+<p></p><figcaption><span class="citation" data-cites="martin2011beyond">(<a href="#/ref-martin2011beyond" role="doc-biblioref" onclick="return false;">Martin and Majidian 2011</a>)</span></figcaption><p></p>
+</figure>
+</div>
+</center>
 </div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn1" role="doc-endnote"><p><a href="https://www.explainxkcd.com/wiki/index.php/1667:_Algorithms">XKCD 1667: Algorithms</a></p></li><li id="fn2" role="doc-endnote"><p><a href="https://blog.kdheepak.com/writing-papers-with-markdown.html">Writing Technical Papers with Markdown and Pandoc</a></p></li></ol></aside></section><section id="시각화---그래프-문법-problem-3" class="slide level2"><h2>시각화 - 그래프 문법 <sup>1</sup>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1" role="doc-endnote"><p><a href="https://www.explainxkcd.com/wiki/index.php/1667:_Algorithms">XKCD 1667: Algorithms</a></p></li><li id="fn2" role="doc-endnote"><p><a href="https://blog.kdheepak.com/writing-papers-with-markdown.html">Writing Technical Papers with Markdown and Pandoc</a></p></li></ol></aside></section><section id="파이프-필터" class="slide level2"><h2>파이프 &amp; 필터</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-5-1">유닉스 쉘</a></li>
+<li><a href="#tabset-5-2">그래프 문법</a></li>
+<li><a href="#tabset-5-3">표 문법</a></li>
+<li><a href="#tabset-5-4">애니메이션 문법</a></li>
+<li><a href="#tabset-5-5">3D 시각화</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<p><img data-src="fig/redirects-and-pipes.png"> - <a href="http://aispiration.com/shell-novice-kr/04-pipefilter/index.html">파이프와 필터</a></p>
+</div>
+<div id="tabset-5-2">
+<p><img data-src="fig/ggplot-pipe-and-filter.png"></p>
+<ul>
+<li><a href="https://aispiration.com/viz/viz-ggplot2-practice.html">그래프 문법 실무</a></li>
+</ul>
+</div>
+<div id="tabset-5-3">
+<p><img data-src="fig/gt_parts_of_a_table.svg"> - <a href="http://aispiration.com/data-science/ds-rconf-profile.html">한국 R 컨퍼런스 - 발표자 사진 포함</a></p>
+</div>
+<div id="tabset-5-4">
+<p><img data-src="fig/gganimate-logo.png"></p>
+<ul>
+<li><a href="https://gganimate.com/articles/extra/talks.html">gganimate Talks</a></li>
+</ul>
+</div>
+<div id="tabset-5-5">
+<p><img data-src="fig/rayshader-smallhobart.gif"> - <a href="https://www.rayshader.com/">rayshader</a></p>
+</div>
+</div>
+</div>
+</section><section id="시각화---그래프-문법-problem-3" class="slide level2"><h2>시각화 - 그래프 문법 <sup>1</sup>
 </h2>
 <div class="panel-tabset">
 <!-- 데이터  -->
@@ -669,15 +761,15 @@
 </div>
 <aside><ol class="aside-footnotes"><li id="fn3" role="doc-endnote"><p>Comparing ggplot2 and R Base Graphics By <a href="https://flowingdata.com/2016/03/22/comparing-ggplot2-and-r-base-graphics/">Nathan Yau</a></p></li></ol></aside></section><section id="디자인---코드" class="slide level2"><h2>디자인 - 코드</h2>
 <div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-6-1">데이터 가공</a></li>
-<li><a href="#tabset-6-2"><code>dplyr</code> R</a></li>
-<li><a href="#tabset-6-3">Base R</a></li>
-<li><a href="#tabset-6-4">SQL</a></li>
-<li><a href="#tabset-6-5">파이썬</a></li>
+<ul id="tabset-7" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-7-1">데이터 가공</a></li>
+<li><a href="#tabset-7-2"><code>dplyr</code> R</a></li>
+<li><a href="#tabset-7-3">Base R</a></li>
+<li><a href="#tabset-7-4">SQL</a></li>
+<li><a href="#tabset-7-5">파이썬</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-6-1">
+<div id="tabset-7-1">
 <blockquote>
 <p>날짜와 시간별로 총 빈도수와 출발연착 평균 시간을 구한다. 단, 총빈도수가 10 회 미만인 것은 제외하고 출발연착 시간의 결측값을 제거하고 계산한다.</p>
 </blockquote>
@@ -690,7 +782,7 @@
 <li>총빈도수가 10회 이상인 날짜와 시간을 찾아내시오</li>
 </ul>
 </div>
-<div id="tabset-6-2">
+<div id="tabset-7-2">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>hourly_delay <span class="ot">&lt;-</span> flights <span class="sc">%&gt;%</span>  </span>
 <span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(dep_delay)) <span class="sc">%&gt;%</span> </span>
@@ -699,7 +791,7 @@
 <span id="cb6-5"><a href="#cb6-5"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">10</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-6-3">
+<div id="tabset-7-3">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>hourly_delay <span class="ot">&lt;-</span> <span class="fu">filter</span>(   </span>
 <span id="cb7-2"><a href="#cb7-2"></a>    <span class="fu">summarise</span>(   </span>
@@ -717,7 +809,7 @@
 <span id="cb7-14"><a href="#cb7-14"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-6-4">
+<div id="tabset-7-4">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">SELECT</span> <span class="ot">"date"</span>, <span class="ot">"hour"</span>, <span class="ot">"delay"</span>, <span class="ot">"n"</span></span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="kw">FROM</span> (</span>
@@ -731,7 +823,7 @@
 <span id="cb8-10"><a href="#cb8-10"></a><span class="kw">WHERE</span> <span class="ot">"n"</span> <span class="op">&gt;</span> <span class="fl">10.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-6-5">
+<div id="tabset-7-5">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>flights[[<span class="st">'date'</span>,<span class="st">'hour'</span>,<span class="st">'dep_delay'</span>]]</span>
 <span id="cb9-2"><a href="#cb9-2"></a>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -741,20 +833,20 @@
 </div>
 </section><section id="디자인---데이터" class="slide level2"><h2>디자인 - 데이터</h2>
 <div class="panel-tabset">
-<ul id="tabset-7" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-7-1">정돈된 데이터</a></li>
-<li><a href="#tabset-7-2">사례 - 결핵 데이터</a></li>
-<li><a href="#tabset-7-3">사례 - Messy 데이터</a></li>
-<li><a href="#tabset-7-4">사례 - 코드</a></li>
-<li><a href="#tabset-7-5">사례 - Tidy 데이터</a></li>
+<ul id="tabset-8" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-8-1">정돈된 데이터</a></li>
+<li><a href="#tabset-8-2">사례 - 결핵 데이터</a></li>
+<li><a href="#tabset-8-3">사례 - Messy 데이터</a></li>
+<li><a href="#tabset-8-4">사례 - 코드</a></li>
+<li><a href="#tabset-8-5">사례 - Tidy 데이터</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-7-1">
+<div id="tabset-8-1">
 <center>
 <img data-src="fig/messy_tidy_data.png" width="1000">
 </center>
 </div>
-<div id="tabset-7-2">
+<div id="tabset-8-2">
 <ul>
 <li>WHO <a href="http://www.who.int/tb/country/data/download/en/">결핵 원데이터</a>
 </li>
@@ -790,7 +882,7 @@
 </li>
 </ul>
 </div>
-<div id="tabset-7-3">
+<div id="tabset-8-3">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb10-2"><a href="#cb10-2"></a>tidyr<span class="sc">::</span>who </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -818,7 +910,7 @@
 </div>
 </div>
 </div>
-<div id="tabset-7-4">
+<div id="tabset-8-4">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>who <span class="sc">%&gt;%</span></span>
 <span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">pivot_longer</span>(</span>
@@ -835,7 +927,7 @@
 <span id="cb12-13"><a href="#cb12-13"></a>  <span class="fu">separate</span>(sexage, <span class="fu">c</span>(<span class="st">"sex"</span>, <span class="st">"age"</span>), <span class="at">sep =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-7-5">
+<div id="tabset-8-5">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 76,046 × 6
@@ -859,25 +951,25 @@
 </div>
 </section><section id="디자인---사람-대-기계" class="slide level2"><h2>디자인 - 사람 대 기계</h2>
 <div class="panel-tabset">
-<ul id="tabset-8" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-8-1">전체 개발 시간</a></li>
-<li><a href="#tabset-8-2">사람 <code>&lt;</code> 기계</a></li>
-<li><a href="#tabset-8-3">사람 <code>&gt;</code> 기계</a></li>
+<ul id="tabset-9" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-9-1">전체 개발 시간</a></li>
+<li><a href="#tabset-9-2">사람 <code>&lt;</code> 기계</a></li>
+<li><a href="#tabset-9-3">사람 <code>&gt;</code> 기계</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-8-1">
+<div id="tabset-9-1">
 <p><br></p>
 <center>
 <img data-src="fig/human-computer-total.png">
 </center>
 </div>
-<div id="tabset-8-2">
+<div id="tabset-9-2">
 <p><br></p>
 <center>
 <img data-src="fig/human-computer-machine.png">
 </center>
 </div>
-<div id="tabset-8-3">
+<div id="tabset-9-3">
 <p><br></p>
 <center>
 <img data-src="fig/human-computer-human.png">
@@ -895,25 +987,40 @@
 </div>
 </section><section id="quarto" class="slide level2"><h2>Quarto</h2>
 <div class="panel-tabset">
-<ul id="tabset-9" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-9-1">R</a></li>
-<li><a href="#tabset-9-2">파이썬</a></li>
-<li><a href="#tabset-9-3">Quarto: R</a></li>
-<li><a href="#tabset-9-4">Quarto: 파이썬</a></li>
+<ul id="tabset-10" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-10-1">R</a></li>
+<li><a href="#tabset-10-2">파이썬</a></li>
+<li><a href="#tabset-10-3">Quarto: R</a></li>
+<li><a href="#tabset-10-4">Quarto: 파이썬</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-9-1">
+<div id="tabset-10-1">
 <p><img data-src="fig/quarto_workflow/rmd-knitr.png"></p>
 </div>
-<div id="tabset-9-2">
+<div id="tabset-10-2">
 <p><img data-src="fig/quarto_workflow/jupyter-alone.png"></p>
 </div>
-<div id="tabset-9-3">
+<div id="tabset-10-3">
 <p><img data-src="fig/quarto_workflow/qmd-knitr.png"></p>
 </div>
-<div id="tabset-9-4">
+<div id="tabset-10-4">
 <p><img data-src="fig/quarto_workflow/qmd-jupyter.png"></p>
 </div>
+</div>
+</div>
+</section><section id="참고문헌" class="slide level2 smaller scrollable"><h2>참고문헌</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-turing-2022" class="csl-entry" role="doc-biblioentry">
+Community, The Turing Way, and Scriberia. 2022. <span>“Illustrations from the Turing Way: Shared Under CC-BY 4.0 for Reuse.”</span> Zenodo. <a href="https://doi.org/10.5281/ZENODO.3332807">https://doi.org/10.5281/ZENODO.3332807</a>.
+</div>
+<div id="ref-martin2011beyond" class="csl-entry" role="doc-biblioentry">
+Martin, Trevor, and A Majidian. 2011. <span>“Beyond the Known Unknowns-Finding Fuzzy Concepts for Creative Knowledge Discovery.”</span> In <em>World Conference on Soft Computing, San Francisco</em>.
+</div>
+<div id="ref-Marwick2018" class="csl-entry" role="doc-biblioentry">
+Marwick, Ben, Carl Boettiger, and Lincoln Mullen. 2018. <span>“Packaging Data Analytical Work Reproducibly Using r (and Friends).”</span> <em>The American Statistician</em> 72 (1): 80–88. <a href="https://doi.org/10.1080/00031305.2017.1375986">https://doi.org/10.1080/00031305.2017.1375986</a>.
+</div>
+<div id="ref-Peng2011" class="csl-entry" role="doc-biblioentry">
+Peng, Roger D. 2011. <span>“Reproducible Research in Computational Science.”</span> <em>Science</em> 334 (6060): 1226–27. <a href="https://doi.org/10.1126/science.1213847">https://doi.org/10.1126/science.1213847</a>.
 </div>
 </div>
 </section><section id="section-8" class="slide level2" data-background-image="fig/slide-end.png" data-background-size="contain"><h2></h2>

@@ -15,7 +15,6 @@
 ::: r-stack
 ![](fig/horst-eco-r4ds.png){.fragment}
 
-![](fig/data-science-overview.png){.fragment width="800"}
 :::
 
 ## 데이터 과학 욕구단계설
