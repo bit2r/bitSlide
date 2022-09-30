@@ -1,0 +1,48 @@
+
+# 문제
+
+## 데이터 사이언스 - 출판
+
+::: {#fig-hongik layout-ncol=3 layout-valign="bottom"}
+
+![문제점](fig/single-sourcing-problem.jpg)
+
+
+![Single Sourcing 개념](fig/single-sourcing-concept.jpg)
+
+![Single Sourcing Multi-Use](fig/single-sourcing-publishing.jpg)
+
+데이터 사이언스 출판 현황과 방향
+:::
+
+## 복잡성
+
+::: {#fig-hongik layout-ncol=3 layout-valign="bottom"}
+
+![엑셀, [XKCD 1667: Algorithms](https://www.explainxkcd.com/wiki/index.php/1667:_Algorithms)](fig/xkcd-algorithms.png)
+
+![아래한글, [Writing Technical Papers with Markdown and Pandoc](https://blog.kdheepak.com/writing-papers-with-markdown.html)](fig/markdown-writing.png)
+
+![럼스펠트 지식 행렬, [@martin2011beyond]](fig/rumsfeld-matrix.png)
+
+데이터 과학 저작도구 복잡성
+
+:::
+
+
+## 사람 대 기계
+
+::: {#fig-hongik layout-ncol=3 layout-valign="bottom"}
+
+![전체 개발 시간](fig/human-computer-total.png)
+
+![사람 `<` 기계](fig/human-computer-machine.png)
+
+![사람 `>` 기계](fig/human-computer-human.png)
+
+전체 개발시간 중요도 추세
+:::
+
+
+
+

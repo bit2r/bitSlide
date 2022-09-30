@@ -65,8 +65,9 @@ $presentation-h1-font-size: 2.5em;
   font-size: 57px;
 }
 
-.reveal p  {
+.reveal p, li  {
   font-family: $font-family-serif;
+  font-size: 20px;
 }
 
 
@@ -77,3 +78,57 @@ $presentation-h1-font-size: 2.5em;
 .reveal .footer a {
     font-family: $font-family-serif;
 }
+
+
+.quarto-layout-panel>figure>figcaption, .quarto-layout-panel>.panel-caption {
+    margin-top: 10pt;
+    font-size: 20px;
+    font-family: $font-family-serif;
+}
+
+.quarto-layout-cell-subref figcaption, figure .quarto-layout-row figure figcaption {
+    text-align: center;
+    font-style: italic;
+
+}
+
+.reveal .panel-tabset [role=tab] {
+    padding: 0.25em 0.7em;
+    font-size: 20px;
+    font-family: $font-family-serif;
+}
+    
+figure>figcaption {
+   margin-top: 0.5em;
+   font-size: 20px;
+   font-family: $font-family-serif;
+}    
+    
+.reveal pre.sourceCode code {
+    background-color: #f2f2f2;
+    font-size: 15px;    
+    padding: 6px 9px;
+    max-height: 500px;
+    white-space: pre;
+}    
+
+.reveal .slide aside, .reveal .slide div.aside {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.7remem;
+    color: #4d4d4d;
+    font-size: 12px;    
+}
+
+.reveal blockquote {
+    display: block;
+    position: relative;
+    width: 70%;
+    margin: var(--r-block-margin) auto;
+    padding: 5px;
+    font-size: 20px;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0px 0px 2px rgb(0 0 0 / 20%);
+}
+
+

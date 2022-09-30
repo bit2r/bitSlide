@@ -27,7 +27,6 @@ website:
 
   site-url: https://r2bit.com/bitSlide
   description: '한국 R 사용자회 발표자료 모음'
-
   opengraph: true
 
 format:
@@ -41,6 +40,10 @@ format:
     monofont: "Consolas"
     monobackgroundcolor: "#FFFFFF"
     backgroundcolor: "#fffbf2"
+
+filters:
+   - lightbox
+lightbox: auto
 
 execute:
   freeze: true
