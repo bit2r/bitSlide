@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>발표자료 | 한국 R 사용자회 – design</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../img/koRea_logo.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <img src="../../img/koRea_logo.png" alt="">
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://r2bit.com">한국 R 사용자회</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bit2r/slides"><i class="bi bi-github" role="img" aria-label="GitHub repo">
+</i> 
+ </a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="디자인과-아키텍처" class="level1">
+<h1>디자인과 아키텍처</h1>
+<section id="윈텔-아키텍처" class="level2">
+<h2 class="anchored" data-anchor-id="윈텔-아키텍처">윈텔 아키텍처</h2>
+<p><br></p>
+<div id="fig-wintel" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 25.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="fig/computer-01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="fig/computer-01.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 25.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="fig/computer-02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="fig/computer-02.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 25.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="fig/computer-03.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="fig/computer-03.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 25.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="fig/computer-04.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="fig/computer-04.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure 1: 마이크로소프트 + 인텔 아키텍처</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="과학기술-컴퓨팅" class="level2">
+<h2 class="anchored" data-anchor-id="과학기술-컴퓨팅">과학기술 컴퓨팅</h2>
+<div id="fig-thinking" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="fig/abstraction-thinking.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="추상화"><img src="fig/abstraction-thinking.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">추상화</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="fig/automation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="자동화"><img src="fig/automation.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">자동화</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="fig/Scientific-Method.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="과학적 방법론"><img src="fig/Scientific-Method.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">과학적 방법론</figcaption><p></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure 2: 과학기술 방법론</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="코딩" class="level2">
+<h2 class="anchored" data-anchor-id="코딩">코딩</h2>
+<p><br></p>
+<div id="fig-software" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="fig/programming-languages.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="프로그래밍 언어"><img src="fig/programming-languages.jpeg" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">프로그래밍 언어</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="fig/framework.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="프레임워크"><img src="fig/framework.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">프레임워크</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure class="figure">
+<p><a href="fig/programming-paradigms.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="프로그래밍 패러다임"><img src="fig/programming-paradigms.jpg" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">프로그래밍 패러다임</figcaption><p></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure 3: <strong>?(caption)</strong></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="엔지니어링" class="level2">
+<h2 class="anchored" data-anchor-id="엔지니어링">엔지니어링</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig/Scientific-Method.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="과학적 방법론"><img src="fig/Scientific-Method.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">과학적 방법론</figcaption><p></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><h3 id="반복-iteration" class="anchored"><strong>반복</strong>: iteration <br></h3>
+<br></li>
+<li><h3 id="피드백-feedback" class="anchored"><strong>피드백</strong>: feedback <br></h3>
+<br></li>
+<li><h3 id="점진적-incremental" class="anchored"><strong>점진적</strong>: incremental <br></h3>
+<br></li>
+<li><h3 id="실험-experimental" class="anchored"><strong>실험</strong>: experimental <br></h3>
+<br></li>
+<li><h3 id="경험적-empirical" class="anchored"><strong>경험적</strong>: empirical <br></h3>
+<br></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="복잡성-가치" class="level2">
+<h2 class="anchored" data-anchor-id="복잡성-가치">복잡성 ↑ → 가치 ↑</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="tidyverse-api-원칙" class="level4">
+<h4 class="anchored">Tidyverse API 원칙</h4>
+<ul>
+<li><h3 id="기존-자료구조를-재사용-reuse-existing-data-structures." class="anchored" data-anchor-id="tidyverse-api-원칙">기존 자료구조를 재사용: Reuse existing data structures.</h3>
+<br></li>
+<li><h3 id="파이프-연산자로-간단한-함수를-조합-compose-simple-functions-with-the-pipe." class="anchored">파이프 연산자로 간단한 함수를 조합: Compose simple functions with the pipe.</h3>
+<br></li>
+<li><h3 id="함수형-프로그래밍을-적극-사용-embrace-functional-programming." class="anchored">함수형 프로그래밍을 적극 사용: Embrace functional programming.</h3>
+<br></li>
+<li><h3 id="기계가-아닌-인간을-위한-설계-design-for-humans." class="anchored">기계가 아닌 인간을 위한 설계: Design for humans.</h3>
+<br></li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="설계와-디자인-원칙-farley2022" class="level4">
+<h4 class="anchored">설계와 디자인 원칙 <span class="citation" data-cites="Farley2022">[@Farley2022]</span></h4>
+<ul>
+<li><h3 id="모듈화-modularity" class="anchored" data-anchor-id="설계와-디자인-원칙-farley2022"><strong>모듈화</strong>: modularity <br></h3>
+<br></li>
+<li><h3 id="정보-은닉-information-hiding" class="anchored"><strong>정보 은닉</strong>: information hiding <br></h3>
+<br></li>
+<li><h3 id="관심사-분리-separation-of-concerns" class="anchored"><strong>관심사 분리</strong>: separation of concerns <br></h3>
+<br></li>
+<li><h3 id="낮은-결합도-loosely-coupling" class="anchored"><strong>낮은 결합도</strong>: loosely coupling <br></h3>
+<br></li>
+<li><h3 id="높은-응집도-high-cohesion" class="anchored"><strong>높은 응집도</strong>: high cohesion <br></h3>
+<br></li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="데이터-과학-세상" class="level2">
+<h2 class="anchored" data-anchor-id="데이터-과학-세상">데이터 과학 세상</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="fig/tidyverse-endgame.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="fig/tidyverse-endgame.png" class="img-fluid figure-img" style="width:77.0%"></a></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":true});</script>
+
+
+
+</body></html>

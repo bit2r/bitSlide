@@ -91,6 +91,25 @@
     code span.va { color: #aa5d00; } /* Variable */
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
   </style>
 <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
 <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -307,7 +326,6 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
-      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -396,13 +414,13 @@
   <p class="date">2022년 10월 11일</p>
 </section><section class="slide level2"><div class="column-body-outset">
 <div id="fig-hongik" class="quarto-layout-panel">
-<figure><div class="quarto-layout-row quarto-layout-valign-bottom">
+<figure><div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure><p><a href="fig/Emerging-Creativity-Workshop.png" class="lightbox" data-gallery="hongik"><img data-src="fig/Emerging-Creativity-Workshop.png"></a></p>
+<figure><p><a href="fig/Emerging-Creativity-Workshop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="fig/Emerging-Creativity-Workshop.png"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure><p><a href="fig/hongik-detail.png" class="lightbox" data-gallery="hongik"><img data-src="fig/hongik-detail.png"></a></p>
+<figure><p><a href="fig/hongik-detail.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="fig/hongik-detail.png"></a></p>
 </figure>
 </div>
 </div>
@@ -410,83 +428,174 @@
 </figure>
 </div>
 </div>
-<!-- {{< include 01-data-science.qmd >}} -->
-<!-- {{< include 02-problem.qmd >}} -->
-</section><section><section id="해법" class="title-slide slide level1 center"><h1>해법</h1>
+</section><section><section id="데이터-과학" class="title-slide slide level1 center"><h1>데이터 과학</h1>
+
+</section><section id="데이터-사이언스" class="slide level2"><h2>데이터 사이언스</h2>
+
+<img data-src="fig/horst-eco-r4ds.png" class="r-stretch quarto-figure-center"></section><section id="데이터-과학-욕구단계설" class="slide level2"><h2>데이터 과학 욕구단계설</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1">매슬로 욕구단계설</a></li>
+<li><a href="#tabset-1-2">가치 피라미드</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="fig/pyramid-needs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="fig/pyramid-needs.png"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="fig/pyramid-data-science.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="fig/pyramid-data-science.png"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section></section><section><section id="문제" class="title-slide slide level1 center"><h1>문제</h1>
+
+</section><section id="데이터-사이언스---출판" class="slide level2"><h2>데이터 사이언스 - 출판</h2>
+<div id="fig-hongik" class="quarto-layout-panel">
+<figure><div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/single-sourcing-problem.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="문제점"><img data-src="fig/single-sourcing-problem.jpg"></a></p>
+<p></p><figcaption>문제점</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/single-sourcing-concept.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Single Sourcing 개념"><img data-src="fig/single-sourcing-concept.jpg"></a></p>
+<p></p><figcaption>Single Sourcing 개념</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/single-sourcing-publishing.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Single Sourcing Multi-Use"><img data-src="fig/single-sourcing-publishing.jpg"></a></p>
+<p></p><figcaption>Single Sourcing Multi-Use</figcaption><p></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption>Figure 2: 데이터 사이언스 출판 현황과 방향</figcaption><p></p>
+</figure>
+</div>
+</section><section id="복잡성" class="slide level2"><h2>복잡성</h2>
+<div id="fig-hongik" class="quarto-layout-panel">
+<figure><div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/xkcd-algorithms.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="엑셀, XKCD 1667: Algorithms"><img data-src="fig/xkcd-algorithms.png"></a></p>
+<p></p><figcaption>엑셀, <a href="https://www.explainxkcd.com/wiki/index.php/1667:_Algorithms">XKCD 1667: Algorithms</a></figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/markdown-writing.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="아래한글, Writing Technical Papers with Markdown and Pandoc"><img data-src="fig/markdown-writing.png"></a></p>
+<p></p><figcaption>아래한글, <a href="https://blog.kdheepak.com/writing-papers-with-markdown.html">Writing Technical Papers with Markdown and Pandoc</a></figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/rumsfeld-matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="럼스펠트 지식 행렬, [@martin2011beyond]"><img data-src="fig/rumsfeld-matrix.png"></a></p>
+<p></p><figcaption>럼스펠트 지식 행렬, <span class="citation" data-cites="martin2011beyond">(<a href="#/ref-martin2011beyond" role="doc-biblioref" onclick="return false;">Martin and Majidian 2011</a>)</span></figcaption><p></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption>Figure 3: 데이터 과학 저작도구 복잡성</figcaption><p></p>
+</figure>
+</div>
+</section><section id="사람-대-기계" class="slide level2"><h2>사람 대 기계</h2>
+<div id="fig-hongik" class="quarto-layout-panel">
+<figure><div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/human-computer-total.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="전체 개발 시간"><img data-src="fig/human-computer-total.png"></a></p>
+<p></p><figcaption>전체 개발 시간</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/human-computer-machine.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="사람 < 기계"><img data-src="fig/human-computer-machine.png"></a></p>
+<p></p><figcaption>사람 <code>&lt;</code> 기계</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/human-computer-human.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="사람 > 기계"><img data-src="fig/human-computer-human.png"></a></p>
+<p></p><figcaption>사람 <code>&gt;</code> 기계</figcaption><p></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption>Figure 4: 전체 개발시간 중요도 추세</figcaption><p></p>
+</figure>
+</div>
+</section></section><section><section id="해법" class="title-slide slide level1 center"><h1>해법</h1>
 
 </section><section id="quarto" class="slide level2"><h2>Quarto</h2>
 <div id="fig-hongik" class="quarto-layout-panel">
 <figure><div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure><p><a href="fig/quarto_workflow/rmd-knitr.png" class="lightbox" title="R" data-gallery="quarto-lightbox-gallery-3"><img data-src="fig/quarto_workflow/rmd-knitr.png"></a></p>
+<figure><p><a href="fig/quarto_workflow/rmd-knitr.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="R"><img data-src="fig/quarto_workflow/rmd-knitr.png"></a></p>
 <p></p><figcaption>R</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure><p><a href="fig/quarto_workflow/jupyter-alone.png" class="lightbox" title="파이썬" data-gallery="quarto-lightbox-gallery-4"><img data-src="fig/quarto_workflow/jupyter-alone.png"></a></p>
+<figure><p><a href="fig/quarto_workflow/jupyter-alone.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="파이썬"><img data-src="fig/quarto_workflow/jupyter-alone.png"></a></p>
 <p></p><figcaption>파이썬</figcaption><p></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure><p><a href="fig/quarto_workflow/qmd-knitr.png" class="lightbox" title="Quarto: R" data-gallery="quarto-lightbox-gallery-5"><img data-src="fig/quarto_workflow/qmd-knitr.png"></a></p>
+<figure><p><a href="fig/quarto_workflow/qmd-knitr.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Quarto: R"><img data-src="fig/quarto_workflow/qmd-knitr.png"></a></p>
 <p></p><figcaption>Quarto: R</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure><p><a href="fig/quarto_workflow/qmd-jupyter.png" class="lightbox" title="Quarto: 파이썬" data-gallery="quarto-lightbox-gallery-6"><img data-src="fig/quarto_workflow/qmd-jupyter.png"></a></p>
+<figure><p><a href="fig/quarto_workflow/qmd-jupyter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Quarto: 파이썬"><img data-src="fig/quarto_workflow/qmd-jupyter.png"></a></p>
 <p></p><figcaption>Quarto: 파이썬</figcaption><p></p>
 </figure>
 </div>
 </div>
-<p></p><figcaption>Figure 2: 데이터 사이언스 출판 제작 흐름</figcaption><p></p>
+<p></p><figcaption>Figure 5: 데이터 사이언스 출판 제작 흐름</figcaption><p></p>
 </figure>
 </div>
 </section><section id="파이프-필터" class="slide level2"><h2>파이프 &amp; 필터</h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-1-1">유닉스 쉘</a></li>
-<li><a href="#tabset-1-2">그래프 문법</a></li>
-<li><a href="#tabset-1-3">표 문법</a></li>
-<li><a href="#tabset-1-4">애니메이션 문법</a></li>
-<li><a href="#tabset-1-5">3D 시각화</a></li>
+<ul id="tabset-2" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-2-1">유닉스 쉘</a></li>
+<li><a href="#tabset-2-2">그래프 문법</a></li>
+<li><a href="#tabset-2-3">표 문법</a></li>
+<li><a href="#tabset-2-4">애니메이션 문법</a></li>
+<li><a href="#tabset-2-5">3D 시각화</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-1-1">
+<div id="tabset-2-1">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/redirects-and-pipes.png" class="lightbox" title="파이프와 필터" data-gallery="quarto-lightbox-gallery-7"><img data-src="fig/redirects-and-pipes.png"></a></p>
+<figure><p><a href="fig/redirects-and-pipes.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="파이프와 필터"><img data-src="fig/redirects-and-pipes.png"></a></p>
 <p></p><figcaption><a href="http://aispiration.com/shell-novice-kr/04-pipefilter/index.html">파이프와 필터</a></figcaption><p></p>
 </figure>
 </div>
 </div>
-<div id="tabset-1-2">
+<div id="tabset-2-2">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/ggplot-pipe-and-filter.png" class="lightbox" title="그래프 문법 실무" data-gallery="quarto-lightbox-gallery-8"><img data-src="fig/ggplot-pipe-and-filter.png"></a></p>
+<figure><p><a href="fig/ggplot-pipe-and-filter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="그래프 문법 실무"><img data-src="fig/ggplot-pipe-and-filter.png"></a></p>
 <p></p><figcaption><a href="https://aispiration.com/viz/viz-ggplot2-practice.html">그래프 문법 실무</a></figcaption><p></p>
 </figure>
 </div>
 </div>
-<div id="tabset-1-3">
+<div id="tabset-2-3">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/gt_parts_of_a_table.svg" class="lightbox" title="한국 R 컨퍼런스 - 발표자 사진 포함" data-gallery="quarto-lightbox-gallery-9"><img data-src="fig/gt_parts_of_a_table.svg"></a></p>
+<figure><p><a href="fig/gt_parts_of_a_table.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="한국 R 컨퍼런스 - 발표자 사진 포함"><img data-src="fig/gt_parts_of_a_table.svg"></a></p>
 <p></p><figcaption><a href="http://aispiration.com/data-science/ds-rconf-profile.html">한국 R 컨퍼런스 - 발표자 사진 포함</a></figcaption><p></p>
 </figure>
 </div>
 </div>
-<div id="tabset-1-4">
+<div id="tabset-2-4">
 <ul>
 <li><a href="http://aispiration.com/ds-authoring/ds_data_scientist_visualization.html#26">데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)</a></li>
 <li><a href="https://gganimate.com/articles/extra/talks.html">gganimate Talks</a></li>
 </ul>
 <center>
-<a href="fig/gganimate-logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="fig/gganimate-logo.png"></a>
+<a href="fig/gganimate-logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img data-src="fig/gganimate-logo.png"></a>
 </center>
 </div>
-<div id="tabset-1-5">
+<div id="tabset-2-5">
 <center>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/rayshader-smallhobart.gif" class="lightbox" title="rayshader" data-gallery="quarto-lightbox-gallery-11"><img data-src="fig/rayshader-smallhobart.gif"></a></p>
+<figure><p><a href="fig/rayshader-smallhobart.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="rayshader"><img data-src="fig/rayshader-smallhobart.gif"></a></p>
 <p></p><figcaption><a href="https://www.rayshader.com/">rayshader</a></figcaption><p></p>
 </figure>
 </div>
@@ -497,13 +606,13 @@
 </section><section id="시각화---그래프-문법-problem-3" class="slide level2"><h2>시각화 - 그래프 문법 <sup>1</sup>
 </h2>
 <div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-2-1">데이터</a></li>
-<li><a href="#tabset-2-2">ggplot</a></li>
-<li><a href="#tabset-2-3">Base R</a></li>
+<ul id="tabset-3" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-3-1">데이터</a></li>
+<li><a href="#tabset-3-2">ggplot</a></li>
+<li><a href="#tabset-3-3">Base R</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-2-1">
+<div id="tabset-3-1">
 <div class="columns">
 <div class="column">
 <h4 id="r-코드">R 코드</h4>
@@ -529,7 +638,7 @@
 </div>
 <!-- ggplot -->
 </div>
-<div id="tabset-2-2">
+<div id="tabset-3-2">
 <div class="columns">
 <div class="column">
 <h4 id="r-코드-1">R 코드</h4>
@@ -552,7 +661,7 @@
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><a href="index_files/figure-revealjs/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></a></p>
+<figure><p><a href="index_files/figure-revealjs/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></a></p>
 </figure>
 </div>
 </div>
@@ -561,7 +670,7 @@
 </div>
 <!-- Base R -->
 </div>
-<div id="tabset-2-3">
+<div id="tabset-3-3">
 <div class="columns">
 <div class="column">
 <h4 id="r-코드-2">R 코드</h4>
@@ -596,7 +705,7 @@
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><a href="index_files/figure-revealjs/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></a></p>
+<figure><p><a href="index_files/figure-revealjs/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img data-src="index_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></a></p>
 </figure>
 </div>
 </div>
@@ -608,15 +717,15 @@
 </div>
 <aside><ol class="aside-footnotes"><li id="fn1" role="doc-endnote"><p>Comparing ggplot2 and R Base Graphics By <a href="https://flowingdata.com/2016/03/22/comparing-ggplot2-and-r-base-graphics/">Nathan Yau</a></p></li></ol></aside></section><section id="디자인---코드" class="slide level2"><h2>디자인 - 코드</h2>
 <div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-3-1">데이터 가공</a></li>
-<li><a href="#tabset-3-2"><code>dplyr</code> R</a></li>
-<li><a href="#tabset-3-3">Base R</a></li>
-<li><a href="#tabset-3-4">SQL</a></li>
-<li><a href="#tabset-3-5">파이썬</a></li>
+<ul id="tabset-4" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-4-1">데이터 가공</a></li>
+<li><a href="#tabset-4-2"><code>dplyr</code> R</a></li>
+<li><a href="#tabset-4-3">Base R</a></li>
+<li><a href="#tabset-4-4">SQL</a></li>
+<li><a href="#tabset-4-5">파이썬</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-3-1">
+<div id="tabset-4-1">
 <blockquote>
 <p>날짜와 시간별로 총 빈도수와 출발연착 평균 시간을 구한다. 단, 총빈도수가 10 회 미만인 것은 제외하고 출발연착 시간의 결측값을 제거하고 계산한다.</p>
 </blockquote>
@@ -629,7 +738,7 @@
 <li>총빈도수가 10회 이상인 날짜와 시간을 찾아내시오</li>
 </ul>
 </div>
-<div id="tabset-3-2">
+<div id="tabset-4-2">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>hourly_delay <span class="ot">&lt;-</span> flights <span class="sc">%&gt;%</span>  </span>
 <span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(dep_delay)) <span class="sc">%&gt;%</span> </span>
@@ -638,7 +747,7 @@
 <span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">filter</span>(n <span class="sc">&gt;</span> <span class="dv">10</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-3-3">
+<div id="tabset-4-3">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>hourly_delay <span class="ot">&lt;-</span> <span class="fu">filter</span>(   </span>
 <span id="cb6-2"><a href="#cb6-2"></a>    <span class="fu">summarise</span>(   </span>
@@ -656,7 +765,7 @@
 <span id="cb6-14"><a href="#cb6-14"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-3-4">
+<div id="tabset-4-4">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">SELECT</span> <span class="ot">"date"</span>, <span class="ot">"hour"</span>, <span class="ot">"delay"</span>, <span class="ot">"n"</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a><span class="kw">FROM</span> (</span>
@@ -670,7 +779,7 @@
 <span id="cb7-10"><a href="#cb7-10"></a><span class="kw">WHERE</span> <span class="ot">"n"</span> <span class="op">&gt;</span> <span class="fl">10.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-3-5">
+<div id="tabset-4-5">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>flights[[<span class="st">'date'</span>,<span class="st">'hour'</span>,<span class="st">'dep_delay'</span>]]</span>
 <span id="cb8-2"><a href="#cb8-2"></a>...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -680,20 +789,20 @@
 </div>
 </section><section id="디자인---데이터" class="slide level2"><h2>디자인 - 데이터</h2>
 <div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-4-1">정돈된 데이터</a></li>
-<li><a href="#tabset-4-2">사례 - 결핵 데이터</a></li>
-<li><a href="#tabset-4-3">사례 - Messy 데이터</a></li>
-<li><a href="#tabset-4-4">사례 - 코드</a></li>
-<li><a href="#tabset-4-5">사례 - Tidy 데이터</a></li>
+<ul id="tabset-5" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-5-1">정돈된 데이터</a></li>
+<li><a href="#tabset-5-2">사례 - 결핵 데이터</a></li>
+<li><a href="#tabset-5-3">사례 - Messy 데이터</a></li>
+<li><a href="#tabset-5-4">사례 - 코드</a></li>
+<li><a href="#tabset-5-5">사례 - Tidy 데이터</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-4-1">
+<div id="tabset-5-1">
 <center>
-<a href="fig/messy_tidy_data.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img data-src="fig/messy_tidy_data.png" width="1000"></a>
+<a href="fig/messy_tidy_data.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img data-src="fig/messy_tidy_data.png" width="1000"></a>
 </center>
 </div>
-<div id="tabset-4-2">
+<div id="tabset-5-2">
 <ul>
 <li>WHO <a href="http://www.who.int/tb/country/data/download/en/">결핵 원데이터</a>
 </li>
@@ -729,7 +838,7 @@
 </li>
 </ul>
 </div>
-<div id="tabset-4-3">
+<div id="tabset-5-3">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb9-2"><a href="#cb9-2"></a>tidyr<span class="sc">::</span>who </span>
@@ -755,7 +864,7 @@
 <span id="cb9-22"><a href="#cb9-22"></a><span class="co">#&gt; #   new_sn_f1524 &lt;int&gt;, new_sn_f2534 &lt;int&gt;, new_sn_f3544 &lt;int&gt;, …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-4-4">
+<div id="tabset-5-4">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>who <span class="sc">%&gt;%</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">pivot_longer</span>(</span>
@@ -772,7 +881,7 @@
 <span id="cb10-13"><a href="#cb10-13"></a>  <span class="fu">separate</span>(sexage, <span class="fu">c</span>(<span class="st">"sex"</span>, <span class="st">"age"</span>), <span class="at">sep =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-4-5">
+<div id="tabset-5-5">
 <div class="cell">
 <pre><code>#&gt; # A tibble: 76,046 × 6
 #&gt;    country      year var   sex   age   cases
@@ -792,9 +901,312 @@
 </div>
 </div>
 </div>
+</section></section><section><section id="디자인과-아키텍처" class="title-slide slide level1 center"><h1>디자인과 아키텍처</h1>
 
-<p><img src="img/koRea_logo.png" class="slide-logo"></p>
-<div class="footer footer-default">
+</section><section id="윈텔-아키텍처" class="slide level2"><h2>윈텔 아키텍처</h2>
+<p><br></p>
+<div id="fig-wintel" class="quarto-layout-panel">
+<figure><div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 25.0%;justify-content: center;">
+<figure><p><a href="fig/computer-01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img data-src="fig/computer-01.png"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 25.0%;justify-content: center;">
+<figure><p><a href="fig/computer-02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img data-src="fig/computer-02.png"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 25.0%;justify-content: center;">
+<figure><p><a href="fig/computer-03.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img data-src="fig/computer-03.png"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 25.0%;justify-content: center;">
+<figure><p><a href="fig/computer-04.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img data-src="fig/computer-04.png"></a></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption>Figure 6: 마이크로소프트 + 인텔 아키텍처</figcaption><p></p>
+</figure>
+</div>
+</section><section id="과학기술-컴퓨팅" class="slide level2"><h2>과학기술 컴퓨팅</h2>
+<div id="fig-thinking" class="quarto-layout-panel">
+<figure><div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/abstraction-thinking.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="추상화"><img data-src="fig/abstraction-thinking.png"></a></p>
+<p></p><figcaption>추상화</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/automation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="자동화"><img data-src="fig/automation.png"></a></p>
+<p></p><figcaption>자동화</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/Scientific-Method.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33" title="과학적 방법론"><img data-src="fig/Scientific-Method.png"></a></p>
+<p></p><figcaption>과학적 방법론</figcaption><p></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption>Figure 7: 과학기술 방법론</figcaption><p></p>
+</figure>
+</div>
+</section><section id="코딩" class="slide level2"><h2>코딩</h2>
+<p><br></p>
+<div id="fig-software" class="quarto-layout-panel">
+<figure><div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/programming-languages.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-34" title="프로그래밍 언어"><img data-src="fig/programming-languages.jpeg"></a></p>
+<p></p><figcaption>프로그래밍 언어</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/framework.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35" title="프레임워크"><img data-src="fig/framework.png"></a></p>
+<p></p><figcaption>프레임워크</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure><p><a href="fig/programming-paradigms.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-36" title="프로그래밍 패러다임"><img data-src="fig/programming-paradigms.jpg"></a></p>
+<p></p><figcaption>프로그래밍 패러다임</figcaption><p></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption>Figure 8: <strong>?(caption)</strong></figcaption><p></p>
+</figure>
+</div>
+</section><section id="엔지니어링" class="slide level2"><h2>엔지니어링</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="fig/Scientific-Method.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37" title="과학적 방법론"><img data-src="fig/Scientific-Method.png"></a></p>
+<p></p><figcaption>과학적 방법론</figcaption><p></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>
+<h3 id="반복-iteration">
+<strong>반복</strong>: iteration <br>
+</h3>
+<br>
+</li>
+<li>
+<h3 id="피드백-feedback">
+<strong>피드백</strong>: feedback <br>
+</h3>
+<br>
+</li>
+<li>
+<h3 id="점진적-incremental">
+<strong>점진적</strong>: incremental <br>
+</h3>
+<br>
+</li>
+<li>
+<h3 id="실험-experimental">
+<strong>실험</strong>: experimental <br>
+</h3>
+<br>
+</li>
+<li>
+<h3 id="경험적-empirical">
+<strong>경험적</strong>: empirical <br>
+</h3>
+<br>
+</li>
+</ul>
+</div>
+</div>
+</section><section id="복잡성-가치" class="slide level2"><h2>복잡성 ↑ → 가치 ↑</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="tidyverse-api-원칙">Tidyverse API 원칙</h4>
+<ul>
+<li>
+<h3 id="기존-자료구조를-재사용-reuse-existing-data-structures.">기존 자료구조를 재사용: Reuse existing data structures.</h3>
+<br>
+</li>
+<li>
+<h3 id="파이프-연산자로-간단한-함수를-조합-compose-simple-functions-with-the-pipe.">파이프 연산자로 간단한 함수를 조합: Compose simple functions with the pipe.</h3>
+<br>
+</li>
+<li>
+<h3 id="함수형-프로그래밍을-적극-사용-embrace-functional-programming.">함수형 프로그래밍을 적극 사용: Embrace functional programming.</h3>
+<br>
+</li>
+<li>
+<h3 id="기계가-아닌-인간을-위한-설계-design-for-humans.">기계가 아닌 인간을 위한 설계: Design for humans.</h3>
+<br>
+</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="설계와-디자인-원칙-farley2022">설계와 디자인 원칙 <span class="citation" data-cites="Farley2022">(<a href="#/ref-Farley2022" role="doc-biblioref" onclick="return false;">Farley 2020</a>)</span>
+</h4>
+<ul>
+<li>
+<h3 id="모듈화-modularity">
+<strong>모듈화</strong>: modularity <br>
+</h3>
+<br>
+</li>
+<li>
+<h3 id="정보-은닉-information-hiding">
+<strong>정보 은닉</strong>: information hiding <br>
+</h3>
+<br>
+</li>
+<li>
+<h3 id="관심사-분리-separation-of-concerns">
+<strong>관심사 분리</strong>: separation of concerns <br>
+</h3>
+<br>
+</li>
+<li>
+<h3 id="낮은-결합도-loosely-coupling">
+<strong>낮은 결합도</strong>: loosely coupling <br>
+</h3>
+<br>
+</li>
+<li>
+<h3 id="높은-응집도-high-cohesion">
+<strong>높은 응집도</strong>: high cohesion <br>
+</h3>
+<br>
+</li>
+</ul>
+</div>
+</div>
+</section><section id="데이터-과학-세상" class="slide level2"><h2>데이터 과학 세상</h2>
+
+<img data-src="fig/tidyverse-endgame.png" style="width:77.0%" class="r-stretch quarto-figure-center"></section></section><section><section id="rstudio-posit" class="title-slide slide level1 center"><h1>RStudio → Posit</h1>
+
+</section><section id="r" class="slide level2"><h2>R</h2>
+<div class="panel-tabset">
+<ul id="tabset-6" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-6-1">R 코드</a></li>
+<li><a href="#tabset-6-2">R 스크립트</a></li>
+<li><a href="#tabset-6-3">LaTeX + R</a></li>
+<li><a href="#tabset-6-4">IDE</a></li>
+<li><a href="#tabset-6-5">Posit</a></li>
+<li><a href="#tabset-6-6">과학기술 SW</a></li>
+<li><a href="#tabset-6-7">재현성</a></li>
+<li><a href="#tabset-6-8">재현성 상세</a></li>
+<li><a href="#tabset-6-9">Compendium</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-6-1">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="fig/rstudio/R_Screenshot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img data-src="fig/rstudio/R_Screenshot.png" style="width:60.0%"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-2">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="fig/rstudio/R_script.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img data-src="fig/rstudio/R_script.png" style="width:60.0%"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-3">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="fig/rstudio/LaTex_R.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img data-src="fig/rstudio/LaTex_R.jpg" style="width:60.0%"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-4">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="fig/rstudio/rstudio_session_4pane_layout.png" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img data-src="fig/rstudio/rstudio_session_4pane_layout.png" style="width:60.0%"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-5">
+<p><br></p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure><p><a href="fig/rstudio/visual-markdown-editor-tips.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img data-src="fig/rstudio/visual-markdown-editor-tips.webp"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure><p><a href="fig/rstudio/modify-image-size-in-visual-markdown-editor.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img data-src="fig/rstudio/modify-image-size-in-visual-markdown-editor.webp"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-6-6">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="fig/rstudio/posit-trend.png" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img data-src="fig/rstudio/posit-trend.png" style="width:80.0%"></a></p>
+</figure>
+</div>
+<ul>
+<li>
+<strong>재현성</strong>: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?</li>
+<li>
+<strong>회복성</strong>: 소프트웨어가 망하게 되면 대안은 있는가?</li>
+<li>
+<strong>참여</strong>: 방법론을 결정하는데 참여할 수 있나?</li>
+</ul>
+</div>
+<div id="tabset-6-7">
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="fig/reproducible-matrix.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-46"><img data-src="fig/reproducible-matrix.jpg"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<ul>
+<li><p><strong>Reproducible</strong>: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.</p></li>
+<li><p><strong>Replicable</strong>: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.</p></li>
+<li><p><strong>Robust</strong>: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.</p></li>
+<li><p><strong>Generalisable</strong>: Combining replicable and robust findings allow us to form generalisable results. <span class="citation" data-cites="turing-2022">(<a href="#/ref-turing-2022" role="doc-biblioref" onclick="return false;">Community and Scriberia 2022</a>)</span> <!-- Note that running an analysis on a different software implementation and with a different dataset does not provide generalised results. There will be many more steps to know how well the work applies to all the different aspects of the research question. Generalisation is an important step towards understanding that the result is not dependent on a particular dataset nor a particular version of the analysis pipeline. --></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="tabset-6-8">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="fig/reproducibility-spectrum.png" class="lightbox" data-gallery="quarto-lightbox-gallery-47" title="[@Peng2011]"><img data-src="fig/reproducibility-spectrum.png"></a></p>
+<p></p><figcaption><span class="citation" data-cites="Peng2011">(<a href="#/ref-Peng2011" role="doc-biblioref" onclick="return false;">Peng 2011</a>)</span></figcaption><p></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-9">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><a href="fig/compendium.png" class="lightbox" data-gallery="quarto-lightbox-gallery-48" title="[@Marwick2018]"><img data-src="fig/compendium.png" style="width:80.0%"></a></p>
+<p></p><figcaption><span class="citation" data-cites="Marwick2018">(<a href="#/ref-Marwick2018" role="doc-biblioref" onclick="return false;">Marwick, Boettiger, and Mullen 2018</a>)</span></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section></section><section><section id="사례" class="title-slide slide level1 center"><h1>사례</h1>
+<ul>
+<li><p><a href="https://github.com/bit2r/bit2r.github.io">한국 R 사용자회</a></p></li>
+<li><p><a href="https://github.com/tidyverse-korea/rconf">한국 R 컨퍼런스</a></p></li>
+<li><p><a href="http://code-states.netlify.app/">코로나 19 프로젝트</a></p></li>
+</ul></section><section id="참고문헌" class="slide level2 smaller scrollable"><h2>참고문헌</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-turing-2022" class="csl-entry" role="doc-biblioentry">
+Community, The Turing Way, and Scriberia. 2022. <span>“Illustrations from the Turing Way: Shared Under CC-BY 4.0 for Reuse.”</span> Zenodo. <a href="https://doi.org/10.5281/ZENODO.3332807">https://doi.org/10.5281/ZENODO.3332807</a>.
+</div>
+<div id="ref-Farley2022" class="csl-entry" role="doc-biblioentry">
+Farley, Dave. 2020. <span>“Software Engineering - Development in 100 Years Time.”</span> <a href="https://www.youtube.com/watch?v=tk6Isedq3GA" class="uri">https://www.youtube.com/watch?v=tk6Isedq3GA</a>.
+</div>
+<div id="ref-martin2011beyond" class="csl-entry" role="doc-biblioentry">
+Martin, Trevor, and A Majidian. 2011. <span>“Beyond the Known Unknowns-Finding Fuzzy Concepts for Creative Knowledge Discovery.”</span> In <em>World Conference on Soft Computing, San Francisco</em>.
+</div>
+<div id="ref-Marwick2018" class="csl-entry" role="doc-biblioentry">
+Marwick, Ben, Carl Boettiger, and Lincoln Mullen. 2018. <span>“Packaging Data Analytical Work Reproducibly Using r (and Friends).”</span> <em>The American Statistician</em> 72 (1): 80–88. <a href="https://doi.org/10.1080/00031305.2017.1375986">https://doi.org/10.1080/00031305.2017.1375986</a>.
+</div>
+<div id="ref-Peng2011" class="csl-entry" role="doc-biblioentry">
+Peng, Roger D. 2011. <span>“Reproducible Research in Computational Science.”</span> <em>Science</em> 334 (6060): 1226–27. <a href="https://doi.org/10.1126/science.1213847">https://doi.org/10.1126/science.1213847</a>.
+</div>
+</div>
+</section><section id="section" class="slide level2" data-background-image="fig/slide-end.png" data-background-size="contain"><h2></h2>
+
+
+<img src="img/koRea_logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://r2bit.com/">한국 R 사용자회</a>&nbsp;</p>
 </div>
 </section></section>

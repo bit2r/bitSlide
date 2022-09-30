@@ -1,0 +1,119 @@
+# 디자인과 아키텍처
+
+## 윈텔 아키텍처
+
+<br>
+
+::: {#fig-wintel layout-ncol=4 layout-valign="bottom"}
+
+![](fig/computer-01.png){width=70%}
+
+![](fig/computer-02.png){width=70%}
+
+![](fig/computer-03.png){width=70%}
+
+![](fig/computer-04.png){width=70%}
+
+마이크로소프트 + 인텔 아키텍처
+
+:::
+
+## 과학기술 컴퓨팅
+
+::: {#fig-thinking layout-ncol=3 layout-valign="bottom"}
+
+![추상화](fig/abstraction-thinking.png)
+
+![자동화](fig/automation.png)
+
+![과학적 방법론](fig/Scientific-Method.png) 
+
+과학기술 방법론
+
+:::
+
+
+## 코딩
+
+<br>
+
+::: {#fig-software layout-ncol=3 layout-valign="bottom"}
+
+![프로그래밍 언어](fig/programming-languages.jpeg) 
+
+![프레임워크](fig/framework.png) 
+
+![프로그래밍 패러다임](fig/programming-paradigms.jpg)
+
+:::
+
+## 엔지니어링
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![과학적 방법론](fig/Scientific-Method.png) 
+:::
+
+::: {.column width="50%"}
+
+- ### **반복**: iteration <br>
+<br>
+- ### **피드백**: feedback <br> 
+<br>
+- ### **점진적**: incremental <br>
+<br>
+- ### **실험**: experimental <br>
+<br>
+- ### **경험적**: empirical <br>
+<br>
+
+:::
+::::
+
+
+## 복잡성 &uarr; &rarr; 가치 &uarr;
+
+<br>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+#### Tidyverse API 원칙
+
+- ### 기존 자료구조를 재사용: Reuse existing data structures.
+<br>
+- ### 파이프 연산자로 간단한 함수를 조합: Compose simple functions with the pipe.
+<br>
+- ### 함수형 프로그래밍을 적극 사용: Embrace functional programming.
+<br>
+- ### 기계가 아닌 인간을 위한 설계: Design for humans.
+<br>
+
+:::
+
+::: {.column width="50%"}
+#### 설계와 디자인 원칙 [@Farley2022]
+
+- ### **모듈화**: modularity <br>
+<br>
+- ### **정보 은닉**: information hiding <br> 
+<br>
+- ### **관심사 분리**: separation of concerns <br>
+<br>
+- ### **낮은 결합도**: loosely coupling <br>
+<br>
+- ### **높은 응집도**: high cohesion <br>
+<br>
+
+:::
+::::
+
+
+## 데이터 과학 세상
+
+
+![](fig/tidyverse-endgame.png){width=77%}
+
