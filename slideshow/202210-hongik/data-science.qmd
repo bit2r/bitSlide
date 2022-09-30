@@ -12,10 +12,8 @@
 
 ## 데이터 사이언스
 
-::: r-stack
 ![](fig/horst-eco-r4ds.png){.fragment}
 
-:::
 
 ## 데이터 과학 욕구단계설
 

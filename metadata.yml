@@ -4,7 +4,7 @@
   author: "이광춘"
   date: 2022-10-11
   image: slideshow/202210-hongik/fig/hongik-detail-featured.png
-  path: slideshow/202210-hongik/index.qmd
+  path: slideshow/202210-hongik-v2/index.qmd
   categories:
     - revealjs
 

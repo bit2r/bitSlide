@@ -71,9 +71,15 @@
 
 ### 애니메이션 문법
 
-![](fig/gganimate-logo.png)
-
+- [데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)](http://aispiration.com/ds-authoring/ds_data_scientist_visualization.html#26)
 - [gganimate Talks](https://gganimate.com/articles/extra/talks.html)
+
+<center>
+![](fig/gganimate-logo.png)
+</center>
+
+
+
 
 ### 3D 시각화
 

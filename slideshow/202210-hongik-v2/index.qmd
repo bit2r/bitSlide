@@ -1,0 +1,51 @@
+---
+title: "데이터 사이언스와 디자인<br>"
+subtitle: "디자인과 아키텍쳐의 중요성"
+author: "이광춘 / 한국 R 사용자회"
+date: "2022년 10월 11일"
+format:
+  revealjs: 
+    theme: ["simple", "theme/q-theme.scss"]
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: img/koRea_logo.png
+    footer: "[한국 R 사용자회](https://r2bit.com/)&nbsp;"
+    code-copy: true
+    center-title-slide: true
+    code-link: true
+    code-overflow: wrap
+    highlight-style: a11y
+    smaller: true
+    scrollable: true
+    slide-number: c/t
+filters:
+   - lightbox
+lightbox: auto        
+
+execute: 
+  eval: true
+  echo: true
+  freeze: true  
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib      
+---
+
+::: column-body-outset
+::: {#fig-hongik layout-ncol=2}
+
+![](fig/Emerging-Creativity-Workshop.png){group="hongik"}
+
+![](fig/hongik-detail.png){group="hongik"}
+
+홍익대학교 "Emerging Creativity Workshop"
+:::
+:::
+
+{{< include 01-data-science.qmd >}}
+
+
+
+
