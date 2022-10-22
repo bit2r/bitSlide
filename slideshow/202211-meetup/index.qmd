@@ -1,0 +1,26 @@
+---
+title: "로우코드 Shiny 앱 개발"
+format: revealjs
+---
+
+# 통계 소프트웨어 개발
+
+## 통계 패키지 진화
+
+![](fig/statistics-package-evolution.png)
+
+## 통계 코딩 도구 진화 
+
+![](fig/computation-evolution.png)
+
+
+# 노/로우 코드 플랫폼
+
+
+
+
+
+
+
+
+

@@ -8,7 +8,6 @@
   categories:
     - revealjs
 
-
 - title: "파머 펭귄"
   subtitle: "파머 펭귄 데이터로 Observables JS 인터랙티브 문서의 가능성과 한계"
   author: "이광춘"
@@ -26,5 +25,16 @@
   path: interactive/climate-crisis.qmd
   categories:
     - observable js
+
+- title: "로우코드 Shiny 앱 개발"
+  subtitle: "Shiny 앱 개발은 로우코드 개발(?)"
+  author: "이광춘"
+  date: 2022-11-05
+  image: slideshow/202211-meetup/fig/kelly-sikkema-Z9AU36chmQI-unsplash.jpg
+  path: slideshow/202211-meetup/index.qmd
+  categories:
+    - quarto
+    - low code platform
+    - shiny
 
 # External slide decks

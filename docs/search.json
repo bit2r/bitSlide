@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "발표자료",
     "section": "",
-    "text": "한국 R 사용자회\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 사이언스에서 디자인과 아키텍쳐의 중요성\n\n\nEmerging Creativity Workshop\n\n\n\nrevealjs\n\n\n\n\nOct 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n기후 위기: CO2\n\n\nNOAA 하와이섬에서 측정한 CO2 추세를 면밀히 살펴보자.\n\n\n\nobservable js\n\n\n\n\nSep 12, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n파머 펭귄\n\n\n파머 펭귄 데이터로 Observables JS 인터랙티브 문서의 가능성과 한계\n\n\n\nobservable js\n\n\n\n\nSep 11, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "한국 R 사용자회\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n로우코드 Shiny 앱 개발\n\n\nShiny 앱 개발은 로우코드 개발(?)\n\n\n\nquarto\n\n\nlow code platform\n\n\nshiny\n\n\n\n\nNov 5, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 사이언스에서 디자인과 아키텍쳐의 중요성\n\n\nEmerging Creativity Workshop\n\n\n\nrevealjs\n\n\n\n\nOct 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n기후 위기: CO2\n\n\nNOAA 하와이섬에서 측정한 CO2 추세를 면밀히 살펴보자.\n\n\n\nobservable js\n\n\n\n\nSep 12, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n파머 펭귄\n\n\n파머 펭귄 데이터로 Observables JS 인터랙티브 문서의 가능성과 한계\n\n\n\nobservable js\n\n\n\n\nSep 11, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slideshow/202210-hongik/data-science.html",
@@ -705,5 +705,33 @@
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
     "text": "한국 R 사용자회\n한국 R 컨퍼런스\n코로나 19 프로젝트"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#과거",
+    "href": "slideshow/202211-meetup/index.html#과거",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "과거",
+    "text": "과거"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#orange3",
+    "href": "slideshow/202211-meetup/index.html#orange3",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "Orange3",
+    "text": "Orange3"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#통계-패키지-진화",
+    "href": "slideshow/202211-meetup/index.html#통계-패키지-진화",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "통계 패키지 진화",
+    "text": "통계 패키지 진화"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#통계-코딩-도구-진화",
+    "href": "slideshow/202211-meetup/index.html#통계-코딩-도구-진화",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "통계 코딩 도구 진화",
+    "text": "통계 코딩 도구 진화"
   }
 ]
