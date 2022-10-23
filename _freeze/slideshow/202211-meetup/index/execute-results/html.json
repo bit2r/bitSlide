@@ -1,0 +1,18 @@
+{
+  "hash": "24d77274844ae5a0c28caf362380adec",
+  "result": {
+    "markdown": "---\ntitle: \"로우코드 Shiny 앱 개발\"\nauthor: \"이광춘 / 한국 R 사용자회\"\ndate: \"2022-11-05\"\nlang: kr\nformat:\n  revealjs: \n    theme: [\"simple\", \"theme/q-theme.scss\"]\n    width: 1280\n    height: 720\n    chalkboard: \n      buttons: false\n    preview-links: auto\n    logo: fig/koRea_logo.png\n    footer: \"[한국 R 사용자회](https://r2bit.com/)&nbsp;\"\n    code-copy: true\n    center-title-slide: true\n    code-link: true\n    code-overflow: wrap\n    highlight-style: a11y\n    smaller: true\n    scrollable: false\n    slide-number: c/t\n    code-tools:\n      \n      source: true\n      toggle: false\n      caption: none\nfilters:\n   - lightbox\nlightbox: auto        \nexecute: \n  eval: true\n  echo: true\n  freeze: true  \neditor_options: \n  chunk_output_type: console\nbibliography: references.bib\nknitr:\n  opts_chunk: \n    echo: true\n    collapse: true\n    comment: \"#>\"\n---\n\n\n# 통계 소프트웨어 개발\n\n## 통계 패키지 진화\n\n![](fig/statistics-package-evolution.png)\n\n## 통계 코딩 도구 진화 \n\n![](fig/computation-evolution.png)\n\n\n# 노/로우 코드 플랫폼\n\n\n## 소프트웨어 로우 코드 개발\n\n<br>\n\n![](fig/low-code-plaform.png)\n\n## R 로우 코드 개발\n\n::: {.panel-tabset}\n\n### UI 편집\n\n![](fig/shinyuieditor.jpg){width=67%}\n\n<https://rstudio.github.io/shinyuieditor/>\n\n### 대쉬보드\n\n![](fig/dashboard-builder.png){width=67%}\n\n<https://github.com/petergandenberger/dashboard-builder>\n\n\n### `ggplot`\n\n![](fig/esquisse.gif){width=47%}\n\n<https://github.com/dreamRs/esquisse>\n\n### `easystats`\n\n![](fig/easystat-workflow.png){width=67%}\n\n<https://easystats.github.io/easystats/index.html>\n\n### `dlookr`\n<br>\n<br>\n![](fig/autoEDA.png){width=67%}\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n<https://cran.r-project.org/web/packages/dlookr/>\n\n:::\n\n\n#  {background-image=\"../202210-hongik-v2/fig/slide-end.png\" background-size=\"contain\"}\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\r\n<script>\r\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\r\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\r\n  // slide changes (different for each slide format).\r\n  (function () {\r\n    // dispatch for htmlwidgets\r\n    function fireSlideEnter() {\r\n      const event = window.document.createEvent(\"Event\");\r\n      event.initEvent(\"slideenter\", true, true);\r\n      window.document.dispatchEvent(event);\r\n    }\r\n\r\n    function fireSlideChanged(previousSlide, currentSlide) {\r\n      fireSlideEnter();\r\n\r\n      // dispatch for shiny\r\n      if (window.jQuery) {\r\n        if (previousSlide) {\r\n          window.jQuery(previousSlide).trigger(\"hidden\");\r\n        }\r\n        if (currentSlide) {\r\n          window.jQuery(currentSlide).trigger(\"shown\");\r\n        }\r\n      }\r\n    }\r\n\r\n    // hookup for slidy\r\n    if (window.w3c_slidy) {\r\n      window.w3c_slidy.add_observer(function (slide_num) {\r\n        // slide_num starts at position 1\r\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\r\n      });\r\n    }\r\n\r\n  })();\r\n</script>\r\n\r\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

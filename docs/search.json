@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "발표자료",
     "section": "",
-    "text": "한국 R 사용자회\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n로우코드 Shiny 앱 개발\n\n\nShiny 앱 개발은 로우코드 개발(?)\n\n\n\nquarto\n\n\nlow code platform\n\n\nshiny\n\n\n\n\nNov 5, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 사이언스에서 디자인과 아키텍쳐의 중요성\n\n\nEmerging Creativity Workshop\n\n\n\nrevealjs\n\n\n\n\nOct 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n기후 위기: CO2\n\n\nNOAA 하와이섬에서 측정한 CO2 추세를 면밀히 살펴보자.\n\n\n\nobservable js\n\n\n\n\nSep 12, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n파머 펭귄\n\n\n파머 펭귄 데이터로 Observables JS 인터랙티브 문서의 가능성과 한계\n\n\n\nobservable js\n\n\n\n\nSep 11, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "통계(데이터 과학), 기계학습, 딥러닝 관련 발표자료와 앱 공개를 통해 통계 대중화와 디지털 불평등 해소를 위해 함께 노력하고 있습니다.\n\n\n한국 R 사용자회\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n로우코드 Shiny 앱 개발\n\n\nShiny 앱 개발은 로우코드 개발(?)\n\n\n\nquarto\n\n\nlow code platform\n\n\nshiny\n\n\n\n\n2022 년 11 월 05일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 사이언스에서 디자인과 아키텍쳐의 중요성\n\n\nEmerging Creativity Workshop\n\n\n\nrevealjs\n\n\n\n\n2022 년 10 월 11일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n기후 위기: CO2\n\n\nNOAA 하와이섬에서 측정한 CO2 추세를 면밀히 살펴보자.\n\n\n\nobservable js\n\n\n\n\n2022 년 09 월 12일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n파머 펭귄\n\n\n파머 펭귄 데이터로 Observables JS 인터랙티브 문서의 가능성과 한계\n\n\n\nobservable js\n\n\n\n\n2022 년 09 월 11일\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slideshow/202210-hongik/data-science.html",
@@ -529,14 +529,14 @@
     "href": "slideshow/202210-hongik-v2/index.html#데이터-사이언스---출판",
     "title": "데이터 사이언스와 디자인\n",
     "section": "데이터 사이언스 - 출판",
-    "text": "데이터 사이언스 - 출판\n\n\n\n\n문제점\n\n\n\n\nSingle Sourcing 개념\n\n\n\n\nSingle Sourcing Multi-Use\n\n\n\nFigure 2: 데이터 사이언스 출판 현황과 방향"
+    "text": "데이터 사이언스 - 출판\n\n\n\n\n문제점\n\n\n\n\nSingle Sourcing 개념\n\n\n\n\nSingle Sourcing Multi-Use\n\n\n\nFigure 2: 데이터 사이언스 출판 현황과 방향"
   },
   {
     "objectID": "slideshow/202210-hongik-v2/index.html#복잡성",
     "href": "slideshow/202210-hongik-v2/index.html#복잡성",
     "title": "데이터 사이언스와 디자인\n",
     "section": "복잡성",
-    "text": "복잡성\n\n\n\n\n엑셀, XKCD 1667: Algorithms\n\n\n\n\n아래한글, Writing Technical Papers with Markdown and Pandoc\n\n\n\n\n럼스펠트 지식 행렬, (Martin and Majidian 2011)\n\n\n\nFigure 3: 데이터 과학 저작도구 복잡성"
+    "text": "복잡성\n\n\n\n\n엑셀, XKCD 1667: Algorithms\n\n\n\n\n아래한글, Writing Technical Papers with Markdown and Pandoc\n\n\n\n\n럼스펠트 지식 행렬, (Martin and Majidian 2011)\n\n\n\nFigure 3: 데이터 과학 저작도구 복잡성"
   },
   {
     "objectID": "slideshow/202210-hongik-v2/index.html#디자인---사람-대-기계",
@@ -550,7 +550,7 @@
     "href": "slideshow/202210-hongik-v2/index.html#사람-대-기계",
     "title": "데이터 사이언스와 디자인\n",
     "section": "사람 대 기계",
-    "text": "사람 대 기계\n\n\n\n\n전체 개발 시간\n\n\n\n\n사람 < 기계\n\n\n\n\n사람 > 기계\n\n\n\nFigure 4: 전체 개발시간 중요도 추세"
+    "text": "사람 대 기계\n\n\n\n\n전체 개발 시간\n\n\n\n\n사람 < 기계\n\n\n\n\n사람 > 기계\n\n\n\nFigure 4: 전체 개발시간 중요도 추세"
   },
   {
     "objectID": "slideshow/202210-hongik-v2/index.html#언어와-복잡성",
@@ -571,7 +571,7 @@
     "href": "slideshow/202210-hongik-v2/index.html#quarto",
     "title": "데이터 사이언스와 디자인\n",
     "section": "Quarto",
-    "text": "Quarto\n\n\n\n\nR\n\n\n\n\n파이썬\n\n\n\n\n\n\nQuarto: R\n\n\n\n\nQuarto: 파이썬\n\n\n\nFigure 5: 데이터 사이언스 출판 제작 흐름"
+    "text": "Quarto\n\n\n\n\nR\n\n\n\n\n파이썬\n\n\n\n\n\n\nQuarto: R\n\n\n\n\nQuarto: 파이썬\n\n\n\nFigure 5: 데이터 사이언스 출판 제작 흐름"
   },
   {
     "objectID": "slideshow/202210-hongik-v2/index.html#파이프-필터",
@@ -648,14 +648,14 @@
     "href": "slideshow/202210-hongik-v2/index.html#윈텔-아키텍처",
     "title": "데이터 사이언스와 디자인\n",
     "section": "윈텔 아키텍처",
-    "text": "윈텔 아키텍처\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: 마이크로소프트 + 인텔 아키텍처"
+    "text": "윈텔 아키텍처\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: 마이크로소프트 + 인텔 아키텍처"
   },
   {
     "objectID": "slideshow/202210-hongik-v2/index.html#과학기술-컴퓨팅",
     "href": "slideshow/202210-hongik-v2/index.html#과학기술-컴퓨팅",
     "title": "데이터 사이언스와 디자인\n",
     "section": "과학기술 컴퓨팅",
-    "text": "과학기술 컴퓨팅\n\n\n\n\n추상화\n\n\n\n\n자동화\n\n\n\n\n과학적 방법론\n\n\n\nFigure 7: 과학기술 방법론"
+    "text": "과학기술 컴퓨팅\n\n\n\n\n추상화\n\n\n\n\n자동화\n\n\n\n\n과학적 방법론\n\n\n\nFigure 7: 과학기술 방법론"
   },
   {
     "objectID": "slideshow/202210-hongik-v2/index.html#소프트웨어-개발",
@@ -676,7 +676,7 @@
     "href": "slideshow/202210-hongik-v2/index.html#코딩",
     "title": "데이터 사이언스와 디자인\n",
     "section": "코딩",
-    "text": "코딩\n\n\n\n\n\n프로그래밍 언어\n\n\n\n\n프레임워크\n\n\n\n\n프로그래밍 패러다임\n\n\n\nFigure 8: ?(caption)"
+    "text": "코딩\n\n\n\n\n\n프로그래밍 언어\n\n\n\n\n프레임워크\n\n\n\n\n프로그래밍 패러다임\n\n\n\nFigure 8: ?(caption)"
   },
   {
     "objectID": "slideshow/202210-hongik-v2/index.html#복잡성-가치",
@@ -733,5 +733,47 @@
     "title": "로우코드 Shiny 앱 개발",
     "section": "통계 코딩 도구 진화",
     "text": "통계 코딩 도구 진화"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#소프트웨어-로우-코드-개발",
+    "href": "slideshow/202211-meetup/index.html#소프트웨어-로우-코드-개발",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "소프트웨어 로우 코드 개발",
+    "text": "소프트웨어 로우 코드 개발"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#r-로우-코드-개발",
+    "href": "slideshow/202211-meetup/index.html#r-로우-코드-개발",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "R 로우 코드 개발",
+    "text": "R 로우 코드 개발\n\n\nUI 편집\n대쉬보드\nggplot\neasystats\ndlookr\n\n\n\n\n\n\n\nhttps://rstudio.github.io/shinyuieditor/\n\n\n\n\n\n\nhttps://github.com/petergandenberger/dashboard-builder\n\n\n\n\n\n\nhttps://github.com/dreamRs/esquisse\n\n\n\n\n\n\nhttps://easystats.github.io/easystats/index.html\n\n\n \nhttps://cran.r-project.org/web/packages/dlookr/"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#ui-편집",
+    "href": "slideshow/202211-meetup/index.html#ui-편집",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "UI 편집",
+    "text": "UI 편집\n\nhttps://rstudio.github.io/shinyuieditor/"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#대쉬보드",
+    "href": "slideshow/202211-meetup/index.html#대쉬보드",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "대쉬보드",
+    "text": "대쉬보드\n\nhttps://github.com/petergandenberger/dashboard-builder"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#대쉬보드-1",
+    "href": "slideshow/202211-meetup/index.html#대쉬보드-1",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "대쉬보드",
+    "text": "대쉬보드\n\n\n\n한국 R 사용자회"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#ggplot",
+    "href": "slideshow/202211-meetup/index.html#ggplot",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "ggplot",
+    "text": "ggplot"
   }
 ]

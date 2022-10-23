@@ -12,7 +12,7 @@
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.2.237">
 <meta name="author" content="이광춘 / 한국 R 사용자회">
 <title>발표자료 | 한국 R 사용자회 - 데이터 사이언스와 디자인</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -23,10 +23,15 @@
 <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -64,7 +69,7 @@
     code span { color: #545454; } /* Normal */
     code span.al { color: #7928a1; } /* Alert */
     code span.an { color: #696969; } /* Annotation */
-    code span.at { color: #aa5d00; } /* Attribute */
+    code span.at { color: #a55a00; } /* Attribute */
     code span.bn { color: #7928a1; } /* BaseN */
     code span.bu { } /* BuiltIn */
     code span.cf { color: #d91e18; } /* ControlFlow */
@@ -77,18 +82,18 @@
     code span.dv { color: #7928a1; } /* DecVal */
     code span.er { color: #7928a1; } /* Error */
     code span.ex { } /* Extension */
-    code span.fl { color: #aa5d00; } /* Float */
+    code span.fl { color: #a55a00; } /* Float */
     code span.fu { color: #06287e; } /* Function */
     code span.im { } /* Import */
     code span.in { color: #696969; } /* Information */
     code span.kw { color: #d91e18; } /* Keyword */
-    code span.op { color: #007faa; } /* Operator */
+    code span.op { color: #00769e; } /* Operator */
     code span.ot { color: #d91e18; } /* Other */
     code span.pp { color: #7928a1; } /* Preprocessor */
-    code span.sc { color: #007faa; } /* SpecialChar */
+    code span.sc { color: #00769e; } /* SpecialChar */
     code span.ss { color: #008000; } /* SpecialString */
     code span.st { color: #008000; } /* String */
-    code span.va { color: #aa5d00; } /* Variable */
+    code span.va { color: #a55a00; } /* Variable */
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
     div.csl-bib-body { }
@@ -407,11 +412,19 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center"><h1 class="title">데이터 사이언스와 디자인<br>
+<section id="title-slide" class="quarto-title-block center"><h1 class="title">데이터 사이언스와 디자인<br>
 </h1>
   <p class="subtitle">디자인과 아키텍쳐의 중요성</p>
-  <p class="author">이광춘 / 한국 R 사용자회</p>
-  <p class="date">2022년 10월 11일</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+이광춘 / 한국 R 사용자회 
+</div>
+</div>
+</div>
+
+  <p class="date">Invalid Date</p>
 </section><section class="slide level2"><div class="column-body-outset">
 <div id="fig-hongik" class="quarto-layout-panel">
 <figure><div class="quarto-layout-row quarto-layout-valign-top">
@@ -424,7 +437,7 @@
 </figure>
 </div>
 </div>
-<p></p><figcaption>Figure 1: 홍익대학교 “Emerging Creativity Workshop”</figcaption><p></p>
+<p></p><figcaption>Figure&nbsp;1: 홍익대학교 “Emerging Creativity Workshop”</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -474,7 +487,7 @@
 </figure>
 </div>
 </div>
-<p></p><figcaption>Figure 2: 데이터 사이언스 출판 현황과 방향</figcaption><p></p>
+<p></p><figcaption>Figure&nbsp;2: 데이터 사이언스 출판 현황과 방향</figcaption><p></p>
 </figure>
 </div>
 </section><section id="복잡성" class="slide level2"><h2>복잡성</h2>
@@ -492,11 +505,11 @@
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure><p><a href="fig/rumsfeld-matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="럼스펠트 지식 행렬, [@martin2011beyond]"><img data-src="fig/rumsfeld-matrix.png"></a></p>
-<p></p><figcaption>럼스펠트 지식 행렬, <span class="citation" data-cites="martin2011beyond">(<a href="#/ref-martin2011beyond" role="doc-biblioref" onclick="return false;">Martin and Majidian 2011</a>)</span></figcaption><p></p>
+<p></p><figcaption>럼스펠트 지식 행렬, <span class="citation" data-cites="martin2011beyond">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Martin and Majidian 2011</a>)</span></figcaption><p></p>
 </figure>
 </div>
 </div>
-<p></p><figcaption>Figure 3: 데이터 과학 저작도구 복잡성</figcaption><p></p>
+<p></p><figcaption>Figure&nbsp;3: 데이터 과학 저작도구 복잡성</figcaption><p></p>
 </figure>
 </div>
 </section><section id="사람-대-기계" class="slide level2"><h2>사람 대 기계</h2>
@@ -518,7 +531,7 @@
 </figure>
 </div>
 </div>
-<p></p><figcaption>Figure 4: 전체 개발시간 중요도 추세</figcaption><p></p>
+<p></p><figcaption>Figure&nbsp;4: 전체 개발시간 중요도 추세</figcaption><p></p>
 </figure>
 </div>
 </section></section><section><section id="해법" class="title-slide slide level1 center"><h1>해법</h1>
@@ -549,7 +562,7 @@
 </figure>
 </div>
 </div>
-<p></p><figcaption>Figure 5: 데이터 사이언스 출판 제작 흐름</figcaption><p></p>
+<p></p><figcaption>Figure&nbsp;5: 데이터 사이언스 출판 제작 흐름</figcaption><p></p>
 </figure>
 </div>
 </section><section id="파이프-필터" class="slide level2"><h2>파이프 &amp; 필터</h2>
@@ -715,7 +728,7 @@
 </div>
 </div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn1" role="doc-endnote"><p>Comparing ggplot2 and R Base Graphics By <a href="https://flowingdata.com/2016/03/22/comparing-ggplot2-and-r-base-graphics/">Nathan Yau</a></p></li></ol></aside></section><section id="디자인---코드" class="slide level2"><h2>디자인 - 코드</h2>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Comparing ggplot2 and R Base Graphics By <a href="https://flowingdata.com/2016/03/22/comparing-ggplot2-and-r-base-graphics/">Nathan Yau</a></p></li></ol></aside></section><section id="디자인---코드" class="slide level2"><h2>디자인 - 코드</h2>
 <div class="panel-tabset">
 <ul id="tabset-4" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-4-1">데이터 가공</a></li>
@@ -924,7 +937,7 @@
 </figure>
 </div>
 </div>
-<p></p><figcaption>Figure 6: 마이크로소프트 + 인텔 아키텍처</figcaption><p></p>
+<p></p><figcaption>Figure&nbsp;6: 마이크로소프트 + 인텔 아키텍처</figcaption><p></p>
 </figure>
 </div>
 </section><section id="과학기술-컴퓨팅" class="slide level2"><h2>과학기술 컴퓨팅</h2>
@@ -946,7 +959,7 @@
 </figure>
 </div>
 </div>
-<p></p><figcaption>Figure 7: 과학기술 방법론</figcaption><p></p>
+<p></p><figcaption>Figure&nbsp;7: 과학기술 방법론</figcaption><p></p>
 </figure>
 </div>
 </section><section id="코딩" class="slide level2"><h2>코딩</h2>
@@ -969,7 +982,7 @@
 </figure>
 </div>
 </div>
-<p></p><figcaption>Figure 8: <strong>?(caption)</strong></figcaption><p></p>
+<p></p><figcaption>Figure&nbsp;8: <strong>?(caption)</strong></figcaption><p></p>
 </figure>
 </div>
 </section><section id="엔지니어링" class="slide level2"><h2>엔지니어링</h2>
@@ -1040,7 +1053,7 @@
 </li>
 </ul>
 </div><div class="column" style="width:50%;">
-<h4 id="설계와-디자인-원칙-farley2022">설계와 디자인 원칙 <span class="citation" data-cites="Farley2022">(<a href="#/ref-Farley2022" role="doc-biblioref" onclick="return false;">Farley 2020</a>)</span>
+<h4 id="설계와-디자인-원칙-farley2022">설계와 디자인 원칙 <span class="citation" data-cites="Farley2022">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Farley 2020</a>)</span>
 </h4>
 <ul>
 <li>
@@ -1159,7 +1172,7 @@
 <li><p><strong>Reproducible</strong>: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.</p></li>
 <li><p><strong>Replicable</strong>: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.</p></li>
 <li><p><strong>Robust</strong>: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.</p></li>
-<li><p><strong>Generalisable</strong>: Combining replicable and robust findings allow us to form generalisable results. <span class="citation" data-cites="turing-2022">(<a href="#/ref-turing-2022" role="doc-biblioref" onclick="return false;">Community and Scriberia 2022</a>)</span> <!-- Note that running an analysis on a different software implementation and with a different dataset does not provide generalised results. There will be many more steps to know how well the work applies to all the different aspects of the research question. Generalisation is an important step towards understanding that the result is not dependent on a particular dataset nor a particular version of the analysis pipeline. --></p></li>
+<li><p><strong>Generalisable</strong>: Combining replicable and robust findings allow us to form generalisable results. <span class="citation" data-cites="turing-2022">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Community and Scriberia 2022</a>)</span> <!-- Note that running an analysis on a different software implementation and with a different dataset does not provide generalised results. There will be many more steps to know how well the work applies to all the different aspects of the research question. Generalisation is an important step towards understanding that the result is not dependent on a particular dataset nor a particular version of the analysis pipeline. --></p></li>
 </ul>
 </div>
 </div>
@@ -1167,14 +1180,14 @@
 <div id="tabset-6-8">
 <div class="quarto-figure quarto-figure-center">
 <figure><p><a href="fig/reproducibility-spectrum.png" class="lightbox" data-gallery="quarto-lightbox-gallery-47" title="[@Peng2011]"><img data-src="fig/reproducibility-spectrum.png"></a></p>
-<p></p><figcaption><span class="citation" data-cites="Peng2011">(<a href="#/ref-Peng2011" role="doc-biblioref" onclick="return false;">Peng 2011</a>)</span></figcaption><p></p>
+<p></p><figcaption><span class="citation" data-cites="Peng2011">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Peng 2011</a>)</span></figcaption><p></p>
 </figure>
 </div>
 </div>
 <div id="tabset-6-9">
 <div class="quarto-figure quarto-figure-center">
 <figure><p><a href="fig/compendium.png" class="lightbox" data-gallery="quarto-lightbox-gallery-48" title="[@Marwick2018]"><img data-src="fig/compendium.png" style="width:80.0%"></a></p>
-<p></p><figcaption><span class="citation" data-cites="Marwick2018">(<a href="#/ref-Marwick2018" role="doc-biblioref" onclick="return false;">Marwick, Boettiger, and Mullen 2018</a>)</span></figcaption><p></p>
+<p></p><figcaption><span class="citation" data-cites="Marwick2018">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Marwick, Boettiger, and Mullen 2018</a>)</span></figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -1482,7 +1495,24 @@ Peng, Roger D. 2011. <span>“Reproducible Research in Computational Science.”
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -1512,31 +1542,50 @@ Peng, Roger D. 2011. <span>“Reproducible Research in Computational Science.”
       for (var i=0; i<noterefs.length; i++) {
         const ref = noterefs[i];
         tippyHover(ref, function() {
-          let href = ref.getAttribute('href');
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>

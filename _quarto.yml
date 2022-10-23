@@ -27,7 +27,6 @@ website:
 
   site-url: https://r2bit.com/bitSlide
   description: '한국 R 사용자회 발표자료 모음'
-  opengraph: true
 
 format:
   html:
@@ -47,3 +46,6 @@ lightbox: auto
 
 execute:
   freeze: true
+
+date-format: "YYYY 년 MM 월 DD일"
+

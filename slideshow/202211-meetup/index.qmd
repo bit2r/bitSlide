@@ -1,6 +1,46 @@
 ---
 title: "로우코드 Shiny 앱 개발"
-format: revealjs
+author: "이광춘 / 한국 R 사용자회"
+date: "2022-11-05"
+lang: kr
+format:
+  revealjs: 
+    theme: ["simple", "theme/q-theme.scss"]
+    width: 1280
+    height: 720
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: fig/koRea_logo.png
+    footer: "[한국 R 사용자회](https://r2bit.com/)&nbsp;"
+    code-copy: true
+    center-title-slide: true
+    code-link: true
+    code-overflow: wrap
+    highlight-style: a11y
+    smaller: true
+    scrollable: false
+    slide-number: c/t
+    code-tools:
+      
+      source: true
+      toggle: false
+      caption: none
+filters:
+   - lightbox
+lightbox: auto        
+execute: 
+  eval: true
+  echo: true
+  freeze: true  
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+knitr:
+  opts_chunk: 
+    echo: true
+    collapse: true
+    comment: "#>"
 ---
 
 # 통계 소프트웨어 개발
@@ -17,10 +57,58 @@ format: revealjs
 # 노/로우 코드 플랫폼
 
 
+## 소프트웨어 로우 코드 개발
+
+<br>
+
+![](fig/low-code-plaform.png)
+
+## R 로우 코드 개발
+
+::: {.panel-tabset}
+
+### UI 편집
+
+![](fig/shinyuieditor.jpg){width=67%}
+
+<https://rstudio.github.io/shinyuieditor/>
+
+### 대쉬보드
+
+![](fig/dashboard-builder.png){width=67%}
+
+<https://github.com/petergandenberger/dashboard-builder>
 
 
+### `ggplot`
+
+![](fig/esquisse.gif){width=47%}
+
+<https://github.com/dreamRs/esquisse>
+
+### `easystats`
+
+![](fig/easystat-workflow.png){width=67%}
+
+<https://easystats.github.io/easystats/index.html>
+
+### `dlookr`
+<br>
+<br>
+![](fig/autoEDA.png){width=67%}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
+<https://cran.r-project.org/web/packages/dlookr/>
 
+:::
+
+
+#  {background-image="../202210-hongik-v2/fig/slide-end.png" background-size="contain"}
 
 
