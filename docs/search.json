@@ -775,5 +775,12 @@
     "title": "로우코드 Shiny 앱 개발",
     "section": "ggplot",
     "text": "ggplot"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#shiny-ui-add-on-ui-addon",
+    "href": "slideshow/202211-meetup/index.html#shiny-ui-add-on-ui-addon",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "Shiny UI Add-on 1\n",
+    "text": "Shiny UI Add-on 1\n\n\n\n{shinycssloaders}\n{waiter}\n{rclipboard} & {tippy}\n{shinyglide}\n{sortable}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMandy Norrbo, “Top 5 Shiny UI Add-On Packages”"
   }
 ]

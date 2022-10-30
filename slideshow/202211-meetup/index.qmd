@@ -109,6 +109,40 @@ knitr:
 :::
 
 
+## Shiny UI Add-on [^ui-addon]
+
+::: {.panel-tabset}
+
+### {shinycssloaders}
+
+![](fig/ui-shinycssloader.gif){width=50%}
+
+### {waiter}
+
+
+![](fig/ui-waiter.gif){width=50%}
+
+### {rclipboard} & {tippy}
+
+![](fig/ui-rclipboard_tippy.gif){width=50%}
+
+### {shinyglide}
+
+![](fig/ui-shinyglide.gif){width=50%}
+
+
+### {sortable}
+
+![](fig/ui-sortable.gif){width=40%}
+
+
+
+
+[^ui-addon]:[Mandy Norrbo, "Top 5 Shiny UI Add-On Packages"](https://www.jumpingrivers.com/blog/r-shiny-extensions-ui/)
+
+:::
+
+
 #  {background-image="../202210-hongik-v2/fig/slide-end.png" background-size="contain"}
 
 
