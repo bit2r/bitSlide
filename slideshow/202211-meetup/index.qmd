@@ -136,6 +136,11 @@ knitr:
 ![](fig/ui-sortable.gif){width=40%}
 
 
+### {DataEditR}
+
+![](fig/ui-DataEditR.gif){width=40%}
+
+
 
 
 [^ui-addon]:[Mandy Norrbo, "Top 5 Shiny UI Add-On Packages"](https://www.jumpingrivers.com/blog/r-shiny-extensions-ui/)
