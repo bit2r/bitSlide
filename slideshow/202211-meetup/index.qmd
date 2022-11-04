@@ -52,6 +52,20 @@ knitr:
 
 ![](fig/computation-evolution.png)
 
+## why Quarto
+
+::: {.panel-tabset}
+
+### 2012년
+
+![](fig/matt_turck.png){width=50%}
+
+### 2021년
+
+<iframe src="fig/2021-MAD-Landscape-v3.pdf" title="MAD Landscape" width="960" height="500"></iframe>
+
+:::
+
 
 # 노/로우 코드 플랫폼
 
