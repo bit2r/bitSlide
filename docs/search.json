@@ -746,7 +746,7 @@
     "href": "slideshow/202211-meetup/index.html#r-로우-코드-개발",
     "title": "로우코드 Shiny 앱 개발",
     "section": "R 로우 코드 개발",
-    "text": "R 로우 코드 개발\n\n\nUI 편집\n대쉬보드\nggplot\neasystats\ndlookr\n\n\n\n\n\n\n\nhttps://rstudio.github.io/shinyuieditor/\n\n\n\n\n\n\nhttps://github.com/petergandenberger/dashboard-builder\n\n\n\n\n\n\nhttps://github.com/dreamRs/esquisse\n\n\n\n\n\n\nhttps://easystats.github.io/easystats/index.html\n\n\n \nhttps://cran.r-project.org/web/packages/dlookr/"
+    "text": "R 로우 코드 개발\n\n\n{designer}\n{shinyuieditor}\n대쉬보드\nggplot\neasystats\ndlookr\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://rstudio.github.io/shinyuieditor/\n\n\n\n\n\n\nhttps://github.com/petergandenberger/dashboard-builder\n\n\n\n\n\n\nhttps://github.com/dreamRs/esquisse\n\n\n\n\n\n\nhttps://easystats.github.io/easystats/index.html\n\n\n \nhttps://cran.r-project.org/web/packages/dlookr/"
   },
   {
     "objectID": "slideshow/202211-meetup/index.html#ui-편집",
@@ -781,6 +781,27 @@
     "href": "slideshow/202211-meetup/index.html#shiny-ui-add-on-ui-addon",
     "title": "로우코드 Shiny 앱 개발",
     "section": "Shiny UI Add-on 1\n",
-    "text": "Shiny UI Add-on 1\n\n\n\n{shinycssloaders}\n{waiter}\n{rclipboard} & {tippy}\n{shinyglide}\n{sortable}\n{DataEditR}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMandy Norrbo, “Top 5 Shiny UI Add-On Packages”"
+    "text": "Shiny UI Add-on 1\n\n\n\nshinyFiles\n{shinycssloaders}\n{waiter}\n{rclipboard} & {tippy}\n{shinyglide}\n{sortable}\n{DataEditR}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMandy Norrbo, “Top 5 Shiny UI Add-On Packages”"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#r-tidyverse",
+    "href": "slideshow/202211-meetup/index.html#r-tidyverse",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "R / Tidyverse",
+    "text": "R / Tidyverse\n\n\n{unravel}\n{searcher}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#rtidyverse",
+    "href": "slideshow/202211-meetup/index.html#rtidyverse",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "R/Tidyverse",
+    "text": "R/Tidyverse\n\n\n{unravel}\n{searcher}\n{carbonate}\n{asciicast}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#rtidyverse-pkg",
+    "href": "slideshow/202211-meetup/index.html#rtidyverse-pkg",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "R/Tidyverse 1\n",
+    "text": "R/Tidyverse 1\n\n\n\n{unravel}\n{searcher}\n{carbonate}\n{asciicast}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSam Parmar, “11 R packages I’ve enjoyed using in 2022”"
   }
 ]

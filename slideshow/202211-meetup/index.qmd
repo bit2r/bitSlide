@@ -22,7 +22,6 @@ format:
     scrollable: false
     slide-number: c/t
     code-tools:
-      
       source: true
       toggle: false
       caption: none
@@ -67,7 +66,11 @@ knitr:
 
 ::: {.panel-tabset}
 
-### UI 편집
+### {designer}
+
+![](fig/ui-designer.gif){width=47%}
+
+### {shinyuieditor}
 
 ![](fig/shinyuieditor.jpg){width=67%}
 
@@ -92,6 +95,7 @@ knitr:
 
 <https://easystats.github.io/easystats/index.html>
 
+
 ### `dlookr`
 <br>
 <br>
@@ -113,7 +117,12 @@ knitr:
 
 ::: {.panel-tabset}
 
-### {shinycssloaders}
+### `shinyFiles`
+
+![](fig/ui-shinyFiles.gif){width=50%}
+
+
+### {shinycssloaders} 
 
 ![](fig/ui-shinycssloader.gif){width=50%}
 
@@ -147,7 +156,34 @@ knitr:
 
 :::
 
+## R/Tidyverse  [^pkg]
+
+::: {.panel-tabset}
+
+### {unravel}
+
+![](fig/unraval.gif){width=40%}
+
+### {searcher}
+
+![](fig/searcher.gif){width=70%}
+
+### {carbonate}
+
+![](fig/carbonate.png){width=77%}
+
+### {asciicast}
+
+![](fig/asciicast.svg){width=40%}
+
+[^pkg]:[Sam Parmar, "11 R packages I’ve enjoyed using in 2022"](https://parmsam.medium.com/11-r-packages-ive-enjoyed-using-in-2022-51c0c07ba8e)
+
+:::
+
+
 
 #  {background-image="../202210-hongik-v2/fig/slide-end.png" background-size="contain"}
+
+
 
 
