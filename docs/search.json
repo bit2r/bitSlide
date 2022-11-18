@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "발표자료",
     "section": "",
-    "text": "통계(데이터 과학), 기계학습, 딥러닝 관련 발표자료와 앱 공개를 통해 통계 대중화와 디지털 불평등 해소를 위해 함께 노력하고 있습니다.\n\n\n한국 R 사용자회\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n로우코드 Shiny 앱 개발\n\n\nShiny 앱 개발은 로우코드 개발(?)\n\n\n\nquarto\n\n\nlow code platform\n\n\nshiny\n\n\n\n\n2022 년 11 월 05일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 사이언스에서 디자인과 아키텍쳐의 중요성\n\n\nEmerging Creativity Workshop\n\n\n\nrevealjs\n\n\n\n\n2022 년 10 월 11일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n기후 위기: CO2\n\n\nNOAA 하와이섬에서 측정한 CO2 추세를 면밀히 살펴보자.\n\n\n\nobservable js\n\n\n\n\n2022 년 09 월 12일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n파머 펭귄\n\n\n파머 펭귄 데이터로 Observables JS 인터랙티브 문서의 가능성과 한계\n\n\n\nobservable js\n\n\n\n\n2022 년 09 월 11일\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "통계(데이터 과학), 기계학습, 딥러닝 관련 발표자료와 앱 공개를 통해 통계 대중화와 디지털 불평등 해소를 위해 함께 노력하고 있습니다.\n\n\n한국 R 사용자회\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 문해력과 디지털 글쓰기\n\n\n인공지능을 지탱하는 기본기\n\n\n\n디지털 글쓰기\n\n\n데이터 문해력\n\n\n백암중\n\n\n과학창의재단\n\n\n드림톡\n\n\n\n\n2022 년 12 월 05일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n로우코드 Shiny 앱 개발\n\n\nShiny 앱 개발은 로우코드 개발(?)\n\n\n\nquarto\n\n\nlow code platform\n\n\nshiny\n\n\n\n\n2022 년 11 월 05일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 사이언스에서 디자인과 아키텍쳐의 중요성\n\n\nEmerging Creativity Workshop\n\n\n\nrevealjs\n\n\n\n\n2022 년 10 월 11일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n기후 위기: CO2\n\n\nNOAA 하와이섬에서 측정한 CO2 추세를 면밀히 살펴보자.\n\n\n\nobservable js\n\n\n\n\n2022 년 09 월 12일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n파머 펭귄\n\n\n파머 펭귄 데이터로 Observables JS 인터랙티브 문서의 가능성과 한계\n\n\n\nobservable js\n\n\n\n\n2022 년 09 월 11일\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slideshow/202210-hongik/data-science.html",
@@ -81,7 +81,7 @@
     "href": "slideshow/202210-hongik/index.html#데이터-사이언스---출판",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "데이터 사이언스 - 출판",
-    "text": "데이터 사이언스 - 출판\n\n\n문제점\n개념\nSingle Sourcing Multi-Use\n\n\n\n\n\nFigure 1: 문제점\n\n\n\n\n\n\nFigure 2: Single Sourcing 개념\n\n\n\n\n\n\nFigure 3: Single Sourcing Multi-Use"
+    "text": "데이터 사이언스 - 출판\n\n\n문제점\n개념\nSingle Sourcing Multi-Use\n\n\n\n\n\nFigure 1: 문제점\n\n\n\n\n\n\nFigure 2: Single Sourcing 개념\n\n\n\n\n\n\nFigure 3: Single Sourcing Multi-Use"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#복잡성",
@@ -95,7 +95,7 @@
     "href": "slideshow/202210-hongik/index.html#시각화---그래프-문법-problem-3",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "시각화 - 그래프 문법 1\n",
-    "text": "시각화 - 그래프 문법 1\n\n\n\n\n\nR 코드\n\nlibrary(tidyverse)\nbill_df <- data.frame(\n  sex = factor(c(\"여성\",\"여성\",\"남성\",\"남성\")),\n  time = factor(c(\"점심\",\"저녁\",\"점심\",\"저녁\"), levels=c(\"점심\",\"저녁\")),\n  total_bill = c(13.53, 16.81, 16.24, 17.42)\n)\n\n\n실행결과\n\nbill_df\n\n   sex time total_bill\n1 여성 점심      13.53\n2 여성 저녁      16.81\n3 남성 점심      16.24\n4 남성 저녁      17.42\n\n\n\n\n\n\n\nR 코드\n\nbill_df %>% \n  ggplot(aes(x=time, y=total_bill, group=sex, shape=sex, colour=sex)) +\n    geom_line(aes(linetype=sex), size=1) +    \n    geom_point(size=3, fill=\"white\") +        \n    expand_limits(y=0) +                      \n    scale_colour_hue(name=\"결재자 성별\", l=30) +\n    scale_shape_manual(name=\"결재자 성별\", values=c(22,21)) +\n    scale_linetype_discrete(name=\"결재자 성별\") +\n    xlab(\"점심, 석식\") + ylab(\"팁(Tip)\") +\n    ggtitle(\"식사 결재 평균 팁\") +    \n    theme_bw() +\n    theme(legend.position=c(.7, .4))\n\n\n실행결과\n\n\n\n\n\n\n\n\n\n\nR 코드\n\nbill_mat <- matrix( bill_df$total_bill,\n                   nrow = 2,\n                   byrow=TRUE,\n                   dimnames = list(c(\"여성\", \"남성\"), c(\"점심\", \"저녁\"))\n                   )\n\nmf_col <- c(\"#3CC3BD\", \"#FD8210\")\nbarplot(bill_mat, beside = TRUE, border=NA, col=mf_col)\nlegend(\"topleft\", row.names(bill_mat), pch=15, col=mf_col)\n\n\npar(cex=1.2, cex.axis=1.1)\nmatplot(bill_mat, type=\"b\", lty=1, pch=19, col=mf_col,\n    cex=1.5, lwd=3, las=1, bty=\"n\", xaxt=\"n\",\n    xlim=c(0.7, 2.2), ylim=c(12,18), ylab=\"\",\n    main=\"식사 결재 평균 팁\", yaxt=\"n\")\naxis(2, at=axTicks(2), labels=sprintf(\"$%s\", axTicks(2)),\n    las=1, cex.axis=0.8, col=NA, line = -0.5)\ngrid(NA, NULL, lty=3, lwd=1, col=\"#000000\")\nabline(v=c(1,2), lty=3, lwd=1, col=\"#000000\")\nmtext(\"점심\", side=1, at=1)\nmtext(\"저녁\", side=1, at=2)\ntext(1.5, 17.3, \"남성\", srt=8, font=3)\ntext(1.5, 15.1, \"여성\", srt=33, font=3)\n\n\n실행결과\n\n\n\n\n\n\n\n\nComparing ggplot2 and R Base Graphics By Nathan Yau"
+    "text": "시각화 - 그래프 문법 1\n\n\n\n\n\nR 코드\n\nlibrary(tidyverse)\nbill_df <- data.frame(\n  sex = factor(c(\"여성\",\"여성\",\"남성\",\"남성\")),\n  time = factor(c(\"점심\",\"저녁\",\"점심\",\"저녁\"), levels=c(\"점심\",\"저녁\")),\n  total_bill = c(13.53, 16.81, 16.24, 17.42)\n)\n\n\n실행결과\n\nbill_df\n\n   sex time total_bill\n1 여성 점심      13.53\n2 여성 저녁      16.81\n3 남성 점심      16.24\n4 남성 저녁      17.42\n\n\n\n\n\n\n\nR 코드\n\nbill_df %>% \n  ggplot(aes(x=time, y=total_bill, group=sex, shape=sex, colour=sex)) +\n    geom_line(aes(linetype=sex), size=1) +    \n    geom_point(size=3, fill=\"white\") +        \n    expand_limits(y=0) +                      \n    scale_colour_hue(name=\"결재자 성별\", l=30) +\n    scale_shape_manual(name=\"결재자 성별\", values=c(22,21)) +\n    scale_linetype_discrete(name=\"결재자 성별\") +\n    xlab(\"점심, 석식\") + ylab(\"팁(Tip)\") +\n    ggtitle(\"식사 결재 평균 팁\") +    \n    theme_bw() +\n    theme(legend.position=c(.7, .4))\n\n\n실행결과\n\n\n\n\n\n\n\n\n\n\n\n\n\nR 코드\n\nbill_mat <- matrix( bill_df$total_bill,\n                   nrow = 2,\n                   byrow=TRUE,\n                   dimnames = list(c(\"여성\", \"남성\"), c(\"점심\", \"저녁\"))\n                   )\n\nmf_col <- c(\"#3CC3BD\", \"#FD8210\")\nbarplot(bill_mat, beside = TRUE, border=NA, col=mf_col)\nlegend(\"topleft\", row.names(bill_mat), pch=15, col=mf_col)\n\n\npar(cex=1.2, cex.axis=1.1)\nmatplot(bill_mat, type=\"b\", lty=1, pch=19, col=mf_col,\n    cex=1.5, lwd=3, las=1, bty=\"n\", xaxt=\"n\",\n    xlim=c(0.7, 2.2), ylim=c(12,18), ylab=\"\",\n    main=\"식사 결재 평균 팁\", yaxt=\"n\")\naxis(2, at=axTicks(2), labels=sprintf(\"$%s\", axTicks(2)),\n    las=1, cex.axis=0.8, col=NA, line = -0.5)\ngrid(NA, NULL, lty=3, lwd=1, col=\"#000000\")\nabline(v=c(1,2), lty=3, lwd=1, col=\"#000000\")\nmtext(\"점심\", side=1, at=1)\nmtext(\"저녁\", side=1, at=2)\ntext(1.5, 17.3, \"남성\", srt=8, font=3)\ntext(1.5, 15.1, \"여성\", srt=33, font=3)\n\n\n실행결과\n\n\n\n\n\n\n\n\n\n\n\nComparing ggplot2 and R Base Graphics By Nathan Yau"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#디자인---코드",
@@ -165,42 +165,42 @@
     "href": "slideshow/202210-hongik/problem.html#데이터-사이언스---출판",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "데이터 사이언스 - 출판",
-    "text": "데이터 사이언스 - 출판\n\n\n문제점\n개념\nSingle Sourcing Multi-Use\n\n\n\n\n\nFigure 1: 문제점\n\n\n\n\n\n\nFigure 2: Single Sourcing 개념\n\n\n\n\n\n\nFigure 3: Single Sourcing Multi-Use"
+    "text": "데이터 사이언스 - 출판\n\n문제점개념Single Sourcing Multi-Use\n\n\n\n\n\nFigure 1: 문제점\n\n\n\n\n\n\n\nFigure 2: Single Sourcing 개념\n\n\n\n\n\n\n\nFigure 3: Single Sourcing Multi-Use"
   },
   {
     "objectID": "slideshow/202210-hongik/problem.html#복잡성",
     "href": "slideshow/202210-hongik/problem.html#복잡성",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "복잡성",
-    "text": "복잡성\n\n\n\n엑셀 1\n\n\n아래한글 2\n\n럼스펠트 지식 행렬\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n[@martin2011beyond]"
+    "text": "복잡성\n\n엑셀 1아래한글 2럼스펠트 지식 행렬\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n[@martin2011beyond]"
   },
   {
     "objectID": "slideshow/202210-hongik/problem.html#시각화---그래프-문법-problem-3",
     "href": "slideshow/202210-hongik/problem.html#시각화---그래프-문법-problem-3",
     "title": "발표자료 | 한국 R 사용자회",
-    "section": "시각화 - 그래프 문법 3\n",
-    "text": "시각화 - 그래프 문법 3\n\n\nR 코드\n\n\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✔ ggplot2 3.3.6      ✔ purrr   0.3.4 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.0      ✔ stringr 1.4.1 \n✔ readr   2.1.2      ✔ forcats 0.5.2 \n\n\nWarning: package 'tibble' was built under R version 4.2.1\n\n\nWarning: package 'dplyr' was built under R version 4.2.1\n\n\nWarning: package 'stringr' was built under R version 4.2.1\n\n\nWarning: package 'forcats' was built under R version 4.2.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nbill_df <- data.frame(\n  sex = factor(c(\"여성\",\"여성\",\"남성\",\"남성\")),\n  time = factor(c(\"점심\",\"저녁\",\"점심\",\"저녁\"), levels=c(\"점심\",\"저녁\")),\n  total_bill = c(13.53, 16.81, 16.24, 17.42)\n)\nbill_df\n\n   sex time total_bill\n1 여성 점심      13.53\n2 여성 저녁      16.81\n3 남성 점심      16.24\n4 남성 저녁      17.42\n\n\n\n\n\nR 코드\n\nbill_df %>% \n  ggplot(aes(x=time, y=total_bill, group=sex, shape=sex, colour=sex)) +\n    geom_line(aes(linetype=sex), size=1) +    \n    geom_point(size=3, fill=\"white\") +        \n    expand_limits(y=0) +                      \n    scale_colour_hue(name=\"결재자 성별\", l=30) +\n    scale_shape_manual(name=\"결재자 성별\", values=c(22,21)) +\n    scale_linetype_discrete(name=\"결재자 성별\") +\n    xlab(\"점심, 석식\") + ylab(\"팁(Tip)\") +\n    ggtitle(\"식사 결재 평균 팁\") +    \n    theme_bw() +\n    theme(legend.position=c(.7, .4))\n\n\n\n실행결과\n\n\n\n\n\n\n\n\n\n\n\nR 코드\n\nbill_mat <- matrix( bill_df$total_bill,\n                   nrow = 2,\n                   byrow=TRUE,\n                   dimnames = list(c(\"여성\", \"남성\"), c(\"점심\", \"저녁\"))\n                   )\n\nmf_col <- c(\"#3CC3BD\", \"#FD8210\")\nbarplot(bill_mat, beside = TRUE, border=NA, col=mf_col)\nlegend(\"topleft\", row.names(bill_mat), pch=15, col=mf_col)\n\n\npar(cex=1.2, cex.axis=1.1)\nmatplot(bill_mat, type=\"b\", lty=1, pch=19, col=mf_col,\n    cex=1.5, lwd=3, las=1, bty=\"n\", xaxt=\"n\",\n    xlim=c(0.7, 2.2), ylim=c(12,18), ylab=\"\",\n    main=\"식사 결재 평균 팁\", yaxt=\"n\")\naxis(2, at=axTicks(2), labels=sprintf(\"$%s\", axTicks(2)),\n    las=1, cex.axis=0.8, col=NA, line = -0.5)\ngrid(NA, NULL, lty=3, lwd=1, col=\"#000000\")\nabline(v=c(1,2), lty=3, lwd=1, col=\"#000000\")\nmtext(\"점심\", side=1, at=1)\nmtext(\"저녁\", side=1, at=2)\ntext(1.5, 17.3, \"남성\", srt=8, font=3)\ntext(1.5, 15.1, \"여성\", srt=33, font=3)\n\n\n\n실행결과"
+    "section": "시각화 - 그래프 문법 3",
+    "text": "시각화 - 그래프 문법 3\n\n\n\n\n\nR 코드\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✔ ggplot2 3.3.6      ✔ purrr   0.3.4 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n✔ readr   2.1.2      ✔ forcats 0.5.2 \n\n\nWarning: package 'tibble' was built under R version 4.2.1\n\n\nWarning: package 'tidyr' was built under R version 4.2.1\n\n\nWarning: package 'dplyr' was built under R version 4.2.1\n\n\nWarning: package 'stringr' was built under R version 4.2.1\n\n\nWarning: package 'forcats' was built under R version 4.2.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nbill_df <- data.frame(\n  sex = factor(c(\"여성\",\"여성\",\"남성\",\"남성\")),\n  time = factor(c(\"점심\",\"저녁\",\"점심\",\"저녁\"), levels=c(\"점심\",\"저녁\")),\n  total_bill = c(13.53, 16.81, 16.24, 17.42)\n)\n\n\n\n\n실행결과\n\nbill_df\n\n   sex time total_bill\n1 여성 점심      13.53\n2 여성 저녁      16.81\n3 남성 점심      16.24\n4 남성 저녁      17.42\n\n\n\n\n\n\n\n\n\nR 코드\n\nbill_df %>% \n  ggplot(aes(x=time, y=total_bill, group=sex, shape=sex, colour=sex)) +\n    geom_line(aes(linetype=sex), size=1) +    \n    geom_point(size=3, fill=\"white\") +        \n    expand_limits(y=0) +                      \n    scale_colour_hue(name=\"결재자 성별\", l=30) +\n    scale_shape_manual(name=\"결재자 성별\", values=c(22,21)) +\n    scale_linetype_discrete(name=\"결재자 성별\") +\n    xlab(\"점심, 석식\") + ylab(\"팁(Tip)\") +\n    ggtitle(\"식사 결재 평균 팁\") +    \n    theme_bw() +\n    theme(legend.position=c(.7, .4))\n\n\n\n\n실행결과\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR 코드\n\nbill_mat <- matrix( bill_df$total_bill,\n                   nrow = 2,\n                   byrow=TRUE,\n                   dimnames = list(c(\"여성\", \"남성\"), c(\"점심\", \"저녁\"))\n                   )\n\nmf_col <- c(\"#3CC3BD\", \"#FD8210\")\nbarplot(bill_mat, beside = TRUE, border=NA, col=mf_col)\nlegend(\"topleft\", row.names(bill_mat), pch=15, col=mf_col)\n\n\npar(cex=1.2, cex.axis=1.1)\nmatplot(bill_mat, type=\"b\", lty=1, pch=19, col=mf_col,\n    cex=1.5, lwd=3, las=1, bty=\"n\", xaxt=\"n\",\n    xlim=c(0.7, 2.2), ylim=c(12,18), ylab=\"\",\n    main=\"식사 결재 평균 팁\", yaxt=\"n\")\naxis(2, at=axTicks(2), labels=sprintf(\"$%s\", axTicks(2)),\n    las=1, cex.axis=0.8, col=NA, line = -0.5)\ngrid(NA, NULL, lty=3, lwd=1, col=\"#000000\")\nabline(v=c(1,2), lty=3, lwd=1, col=\"#000000\")\nmtext(\"점심\", side=1, at=1)\nmtext(\"저녁\", side=1, at=2)\ntext(1.5, 17.3, \"남성\", srt=8, font=3)\ntext(1.5, 15.1, \"여성\", srt=33, font=3)\n\n\n\n\n실행결과"
   },
   {
     "objectID": "slideshow/202210-hongik/problem.html#디자인---코드",
     "href": "slideshow/202210-hongik/problem.html#디자인---코드",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "디자인 - 코드",
-    "text": "디자인 - 코드\n\n\n데이터 가공\ndplyr R\nBase R\nSQL\n파이썬\n\n\n\n\n날짜와 시간별로 총 빈도수와 출발연착 평균 시간을 구한다. 단, 총빈도수가 10 회 미만인 것은 제외하고 출발연착 시간의 결측값을 제거하고 계산한다.\n\n\n\nflights 데이터프레임에서\n출발 연착시간(dep_delay) 칼럼에서 결측값이 없는 (!is.na()) 행을 필터링 하고\n날짜별(date), 시간별(hour) 그룹을 묶어\n평균 출발 연착시간을 계산하고 총빈도수 총계를 내고\n총빈도수가 10회 이상인 날짜와 시간을 찾아내시오\n\n\n\n\nhourly_delay <- flights %>%  \n  filter(!is.na(dep_delay)) %>% \n  group_by(date, hour) %>% \n  summarise(delay = mean(dep_delay), n = n()) %>%  \n  filter(n > 10) \n\n\n\n\nhourly_delay <- filter(   \n    summarise(   \n        group_by(   \n             filter(   \n                 flights,    \n                 !is.na(dep_delay)   \n             ),    \n             date, hour   \n        ),    \n    delay = mean(dep_delay),    \n         n = n()   \n    ),    \n    n > 10   \n)\n\n\n\n\nSELECT \"date\", \"hour\", \"delay\", \"n\"\nFROM (\n    SELECT \"date\", \"hour\",\n        AVG(\"dep_delay\") AS \"delay\",\n        COUNT() AS \"n\"\n    FROM \"flights\"\n    WHERE NOT(\"dep_delay\" IS NULL)\n    GROUP BY \"date\", \"hour\"\n) AS \"_W1\"\nWHERE \"n\" > 10.0\n\n\n\n\nflights[['date','hour','dep_delay']]\n..."
+    "text": "디자인 - 코드\n\n데이터 가공dplyr RBase RSQL파이썬\n\n\n\n날짜와 시간별로 총 빈도수와 출발연착 평균 시간을 구한다. 단, 총빈도수가 10 회 미만인 것은 제외하고 출발연착 시간의 결측값을 제거하고 계산한다.\n\n\nflights 데이터프레임에서\n출발 연착시간(dep_delay) 칼럼에서 결측값이 없는 (!is.na()) 행을 필터링 하고\n날짜별(date), 시간별(hour) 그룹을 묶어\n평균 출발 연착시간을 계산하고 총빈도수 총계를 내고\n총빈도수가 10회 이상인 날짜와 시간을 찾아내시오\n\n\n\n\nhourly_delay <- flights %>%  \n  filter(!is.na(dep_delay)) %>% \n  group_by(date, hour) %>% \n  summarise(delay = mean(dep_delay), n = n()) %>%  \n  filter(n > 10) \n\n\n\n\nhourly_delay <- filter(   \n    summarise(   \n        group_by(   \n             filter(   \n                 flights,    \n                 !is.na(dep_delay)   \n             ),    \n             date, hour   \n        ),    \n    delay = mean(dep_delay),    \n         n = n()   \n    ),    \n    n > 10   \n)\n\n\n\n\nSELECT \"date\", \"hour\", \"delay\", \"n\"\nFROM (\n    SELECT \"date\", \"hour\",\n        AVG(\"dep_delay\") AS \"delay\",\n        COUNT() AS \"n\"\n    FROM \"flights\"\n    WHERE NOT(\"dep_delay\" IS NULL)\n    GROUP BY \"date\", \"hour\"\n) AS \"_W1\"\nWHERE \"n\" > 10.0\n\n\n\n\nflights[['date','hour','dep_delay']]\n..."
   },
   {
     "objectID": "slideshow/202210-hongik/problem.html#디자인---데이터",
     "href": "slideshow/202210-hongik/problem.html#디자인---데이터",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "디자인 - 데이터",
-    "text": "디자인 - 데이터\n\n\n정돈된 데이터\n사례 - 결핵 데이터\n사례 - Messy 데이터\n사례 - 코드\n사례 - Tidy 데이터\n\n\n\n\n\n\n\n\n\nWHO 결핵 원데이터\n\nWHO 에서 년도별, 국가별, 연령별, 성별, 진단방법별 결핵 발병사례 조사 통계 데이터\n진단방법\n\n\nrel stands for cases of relapse\n\nep stands for cases of extrapulmonary TB\n\nsn stands for cases of pulmonary TB that could not be diagnosed by a pulmonary smear (smear negative)\n\nsp stands for cases of pulmonary TB that could be diagnosed by a pulmonary smear (smear positive)\n\n\n연령\n\n014 = 0 – 14 years old\n1524 = 15 – 24 years old\n2534 = 25 – 34 years old\n3544 = 35 – 44 years old\n4554 = 45 – 54 years old\n5564 = 55 – 64 years old\n65 = 65 or older\n\n\n성별\n\nmales (m)\nfemales (f)\n\n\n\n\n\n\nlibrary(tidyverse)\ntidyr::who \n\n# A tibble: 7,240 × 60\n   country     iso2  iso3   year new_s…¹ new_s…² new_s…³ new_s…⁴ new_s…⁵ new_s…⁶\n   <chr>       <chr> <chr> <int>   <int>   <int>   <int>   <int>   <int>   <int>\n 1 Afghanistan AF    AFG    1980      NA      NA      NA      NA      NA      NA\n 2 Afghanistan AF    AFG    1981      NA      NA      NA      NA      NA      NA\n 3 Afghanistan AF    AFG    1982      NA      NA      NA      NA      NA      NA\n 4 Afghanistan AF    AFG    1983      NA      NA      NA      NA      NA      NA\n 5 Afghanistan AF    AFG    1984      NA      NA      NA      NA      NA      NA\n 6 Afghanistan AF    AFG    1985      NA      NA      NA      NA      NA      NA\n 7 Afghanistan AF    AFG    1986      NA      NA      NA      NA      NA      NA\n 8 Afghanistan AF    AFG    1987      NA      NA      NA      NA      NA      NA\n 9 Afghanistan AF    AFG    1988      NA      NA      NA      NA      NA      NA\n10 Afghanistan AF    AFG    1989      NA      NA      NA      NA      NA      NA\n# … with 7,230 more rows, 50 more variables: new_sp_m65 <int>,\n#   new_sp_f014 <int>, new_sp_f1524 <int>, new_sp_f2534 <int>,\n#   new_sp_f3544 <int>, new_sp_f4554 <int>, new_sp_f5564 <int>,\n#   new_sp_f65 <int>, new_sn_m014 <int>, new_sn_m1524 <int>,\n#   new_sn_m2534 <int>, new_sn_m3544 <int>, new_sn_m4554 <int>,\n#   new_sn_m5564 <int>, new_sn_m65 <int>, new_sn_f014 <int>,\n#   new_sn_f1524 <int>, new_sn_f2534 <int>, new_sn_f3544 <int>, …\n\n\n\n\n\nwho %>%\n  pivot_longer(\n    cols = new_sp_m014:newrel_f65, \n    names_to = \"key\", \n    values_to = \"cases\", \n    values_drop_na = TRUE\n  ) %>% \n  mutate(\n    key = stringr::str_replace(key, \"newrel\", \"new_rel\")\n  ) %>%\n  separate(key, c(\"new\", \"var\", \"sexage\")) %>% \n  select(-new, -iso2, -iso3) %>% \n  separate(sexage, c(\"sex\", \"age\"), sep = 1)\n\n\n\n\n\n# A tibble: 76,046 × 6\n   country      year var   sex   age   cases\n   <chr>       <int> <chr> <chr> <chr> <int>\n 1 Afghanistan  1997 sp    m     014       0\n 2 Afghanistan  1997 sp    m     1524     10\n 3 Afghanistan  1997 sp    m     2534      6\n 4 Afghanistan  1997 sp    m     3544      3\n 5 Afghanistan  1997 sp    m     4554      5\n 6 Afghanistan  1997 sp    m     5564      2\n 7 Afghanistan  1997 sp    m     65        0\n 8 Afghanistan  1997 sp    f     014       5\n 9 Afghanistan  1997 sp    f     1524     38\n10 Afghanistan  1997 sp    f     2534     36\n# … with 76,036 more rows"
+    "text": "디자인 - 데이터\n\n정돈된 데이터사례 - 결핵 데이터사례 - Messy 데이터사례 - 코드사례 - Tidy 데이터\n\n\n\n\n\n\n\n\nWHO 결핵 원데이터\nWHO 에서 년도별, 국가별, 연령별, 성별, 진단방법별 결핵 발병사례 조사 통계 데이터\n진단방법\n\nrel stands for cases of relapse\nep stands for cases of extrapulmonary TB\nsn stands for cases of pulmonary TB that could not be diagnosed by a pulmonary smear (smear negative)\nsp stands for cases of pulmonary TB that could be diagnosed by a pulmonary smear (smear positive)\n\n연령\n\n014 = 0 – 14 years old\n1524 = 15 – 24 years old\n2534 = 25 – 34 years old\n3544 = 35 – 44 years old\n4554 = 45 – 54 years old\n5564 = 55 – 64 years old\n65 = 65 or older\n\n성별\n\nmales (m)\nfemales (f)\n\n\n\n\n\nlibrary(tidyverse)\ntidyr::who \n\n# A tibble: 7,240 × 60\n   country     iso2  iso3   year new_s…¹ new_s…² new_s…³ new_s…⁴ new_s…⁵ new_s…⁶\n   <chr>       <chr> <chr> <int>   <int>   <int>   <int>   <int>   <int>   <int>\n 1 Afghanistan AF    AFG    1980      NA      NA      NA      NA      NA      NA\n 2 Afghanistan AF    AFG    1981      NA      NA      NA      NA      NA      NA\n 3 Afghanistan AF    AFG    1982      NA      NA      NA      NA      NA      NA\n 4 Afghanistan AF    AFG    1983      NA      NA      NA      NA      NA      NA\n 5 Afghanistan AF    AFG    1984      NA      NA      NA      NA      NA      NA\n 6 Afghanistan AF    AFG    1985      NA      NA      NA      NA      NA      NA\n 7 Afghanistan AF    AFG    1986      NA      NA      NA      NA      NA      NA\n 8 Afghanistan AF    AFG    1987      NA      NA      NA      NA      NA      NA\n 9 Afghanistan AF    AFG    1988      NA      NA      NA      NA      NA      NA\n10 Afghanistan AF    AFG    1989      NA      NA      NA      NA      NA      NA\n# … with 7,230 more rows, 50 more variables: new_sp_m65 <int>,\n#   new_sp_f014 <int>, new_sp_f1524 <int>, new_sp_f2534 <int>,\n#   new_sp_f3544 <int>, new_sp_f4554 <int>, new_sp_f5564 <int>,\n#   new_sp_f65 <int>, new_sn_m014 <int>, new_sn_m1524 <int>,\n#   new_sn_m2534 <int>, new_sn_m3544 <int>, new_sn_m4554 <int>,\n#   new_sn_m5564 <int>, new_sn_m65 <int>, new_sn_f014 <int>,\n#   new_sn_f1524 <int>, new_sn_f2534 <int>, new_sn_f3544 <int>, …\n\n\n\n\n\nwho %>%\n  pivot_longer(\n    cols = new_sp_m014:newrel_f65, \n    names_to = \"key\", \n    values_to = \"cases\", \n    values_drop_na = TRUE\n  ) %>% \n  mutate(\n    key = stringr::str_replace(key, \"newrel\", \"new_rel\")\n  ) %>%\n  separate(key, c(\"new\", \"var\", \"sexage\")) %>% \n  select(-new, -iso2, -iso3) %>% \n  separate(sexage, c(\"sex\", \"age\"), sep = 1)\n\n\n\n\n\n# A tibble: 76,046 × 6\n   country      year var   sex   age   cases\n   <chr>       <int> <chr> <chr> <chr> <int>\n 1 Afghanistan  1997 sp    m     014       0\n 2 Afghanistan  1997 sp    m     1524     10\n 3 Afghanistan  1997 sp    m     2534      6\n 4 Afghanistan  1997 sp    m     3544      3\n 5 Afghanistan  1997 sp    m     4554      5\n 6 Afghanistan  1997 sp    m     5564      2\n 7 Afghanistan  1997 sp    m     65        0\n 8 Afghanistan  1997 sp    f     014       5\n 9 Afghanistan  1997 sp    f     1524     38\n10 Afghanistan  1997 sp    f     2534     36\n# … with 76,036 more rows"
   },
   {
     "objectID": "slideshow/202210-hongik/problem.html#디자인---사람-대-기계",
     "href": "slideshow/202210-hongik/problem.html#디자인---사람-대-기계",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "디자인 - 사람 대 기계",
-    "text": "디자인 - 사람 대 기계\n\n\n전체 개발 시간\n사람 < 기계\n사람 > 기계"
+    "text": "디자인 - 사람 대 기계\n\n전체 개발 시간사람 < 기계사람 > 기계"
   },
   {
     "objectID": "slideshow/202210-hongik/solution.html",
@@ -228,14 +228,14 @@
     "href": "slideshow/202210-hongik/title-slide.html",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "디자인과 아키텍쳐의 중요성\n\n\n\n이광춘, 한국 R 사용자회\n\n\n2022-10-11\n\n\n\n\n   github.com/bit2r/quarto"
+    "text": "데이터 사이언스와 디자인\n\n\n디자인과 아키텍쳐의 중요성\n\n\n\n이광춘, 한국 R 사용자회\n\n\n2022-10-11\n\n\n\n   github.com/bit2r/quarto"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#r",
     "href": "slideshow/202210-hongik/index.html#r",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "R",
-    "text": "R\n\n\nR 코드\nR 스크립트\nLaTeX + R\nIDE\nPosit\n과학기술 SW\n재현성\n재현성 상세\nCompendium\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n\n참여: 방법론을 결정하는데 참여할 수 있나?\n\n\n\n\n\n\n\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. (Community and Scriberia 2022) \n\n\n\n\n\n\n\n(Peng 2011)\n\n\n\n\n\n\n(Marwick, Boettiger, and Mullen 2018)"
+    "text": "R\n\n\nR 코드\nR 스크립트\nLaTeX + R\nIDE\nPosit\n과학기술 SW\n재현성\n재현성 상세\nCompendium\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n\n참여: 방법론을 결정하는데 참여할 수 있나?\n\n\n\n\n\n\n\n\n\n\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. (Community and Scriberia 2022) \n\n\n\n\n\n\n\n(Peng 2011)\n\n\n\n\n\n\n(Marwick, Boettiger, and Mullen 2018)"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#section-7",
@@ -452,7 +452,7 @@
     "href": "slideshow/202210-hongik/rstudio-history.html#r",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "R",
-    "text": "R\n\nR 코드R 스크립트LaTeX + RIDEPosit과학기술 SW재현성재현성 상세Compendium\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n참여: 방법론을 결정하는데 참여할 수 있나?\n\n\n\n\n\n\n\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. [@turing-2022] \n\n\n\n\n\n\n\n\n[@Peng2011]\n\n\n\n\n\n\n\n[@Marwick2018]"
+    "text": "R\n\nR 코드R 스크립트LaTeX + RIDEPosit과학기술 SW재현성재현성 상세Compendium\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n참여: 방법론을 결정하는데 참여할 수 있나?\n\n\n\n\n\n\n\n\n\n\n\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. [@turing-2022] \n\n\n\n\n\n\n\n\n[@Peng2011]\n\n\n\n\n\n\n\n[@Marwick2018]"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#참고문헌",
@@ -466,14 +466,14 @@
     "href": "slideshow/202210-hongik/index.html#파이프-필터",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "파이프 & 필터",
-    "text": "파이프 & 필터\n\n\n유닉스 쉘\n그래프 문법\n표 문법\n애니메이션 문법\n3D 시각화\n\n\n\n - 파이프와 필터\n\n\n\n\n그래프 문법 실무\n\n\n\n - 한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)\ngganimate Talks\n\n\n\n\n\n\n - rayshader"
+    "text": "파이프 & 필터\n\n\n유닉스 쉘\n그래프 문법\n표 문법\n애니메이션 문법\n3D 시각화\n\n\n\n - 파이프와 필터\n\n\n\n\n\n\n\n그래프 문법 실무\n\n\n\n - 한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)\ngganimate Talks\n\n\n\n\n\n\n - rayshader"
   },
   {
     "objectID": "slideshow/202210-hongik/problem.html#파이프-필터",
     "href": "slideshow/202210-hongik/problem.html#파이프-필터",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "파이프 & 필터",
-    "text": "파이프 & 필터\n\n\n유닉스 쉘\n그래프 문법\n표 문법\n애니메이션 문법\n3D 시각화\n\n\n\n - 파이프와 필터\n\n\n\n\n그래프 문법 실무\n\n\n\n - 한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n\ngganimate Talks\n\n\n\n - rayshader"
+    "text": "파이프 & 필터\n\n유닉스 쉘그래프 문법표 문법애니메이션 문법3D 시각화\n\n\n - 파이프와 필터\n\n\n\n\n\n\n\n\n그래프 문법 실무\n\n\n\n - 한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)\ngganimate Talks\n\n\n\n\n\n\n - rayshader"
   },
   {
     "objectID": "slideshow/202210-hongik-v2/index.html#첫번째..",
@@ -564,7 +564,7 @@
     "href": "slideshow/202210-hongik-v2/02-problem.html",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "문제점\n\n\n\n\n\nSingle Sourcing 개념\n\n\n\n\n\nSingle Sourcing Multi-Use\n\n\n\nFigure 1: 데이터 사이언스 출판 현황과 방향\n\n\n\n\n\n\n\n\n\n\n\n엑셀, XKCD 1667: Algorithms\n\n\n\n\n\n아래한글, Writing Technical Papers with Markdown and Pandoc\n\n\n\n\n\n럼스펠트 지식 행렬, [@martin2011beyond]\n\n\n\nFigure 2: 데이터 과학 저작도구 복잡성\n\n\n\n\n\n\n\n\n\n\n\n전체 개발 시간\n\n\n\n\n\n사람 < 기계\n\n\n\n\n\n사람 > 기계\n\n\n\nFigure 3: 전체 개발시간 중요도 추세"
+    "text": "문제점\n\n\n\n\n\nSingle Sourcing 개념\n\n\n\n\n\nSingle Sourcing Multi-Use\n\n\n\nFigure 1: 데이터 사이언스 출판 현황과 방향\n\n\n\n\n\n\n\n\n\n\n\n엑셀, XKCD 1667: Algorithms\n\n\n\n\n\n아래한글, Writing Technical Papers with Markdown and Pandoc\n\n\n\n\n\n럼스펠트 지식 행렬, [@martin2011beyond]\n\n\n\nFigure 2: 데이터 과학 저작도구 복잡성\n\n\n\n\n\n\n\n\n\n\n\n전체 개발 시간\n\n\n\n\n\n사람 < 기계\n\n\n\n\n\n사람 > 기계\n\n\n\nFigure 3: 전체 개발시간 중요도 추세"
   },
   {
     "objectID": "slideshow/202210-hongik-v2/index.html#quarto",
@@ -606,7 +606,7 @@
     "href": "slideshow/202210-hongik-v2/03-solution.html",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "Footnotes\n\n\nComparing ggplot2 and R Base Graphics By Nathan Yau↩︎"
+    "text": "R\n\n\n\n\n\n파이썬\n\n\n\n\n\n\n\nQuarto: R\n\n\n\n\n\nQuarto: 파이썬\n\n\n\nFigure 1: 데이터 사이언스 출판 제작 흐름\n\n\n\n\n\n\n유닉스 쉘그래프 문법표 문법애니메이션 문법3D 시각화\n\n\n\n\n\n파이프와 필터\n\n\n\n\n\n\n\n그래프 문법 실무\n\n\n\n\n\n\n\n한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n\n\n데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)\ngganimate Talks\n\n\n\n\n\n\n\n\n\n\nrayshader\n\n\n\n\n\n\n\n\n\n\n데이터ggplotBase R\n\n\n\n\n\n\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✔ ggplot2 3.3.6      ✔ purrr   0.3.4 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n✔ readr   2.1.2      ✔ forcats 0.5.2 \n\n\nWarning: package 'tibble' was built under R version 4.2.1\n\n\nWarning: package 'tidyr' was built under R version 4.2.1\n\n\nWarning: package 'dplyr' was built under R version 4.2.1\n\n\nWarning: package 'stringr' was built under R version 4.2.1\n\n\nWarning: package 'forcats' was built under R version 4.2.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nbill_df <- data.frame(\n  sex = factor(c(\"여성\",\"여성\",\"남성\",\"남성\")),\n  time = factor(c(\"점심\",\"저녁\",\"점심\",\"저녁\"), levels=c(\"점심\",\"저녁\")),\n  total_bill = c(13.53, 16.81, 16.24, 17.42)\n)\n\n\n\n\n\n\nbill_df\n\n   sex time total_bill\n1 여성 점심      13.53\n2 여성 저녁      16.81\n3 남성 점심      16.24\n4 남성 저녁      17.42\n\n\n\n\n\n\n\n\n\n\n\n\n\nbill_df %>% \n  ggplot(aes(x=time, y=total_bill, group=sex, shape=sex, colour=sex)) +\n    geom_line(aes(linetype=sex), size=1) +    \n    geom_point(size=3, fill=\"white\") +        \n    expand_limits(y=0) +                      \n    scale_colour_hue(name=\"결재자 성별\", l=30) +\n    scale_shape_manual(name=\"결재자 성별\", values=c(22,21)) +\n    scale_linetype_discrete(name=\"결재자 성별\") +\n    xlab(\"점심, 석식\") + ylab(\"팁(Tip)\") +\n    ggtitle(\"식사 결재 평균 팁\") +    \n    theme_bw() +\n    theme(legend.position=c(.7, .4))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbill_mat <- matrix( bill_df$total_bill,\n                   nrow = 2,\n                   byrow=TRUE,\n                   dimnames = list(c(\"여성\", \"남성\"), c(\"점심\", \"저녁\"))\n                   )\n\nmf_col <- c(\"#3CC3BD\", \"#FD8210\")\nbarplot(bill_mat, beside = TRUE, border=NA, col=mf_col)\nlegend(\"topleft\", row.names(bill_mat), pch=15, col=mf_col)\n\n\npar(cex=1.2, cex.axis=1.1)\nmatplot(bill_mat, type=\"b\", lty=1, pch=19, col=mf_col,\n    cex=1.5, lwd=3, las=1, bty=\"n\", xaxt=\"n\",\n    xlim=c(0.7, 2.2), ylim=c(12,18), ylab=\"\",\n    main=\"식사 결재 평균 팁\", yaxt=\"n\")\naxis(2, at=axTicks(2), labels=sprintf(\"$%s\", axTicks(2)),\n    las=1, cex.axis=0.8, col=NA, line = -0.5)\ngrid(NA, NULL, lty=3, lwd=1, col=\"#000000\")\nabline(v=c(1,2), lty=3, lwd=1, col=\"#000000\")\nmtext(\"점심\", side=1, at=1)\nmtext(\"저녁\", side=1, at=2)\ntext(1.5, 17.3, \"남성\", srt=8, font=3)\ntext(1.5, 15.1, \"여성\", srt=33, font=3)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 가공dplyr RBase RSQL파이썬\n\n\n\n날짜와 시간별로 총 빈도수와 출발연착 평균 시간을 구한다. 단, 총빈도수가 10 회 미만인 것은 제외하고 출발연착 시간의 결측값을 제거하고 계산한다.\n\n\nflights 데이터프레임에서\n출발 연착시간(dep_delay) 칼럼에서 결측값이 없는 (!is.na()) 행을 필터링 하고\n날짜별(date), 시간별(hour) 그룹을 묶어\n평균 출발 연착시간을 계산하고 총빈도수 총계를 내고\n총빈도수가 10회 이상인 날짜와 시간을 찾아내시오\n\n\n\n\nhourly_delay <- flights %>%  \n  filter(!is.na(dep_delay)) %>% \n  group_by(date, hour) %>% \n  summarise(delay = mean(dep_delay), n = n()) %>%  \n  filter(n > 10) \n\n\n\n\nhourly_delay <- filter(   \n    summarise(   \n        group_by(   \n             filter(   \n                 flights,    \n                 !is.na(dep_delay)   \n             ),    \n             date, hour   \n        ),    \n    delay = mean(dep_delay),    \n         n = n()   \n    ),    \n    n > 10   \n)\n\n\n\n\nSELECT \"date\", \"hour\", \"delay\", \"n\"\nFROM (\n    SELECT \"date\", \"hour\",\n        AVG(\"dep_delay\") AS \"delay\",\n        COUNT() AS \"n\"\n    FROM \"flights\"\n    WHERE NOT(\"dep_delay\" IS NULL)\n    GROUP BY \"date\", \"hour\"\n) AS \"_W1\"\nWHERE \"n\" > 10.0\n\n\n\n\nflights[['date','hour','dep_delay']]\n...\n\n\n\n\n\n\n\n\n정돈된 데이터사례 - 결핵 데이터사례 - Messy 데이터사례 - 코드사례 - Tidy 데이터\n\n\n\n\n\n\n\n\nWHO 결핵 원데이터\nWHO 에서 년도별, 국가별, 연령별, 성별, 진단방법별 결핵 발병사례 조사 통계 데이터\n진단방법\n\nrel stands for cases of relapse\nep stands for cases of extrapulmonary TB\nsn stands for cases of pulmonary TB that could not be diagnosed by a pulmonary smear (smear negative)\nsp stands for cases of pulmonary TB that could be diagnosed by a pulmonary smear (smear positive)\n\n연령\n\n014 = 0 – 14 years old\n1524 = 15 – 24 years old\n2534 = 25 – 34 years old\n3544 = 35 – 44 years old\n4554 = 45 – 54 years old\n5564 = 55 – 64 years old\n65 = 65 or older\n\n성별\n\nmales (m)\nfemales (f)\n\n\n\n\n\nlibrary(tidyverse)\ntidyr::who \n\n# A tibble: 7,240 × 60\n   country     iso2  iso3   year new_s…¹ new_s…² new_s…³ new_s…⁴ new_s…⁵ new_s…⁶\n   <chr>       <chr> <chr> <int>   <int>   <int>   <int>   <int>   <int>   <int>\n 1 Afghanistan AF    AFG    1980      NA      NA      NA      NA      NA      NA\n 2 Afghanistan AF    AFG    1981      NA      NA      NA      NA      NA      NA\n 3 Afghanistan AF    AFG    1982      NA      NA      NA      NA      NA      NA\n 4 Afghanistan AF    AFG    1983      NA      NA      NA      NA      NA      NA\n 5 Afghanistan AF    AFG    1984      NA      NA      NA      NA      NA      NA\n 6 Afghanistan AF    AFG    1985      NA      NA      NA      NA      NA      NA\n 7 Afghanistan AF    AFG    1986      NA      NA      NA      NA      NA      NA\n 8 Afghanistan AF    AFG    1987      NA      NA      NA      NA      NA      NA\n 9 Afghanistan AF    AFG    1988      NA      NA      NA      NA      NA      NA\n10 Afghanistan AF    AFG    1989      NA      NA      NA      NA      NA      NA\n# … with 7,230 more rows, 50 more variables: new_sp_m65 <int>,\n#   new_sp_f014 <int>, new_sp_f1524 <int>, new_sp_f2534 <int>,\n#   new_sp_f3544 <int>, new_sp_f4554 <int>, new_sp_f5564 <int>,\n#   new_sp_f65 <int>, new_sn_m014 <int>, new_sn_m1524 <int>,\n#   new_sn_m2534 <int>, new_sn_m3544 <int>, new_sn_m4554 <int>,\n#   new_sn_m5564 <int>, new_sn_m65 <int>, new_sn_f014 <int>,\n#   new_sn_f1524 <int>, new_sn_f2534 <int>, new_sn_f3544 <int>, …\n\n\n\n\n\nwho %>%\n  pivot_longer(\n    cols = new_sp_m014:newrel_f65, \n    names_to = \"key\", \n    values_to = \"cases\", \n    values_drop_na = TRUE\n  ) %>% \n  mutate(\n    key = stringr::str_replace(key, \"newrel\", \"new_rel\")\n  ) %>%\n  separate(key, c(\"new\", \"var\", \"sexage\")) %>% \n  select(-new, -iso2, -iso3) %>% \n  separate(sexage, c(\"sex\", \"age\"), sep = 1)\n\n\n\n\n\n# A tibble: 76,046 × 6\n   country      year var   sex   age   cases\n   <chr>       <int> <chr> <chr> <chr> <int>\n 1 Afghanistan  1997 sp    m     014       0\n 2 Afghanistan  1997 sp    m     1524     10\n 3 Afghanistan  1997 sp    m     2534      6\n 4 Afghanistan  1997 sp    m     3544      3\n 5 Afghanistan  1997 sp    m     4554      5\n 6 Afghanistan  1997 sp    m     5564      2\n 7 Afghanistan  1997 sp    m     65        0\n 8 Afghanistan  1997 sp    f     014       5\n 9 Afghanistan  1997 sp    f     1524     38\n10 Afghanistan  1997 sp    f     2534     36\n# … with 76,036 more rows"
   },
   {
     "objectID": "slideshow/202210-hongik-v2/index.html#r",
@@ -697,14 +697,14 @@
     "href": "slideshow/202210-hongik-v2/04-design.html",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "Figure 1: 마이크로소프트 + 인텔 아키텍처\n\n\n\n\n\n\n\n\n\n\n\n추상화\n\n\n\n\n\n자동화\n\n\n\n\n\n과학적 방법론\n\n\n\nFigure 2: 과학기술 방법론\n\n\n\n\n\n\n\n\n\n\n\n\n프로그래밍 언어\n\n\n\n\n\n프레임워크\n\n\n\n\n\n프로그래밍 패러다임\n\n\n\nFigure 3: ?(caption)\n\n\n\n\n\n\n\n\n\n\n\n과학적 방법론"
+    "text": "Figure 1: 마이크로소프트 + 인텔 아키텍처\n\n\n\n\n\n\n\n\n\n\n\n추상화\n\n\n\n\n\n자동화\n\n\n\n\n\n과학적 방법론\n\n\n\nFigure 2: 과학기술 방법론\n\n\n\n\n\n\n\n\n\n\n\n\n프로그래밍 언어\n\n\n\n\n\n프레임워크\n\n\n\n\n\n프로그래밍 패러다임\n\n\n\nFigure 3: ?(caption)\n\n\n\n\n\n\n\n\n\n\n\n과학적 방법론"
   },
   {
     "objectID": "slideshow/202210-hongik-v2/06-portfolio.html",
     "href": "slideshow/202210-hongik-v2/06-portfolio.html",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "한국 R 사용자회\n한국 R 컨퍼런스\n코로나 19 프로젝트"
+    "text": "사례\n\n한국 R 사용자회\n한국 R 컨퍼런스\n코로나 19 프로젝트"
   },
   {
     "objectID": "slideshow/202211-meetup/index.html#과거",
@@ -817,5 +817,117 @@
     "title": "로우코드 Shiny 앱 개발",
     "section": "why Quarto",
     "text": "why Quarto\n\n\n2012년\n2021년"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#통계-패키지-진화",
+    "href": "slideshow/202212-dreamtalk/index.html#통계-패키지-진화",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "통계 패키지 진화",
+    "text": "통계 패키지 진화"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#통계-코딩-도구-진화",
+    "href": "slideshow/202212-dreamtalk/index.html#통계-코딩-도구-진화",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "통계 코딩 도구 진화",
+    "text": "통계 코딩 도구 진화"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#why-quarto",
+    "href": "slideshow/202212-dreamtalk/index.html#why-quarto",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "why Quarto",
+    "text": "why Quarto\n\n\n2012년\n2021년"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#소프트웨어-로우-코드-개발",
+    "href": "slideshow/202212-dreamtalk/index.html#소프트웨어-로우-코드-개발",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "소프트웨어 로우 코드 개발",
+    "text": "소프트웨어 로우 코드 개발"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#r-로우-코드-개발",
+    "href": "slideshow/202212-dreamtalk/index.html#r-로우-코드-개발",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "R 로우 코드 개발",
+    "text": "R 로우 코드 개발\n\n\n{designer}\n{shinyuieditor}\n대쉬보드\nggplot\neasystats\ndlookr\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://rstudio.github.io/shinyuieditor/\n\n\n\n\n\n\nhttps://github.com/petergandenberger/dashboard-builder\n\n\n\n\n\n\nhttps://github.com/dreamRs/esquisse\n\n\n\n\n\n\nhttps://easystats.github.io/easystats/index.html\n\n\n \nhttps://cran.r-project.org/web/packages/dlookr/"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#shiny-ui-add-on-ui-addon",
+    "href": "slideshow/202212-dreamtalk/index.html#shiny-ui-add-on-ui-addon",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "Shiny UI Add-on 1\n",
+    "text": "Shiny UI Add-on 1\n\n\n\nshinyFiles\n{shinycssloaders}\n{waiter}\n{rclipboard} & {tippy}\n{shinyglide}\n{sortable}\n{DataEditR}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMandy Norrbo, “Top 5 Shiny UI Add-On Packages”"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#rtidyverse-pkg",
+    "href": "slideshow/202212-dreamtalk/index.html#rtidyverse-pkg",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "R/Tidyverse 1\n",
+    "text": "R/Tidyverse 1\n\n\n\n{unravel}\n{searcher}\n{carbonate}\n{asciicast}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSam Parmar, “11 R packages I’ve enjoyed using in 2022”"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#통계의-역사",
+    "href": "slideshow/202212-dreamtalk/index.html#통계의-역사",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "통계의 역사",
+    "text": "통계의 역사"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#section",
+    "href": "slideshow/202212-dreamtalk/index.html#section",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "",
+    "text": "한국 R 사용자회"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#년",
+    "href": "slideshow/202212-dreamtalk/index.html#년",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "2016년",
+    "text": "2016년"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#년-5월",
+    "href": "slideshow/202212-dreamtalk/index.html#년-5월",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "2019년 5월",
+    "text": "2019년 5월"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#년-9월",
+    "href": "slideshow/202212-dreamtalk/index.html#년-9월",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "2019년 9월",
+    "text": "2019년 9월"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#년-11월",
+    "href": "slideshow/202212-dreamtalk/index.html#년-11월",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "2019년 11월",
+    "text": "2019년 11월"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#년-11월-1",
+    "href": "slideshow/202212-dreamtalk/index.html#년-11월-1",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "2020년 11월",
+    "text": "2020년 11월"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#년-11월-2",
+    "href": "slideshow/202212-dreamtalk/index.html#년-11월-2",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "2022년 11월",
+    "text": "2022년 11월"
+  },
+  {
+    "objectID": "slideshow/202212-dreamtalk/index.html#년-10월",
+    "href": "slideshow/202212-dreamtalk/index.html#년-10월",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "2016년 10월",
+    "text": "2016년 10월"
   }
 ]

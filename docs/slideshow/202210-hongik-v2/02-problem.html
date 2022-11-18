@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.2.237">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -57,23 +62,26 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="../../index.html">
-    <img src="../../img/koRea_logo.png" alt="">
-  </a>
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/koRea_logo.png" alt="Home" class="navbar-logo">
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://r2bit.com">한국 R 사용자회</a>
+    <a class="nav-link" href="https://r2bit.com">
+ <span class="menu-text">한국 R 사용자회</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/bit2r/slides"><i class="bi bi-github" role="img" aria-label="GitHub repo">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -99,24 +107,24 @@ ul.task-list{list-style: none;}
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="fig/single-sourcing-problem.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="문제점"><img src="fig/single-sourcing-problem.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="fig/single-sourcing-problem.jpg" class="lightbox" title="문제점" data-gallery="quarto-lightbox-gallery-1"><img src="fig/single-sourcing-problem.jpg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">문제점</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="fig/single-sourcing-concept.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Single Sourcing 개념"><img src="fig/single-sourcing-concept.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="fig/single-sourcing-concept.jpg" class="lightbox" title="Single Sourcing 개념" data-gallery="quarto-lightbox-gallery-2"><img src="fig/single-sourcing-concept.jpg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Single Sourcing 개념</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="fig/single-sourcing-publishing.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Single Sourcing Multi-Use"><img src="fig/single-sourcing-publishing.jpg" class="img-fluid figure-img"></a></p>
+<p><a href="fig/single-sourcing-publishing.jpg" class="lightbox" title="Single Sourcing Multi-Use" data-gallery="quarto-lightbox-gallery-3"><img src="fig/single-sourcing-publishing.jpg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Single Sourcing Multi-Use</figcaption><p></p>
 </figure>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure 1: 데이터 사이언스 출판 현황과 방향</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: 데이터 사이언스 출판 현황과 방향</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -127,24 +135,24 @@ ul.task-list{list-style: none;}
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="fig/xkcd-algorithms.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="엑셀, XKCD 1667: Algorithms"><img src="fig/xkcd-algorithms.png" class="img-fluid figure-img"></a></p>
+<p><a href="fig/xkcd-algorithms.png" class="lightbox" title="엑셀, XKCD 1667: Algorithms" data-gallery="quarto-lightbox-gallery-4"><img src="fig/xkcd-algorithms.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">엑셀, <a href="https://www.explainxkcd.com/wiki/index.php/1667:_Algorithms">XKCD 1667: Algorithms</a></figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="fig/markdown-writing.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="아래한글, Writing Technical Papers with Markdown and Pandoc"><img src="fig/markdown-writing.png" class="img-fluid figure-img"></a></p>
+<p><a href="fig/markdown-writing.png" class="lightbox" title="아래한글, Writing Technical Papers with Markdown and Pandoc" data-gallery="quarto-lightbox-gallery-5"><img src="fig/markdown-writing.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">아래한글, <a href="https://blog.kdheepak.com/writing-papers-with-markdown.html">Writing Technical Papers with Markdown and Pandoc</a></figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="fig/rumsfeld-matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="럼스펠트 지식 행렬, [@martin2011beyond]"><img src="fig/rumsfeld-matrix.png" class="img-fluid figure-img"></a></p>
+<p><a href="fig/rumsfeld-matrix.png" class="lightbox" title="럼스펠트 지식 행렬, [@martin2011beyond]" data-gallery="quarto-lightbox-gallery-6"><img src="fig/rumsfeld-matrix.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">럼스펠트 지식 행렬, <span class="citation" data-cites="martin2011beyond">[@martin2011beyond]</span></figcaption><p></p>
 </figure>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure 2: 데이터 과학 저작도구 복잡성</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2: 데이터 과학 저작도구 복잡성</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -155,24 +163,24 @@ ul.task-list{list-style: none;}
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="fig/human-computer-total.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="전체 개발 시간"><img src="fig/human-computer-total.png" class="img-fluid figure-img"></a></p>
+<p><a href="fig/human-computer-total.png" class="lightbox" title="전체 개발 시간" data-gallery="quarto-lightbox-gallery-7"><img src="fig/human-computer-total.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">전체 개발 시간</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="fig/human-computer-machine.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="사람 < 기계"><img src="fig/human-computer-machine.png" class="img-fluid figure-img"></a></p>
+<p><a href="fig/human-computer-machine.png" class="lightbox" title="사람 < 기계" data-gallery="quarto-lightbox-gallery-8"><img src="fig/human-computer-machine.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">사람 <code>&lt;</code> 기계</figcaption><p></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
 <figure class="figure">
-<p><a href="fig/human-computer-human.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="사람 > 기계"><img src="fig/human-computer-human.png" class="img-fluid figure-img"></a></p>
+<p><a href="fig/human-computer-human.png" class="lightbox" title="사람 > 기계" data-gallery="quarto-lightbox-gallery-9"><img src="fig/human-computer-human.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">사람 <code>&gt;</code> 기계</figcaption><p></p>
 </figure>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure 3: 전체 개발시간 중요도 추세</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3: 전체 개발시간 중요도 추세</figcaption><p></p>
 </figure>
 </div>
 
@@ -222,7 +230,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -250,36 +275,55 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":true,"selector":".lightbox","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","loop":true,"closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 

@@ -1,0 +1,104 @@
+---
+title: "데이터 문해력과 디지털 글쓰기"
+subtitle: "인공지능을 지탱하는 기본기"
+author: "이광춘 / 한국 R 사용자회"
+date: "2022-12-05"
+lang: kr
+format:
+  revealjs: 
+    theme: ["simple", "theme/q-theme.scss"]
+    width: 1280
+    height: 720
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: fig/koRea_logo.png
+    footer: "[한국 R 사용자회](https://r2bit.com/)&nbsp;"
+    code-copy: true
+    center-title-slide: true
+    code-link: true
+    code-overflow: wrap
+    highlight-style: a11y
+    smaller: true
+    scrollable: false
+    slide-number: c/t
+    code-tools:
+      source: true
+      toggle: false
+      caption: none
+filters:
+   - lightbox
+lightbox: auto        
+execute: 
+  eval: true
+  echo: true
+  freeze: true  
+editor_options: 
+  chunk_output_type: console
+bibliography: references.bib
+knitr:
+  opts_chunk: 
+    echo: true
+    collapse: true
+    comment: "#>"
+---
+
+
+# 도구의 인간
+
+![](fig/homo_faber.png)
+
+# 통계 도구
+
+## 통계 패키지 진화
+
+![](../202211-meetup/fig/statistics-package-evolution.png)
+
+## 통계 코딩 도구 진화 
+
+![](../202211-meetup/fig/computation-evolution.png)
+
+# 데이터 문해력
+
+## {fullscreen=true}
+
+<iframe class="stretch" data-src="http://aispiration.com/ds-authoring/ds-world-student.html"></iframe>
+
+## {fullscreen=true}
+
+<iframe class="stretch" data-src="http://aispiration.com/ds-authoring/data-science-world.html"></iframe>
+
+# 디지털 글쓰기
+
+## 2016년 10월 {fullscreen=true}
+
+<iframe class="stretch" data-src="http://aispiration.com/ds-authoring/slides/2016/ds_authoring_toolchain.html"></iframe>
+
+## 2019년 5월 {fullscreen=true}
+
+<iframe class="stretch" data-src="http://aispiration.com/ds-authoring/somul_20190525.html"></iframe>
+
+## 2019년 9월 {fullscreen=true}
+
+<iframe class="stretch" data-src="http://aispiration.com/ds-authoring/ds-digital-literacy.html"></iframe>
+
+
+## 2019년 11월 {fullscreen=true}
+
+<iframe class="stretch" data-src="http://aispiration.com/ds-authoring/ds-kofac-writing.html"></iframe>
+
+## 2020년 11월 {fullscreen=true}
+
+<iframe class="stretch" data-src="http://aispiration.com/ds-authoring/KCD2020_Tidyverse.html"></iframe>
+
+## 2022년 11월 {fullscreen=true}
+
+<iframe class="stretch" data-src="https://r2bit.com/quarto/"></iframe>
+
+# {background-image="../202210-hongik-v2/fig/slide-end.png" background-size="contain"}
+
+
+
+
+
+

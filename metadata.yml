@@ -37,4 +37,17 @@
     - low code platform
     - shiny
 
+- title: "데이터 문해력과 디지털 글쓰기"
+  subtitle: "인공지능을 지탱하는 기본기"
+  author: "이광춘"
+  date: 2022-12-05
+  image: slideshow/202212-dreamtalk/fig/christin-hume-Hcfwew744z4-unsplash.jpg
+  path: slideshow/202212-dreamtalk/index.qmd
+  categories:
+    - 디지털 글쓰기
+    - 데이터 문해력
+    - 백암중
+    - 과학창의재단
+    - 드림톡
+
 # External slide decks
