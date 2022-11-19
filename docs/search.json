@@ -7,6 +7,258 @@
     "text": "통계(데이터 과학), 기계학습, 딥러닝 관련 발표자료와 앱 공개를 통해 통계 대중화와 디지털 불평등 해소를 위해 함께 노력하고 있습니다.\n\n\n한국 R 사용자회\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 문해력과 디지털 글쓰기\n\n\n인공지능을 지탱하는 기본기\n\n\n\n디지털 글쓰기\n\n\n데이터 문해력\n\n\n백암중\n\n\n과학창의재단\n\n\n드림톡\n\n\n\n\n2022 년 12 월 05일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n로우코드 Shiny 앱 개발\n\n\nShiny 앱 개발은 로우코드 개발(?)\n\n\n\nquarto\n\n\nlow code platform\n\n\nshiny\n\n\n\n\n2022 년 11 월 05일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 사이언스에서 디자인과 아키텍쳐의 중요성\n\n\nEmerging Creativity Workshop\n\n\n\nrevealjs\n\n\n\n\n2022 년 10 월 11일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n기후 위기: CO2\n\n\nNOAA 하와이섬에서 측정한 CO2 추세를 면밀히 살펴보자.\n\n\n\nobservable js\n\n\n\n\n2022 년 09 월 12일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n파머 펭귄\n\n\n파머 펭귄 데이터로 Observables JS 인터랙티브 문서의 가능성과 한계\n\n\n\nobservable js\n\n\n\n\n2022 년 09 월 11일\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "interactive/climate-crisis.html",
+    "href": "interactive/climate-crisis.html",
+    "title": "기후 위기",
+    "section": "",
+    "text": "이산화탄소(\\(CO_2\\)) 증가에 따라 기후위기가 이제 홍수와 가뭄으로 우리곁에 성큼 다가왔다. 미국 해양대기청(NOAA)에서 하와이 마우나로아(Mauna Loa)산에서 측정한 대기중 이산화탄소 농도 추세를 인터랙티브 시각화해보자.\n\n데이터\nTrends in Atmospheric Carbon Dioxide에서 월별 \\(CO_2\\) 농도 데이터를 NOASS 웹사이트에서 바로 다운로드 받아 가져온다. 이를 ggplot으로 시각화해본다.\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✔ ggplot2 3.3.6     ✔ purrr   0.3.4\n✔ tibble  3.1.8     ✔ dplyr   1.0.9\n✔ tidyr   1.2.0     ✔ stringr 1.4.1\n✔ readr   2.1.2     ✔ forcats 0.5.2\n\n\nWarning: package 'tibble' was built under R version 4.2.1\n\n\nWarning: package 'dplyr' was built under R version 4.2.1\n\n\nWarning: package 'stringr' was built under R version 4.2.1\n\n\nWarning: package 'forcats' was built under R version 4.2.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\n# bitData::global_co2 %>% \n#   write_csv(\"data/co2_year.csv\")\n\nglobal_co2 <- read_csv(\"https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv\", skip = 52)\n\nRows: 774 Columns: 8\n\n\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\ndbl (8): year, month, decimal date, average, deseasonalized, ndays, sdev, unc\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nglobal_co2 %>% \n  janitor::clean_names() %>% \n  mutate(yearmon = lubridate::make_date(year = year, month = month)) %>% \n  ggplot(aes(x=yearmon, y = average)) +\n    geom_line() +\n    geom_line(aes(y= deseasonalized), color = \"red\") +\n    theme_bw() +\n    labs(x = \"년월\",\n         y = \"평균 CO2 농도\",\n         title = \"월별 대기중 CO2 농도 추세\")\n\n\n\n\n\n\n\n\n인터랙티브 시각화를 위해 데이터를 년도별로 평균을 내어 이를 시각화하는데 사용한다.\n\nglobal_co2 %>% \n  janitor::clean_names() %>% \n  group_by(year) %>% \n  summarize( mean = mean(average)) %>% \n  write_csv(\"data/co2_year.csv\")\n\n로컬 저장소에 저장한 csv 파일을 이제 Observable JS 로 불러와서 년도를 달리하여 \\(CO_2\\) 농도의 추세를 살펴본다.\n\nco2_data = FileAttachment(\"../data/co2_year.csv\").csv({ typed: true })\n\nco2_filtered = co2_data.filter(function(co2) {\n  return study_year < co2.year ;\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUI\n인터랙티브 데이터 시각화를 위해서 UI 입력부분을 정의한다. 먼저 연도를 슬라이더 입력값(Input.range())에 넣어둔다.\n\nviewof study_year = Inputs.range(\n  [1959, 2021], \n  {value: 1980, step: 1, label: \"연도:\"}\n)\n\n\n\n\n\n\n\n\n인터랙티브 그래프\n인터랙티브 데이터를 선택한 결과를 실시간 데이터와 그래프로 시각화하여 문서에 담아낸다.\n\n시각화표\n\n\n\nPlot.plot({\n  marks: [\n    Plot.line(co2_filtered, \n      { x: \"year\", y: \"mean\"}, \n      { stroke: \"black\" }\n    )\n  ]\n})\n\n\n\n\n\n\n\n\n\nInputs.table(co2_filtered)"
+  },
+  {
+    "objectID": "interactive/old-faithful-backup.html",
+    "href": "interactive/old-faithful-backup.html",
+    "title": "Old Faithful",
+    "section": "",
+    "text": "Data on eruptions of the Old Faithful geyser in Yellowstone National Park, Wyoming, USA. The data was collected continuously from August 1st until August 15th, 1985."
+  },
+  {
+    "objectID": "interactive/old-faithful-backup.html#data",
+    "href": "interactive/old-faithful-backup.html#data",
+    "title": "Old Faithful",
+    "section": "Data",
+    "text": "Data\n\nlibrary(tidyverse)\n\neruption_tbl <- faithful %>% as_tibble() %>% select(waiting)\n\nfaithful %>% \n  write_csv(\"data/faithful.csv\")\n\nojs_define(eruption_data = eruption_tbl)\n\n\neruption_data = FileAttachment(\"../data/faithful.csv\").csv({ typed: true })\n\n\n\n\n\n\n\nfiltered = eruption_data.filter(function(eruption) {\n  return waiting_bins < eruption.waiting ;\n})"
+  },
+  {
+    "objectID": "interactive/old-faithful-backup.html#plot",
+    "href": "interactive/old-faithful-backup.html#plot",
+    "title": "Old Faithful",
+    "section": "Plot",
+    "text": "Plot\n\nPlot.rectY( filtered, \n  Plot.binX( \n    {y: \"count\"}, \n    {x: \"waiting\",\n    thresholds: \"sturges\"})\n  )\n  .plot()"
+  },
+  {
+    "objectID": "interactive/palmer-penguins-korean.html#데이터-패키지",
+    "href": "interactive/palmer-penguins-korean.html#데이터-패키지",
+    "title": "파머 펭귄",
+    "section": "데이터 패키지",
+    "text": "데이터 패키지\nR 혹은 파이썬에서 데이터를 바로 생성시키고 이를 인터랙티브 시각화에 사용하는 방식도 존재한다. 마찬가지로 외부 데이터 패키지 bitData 에서 R 환경에서 데이터를 적재시키고 이를 인터랙티브 시각화에 사용하는 방식도 있다.\n\nlibrary(tidyverse)\n\nnormal_values <- rnorm(1000)\n\nnormal_data <- normal_values %>% \n  as_tibble()\n\nojs_define(normal_data = normal_data)"
+  },
+  {
+    "objectID": "interactive/palmer-penguins-korean.html#데이터",
+    "href": "interactive/palmer-penguins-korean.html#데이터",
+    "title": "파머 펭귄",
+    "section": "데이터",
+    "text": "데이터\nbitData 데이터 패키지 내장된 파머 펭귄 데이터를 번역한 penguins 데이터프레임을 palmer-penguins-korean.csv 파일로 저장시킨다.\n\nlibrary(tidyverse)\n\nbitData::penguins  %>% \n  write_csv(\"data/palmer-penguins-korean.csv\")\n\n\nkdata = FileAttachment(\"../data/palmer-penguins-korean.csv\").csv({ typed: true })\n\n\n\n\n\n\nUI에서 입력값을 선택하면서 시각화하는 데이터가 달라지기 때문에 이를 반영하여 인터랙티브 대상 시각화 데이터를 제작한다.\n\nkfiltered = kdata.filter(function(penguin) {\n  return bill_length_min < penguin.부리_길이 &&\n         섬이름.includes(penguin.섬이름);\n})"
+  },
+  {
+    "objectID": "interactive/palmer-penguins-korean.html#ui",
+    "href": "interactive/palmer-penguins-korean.html#ui",
+    "title": "파머 펭귄",
+    "section": "UI",
+    "text": "UI\n인터랙티브 데이터 시각화를 위해서 UI 입력부분을 정의한다. 먼저 슬라이더 입력값(Input.range()) 과 체크박스 입력값(Inputs.checkbox())을 넣어둔다.\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"부리 길이 (최소):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"토르거센\", \"비스코\", \"드림\"], \n  { value: [\"토르거센\", \"비스코\"], \n    label: \"섬이름:\"\n  }\n)"
+  },
+  {
+    "objectID": "interactive/palmer-penguins-korean.html#인터랙티브-그래프",
+    "href": "interactive/palmer-penguins-korean.html#인터랙티브-그래프",
+    "title": "파머 펭귄",
+    "section": "인터랙티브 그래프",
+    "text": "인터랙티브 그래프\n인터랙티브 데이터를 선택한 결과를 실시간 데이터와 그래프로 시각화하여 문서에 담아낸다.\n\n시각화표\n\n\n\nPlot.rectY(kfiltered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"체중\", fill: \"종명칭\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"성별\",\n      y: \"종명칭\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)"
+  },
+  {
+    "objectID": "interactive/palmer-penguins.html#데이터",
+    "href": "interactive/palmer-penguins.html#데이터",
+    "title": "파머 펭귄",
+    "section": "데이터",
+    "text": "데이터\n데이터는 외부에서 .csv 파일등을 가져오는 방식이 대표적이다. 또다른 방식은 데이터 패키지 (bitData)에 내장된 데이터를 바로 가져오는 방식이다.\npalmer-penguins.csv 로컬 디스크에 저장된 데이터를 가져와서 인터랙티브 시각화에 사용하는 경우 다음과 같이 FileAttachment() 함수를 사용한다.\n\ndata = FileAttachment(\"../data/palmer-penguins.csv\").csv({ typed: true })\n\n\n\n\n\n\nUI에서 입력값을 선택하면서 시각화하는 데이터가 달라지기 때문에 이를 반영하여 인터랙티브 대상 시각화 데이터를 제작한다.\n\nfiltered = data.filter(function(penguin) {\n  return bill_length_min < penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})"
+  },
+  {
+    "objectID": "interactive/palmer-penguins.html#ui",
+    "href": "interactive/palmer-penguins.html#ui",
+    "title": "파머 펭귄",
+    "section": "UI",
+    "text": "UI\n인터랙티브 데이터 시각화를 위해서 UI 입력부분을 정의한다. 먼저 슬라이더 입력값(Input.range()) 과 체크박스 입력값(Inputs.checkbox())을 넣어둔다.\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)"
+  },
+  {
+    "objectID": "interactive/palmer-penguins.html#인터랙티브-그래프",
+    "href": "interactive/palmer-penguins.html#인터랙티브-그래프",
+    "title": "파머 펭귄",
+    "section": "인터랙티브 그래프",
+    "text": "인터랙티브 그래프\n인터랙티브 데이터를 선택한 결과를 실시간 데이터와 그래프로 시각화하여 문서에 담아낸다.\n\n시각화표\n\n\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/01-data-science.html",
+    "href": "slideshow/202210-hongik-v2/01-data-science.html",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "매슬로 욕구단계설가치 피라미드"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/02-problem.html",
+    "href": "slideshow/202210-hongik-v2/02-problem.html",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "문제점\n\n\n\n\n\nSingle Sourcing 개념\n\n\n\n\n\nSingle Sourcing Multi-Use\n\n\n\nFigure 1: 데이터 사이언스 출판 현황과 방향\n\n\n\n\n\n\n\n\n\n\n\n엑셀, XKCD 1667: Algorithms\n\n\n\n\n\n아래한글, Writing Technical Papers with Markdown and Pandoc\n\n\n\n\n\n럼스펠트 지식 행렬, [@martin2011beyond]\n\n\n\nFigure 2: 데이터 과학 저작도구 복잡성\n\n\n\n\n\n\n\n\n\n\n\n전체 개발 시간\n\n\n\n\n\n사람 < 기계\n\n\n\n\n\n사람 > 기계\n\n\n\nFigure 3: 전체 개발시간 중요도 추세"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/03-solution.html",
+    "href": "slideshow/202210-hongik-v2/03-solution.html",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "R\n\n\n\n\n\n파이썬\n\n\n\n\n\n\n\nQuarto: R\n\n\n\n\n\nQuarto: 파이썬\n\n\n\nFigure 1: 데이터 사이언스 출판 제작 흐름\n\n\n\n\n\n\n유닉스 쉘그래프 문법표 문법애니메이션 문법3D 시각화\n\n\n\n\n\n파이프와 필터\n\n\n\n\n\n\n\n그래프 문법 실무\n\n\n\n\n\n\n\n한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n\n\n데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)\ngganimate Talks\n\n\n\n\n\n\n\n\n\n\nrayshader\n\n\n\n\n\n\n\n\n\n\n데이터ggplotBase R\n\n\n\n\n\n\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✔ ggplot2 3.3.6      ✔ purrr   0.3.4 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n✔ readr   2.1.2      ✔ forcats 0.5.2 \n\n\nWarning: package 'tibble' was built under R version 4.2.1\n\n\nWarning: package 'tidyr' was built under R version 4.2.1\n\n\nWarning: package 'dplyr' was built under R version 4.2.1\n\n\nWarning: package 'stringr' was built under R version 4.2.1\n\n\nWarning: package 'forcats' was built under R version 4.2.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nbill_df <- data.frame(\n  sex = factor(c(\"여성\",\"여성\",\"남성\",\"남성\")),\n  time = factor(c(\"점심\",\"저녁\",\"점심\",\"저녁\"), levels=c(\"점심\",\"저녁\")),\n  total_bill = c(13.53, 16.81, 16.24, 17.42)\n)\n\n\n\n\n\n\nbill_df\n\n   sex time total_bill\n1 여성 점심      13.53\n2 여성 저녁      16.81\n3 남성 점심      16.24\n4 남성 저녁      17.42\n\n\n\n\n\n\n\n\n\n\n\n\n\nbill_df %>% \n  ggplot(aes(x=time, y=total_bill, group=sex, shape=sex, colour=sex)) +\n    geom_line(aes(linetype=sex), size=1) +    \n    geom_point(size=3, fill=\"white\") +        \n    expand_limits(y=0) +                      \n    scale_colour_hue(name=\"결재자 성별\", l=30) +\n    scale_shape_manual(name=\"결재자 성별\", values=c(22,21)) +\n    scale_linetype_discrete(name=\"결재자 성별\") +\n    xlab(\"점심, 석식\") + ylab(\"팁(Tip)\") +\n    ggtitle(\"식사 결재 평균 팁\") +    \n    theme_bw() +\n    theme(legend.position=c(.7, .4))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbill_mat <- matrix( bill_df$total_bill,\n                   nrow = 2,\n                   byrow=TRUE,\n                   dimnames = list(c(\"여성\", \"남성\"), c(\"점심\", \"저녁\"))\n                   )\n\nmf_col <- c(\"#3CC3BD\", \"#FD8210\")\nbarplot(bill_mat, beside = TRUE, border=NA, col=mf_col)\nlegend(\"topleft\", row.names(bill_mat), pch=15, col=mf_col)\n\n\npar(cex=1.2, cex.axis=1.1)\nmatplot(bill_mat, type=\"b\", lty=1, pch=19, col=mf_col,\n    cex=1.5, lwd=3, las=1, bty=\"n\", xaxt=\"n\",\n    xlim=c(0.7, 2.2), ylim=c(12,18), ylab=\"\",\n    main=\"식사 결재 평균 팁\", yaxt=\"n\")\naxis(2, at=axTicks(2), labels=sprintf(\"$%s\", axTicks(2)),\n    las=1, cex.axis=0.8, col=NA, line = -0.5)\ngrid(NA, NULL, lty=3, lwd=1, col=\"#000000\")\nabline(v=c(1,2), lty=3, lwd=1, col=\"#000000\")\nmtext(\"점심\", side=1, at=1)\nmtext(\"저녁\", side=1, at=2)\ntext(1.5, 17.3, \"남성\", srt=8, font=3)\ntext(1.5, 15.1, \"여성\", srt=33, font=3)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 가공dplyr RBase RSQL파이썬\n\n\n\n날짜와 시간별로 총 빈도수와 출발연착 평균 시간을 구한다. 단, 총빈도수가 10 회 미만인 것은 제외하고 출발연착 시간의 결측값을 제거하고 계산한다.\n\n\nflights 데이터프레임에서\n출발 연착시간(dep_delay) 칼럼에서 결측값이 없는 (!is.na()) 행을 필터링 하고\n날짜별(date), 시간별(hour) 그룹을 묶어\n평균 출발 연착시간을 계산하고 총빈도수 총계를 내고\n총빈도수가 10회 이상인 날짜와 시간을 찾아내시오\n\n\n\n\nhourly_delay <- flights %>%  \n  filter(!is.na(dep_delay)) %>% \n  group_by(date, hour) %>% \n  summarise(delay = mean(dep_delay), n = n()) %>%  \n  filter(n > 10) \n\n\n\n\nhourly_delay <- filter(   \n    summarise(   \n        group_by(   \n             filter(   \n                 flights,    \n                 !is.na(dep_delay)   \n             ),    \n             date, hour   \n        ),    \n    delay = mean(dep_delay),    \n         n = n()   \n    ),    \n    n > 10   \n)\n\n\n\n\nSELECT \"date\", \"hour\", \"delay\", \"n\"\nFROM (\n    SELECT \"date\", \"hour\",\n        AVG(\"dep_delay\") AS \"delay\",\n        COUNT() AS \"n\"\n    FROM \"flights\"\n    WHERE NOT(\"dep_delay\" IS NULL)\n    GROUP BY \"date\", \"hour\"\n) AS \"_W1\"\nWHERE \"n\" > 10.0\n\n\n\n\nflights[['date','hour','dep_delay']]\n...\n\n\n\n\n\n\n\n\n정돈된 데이터사례 - 결핵 데이터사례 - Messy 데이터사례 - 코드사례 - Tidy 데이터\n\n\n\n\n\n\n\n\nWHO 결핵 원데이터\nWHO 에서 년도별, 국가별, 연령별, 성별, 진단방법별 결핵 발병사례 조사 통계 데이터\n진단방법\n\nrel stands for cases of relapse\nep stands for cases of extrapulmonary TB\nsn stands for cases of pulmonary TB that could not be diagnosed by a pulmonary smear (smear negative)\nsp stands for cases of pulmonary TB that could be diagnosed by a pulmonary smear (smear positive)\n\n연령\n\n014 = 0 – 14 years old\n1524 = 15 – 24 years old\n2534 = 25 – 34 years old\n3544 = 35 – 44 years old\n4554 = 45 – 54 years old\n5564 = 55 – 64 years old\n65 = 65 or older\n\n성별\n\nmales (m)\nfemales (f)\n\n\n\n\n\nlibrary(tidyverse)\ntidyr::who \n\n# A tibble: 7,240 × 60\n   country     iso2  iso3   year new_s…¹ new_s…² new_s…³ new_s…⁴ new_s…⁵ new_s…⁶\n   <chr>       <chr> <chr> <int>   <int>   <int>   <int>   <int>   <int>   <int>\n 1 Afghanistan AF    AFG    1980      NA      NA      NA      NA      NA      NA\n 2 Afghanistan AF    AFG    1981      NA      NA      NA      NA      NA      NA\n 3 Afghanistan AF    AFG    1982      NA      NA      NA      NA      NA      NA\n 4 Afghanistan AF    AFG    1983      NA      NA      NA      NA      NA      NA\n 5 Afghanistan AF    AFG    1984      NA      NA      NA      NA      NA      NA\n 6 Afghanistan AF    AFG    1985      NA      NA      NA      NA      NA      NA\n 7 Afghanistan AF    AFG    1986      NA      NA      NA      NA      NA      NA\n 8 Afghanistan AF    AFG    1987      NA      NA      NA      NA      NA      NA\n 9 Afghanistan AF    AFG    1988      NA      NA      NA      NA      NA      NA\n10 Afghanistan AF    AFG    1989      NA      NA      NA      NA      NA      NA\n# … with 7,230 more rows, 50 more variables: new_sp_m65 <int>,\n#   new_sp_f014 <int>, new_sp_f1524 <int>, new_sp_f2534 <int>,\n#   new_sp_f3544 <int>, new_sp_f4554 <int>, new_sp_f5564 <int>,\n#   new_sp_f65 <int>, new_sn_m014 <int>, new_sn_m1524 <int>,\n#   new_sn_m2534 <int>, new_sn_m3544 <int>, new_sn_m4554 <int>,\n#   new_sn_m5564 <int>, new_sn_m65 <int>, new_sn_f014 <int>,\n#   new_sn_f1524 <int>, new_sn_f2534 <int>, new_sn_f3544 <int>, …\n\n\n\n\n\nwho %>%\n  pivot_longer(\n    cols = new_sp_m014:newrel_f65, \n    names_to = \"key\", \n    values_to = \"cases\", \n    values_drop_na = TRUE\n  ) %>% \n  mutate(\n    key = stringr::str_replace(key, \"newrel\", \"new_rel\")\n  ) %>%\n  separate(key, c(\"new\", \"var\", \"sexage\")) %>% \n  select(-new, -iso2, -iso3) %>% \n  separate(sexage, c(\"sex\", \"age\"), sep = 1)\n\n\n\n\n\n# A tibble: 76,046 × 6\n   country      year var   sex   age   cases\n   <chr>       <int> <chr> <chr> <chr> <int>\n 1 Afghanistan  1997 sp    m     014       0\n 2 Afghanistan  1997 sp    m     1524     10\n 3 Afghanistan  1997 sp    m     2534      6\n 4 Afghanistan  1997 sp    m     3544      3\n 5 Afghanistan  1997 sp    m     4554      5\n 6 Afghanistan  1997 sp    m     5564      2\n 7 Afghanistan  1997 sp    m     65        0\n 8 Afghanistan  1997 sp    f     014       5\n 9 Afghanistan  1997 sp    f     1524     38\n10 Afghanistan  1997 sp    f     2534     36\n# … with 76,036 more rows"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/04-design.html",
+    "href": "slideshow/202210-hongik-v2/04-design.html",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "Figure 1: 마이크로소프트 + 인텔 아키텍처\n\n\n\n\n\n\n\n\n\n\n\n추상화\n\n\n\n\n\n자동화\n\n\n\n\n\n과학적 방법론\n\n\n\nFigure 2: 과학기술 방법론\n\n\n\n\n\n\n\n\n\n\n\n\n프로그래밍 언어\n\n\n\n\n\n프레임워크\n\n\n\n\n\n프로그래밍 패러다임\n\n\n\nFigure 3: ?(caption)\n\n\n\n\n\n\n\n\n\n\n\n과학적 방법론"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/05-rstudio.html",
+    "href": "slideshow/202210-hongik-v2/05-rstudio.html",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "R 코드R 스크립트LaTeX + RIDEPosit과학기술 SW재현성재현성 상세Compendium\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n참여: 방법론을 결정하는데 참여할 수 있나?\n\n\n\n\n\n\n\n\n\n\n\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. [@turing-2022] \n\n\n\n\n\n\n\n\n[@Peng2011]\n\n\n\n\n\n\n\n[@Marwick2018]"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/06-portfolio.html",
+    "href": "slideshow/202210-hongik-v2/06-portfolio.html",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "사례\n\n한국 R 사용자회\n한국 R 컨퍼런스\n코로나 19 프로젝트"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#데이터-사이언스",
+    "href": "slideshow/202210-hongik-v2/index.html#데이터-사이언스",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "데이터 사이언스",
+    "text": "데이터 사이언스"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#데이터-과학-욕구단계설",
+    "href": "slideshow/202210-hongik-v2/index.html#데이터-과학-욕구단계설",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "데이터 과학 욕구단계설",
+    "text": "데이터 과학 욕구단계설\n\n\n매슬로 욕구단계설\n가치 피라미드"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#데이터-사이언스---출판",
+    "href": "slideshow/202210-hongik-v2/index.html#데이터-사이언스---출판",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "데이터 사이언스 - 출판",
+    "text": "데이터 사이언스 - 출판\n\n\n\n\n문제점\n\n\n\n\nSingle Sourcing 개념\n\n\n\n\nSingle Sourcing Multi-Use\n\n\n\nFigure 2: 데이터 사이언스 출판 현황과 방향"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#복잡성",
+    "href": "slideshow/202210-hongik-v2/index.html#복잡성",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "복잡성",
+    "text": "복잡성\n\n\n\n\n엑셀, XKCD 1667: Algorithms\n\n\n\n\n아래한글, Writing Technical Papers with Markdown and Pandoc\n\n\n\n\n럼스펠트 지식 행렬, (Martin and Majidian 2011)\n\n\n\nFigure 3: 데이터 과학 저작도구 복잡성"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#사람-대-기계",
+    "href": "slideshow/202210-hongik-v2/index.html#사람-대-기계",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "사람 대 기계",
+    "text": "사람 대 기계\n\n\n\n\n전체 개발 시간\n\n\n\n\n사람 < 기계\n\n\n\n\n사람 > 기계\n\n\n\nFigure 4: 전체 개발시간 중요도 추세"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#quarto",
+    "href": "slideshow/202210-hongik-v2/index.html#quarto",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "Quarto",
+    "text": "Quarto\n\n\n\n\nR\n\n\n\n\n파이썬\n\n\n\n\n\n\nQuarto: R\n\n\n\n\nQuarto: 파이썬\n\n\n\nFigure 5: 데이터 사이언스 출판 제작 흐름"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#파이프-필터",
+    "href": "slideshow/202210-hongik-v2/index.html#파이프-필터",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "파이프 & 필터",
+    "text": "파이프 & 필터\n\n\n유닉스 쉘\n그래프 문법\n표 문법\n애니메이션 문법\n3D 시각화\n\n\n\n\n\n파이프와 필터\n\n\n\n\n\n\n그래프 문법 실무\n\n\n\n\n\n\n한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n\n\n데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)\ngganimate Talks\n\n\n\n\n\n\n\n\n\nrayshader"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#시각화---그래프-문법-problem-3",
+    "href": "slideshow/202210-hongik-v2/index.html#시각화---그래프-문법-problem-3",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "시각화 - 그래프 문법 1\n",
+    "text": "시각화 - 그래프 문법 1\n\n\n\n데이터\nggplot\nBase R\n\n\n\n\n\nR 코드\n\nlibrary(tidyverse)\nbill_df <- data.frame(\n  sex = factor(c(\"여성\",\"여성\",\"남성\",\"남성\")),\n  time = factor(c(\"점심\",\"저녁\",\"점심\",\"저녁\"), levels=c(\"점심\",\"저녁\")),\n  total_bill = c(13.53, 16.81, 16.24, 17.42)\n)\n\n\n실행결과\n\nbill_df\n#>    sex time total_bill\n#> 1 여성 점심      13.53\n#> 2 여성 저녁      16.81\n#> 3 남성 점심      16.24\n#> 4 남성 저녁      17.42\n\n\n\n\n\n\n\n\nR 코드\n\nbill_df %>% \n  ggplot(aes(x=time, y=total_bill, group=sex, shape=sex, colour=sex)) +\n    geom_line(aes(linetype=sex), size=1) +    \n    geom_point(size=3, fill=\"white\") +        \n    expand_limits(y=0) +                      \n    scale_colour_hue(name=\"결재자 성별\", l=30) +\n    scale_shape_manual(name=\"결재자 성별\", values=c(22,21)) +\n    scale_linetype_discrete(name=\"결재자 성별\") +\n    xlab(\"점심, 석식\") + ylab(\"팁(Tip)\") +\n    ggtitle(\"식사 결재 평균 팁\") +    \n    theme_bw() +\n    theme(legend.position=c(.7, .4))\n\n\n실행결과\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR 코드\n\nbill_mat <- matrix( bill_df$total_bill,\n                   nrow = 2,\n                   byrow=TRUE,\n                   dimnames = list(c(\"여성\", \"남성\"), c(\"점심\", \"저녁\"))\n                   )\n\nmf_col <- c(\"#3CC3BD\", \"#FD8210\")\nbarplot(bill_mat, beside = TRUE, border=NA, col=mf_col)\nlegend(\"topleft\", row.names(bill_mat), pch=15, col=mf_col)\n\n\npar(cex=1.2, cex.axis=1.1)\nmatplot(bill_mat, type=\"b\", lty=1, pch=19, col=mf_col,\n    cex=1.5, lwd=3, las=1, bty=\"n\", xaxt=\"n\",\n    xlim=c(0.7, 2.2), ylim=c(12,18), ylab=\"\",\n    main=\"식사 결재 평균 팁\", yaxt=\"n\")\naxis(2, at=axTicks(2), labels=sprintf(\"$%s\", axTicks(2)),\n    las=1, cex.axis=0.8, col=NA, line = -0.5)\ngrid(NA, NULL, lty=3, lwd=1, col=\"#000000\")\nabline(v=c(1,2), lty=3, lwd=1, col=\"#000000\")\nmtext(\"점심\", side=1, at=1)\nmtext(\"저녁\", side=1, at=2)\ntext(1.5, 17.3, \"남성\", srt=8, font=3)\ntext(1.5, 15.1, \"여성\", srt=33, font=3)\n\n\n실행결과\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing ggplot2 and R Base Graphics By Nathan Yau"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#디자인---코드",
+    "href": "slideshow/202210-hongik-v2/index.html#디자인---코드",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "디자인 - 코드",
+    "text": "디자인 - 코드\n\n\n데이터 가공\ndplyr R\nBase R\nSQL\n파이썬\n\n\n\n\n날짜와 시간별로 총 빈도수와 출발연착 평균 시간을 구한다. 단, 총빈도수가 10 회 미만인 것은 제외하고 출발연착 시간의 결측값을 제거하고 계산한다.\n\n\n\nflights 데이터프레임에서\n출발 연착시간(dep_delay) 칼럼에서 결측값이 없는 (!is.na()) 행을 필터링 하고\n날짜별(date), 시간별(hour) 그룹을 묶어\n평균 출발 연착시간을 계산하고 총빈도수 총계를 내고\n총빈도수가 10회 이상인 날짜와 시간을 찾아내시오\n\n\n\n\nhourly_delay <- flights %>%  \n  filter(!is.na(dep_delay)) %>% \n  group_by(date, hour) %>% \n  summarise(delay = mean(dep_delay), n = n()) %>%  \n  filter(n > 10) \n\n\n\n\nhourly_delay <- filter(   \n    summarise(   \n        group_by(   \n             filter(   \n                 flights,    \n                 !is.na(dep_delay)   \n             ),    \n             date, hour   \n        ),    \n    delay = mean(dep_delay),    \n         n = n()   \n    ),    \n    n > 10   \n)\n\n\n\n\nSELECT \"date\", \"hour\", \"delay\", \"n\"\nFROM (\n    SELECT \"date\", \"hour\",\n        AVG(\"dep_delay\") AS \"delay\",\n        COUNT() AS \"n\"\n    FROM \"flights\"\n    WHERE NOT(\"dep_delay\" IS NULL)\n    GROUP BY \"date\", \"hour\"\n) AS \"_W1\"\nWHERE \"n\" > 10.0\n\n\n\n\nflights[['date','hour','dep_delay']]\n..."
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#디자인---데이터",
+    "href": "slideshow/202210-hongik-v2/index.html#디자인---데이터",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "디자인 - 데이터",
+    "text": "디자인 - 데이터\n\n\n정돈된 데이터\n사례 - 결핵 데이터\n사례 - Messy 데이터\n사례 - 코드\n사례 - Tidy 데이터\n\n\n\n\n\n\n\n\n\nWHO 결핵 원데이터\n\nWHO 에서 년도별, 국가별, 연령별, 성별, 진단방법별 결핵 발병사례 조사 통계 데이터\n진단방법\n\n\nrel stands for cases of relapse\n\nep stands for cases of extrapulmonary TB\n\nsn stands for cases of pulmonary TB that could not be diagnosed by a pulmonary smear (smear negative)\n\nsp stands for cases of pulmonary TB that could be diagnosed by a pulmonary smear (smear positive)\n\n\n연령\n\n014 = 0 – 14 years old\n1524 = 15 – 24 years old\n2534 = 25 – 34 years old\n3544 = 35 – 44 years old\n4554 = 45 – 54 years old\n5564 = 55 – 64 years old\n65 = 65 or older\n\n\n성별\n\nmales (m)\nfemales (f)\n\n\n\n\n\n\nlibrary(tidyverse)\ntidyr::who \n#> # A tibble: 7,240 × 60\n#>    country     iso2  iso3   year new_s…¹ new_s…² new_s…³ new_s…⁴ new_s…⁵ new_s…⁶\n#>    <chr>       <chr> <chr> <int>   <int>   <int>   <int>   <int>   <int>   <int>\n#>  1 Afghanistan AF    AFG    1980      NA      NA      NA      NA      NA      NA\n#>  2 Afghanistan AF    AFG    1981      NA      NA      NA      NA      NA      NA\n#>  3 Afghanistan AF    AFG    1982      NA      NA      NA      NA      NA      NA\n#>  4 Afghanistan AF    AFG    1983      NA      NA      NA      NA      NA      NA\n#>  5 Afghanistan AF    AFG    1984      NA      NA      NA      NA      NA      NA\n#>  6 Afghanistan AF    AFG    1985      NA      NA      NA      NA      NA      NA\n#>  7 Afghanistan AF    AFG    1986      NA      NA      NA      NA      NA      NA\n#>  8 Afghanistan AF    AFG    1987      NA      NA      NA      NA      NA      NA\n#>  9 Afghanistan AF    AFG    1988      NA      NA      NA      NA      NA      NA\n#> 10 Afghanistan AF    AFG    1989      NA      NA      NA      NA      NA      NA\n#> # … with 7,230 more rows, 50 more variables: new_sp_m65 <int>,\n#> #   new_sp_f014 <int>, new_sp_f1524 <int>, new_sp_f2534 <int>,\n#> #   new_sp_f3544 <int>, new_sp_f4554 <int>, new_sp_f5564 <int>,\n#> #   new_sp_f65 <int>, new_sn_m014 <int>, new_sn_m1524 <int>,\n#> #   new_sn_m2534 <int>, new_sn_m3544 <int>, new_sn_m4554 <int>,\n#> #   new_sn_m5564 <int>, new_sn_m65 <int>, new_sn_f014 <int>,\n#> #   new_sn_f1524 <int>, new_sn_f2534 <int>, new_sn_f3544 <int>, …\n\n\n\n\nwho %>%\n  pivot_longer(\n    cols = new_sp_m014:newrel_f65, \n    names_to = \"key\", \n    values_to = \"cases\", \n    values_drop_na = TRUE\n  ) %>% \n  mutate(\n    key = stringr::str_replace(key, \"newrel\", \"new_rel\")\n  ) %>%\n  separate(key, c(\"new\", \"var\", \"sexage\")) %>% \n  select(-new, -iso2, -iso3) %>% \n  separate(sexage, c(\"sex\", \"age\"), sep = 1)\n\n\n\n\n#> # A tibble: 76,046 × 6\n#>    country      year var   sex   age   cases\n#>    <chr>       <int> <chr> <chr> <chr> <int>\n#>  1 Afghanistan  1997 sp    m     014       0\n#>  2 Afghanistan  1997 sp    m     1524     10\n#>  3 Afghanistan  1997 sp    m     2534      6\n#>  4 Afghanistan  1997 sp    m     3544      3\n#>  5 Afghanistan  1997 sp    m     4554      5\n#>  6 Afghanistan  1997 sp    m     5564      2\n#>  7 Afghanistan  1997 sp    m     65        0\n#>  8 Afghanistan  1997 sp    f     014       5\n#>  9 Afghanistan  1997 sp    f     1524     38\n#> 10 Afghanistan  1997 sp    f     2534     36\n#> # … with 76,036 more rows"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#윈텔-아키텍처",
+    "href": "slideshow/202210-hongik-v2/index.html#윈텔-아키텍처",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "윈텔 아키텍처",
+    "text": "윈텔 아키텍처\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: 마이크로소프트 + 인텔 아키텍처"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#과학기술-컴퓨팅",
+    "href": "slideshow/202210-hongik-v2/index.html#과학기술-컴퓨팅",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "과학기술 컴퓨팅",
+    "text": "과학기술 컴퓨팅\n\n\n\n\n추상화\n\n\n\n\n자동화\n\n\n\n\n과학적 방법론\n\n\n\nFigure 7: 과학기술 방법론"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#코딩",
+    "href": "slideshow/202210-hongik-v2/index.html#코딩",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "코딩",
+    "text": "코딩\n\n\n\n\n\n프로그래밍 언어\n\n\n\n\n프레임워크\n\n\n\n\n프로그래밍 패러다임\n\n\n\nFigure 8: ?(caption)"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#엔지니어링",
+    "href": "slideshow/202210-hongik-v2/index.html#엔지니어링",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "엔지니어링",
+    "text": "엔지니어링\n\n\n\n\n\n과학적 방법론\n\n\n\n\n\n\n반복: iteration \n\n\n\n\n\n피드백: feedback \n\n\n\n\n\n점진적: incremental \n\n\n\n\n\n실험: experimental \n\n\n\n\n\n경험적: empirical"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#복잡성-가치",
+    "href": "slideshow/202210-hongik-v2/index.html#복잡성-가치",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "복잡성 ↑ → 가치 ↑",
+    "text": "복잡성 ↑ → 가치 ↑\n\n\n\nTidyverse API 원칙\n\n\n기존 자료구조를 재사용: Reuse existing data structures.\n\n\n\n파이프 연산자로 간단한 함수를 조합: Compose simple functions with the pipe.\n\n\n\n함수형 프로그래밍을 적극 사용: Embrace functional programming.\n\n\n\n기계가 아닌 인간을 위한 설계: Design for humans.\n\n\n\n\n설계와 디자인 원칙 (Farley 2020)\n\n\n\n\n모듈화: modularity \n\n\n\n\n\n정보 은닉: information hiding \n\n\n\n\n\n관심사 분리: separation of concerns \n\n\n\n\n\n낮은 결합도: loosely coupling \n\n\n\n\n\n높은 응집도: high cohesion"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#데이터-과학-세상",
+    "href": "slideshow/202210-hongik-v2/index.html#데이터-과학-세상",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "데이터 과학 세상",
+    "text": "데이터 과학 세상"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#r",
+    "href": "slideshow/202210-hongik-v2/index.html#r",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "R",
+    "text": "R\n\n\nR 코드\nR 스크립트\nLaTeX + R\nIDE\nPosit\n과학기술 SW\n재현성\n재현성 상세\nCompendium\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n\n참여: 방법론을 결정하는데 참여할 수 있나?\n\n\n\n\n\n\n\n\n\n\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. (Community and Scriberia 2022) \n\n\n\n\n\n\n\n(Peng 2011)\n\n\n\n\n\n\n(Marwick, Boettiger, and Mullen 2018)"
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#참고문헌",
+    "href": "slideshow/202210-hongik-v2/index.html#참고문헌",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "참고문헌",
+    "text": "참고문헌\n\n\nCommunity, The Turing Way, and Scriberia. 2022. “Illustrations from the Turing Way: Shared Under CC-BY 4.0 for Reuse.” Zenodo. https://doi.org/10.5281/ZENODO.3332807.\n\n\nFarley, Dave. 2020. “Software Engineering - Development in 100 Years Time.” https://www.youtube.com/watch?v=tk6Isedq3GA.\n\n\nMartin, Trevor, and A Majidian. 2011. “Beyond the Known Unknowns-Finding Fuzzy Concepts for Creative Knowledge Discovery.” In World Conference on Soft Computing, San Francisco.\n\n\nMarwick, Ben, Carl Boettiger, and Lincoln Mullen. 2018. “Packaging Data Analytical Work Reproducibly Using r (and Friends).” The American Statistician 72 (1): 80–88. https://doi.org/10.1080/00031305.2017.1375986.\n\n\nPeng, Roger D. 2011. “Reproducible Research in Computational Science.” Science 334 (6060): 1226–27. https://doi.org/10.1126/science.1213847."
+  },
+  {
+    "objectID": "slideshow/202210-hongik-v2/index.html#section",
+    "href": "slideshow/202210-hongik-v2/index.html#section",
+    "title": "데이터 사이언스와 디자인\n",
+    "section": "",
+    "text": "한국 R 사용자회"
+  },
+  {
     "objectID": "slideshow/202210-hongik/data-science.html",
     "href": "slideshow/202210-hongik/data-science.html",
     "title": "발표자료 | 한국 R 사용자회",
@@ -49,18 +301,11 @@
     "text": "과학기술 S/W 사업"
   },
   {
-    "objectID": "slideshow/202210-hongik/index.html#데이터-사이언스",
-    "href": "slideshow/202210-hongik/index.html#데이터-사이언스",
+    "objectID": "slideshow/202210-hongik/index.html#r",
+    "href": "slideshow/202210-hongik/index.html#r",
     "title": "발표자료 | 한국 R 사용자회",
-    "section": "데이터 사이언스",
-    "text": "데이터 사이언스"
-  },
-  {
-    "objectID": "slideshow/202210-hongik/index.html#데이터-과학-욕구단계설",
-    "href": "slideshow/202210-hongik/index.html#데이터-과학-욕구단계설",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "데이터 과학 욕구단계설",
-    "text": "데이터 과학 욕구단계설\n\n\n매슬로 욕구단계설\n가치 피라미드"
+    "section": "R",
+    "text": "R\n\n\nR 코드\nR 스크립트\nLaTeX + R\nIDE\nPosit\n과학기술 SW\n재현성\n재현성 상세\nCompendium\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n\n참여: 방법론을 결정하는데 참여할 수 있나?\n\n\n\n\n\n\n\n\n\n\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. (Community and Scriberia 2022) \n\n\n\n\n\n\n\n(Peng 2011)\n\n\n\n\n\n\n(Marwick, Boettiger, and Mullen 2018)"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#section-2",
@@ -77,6 +322,34 @@
     "text": "데이터 사이언스"
   },
   {
+    "objectID": "slideshow/202210-hongik/index.html#데이터-사이언스",
+    "href": "slideshow/202210-hongik/index.html#데이터-사이언스",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "데이터 사이언스",
+    "text": "데이터 사이언스"
+  },
+  {
+    "objectID": "slideshow/202210-hongik/index.html#데이터-과학-욕구단계설",
+    "href": "slideshow/202210-hongik/index.html#데이터-과학-욕구단계설",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "데이터 과학 욕구단계설",
+    "text": "데이터 과학 욕구단계설\n\n\n매슬로 욕구단계설\n가치 피라미드"
+  },
+  {
+    "objectID": "slideshow/202210-hongik/index.html#section-4",
+    "href": "slideshow/202210-hongik/index.html#section-4",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "데이터 과학 문제"
+  },
+  {
+    "objectID": "slideshow/202210-hongik/index.html#section-5",
+    "href": "slideshow/202210-hongik/index.html#section-5",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "데이터 과학 문제"
+  },
+  {
     "objectID": "slideshow/202210-hongik/index.html#데이터-사이언스---출판",
     "href": "slideshow/202210-hongik/index.html#데이터-사이언스---출판",
     "title": "발표자료 | 한국 R 사용자회",
@@ -89,6 +362,13 @@
     "title": "발표자료 | 한국 R 사용자회",
     "section": "복잡성",
     "text": "복잡성\n\n\n\n엑셀 1\n\n\n아래한글 2\n\n럼스펠트 지식 행렬\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Martin and Majidian 2011)\n\n\n\n\n\n\nXKCD 1667: AlgorithmsWriting Technical Papers with Markdown and Pandoc"
+  },
+  {
+    "objectID": "slideshow/202210-hongik/index.html#파이프-필터",
+    "href": "slideshow/202210-hongik/index.html#파이프-필터",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "파이프 & 필터",
+    "text": "파이프 & 필터\n\n\n유닉스 쉘\n그래프 문법\n표 문법\n애니메이션 문법\n3D 시각화\n\n\n\n - 파이프와 필터\n\n\n\n\n\n\n\n그래프 문법 실무\n\n\n\n - 한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)\ngganimate Talks\n\n\n\n\n\n\n - rayshader"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#시각화---그래프-문법-problem-3",
@@ -119,18 +399,18 @@
     "text": "디자인 - 사람 대 기계\n\n\n전체 개발 시간\n사람 < 기계\n사람 > 기계"
   },
   {
-    "objectID": "slideshow/202210-hongik/index.html#section-4",
-    "href": "slideshow/202210-hongik/index.html#section-4",
+    "objectID": "slideshow/202210-hongik/index.html#section-6",
+    "href": "slideshow/202210-hongik/index.html#section-6",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "데이터 과학 문제"
+    "text": "데이터 과학 노력들"
   },
   {
-    "objectID": "slideshow/202210-hongik/index.html#section-5",
-    "href": "slideshow/202210-hongik/index.html#section-5",
+    "objectID": "slideshow/202210-hongik/index.html#section-7",
+    "href": "slideshow/202210-hongik/index.html#section-7",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "데이터 과학 문제"
+    "text": "데이터 과학 노력들"
   },
   {
     "objectID": "slideshow/202210-hongik/index.html#quarto",
@@ -140,11 +420,18 @@
     "text": "Quarto\n\n\nR\n파이썬\nQuarto: R\nQuarto: 파이썬"
   },
   {
-    "objectID": "slideshow/202210-hongik/index.html#section-6",
-    "href": "slideshow/202210-hongik/index.html#section-6",
+    "objectID": "slideshow/202210-hongik/index.html#참고문헌",
+    "href": "slideshow/202210-hongik/index.html#참고문헌",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "참고문헌",
+    "text": "참고문헌\n\n\nCommunity, The Turing Way, and Scriberia. 2022. “Illustrations from the Turing Way: Shared Under CC-BY 4.0 for Reuse.” Zenodo. https://doi.org/10.5281/ZENODO.3332807.\n\n\nMartin, Trevor, and A Majidian. 2011. “Beyond the Known Unknowns-Finding Fuzzy Concepts for Creative Knowledge Discovery.” In World Conference on Soft Computing, San Francisco.\n\n\nMarwick, Ben, Carl Boettiger, and Lincoln Mullen. 2018. “Packaging Data Analytical Work Reproducibly Using r (and Friends).” The American Statistician 72 (1): 80–88. https://doi.org/10.1080/00031305.2017.1375986.\n\n\nPeng, Roger D. 2011. “Reproducible Research in Computational Science.” Science 334 (6060): 1226–27. https://doi.org/10.1126/science.1213847."
+  },
+  {
+    "objectID": "slideshow/202210-hongik/index.html#section-8",
+    "href": "slideshow/202210-hongik/index.html#section-8",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "데이터 과학 노력들"
+    "text": "한국 R 사용자회"
   },
   {
     "objectID": "slideshow/202210-hongik/problem.html",
@@ -175,6 +462,13 @@
     "text": "복잡성\n\n엑셀 1아래한글 2럼스펠트 지식 행렬\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n[@martin2011beyond]"
   },
   {
+    "objectID": "slideshow/202210-hongik/problem.html#파이프-필터",
+    "href": "slideshow/202210-hongik/problem.html#파이프-필터",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "파이프 & 필터",
+    "text": "파이프 & 필터\n\n유닉스 쉘그래프 문법표 문법애니메이션 문법3D 시각화\n\n\n - 파이프와 필터\n\n\n\n\n\n\n\n\n그래프 문법 실무\n\n\n\n - 한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)\ngganimate Talks\n\n\n\n\n\n\n - rayshader"
+  },
+  {
     "objectID": "slideshow/202210-hongik/problem.html#시각화---그래프-문법-problem-3",
     "href": "slideshow/202210-hongik/problem.html#시각화---그래프-문법-problem-3",
     "title": "발표자료 | 한국 R 사용자회",
@@ -201,6 +495,27 @@
     "title": "발표자료 | 한국 R 사용자회",
     "section": "디자인 - 사람 대 기계",
     "text": "디자인 - 사람 대 기계\n\n전체 개발 시간사람 < 기계사람 > 기계"
+  },
+  {
+    "objectID": "slideshow/202210-hongik/rstudio-history.html",
+    "href": "slideshow/202210-hongik/rstudio-history.html",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "과학기술 Software 사업"
+  },
+  {
+    "objectID": "slideshow/202210-hongik/rstudio-history.html#section-1",
+    "href": "slideshow/202210-hongik/rstudio-history.html#section-1",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "과학기술 S/W 사업"
+  },
+  {
+    "objectID": "slideshow/202210-hongik/rstudio-history.html#r",
+    "href": "slideshow/202210-hongik/rstudio-history.html#r",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "R",
+    "text": "R\n\nR 코드R 스크립트LaTeX + RIDEPosit과학기술 SW재현성재현성 상세Compendium\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n참여: 방법론을 결정하는데 참여할 수 있나?\n\n\n\n\n\n\n\n\n\n\n\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. [@turing-2022] \n\n\n\n\n\n\n\n\n[@Peng2011]\n\n\n\n\n\n\n\n[@Marwick2018]"
   },
   {
     "objectID": "slideshow/202210-hongik/solution.html",
@@ -231,496 +546,6 @@
     "text": "데이터 사이언스와 디자인\n\n\n디자인과 아키텍쳐의 중요성\n\n\n\n이광춘, 한국 R 사용자회\n\n\n2022-10-11\n\n\n\n   github.com/bit2r/quarto"
   },
   {
-    "objectID": "slideshow/202210-hongik/index.html#r",
-    "href": "slideshow/202210-hongik/index.html#r",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "R",
-    "text": "R\n\n\nR 코드\nR 스크립트\nLaTeX + R\nIDE\nPosit\n과학기술 SW\n재현성\n재현성 상세\nCompendium\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n\n참여: 방법론을 결정하는데 참여할 수 있나?\n\n\n\n\n\n\n\n\n\n\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. (Community and Scriberia 2022) \n\n\n\n\n\n\n\n(Peng 2011)\n\n\n\n\n\n\n(Marwick, Boettiger, and Mullen 2018)"
-  },
-  {
-    "objectID": "slideshow/202210-hongik/index.html#section-7",
-    "href": "slideshow/202210-hongik/index.html#section-7",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "",
-    "text": "데이터 과학 노력들"
-  },
-  {
-    "objectID": "slideshow/202210-hongik/index.html#section-8",
-    "href": "slideshow/202210-hongik/index.html#section-8",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "",
-    "text": "한국 R 사용자회"
-  },
-  {
-    "objectID": "interactive/old-faithful.html",
-    "href": "interactive/old-faithful.html",
-    "title": "Old Faithful",
-    "section": "",
-    "text": "vars = [\"eruptions\", \"waiting\"]\nviewof xcol = Inputs.select(vars, {label: \"간헐천 변수선택:\"})"
-  },
-  {
-    "objectID": "interactive/old-faithful.html#data",
-    "href": "interactive/old-faithful.html#data",
-    "title": "Old Faithful",
-    "section": "Data",
-    "text": "Data\n\neruption_data = FileAttachment(\"../data/faithful.csv\").csv({ typed: true })\n\n\n\n\n\n\n\nfiltered = eruption_data.select(function(eruption) {\n  return faithful_var ;\n})"
-  },
-  {
-    "objectID": "interactive/old-faithful.html#plot",
-    "href": "interactive/old-faithful.html#plot",
-    "title": "Old Faithful",
-    "section": "Plot",
-    "text": "Plot\n\nPlot.rectY( filtered, \n  Plot.binX( \n    {y: \"count\"}, \n    {x: \"waiting\",\n    thresholds: \"sturges\"})\n  )\n  .plot()"
-  },
-  {
-    "objectID": "interactive/old-faithful.html#외부-데이터",
-    "href": "interactive/old-faithful.html#외부-데이터",
-    "title": "Old Faithful",
-    "section": "외부 데이터",
-    "text": "외부 데이터\nfaithful.csv 로컬 디스크에 저장된 데이터를 가져와서 인터랙티브 시각화에 사용하는 경우 다음과 같이 FileAttachment() 함수를 사용한다.\n\neruption_tbl = FileAttachment(\"../data/faithful.csv\").csv({ typed: true })\n\n<!-- ojs_define(eruption_data = eruption_tbl) -->"
-  },
-  {
-    "objectID": "interactive/old-faithful.html#데이터-패키지",
-    "href": "interactive/old-faithful.html#데이터-패키지",
-    "title": "Old Faithful",
-    "section": "데이터 패키지",
-    "text": "데이터 패키지\nR 혹은 파이썬에서 데이터를 바로 생성시키고 이를 인터랙티브 시각화에 사용하는 방식도 존재한다. 마찬가지로 외부 데이터 패키지 bitData 에서 R 환경에서 데이터를 적재시키고 이를 인터랙티브 시각화에 사용하는 방식도 있다.\n\nlibrary(tidyverse)\n\nnormal_values <- rnorm(1000)\n\nnormal_data <- normal_values %>% \n  as_tibble()\n\nojs_define(normal_data = normal_data)"
-  },
-  {
-    "objectID": "interactive/old-faithful-backup.html",
-    "href": "interactive/old-faithful-backup.html",
-    "title": "Old Faithful",
-    "section": "",
-    "text": "Data on eruptions of the Old Faithful geyser in Yellowstone National Park, Wyoming, USA. The data was collected continuously from August 1st until August 15th, 1985."
-  },
-  {
-    "objectID": "interactive/old-faithful-backup.html#data",
-    "href": "interactive/old-faithful-backup.html#data",
-    "title": "Old Faithful",
-    "section": "Data",
-    "text": "Data\n\nlibrary(tidyverse)\n\neruption_tbl <- faithful %>% as_tibble() %>% select(waiting)\n\nfaithful %>% \n  write_csv(\"data/faithful.csv\")\n\nojs_define(eruption_data = eruption_tbl)\n\n\neruption_data = FileAttachment(\"../data/faithful.csv\").csv({ typed: true })\n\n\n\n\n\n\n\nfiltered = eruption_data.filter(function(eruption) {\n  return waiting_bins < eruption.waiting ;\n})"
-  },
-  {
-    "objectID": "interactive/old-faithful-backup.html#plot",
-    "href": "interactive/old-faithful-backup.html#plot",
-    "title": "Old Faithful",
-    "section": "Plot",
-    "text": "Plot\n\nPlot.rectY( filtered, \n  Plot.binX( \n    {y: \"count\"}, \n    {x: \"waiting\",\n    thresholds: \"sturges\"})\n  )\n  .plot()"
-  },
-  {
-    "objectID": "interactive/palmer-penguins.html#외부-데이터",
-    "href": "interactive/palmer-penguins.html#외부-데이터",
-    "title": "파머 펭귄",
-    "section": "외부 데이터",
-    "text": "외부 데이터\nfaithful.csv 로컬 디스크에 저장된 데이터를 가져와서 인터랙티브 시각화에 사용하는 경우 다음과 같이 FileAttachment() 함수를 사용한다.\n\neruption_tbl = FileAttachment(\"../data/faithful.csv\").csv({ typed: true })\n\n<!-- ojs_define(eruption_data = eruption_tbl) -->\n\n\n\n\n\n\n또 다른 사례로 palmer-penguins.csv 파일을 사용한 사례를 살펴보자.\n\ndata = FileAttachment(\"../data/palmer-penguins.csv\").csv({ typed: true })\n\n\n\n\n\n\nUI에서 입력값을 선택하면서 시각화하는 데이터가 달라지기 때문에 이를 반영하여 인터랙티브 대상 시각화 데이터를 제작한다.\n\nfiltered = data.filter(function(penguin) {\n  return bill_length_min < penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})"
-  },
-  {
-    "objectID": "interactive/palmer-penguins.html#데이터-패키지",
-    "href": "interactive/palmer-penguins.html#데이터-패키지",
-    "title": "파머 펭귄",
-    "section": "데이터 패키지",
-    "text": "데이터 패키지\nR 혹은 파이썬에서 데이터를 바로 생성시키고 이를 인터랙티브 시각화에 사용하는 방식도 존재한다. 마찬가지로 외부 데이터 패키지 bitData 에서 R 환경에서 데이터를 적재시키고 이를 인터랙티브 시각화에 사용하는 방식도 있다.\n\nlibrary(tidyverse)\n\nnormal_values <- rnorm(1000)\n\nnormal_data <- normal_values %>% \n  as_tibble()\n\nojs_define(normal_data = normal_data)"
-  },
-  {
-    "objectID": "interactive/palmer-penguins.html",
-    "href": "interactive/palmer-penguins.html",
-    "title": "파머 펭귄",
-    "section": "",
-    "text": "# 파머 펭귄 (영어)"
-  },
-  {
-    "objectID": "interactive/palmer-penguins.html#데이터",
-    "href": "interactive/palmer-penguins.html#데이터",
-    "title": "파머 펭귄",
-    "section": "데이터",
-    "text": "데이터\n데이터는 외부에서 .csv 파일등을 가져오는 방식이 대표적이다. 또다른 방식은 데이터 패키지 (bitData)에 내장된 데이터를 바로 가져오는 방식이다.\npalmer-penguins.csv 로컬 디스크에 저장된 데이터를 가져와서 인터랙티브 시각화에 사용하는 경우 다음과 같이 FileAttachment() 함수를 사용한다.\n\ndata = FileAttachment(\"../data/palmer-penguins.csv\").csv({ typed: true })\n\n\n\n\n\n\nUI에서 입력값을 선택하면서 시각화하는 데이터가 달라지기 때문에 이를 반영하여 인터랙티브 대상 시각화 데이터를 제작한다.\n\nfiltered = data.filter(function(penguin) {\n  return bill_length_min < penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})"
-  },
-  {
-    "objectID": "interactive/palmer-penguins.html#ui",
-    "href": "interactive/palmer-penguins.html#ui",
-    "title": "파머 펭귄",
-    "section": "UI",
-    "text": "UI\n인터랙티브 데이터 시각화를 위해서 UI 입력부분을 정의한다. 먼저 슬라이더 입력값(Input.range()) 과 체크박스 입력값(Inputs.checkbox())을 넣어둔다.\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)"
-  },
-  {
-    "objectID": "interactive/palmer-penguins.html#인터랙티브-그래프",
-    "href": "interactive/palmer-penguins.html#인터랙티브-그래프",
-    "title": "파머 펭귄",
-    "section": "인터랙티브 그래프",
-    "text": "인터랙티브 그래프\n인터랙티브 데이터를 선택한 결과를 실시간 데이터와 그래프로 시각화하여 문서에 담아낸다.\n\n시각화표\n\n\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)"
-  },
-  {
-    "objectID": "interactive/palmer-penguins.html#데이터-1",
-    "href": "interactive/palmer-penguins.html#데이터-1",
-    "title": "파머 펭귄",
-    "section": "데이터",
-    "text": "데이터\nbitData 데이터 패키지 내장된 파머 펭귄 데이터를 번역한 penguins 데이터프레임을 palmer-penguins-korean.csv 파일로 저장시킨다.\n\nlibrary(tidyverse)\n\nbitData::penguins  %>% \n  write_csv(\"data/palmer-penguins-korean.csv\")\n\n\nkdata = FileAttachment(\"../data/palmer-penguins-korean.csv\").csv({ typed: true })\n\n\n\n\n\n\nUI에서 입력값을 선택하면서 시각화하는 데이터가 달라지기 때문에 이를 반영하여 인터랙티브 대상 시각화 데이터를 제작한다.\n\nkfiltered = kdata.filter(function(penguin) {\n  return bill_length_min < penguin.부리_길이 &&\n         섬이름.includes(penguin.섬이름);\n})"
-  },
-  {
-    "objectID": "interactive/palmer-penguins.html#ui-1",
-    "href": "interactive/palmer-penguins.html#ui-1",
-    "title": "파머 펭귄",
-    "section": "UI",
-    "text": "UI\n인터랙티브 데이터 시각화를 위해서 UI 입력부분을 정의한다. 먼저 슬라이더 입력값(Input.range()) 과 체크박스 입력값(Inputs.checkbox())을 넣어둔다.\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"부리 길이 (최소):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"토르거센\", \"비스코\", \"드림\"], \n  { value: [\"토르거센\", \"비스코\"], \n    label: \"섬이름:\"\n  }\n)"
-  },
-  {
-    "objectID": "interactive/palmer-penguins.html#인터랙티브-그래프-1",
-    "href": "interactive/palmer-penguins.html#인터랙티브-그래프-1",
-    "title": "파머 펭귄",
-    "section": "인터랙티브 그래프",
-    "text": "인터랙티브 그래프\n인터랙티브 데이터를 선택한 결과를 실시간 데이터와 그래프로 시각화하여 문서에 담아낸다.\n\n\n시각화\n표\n\n\n\n\nPlot.rectY(kfiltered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"체중\", fill: \"종명칭\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"성별\",\n      y: \"종명칭\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)"
-  },
-  {
-    "objectID": "interactive/palmer-penguins-korean.html#데이터-패키지",
-    "href": "interactive/palmer-penguins-korean.html#데이터-패키지",
-    "title": "파머 펭귄",
-    "section": "데이터 패키지",
-    "text": "데이터 패키지\nR 혹은 파이썬에서 데이터를 바로 생성시키고 이를 인터랙티브 시각화에 사용하는 방식도 존재한다. 마찬가지로 외부 데이터 패키지 bitData 에서 R 환경에서 데이터를 적재시키고 이를 인터랙티브 시각화에 사용하는 방식도 있다.\n\nlibrary(tidyverse)\n\nnormal_values <- rnorm(1000)\n\nnormal_data <- normal_values %>% \n  as_tibble()\n\nojs_define(normal_data = normal_data)"
-  },
-  {
-    "objectID": "interactive/palmer-penguins-korean.html#데이터",
-    "href": "interactive/palmer-penguins-korean.html#데이터",
-    "title": "파머 펭귄",
-    "section": "데이터",
-    "text": "데이터\nbitData 데이터 패키지 내장된 파머 펭귄 데이터를 번역한 penguins 데이터프레임을 palmer-penguins-korean.csv 파일로 저장시킨다.\n\nlibrary(tidyverse)\n\nbitData::penguins  %>% \n  write_csv(\"data/palmer-penguins-korean.csv\")\n\n\nkdata = FileAttachment(\"../data/palmer-penguins-korean.csv\").csv({ typed: true })\n\n\n\n\n\n\nUI에서 입력값을 선택하면서 시각화하는 데이터가 달라지기 때문에 이를 반영하여 인터랙티브 대상 시각화 데이터를 제작한다.\n\nkfiltered = kdata.filter(function(penguin) {\n  return bill_length_min < penguin.부리_길이 &&\n         섬이름.includes(penguin.섬이름);\n})"
-  },
-  {
-    "objectID": "interactive/palmer-penguins-korean.html#ui",
-    "href": "interactive/palmer-penguins-korean.html#ui",
-    "title": "파머 펭귄",
-    "section": "UI",
-    "text": "UI\n인터랙티브 데이터 시각화를 위해서 UI 입력부분을 정의한다. 먼저 슬라이더 입력값(Input.range()) 과 체크박스 입력값(Inputs.checkbox())을 넣어둔다.\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"부리 길이 (최소):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"토르거센\", \"비스코\", \"드림\"], \n  { value: [\"토르거센\", \"비스코\"], \n    label: \"섬이름:\"\n  }\n)"
-  },
-  {
-    "objectID": "interactive/palmer-penguins-korean.html#인터랙티브-그래프",
-    "href": "interactive/palmer-penguins-korean.html#인터랙티브-그래프",
-    "title": "파머 펭귄",
-    "section": "인터랙티브 그래프",
-    "text": "인터랙티브 그래프\n인터랙티브 데이터를 선택한 결과를 실시간 데이터와 그래프로 시각화하여 문서에 담아낸다.\n\n\n시각화\n표\n\n\n\n\nPlot.rectY(kfiltered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"체중\", fill: \"종명칭\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"성별\",\n      y: \"종명칭\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)"
-  },
-  {
-    "objectID": "interactive/climate-crisis.html#데이터-패키지",
-    "href": "interactive/climate-crisis.html#데이터-패키지",
-    "title": "파머 펭귄",
-    "section": "데이터 패키지",
-    "text": "데이터 패키지\nR 혹은 파이썬에서 데이터를 바로 생성시키고 이를 인터랙티브 시각화에 사용하는 방식도 존재한다. 마찬가지로 외부 데이터 패키지 bitData 에서 R 환경에서 데이터를 적재시키고 이를 인터랙티브 시각화에 사용하는 방식도 있다.\n\nlibrary(tidyverse)\n\nnormal_values <- rnorm(1000)\n\nnormal_data <- normal_values %>% \n  as_tibble()\n\nojs_define(normal_data = normal_data)"
-  },
-  {
-    "objectID": "interactive/climate-crisis.html#데이터",
-    "href": "interactive/climate-crisis.html#데이터",
-    "title": "파머 펭귄",
-    "section": "데이터",
-    "text": "데이터\nbitData 데이터 패키지 내장된 파머 펭귄 데이터를 번역한 penguins 데이터프레임을 palmer-penguins-korean.csv 파일로 저장시킨다.\n\nlibrary(tidyverse)\n\nbitData::penguins  %>% \n  write_csv(\"data/palmer-penguins-korean.csv\")\n\n\nkdata = FileAttachment(\"../data/palmer-penguins-korean.csv\").csv({ typed: true })\n\n\n\n\n\n\nUI에서 입력값을 선택하면서 시각화하는 데이터가 달라지기 때문에 이를 반영하여 인터랙티브 대상 시각화 데이터를 제작한다.\n\nkfiltered = kdata.filter(function(penguin) {\n  return bill_length_min < penguin.부리_길이 &&\n         섬이름.includes(penguin.섬이름);\n})"
-  },
-  {
-    "objectID": "interactive/climate-crisis.html#ui",
-    "href": "interactive/climate-crisis.html#ui",
-    "title": "기후 위기",
-    "section": "UI",
-    "text": "UI\n인터랙티브 데이터 시각화를 위해서 UI 입력부분을 정의한다. 먼저 슬라이더 입력값(Input.range()) 과 체크박스 입력값(Inputs.checkbox())을 넣어둔다.\n\nviewof study_year = Inputs.range(\n  [1959, 2021], \n  {value: 1980, step: 1, label: \"연도:\"}\n)"
-  },
-  {
-    "objectID": "interactive/climate-crisis.html#인터랙티브-그래프",
-    "href": "interactive/climate-crisis.html#인터랙티브-그래프",
-    "title": "기후 위기",
-    "section": "인터랙티브 그래프",
-    "text": "인터랙티브 그래프\n인터랙티브 데이터를 선택한 결과를 실시간 데이터와 그래프로 시각화하여 문서에 담아낸다.\n\n\n시각화\n표\n\n\n\n\nPlot.plot({\n  marks: [\n    Plot.line(co2_filtered, \n      { x: \"year\", y: \"mean\"}, \n      { stroke: \"black\" }\n    )\n  ]\n})\n\n\n\n\n\n\n\n\n\nInputs.table(co2_filtered)"
-  },
-  {
-    "objectID": "interactive/climate-crisis.html",
-    "href": "interactive/climate-crisis.html",
-    "title": "기후 위기",
-    "section": "",
-    "text": "이산화탄소(\\(CO_2\\)) 증가에 따라 기후위기가 이제 홍수와 가뭄으로 우리곁에 성큼 다가왔다. 미국 해양대기청(NOAA)에서 하와이 마우나로아(Mauna Loa)산에서 측정한 대기중 이산화탄소 농도 추세를 인터랙티브 시각화해보자.\n데이터\nTrends in Atmospheric Carbon Dioxide에서 월별 \\(CO_2\\) 농도 데이터를 NOASS 웹사이트에서 바로 다운로드 받아 가져온다. 이를 ggplot으로 시각화해본다.\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✔ ggplot2 3.3.6     ✔ purrr   0.3.4\n✔ tibble  3.1.8     ✔ dplyr   1.0.9\n✔ tidyr   1.2.0     ✔ stringr 1.4.1\n✔ readr   2.1.2     ✔ forcats 0.5.2\n\n\nWarning: package 'tibble' was built under R version 4.2.1\n\n\nWarning: package 'dplyr' was built under R version 4.2.1\n\n\nWarning: package 'stringr' was built under R version 4.2.1\n\n\nWarning: package 'forcats' was built under R version 4.2.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\n# bitData::global_co2 %>% \n#   write_csv(\"data/co2_year.csv\")\n\nglobal_co2 <- read_csv(\"https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv\", skip = 52)\n\nRows: 774 Columns: 8\n\n\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\ndbl (8): year, month, decimal date, average, deseasonalized, ndays, sdev, unc\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nglobal_co2 %>% \n  janitor::clean_names() %>% \n  mutate(yearmon = lubridate::make_date(year = year, month = month)) %>% \n  ggplot(aes(x=yearmon, y = average)) +\n    geom_line() +\n    geom_line(aes(y= deseasonalized), color = \"red\") +\n    theme_bw() +\n    labs(x = \"년월\",\n         y = \"평균 CO2 농도\",\n         title = \"월별 대기중 CO2 농도 추세\")\n\n\n\n\n인터랙티브 시각화를 위해 데이터를 년도별로 평균을 내어 이를 시각화하는데 사용한다.\n\nglobal_co2 %>% \n  janitor::clean_names() %>% \n  group_by(year) %>% \n  summarize( mean = mean(average)) %>% \n  write_csv(\"data/co2_year.csv\")\n\n로컬 저장소에 저장한 csv 파일을 이제 Observable JS 로 불러와서 년도를 달리하여 \\(CO_2\\) 농도의 추세를 살펴본다.\n\nco2_data = FileAttachment(\"../data/co2_year.csv\").csv({ typed: true })\n\nco2_filtered = co2_data.filter(function(co2) {\n  return study_year < co2.year ;\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUI\n인터랙티브 데이터 시각화를 위해서 UI 입력부분을 정의한다. 먼저 연도를 슬라이더 입력값(Input.range())에 넣어둔다.\n\nviewof study_year = Inputs.range(\n  [1959, 2021], \n  {value: 1980, step: 1, label: \"연도:\"}\n)\n\n\n\n\n\n\n인터랙티브 그래프\n인터랙티브 데이터를 선택한 결과를 실시간 데이터와 그래프로 시각화하여 문서에 담아낸다.\n\n\n시각화\n표\n\n\n\n\nPlot.plot({\n  marks: [\n    Plot.line(co2_filtered, \n      { x: \"year\", y: \"mean\"}, \n      { stroke: \"black\" }\n    )\n  ]\n})\n\n\n\n\n\n\n\n\n\nInputs.table(co2_filtered)"
-  },
-  {
-    "objectID": "slideshow/202210-hongik/rstudio-history.html",
-    "href": "slideshow/202210-hongik/rstudio-history.html",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "",
-    "text": "과학기술 Software 사업"
-  },
-  {
-    "objectID": "slideshow/202210-hongik/rstudio-history.html#section-1",
-    "href": "slideshow/202210-hongik/rstudio-history.html#section-1",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "",
-    "text": "과학기술 S/W 사업"
-  },
-  {
-    "objectID": "slideshow/202210-hongik/rstudio-history.html#r",
-    "href": "slideshow/202210-hongik/rstudio-history.html#r",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "R",
-    "text": "R\n\nR 코드R 스크립트LaTeX + RIDEPosit과학기술 SW재현성재현성 상세Compendium\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n참여: 방법론을 결정하는데 참여할 수 있나?\n\n\n\n\n\n\n\n\n\n\n\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. [@turing-2022] \n\n\n\n\n\n\n\n\n[@Peng2011]\n\n\n\n\n\n\n\n[@Marwick2018]"
-  },
-  {
-    "objectID": "slideshow/202210-hongik/index.html#참고문헌",
-    "href": "slideshow/202210-hongik/index.html#참고문헌",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "참고문헌",
-    "text": "참고문헌\n\n\nCommunity, The Turing Way, and Scriberia. 2022. “Illustrations from the Turing Way: Shared Under CC-BY 4.0 for Reuse.” Zenodo. https://doi.org/10.5281/ZENODO.3332807.\n\n\nMartin, Trevor, and A Majidian. 2011. “Beyond the Known Unknowns-Finding Fuzzy Concepts for Creative Knowledge Discovery.” In World Conference on Soft Computing, San Francisco.\n\n\nMarwick, Ben, Carl Boettiger, and Lincoln Mullen. 2018. “Packaging Data Analytical Work Reproducibly Using r (and Friends).” The American Statistician 72 (1): 80–88. https://doi.org/10.1080/00031305.2017.1375986.\n\n\nPeng, Roger D. 2011. “Reproducible Research in Computational Science.” Science 334 (6060): 1226–27. https://doi.org/10.1126/science.1213847."
-  },
-  {
-    "objectID": "slideshow/202210-hongik/index.html#파이프-필터",
-    "href": "slideshow/202210-hongik/index.html#파이프-필터",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "파이프 & 필터",
-    "text": "파이프 & 필터\n\n\n유닉스 쉘\n그래프 문법\n표 문법\n애니메이션 문법\n3D 시각화\n\n\n\n - 파이프와 필터\n\n\n\n\n\n\n\n그래프 문법 실무\n\n\n\n - 한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)\ngganimate Talks\n\n\n\n\n\n\n - rayshader"
-  },
-  {
-    "objectID": "slideshow/202210-hongik/problem.html#파이프-필터",
-    "href": "slideshow/202210-hongik/problem.html#파이프-필터",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "파이프 & 필터",
-    "text": "파이프 & 필터\n\n유닉스 쉘그래프 문법표 문법애니메이션 문법3D 시각화\n\n\n - 파이프와 필터\n\n\n\n\n\n\n\n\n그래프 문법 실무\n\n\n\n - 한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)\ngganimate Talks\n\n\n\n\n\n\n - rayshader"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#첫번째..",
-    "href": "slideshow/202210-hongik-v2/index.html#첫번째..",
-    "title": "데이터 사이언스와 디자인",
-    "section": "첫번째..",
-    "text": "첫번째..\n\n\n\n한국 R 사용자회"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#들어가며",
-    "href": "slideshow/202210-hongik-v2/index.html#들어가며",
-    "title": "데이터 사이언스와 디자인",
-    "section": "들어가며",
-    "text": "들어가며"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#section",
-    "href": "slideshow/202210-hongik-v2/index.html#section",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "",
-    "text": "한국 R 사용자회"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#section-1",
-    "href": "slideshow/202210-hongik-v2/index.html#section-1",
-    "title": "데이터 사이언스와 디자인",
-    "section": "",
-    "text": "데이터 과학 문제"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#데이터-사이언스",
-    "href": "slideshow/202210-hongik-v2/index.html#데이터-사이언스",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "데이터 사이언스",
-    "text": "데이터 사이언스"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#데이터-과학-욕구단계설",
-    "href": "slideshow/202210-hongik-v2/index.html#데이터-과학-욕구단계설",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "데이터 과학 욕구단계설",
-    "text": "데이터 과학 욕구단계설\n\n\n매슬로 욕구단계설\n가치 피라미드"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/01-data-science.html",
-    "href": "slideshow/202210-hongik-v2/01-data-science.html",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "",
-    "text": "매슬로 욕구단계설가치 피라미드"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#데이터-사이언스---출판",
-    "href": "slideshow/202210-hongik-v2/index.html#데이터-사이언스---출판",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "데이터 사이언스 - 출판",
-    "text": "데이터 사이언스 - 출판\n\n\n\n\n문제점\n\n\n\n\nSingle Sourcing 개념\n\n\n\n\nSingle Sourcing Multi-Use\n\n\n\nFigure 2: 데이터 사이언스 출판 현황과 방향"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#복잡성",
-    "href": "slideshow/202210-hongik-v2/index.html#복잡성",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "복잡성",
-    "text": "복잡성\n\n\n\n\n엑셀, XKCD 1667: Algorithms\n\n\n\n\n아래한글, Writing Technical Papers with Markdown and Pandoc\n\n\n\n\n럼스펠트 지식 행렬, (Martin and Majidian 2011)\n\n\n\nFigure 3: 데이터 과학 저작도구 복잡성"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#디자인---사람-대-기계",
-    "href": "slideshow/202210-hongik-v2/index.html#디자인---사람-대-기계",
-    "title": "데이터 사이언스와 디자인",
-    "section": "디자인 - 사람 대 기계",
-    "text": "디자인 - 사람 대 기계\n\n전체 개발 시간사람 < 기계사람 > 기계\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 \n\n\n\nMartin, Trevor, and A Majidian. 2011. “Beyond the Known Unknowns-Finding Fuzzy Concepts for Creative Knowledge Discovery.” In World Conference on Soft Computing, San Francisco."
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#사람-대-기계",
-    "href": "slideshow/202210-hongik-v2/index.html#사람-대-기계",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "사람 대 기계",
-    "text": "사람 대 기계\n\n\n\n\n전체 개발 시간\n\n\n\n\n사람 < 기계\n\n\n\n\n사람 > 기계\n\n\n\nFigure 4: 전체 개발시간 중요도 추세"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#언어와-복잡성",
-    "href": "slideshow/202210-hongik-v2/index.html#언어와-복잡성",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "언어와 복잡성",
-    "text": "언어와 복잡성\n\n\n\n한국 R 사용자회 \n\n\n\nMartin, Trevor, and A Majidian. 2011. “Beyond the Known Unknowns-Finding Fuzzy Concepts for Creative Knowledge Discovery.” In World Conference on Soft Computing, San Francisco."
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/02-problem.html",
-    "href": "slideshow/202210-hongik-v2/02-problem.html",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "",
-    "text": "문제점\n\n\n\n\n\nSingle Sourcing 개념\n\n\n\n\n\nSingle Sourcing Multi-Use\n\n\n\nFigure 1: 데이터 사이언스 출판 현황과 방향\n\n\n\n\n\n\n\n\n\n\n\n엑셀, XKCD 1667: Algorithms\n\n\n\n\n\n아래한글, Writing Technical Papers with Markdown and Pandoc\n\n\n\n\n\n럼스펠트 지식 행렬, [@martin2011beyond]\n\n\n\nFigure 2: 데이터 과학 저작도구 복잡성\n\n\n\n\n\n\n\n\n\n\n\n전체 개발 시간\n\n\n\n\n\n사람 < 기계\n\n\n\n\n\n사람 > 기계\n\n\n\nFigure 3: 전체 개발시간 중요도 추세"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#quarto",
-    "href": "slideshow/202210-hongik-v2/index.html#quarto",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "Quarto",
-    "text": "Quarto\n\n\n\n\nR\n\n\n\n\n파이썬\n\n\n\n\n\n\nQuarto: R\n\n\n\n\nQuarto: 파이썬\n\n\n\nFigure 5: 데이터 사이언스 출판 제작 흐름"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#파이프-필터",
-    "href": "slideshow/202210-hongik-v2/index.html#파이프-필터",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "파이프 & 필터",
-    "text": "파이프 & 필터\n\n\n유닉스 쉘\n그래프 문법\n표 문법\n애니메이션 문법\n3D 시각화\n\n\n\n\n\n파이프와 필터\n\n\n\n\n\n\n그래프 문법 실무\n\n\n\n\n\n\n한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n\n\n데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)\ngganimate Talks\n\n\n\n\n\n\n\n\n\nrayshader"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#시각화---그래프-문법-problem-3",
-    "href": "slideshow/202210-hongik-v2/index.html#시각화---그래프-문법-problem-3",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "시각화 - 그래프 문법 1\n",
-    "text": "시각화 - 그래프 문법 1\n\n\n\n데이터\nggplot\nBase R\n\n\n\n\n\nR 코드\n\nlibrary(tidyverse)\nbill_df <- data.frame(\n  sex = factor(c(\"여성\",\"여성\",\"남성\",\"남성\")),\n  time = factor(c(\"점심\",\"저녁\",\"점심\",\"저녁\"), levels=c(\"점심\",\"저녁\")),\n  total_bill = c(13.53, 16.81, 16.24, 17.42)\n)\n\n\n실행결과\n\nbill_df\n#>    sex time total_bill\n#> 1 여성 점심      13.53\n#> 2 여성 저녁      16.81\n#> 3 남성 점심      16.24\n#> 4 남성 저녁      17.42\n\n\n\n\n\n\n\n\nR 코드\n\nbill_df %>% \n  ggplot(aes(x=time, y=total_bill, group=sex, shape=sex, colour=sex)) +\n    geom_line(aes(linetype=sex), size=1) +    \n    geom_point(size=3, fill=\"white\") +        \n    expand_limits(y=0) +                      \n    scale_colour_hue(name=\"결재자 성별\", l=30) +\n    scale_shape_manual(name=\"결재자 성별\", values=c(22,21)) +\n    scale_linetype_discrete(name=\"결재자 성별\") +\n    xlab(\"점심, 석식\") + ylab(\"팁(Tip)\") +\n    ggtitle(\"식사 결재 평균 팁\") +    \n    theme_bw() +\n    theme(legend.position=c(.7, .4))\n\n\n실행결과\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR 코드\n\nbill_mat <- matrix( bill_df$total_bill,\n                   nrow = 2,\n                   byrow=TRUE,\n                   dimnames = list(c(\"여성\", \"남성\"), c(\"점심\", \"저녁\"))\n                   )\n\nmf_col <- c(\"#3CC3BD\", \"#FD8210\")\nbarplot(bill_mat, beside = TRUE, border=NA, col=mf_col)\nlegend(\"topleft\", row.names(bill_mat), pch=15, col=mf_col)\n\n\npar(cex=1.2, cex.axis=1.1)\nmatplot(bill_mat, type=\"b\", lty=1, pch=19, col=mf_col,\n    cex=1.5, lwd=3, las=1, bty=\"n\", xaxt=\"n\",\n    xlim=c(0.7, 2.2), ylim=c(12,18), ylab=\"\",\n    main=\"식사 결재 평균 팁\", yaxt=\"n\")\naxis(2, at=axTicks(2), labels=sprintf(\"$%s\", axTicks(2)),\n    las=1, cex.axis=0.8, col=NA, line = -0.5)\ngrid(NA, NULL, lty=3, lwd=1, col=\"#000000\")\nabline(v=c(1,2), lty=3, lwd=1, col=\"#000000\")\nmtext(\"점심\", side=1, at=1)\nmtext(\"저녁\", side=1, at=2)\ntext(1.5, 17.3, \"남성\", srt=8, font=3)\ntext(1.5, 15.1, \"여성\", srt=33, font=3)\n\n\n실행결과\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing ggplot2 and R Base Graphics By Nathan Yau"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#디자인---코드",
-    "href": "slideshow/202210-hongik-v2/index.html#디자인---코드",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "디자인 - 코드",
-    "text": "디자인 - 코드\n\n\n데이터 가공\ndplyr R\nBase R\nSQL\n파이썬\n\n\n\n\n날짜와 시간별로 총 빈도수와 출발연착 평균 시간을 구한다. 단, 총빈도수가 10 회 미만인 것은 제외하고 출발연착 시간의 결측값을 제거하고 계산한다.\n\n\n\nflights 데이터프레임에서\n출발 연착시간(dep_delay) 칼럼에서 결측값이 없는 (!is.na()) 행을 필터링 하고\n날짜별(date), 시간별(hour) 그룹을 묶어\n평균 출발 연착시간을 계산하고 총빈도수 총계를 내고\n총빈도수가 10회 이상인 날짜와 시간을 찾아내시오\n\n\n\n\nhourly_delay <- flights %>%  \n  filter(!is.na(dep_delay)) %>% \n  group_by(date, hour) %>% \n  summarise(delay = mean(dep_delay), n = n()) %>%  \n  filter(n > 10) \n\n\n\n\nhourly_delay <- filter(   \n    summarise(   \n        group_by(   \n             filter(   \n                 flights,    \n                 !is.na(dep_delay)   \n             ),    \n             date, hour   \n        ),    \n    delay = mean(dep_delay),    \n         n = n()   \n    ),    \n    n > 10   \n)\n\n\n\n\nSELECT \"date\", \"hour\", \"delay\", \"n\"\nFROM (\n    SELECT \"date\", \"hour\",\n        AVG(\"dep_delay\") AS \"delay\",\n        COUNT() AS \"n\"\n    FROM \"flights\"\n    WHERE NOT(\"dep_delay\" IS NULL)\n    GROUP BY \"date\", \"hour\"\n) AS \"_W1\"\nWHERE \"n\" > 10.0\n\n\n\n\nflights[['date','hour','dep_delay']]\n..."
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#디자인---데이터",
-    "href": "slideshow/202210-hongik-v2/index.html#디자인---데이터",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "디자인 - 데이터",
-    "text": "디자인 - 데이터\n\n\n정돈된 데이터\n사례 - 결핵 데이터\n사례 - Messy 데이터\n사례 - 코드\n사례 - Tidy 데이터\n\n\n\n\n\n\n\n\n\nWHO 결핵 원데이터\n\nWHO 에서 년도별, 국가별, 연령별, 성별, 진단방법별 결핵 발병사례 조사 통계 데이터\n진단방법\n\n\nrel stands for cases of relapse\n\nep stands for cases of extrapulmonary TB\n\nsn stands for cases of pulmonary TB that could not be diagnosed by a pulmonary smear (smear negative)\n\nsp stands for cases of pulmonary TB that could be diagnosed by a pulmonary smear (smear positive)\n\n\n연령\n\n014 = 0 – 14 years old\n1524 = 15 – 24 years old\n2534 = 25 – 34 years old\n3544 = 35 – 44 years old\n4554 = 45 – 54 years old\n5564 = 55 – 64 years old\n65 = 65 or older\n\n\n성별\n\nmales (m)\nfemales (f)\n\n\n\n\n\n\nlibrary(tidyverse)\ntidyr::who \n#> # A tibble: 7,240 × 60\n#>    country     iso2  iso3   year new_s…¹ new_s…² new_s…³ new_s…⁴ new_s…⁵ new_s…⁶\n#>    <chr>       <chr> <chr> <int>   <int>   <int>   <int>   <int>   <int>   <int>\n#>  1 Afghanistan AF    AFG    1980      NA      NA      NA      NA      NA      NA\n#>  2 Afghanistan AF    AFG    1981      NA      NA      NA      NA      NA      NA\n#>  3 Afghanistan AF    AFG    1982      NA      NA      NA      NA      NA      NA\n#>  4 Afghanistan AF    AFG    1983      NA      NA      NA      NA      NA      NA\n#>  5 Afghanistan AF    AFG    1984      NA      NA      NA      NA      NA      NA\n#>  6 Afghanistan AF    AFG    1985      NA      NA      NA      NA      NA      NA\n#>  7 Afghanistan AF    AFG    1986      NA      NA      NA      NA      NA      NA\n#>  8 Afghanistan AF    AFG    1987      NA      NA      NA      NA      NA      NA\n#>  9 Afghanistan AF    AFG    1988      NA      NA      NA      NA      NA      NA\n#> 10 Afghanistan AF    AFG    1989      NA      NA      NA      NA      NA      NA\n#> # … with 7,230 more rows, 50 more variables: new_sp_m65 <int>,\n#> #   new_sp_f014 <int>, new_sp_f1524 <int>, new_sp_f2534 <int>,\n#> #   new_sp_f3544 <int>, new_sp_f4554 <int>, new_sp_f5564 <int>,\n#> #   new_sp_f65 <int>, new_sn_m014 <int>, new_sn_m1524 <int>,\n#> #   new_sn_m2534 <int>, new_sn_m3544 <int>, new_sn_m4554 <int>,\n#> #   new_sn_m5564 <int>, new_sn_m65 <int>, new_sn_f014 <int>,\n#> #   new_sn_f1524 <int>, new_sn_f2534 <int>, new_sn_f3544 <int>, …\n\n\n\n\nwho %>%\n  pivot_longer(\n    cols = new_sp_m014:newrel_f65, \n    names_to = \"key\", \n    values_to = \"cases\", \n    values_drop_na = TRUE\n  ) %>% \n  mutate(\n    key = stringr::str_replace(key, \"newrel\", \"new_rel\")\n  ) %>%\n  separate(key, c(\"new\", \"var\", \"sexage\")) %>% \n  select(-new, -iso2, -iso3) %>% \n  separate(sexage, c(\"sex\", \"age\"), sep = 1)\n\n\n\n\n#> # A tibble: 76,046 × 6\n#>    country      year var   sex   age   cases\n#>    <chr>       <int> <chr> <chr> <chr> <int>\n#>  1 Afghanistan  1997 sp    m     014       0\n#>  2 Afghanistan  1997 sp    m     1524     10\n#>  3 Afghanistan  1997 sp    m     2534      6\n#>  4 Afghanistan  1997 sp    m     3544      3\n#>  5 Afghanistan  1997 sp    m     4554      5\n#>  6 Afghanistan  1997 sp    m     5564      2\n#>  7 Afghanistan  1997 sp    m     65        0\n#>  8 Afghanistan  1997 sp    f     014       5\n#>  9 Afghanistan  1997 sp    f     1524     38\n#> 10 Afghanistan  1997 sp    f     2534     36\n#> # … with 76,036 more rows"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/03-solution.html",
-    "href": "slideshow/202210-hongik-v2/03-solution.html",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "",
-    "text": "R\n\n\n\n\n\n파이썬\n\n\n\n\n\n\n\nQuarto: R\n\n\n\n\n\nQuarto: 파이썬\n\n\n\nFigure 1: 데이터 사이언스 출판 제작 흐름\n\n\n\n\n\n\n유닉스 쉘그래프 문법표 문법애니메이션 문법3D 시각화\n\n\n\n\n\n파이프와 필터\n\n\n\n\n\n\n\n그래프 문법 실무\n\n\n\n\n\n\n\n한국 R 컨퍼런스 - 발표자 사진 포함\n\n\n\n\n\n데이터 과학자의 시각화 - 정적 그래프를 넘어 데항해 시대로 (2018/10/19)\ngganimate Talks\n\n\n\n\n\n\n\n\n\n\nrayshader\n\n\n\n\n\n\n\n\n\n\n데이터ggplotBase R\n\n\n\n\n\n\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✔ ggplot2 3.3.6      ✔ purrr   0.3.4 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.2.1      ✔ stringr 1.4.1 \n✔ readr   2.1.2      ✔ forcats 0.5.2 \n\n\nWarning: package 'tibble' was built under R version 4.2.1\n\n\nWarning: package 'tidyr' was built under R version 4.2.1\n\n\nWarning: package 'dplyr' was built under R version 4.2.1\n\n\nWarning: package 'stringr' was built under R version 4.2.1\n\n\nWarning: package 'forcats' was built under R version 4.2.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\nbill_df <- data.frame(\n  sex = factor(c(\"여성\",\"여성\",\"남성\",\"남성\")),\n  time = factor(c(\"점심\",\"저녁\",\"점심\",\"저녁\"), levels=c(\"점심\",\"저녁\")),\n  total_bill = c(13.53, 16.81, 16.24, 17.42)\n)\n\n\n\n\n\n\nbill_df\n\n   sex time total_bill\n1 여성 점심      13.53\n2 여성 저녁      16.81\n3 남성 점심      16.24\n4 남성 저녁      17.42\n\n\n\n\n\n\n\n\n\n\n\n\n\nbill_df %>% \n  ggplot(aes(x=time, y=total_bill, group=sex, shape=sex, colour=sex)) +\n    geom_line(aes(linetype=sex), size=1) +    \n    geom_point(size=3, fill=\"white\") +        \n    expand_limits(y=0) +                      \n    scale_colour_hue(name=\"결재자 성별\", l=30) +\n    scale_shape_manual(name=\"결재자 성별\", values=c(22,21)) +\n    scale_linetype_discrete(name=\"결재자 성별\") +\n    xlab(\"점심, 석식\") + ylab(\"팁(Tip)\") +\n    ggtitle(\"식사 결재 평균 팁\") +    \n    theme_bw() +\n    theme(legend.position=c(.7, .4))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbill_mat <- matrix( bill_df$total_bill,\n                   nrow = 2,\n                   byrow=TRUE,\n                   dimnames = list(c(\"여성\", \"남성\"), c(\"점심\", \"저녁\"))\n                   )\n\nmf_col <- c(\"#3CC3BD\", \"#FD8210\")\nbarplot(bill_mat, beside = TRUE, border=NA, col=mf_col)\nlegend(\"topleft\", row.names(bill_mat), pch=15, col=mf_col)\n\n\npar(cex=1.2, cex.axis=1.1)\nmatplot(bill_mat, type=\"b\", lty=1, pch=19, col=mf_col,\n    cex=1.5, lwd=3, las=1, bty=\"n\", xaxt=\"n\",\n    xlim=c(0.7, 2.2), ylim=c(12,18), ylab=\"\",\n    main=\"식사 결재 평균 팁\", yaxt=\"n\")\naxis(2, at=axTicks(2), labels=sprintf(\"$%s\", axTicks(2)),\n    las=1, cex.axis=0.8, col=NA, line = -0.5)\ngrid(NA, NULL, lty=3, lwd=1, col=\"#000000\")\nabline(v=c(1,2), lty=3, lwd=1, col=\"#000000\")\nmtext(\"점심\", side=1, at=1)\nmtext(\"저녁\", side=1, at=2)\ntext(1.5, 17.3, \"남성\", srt=8, font=3)\ntext(1.5, 15.1, \"여성\", srt=33, font=3)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 가공dplyr RBase RSQL파이썬\n\n\n\n날짜와 시간별로 총 빈도수와 출발연착 평균 시간을 구한다. 단, 총빈도수가 10 회 미만인 것은 제외하고 출발연착 시간의 결측값을 제거하고 계산한다.\n\n\nflights 데이터프레임에서\n출발 연착시간(dep_delay) 칼럼에서 결측값이 없는 (!is.na()) 행을 필터링 하고\n날짜별(date), 시간별(hour) 그룹을 묶어\n평균 출발 연착시간을 계산하고 총빈도수 총계를 내고\n총빈도수가 10회 이상인 날짜와 시간을 찾아내시오\n\n\n\n\nhourly_delay <- flights %>%  \n  filter(!is.na(dep_delay)) %>% \n  group_by(date, hour) %>% \n  summarise(delay = mean(dep_delay), n = n()) %>%  \n  filter(n > 10) \n\n\n\n\nhourly_delay <- filter(   \n    summarise(   \n        group_by(   \n             filter(   \n                 flights,    \n                 !is.na(dep_delay)   \n             ),    \n             date, hour   \n        ),    \n    delay = mean(dep_delay),    \n         n = n()   \n    ),    \n    n > 10   \n)\n\n\n\n\nSELECT \"date\", \"hour\", \"delay\", \"n\"\nFROM (\n    SELECT \"date\", \"hour\",\n        AVG(\"dep_delay\") AS \"delay\",\n        COUNT() AS \"n\"\n    FROM \"flights\"\n    WHERE NOT(\"dep_delay\" IS NULL)\n    GROUP BY \"date\", \"hour\"\n) AS \"_W1\"\nWHERE \"n\" > 10.0\n\n\n\n\nflights[['date','hour','dep_delay']]\n...\n\n\n\n\n\n\n\n\n정돈된 데이터사례 - 결핵 데이터사례 - Messy 데이터사례 - 코드사례 - Tidy 데이터\n\n\n\n\n\n\n\n\nWHO 결핵 원데이터\nWHO 에서 년도별, 국가별, 연령별, 성별, 진단방법별 결핵 발병사례 조사 통계 데이터\n진단방법\n\nrel stands for cases of relapse\nep stands for cases of extrapulmonary TB\nsn stands for cases of pulmonary TB that could not be diagnosed by a pulmonary smear (smear negative)\nsp stands for cases of pulmonary TB that could be diagnosed by a pulmonary smear (smear positive)\n\n연령\n\n014 = 0 – 14 years old\n1524 = 15 – 24 years old\n2534 = 25 – 34 years old\n3544 = 35 – 44 years old\n4554 = 45 – 54 years old\n5564 = 55 – 64 years old\n65 = 65 or older\n\n성별\n\nmales (m)\nfemales (f)\n\n\n\n\n\nlibrary(tidyverse)\ntidyr::who \n\n# A tibble: 7,240 × 60\n   country     iso2  iso3   year new_s…¹ new_s…² new_s…³ new_s…⁴ new_s…⁵ new_s…⁶\n   <chr>       <chr> <chr> <int>   <int>   <int>   <int>   <int>   <int>   <int>\n 1 Afghanistan AF    AFG    1980      NA      NA      NA      NA      NA      NA\n 2 Afghanistan AF    AFG    1981      NA      NA      NA      NA      NA      NA\n 3 Afghanistan AF    AFG    1982      NA      NA      NA      NA      NA      NA\n 4 Afghanistan AF    AFG    1983      NA      NA      NA      NA      NA      NA\n 5 Afghanistan AF    AFG    1984      NA      NA      NA      NA      NA      NA\n 6 Afghanistan AF    AFG    1985      NA      NA      NA      NA      NA      NA\n 7 Afghanistan AF    AFG    1986      NA      NA      NA      NA      NA      NA\n 8 Afghanistan AF    AFG    1987      NA      NA      NA      NA      NA      NA\n 9 Afghanistan AF    AFG    1988      NA      NA      NA      NA      NA      NA\n10 Afghanistan AF    AFG    1989      NA      NA      NA      NA      NA      NA\n# … with 7,230 more rows, 50 more variables: new_sp_m65 <int>,\n#   new_sp_f014 <int>, new_sp_f1524 <int>, new_sp_f2534 <int>,\n#   new_sp_f3544 <int>, new_sp_f4554 <int>, new_sp_f5564 <int>,\n#   new_sp_f65 <int>, new_sn_m014 <int>, new_sn_m1524 <int>,\n#   new_sn_m2534 <int>, new_sn_m3544 <int>, new_sn_m4554 <int>,\n#   new_sn_m5564 <int>, new_sn_m65 <int>, new_sn_f014 <int>,\n#   new_sn_f1524 <int>, new_sn_f2534 <int>, new_sn_f3544 <int>, …\n\n\n\n\n\nwho %>%\n  pivot_longer(\n    cols = new_sp_m014:newrel_f65, \n    names_to = \"key\", \n    values_to = \"cases\", \n    values_drop_na = TRUE\n  ) %>% \n  mutate(\n    key = stringr::str_replace(key, \"newrel\", \"new_rel\")\n  ) %>%\n  separate(key, c(\"new\", \"var\", \"sexage\")) %>% \n  select(-new, -iso2, -iso3) %>% \n  separate(sexage, c(\"sex\", \"age\"), sep = 1)\n\n\n\n\n\n# A tibble: 76,046 × 6\n   country      year var   sex   age   cases\n   <chr>       <int> <chr> <chr> <chr> <int>\n 1 Afghanistan  1997 sp    m     014       0\n 2 Afghanistan  1997 sp    m     1524     10\n 3 Afghanistan  1997 sp    m     2534      6\n 4 Afghanistan  1997 sp    m     3544      3\n 5 Afghanistan  1997 sp    m     4554      5\n 6 Afghanistan  1997 sp    m     5564      2\n 7 Afghanistan  1997 sp    m     65        0\n 8 Afghanistan  1997 sp    f     014       5\n 9 Afghanistan  1997 sp    f     1524     38\n10 Afghanistan  1997 sp    f     2534     36\n# … with 76,036 more rows"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#r",
-    "href": "slideshow/202210-hongik-v2/index.html#r",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "R",
-    "text": "R\n\n\nR 코드\nR 스크립트\nLaTeX + R\nIDE\nPosit\n과학기술 SW\n재현성\n재현성 상세\nCompendium\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n\n참여: 방법론을 결정하는데 참여할 수 있나?\n\n\n\n\n\n\n\n\n\n\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. (Community and Scriberia 2022) \n\n\n\n\n\n\n\n(Peng 2011)\n\n\n\n\n\n\n(Marwick, Boettiger, and Mullen 2018)"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#참고문헌",
-    "href": "slideshow/202210-hongik-v2/index.html#참고문헌",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "참고문헌",
-    "text": "참고문헌\n\n\nCommunity, The Turing Way, and Scriberia. 2022. “Illustrations from the Turing Way: Shared Under CC-BY 4.0 for Reuse.” Zenodo. https://doi.org/10.5281/ZENODO.3332807.\n\n\nFarley, Dave. 2020. “Software Engineering - Development in 100 Years Time.” https://www.youtube.com/watch?v=tk6Isedq3GA.\n\n\nMartin, Trevor, and A Majidian. 2011. “Beyond the Known Unknowns-Finding Fuzzy Concepts for Creative Knowledge Discovery.” In World Conference on Soft Computing, San Francisco.\n\n\nMarwick, Ben, Carl Boettiger, and Lincoln Mullen. 2018. “Packaging Data Analytical Work Reproducibly Using r (and Friends).” The American Statistician 72 (1): 80–88. https://doi.org/10.1080/00031305.2017.1375986.\n\n\nPeng, Roger D. 2011. “Reproducible Research in Computational Science.” Science 334 (6060): 1226–27. https://doi.org/10.1126/science.1213847."
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/reference.html",
-    "href": "slideshow/202210-hongik-v2/reference.html",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "",
-    "text": "::: {#refs} :::"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#컴퓨터",
-    "href": "slideshow/202210-hongik-v2/index.html#컴퓨터",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "컴퓨터",
-    "text": "컴퓨터\n\n\n윈텔 아키텍처\n과학기술 컴퓨팅\n소프트웨어 개발\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: 마이크로소프트 + 인텔 아키텍처\n\n\n\n\n\n\n\n\n추상화\n\n\n\n\n자동화\n\n\n\n\n과학적 방법론\n\n\n\nFigure 3: 과학기술 방법론\n\n\n\n\n\n\n\n\n프로그래밍 언어\n\n\n\n\n프레임워크\n\n\n\n\n프로그래밍 패러다임\n\n\n\n\n\n\n엔지니어링\n\n\n\nFigure 4: ?(caption)\n\n\n\n\n\n:::\n\n\n\n한국 R 사용자회"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/05-rstudio.html",
-    "href": "slideshow/202210-hongik-v2/05-rstudio.html",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "",
-    "text": "R 코드R 스크립트LaTeX + RIDEPosit과학기술 SW재현성재현성 상세Compendium\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n재현성: 다른 사람 저작 소프트웨어를 내가 실행할 수 있나?\n회복성: 소프트웨어가 망하게 되면 대안은 있는가?\n참여: 방법론을 결정하는데 참여할 수 있나?\n\n\n\n\n\n\n\n\n\n\n\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. [@turing-2022] \n\n\n\n\n\n\n\n\n[@Peng2011]\n\n\n\n\n\n\n\n[@Marwick2018]"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#윈텔-아키텍처",
-    "href": "slideshow/202210-hongik-v2/index.html#윈텔-아키텍처",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "윈텔 아키텍처",
-    "text": "윈텔 아키텍처\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: 마이크로소프트 + 인텔 아키텍처"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#과학기술-컴퓨팅",
-    "href": "slideshow/202210-hongik-v2/index.html#과학기술-컴퓨팅",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "과학기술 컴퓨팅",
-    "text": "과학기술 컴퓨팅\n\n\n\n\n추상화\n\n\n\n\n자동화\n\n\n\n\n과학적 방법론\n\n\n\nFigure 7: 과학기술 방법론"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#소프트웨어-개발",
-    "href": "slideshow/202210-hongik-v2/index.html#소프트웨어-개발",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "소프트웨어 개발",
-    "text": "소프트웨어 개발\n\n\n\n\n프로그래밍 언어\n\n\n\n\n프레임워크\n\n\n\n\n프로그래밍 패러다임\n\n\n\nFigure 4: ?(caption)"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#엔지니어링",
-    "href": "slideshow/202210-hongik-v2/index.html#엔지니어링",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "엔지니어링",
-    "text": "엔지니어링\n\n\n\n\n\n과학적 방법론\n\n\n\n\n\n\n반복: iteration \n\n\n\n\n\n피드백: feedback \n\n\n\n\n\n점진적: incremental \n\n\n\n\n\n실험: experimental \n\n\n\n\n\n경험적: empirical"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#코딩",
-    "href": "slideshow/202210-hongik-v2/index.html#코딩",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "코딩",
-    "text": "코딩\n\n\n\n\n\n프로그래밍 언어\n\n\n\n\n프레임워크\n\n\n\n\n프로그래밍 패러다임\n\n\n\nFigure 8: ?(caption)"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#복잡성-가치",
-    "href": "slideshow/202210-hongik-v2/index.html#복잡성-가치",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "복잡성 ↑ → 가치 ↑",
-    "text": "복잡성 ↑ → 가치 ↑\n\n\n\nTidyverse API 원칙\n\n\n기존 자료구조를 재사용: Reuse existing data structures.\n\n\n\n파이프 연산자로 간단한 함수를 조합: Compose simple functions with the pipe.\n\n\n\n함수형 프로그래밍을 적극 사용: Embrace functional programming.\n\n\n\n기계가 아닌 인간을 위한 설계: Design for humans.\n\n\n\n\n설계와 디자인 원칙 (Farley 2020)\n\n\n\n\n모듈화: modularity \n\n\n\n\n\n정보 은닉: information hiding \n\n\n\n\n\n관심사 분리: separation of concerns \n\n\n\n\n\n낮은 결합도: loosely coupling \n\n\n\n\n\n높은 응집도: high cohesion"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/index.html#데이터-과학-세상",
-    "href": "slideshow/202210-hongik-v2/index.html#데이터-과학-세상",
-    "title": "데이터 사이언스와 디자인\n",
-    "section": "데이터 과학 세상",
-    "text": "데이터 과학 세상"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/04-design.html",
-    "href": "slideshow/202210-hongik-v2/04-design.html",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "",
-    "text": "Figure 1: 마이크로소프트 + 인텔 아키텍처\n\n\n\n\n\n\n\n\n\n\n\n추상화\n\n\n\n\n\n자동화\n\n\n\n\n\n과학적 방법론\n\n\n\nFigure 2: 과학기술 방법론\n\n\n\n\n\n\n\n\n\n\n\n\n프로그래밍 언어\n\n\n\n\n\n프레임워크\n\n\n\n\n\n프로그래밍 패러다임\n\n\n\nFigure 3: ?(caption)\n\n\n\n\n\n\n\n\n\n\n\n과학적 방법론"
-  },
-  {
-    "objectID": "slideshow/202210-hongik-v2/06-portfolio.html",
-    "href": "slideshow/202210-hongik-v2/06-portfolio.html",
-    "title": "발표자료 | 한국 R 사용자회",
-    "section": "",
-    "text": "사례\n\n한국 R 사용자회\n한국 R 컨퍼런스\n코로나 19 프로젝트"
-  },
-  {
-    "objectID": "slideshow/202211-meetup/index.html#과거",
-    "href": "slideshow/202211-meetup/index.html#과거",
-    "title": "로우코드 Shiny 앱 개발",
-    "section": "과거",
-    "text": "과거"
-  },
-  {
-    "objectID": "slideshow/202211-meetup/index.html#orange3",
-    "href": "slideshow/202211-meetup/index.html#orange3",
-    "title": "로우코드 Shiny 앱 개발",
-    "section": "Orange3",
-    "text": "Orange3"
-  },
-  {
     "objectID": "slideshow/202211-meetup/index.html#통계-패키지-진화",
     "href": "slideshow/202211-meetup/index.html#통계-패키지-진화",
     "title": "로우코드 Shiny 앱 개발",
@@ -733,6 +558,13 @@
     "title": "로우코드 Shiny 앱 개발",
     "section": "통계 코딩 도구 진화",
     "text": "통계 코딩 도구 진화"
+  },
+  {
+    "objectID": "slideshow/202211-meetup/index.html#why-quarto",
+    "href": "slideshow/202211-meetup/index.html#why-quarto",
+    "title": "로우코드 Shiny 앱 개발",
+    "section": "why Quarto",
+    "text": "why Quarto\n\n\n2012년\n2021년"
   },
   {
     "objectID": "slideshow/202211-meetup/index.html#소프트웨어-로우-코드-개발",
@@ -749,34 +581,6 @@
     "text": "R 로우 코드 개발\n\n\n{designer}\n{shinyuieditor}\n대쉬보드\nggplot\neasystats\ndlookr\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://rstudio.github.io/shinyuieditor/\n\n\n\n\n\n\nhttps://github.com/petergandenberger/dashboard-builder\n\n\n\n\n\n\nhttps://github.com/dreamRs/esquisse\n\n\n\n\n\n\nhttps://easystats.github.io/easystats/index.html\n\n\n \nhttps://cran.r-project.org/web/packages/dlookr/"
   },
   {
-    "objectID": "slideshow/202211-meetup/index.html#ui-편집",
-    "href": "slideshow/202211-meetup/index.html#ui-편집",
-    "title": "로우코드 Shiny 앱 개발",
-    "section": "UI 편집",
-    "text": "UI 편집\n\nhttps://rstudio.github.io/shinyuieditor/"
-  },
-  {
-    "objectID": "slideshow/202211-meetup/index.html#대쉬보드",
-    "href": "slideshow/202211-meetup/index.html#대쉬보드",
-    "title": "로우코드 Shiny 앱 개발",
-    "section": "대쉬보드",
-    "text": "대쉬보드\n\nhttps://github.com/petergandenberger/dashboard-builder"
-  },
-  {
-    "objectID": "slideshow/202211-meetup/index.html#대쉬보드-1",
-    "href": "slideshow/202211-meetup/index.html#대쉬보드-1",
-    "title": "로우코드 Shiny 앱 개발",
-    "section": "대쉬보드",
-    "text": "대쉬보드\n\n\n\n한국 R 사용자회"
-  },
-  {
-    "objectID": "slideshow/202211-meetup/index.html#ggplot",
-    "href": "slideshow/202211-meetup/index.html#ggplot",
-    "title": "로우코드 Shiny 앱 개발",
-    "section": "ggplot",
-    "text": "ggplot"
-  },
-  {
     "objectID": "slideshow/202211-meetup/index.html#shiny-ui-add-on-ui-addon",
     "href": "slideshow/202211-meetup/index.html#shiny-ui-add-on-ui-addon",
     "title": "로우코드 Shiny 앱 개발",
@@ -784,39 +588,11 @@
     "text": "Shiny UI Add-on 1\n\n\n\nshinyFiles\n{shinycssloaders}\n{waiter}\n{rclipboard} & {tippy}\n{shinyglide}\n{sortable}\n{DataEditR}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMandy Norrbo, “Top 5 Shiny UI Add-On Packages”"
   },
   {
-    "objectID": "slideshow/202211-meetup/index.html#r-tidyverse",
-    "href": "slideshow/202211-meetup/index.html#r-tidyverse",
-    "title": "로우코드 Shiny 앱 개발",
-    "section": "R / Tidyverse",
-    "text": "R / Tidyverse\n\n\n{unravel}\n{searcher}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회"
-  },
-  {
-    "objectID": "slideshow/202211-meetup/index.html#rtidyverse",
-    "href": "slideshow/202211-meetup/index.html#rtidyverse",
-    "title": "로우코드 Shiny 앱 개발",
-    "section": "R/Tidyverse",
-    "text": "R/Tidyverse\n\n\n{unravel}\n{searcher}\n{carbonate}\n{asciicast}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회"
-  },
-  {
     "objectID": "slideshow/202211-meetup/index.html#rtidyverse-pkg",
     "href": "slideshow/202211-meetup/index.html#rtidyverse-pkg",
     "title": "로우코드 Shiny 앱 개발",
     "section": "R/Tidyverse 1\n",
     "text": "R/Tidyverse 1\n\n\n\n{unravel}\n{searcher}\n{carbonate}\n{asciicast}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSam Parmar, “11 R packages I’ve enjoyed using in 2022”"
-  },
-  {
-    "objectID": "slideshow/202211-meetup/index.html#quarto",
-    "href": "slideshow/202211-meetup/index.html#quarto",
-    "title": "로우코드 Shiny 앱 개발",
-    "section": "Quarto",
-    "text": "Quarto\n\n\n2012년\n2021년"
-  },
-  {
-    "objectID": "slideshow/202211-meetup/index.html#why-quarto",
-    "href": "slideshow/202211-meetup/index.html#why-quarto",
-    "title": "로우코드 Shiny 앱 개발",
-    "section": "why Quarto",
-    "text": "why Quarto\n\n\n2012년\n2021년"
   },
   {
     "objectID": "slideshow/202212-dreamtalk/index.html#통계-패키지-진화",
@@ -833,60 +609,11 @@
     "text": "통계 코딩 도구 진화"
   },
   {
-    "objectID": "slideshow/202212-dreamtalk/index.html#why-quarto",
-    "href": "slideshow/202212-dreamtalk/index.html#why-quarto",
+    "objectID": "slideshow/202212-dreamtalk/index.html#년-10월",
+    "href": "slideshow/202212-dreamtalk/index.html#년-10월",
     "title": "데이터 문해력과 디지털 글쓰기",
-    "section": "why Quarto",
-    "text": "why Quarto\n\n\n2012년\n2021년"
-  },
-  {
-    "objectID": "slideshow/202212-dreamtalk/index.html#소프트웨어-로우-코드-개발",
-    "href": "slideshow/202212-dreamtalk/index.html#소프트웨어-로우-코드-개발",
-    "title": "데이터 문해력과 디지털 글쓰기",
-    "section": "소프트웨어 로우 코드 개발",
-    "text": "소프트웨어 로우 코드 개발"
-  },
-  {
-    "objectID": "slideshow/202212-dreamtalk/index.html#r-로우-코드-개발",
-    "href": "slideshow/202212-dreamtalk/index.html#r-로우-코드-개발",
-    "title": "데이터 문해력과 디지털 글쓰기",
-    "section": "R 로우 코드 개발",
-    "text": "R 로우 코드 개발\n\n\n{designer}\n{shinyuieditor}\n대쉬보드\nggplot\neasystats\ndlookr\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://rstudio.github.io/shinyuieditor/\n\n\n\n\n\n\nhttps://github.com/petergandenberger/dashboard-builder\n\n\n\n\n\n\nhttps://github.com/dreamRs/esquisse\n\n\n\n\n\n\nhttps://easystats.github.io/easystats/index.html\n\n\n \nhttps://cran.r-project.org/web/packages/dlookr/"
-  },
-  {
-    "objectID": "slideshow/202212-dreamtalk/index.html#shiny-ui-add-on-ui-addon",
-    "href": "slideshow/202212-dreamtalk/index.html#shiny-ui-add-on-ui-addon",
-    "title": "데이터 문해력과 디지털 글쓰기",
-    "section": "Shiny UI Add-on 1\n",
-    "text": "Shiny UI Add-on 1\n\n\n\nshinyFiles\n{shinycssloaders}\n{waiter}\n{rclipboard} & {tippy}\n{shinyglide}\n{sortable}\n{DataEditR}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMandy Norrbo, “Top 5 Shiny UI Add-On Packages”"
-  },
-  {
-    "objectID": "slideshow/202212-dreamtalk/index.html#rtidyverse-pkg",
-    "href": "slideshow/202212-dreamtalk/index.html#rtidyverse-pkg",
-    "title": "데이터 문해력과 디지털 글쓰기",
-    "section": "R/Tidyverse 1\n",
-    "text": "R/Tidyverse 1\n\n\n\n{unravel}\n{searcher}\n{carbonate}\n{asciicast}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSam Parmar, “11 R packages I’ve enjoyed using in 2022”"
-  },
-  {
-    "objectID": "slideshow/202212-dreamtalk/index.html#통계의-역사",
-    "href": "slideshow/202212-dreamtalk/index.html#통계의-역사",
-    "title": "데이터 문해력과 디지털 글쓰기",
-    "section": "통계의 역사",
-    "text": "통계의 역사"
-  },
-  {
-    "objectID": "slideshow/202212-dreamtalk/index.html#section",
-    "href": "slideshow/202212-dreamtalk/index.html#section",
-    "title": "데이터 문해력과 디지털 글쓰기",
-    "section": "",
-    "text": "한국 R 사용자회"
-  },
-  {
-    "objectID": "slideshow/202212-dreamtalk/index.html#년",
-    "href": "slideshow/202212-dreamtalk/index.html#년",
-    "title": "데이터 문해력과 디지털 글쓰기",
-    "section": "2016년",
-    "text": "2016년"
+    "section": "2016년 10월",
+    "text": "2016년 10월"
   },
   {
     "objectID": "slideshow/202212-dreamtalk/index.html#년-5월",
@@ -922,12 +649,5 @@
     "title": "데이터 문해력과 디지털 글쓰기",
     "section": "2022년 11월",
     "text": "2022년 11월"
-  },
-  {
-    "objectID": "slideshow/202212-dreamtalk/index.html#년-10월",
-    "href": "slideshow/202212-dreamtalk/index.html#년-10월",
-    "title": "데이터 문해력과 디지털 글쓰기",
-    "section": "2016년 10월",
-    "text": "2016년 10월"
   }
 ]

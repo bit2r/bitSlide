@@ -1,143 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://r2bit.com/slides/index.html</loc>
-    <lastmod>2022-09-04T08:26:46.965Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/slides/slideshow/202210-hongik/data-science.html</loc>
-    <lastmod>2022-09-04T08:26:47.800Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/slides/slideshow/202210-hongik/end-slide.html</loc>
-    <lastmod>2022-09-04T08:26:48.488Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/slides/slideshow/202210-hongik/index.html</loc>
-    <lastmod>2022-09-04T08:27:01.089Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/slides/slideshow/202210-hongik/problem.html</loc>
-    <lastmod>2022-09-04T08:27:15.769Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/slides/slideshow/202210-hongik/solution.html</loc>
-    <lastmod>2022-09-04T08:27:16.456Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/slides/slideshow/202210-hongik/title-slide.html</loc>
-    <lastmod>2022-09-04T08:27:22.163Z</lastmod>
-  </url>
-  <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2022-11-18T12:55:59.908Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/index.html</loc>
-    <lastmod>2022-11-18T12:38:55.690Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/interactive/old-faithful.html</loc>
-    <lastmod>2022-09-11T06:52:55.428Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/interactive/old-faithful-backup.html</loc>
-    <lastmod>2022-09-11T06:51:38.846Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/interactive/palmer-penguins.html</loc>
-    <lastmod>2022-09-11T07:45:46.836Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/interactive/palmer-penguins-korean.html</loc>
-    <lastmod>2022-09-11T07:38:56.584Z</lastmod>
+    <lastmod>2022-11-19T02:03:20.520Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/interactive/climate-crisis.html</loc>
-    <lastmod>2022-09-11T09:12:47.498Z</lastmod>
+    <lastmod>2022-11-19T02:03:21.676Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/rstudio-history.html</loc>
-    <lastmod>2022-11-18T12:39:05.567Z</lastmod>
+    <loc>https://r2bit.com/bitSlide/interactive/old-faithful-backup.html</loc>
+    <lastmod>2022-11-19T02:03:22.294Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/problem.html</loc>
-    <lastmod>2022-11-18T12:39:04.068Z</lastmod>
+    <loc>https://r2bit.com/bitSlide/interactive/palmer-penguins-korean.html</loc>
+    <lastmod>2022-11-19T02:03:22.989Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/data-science.html</loc>
-    <lastmod>2022-11-18T12:38:44.147Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/references.html</loc>
-    <lastmod>2022-11-18T12:39:04.775Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/index.html</loc>
-    <lastmod>2022-11-18T12:38:42.268Z</lastmod>
+    <loc>https://r2bit.com/bitSlide/interactive/palmer-penguins.html</loc>
+    <lastmod>2022-11-19T02:03:23.609Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/01-data-science.html</loc>
-    <lastmod>2022-11-18T12:38:17.396Z</lastmod>
+    <lastmod>2022-11-19T02:03:23.916Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/02-problem.html</loc>
-    <lastmod>2022-11-18T12:38:18.172Z</lastmod>
+    <lastmod>2022-11-19T02:03:24.244Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/03-solution.html</loc>
-    <lastmod>2022-11-18T12:38:26.753Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/reference.html</loc>
-    <lastmod>2022-11-18T12:38:43.435Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/05-rstudio.html</loc>
-    <lastmod>2022-11-18T12:38:28.257Z</lastmod>
+    <lastmod>2022-11-19T02:03:24.845Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/04-design.html</loc>
-    <lastmod>2022-11-18T12:38:27.530Z</lastmod>
+    <lastmod>2022-11-19T02:03:25.193Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/05-rstudio.html</loc>
+    <lastmod>2022-11-19T02:03:25.529Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/06-portfolio.html</loc>
-    <lastmod>2022-11-18T12:38:28.952Z</lastmod>
+    <lastmod>2022-11-19T02:03:25.826Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/10-end-slide.html</loc>
-    <lastmod>2022-11-18T12:38:29.690Z</lastmod>
+    <lastmod>2022-11-19T02:03:26.134Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/2022-11-meetup/index.html</loc>
-    <lastmod>2022-10-22T00:34:49.870Z</lastmod>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/index.html</loc>
+    <lastmod>2022-11-19T02:03:27.939Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202211-meetup/index.html</loc>
-    <lastmod>2022-11-18T12:48:35.964Z</lastmod>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/reference.html</loc>
+    <lastmod>2022-11-19T02:03:28.324Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/bitSlide/shorty/example.html</loc>
-    <lastmod>2022-10-23T02:51:59.030Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202211-meetup/reference.html</loc>
-    <lastmod>2022-10-23T03:33:26.911Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202212-dreamtalk/index.html</loc>
-    <lastmod>2022-11-18T12:56:58.777Z</lastmod>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/data-science.html</loc>
+    <lastmod>2022-11-19T02:03:28.628Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/end-slide.html</loc>
-    <lastmod>2022-11-18T12:38:44.859Z</lastmod>
+    <lastmod>2022-11-19T02:03:28.927Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/index.html</loc>
+    <lastmod>2022-11-19T02:03:30.521Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/problem.html</loc>
+    <lastmod>2022-11-19T02:03:31.199Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/references.html</loc>
+    <lastmod>2022-11-19T02:03:31.570Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/rstudio-history.html</loc>
+    <lastmod>2022-11-19T02:03:31.907Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/solution.html</loc>
-    <lastmod>2022-11-18T12:39:06.263Z</lastmod>
+    <lastmod>2022-11-19T02:03:32.221Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/title-slide.html</loc>
-    <lastmod>2022-11-18T12:39:08.613Z</lastmod>
+    <lastmod>2022-11-19T02:03:32.549Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202211-meetup/index.html</loc>
+    <lastmod>2022-11-19T02:03:33.563Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202212-dreamtalk/index.html</loc>
+    <lastmod>2022-11-19T02:03:34.423Z</lastmod>
   </url>
 </urlset>
