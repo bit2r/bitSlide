@@ -50,4 +50,18 @@
     - 과학창의재단
     - 드림톡
 
+
+- title: "데이터 문해력과 디지털 글쓰기"
+  subtitle: "빛에듀(Bit-Edu)"
+  author: "이광춘"
+  date: 2022-12-02
+  image: slideshow/202212-youtube/fig/05_future_devops.gif
+  path: slideshow/202212-youtube/index.qmd
+  categories:
+    - 디지털 글쓰기
+    - 마크다운
+    - 빛에듀
+    - Bit-Edu
+    - 워드프로세서
+
 # External slide decks

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "발표자료",
     "section": "",
-    "text": "통계(데이터 과학), 기계학습, 딥러닝 관련 발표자료와 앱 공개를 통해 통계 대중화와 디지털 불평등 해소를 위해 함께 노력하고 있습니다.\n\n\n한국 R 사용자회\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 문해력과 디지털 글쓰기\n\n\n인공지능을 지탱하는 기본기\n\n\n\n디지털 글쓰기\n\n\n데이터 문해력\n\n\n백암중\n\n\n과학창의재단\n\n\n드림톡\n\n\n\n\n2022 년 12 월 05일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n로우코드 Shiny 앱 개발\n\n\nShiny 앱 개발은 로우코드 개발(?)\n\n\n\nquarto\n\n\nlow code platform\n\n\nshiny\n\n\n\n\n2022 년 11 월 05일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 사이언스에서 디자인과 아키텍쳐의 중요성\n\n\nEmerging Creativity Workshop\n\n\n\nrevealjs\n\n\n\n\n2022 년 10 월 11일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n기후 위기: CO2\n\n\nNOAA 하와이섬에서 측정한 CO2 추세를 면밀히 살펴보자.\n\n\n\nobservable js\n\n\n\n\n2022 년 09 월 12일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n파머 펭귄\n\n\n파머 펭귄 데이터로 Observables JS 인터랙티브 문서의 가능성과 한계\n\n\n\nobservable js\n\n\n\n\n2022 년 09 월 11일\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "통계(데이터 과학), 기계학습, 딥러닝 관련 발표자료와 앱 공개를 통해 통계 대중화와 디지털 불평등 해소를 위해 함께 노력하고 있습니다.\n\n\n한국 R 사용자회\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 문해력과 디지털 글쓰기\n\n\n인공지능을 지탱하는 기본기\n\n\n\n디지털 글쓰기\n\n\n데이터 문해력\n\n\n백암중\n\n\n과학창의재단\n\n\n드림톡\n\n\n\n\n2022 년 12 월 05일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 문해력과 디지털 글쓰기\n\n\n빛에듀(Bit-Edu)\n\n\n\n디지털 글쓰기\n\n\n마크다운\n\n\n빛에듀\n\n\nBit-Edu\n\n\n워드프로세서\n\n\n\n\n2022 년 12 월 02일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n로우코드 Shiny 앱 개발\n\n\nShiny 앱 개발은 로우코드 개발(?)\n\n\n\nquarto\n\n\nlow code platform\n\n\nshiny\n\n\n\n\n2022 년 11 월 05일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 사이언스에서 디자인과 아키텍쳐의 중요성\n\n\nEmerging Creativity Workshop\n\n\n\nrevealjs\n\n\n\n\n2022 년 10 월 11일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n기후 위기: CO2\n\n\nNOAA 하와이섬에서 측정한 CO2 추세를 면밀히 살펴보자.\n\n\n\nobservable js\n\n\n\n\n2022 년 09 월 12일\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n파머 펭귄\n\n\n파머 펭귄 데이터로 Observables JS 인터랙티브 문서의 가능성과 한계\n\n\n\nobservable js\n\n\n\n\n2022 년 09 월 11일\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "interactive/climate-crisis.html",
@@ -649,5 +649,61 @@
     "title": "데이터 문해력과 디지털 글쓰기",
     "section": "2022년 11월",
     "text": "2022년 11월"
+  },
+  {
+    "objectID": "slideshow/202212-youtube/index.html#글쓰기-패러다임",
+    "href": "slideshow/202212-youtube/index.html#글쓰기-패러다임",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "글쓰기 패러다임",
+    "text": "글쓰기 패러다임"
+  },
+  {
+    "objectID": "slideshow/202212-youtube/index.html#글쓰기-도구",
+    "href": "slideshow/202212-youtube/index.html#글쓰기-도구",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "글쓰기 도구",
+    "text": "글쓰기 도구"
+  },
+  {
+    "objectID": "slideshow/202212-youtube/index.html#문서-결과물",
+    "href": "slideshow/202212-youtube/index.html#문서-결과물",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "문서 결과물",
+    "text": "문서 결과물"
+  },
+  {
+    "objectID": "slideshow/202212-youtube/index.html#요약",
+    "href": "slideshow/202212-youtube/index.html#요약",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "요약",
+    "text": "요약"
+  },
+  {
+    "objectID": "slideshow/202212-youtube/index.html#쿼토-quarto",
+    "href": "slideshow/202212-youtube/index.html#쿼토-quarto",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "쿼토 (Quarto)",
+    "text": "쿼토 (Quarto)"
+  },
+  {
+    "objectID": "slideshow/202212-youtube/index.html#문서-복잡성",
+    "href": "slideshow/202212-youtube/index.html#문서-복잡성",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "문서 복잡성",
+    "text": "문서 복잡성"
+  },
+  {
+    "objectID": "slideshow/202212-youtube/index.html#문서-공장",
+    "href": "slideshow/202212-youtube/index.html#문서-공장",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "문서 공장",
+    "text": "문서 공장"
+  },
+  {
+    "objectID": "slideshow/202212-youtube/index.html#문서-저작-미래",
+    "href": "slideshow/202212-youtube/index.html#문서-저작-미래",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "문서 저작 미래",
+    "text": "문서 저작 미래"
   }
 ]

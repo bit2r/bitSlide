@@ -1,0 +1,84 @@
+---
+title: "데이터 문해력과 디지털 글쓰기"
+subtitle: "빛에듀(Bit-Edu)"
+author: "이광춘 / 한국 R 사용자회"
+date: "2022-12-02"
+lang: kr
+format:
+  revealjs: 
+    theme: ["theme/q-theme.scss"]
+    width: 1280
+    height: 720
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: fig/koRea_logo.png
+    footer: "[한국 R 사용자회](https://r2bit.com/)&nbsp;"
+    code-copy: true
+    center-title-slide: true
+    code-link: true
+    code-overflow: wrap
+    highlight-style: a11y
+    smaller: true
+    scrollable: false
+    slide-number: c/t
+    code-tools:
+      source: true
+      toggle: false
+      caption: none
+filters:
+   - lightbox
+lightbox: auto        
+execute: 
+  eval: true
+  echo: true
+  freeze: true  
+editor_options: 
+  chunk_output_type: console
+knitr:
+  opts_chunk: 
+    echo: true
+    collapse: true
+    comment: "#>"
+---
+
+# 현재 상황
+
+## 요약
+
+![](fig/04_now.gif)
+
+## 글쓰기 패러다임
+
+![](fig/data-conference-three-languages.png){fig-align="center"}
+
+## 글쓰기 도구
+
+![](../202210-hongik-v2/fig/markdown-writing.png){fig-align="center"}
+
+## 문서 결과물
+
+![](../202210-hongik-v2/fig/single-sourcing-publishing.jpg){fig-align="center"}
+
+# 도전과 응전
+
+## 쿼토 (Quarto)
+
+![](../202210-hongik-v2/fig/horst_quarto_schematic.png){fig-align="center"}
+
+## 문서 복잡성
+
+![](../202210-hongik-v2/fig/quarto-unification.png){fig-align="center"}
+
+## 문서 공장
+
+![](fig/quarto-factory.gif)
+
+## 문서 저작 미래
+
+<br> 
+<br>
+
+![](fig/05_future_devops.gif){fig-align="center" width="696"}
+
+# {background-image="../202210-hongik-v2/fig/slide-end.png" background-size="contain"}

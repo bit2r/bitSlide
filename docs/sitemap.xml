@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2022-11-19T02:03:20.520Z</lastmod>
+    <lastmod>2022-12-02T08:31:07.794Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/interactive/climate-crisis.html</loc>
@@ -95,5 +95,9 @@
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202212-dreamtalk/index.html</loc>
     <lastmod>2022-11-19T02:03:34.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202212-youtube/index.html</loc>
+    <lastmod>2022-12-02T08:30:54.126Z</lastmod>
   </url>
 </urlset>

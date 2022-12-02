@@ -1,0 +1,18 @@
+{
+  "hash": "39ea51fea84a6a14ddd26f2d7219748f",
+  "result": {
+    "markdown": "---\ntitle: \"데이터 문해력과 디지털 글쓰기\"\nsubtitle: \"빛에듀(Bit-Edu)\"\nauthor: \"이광춘 / 한국 R 사용자회\"\ndate: \"2022-12-02\"\nlang: kr\nformat:\n  revealjs: \n    theme: [\"theme/q-theme.scss\"]\n    width: 1280\n    height: 720\n    chalkboard: \n      buttons: false\n    preview-links: auto\n    logo: fig/koRea_logo.png\n    footer: \"[한국 R 사용자회](https://r2bit.com/)&nbsp;\"\n    code-copy: true\n    center-title-slide: true\n    code-link: true\n    code-overflow: wrap\n    highlight-style: a11y\n    smaller: true\n    scrollable: false\n    slide-number: c/t\n    code-tools:\n      source: true\n      toggle: false\n      caption: none\nfilters:\n   - lightbox\nlightbox: auto        \nexecute: \n  eval: true\n  echo: true\n  freeze: true  \neditor_options: \n  chunk_output_type: console\nknitr:\n  opts_chunk: \n    echo: true\n    collapse: true\n    comment: \"#>\"\n---\n\n\n# 현재 상황\n\n## 요약\n\n![](fig/04_now.gif)\n\n## 글쓰기 패러다임\n\n![](fig/data-conference-three-languages.png){fig-align=\"center\"}\n\n## 글쓰기 도구\n\n![](../202210-hongik-v2/fig/markdown-writing.png){fig-align=\"center\"}\n\n## 문서 결과물\n\n![](../202210-hongik-v2/fig/single-sourcing-publishing.jpg){fig-align=\"center\"}\n\n# 도전과 응전\n\n## 쿼토 (Quarto)\n\n![](../202210-hongik-v2/fig/horst_quarto_schematic.png){fig-align=\"center\"}\n\n## 문서 복잡성\n\n![](../202210-hongik-v2/fig/quarto-unification.png){fig-align=\"center\"}\n\n## 문서 공장\n\n![](fig/quarto-factory.gif)\n\n## 문서 저작 미래\n\n<br> \n<br>\n\n![](fig/05_future_devops.gif){fig-align=\"center\" width=\"696\"}\n\n# {background-image=\"../202210-hongik-v2/fig/slide-end.png\" background-size=\"contain\"}",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\r\n<script>\r\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\r\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\r\n  // slide changes (different for each slide format).\r\n  (function () {\r\n    // dispatch for htmlwidgets\r\n    function fireSlideEnter() {\r\n      const event = window.document.createEvent(\"Event\");\r\n      event.initEvent(\"slideenter\", true, true);\r\n      window.document.dispatchEvent(event);\r\n    }\r\n\r\n    function fireSlideChanged(previousSlide, currentSlide) {\r\n      fireSlideEnter();\r\n\r\n      // dispatch for shiny\r\n      if (window.jQuery) {\r\n        if (previousSlide) {\r\n          window.jQuery(previousSlide).trigger(\"hidden\");\r\n        }\r\n        if (currentSlide) {\r\n          window.jQuery(currentSlide).trigger(\"shown\");\r\n        }\r\n      }\r\n    }\r\n\r\n    // hookup for slidy\r\n    if (window.w3c_slidy) {\r\n      window.w3c_slidy.add_observer(function (slide_num) {\r\n        // slide_num starts at position 1\r\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\r\n      });\r\n    }\r\n\r\n  })();\r\n</script>\r\n\r\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
