@@ -55,7 +55,7 @@
   subtitle: "빛에듀(Bit-Edu)"
   author: "이광춘"
   date: 2022-12-02
-  image: slideshow/202212-youtube/fig/05_future_devops.gif
+  image: slideshow/202212-youtube/fig/quarto_to_go.gif
   path: slideshow/202212-youtube/index.qmd
   categories:
     - 디지털 글쓰기
