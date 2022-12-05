@@ -697,7 +697,7 @@
     "href": "slideshow/202212-youtube/index.html#문서-공장",
     "title": "데이터 문해력과 디지털 글쓰기",
     "section": "문서 공장",
-    "text": "문서 공장"
+    "text": "문서 공장\n\n\nR (.Rmd)\n파이썬 (.ipynb)\n쿼토 (.qmd)\n쿼토 (.qmd)\n\n\n\n\n\nR\n\n\n\n\n\n\n파이썬\n\n\n\n\n\n\nQuarto: R\n\n\n\n\n\n\nQuarto: 파이썬"
   },
   {
     "objectID": "slideshow/202212-youtube/index.html#문서-저작-미래",
@@ -705,5 +705,12 @@
     "title": "데이터 문해력과 디지털 글쓰기",
     "section": "문서 저작 미래",
     "text": "문서 저작 미래"
+  },
+  {
+    "objectID": "slideshow/202212-youtube/index.html#위지윅-컴파일",
+    "href": "slideshow/202212-youtube/index.html#위지윅-컴파일",
+    "title": "데이터 문해력과 디지털 글쓰기",
+    "section": "위지윅 → 컴파일",
+    "text": "위지윅 → 컴파일"
   }
 ]

@@ -1,7 +1,7 @@
 ---
 title: "데이터 문해력과 디지털 글쓰기"
 subtitle: "빛에듀(Bit-Edu)"
-author: "이광춘 / 한국 R 사용자회"
+author: "한국 R 사용자회"
 date: "2022-12-02"
 lang: kr
 format:
@@ -46,7 +46,7 @@ knitr:
 
 ## 요약
 
-![](fig/04_now.gif)
+![](fig/jobshop.gif)
 
 ## 글쓰기 패러다임
 
@@ -60,25 +60,45 @@ knitr:
 
 ![](../202210-hongik-v2/fig/single-sourcing-publishing.jpg){fig-align="center"}
 
-# 도전과 응전
+# 빛에듀(Bit-Edu)
+
+## 위지윅 &rarr; 컴파일
+
+![](../202210-hongik-v2/fig/quarto-unification.png){fig-align="center"}
 
 ## 쿼토 (Quarto)
 
 ![](../202210-hongik-v2/fig/horst_quarto_schematic.png){fig-align="center"}
 
-## 문서 복잡성
-
-![](../202210-hongik-v2/fig/quarto-unification.png){fig-align="center"}
 
 ## 문서 공장
 
-![](fig/quarto-factory.gif)
+::: {.panel-tabset}
+
+### R (.Rmd)
+
+![R](../202210-hongik-v2/fig/quarto_workflow/rmd-knitr.png)
+
+### 파이썬 (.ipynb)
+
+![파이썬](../202210-hongik-v2/fig/quarto_workflow/jupyter-alone.png)
+
+### 쿼토 (.qmd)
+
+![Quarto: R](../202210-hongik-v2/fig/quarto_workflow/qmd-knitr.png)
+
+### 쿼토 (.qmd)
+
+![Quarto: 파이썬](../202210-hongik-v2/fig/quarto_workflow/qmd-jupyter.png)
+
+:::
+
 
 ## 문서 저작 미래
 
 <br> 
 <br>
 
-![](fig/05_future_devops.gif){fig-align="center" width="696"}
+![](fig/quarto_to_go.gif){fig-align="center" width="696"}
 
 # {background-image="../202210-hongik-v2/fig/slide-end.png" background-size="contain"}
