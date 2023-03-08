@@ -1,0 +1,20 @@
+{
+  "hash": "a968b4426cbc3703f9cd0a61d78b2bfc",
+  "result": {
+    "markdown": "---\ntitle: \"Template Insper\"\nsubtitle: \"Feito usando o Quarto\"\nauthor: \"autoria\"\ninstitute: \"Insper\"\ndate: 2022-10-19\nformat: \n  insper-revealjs:\n    self-contained: true\n    footer: |\n      Tema do [Insper](https://insper.edu.br/) para [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Código no [GitHub](https://github.com/padsInsper/quarto-insper-theme).\ndate-format: long\nlang: pt\n---\n\n\n## Objetivos de aprendizagem\n\n1. Objetivo 1\n1. Objetivo 2\n1. Objetivo 3\n\n::: notes\n\nNotas para o speaker\n\n:::\n\n## Dinâmica\n\nInformações extras sobre a aula\n\n## Imagem\n\nExemplo de imagem externa\n\n![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/e30b11d8-cb89-4229-87e5-6dad81e6dcf8_rw_1920.jpg?h=abaa7994e093570cf2aa36408f3e1121){fig-align=\"center\" width=\"800\"}\n\n::: aside\n\nImagem de [Allison Horst](https://allisonhorst.com)\n\n:::\n\n## Código\n\nBloco de código\n\n\n::: {.cell}\n\n```{.r .cell-code}\nvariavel_r <- \"Olá, python!\"\nprint(variavel_r)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"Olá, python!\"\n```\n:::\n:::\n\n\nAgora usando python através do pacote `{reticulate}`:\n\n\n::: {.cell}\n\n```{.python .cell-code}\nprint (r.variavel_r.replace('python', 'R'))\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nOlá, R!\n```\n:::\n:::\n\n\nAgora instale o pacote [`{coresInsper}`](https://padsInsper/coresInsper), rodando\n\n\n::: {.cell}\n\n```{.r .cell-code}\nremotes::install_github(\"padsInsper/coresInsper\")\n```\n:::\n\n\n## Gráfico\n\n\n::: {.cell fig.dpi='300'}\n::: {.cell-output-display}\n![](20230324-kwangmyung_files/figure-revealjs/unnamed-chunk-4-1.png){width=864}\n:::\n:::\n\n\n\n# Título\n\n## Exercício! {background-color=\"#E6E7E8\"}\n\nMudando o fundo da tela\n\n## Resumo\n\n1. Conclusão 1\n1. Conclusão 2\n1. Conclusão 3\n\nEmojis estão liberados! 🎉🎉🎉\n\n# Fim\n",
+    "supporting": [
+      "20230324-kwangmyung_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\r\n<script>\r\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\r\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\r\n  // slide changes (different for each slide format).\r\n  (function () {\r\n    // dispatch for htmlwidgets\r\n    function fireSlideEnter() {\r\n      const event = window.document.createEvent(\"Event\");\r\n      event.initEvent(\"slideenter\", true, true);\r\n      window.document.dispatchEvent(event);\r\n    }\r\n\r\n    function fireSlideChanged(previousSlide, currentSlide) {\r\n      fireSlideEnter();\r\n\r\n      // dispatch for shiny\r\n      if (window.jQuery) {\r\n        if (previousSlide) {\r\n          window.jQuery(previousSlide).trigger(\"hidden\");\r\n        }\r\n        if (currentSlide) {\r\n          window.jQuery(currentSlide).trigger(\"shown\");\r\n        }\r\n      }\r\n    }\r\n\r\n    // hookup for slidy\r\n    if (window.w3c_slidy) {\r\n      window.w3c_slidy.add_observer(function (slide_num) {\r\n        // slide_num starts at position 1\r\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\r\n      });\r\n    }\r\n\r\n  })();\r\n</script>\r\n\r\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

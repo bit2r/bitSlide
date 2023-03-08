@@ -1,4 +1,18 @@
 # Internal slide decks
+
+- title: "chatGPT"
+  subtitle: "진정한 기계와 동행 시작"
+  author: "이광춘"
+  date: 2023-03-24
+  image: img/astronaut.jpg
+  path: slideshow/20230324-kwangmyung/index.qmd
+  categories:
+    - chatGPT
+    - 기본기
+    - 광명시
+    - 한국 R 사용자회
+    - 평생학습
+
 - title: "데이터 사이언스에서 디자인과 아키텍쳐의 중요성"
   subtitle: "Emerging Creativity Workshop"
   author: "이광춘"
@@ -63,5 +77,10 @@
     - 빛에듀
     - Bit-Edu
     - 워드프로세서
+    
+
+    
+    
+    
 
 # External slide decks

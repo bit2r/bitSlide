@@ -1,0 +1,37 @@
+---
+title: "chatGPT"
+subtitle: "진정한 기계와 동행 시작"
+author: "이광춘"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-03-24
+format: 
+  insper-revealjs:
+    self-contained: false
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+---
+
+## 목차
+
+1. 체험 삶의 현장
+1. chatGPT 실습
+1. 왜 chatGPT인가?
+1. chatGPT 한계와 문제점
+1. AI 미래와 교육 방향은?
+1. 질의응답
+
+# 삶의 현장
+
+## 공상과학 출판사
+
+# chatGPT 실습
+
+# 왜 chatGPT인가?
+# chatGPT 한계와 문제점
+# AI 미래와 교육 방향은?
+# 질의응답
+
+
+# 끝

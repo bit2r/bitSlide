@@ -12,7 +12,7 @@
 <link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.242">
+<meta name="generator" content="quarto-1.2.280">
 <title>발표자료 | 한국 R 사용자회 – index</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -537,14 +537,14 @@
 </div>
 <div id="tabset-1-8">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/reproducibility-spectrum.png" class="lightbox" title="[@Peng2011]" data-gallery="quarto-lightbox-gallery-14"><img data-src="fig/reproducibility-spectrum.png"></a></p>
+<figure><p><a href="fig/reproducibility-spectrum.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="[@Peng2011]"><img data-src="fig/reproducibility-spectrum.png"></a></p>
 <p></p><figcaption><span class="citation" data-cites="Peng2011">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Peng 2011</a>)</span></figcaption><p></p>
 </figure>
 </div>
 </div>
 <div id="tabset-1-9">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/compendium.png" class="lightbox" title="[@Marwick2018]" data-gallery="quarto-lightbox-gallery-15"><img data-src="fig/compendium.png"></a></p>
+<figure><p><a href="fig/compendium.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="[@Marwick2018]"><img data-src="fig/compendium.png"></a></p>
 <p></p><figcaption><span class="citation" data-cites="Marwick2018">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Marwick, Boettiger, and Mullen 2018</a>)</span></figcaption><p></p>
 </figure>
 </div>
@@ -600,21 +600,21 @@
 <div class="tab-content">
 <div id="tabset-3-1">
 <div id="fig-problem" class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/single-sourcing-problem.jpg" class="lightbox" title="문제점" data-gallery="quarto-lightbox-gallery-19"><img data-src="fig/single-sourcing-problem.jpg" style="width:50.0%"></a></p>
+<figure><p><a href="fig/single-sourcing-problem.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="문제점"><img data-src="fig/single-sourcing-problem.jpg" style="width:50.0%"></a></p>
 <p></p><figcaption>Figure&nbsp;1: 문제점</figcaption><p></p>
 </figure>
 </div>
 </div>
 <div id="tabset-3-2">
 <div id="fig-concept" class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/single-sourcing-concept.jpg" class="lightbox" title="Single Sourcing 개념" data-gallery="quarto-lightbox-gallery-20"><img data-src="fig/single-sourcing-concept.jpg" style="width:50.0%"></a></p>
+<figure><p><a href="fig/single-sourcing-concept.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Single Sourcing 개념"><img data-src="fig/single-sourcing-concept.jpg" style="width:50.0%"></a></p>
 <p></p><figcaption>Figure&nbsp;2: Single Sourcing 개념</figcaption><p></p>
 </figure>
 </div>
 </div>
 <div id="tabset-3-3">
 <div id="fig-publishing" class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/single-sourcing-publishing.jpg" class="lightbox" title="Single Sourcing Multi-Use" data-gallery="quarto-lightbox-gallery-21"><img data-src="fig/single-sourcing-publishing.jpg" style="width:60.0%"></a></p>
+<figure><p><a href="fig/single-sourcing-publishing.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Single Sourcing Multi-Use"><img data-src="fig/single-sourcing-publishing.jpg" style="width:60.0%"></a></p>
 <p></p><figcaption>Figure&nbsp;3: Single Sourcing Multi-Use</figcaption><p></p>
 </figure>
 </div>
@@ -647,7 +647,7 @@
 <div id="tabset-4-3">
 <center>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/rumsfeld-matrix.png" class="lightbox" title="[@martin2011beyond]" data-gallery="quarto-lightbox-gallery-24"><img data-src="fig/rumsfeld-matrix.png"></a></p>
+<figure><p><a href="fig/rumsfeld-matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="[@martin2011beyond]"><img data-src="fig/rumsfeld-matrix.png"></a></p>
 <p></p><figcaption><span class="citation" data-cites="martin2011beyond">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Martin and Majidian 2011</a>)</span></figcaption><p></p>
 </figure>
 </div>
@@ -1284,10 +1284,10 @@ Peng, Roger D. 2011. <span>“Reproducible Research in Computational Science.”
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
         }
-    
+
         function fireSlideChanged(previousSlide, currentSlide) {
           fireSlideEnter();
-    
+
           // dispatch for shiny
           if (window.jQuery) {
             if (previousSlide) {
@@ -1298,7 +1298,7 @@ Peng, Roger D. 2011. <span>“Reproducible Research in Computational Science.”
             }
           }
         }
-    
+
         // hookup for slidy
         if (window.w3c_slidy) {
           window.w3c_slidy.add_observer(function (slide_num) {
@@ -1306,7 +1306,7 @@ Peng, Roger D. 2011. <span>“Reproducible Research in Computational Science.”
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
           });
         }
-    
+
       })();
     </script><script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {

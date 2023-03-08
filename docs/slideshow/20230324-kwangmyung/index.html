@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kr"><head>
+<html lang="ko"><head>
 <link href="../../img/koRea_logo.ico" rel="icon">
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/tabby.min.js"></script>
@@ -7,20 +7,17 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
-<meta name="author" content="이광춘 / 한국 R 사용자회">
-<title>발표자료 | 한국 R 사용자회 - 로우코드 Shiny 앱 개발</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-<link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
-<style>
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.2.280">
+
+  <meta name="author" content="이광춘">
+  <title>발표자료 | 한국 R 사용자회 - chatGPT</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -33,14 +30,12 @@
       vertical-align: middle;
     }
   </style>
-<link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
-<link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-<link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-<link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
 
   .callout {
     margin-top: 1em;
@@ -237,7 +232,7 @@
   }
 
   </style>
-<style type="text/css">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -329,216 +324,108 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center"><h1 class="title">로우코드 Shiny 앱 개발</h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">chatGPT</h1>
+  <p class="subtitle">진정한 기계와 동행 시작</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-이광춘 / 한국 R 사용자회 
+이광춘 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            비영리법인 한국 R 사용자회
+          </p>
+    </div>
 </div>
 
-  <p class="date">2022 년 11 월 05일</p>
-</section><section><section id="통계-소프트웨어-개발" class="title-slide slide level1 center"><h1>통계 소프트웨어 개발</h1>
+  <p class="date">2023년 3월 24일</p>
+</section>
+<section id="목차" class="slide level2">
+<h2>목차</h2>
+<ol type="1">
+<li>체험 삶의 현장</li>
+<li>chatGPT 실습</li>
+<li>왜 chatGPT인가?</li>
+<li>chatGPT 한계와 문제점</li>
+<li>AI 미래와 교육 방향은?</li>
+<li>질의응답</li>
+</ol>
+</section>
+<section>
+<section id="삶의-현장" class="title-slide slide level1 center">
+<h1>삶의 현장</h1>
 
-</section><section id="통계-패키지-진화" class="slide level2"><h2>통계 패키지 진화</h2>
+</section>
+<section id="공상과학-출판사" class="slide level2">
+<h2>공상과학 출판사</h2>
+</section></section>
+<section id="chatgpt-실습" class="title-slide slide level1 center">
+<h1>chatGPT 실습</h1>
 
-<img data-src="fig/statistics-package-evolution.png" class="r-stretch quarto-figure-center"></section><section id="통계-코딩-도구-진화" class="slide level2"><h2>통계 코딩 도구 진화</h2>
+</section>
 
-<img data-src="fig/computation-evolution.png" class="r-stretch quarto-figure-center"></section><section id="why-quarto" class="slide level2"><h2>why Quarto</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-1-1">2012년</a></li>
-<li><a href="#tabset-1-2">2021년</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/matt_turck.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="fig/matt_turck.png" style="width:50.0%"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-1-2">
-<iframe src="fig/2021-MAD-Landscape-v3.pdf" title="MAD Landscape" width="960" height="500">
-</iframe>
-</div>
-</div>
-</div>
-</section></section><section><section id="노로우-코드-플랫폼" class="title-slide slide level1 center"><h1>노/로우 코드 플랫폼</h1>
+<section id="왜-chatgpt인가" class="title-slide slide level1 center">
+<h1>왜 chatGPT인가?</h1>
 
-</section><section id="소프트웨어-로우-코드-개발" class="slide level2"><h2>소프트웨어 로우 코드 개발</h2>
-<p><br></p>
+</section>
 
-<img data-src="fig/low-code-plaform.png" class="r-stretch quarto-figure-center"></section><section id="r-로우-코드-개발" class="slide level2"><h2>R 로우 코드 개발</h2>
-<div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-2-1">{designer}</a></li>
-<li><a href="#tabset-2-2">{shinyuieditor}</a></li>
-<li><a href="#tabset-2-3">대쉬보드</a></li>
-<li><a href="#tabset-2-4"><code>ggplot</code></a></li>
-<li><a href="#tabset-2-5"><code>easystats</code></a></li>
-<li><a href="#tabset-2-6"><code>dlookr</code></a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-2-1">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/ui-designer.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="fig/ui-designer.gif" style="width:47.0%"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-2-2">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/shinyuieditor.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="fig/shinyuieditor.jpg" style="width:67.0%"></a></p>
-</figure>
-</div>
-<p><a href="https://rstudio.github.io/shinyuieditor/" class="uri">https://rstudio.github.io/shinyuieditor/</a></p>
-</div>
-<div id="tabset-2-3">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/dashboard-builder.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="fig/dashboard-builder.png" style="width:67.0%"></a></p>
-</figure>
-</div>
-<p><a href="https://github.com/petergandenberger/dashboard-builder" class="uri">https://github.com/petergandenberger/dashboard-builder</a></p>
-</div>
-<div id="tabset-2-4">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/esquisse.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="fig/esquisse.gif" style="width:47.0%"></a></p>
-</figure>
-</div>
-<p><a href="https://github.com/dreamRs/esquisse" class="uri">https://github.com/dreamRs/esquisse</a></p>
-</div>
-<div id="tabset-2-5">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/easystat-workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="fig/easystat-workflow.png" style="width:67.0%"></a></p>
-</figure>
-</div>
-<p><a href="https://easystats.github.io/easystats/index.html" class="uri">https://easystats.github.io/easystats/index.html</a></p>
-</div>
-<div id="tabset-2-6">
-<p><br><br><a href="fig/autoEDA.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="fig/autoEDA.png" style="width:67.0%"></a> <br><br><br><br><br><br></p>
-<p><a href="https://cran.r-project.org/web/packages/dlookr/" class="uri">https://cran.r-project.org/web/packages/dlookr/</a></p>
-</div>
-</div>
-</div>
-</section><section id="shiny-ui-add-on-ui-addon" class="slide level2"><h2>Shiny UI Add-on <sup>1</sup>
-</h2>
-<div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-3-1"><code>shinyFiles</code></a></li>
-<li><a href="#tabset-3-2">{shinycssloaders}</a></li>
-<li><a href="#tabset-3-3">{waiter}</a></li>
-<li><a href="#tabset-3-4">{rclipboard} &amp; {tippy}</a></li>
-<li><a href="#tabset-3-5">{shinyglide}</a></li>
-<li><a href="#tabset-3-6">{sortable}</a></li>
-<li><a href="#tabset-3-7">{DataEditR}</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-3-1">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/ui-shinyFiles.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="fig/ui-shinyFiles.gif" style="width:50.0%"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-3-2">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/ui-shinycssloader.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="fig/ui-shinycssloader.gif" style="width:50.0%"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-3-3">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/ui-waiter.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="fig/ui-waiter.gif" style="width:50.0%"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-3-4">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/ui-rclipboard_tippy.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img data-src="fig/ui-rclipboard_tippy.gif" style="width:50.0%"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-3-5">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/ui-shinyglide.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img data-src="fig/ui-shinyglide.gif" style="width:50.0%"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-3-6">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/ui-sortable.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img data-src="fig/ui-sortable.gif" style="width:40.0%"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-3-7">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/ui-DataEditR.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img data-src="fig/ui-DataEditR.gif" style="width:40.0%"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://www.jumpingrivers.com/blog/r-shiny-extensions-ui/">Mandy Norrbo, “Top 5 Shiny UI Add-On Packages”</a></p></li></ol></aside></section><section id="rtidyverse-pkg" class="slide level2"><h2>R/Tidyverse <sup>1</sup>
-</h2>
-<div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-4-1">{unravel}</a></li>
-<li><a href="#tabset-4-2">{searcher}</a></li>
-<li><a href="#tabset-4-3">{carbonate}</a></li>
-<li><a href="#tabset-4-4">{asciicast}</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-4-1">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/unraval.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img data-src="fig/unraval.gif" style="width:40.0%"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-4-2">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/searcher.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img data-src="fig/searcher.gif" style="width:70.0%"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-4-3">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/carbonate.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img data-src="fig/carbonate.png" style="width:77.0%"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-4-4">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><a href="fig/asciicast.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img data-src="fig/asciicast.svg" style="width:40.0%"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<aside><ol class="aside-footnotes"><li id="fn2"><p><a href="https://parmsam.medium.com/11-r-packages-ive-enjoyed-using-in-2022-51c0c07ba8e">Sam Parmar, “11 R packages I’ve enjoyed using in 2022”</a></p></li></ol></aside></section></section><section id="section" class="title-slide slide level1 center" data-background-image="../202210-hongik-v2/fig/slide-end.png" data-background-size="contain"><h1></h1>
+<section id="chatgpt-한계와-문제점" class="title-slide slide level1 center">
+<h1>chatGPT 한계와 문제점</h1>
+
+</section>
+
+<section id="ai-미래와-교육-방향은" class="title-slide slide level1 center">
+<h1>AI 미래와 교육 방향은?</h1>
+
+</section>
+
+<section id="질의응답" class="title-slide slide level1 center">
+<h1>질의응답</h1>
+
+</section>
+
+<section id="끝" class="title-slide slide level1 center">
+<h1>끝</h1>
 
 
-<img src="fig/koRea_logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://r2bit.com/">한국 R 사용자회</a>&nbsp;</p>
+<img src="_extensions/padsInsper/insper/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p>한국 R 사용자회 <a href="https://r2bit.com/chatGPT/">chatGPT</a>. theme <a href="https://github.com/padsInsper/quarto-insper-theme">insper</a> 소스코드 <a href="https://github.com/padsInsper/quarto-insper-theme">GitHub</a>.</p>
 </div>
 </section>
-</div>
+    </div>
   </div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../../site_libs/revealjs/plugin/search/search.js"></script><script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': true,
-'smaller': true,
+'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":false},
-'smaller': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
  
         // Display controls in the bottom right corner
         controls: false,
@@ -683,9 +570,9 @@
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1280,
+        width: 1050,
 
-        height: 720,
+        height: 700,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
@@ -708,7 +595,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -716,42 +603,8 @@
           RevealZoom
         ]
       });
-    </script><script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script><script id="quarto-html-after-body" type="application/javascript">
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
         const mode = bsSheetEl.getAttribute("data-mode");
@@ -788,12 +641,12 @@
         // flash "checked"
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "복사완료!");
+        button.setAttribute("title", "Copied!");
         let tooltip;
         if (window.bootstrap) {
           button.setAttribute("data-bs-toggle", "tooltip");
           button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "복사완료!");
+          button.setAttribute("data-bs-title", "Copied!");
           tooltip = new bootstrap.Tooltip(button, 
             { trigger: "manual", 
               customClass: "code-copy-button-tooltip",
@@ -883,6 +736,6 @@
       }
     });
     </script>
-
+    
 
 </body></html>
