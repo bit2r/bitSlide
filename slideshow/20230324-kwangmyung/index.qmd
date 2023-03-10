@@ -61,13 +61,11 @@ lang: ko
 ## {background-image="../../img/question.jpg"}
 
 ::: r-fit-text
-[질문?]{style="color: red; font-size:92px;"}
+[질문?]{style="color: #D62626; font-size:92px;"}
 :::
 
 
 # chatGPT 한계와 문제점
-
-# AI 미래와 교육 방향은?
 
 ## {background-image="../../img/question.jpg"}
 
@@ -75,6 +73,51 @@ lang: ko
 [질문?]{style="color: red; font-size:92px;"}
 :::
 
+# AI 미래와 교육 방향은?
+
+## 1869년 MIT 입시문제
+
+:::{.panel-tabset}
+
+### 산술 (Arithmetic)
+
+![](../../img/mit/mit-1869-arithmetic.jpg)
+
+### 기하 (Geometry)
+
+![](../../img/mit/mit_geometry.gif){width=75%}
+
+### 대수 (Algebra)
+
+![](../../img/mit/mit-1869-algebra.jpg){width=60%}
+
+:::
+
+::: {.aside}
+자료출처: [Massachusetts Institute of Technology Entrance Examination, 1869-70](https://web.archive.org/web/20120403061216/http://libraries.mit.edu/archives/exhibits/exam/index.html)
+:::
+
+
+## 기계에 대처하는 선생님
+
+![](../../img/math_teachers.jfif){width=45%}
+
+::: aside
+출처: 트위터 [`@eraser` MATH TEACHERS PROTEST AGAINST CALCULATOR USE ](https://twitter.com/eraser/status/1547506194259972096)
+:::
+
+## 과학기술 연구개발
+
+<br>
+<br>
+
+![](../../img/writing_papers.jpg)
+
+::: {.aside}
+
+[chatGPT - 학술연구(R&D)](https://r2bit.com/chatGPT/rnd.html)
+
+:::
 
 # 질의응답
 
