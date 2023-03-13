@@ -74,7 +74,24 @@ lang: ko
 [질문?]{style="color: red; font-size:92px;"}
 :::
 
-# chatGPT 실습
+# `chatGPT`
+
+## chatGPT 란?
+
+::: panel-tabset
+
+### PNG와 JPEG
+
+![](../../img/png_jpg.png){width="651"}
+
+::: aside
+자료출처: [Ted Chiang (February 9, 2023), "ChatGPT Is a Blurry JPEG of the Web - OpenAI's chatbot offers paraphrases, whereas Google offers quotes. Which do we prefer?", The New Yorker](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
+:::
+
+### Foundation 모형
+
+![](../../img/foundation_model.png){width="500"}
+:::
 
 
 # 왜 chatGPT인가?
@@ -114,7 +131,6 @@ lang: ko
 ::: r-fit-text
 [질문?]{style="color: #D62626; font-size:92px;"}
 :::
-
 
 # chatGPT 한계와 문제점
 
@@ -170,5 +186,6 @@ lang: ko
 [질문?]{style="color: red; font-size:92px;"}
 :::
 
-
 # 끝
+
+
