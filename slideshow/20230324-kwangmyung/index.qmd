@@ -27,38 +27,89 @@ lang: ko
 ::: {layout-ncol="2"}
 ### AI 아바타
 
-![](../../img/profile.png){.absolute top=0 right=0 width=350}
+![](../../img/profile.png){.absolute top="0" right="0" width="350"}
 
 ### 주요경력 및 학력
 
-- 비영리법인 한국 R 사용자회: 기술 이사
-- TCS: GS 칼텍스 디지털 아카데미 강사
-- 삼정 KPMG: Lighthouse AI 기술총괄
-- 웹젠: 데이터 과학자 TD
-- 현대자동차: 차량용 반도체 개발구매
-<br>
-<hr>
-- KAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공
-- [RStudio Instructor](https://education.rstudio.com/trainers/people/lee+kwangchun/) - Tidyverse
-- [Seoul R Meetup Organizer](https://r2bit.com/seoul-r/)
+-   비영리법인 한국 R 사용자회: 기술 이사
 
+-   TCS: GS 칼텍스 디지털 아카데미 강사
+
+-   삼정 KPMG: Lighthouse AI 기술총괄
+
+-   웹젠: 데이터 과학자 TD
+
+-   현대자동차: 차량용 반도체 개발구매 <br>
+
+    <hr>
+
+-   KAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공
+
+-   [RStudio Instructor](https://education.rstudio.com/trainers/people/lee+kwangchun/) - Tidyverse
+
+-   [Seoul R Meetup Organizer](https://r2bit.com/seoul-r/)
 :::
 
 # 삶의 현장
 
-## 공상과학 출판사
+## AI를 바라보는 관점
 
-# chatGPT 실습
+::: panel-tabset
+### 트위터 Santiago I {.unnumbered}
 
-## {background-image="../../img/question.jpg"}
+![](../../img/santiago_01.png)
+
+### 트위터 Santiago II {.unnumbered}
+
+![](../../img/santiago_02.png)
+
+### 버스탄 두 남자 {.unnumbered}
+
+![](../../img/two_men_on_a_bus.png){width="600"}
+:::
+
+##  {background-image="../../img/question.jpg"}
 
 ::: r-fit-text
 [질문?]{style="color: red; font-size:92px;"}
 :::
 
+# chatGPT 실습
+
+
 # 왜 chatGPT인가?
 
-## {background-image="../../img/question.jpg"}
+## openAI 마이크로소프트 3 대장
+
+![](../../img/openai-three-pillars.png)
+
+## chatGPT 3대장
+
+::: panel-tabset
+### 최강 3대장 {.unnumbered}
+
+![](../../img/big_three_original.png){width="800"}
+
+### `chatGPT` 3대장 {.unnumbered}
+
+![](../../img/big_three_chatGPT.png){width="800"}
+
+### --- {.unnumbered}
+
+### 글쓰기 {.unnumbered}
+
+![](../../img/chatgpt_writing.gif){width="700"}
+
+### 그리기 {.unnumbered}
+
+![](../../img/chatGPT_visual.gif){width="700"}
+
+### 코딩 {.unnumbered}
+
+![](../../img/chatGPT_coding.gif){width="700"}
+:::
+
+##  {background-image="../../img/question.jpg"}
 
 ::: r-fit-text
 [질문?]{style="color: #D62626; font-size:92px;"}
@@ -67,7 +118,7 @@ lang: ko
 
 # chatGPT 한계와 문제점
 
-## {background-image="../../img/question.jpg"}
+##  {background-image="../../img/question.jpg"}
 
 ::: r-fit-text
 [질문?]{style="color: red; font-size:92px;"}
@@ -77,48 +128,47 @@ lang: ko
 
 ## 1869년 MIT 입시문제
 
-:::{.panel-tabset}
-
-### 산술 (Arithmetic)
+::: panel-tabset
+### 산술 (Arithmetic) {.unnumbered}
 
 ![](../../img/mit/mit-1869-arithmetic.jpg)
 
-### 기하 (Geometry)
+### 기하 (Geometry) {.unnumbered}
 
-![](../../img/mit/mit_geometry.gif){width=75%}
+![](../../img/mit/mit_geometry.gif){width="75%"}
 
-### 대수 (Algebra)
+### 대수 (Algebra) {.unnumbered}
 
-![](../../img/mit/mit-1869-algebra.jpg){width=60%}
-
+![](../../img/mit/mit-1869-algebra.jpg){width="60%"}
 :::
 
-::: {.aside}
+::: aside
 자료출처: [Massachusetts Institute of Technology Entrance Examination, 1869-70](https://web.archive.org/web/20120403061216/http://libraries.mit.edu/archives/exhibits/exam/index.html)
 :::
 
-
 ## 기계에 대처하는 선생님
 
-![](../../img/math_teachers.jfif){width=45%}
+![](../../img/math_teachers.jfif){width="45%"}
 
 ::: aside
-출처: 트위터 [`@eraser` MATH TEACHERS PROTEST AGAINST CALCULATOR USE ](https://twitter.com/eraser/status/1547506194259972096)
+출처: 트위터 [`@eraser` MATH TEACHERS PROTEST AGAINST CALCULATOR USE](https://twitter.com/eraser/status/1547506194259972096)
 :::
 
 ## 과학기술 연구개발
 
-<br>
-<br>
+<br> <br>
 
 ![](../../img/writing_papers.jpg)
 
-::: {.aside}
-
+::: aside
 [chatGPT - 학술연구(R&D)](https://r2bit.com/chatGPT/rnd.html)
-
 :::
 
-# 질의응답
+##  {background-image="../../img/question.jpg"}
+
+::: r-fit-text
+[질문?]{style="color: red; font-size:92px;"}
+:::
+
 
 # 끝
