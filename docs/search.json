@@ -851,7 +851,7 @@
     "href": "slideshow/20230324-kwangmyung/01-life-in-action.html",
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
-    "text": "트위터 Santiago I트위터 Santiago II버스탄 두 남자\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n질문?"
+    "text": "백만, 5천만, 1억 가입자를 가질 때까지 걸린 소요시간\n\n전화기기술 진화chatGPT 백만빅3 서비스1억명 (소요 달수)\n\n\n\n\n\n[@song2019digital]\n\n\n\n\n\n\n\nRita McGrath(November 25, 2013), “The Pace of Technology Adoption is Speeding Up”, Harvard Business Review\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n출처: https://twitter.com/umarsaif/status/1610932387185315840\n\n\n\n\n\n\n\n출처: https://twitter.com/EconomyApp/status/1622029832099082241\n\n\n\n\n\n\n\n\n\n트위터 Santiago I트위터 Santiago II버스탄 두 남자\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAI 직원활용화면루이스\n\n\n \n\n\n \n\n\n \n\n\n\n\n\n\n\n\n \n\n\n\n신규 코드의 40%가 Copilot으로 작성\n75%의 개발자가 업무에 더 큰 성취감을 느꼈습니다.\n87%의 개발자가 정신적 노력을 절약하는 데 도움이 되었다고 답했습니다.\n\n\n\n\n\n\n  \n\n\n웹툰을 제작하는 스튜디오에서는 웹툰 작가들과 어시스트들이 매우 노동집약적인 작업으로 창작활동을 하고 있다. 현재 웹툰 제작 공정은 콘티, 스케치, 라인(펜선), 채색, 배경, 출판 작업의 순서로 이뤄진다. 한국만화영상진흥원과 협력하는 실제 웹툰 작가들은 특정작업이 아닌 모든 공정에서 제작 생산성 향상을 위한 자동화 기술이 필요하다는 결론에 도달함. [@webtoon2021]\n\n\n\n공상과학 및 판타지 잡지 클라크스월드(Clarkesworld)는 AI가 생성한 소설라는 비난을 받은 후 신규 공상과학소설이 급증한 것이 AI 기계로 작성된 원인을 큰 것으로 파악하고 2월 20일부터 공식적으로 투고를 중단했다.\n\n\n\n\n\n2023-02-15 기준\n\n\n\n\n\n2023-02-20 기준\n\n\n\n\nNeil Clark (2023-02-15), “A Concerning Trend”, CLARKESWORLD MAGAZINE\n\n\n\n\n질문?"
   },
   {
     "objectID": "slideshow/20230324-kwangmyung/03-chatGPT-in-action.html",
@@ -922,5 +922,19 @@
     "title": "chatGPT",
     "section": "시장 와해 사례 ",
     "text": "시장 와해 사례 \n공상과학 및 판타지 잡지 클라크스월드(Clarkesworld)는 AI가 생성한 소설라는 비난을 받은 후 신규 공상과학소설이 급증한 것이 AI 기계로 작성된 원인을 큰 것으로 파악하고 2월 20일부터 공식적으로 투고를 중단했다.\n\n\n\n\n\n2023-02-15 기준\n\n\n\n\n\n2023-02-20 기준\n\n\n\n\nNeil Clark (2023-02-15), “A Concerning Trend”, CLARKESWORLD MAGAZINE"
+  },
+  {
+    "objectID": "slideshow/20230324-kwangmyung/index.html#강사소개-강의-개요",
+    "href": "slideshow/20230324-kwangmyung/index.html#강사소개-강의-개요",
+    "title": "chatGPT",
+    "section": "강사소개 & 강의 개요",
+    "text": "강사소개 & 강의 개요\n\n강사소개강의개요\n\n\n\n\n\n\nAI 아바타\n\n\n\n\n주요경력 및 학력\n\n비영리법인 한국 R 사용자회: 기술 이사\nTCS: GS 칼텍스 디지털 아카데미 강사\n삼정 KPMG: Lighthouse AI 기술총괄\n웹젠: 데이터 과학자 TD\n현대자동차: 차량용 반도체 개발구매 \n\nKAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공\nRStudio Instructor - Tidyverse\nSeoul R Meetup Organizer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n강의상세\n\n날짜 : 2023. 3. 24.(금) 10:00~11:30\n장소 : 광명시교육협력지원센터 000호\n대상 : 광명시 소속 직원 00명 내외\n내용 : 챗GPT 입문"
+  },
+  {
+    "objectID": "slideshow/20230324-kwangmyung/00-who-am-i.html",
+    "href": "slideshow/20230324-kwangmyung/00-who-am-i.html",
+    "title": "발표자료 | 한국 R 사용자회",
+    "section": "",
+    "text": "강사소개강의개요"
   }
 ]

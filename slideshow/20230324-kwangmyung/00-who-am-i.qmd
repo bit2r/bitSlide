@@ -1,10 +1,12 @@
+## 강사소개 & 강의 개요
 
-## 강사소개
+::: panel-tabset
+### 강사소개
 
 ::: {layout-ncol="2"}
 ### AI 아바타
 
-![](../../img/profile.png){.absolute top="0" right="0" width="350"}
+![](../../img/profile.png){.absolute top="0" right="0" width="300"}
 
 ### 주요경력 및 학력
 
@@ -25,4 +27,20 @@
 -   [RStudio Instructor](https://education.rstudio.com/trainers/people/lee+kwangchun/) - Tidyverse
 
 -   [Seoul R Meetup Organizer](https://r2bit.com/seoul-r/)
+:::
+
+### 강의개요
+
+::: {layout-ncol="2"}
+
+![](../../img/kwangmyung_logo.jfif)
+
+### 강의상세
+
+- 날짜 : 2023. 3. 24.(금) 10:00~11:30
+- 장소 : 광명시교육협력지원센터 000호
+- 대상 : 광명시 소속 직원 00명 내외
+- 내용 : 챗GPT 입문
+
+:::
 :::
