@@ -1,0 +1,9 @@
+
+# chatGPT 한계와 문제점
+
+##  {background-image="../../img/question.jpg"}
+
+::: r-fit-text
+[질문?]{style="color: red; font-size:92px;"}
+:::
+
