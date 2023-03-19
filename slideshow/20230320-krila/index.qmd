@@ -25,10 +25,9 @@ editor_options:
 ## 목차
 
 1. 대한민국 경쟁력
-2. 오피스 전쟁
-3.  
-4.  
-5.  
+2. chatGPT 
+3. 체험 삶의 현장  
+4. GPT 3 대장 + $\alpha$ 
 
 {{< include 00-who-am-i.qmd >}}
 
