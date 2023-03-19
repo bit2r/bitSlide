@@ -32,10 +32,27 @@ editor_options:
 
 {{< include 00-who-am-i.qmd >}}
 
-# 대한민국 경쟁력
+<!-- # 대한민국 경쟁력 -->
 
 {{< include esg-country-classic.qmd >}}
 
 {{< include esg-country-digital.qmd >}}
 
+<!-- # chatGPT -->
+
+{{< include chatGPT.qmd >}}
+
+<!-- # 체험 삶의 현장 -->
+
+{{< include ../20230324-kwangmyung/01-life-in-action.qmd >}}
+
+<!-- # 3대장 -->
+
+{{< include ../20230324-kwangmyung/03-chatGPT-in-action.qmd >}}
+
+
+# 참고문헌
+
+::: {#refs}
+:::
 

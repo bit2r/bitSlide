@@ -1,0 +1,76 @@
+
+# 거대 언어모형
+
+## chatGPT 란?
+
+::: panel-tabset
+
+### PNG와 JPEG
+
+![](../../img/png_jpg.png){width="651"}
+
+::: aside
+자료출처: [Ted Chiang (February 9, 2023), "ChatGPT Is a Blurry JPEG of the Web - OpenAI's chatbot offers paraphrases, whereas Google offers quotes. Which do we prefer?", The New Yorker](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
+:::
+
+### Foundation 모형
+
+![](../../img/foundation_model.png){width="500"}
+:::
+
+
+## 거대 언어모형(LLM) 
+
+
+:::{.panel-tabset}
+
+## LLM 진화
+
+![](../../img/LLM_tree.gif)
+
+## 80억 패러미터
+
+![](../../img/LLM_tree_8_billion.png)
+
+## 400억 
+
+![](../../img/LLM_tree_40_billion.png)
+
+## 640억 
+
+![](../../img/LLM_tree_62_billion.png)
+
+
+## 5,400억 
+
+![](../../img/LLM_tree_540_billion.png)
+
+## 성능
+
+![](../../img/LLM_tree_performance.png)
+
+:::
+
+
+::: aside
+[[Sharan Narang and Aakanksha Chowdhery (APRIL 04, 2022), "Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrough Performance", Software Engineers, Google Research](https://ai.googleblog.com/2022/04/pathways-language-model-palm-scaling-to.html)]{.aside}
+:::
+
+
+## 주요 AI 모형 개발비
+
+언어 모형 개발은 2010년 이후 개발비용이 급격히 증가하고 있음.
+
+<iframe src="https://ourworldindata.org/grapher/artificial-intelligence-training-computation?yScale=linear&time=2017-06-12..latest" loading="lazy" style="width: 100%; height: 500px; border: 0px none;"></iframe>
+
+::: aside
+[Estimating 🌴PaLM's training cost](https://blog.heim.xyz/palm-training-cost/)
+:::
+
+
+##  {background-image="../../img/question.jpg"}
+
+::: r-fit-text
+[전통, 디지털, AI 지표 &rarr; 지원자?]{style="color: red; font-size:77px;"}
+:::
+
