@@ -1,5 +1,19 @@
 # Internal slide decks
 
+- title: "챗GPT와 지방행정"
+  subtitle: "챗GPT 등 인공지능 트렌드 관련 발표 및 지방행정 응용 가능성 논의"
+  author: "이광춘"
+  date: 2023-03-20
+  image: img/krila.png
+  path: slideshow/20230320-krila/index.qmd
+  categories:
+    - chatGPT
+    - 지방행정연구원
+    - 인공지능
+    - 한국 R 사용자회
+    - 챗GPT연구회
+    - KRILA
+
 - title: "chatGPT"
   subtitle: "진정한 기계와 동행 시작"
   author: "이광춘"

@@ -1,0 +1,41 @@
+---
+title: "챗GPT와 지방행정"
+subtitle: "인공지능 트렌드 및 지방행정 응용"
+author: "이광춘"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-03-20
+format: 
+  insper-revealjs:
+    self-contained: false
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). 
+      theme [insper](https://github.com/padsInsper/quarto-insper-theme) 
+      소스코드 [GitHub](https://github.com/bit2r/bitSlide).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: ../../bibliography.bib
+csl: ../../apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1. 대한민국 경쟁력
+2. 오피스 전쟁
+3.  
+4.  
+5.  
+
+{{< include 00-who-am-i.qmd >}}
+
+# 대한민국 경쟁력
+
+{{< include esg-country-classic.qmd >}}
+
+{{< include esg-country-digital.qmd >}}
+
+

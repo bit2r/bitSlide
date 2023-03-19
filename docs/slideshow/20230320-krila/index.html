@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<link href="../../img/koRea_logo.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.2.280">
+
+  <meta name="author" content="이광춘">
+  <title>발표자료 | 한국 R 사용자회 - 챗GPT와 지방행정</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-captioned.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-captioned) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-captioned.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-captioned .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-captioned .callout-caption  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-captioned.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-captioned.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-caption {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-caption {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-caption {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-captioned .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-captioned .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-captioned) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-caption {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-caption {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-caption {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-caption {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-caption {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  
+  <script src="../../site_libs/core-js-2.5.3/shim.min.js"></script>
+  <script src="../../site_libs/react-17.0.0/react.min.js"></script>
+  <script src="../../site_libs/react-17.0.0/react-dom.min.js"></script>
+  <script src="../../site_libs/reactwidget-1.0.0/react-tools.js"></script>
+  <script src="../../site_libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
+  <link href="../../site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+  <script src="../../site_libs/reactable-binding-0.4.4/reactable.js"></script>
+  <script src="../../site_libs/plotly-binding-4.10.1/plotly.js"></script>
+  <script src="../../site_libs/typedarray-0.1/typedarray.min.js"></script>
+  <script src="../../site_libs/jquery-3.5.1/jquery.min.js"></script>
+  <link href="../../site_libs/crosstalk-1.2.0.9000/css/crosstalk.min.css" rel="stylesheet">
+  <script src="../../site_libs/crosstalk-1.2.0.9000/js/crosstalk.min.js"></script>
+  <link href="../../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+  <script src="../../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">챗GPT와 지방행정</h1>
+  <p class="subtitle">인공지능 트렌드 및 지방행정 응용</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+이광춘 
+</div>
+        <p class="quarto-title-affiliation">
+            비영리법인 한국 R 사용자회
+          </p>
+    </div>
+</div>
+
+  <p class="date">2023년 3월 20일</p>
+</section>
+<section id="목차" class="slide level2">
+<h2>목차</h2>
+<ol type="1">
+<li>대한민국 경쟁력</li>
+<li>오피스 전쟁</li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</section>
+<section id="강사소개-강의-개요" class="slide level2">
+<h2>강사소개 &amp; 강의 개요</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">강사소개</a></li><li><a href="#tabset-1-2">강의개요</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><strong>AI 아바타</strong></p>
+<p><a href="../../img/profile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="../../img/profile.png" data-top="0" data-right="0" width="300"></a></p>
+</figure>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>주요경력 및 학력</strong></p>
+<ul>
+<li><p>비영리법인 한국 R 사용자회: 기술 이사</p></li>
+<li><p>TCS: GS 칼텍스 디지털 아카데미 강사</p></li>
+<li><p>삼정 KPMG: Lighthouse AI 기술총괄</p></li>
+<li><p>웹젠: 데이터 과학자 TD</p></li>
+<li><p>현대자동차: 차량용 반도체 개발구매 <br></p>
+<hr></li>
+<li><p>KAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공</p></li>
+<li><p><a href="https://education.rstudio.com/trainers/people/lee+kwangchun/">RStudio Instructor</a> - Tidyverse</p></li>
+<li><p><a href="https://r2bit.com/seoul-r/">Seoul R Meetup Organizer</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><a href="../../img/krila_logo.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="../../img/krila_logo.jpg"></a></p>
+</figure>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>강의상세</strong></p>
+<ul>
+<li>날짜 : 2023. 3. 20.(월) 16:30~18:00</li>
+<li>장소 : 한국지방행정연구원 2층 대강당</li>
+<li>주최 : 자치분권제도실, 챗GPT연구회</li>
+<li>대상 : 관심있는 사람 누구나</li>
+<li>내용 : : 챗GPT 등 인공지능 트렌드 관련 발표 및 지방행정 응용 가능성 논의</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="대한민국-경쟁력" class="title-slide slide level1 center">
+<h1>대한민국 경쟁력</h1>
+
+</section>
+<section id="전통-강대국-지표" class="slide level2">
+<h2>전통 (강대국) 지표</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">도식화</a></li><li><a href="#tabset-2-2">전통 지표 기준 강대국</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../../img/esg-country-classic.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="../../img/esg-country-classic.png"></a></p>
+</figure>
+</div>
+
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-be96e7f7c4e89b1071b5" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-be96e7f7c4e89b1071b5">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"country":["United States","Japan","Germany","France","United Kingdom","Italy","Mexico","Turkey","Korea, South","Spain","Canada","Australia","Poland","Netherlands","Colombia","Switzerland","Belgium","Sweden","Austria","Chile","Czech Republic","Ireland","Israel","Portugal","Norway","Greece","Denmark","Hungary","Finland","New Zealand","Slovakia","Lithuania","Slovenia","Latvia","Estonia","Iceland"],"flags":["🇺🇸","🇯🇵","🇩🇪","🇫🇷","🇬🇧","🇮🇹","🇲🇽","🇹🇷","🇰🇷","🇪🇸","🇨🇦","🇦🇺","🇵🇱","🇳🇱","🇨🇴","🇨🇭","🇧🇪","🇸🇪","🇦🇹","🇨🇱","🇨🇿","🇮🇪","🇮🇱","🇵🇹","🇳🇴","🇬🇷","🇩🇰","🇭🇺","🇫🇮","🇳🇿","🇸🇰","🇱🇹","🇸🇮","🇱🇻","🇪🇪","🇮🇸"],"gdp":[19391,5487,4188,2876,2857,2387,2358,2140,1973,1770,1714,1192,1102,900,709,548,544,505,462,445,385,364,333,326,324,297,296,275,247,197,172,91,72,54,42,18],"area":[9831510,377962,357380,549087,243610,301340,1964380,785350,100280,505940,9984670,7741220,312680,41540,1141748,41290,30530,447420,83879,756096,78870,70280,22070,92225,385178,131960,42922,93030,338420,267710,49035,65286,20270,64490,45230,103000],"population":[326,127,83,67,66,61,129,81,51,47,37,25,38,17,49,8,11,10,9,18,11,5,9,10,5,11,6,10,6,5,5,3,2,2,1,0],"gdp_per_capita":[59532,43279,50639,42850,43269,39427,18258,29505,38335,37998,46705,48460,29026,52503,14507,64712,47840,50208,52398,24635,36327,75648,38262,31673,61414,27602,51364,28108,44866,41109,31616,32092,34868,27598,31742,53153]},"columns":[{"id":"country","name":"국가","type":"character","cell":"function(cell) {\n            return '<a href=\"https://wikipedia.org/wiki/' + cell.value + '\">' + cell.value + '<\/a>'\n          }","html":true,"width":200},{"id":"flags","name":"국기","type":"character","width":70},{"id":"gdp","name":"GDP","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"width":120},{"id":"area","name":"면적","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}}},{"id":"population","name":"population","type":"numeric"},{"id":"gdp_per_capita","name":"국민소득","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}}}],"defaultPageSize":10,"highlight":true,"style":{"fontSize":"17px"},"dataKey":"7c334fa8537450c980b5ebe078df7c0d"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.cell"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside><div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/OECD">위키백과 OECD</a></li>
+<li>디지털 뉴딜, 지역균형 문제 해결과 지역균형 발전방안 <span class="citation" data-cites="krila2020">(<a href="#/종합" role="doc-biblioref" onclick="">이광춘, 2020</a>)</span></li>
+</ul>
+</div></aside></section>
+<section id="확장-전통-지표" class="slide level2">
+<h2>확장 전통 지표</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">도식화</a></li><li><a href="#tabset-3-2">확장 지표 기준 선진국</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../../img/esg-country-extension.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="../../img/esg-country-extension.png"></a></p>
+</figure>
+</div>
+
+</div>
+<div id="tabset-3-2">
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-1aee9ad66f29afa60131" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1aee9ad66f29afa60131">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"country":["Slovenia","Czech Republic","Slovakia","Finland","Norway","Belgium","Iceland","Denmark","Netherlands","Sweden","Hungary","Austria","Korea, South","Germany","Ireland","Poland","Japan","Switzerland","Estonia","France","New Zealand","United Kingdom","Canada","Latvia","Australia","Italy","Portugal","Greece","Spain","Lithuania","Israel","United States","Turkey","Mexico","Chile","Colombia"],"flags":["🇸🇮","🇨🇿","🇸🇰","🇫🇮","🇳🇴","🇧🇪","🇮🇸","🇩🇰","🇳🇱","🇸🇪","🇭🇺","🇦🇹","🇰🇷","🇩🇪","🇮🇪","🇵🇱","🇯🇵","🇨🇭","🇪🇪","🇫🇷","🇳🇿","🇬🇧","🇨🇦","🇱🇻","🇦🇺","🇮🇹","🇵🇹","🇬🇷","🇪🇸","🇱🇹","🇮🇱","🇺🇸","🇹🇷","🇲🇽","🇨🇱","🇨🇴"],"income_inequality":[25.4,25.9,26.5,27.1,27.5,27.7,27.8,28.2,28.2,29.2,30.4,30.5,31.6,31.7,31.8,31.8,32.1,32.3,32.7,32.7,33,33.2,34,34.2,34.7,35.4,35.5,36,36.2,37.4,41.4,41.5,41.9,43.4,47.7,49.7],"hdi":[0.902,0.891,0.857,0.925,0.954,0.919,0.938,0.93,0.933,0.937,0.845,0.914,0.906,0.939,0.942,0.872,0.915,0.946,0.882,0.891,0.921,0.92,0.922,0.854,0.938,0.883,0.85,0.872,0.893,0.869,0.906,0.92,0.806,0.767,0.847,0.761],"fsi":[28,37.6,40.5,16.9,18,28.6,19.8,19.5,24.8,20.3,49.6,25,33.7,24.7,20.6,42.8,34.3,18.7,40.8,32,20.1,36.7,20,43.9,19.7,43.8,25.3,53.9,40.7,38.1,75.1,38,80.3,69.7,38.9,75.7],"cpi":[60,56,50,86,84,75,78,87,82,85,44,77,59,80,74,58,73,85,74,69,87,77,77,56,77,53,62,48,62,60,60,69,39,29,67,37],"ief":[67.8,74.8,66.8,75.7,73.4,68.9,77.1,78.3,77,74.9,66.4,73.3,74,73.5,80.9,69.1,73.3,82,77.7,66,84.1,79.3,78.2,71.9,82.6,63.8,67,59.9,66.9,76.7,74,76.6,64.4,66,76.8,69.2],"gpi":[1.355,1.383,1.55,1.488,1.536,1.533,1.072,1.316,1.53,1.533,1.54,1.291,1.867,1.547,1.39,1.654,1.369,1.375,1.727,1.892,1.221,1.801,1.327,1.718,1.419,1.754,1.274,1.933,1.699,1.779,2.735,2.401,3.015,2.6,1.634,2.661],"wpfi":[22.31,24.89,23.58,7.9,7.82,12.07,14.71,9.87,8.63,8.31,30.44,15.33,24.94,14.6,15,28.89,29.36,10.52,12.27,22.21,10.75,22.23,15.69,19.53,16.55,24.98,12.65,29.08,21.99,22.06,30.8,25.69,52.81,46.78,25.65,42.82],"di":[7.5,7.69,7.17,9.25,9.87,7.64,9.58,9.22,9.01,9.39,6.63,8.29,8,8.68,9.24,6.62,7.99,9.03,7.9,8.12,9.26,8.52,9.22,7.49,9.09,7.52,8.03,7.43,8.29,7.5,7.86,7.96,4.09,6.09,8.08,7.13]},"columns":[{"id":"country","name":"국가","type":"character","cell":"function(cell) {\n            return '<a href=\"https://wikipedia.org/wiki/' + cell.value + '\">' + cell.value + '<\/a>'\n          }","html":true,"width":200},{"id":"flags","name":"flags","type":"character"},{"id":"income_inequality","name":"소득불평등","type":"numeric","width":150},{"id":"hdi","name":"hdi","type":"numeric","width":70},{"id":"fsi","name":"fsi","type":"numeric","width":70},{"id":"cpi","name":"cpi","type":"numeric","width":70},{"id":"ief","name":"ief","type":"numeric","width":70},{"id":"gpi","name":"gpi","type":"numeric","width":70},{"id":"wpfi","name":"wpfi","type":"numeric","width":70},{"id":"di","name":"di","type":"numeric"}],"defaultPageSize":10,"highlight":true,"style":{"fontSize":"17px"},"inline":true,"dataKey":"b13c0ec5153db7d9027f1f14288f4c76"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.cell"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside><div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/OECD">위키백과 OECD</a></li>
+</ul>
+</div></aside></section>
+<section id="디지털-강대국-지표" class="slide level2">
+<h2>디지털 (강대국) 지표</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><strong>도식화</strong></p>
+<p><a href="../../img/oecd-dataset.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="../../img/oecd-dataset.png"></a></p>
+</figure>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>디지털 지표</strong></p>
+<ul>
+<li><a href="https://www.oecd-ilibrary.org/deliver/4de9f5bb-en.pdf?itemId=%2Fcontent%2Fpaper%2F4de9f5bb-en&amp;mimeType=pdf">디지털 정부 순위</a></li>
+<li><a href="https://www.oxfordinsights.com/government-ai-readiness-index-2020">정부 인공지능 준비지수</a></li>
+<li><a href="https://hbr.org/2019/01/which-countries-are-leading-the-data-economy">데이터 경제 순위</a></li>
+<li><a href="https://ifr.org/downloads/press2018/Robot_Density_by_country_WorldRobotics2020_graph.jpg">산업용 로봇 밀도</a></li>
+<li><a href="https://reports.weforum.org/global-competitiveness-report-2019/competitiveness-rankings/">세계 경쟁력 보고서</a></li>
+<li><a href="https://www.imd.org/wcc/world-competitiveness-center-rankings/world-digital-competitiveness-rankings-2020/">IMD 세계 경쟁력 연감</a></li>
+<li>GPT-3.5, GPT-4, GPT-5 보유(?)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="디지털-강대국-지표-1" class="slide level2">
+<h2>디지털 강대국 지표</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">정부</a></li><li><a href="#tabset-4-2">AI 준비</a></li><li><a href="#tabset-4-3">데이터 경제</a></li><li><a href="#tabset-4-4">산업용 로봇</a></li><li><a href="#tabset-4-5">WEF 경쟁력</a></li><li><a href="#tabset-4-6">IMD 경쟁력</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-06417062f0750f120717" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-06417062f0750f120717">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"country":["Korea, South","United Kingdom","Colombia","Denmark","Japan","Canada","Spain","Israel","Portugal","France","New Zealand","Norway","Italy","Slovenia","Estonia","Latvia","Austria","Netherlands","Czech Republic","Ireland","Chile","Belgium","Germany","Lithuania","Finland","Greece","Iceland","Sweden","Australia","Hungary","Mexico","Poland","Slovakia","Switzerland","Turkey","United States"],"flags":["🇰🇷","🇬🇧","🇨🇴","🇩🇰","🇯🇵","🇨🇦","🇪🇸","🇮🇱","🇵🇹","🇫🇷","🇳🇿","🇳🇴","🇮🇹","🇸🇮","🇪🇪","🇱🇻","🇦🇹","🇳🇱","🇨🇿","🇮🇪","🇨🇱","🇧🇪","🇩🇪","🇱🇹","🇫🇮","🇬🇷","🇮🇸","🇸🇪","🇦🇺","🇭🇺","🇲🇽","🇵🇱","🇸🇰","🇨🇭","🇹🇷","🇺🇸"],"디지털정부":[1,2,3,4,5,6,7,8,10,11,12,13,15,17,18,19,20,21,22,23,24,25,26,27,28,29,32,33,"NA","NA","NA","NA","NA","NA","NA","NA"],"gdp":[1973,2857,709,296,5487,1714,1770,333,326,2876,197,324,2387,72,42,54,462,900,385,364,445,544,4188,91,247,297,18,505,1192,275,2358,1102,172,548,2140,19391],"gdp_per_capita":[38335,43269,14507,51364,43279,46705,37998,38262,31673,42850,41109,61414,39427,34868,31742,27598,52398,52503,36327,75648,24635,47840,50639,32092,44866,27602,53153,50208,48460,28108,18258,29026,31616,64712,29505,59532]},"columns":[{"id":"country","name":"country","type":"character","cell":"function(cell) {\n            return '<a href=\"https://wikipedia.org/wiki/' + cell.value + '\">' + cell.value + '<\/a>'\n          }","html":true},{"id":"flags","name":"flags","type":"character","width":70},{"id":"디지털정부","name":"디지털정부","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"align":"center"},{"id":"gdp","name":"gdp","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"width":100},{"id":"gdp_per_capita","name":"gdp_per_capita","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}}}],"minRows":10,"highlight":true,"style":{"fontSize":"17px"},"dataKey":"056c15c5c94bf4f103e53932acd03fba"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.cell"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-777f47ced81cf046d7ac" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-777f47ced81cf046d7ac">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"country":["United States","United Kingdom","Finland","Germany","Sweden","Korea, South","Denmark","Netherlands","Norway","France","Australia","Japan","Canada","Estonia","Switzerland","Israel","Ireland","Austria","New Zealand","Spain","Italy","Lithuania","Portugal","Belgium","Poland","Czech Republic","Slovakia","Iceland","Latvia","Slovenia","Hungary","Chile","Colombia","Mexico","Greece","Turkey"],"flags":["🇺🇸","🇬🇧","🇫🇮","🇩🇪","🇸🇪","🇰🇷","🇩🇰","🇳🇱","🇳🇴","🇫🇷","🇦🇺","🇯🇵","🇨🇦","🇪🇪","🇨🇭","🇮🇱","🇮🇪","🇦🇹","🇳🇿","🇪🇸","🇮🇹","🇱🇹","🇵🇹","🇧🇪","🇵🇱","🇨🇿","🇸🇰","🇮🇸","🇱🇻","🇸🇮","🇭🇺","🇨🇱","🇨🇴","🇲🇽","🇬🇷","🇹🇷"],"AI_순위":[1,2,3,4,5,7,8,9,10,11,12,13,14,17,18,20,21,22,23,24,25,26,27,29,31,32,34,35,36,39,41,47,51,55,61,67],"gdp":[19391,2857,247,4188,505,1973,296,900,324,2876,1192,5487,1714,42,548,333,364,462,197,1770,2387,91,326,544,1102,385,172,18,54,72,275,445,709,2358,297,2140],"gdp_per_capita":[59532,43269,44866,50639,50208,38335,51364,52503,61414,42850,48460,43279,46705,31742,64712,38262,75648,52398,41109,37998,39427,32092,31673,47840,29026,36327,31616,53153,27598,34868,28108,24635,14507,18258,27602,29505]},"columns":[{"id":"country","name":"country","type":"character","cell":"function(cell) {\n            return '<a href=\"https://wikipedia.org/wiki/' + cell.value + '\">' + cell.value + '<\/a>'\n          }","html":true},{"id":"flags","name":"flags","type":"character","width":70},{"id":"AI_순위","name":"AI_순위","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"align":"center"},{"id":"gdp","name":"gdp","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"width":100},{"id":"gdp_per_capita","name":"gdp_per_capita","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}}}],"minRows":10,"highlight":true,"style":{"fontSize":"17px"},"dataKey":"d422f7e7f3e9e7f76ccfe51269212e7b"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.cell"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-4-3">
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-dca215de8abdde0c331d" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-dca215de8abdde0c331d">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"country":["United States","United Kingdom","Finland","Germany","Sweden","Korea, South","Denmark","Netherlands","Norway","France","Australia","Japan","Canada","Estonia","Switzerland","Israel","Ireland","Austria","New Zealand","Spain","Italy","Lithuania","Portugal","Belgium","Poland","Czech Republic","Slovakia","Iceland","Latvia","Slovenia","Hungary","Chile","Colombia","Mexico","Greece","Turkey"],"flags":["🇺🇸","🇬🇧","🇫🇮","🇩🇪","🇸🇪","🇰🇷","🇩🇰","🇳🇱","🇳🇴","🇫🇷","🇦🇺","🇯🇵","🇨🇦","🇪🇪","🇨🇭","🇮🇱","🇮🇪","🇦🇹","🇳🇿","🇪🇸","🇮🇹","🇱🇹","🇵🇹","🇧🇪","🇵🇱","🇨🇿","🇸🇰","🇮🇸","🇱🇻","🇸🇮","🇭🇺","🇨🇱","🇨🇴","🇲🇽","🇬🇷","🇹🇷"],"데이터경제":[1,2,"NA",13,8,5,"NA","NA","NA",6,9,11,7,"NA",4,"NA",15,"NA",12,14,16,"NA",17,"NA",21,10,"NA","NA","NA","NA",26,20,"NA",18,23,29],"gdp":[19391,2857,247,4188,505,1973,296,900,324,2876,1192,5487,1714,42,548,333,364,462,197,1770,2387,91,326,544,1102,385,172,18,54,72,275,445,709,2358,297,2140],"gdp_per_capita":[59532,43269,44866,50639,50208,38335,51364,52503,61414,42850,48460,43279,46705,31742,64712,38262,75648,52398,41109,37998,39427,32092,31673,47840,29026,36327,31616,53153,27598,34868,28108,24635,14507,18258,27602,29505]},"columns":[{"id":"country","name":"country","type":"character","cell":"function(cell) {\n            return '<a href=\"https://wikipedia.org/wiki/' + cell.value + '\">' + cell.value + '<\/a>'\n          }","html":true},{"id":"flags","name":"flags","type":"character","width":70},{"id":"데이터경제","name":"데이터경제","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"align":"center"},{"id":"gdp","name":"gdp","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"width":100},{"id":"gdp_per_capita","name":"gdp_per_capita","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}}}],"minRows":10,"highlight":true,"style":{"fontSize":"17px"},"dataKey":"0fddc98b387f47672f641ec43e4b7071"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.cell"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-4-4">
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-4287fdd8b1e98e1204fe" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-4287fdd8b1e98e1204fe">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"country":["Korea, South","Japan","Germany","Sweden","Denmark","United States","Italy","Belgium","Netherlands","Spain","Austria","France","Slovakia","Canada","Switzerland","Slovenia","Australia","Chile","Colombia","Czech Republic","Estonia","Finland","Greece","Hungary","Iceland","Ireland","Israel","Latvia","Lithuania","Mexico","New Zealand","Norway","Poland","Portugal","Turkey","United Kingdom"],"flags":["🇰🇷","🇯🇵","🇩🇪","🇸🇪","🇩🇰","🇺🇸","🇮🇹","🇧🇪","🇳🇱","🇪🇸","🇦🇹","🇫🇷","🇸🇰","🇨🇦","🇨🇭","🇸🇮","🇦🇺","🇨🇱","🇨🇴","🇨🇿","🇪🇪","🇫🇮","🇬🇷","🇭🇺","🇮🇸","🇮🇪","🇮🇱","🇱🇻","🇱🇹","🇲🇽","🇳🇿","🇳🇴","🇵🇱","🇵🇹","🇹🇷","🇬🇧"],"로봇_순위":[2,3,4,5,6,9,10,11,12,13,14,16,17,18,19,20,"NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA"],"gdp":[1973,5487,4188,505,296,19391,2387,544,900,1770,462,2876,172,1714,548,72,1192,445,709,385,42,247,297,275,18,364,333,54,91,2358,197,324,1102,326,2140,2857],"gdp_per_capita":[38335,43279,50639,50208,51364,59532,39427,47840,52503,37998,52398,42850,31616,46705,64712,34868,48460,24635,14507,36327,31742,44866,27602,28108,53153,75648,38262,27598,32092,18258,41109,61414,29026,31673,29505,43269]},"columns":[{"id":"country","name":"country","type":"character","cell":"function(cell) {\n            return '<a href=\"https://wikipedia.org/wiki/' + cell.value + '\">' + cell.value + '<\/a>'\n          }","html":true},{"id":"flags","name":"flags","type":"character","width":70},{"id":"로봇_순위","name":"로봇_순위","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"align":"center"},{"id":"gdp","name":"gdp","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"width":100},{"id":"gdp_per_capita","name":"gdp_per_capita","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}}}],"minRows":10,"highlight":true,"style":{"fontSize":"17px"},"dataKey":"ee7c03182789a21bc4396834b39343ba"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.cell"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-4-5">
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-493ea9c7983e2280e1e0" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-493ea9c7983e2280e1e0">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"country":["United States","Netherlands","Switzerland","Japan","Germany","Sweden","United Kingdom","Denmark","Finland","Korea, South","Canada","France","Australia","Norway","New Zealand","Israel","Austria","Belgium","Spain","Ireland","Iceland","Italy","Estonia","Czech Republic","Chile","Portugal","Slovenia","Poland","Lithuania","Latvia","Slovakia","Hungary","Mexico","Colombia","Greece","Turkey"],"flags":["🇺🇸","🇳🇱","🇨🇭","🇯🇵","🇩🇪","🇸🇪","🇬🇧","🇩🇰","🇫🇮","🇰🇷","🇨🇦","🇫🇷","🇦🇺","🇳🇴","🇳🇿","🇮🇱","🇦🇹","🇧🇪","🇪🇸","🇮🇪","🇮🇸","🇮🇹","🇪🇪","🇨🇿","🇨🇱","🇵🇹","🇸🇮","🇵🇱","🇱🇹","🇱🇻","🇸🇰","🇭🇺","🇲🇽","🇨🇴","🇬🇷","🇹🇷"],"WEF_순위":[1,3,4,5,6,7,8,9,10,12,13,14,15,16,18,19,20,21,22,23,25,29,30,31,32,33,34,36,38,40,41,46,48,57,59,61],"gdp":[19391,900,548,5487,4188,505,2857,296,247,1973,1714,2876,1192,324,197,333,462,544,1770,364,18,2387,42,385,445,326,72,1102,91,54,172,275,2358,709,297,2140],"gdp_per_capita":[59532,52503,64712,43279,50639,50208,43269,51364,44866,38335,46705,42850,48460,61414,41109,38262,52398,47840,37998,75648,53153,39427,31742,36327,24635,31673,34868,29026,32092,27598,31616,28108,18258,14507,27602,29505]},"columns":[{"id":"country","name":"country","type":"character","cell":"function(cell) {\n            return '<a href=\"https://wikipedia.org/wiki/' + cell.value + '\">' + cell.value + '<\/a>'\n          }","html":true},{"id":"flags","name":"flags","type":"character","width":70},{"id":"WEF_순위","name":"WEF_순위","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"align":"center"},{"id":"gdp","name":"gdp","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"width":100},{"id":"gdp_per_capita","name":"gdp_per_capita","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}}}],"minRows":10,"highlight":true,"style":{"fontSize":"17px"},"dataKey":"41cbc9bb21b98c05dda7295b640e9322"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.cell"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-4-6">
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-84919d31979bed5d9a97" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-84919d31979bed5d9a97">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"country":["United States","Denmark","Sweden","Switzerland","Netherlands","Korea, South","Norway","Finland","Canada","United Kingdom","Australia","Austria","Germany","Israel","Ireland","Estonia","New Zealand","Iceland","France","Belgium","Japan","Lithuania","Slovenia","Poland","Spain","Czech Republic","Portugal","Latvia","Chile","Italy","Turkey","Greece","Hungary","Slovakia","Mexico","Colombia"],"flags":["🇺🇸","🇩🇰","🇸🇪","🇨🇭","🇳🇱","🇰🇷","🇳🇴","🇫🇮","🇨🇦","🇬🇧","🇦🇺","🇦🇹","🇩🇪","🇮🇱","🇮🇪","🇪🇪","🇳🇿","🇮🇸","🇫🇷","🇧🇪","🇯🇵","🇱🇹","🇸🇮","🇵🇱","🇪🇸","🇨🇿","🇵🇹","🇱🇻","🇨🇱","🇮🇹","🇹🇷","🇬🇷","🇭🇺","🇸🇰","🇲🇽","🇨🇴"],"IMD_순위":[1,3,4,6,7,8,9,10,12,13,15,17,18,19,20,21,22,23,24,25,27,29,31,32,33,35,37,38,41,42,44,46,47,50,54,61],"gdp":[19391,296,505,548,900,1973,324,247,1714,2857,1192,462,4188,333,364,42,197,18,2876,544,5487,91,72,1102,1770,385,326,54,445,2387,2140,297,275,172,2358,709],"gdp_per_capita":[59532,51364,50208,64712,52503,38335,61414,44866,46705,43269,48460,52398,50639,38262,75648,31742,41109,53153,42850,47840,43279,32092,34868,29026,37998,36327,31673,27598,24635,39427,29505,27602,28108,31616,18258,14507]},"columns":[{"id":"country","name":"country","type":"character","cell":"function(cell) {\n            return '<a href=\"https://wikipedia.org/wiki/' + cell.value + '\">' + cell.value + '<\/a>'\n          }","html":true},{"id":"flags","name":"flags","type":"character","width":70},{"id":"IMD_순위","name":"IMD_순위","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"align":"center"},{"id":"gdp","name":"gdp","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"width":100},{"id":"gdp_per_capita","name":"gdp_per_capita","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}}}],"minRows":10,"highlight":true,"style":{"fontSize":"17px"},"dataKey":"3e25d2054284ff3a5ae009b09ede7c4f"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.cell"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="종합" class="slide level2 smaller scrollable">
+<h2>종합</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">표</a></li><li><a href="#tabset-5-2">시각화</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-69de0cf4736130fd1283" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-69de0cf4736130fd1283">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"country":["Korea, South","Japan","Germany","Sweden","Denmark","United States","Italy","Belgium","Netherlands","Spain","Austria","France","Slovakia","Canada","Switzerland","Slovenia","Australia","Chile","Colombia","Czech Republic","Estonia","Finland","Greece","Hungary","Iceland","Ireland","Israel","Latvia","Lithuania","Mexico","New Zealand","Norway","Poland","Portugal","Turkey","United Kingdom"],"flags":["🇰🇷","🇯🇵","🇩🇪","🇸🇪","🇩🇰","🇺🇸","🇮🇹","🇧🇪","🇳🇱","🇪🇸","🇦🇹","🇫🇷","🇸🇰","🇨🇦","🇨🇭","🇸🇮","🇦🇺","🇨🇱","🇨🇴","🇨🇿","🇪🇪","🇫🇮","🇬🇷","🇭🇺","🇮🇸","🇮🇪","🇮🇱","🇱🇻","🇱🇹","🇲🇽","🇳🇿","🇳🇴","🇵🇱","🇵🇹","🇹🇷","🇬🇧"],"정부":[1,5,26,33,4,"NA",15,25,21,7,20,11,"NA",6,"NA",17,"NA",24,3,22,18,28,29,"NA",32,23,8,19,27,"NA",12,13,"NA",10,"NA",2],"AI":[7,13,4,5,8,1,25,29,9,24,22,11,34,14,18,39,12,47,51,32,17,3,61,41,35,21,20,36,26,55,23,10,31,27,67,2],"데이터경제":[5,11,13,8,"NA",1,16,"NA","NA",14,"NA",6,"NA",7,4,"NA",9,20,"NA",10,"NA","NA",23,26,"NA",15,"NA","NA","NA",18,12,"NA",21,17,29,2],"로봇":[2,3,4,5,6,9,10,11,12,13,14,16,17,18,19,20,"NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA","NA"],"WEF":[12,5,6,7,9,1,29,21,3,22,20,14,41,13,4,34,15,32,57,31,30,10,59,46,25,23,19,40,38,48,18,16,36,33,61,8],"IMD":[8,27,18,4,3,1,42,25,7,33,17,24,50,12,6,31,15,41,61,35,21,10,46,47,23,20,19,38,29,54,22,9,32,37,44,13]},"columns":[{"id":"country","name":"country","type":"character","cell":"function(cell) {\n            return '<a href=\"https://wikipedia.org/wiki/' + cell.value + '\">' + cell.value + '<\/a>'\n          }","html":true,"width":170},{"id":"flags","name":"flags","type":"character","width":70},{"id":"정부","name":"정부","type":"numeric","width":70,"align":"center"},{"id":"AI","name":"AI","type":"numeric","width":70,"align":"center"},{"id":"데이터경제","name":"데이터경제","type":"numeric","format":{"cell":{"separators":true},"aggregated":{"separators":true}},"width":125,"align":"center"},{"id":"로봇","name":"로봇","type":"numeric","width":70,"align":"center"},{"id":"WEF","name":"WEF","type":"numeric","width":70,"align":"center"},{"id":"IMD","name":"IMD","type":"numeric","width":70,"align":"center"}],"minRows":10,"highlight":true,"style":{"fontSize":"17px"},"dataKey":"54678a20e6529c5c6066116ffaf635d2"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.cell"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-5-2">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="htmlwidget-206bd49f4cdcdf8a5f2b" style="width:600px;height:500px;" class="plotly html-widget "></div>
+<script type="application/json" data-for="htmlwidget-206bd49f4cdcdf8a5f2b">{"x":{"visdat":{"76f42c8ebde":["function () ","plotlyVisDat"]},"cur_data":"76f42c8ebde","attrs":{"76f42c8ebde":{"x":{},"y":{},"hovertemplate":{},"color":{},"colors":["red","darkgray"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","mode":"markers","opacity":1,"inherit":true},"76f42c8ebde.1":{"x":{},"y":{},"hovertemplate":{},"color":{},"colors":["red","darkgray"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"text":{},"type":"scatter","mode":"text","showlegend":false,"textposition":"top right","inherit":true}},"layout":{"width":600,"height":500,"margin":{"b":40,"l":60,"t":25,"r":10},"autosize":true,"xaxis":{"domain":[0,1],"automargin":true,"title":"UMAP1"},"yaxis":{"domain":[0,1],"automargin":true,"title":"UMAP2"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[0.244467124342918,-1.85730493068695,0.0031254799105227,0.590746283531189,-0.964712262153625,-1.90159058570862,0.397651255130768],"y":[-1.95748603343964,0.0582564994692802,1.15974318981171,-1.42949509620667,-2.39067196846008,-0.363765388727188,-1.39698612689972],"hovertemplate":["Country: France<br />WEF Rank: 14<br />IMD Rank: 24<br />AI Rank: 11<br />데이터경제 Rank: 6","Country: Germany<br />WEF Rank: 6<br />IMD Rank: 18<br />AI Rank: 4<br />데이터경제 Rank: 13","Country: Italy<br />WEF Rank: 29<br />IMD Rank: 42<br />AI Rank: 25<br />데이터경제 Rank: 16","Country: Japan<br />WEF Rank: 5<br />IMD Rank: 27<br />AI Rank: 13<br />데이터경제 Rank: 11","Country: Korea, South<br />WEF Rank: 12<br />IMD Rank: 8<br />AI Rank: 7<br />데이터경제 Rank: 5","Country: United Kingdom<br />WEF Rank: 8<br />IMD Rank: 13<br />AI Rank: 2<br />데이터경제 Rank: 2","Country: United States<br />WEF Rank: 1<br />IMD Rank: 1<br />AI Rank: 1<br />데이터경제 Rank: 1"],"type":"scatter","mode":"markers","opacity":1,"name":"30-50 클럽","marker":{"color":"rgba(255,0,0,1)","line":{"color":"rgba(255,0,0,1)"}},"textfont":{"color":"rgba(255,0,0,1)"},"error_y":{"color":"rgba(255,0,0,1)"},"error_x":{"color":"rgba(255,0,0,1)"},"line":{"color":"rgba(255,0,0,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[-0.574930012226105,-1.4489643573761,0.494113743305206,0.694363832473755,0.948169589042664,2.01871919631958,-2.21673274040222,1.71876668930054,-0.816000580787659,0.129939883947372,1.24533295631409,-0.280623137950897,-1.19546437263489,-1.8849219083786,2.11407971382141],"y":[-2.16909980773926,-0.144654706120491,1.70060765743256,0.0120574869215488,2.29690265655518,1.14602184295654,-0.933411598205566,2.53166270256042,0.556423664093018,1.63511061668396,0.273706793785095,0.785386741161346,-2.24681234359741,-1.88116693496704,1.74933171272278],"hovertemplate":["Country: Australia<br />WEF Rank: 15<br />IMD Rank: 15<br />AI Rank: 12<br />데이터경제 Rank: 9","Country: Canada<br />WEF Rank: 13<br />IMD Rank: 12<br />AI Rank: 14<br />데이터경제 Rank: 7","Country: Chile<br />WEF Rank: 32<br />IMD Rank: 41<br />AI Rank: 47<br />데이터경제 Rank: 20","Country: Czech Republic<br />WEF Rank: 31<br />IMD Rank: 35<br />AI Rank: 32<br />데이터경제 Rank: 10","Country: Greece<br />WEF Rank: 59<br />IMD Rank: 46<br />AI Rank: 61<br />데이터경제 Rank: 23","Country: Hungary<br />WEF Rank: 46<br />IMD Rank: 47<br />AI Rank: 41<br />데이터경제 Rank: 26","Country: Ireland<br />WEF Rank: 23<br />IMD Rank: 20<br />AI Rank: 21<br />데이터경제 Rank: 15","Country: Mexico<br />WEF Rank: 48<br />IMD Rank: 54<br />AI Rank: 55<br />데이터경제 Rank: 18","Country: New Zealand<br />WEF Rank: 18<br />IMD Rank: 22<br />AI Rank: 23<br />데이터경제 Rank: 12","Country: Poland<br />WEF Rank: 36<br />IMD Rank: 32<br />AI Rank: 31<br />데이터경제 Rank: 21","Country: Portugal<br />WEF Rank: 33<br />IMD Rank: 37<br />AI Rank: 27<br />데이터경제 Rank: 17","Country: Spain<br />WEF Rank: 22<br />IMD Rank: 33<br />AI Rank: 24<br />데이터경제 Rank: 14","Country: Sweden<br />WEF Rank: 7<br />IMD Rank: 4<br />AI Rank: 5<br />데이터경제 Rank: 8","Country: Switzerland<br />WEF Rank: 4<br />IMD Rank: 6<br />AI Rank: 18<br />데이터경제 Rank: 4","Country: Turkey<br />WEF Rank: 61<br />IMD Rank: 44<br />AI Rank: 67<br />데이터경제 Rank: 29"],"type":"scatter","mode":"markers","opacity":1,"name":"기타","marker":{"color":"rgba(169,169,169,1)","line":{"color":"rgba(169,169,169,1)"}},"textfont":{"color":"rgba(169,169,169,1)"},"error_y":{"color":"rgba(169,169,169,1)"},"error_x":{"color":"rgba(169,169,169,1)"},"line":{"color":"rgba(169,169,169,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[0.244467124342918,-1.85730493068695,0.0031254799105227,0.590746283531189,-0.964712262153625,-1.90159058570862,0.397651255130768],"y":[-1.95748603343964,0.0582564994692802,1.15974318981171,-1.42949509620667,-2.39067196846008,-0.363765388727188,-1.39698612689972],"hovertemplate":["Country: France<br />WEF Rank: 14<br />IMD Rank: 24<br />AI Rank: 11<br />데이터경제 Rank: 6","Country: Germany<br />WEF Rank: 6<br />IMD Rank: 18<br />AI Rank: 4<br />데이터경제 Rank: 13","Country: Italy<br />WEF Rank: 29<br />IMD Rank: 42<br />AI Rank: 25<br />데이터경제 Rank: 16","Country: Japan<br />WEF Rank: 5<br />IMD Rank: 27<br />AI Rank: 13<br />데이터경제 Rank: 11","Country: Korea, South<br />WEF Rank: 12<br />IMD Rank: 8<br />AI Rank: 7<br />데이터경제 Rank: 5","Country: United Kingdom<br />WEF Rank: 8<br />IMD Rank: 13<br />AI Rank: 2<br />데이터경제 Rank: 2","Country: United States<br />WEF Rank: 1<br />IMD Rank: 1<br />AI Rank: 1<br />데이터경제 Rank: 1"],"text":["France","Germany","Italy","Japan","Korea, South","United Kingdom","United States"],"type":"scatter","mode":"text","showlegend":false,"textposition":["top right","top right","top right","top right","top right","top right","top right"],"name":"30-50 클럽","marker":{"color":"rgba(255,0,0,1)","line":{"color":"rgba(255,0,0,1)"}},"textfont":{"color":"rgba(255,0,0,1)"},"error_y":{"color":"rgba(255,0,0,1)"},"error_x":{"color":"rgba(255,0,0,1)"},"line":{"color":"rgba(255,0,0,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[-0.574930012226105,-1.4489643573761,0.494113743305206,0.694363832473755,0.948169589042664,2.01871919631958,-2.21673274040222,1.71876668930054,-0.816000580787659,0.129939883947372,1.24533295631409,-0.280623137950897,-1.19546437263489,-1.8849219083786,2.11407971382141],"y":[-2.16909980773926,-0.144654706120491,1.70060765743256,0.0120574869215488,2.29690265655518,1.14602184295654,-0.933411598205566,2.53166270256042,0.556423664093018,1.63511061668396,0.273706793785095,0.785386741161346,-2.24681234359741,-1.88116693496704,1.74933171272278],"hovertemplate":["Country: Australia<br />WEF Rank: 15<br />IMD Rank: 15<br />AI Rank: 12<br />데이터경제 Rank: 9","Country: Canada<br />WEF Rank: 13<br />IMD Rank: 12<br />AI Rank: 14<br />데이터경제 Rank: 7","Country: Chile<br />WEF Rank: 32<br />IMD Rank: 41<br />AI Rank: 47<br />데이터경제 Rank: 20","Country: Czech Republic<br />WEF Rank: 31<br />IMD Rank: 35<br />AI Rank: 32<br />데이터경제 Rank: 10","Country: Greece<br />WEF Rank: 59<br />IMD Rank: 46<br />AI Rank: 61<br />데이터경제 Rank: 23","Country: Hungary<br />WEF Rank: 46<br />IMD Rank: 47<br />AI Rank: 41<br />데이터경제 Rank: 26","Country: Ireland<br />WEF Rank: 23<br />IMD Rank: 20<br />AI Rank: 21<br />데이터경제 Rank: 15","Country: Mexico<br />WEF Rank: 48<br />IMD Rank: 54<br />AI Rank: 55<br />데이터경제 Rank: 18","Country: New Zealand<br />WEF Rank: 18<br />IMD Rank: 22<br />AI Rank: 23<br />데이터경제 Rank: 12","Country: Poland<br />WEF Rank: 36<br />IMD Rank: 32<br />AI Rank: 31<br />데이터경제 Rank: 21","Country: Portugal<br />WEF Rank: 33<br />IMD Rank: 37<br />AI Rank: 27<br />데이터경제 Rank: 17","Country: Spain<br />WEF Rank: 22<br />IMD Rank: 33<br />AI Rank: 24<br />데이터경제 Rank: 14","Country: Sweden<br />WEF Rank: 7<br />IMD Rank: 4<br />AI Rank: 5<br />데이터경제 Rank: 8","Country: Switzerland<br />WEF Rank: 4<br />IMD Rank: 6<br />AI Rank: 18<br />데이터경제 Rank: 4","Country: Turkey<br />WEF Rank: 61<br />IMD Rank: 44<br />AI Rank: 67<br />데이터경제 Rank: 29"],"text":["Australia","Canada","Chile","Czech Republic","Greece","Hungary","Ireland","Mexico","New Zealand","Poland","Portugal","Spain","Sweden","Switzerland","Turkey"],"type":"scatter","mode":"text","showlegend":false,"textposition":["top right","top right","top right","top right","top right","top right","top right","top right","top right","top right","top right","top right","top right","top right","top right"],"name":"기타","marker":{"color":"rgba(169,169,169,1)","line":{"color":"rgba(169,169,169,1)"}},"textfont":{"color":"rgba(169,169,169,1)"},"error_y":{"color":"rgba(169,169,169,1)"},"error_x":{"color":"rgba(169,169,169,1)"},"line":{"color":"rgba(169,169,169,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<img src="_extensions/padsInsper/insper/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p>한국 R 사용자회 <a href="https://r2bit.com/chatGPT/">chatGPT</a>. theme <a href="https://github.com/padsInsper/quarto-insper-theme">insper</a> 소스코드 <a href="https://github.com/bit2r/bitSlide">GitHub</a>.</p>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-krila2020" class="csl-entry" role="doc-biblioentry">
+이광춘. (2020). 디지털 뉴딜, 지역균형 문제 해결과 지역균형 발전방안. <em>지방자치이슈와 포럼</em>, <em>33</em>, 88–101.
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        target: function(trigger) {
+          return trigger.previousElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto-reveal',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+    
+
+</body></html>

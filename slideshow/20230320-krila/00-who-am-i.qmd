@@ -1,0 +1,47 @@
+## 강사소개 & 강의 개요
+
+::: panel-tabset
+### 강사소개
+
+::: {layout-ncol="2"}
+### AI 아바타
+
+![](../../img/profile.png){.absolute top="0" right="0" width="300"}
+
+### 주요경력 및 학력
+
+-   비영리법인 한국 R 사용자회: 기술 이사
+
+-   TCS: GS 칼텍스 디지털 아카데미 강사
+
+-   삼정 KPMG: Lighthouse AI 기술총괄
+
+-   웹젠: 데이터 과학자 TD
+
+-   현대자동차: 차량용 반도체 개발구매 <br>
+
+    <hr>
+
+-   KAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공
+
+-   [RStudio Instructor](https://education.rstudio.com/trainers/people/lee+kwangchun/) - Tidyverse
+
+-   [Seoul R Meetup Organizer](https://r2bit.com/seoul-r/)
+:::
+
+### 강의개요
+
+::: {layout-ncol="2"}
+
+![](../../img/krila_logo.jpg)
+
+### 강의상세
+
+- 날짜 : 2023. 3. 20.(월) 16:30~18:00
+- 장소 : 한국지방행정연구원 2층 대강당
+- 주최 : 자치분권제도실, 챗GPT연구회
+- 대상 : 관심있는 사람 누구나
+- 내용 : : 챗GPT 등 인공지능 트렌드 관련 발표 및 지방행정 응용 가능성 논의
+
+:::
+:::
