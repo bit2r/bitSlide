@@ -942,7 +942,7 @@
     "href": "slideshow/20230320-krila/index.html#목차",
     "title": "챗GPT와 지방행정",
     "section": "목차",
-    "text": "목차\n\n대한민국 경쟁력\nchatGPT\n체험 삶의 현장\n\nGPT 3 대장 + \\(\\alpha\\)"
+    "text": "목차\n\n대한민국 경쟁력\nchatGPT\n체험 삶의 현장\n\nGPT 3 대장 + \\(\\alpha\\)\n사무생산성 전쟁"
   },
   {
     "objectID": "slideshow/20230320-krila/index.html#강사소개-강의-개요",
@@ -1195,5 +1195,75 @@
     "title": "챗GPT와 지방행정",
     "section": "",
     "text": "질문?"
+  },
+  {
+    "objectID": "slideshow/20230320-krila/index.html#현재와-미래",
+    "href": "slideshow/20230320-krila/index.html#현재와-미래",
+    "title": "챗GPT와 지방행정",
+    "section": "현재와 미래",
+    "text": "현재와 미래\n\n\n현재\n\n\n\n\n\n\n\n\n미래\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "slideshow/20230320-krila/index.html#문서-제작방식",
+    "href": "slideshow/20230320-krila/index.html#문서-제작방식",
+    "title": "챗GPT와 지방행정",
+    "section": "문서 제작방식",
+    "text": "문서 제작방식\n\n\nWYSWYG\n\n\n\n\n\n\n\n\nWYSWYM"
+  },
+  {
+    "objectID": "slideshow/20230320-krila/index.html#글쓰기-들어가며",
+    "href": "slideshow/20230320-krila/index.html#글쓰기-들어가며",
+    "title": "챗GPT와 지방행정",
+    "section": "글쓰기 들어가며",
+    "text": "글쓰기 들어가며\n\n글쓰기 패러다임글쓰기 도구문서 결과물"
+  },
+  {
+    "objectID": "slideshow/20230320-krila/index.html#위지윅-컴파일-quarto",
+    "href": "slideshow/20230320-krila/index.html#위지윅-컴파일-quarto",
+    "title": "챗GPT와 지방행정",
+    "section": "위지윅 → 컴파일 (Quarto)",
+    "text": "위지윅 → 컴파일 (Quarto)\n\nWYSWYG vs WYSWYM쿼토(Quarto)"
+  },
+  {
+    "objectID": "slideshow/20230320-krila/index.html#문서-공장",
+    "href": "slideshow/20230320-krila/index.html#문서-공장",
+    "title": "챗GPT와 지방행정",
+    "section": "문서 공장",
+    "text": "문서 공장\n\nR (.Rmd)파이썬 (.ipynb)쿼토 (.qmd)쿼토 (.qmd)\n\n\n\n\n\nR\n\n\n\n\n\n\n\n파이썬\n\n\n\n\n\n\n\nQuarto: R\n\n\n\n\n\n\n\nQuarto: 파이썬"
+  },
+  {
+    "objectID": "slideshow/20230320-krila/index.html#오피스-전쟁",
+    "href": "slideshow/20230320-krila/index.html#오피스-전쟁",
+    "title": "챗GPT와 지방행정",
+    "section": "오피스 전쟁",
+    "text": "오피스 전쟁\n\n\n\n\n\n\n\n\n\n\n항목\nMS 오피스 1\n구글 오피스 2\n리브레 오피스 3\n한컴 오피스 4\n\n\n\n\n문서 작성 및 편집\n워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공\n구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공\n라이터, 캘크, 임프레스 등의 데스크톱 앱 제공\n한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공\n\n\n협업 및 공유\n원드라이브 통해 문서를 클라우드에 저장, 공유 가능. 다수가 동시에 문서를 수정가능, 실시간 보기 어려움\n구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능\n드롭박스나 구글 드라이브와 연동. 문서를 클라우드에 저장, 공유 가능. 다수가 동시에 문서를 수정가능 실시간 보기 어려움\n넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 다수가 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n\n\n이메일 및 채팅\nOutlook을 통해 비즈니스 메일 제공. Teams 통해 채팅 및 화상회의 가능\nGmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능\n이메일 및 채팅 기능 없음\n이메일 및 채팅 기능 없음\n\n\n가격\n1인당 월 5~20달러 다양한 요금제. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작\n1인당 월 6~18달러까지 다양한 요금제 제공\n완전 무료\n개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요\n\n\n\nhttps://www.microsoft.com/ko-kr/microsoft-365/businesshttps://workspace.google.com/intl/ko_kr/https://www.libreoffice.org/https://www.hancom.com/product/productMain.do"
+  },
+  {
+    "objectID": "slideshow/20230320-krila/index.html#마이크로소프트",
+    "href": "slideshow/20230320-krila/index.html#마이크로소프트",
+    "title": "챗GPT와 지방행정",
+    "section": "마이크로소프트",
+    "text": "마이크로소프트\n\n업무방식동작방식워드엑셀PPT아웃룩팀즈채팅줌미팅\n\n\nCLI → GUI → CLI (Prompt)\n\n\n\nMicrosoft 365 Copilot은 Apps와 그래프와 LLM이 유기적으로 동작하여 최선의 결과를 제시함.\n\n\n\n미팅 노트, 작성 문서, 템플릿 등을 넣어주면 워드문서를 자동생성하고 “Summary” 도 자동으로 생성하여 삽입.\n\n\n\n엑셀에 나와 있는 데이터를 다양한 표와 그래프로 생성하고 분석결과에 대한 인사이트도 제공\n\n\n\n제안서 문서가 있는 경우 이를 PPT로 초안을 자동 생성함.\n\n\n\n전자우편에 담긴 정보를 분석하여 제공하고 초안도 작성함.\n\n\n\n팀즈를 통한 회의가 진해오디면 회의록 작성, Action Item, 업무 담당자 지정 등을 부조종사가 대략적인 업무를 정리함.\n\n\n\n관련 정보를 모두 가져와서 사용자가 제시하는 질문에 대답을 하고 방향도 제시함.\n\n\n\n미팅에 늦게 들어갔을 경우 채팅창에 부조종사를 호출하여 진행된 미팅에 대한 전반적인 사항을 파악할 수 있음."
+  },
+  {
+    "objectID": "slideshow/20230320-krila/index.html#구글",
+    "href": "slideshow/20230320-krila/index.html#구글",
+    "title": "챗GPT와 지방행정",
+    "section": "구글",
+    "text": "구글\nGoogle Worksapce에 AI (GPT)를 탑재하는 홍보영상을 게시하였으나 실제 사용까지는 다소 시간이 걸릴 것으로 보인다.\nA new era for AI and Google Workspace\n\n적용제품업무방식구글 Docs구글 Gmail\n\n\n\nGmail: 초안 작성, 답장, 요약 및 우선순위 지정\nDocs: 브레인스토밍, 교정, 작성, 재작성\nSlide: 자동 생성된 이미지, 오디오, 동영상으로 창의적인 작업\nSheets: 자동 완성, 수식 생성, 상황별 분류를 통해 원시 데이터에서 인사이트와 분석.\nMeet: 새로운 배경을 생성하고 메모를 캡처\nChat: 작업을 완료하기 위한 워크플로우 활성화\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "slideshow/20230320-krila/index.html#오피스-전쟁-1",
+    "href": "slideshow/20230320-krila/index.html#오피스-전쟁-1",
+    "title": "챗GPT와 지방행정",
+    "section": "오피스 전쟁",
+    "text": "오피스 전쟁\n\n\n\n\n\n\n\n\n\n\n항목\nMS 오피스 1\n구글 오피스 2\n리브레 오피스 3\n한컴 오피스 4\n\n\n\n\n문서 작성 및 편집\n워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공\n구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공\n라이터, 캘크, 임프레스 등의 데스크톱 앱 제공\n한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공\n\n\n협업 및 공유\n원드라이브 통해 문서를 클라우드에 저장, 공유 가능. 다수가 동시에 문서를 수정가능, 실시간 보기 어려움\n구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능\n드롭박스나 구글 드라이브와 연동. 문서를 클라우드에 저장, 공유 가능. 다수가 동시에 문서를 수정가능 실시간 보기 어려움\n넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 다수가 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n\n\n이메일 및 채팅\nOutlook을 통해 비즈니스 메일 제공. Teams 통해 채팅 및 화상회의 가능\nGmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능\n이메일 및 채팅 기능 없음\n이메일 및 채팅 기능 없음\n\n\n가격\n1인당 월 5~20달러 다양한 요금제. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작\n1인당 월 6~18달러까지 다양한 요금제 제공\n완전 무료\n개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요\n\n\n\nhttps://www.microsoft.com/ko-kr/microsoft-365/businesshttps://workspace.google.com/intl/ko_kr/https://www.libreoffice.org/https://www.hancom.com/product/productMain.do"
+  },
+  {
+    "objectID": "slideshow/20230320-krila/index.html#구글-a-new-era-for-ai-and-google-workspace",
+    "href": "slideshow/20230320-krila/index.html#구글-a-new-era-for-ai-and-google-workspace",
+    "title": "챗GPT와 지방행정",
+    "section": "구글 A new era for AI and Google Workspace",
+    "text": "구글 A new era for AI and Google Workspace\nGoogle Worksapce에 AI (GPT)를 탑재하는 홍보영상을 게시하였으나 실제 사용까지는 다소 시간이 걸릴 것으로 보인다.\n\n적용제품업무방식구글 Docs구글 Gmail\n\n\n\nGmail: 초안 작성, 답장, 요약 및 우선순위 지정\nDocs: 브레인스토밍, 교정, 작성, 재작성\nSlide: 자동 생성된 이미지, 오디오, 동영상으로 창의적인 작업\nSheets: 자동 완성, 수식 생성, 상황별 분류를 통해 원시 데이터에서 인사이트와 분석.\nMeet: 새로운 배경을 생성하고 메모를 캡처\nChat: 작업을 완료하기 위한 워크플로우 활성화"
   }
 ]

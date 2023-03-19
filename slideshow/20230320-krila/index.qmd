@@ -24,10 +24,11 @@ editor_options:
 
 ## 목차
 
-1. 대한민국 경쟁력
-2. chatGPT 
-3. 체험 삶의 현장  
-4. GPT 3 대장 + $\alpha$ 
+1.  대한민국 경쟁력
+2.  chatGPT
+3.  체험 삶의 현장\
+4.  GPT 3 대장 + $\alpha$
+5.  사무생산성 전쟁
 
 {{< include 00-who-am-i.qmd >}}
 
@@ -39,6 +40,7 @@ editor_options:
 
 <!-- # chatGPT -->
 
+
 {{< include chatGPT.qmd >}}
 
 <!-- # 체험 삶의 현장 -->
@@ -49,9 +51,10 @@ editor_options:
 
 {{< include ../20230324-kwangmyung/03-chatGPT-in-action.qmd >}}
 
+<!-- # 오피스 전쟁 -->
 
-# 참고문헌
+{{< include office-war.qmd >}}
 
-::: {#refs}
-:::
+<!-- # 참고문헌 -->
 
+{{< include reference.qmd >}}

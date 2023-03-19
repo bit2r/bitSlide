@@ -1,0 +1,177 @@
+
+# 오피스 전쟁
+
+## 문서 제작방식
+
+::: columns
+::: {.column width="47.5%"}
+### WYSWYG
+
+![](../202212-youtube/fig/jobshop.gif)
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="47.5%"}
+### WYSWYM
+
+![](../202212-youtube/fig/quarto_to_go.gif)
+:::
+:::
+
+## 글쓰기 들어가며
+
+::: panel-tabset
+### 글쓰기 패러다임
+
+![](../202212-youtube/fig/data-conference-three-languages.png){fig-align="center" width="800"}
+
+### 글쓰기 도구
+
+![](../202210-hongik-v2/fig/markdown-writing.png){fig-align="center" width="800"}
+
+### 문서 결과물
+
+![](../202210-hongik-v2/fig/single-sourcing-publishing.jpg){fig-align="center" width="800"}
+:::
+
+## 위지윅 → 컴파일 (Quarto)
+
+::: panel-tabset
+### WYSWYG vs WYSWYM
+
+![](../202210-hongik-v2/fig/quarto-unification.png){fig-align="center"}
+
+### 쿼토(Quarto)
+
+![](../202210-hongik-v2/fig/horst_quarto_schematic.png){fig-align="center"}
+:::
+
+## 문서 공장
+
+::: panel-tabset
+### R (.Rmd)
+
+![R](../202210-hongik-v2/fig/quarto_workflow/rmd-knitr.png)
+
+### 파이썬 (.ipynb)
+
+![파이썬](../202210-hongik-v2/fig/quarto_workflow/jupyter-alone.png)
+
+### 쿼토 (.qmd)
+
+![Quarto: R](../202210-hongik-v2/fig/quarto_workflow/qmd-knitr.png)
+
+### 쿼토 (.qmd)
+
+![Quarto: 파이썬](../202210-hongik-v2/fig/quarto_workflow/qmd-jupyter.png)
+:::
+
+## 오피스 전쟁 {.smaller}
+
+|       항목        |                                            MS 오피스 [^1]                                            |                                                  구글 오피스 [^2]                                                  |                                                  리브레 오피스 [^3]                                                  |                                                  한컴 오피스 [^4]                                                  |
+|:-------:|:-------------:|:-------------:|:-------------:|:-------------:|
+| 문서 작성 및 편집 |                          워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공                          |                               구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공                                |                                     라이터, 캘크, 임프레스 등의 데스크톱 앱 제공                                     |                                  한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공                                  |
+|   협업 및 공유    | 원드라이브 통해 문서를 클라우드에 저장, 공유 가능. 다수가 동시에 문서를 수정가능, 실시간 보기 어려움 | 구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능 | 드롭박스나 구글 드라이브와 연동. 문서를 클라우드에 저장, 공유 가능. 다수가 동시에 문서를 수정가능 실시간 보기 어려움 | 넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 다수가 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움 |
+|  이메일 및 채팅   |                 Outlook을 통해 비즈니스 메일 제공. Teams 통해 채팅 및 화상회의 가능                  |                     Gmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능                     |                                               이메일 및 채팅 기능 없음                                               |                                              이메일 및 채팅 기능 없음                                              |
+|       가격        |         1인당 월 5\~20달러 다양한 요금제. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작         |                                     1인당 월 6\~18달러까지 다양한 요금제 제공                                      |                                                      완전 무료                                                       |                            개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요                            |
+
+[^1]: https://www.microsoft.com/ko-kr/microsoft-365/business
+[^2]: https://workspace.google.com/intl/ko_kr/
+[^3]: https://www.libreoffice.org/
+[^4]: https://www.hancom.com/product/productMain.do
+
+## 마이크로소프트
+
+:::{.panel-tabset}
+
+### 업무방식 {.unnumbered}
+
+CLI &rarr; GUI &rarr; CLI (Prompt)
+
+{{< video https://youtu.be/KIbV_Y-N-8E width="600" height="400" >}}
+
+
+### 동작방식 {.unnumbered}
+
+Microsoft 365 Copilot은 Apps와  그래프와 LLM이 유기적으로 동작하여 최선의 결과를 제시함.
+
+{{< video https://youtu.be/8_lXSmlwk1s width="600" height="400" >}}
+
+
+### 워드 {.unnumbered}
+
+미팅 노트, 작성 문서, 템플릿 등을 넣어주면 워드문서를 자동생성하고 "Summary" 도 자동으로 생성하여 삽입.
+
+{{< video https://youtu.be/C8WDGKaOt2s width="600" height="400" >}}
+
+### 엑셀 {.unnumbered}
+
+엑셀에 나와 있는 데이터를 다양한 표와 그래프로 생성하고 분석결과에 대한 인사이트도 제공
+
+{{< video https://youtu.be/I-waFp6rLc0 width="600" height="400" >}}
+
+### PPT {.unnumbered}
+
+제안서 문서가 있는 경우 이를 PPT로 초안을 자동 생성함.
+
+{{< video https://youtu.be/fzoZ_f7ji5Q width="600" height="400" >}}
+
+### 아웃룩 {.unnumbered}
+
+전자우편에 담긴 정보를 분석하여 제공하고 초안도 작성함.
+
+{{< video https://youtu.be/uI5mQjTp1fI width="600" height="400" >}}
+
+### 팀즈 {.unnumbered}
+
+팀즈를 통한 회의가 진해오디면 회의록 작성, Action Item, 업무 담당자 지정 등을 부조종사가 대략적인 업무를 정리함.
+
+{{< video https://youtu.be/rLC2frnUasw width="600" height="400" >}}
+
+### 채팅 {.unnumbered}
+
+관련 정보를 모두 가져와서 사용자가 제시하는 질문에 대답을 하고 방향도 제시함.
+
+{{< video https://youtu.be/-p5LKp2FkxQ width="600" height="400" >}}
+
+### 줌미팅 {.unnumbered}
+
+미팅에 늦게 들어갔을 경우 채팅창에 부조종사를 호출하여 진행된 미팅에 대한 전반적인 사항을 파악할 수 있음.
+
+{{< video https://youtu.be/N1gpkk-MwpY width="600" height="400" >}}
+
+:::
+
+
+## 구글 [A new era for AI and Google Workspace](https://workspace.google.com/blog/product-announcements/generative-ai)
+
+Google Worksapce에 AI (GPT)를 탑재하는 홍보영상을 게시하였으나 실제 사용까지는 
+다소 시간이 걸릴 것으로 보인다.
+
+:::{.panel-tabset}
+
+### 적용제품 {.unnumbered}
+
+- **Gmail**: 초안 작성, 답장, 요약 및 우선순위 지정
+- **Docs**: 브레인스토밍, 교정, 작성, 재작성
+- **Slide**: 자동 생성된 이미지, 오디오, 동영상으로 창의적인 작업
+- **Sheets**: 자동 완성, 수식 생성, 상황별 분류를 통해 원시 데이터에서 인사이트와 분석.
+- **Meet**: 새로운 배경을 생성하고 메모를 캡처
+- **Chat**: 작업을 완료하기 위한 워크플로우 활성화
+
+### 업무방식 {.unnumbered}
+
+{{< video https://youtu.be/6DaJVZBXETE width="600" height="400" >}}
+
+### 구글 Docs {.unnumbered}
+
+![](../../img/Google_Workspace_Docs.gif)
+
+### 구글 Gmail {.unnumbered}
+
+![](../../img/Gmail_Mobile_16x9_030823.gif)
+:::
+
+
