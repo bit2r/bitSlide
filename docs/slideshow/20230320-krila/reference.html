@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>발표자료 | 한국 R 사용자회 – chatgpt</title>
+<title>발표자료 | 한국 R 사용자회 – reference</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,25 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
 }
 </style>
 
@@ -36,9 +55,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -70,7 +86,7 @@ ga('send', {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -106,111 +122,19 @@ ga('send', {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 
-<section id="거대-언어모형" class="level1 page-columns page-full">
-<h1>거대 언어모형</h1>
-<section id="chatgpt-란" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="chatgpt-란">chatGPT 란?</h2>
-<div class="panel-tabset page-columns page-full">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">PNG와 JPEG</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Foundation 모형</a></li></ul>
-<div class="tab-content page-columns page-full">
-<div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../img/png_jpg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../../img/png_jpg.png" class="img-fluid figure-img" width="651"></a></p>
-</figure>
-</div>
+<section id="참고문헌" class="level1">
+<h1>참고문헌</h1>
+<div id="refs" role="doc-bibliography">
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p>자료출처: <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web">Ted Chiang (February 9, 2023), “ChatGPT Is a Blurry JPEG of the Web - OpenAI’s chatbot offers paraphrases, whereas Google offers quotes. Which do we prefer?”, The New Yorker</a></p>
-</div></div></div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../img/foundation_model.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="../../img/foundation_model.png" class="img-fluid figure-img" width="500"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="거대-언어모형llm" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="거대-언어모형llm">거대 언어모형(LLM)</h2>
-<div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">LLM 진화</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">80억 패러미터</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">400억</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">640억</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false">5,400억</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-6" role="tab" aria-controls="tabset-2-6" aria-selected="false">성능</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../img/LLM_tree.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="../../img/LLM_tree.gif" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../img/LLM_tree_8_billion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="../../img/LLM_tree_8_billion.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../img/LLM_tree_40_billion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="../../img/LLM_tree_40_billion.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../img/LLM_tree_62_billion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="../../img/LLM_tree_62_billion.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../img/LLM_tree_540_billion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="../../img/LLM_tree_540_billion.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-<div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../../img/LLM_tree_performance.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="../../img/LLM_tree_performance.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><span class=""><a href="https://ai.googleblog.com/2022/04/pathways-language-model-palm-scaling-to.html">Sharan Narang and Aakanksha Chowdhery (APRIL 04, 2022), “Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrough Performance”, Software Engineers, Google Research</a></span></p>
-</div></div></section>
-<section id="주요-ai-모형-개발비" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="주요-ai-모형-개발비">주요 AI 모형 개발비</h2>
-<p>언어 모형 개발은 2010년 이후 개발비용이 급격히 증가하고 있음.</p>
-<iframe src="https://ourworldindata.org/grapher/artificial-intelligence-training-computation?yScale=linear&amp;time=2017-06-12..latest" loading="lazy" style="width: 100%; height: 500px; border: 0px none;">
-</iframe>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><a href="https://blog.heim.xyz/palm-training-cost/">Estimating 🌴PaLM’s training cost</a></p>
-</div></div></section>
-<section id="section" class="level2" data-background-image="../../img/question.jpg">
-<h2 data-background-image="../../img/question.jpg" class="anchored" data-anchor-id="section"></h2>
-<div class="r-fit-text">
-<p><span style="color: red; font-size:77px;">전통, 디지털, AI 지표 → 지원자?</span></p>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -348,7 +272,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","loop":true,"selector":".lightbox","openEffect":"zoom"});</script>
 
 
 
