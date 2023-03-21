@@ -1,6 +1,28 @@
 
 # chatGPT 한계와 문제점
 
+## 한계(?) [^1] {.smaller}
+
+[^1]: [Max Roser (December 06, 2022), The brief history of artificial intelligence: The world has changed fast -- what might be next?, Our World in Data](https://ourworldindata.org/brief-history-of-ai)
+
+::: panel-tabset
+### 언어 및 이미지
+
+![](../../img/AI-performance_Dynabench-paper.png)
+
+### AI 생성이미지
+
+![](../../img/Timeline-of-AI-generated-faces.png){width="400"}
+
+### 백오피스 인건비 비교 [^2]
+
+![](../../img/outsourcing_rpa_ai.jpg){width="600"}
+
+[^2]: "The Case for Robotic Process Automation(RPA)", Optimal Corporation (under permission from Kinetic Consulting Services) chatGPT plus 연간 사용료 추가
+
+:::
+
+
 ##  {background-image="../../img/question.jpg"}
 
 ::: r-fit-text
