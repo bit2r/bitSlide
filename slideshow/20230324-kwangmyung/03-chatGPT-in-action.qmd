@@ -30,9 +30,40 @@
 ![](../../img/chatGPT_coding.gif){width="700"}
 :::
 
+
 ##  {background-image="../../img/question.jpg"}
 
 ::: r-fit-text
-[질문?]{style="color: #D62626; font-size:92px;"}
+[실습: 그리기]{style="color: red; font-size:92px;"}
+:::
+
+## 그리기
+
+::: panel-tabset
+### GauGAN 2
+
+NVIDIA가 짧은 단어와 간단한 마우스 클릭으로 사실적인 예술품을 만들어주는 최신 버전의 AI 페인팅 툴 GauGAN2를 공개했다. [바로가기](http://gaugan.org/gaugan2/)
+
+::: columns
+::: {.column width="50%"}
+{{< video https://youtu.be/HhWBfQlMzTs >}}
+:::
+
+::: {.column width="50%"}
+{{< video https://youtu.be/r5P9-zOfWyE >}}
+:::
+:::
+
+### B\^Edit
+
+B\^ EDIT'는 카카오브레인의 AI 이미지 생성 모델 '칼로(Karlo)'를 기반으로한 'B\^ EDIT'로 원하는 화풍의 이미지 생성은 물론, 다양한 기능을 활용해 이미지 수정기능을 제공한다. [바로가기](https://bedit.kakaobrain.com/)
+
+{{< video https://youtu.be/z1mu1o0rHnI >}}
+
+### 다다음
+
+![](../../img/ddmm.jpg){width="370"}
+
+-   [카카오브레인, AI챗봇 '다다음'(dmm) 베타 출시 하루 만에 중단](https://www.seoulfn.com/news/articleView.html?idxno=482124)
 :::
 
