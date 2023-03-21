@@ -16,13 +16,15 @@ filters:
 lightbox: auto
 bibliography: ../../bibliography.bib
 csl: ../../apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## 목차
 
 1.  체험 삶의 현장
-2.  chatGPT 실습
-3.  왜 chatGPT인가?
+2.  chatGPT란?
+3.  chatGPT 실습
 4.  chatGPT 한계와 문제점
 5.  AI 미래와 교육 방향은?
 6.  질의응답
@@ -38,7 +40,4 @@ csl: ../../apa-single-spaced.csl
 {{< include 04-limitation.qmd >}}
 
 {{< include 05-education.qmd >}}
-
-# 끝
-
 

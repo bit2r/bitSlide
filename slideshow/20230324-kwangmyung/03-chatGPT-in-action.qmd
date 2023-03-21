@@ -1,6 +1,6 @@
-# 왜 chatGPT인가?
+# chatGPT 실습
 
-## openAI 마이크로소프트 3 대장
+## openAI 마이크로소프트 3 대장 + $\alpha$
 
 ![](../../img/openai-three-pillars.png)
 
