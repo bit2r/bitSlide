@@ -41,6 +41,8 @@ editor_options:
 
 {{< include 05-education.qmd >}}
 
+{{< include ../20230320-krila/99-seoul-r-meeup.qmd >}}
+
 
 
 
