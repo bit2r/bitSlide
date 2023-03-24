@@ -65,7 +65,9 @@ B\^ EDIT'는 카카오브레인의 AI 이미지 생성 모델 '칼로(Karlo)'를
 
 -   [카카오브레인, AI챗봇 '다다음'(dmm) 베타 출시 하루 만에 중단](https://www.seoulfn.com/news/articleView.html?idxno=482124)
 
-### [New Bing](https://www.bing.com/images/create)
+### New Bing
 
-![](../../img/_5936e865-931d-4b34-9573-17180ecec4e2.jfif){width="500"}
+![](../../img/_5936e865-931d-4b34-9573-17180ecec4e2.jfif){width="435"}
+
+-   [New Bing - Create Images](https://www.bing.com/images/create)
 :::
