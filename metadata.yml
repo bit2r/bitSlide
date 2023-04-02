@@ -1,5 +1,18 @@
 # Internal slide decks
 
+- title: "챗GPT"
+  subtitle: "챗GPT 최신 동향"
+  author: "이광춘"
+  date: 2023-04-07
+  image: img/ChatGPT_logo.png
+  path: slideshow/202304-gpt/index.qmd
+  categories:
+    - chatGPT
+    - 인공지능
+    - 한국 R 사용자회
+    - GPT-3/3.5/4
+    - 오픈소스 SW
+
 - title: "챗GPT와 지방행정"
   subtitle: "챗GPT 등 인공지능 트렌드 관련 발표 및 지방행정 응용 가능성 논의"
   author: "이광춘"

@@ -1,159 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-03-20T03:29:55.830Z</lastmod>
-  </url>
-  <url>
     <loc>https://r2bit.com/bitSlide/interactive/climate-crisis.html</loc>
-    <lastmod>2023-03-08T10:33:14.863Z</lastmod>
+    <lastmod>2023-04-02T23:11:20.013Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/interactive/old-faithful-backup.html</loc>
-    <lastmod>2023-03-08T10:33:15.840Z</lastmod>
+    <lastmod>2023-04-02T23:06:15.725Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/interactive/palmer-penguins-korean.html</loc>
-    <lastmod>2023-03-08T10:33:16.835Z</lastmod>
+    <lastmod>2023-04-02T23:06:16.586Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/interactive/palmer-penguins.html</loc>
-    <lastmod>2023-03-08T10:33:17.646Z</lastmod>
+    <lastmod>2023-04-02T23:06:17.352Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/01-data-science.html</loc>
-    <lastmod>2023-03-08T10:33:18.166Z</lastmod>
+    <lastmod>2023-04-02T23:06:17.767Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/02-problem.html</loc>
-    <lastmod>2023-03-08T10:33:18.735Z</lastmod>
+    <lastmod>2023-04-02T23:06:18.202Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/03-solution.html</loc>
-    <lastmod>2023-03-08T10:33:19.722Z</lastmod>
+    <lastmod>2023-04-02T23:06:19.179Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/04-design.html</loc>
-    <lastmod>2023-03-08T10:33:20.281Z</lastmod>
+    <lastmod>2023-04-02T23:06:19.667Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/05-rstudio.html</loc>
-    <lastmod>2023-03-08T10:33:20.846Z</lastmod>
+    <lastmod>2023-04-02T23:06:20.178Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/06-portfolio.html</loc>
-    <lastmod>2023-03-08T10:33:21.348Z</lastmod>
+    <lastmod>2023-04-02T23:06:20.553Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/10-end-slide.html</loc>
-    <lastmod>2023-03-08T10:33:21.868Z</lastmod>
+    <lastmod>2023-04-02T23:06:20.921Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/index.html</loc>
-    <lastmod>2023-03-08T10:33:24.498Z</lastmod>
+    <lastmod>2023-04-02T23:06:23.693Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik-v2/reference.html</loc>
-    <lastmod>2023-03-08T10:33:25.093Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/data-science.html</loc>
-    <lastmod>2023-03-08T10:33:25.590Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/end-slide.html</loc>
-    <lastmod>2023-03-08T10:33:26.117Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/index.html</loc>
-    <lastmod>2023-03-08T10:33:28.483Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/problem.html</loc>
-    <lastmod>2023-03-08T10:33:29.623Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/references.html</loc>
-    <lastmod>2023-03-08T10:33:30.115Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/rstudio-history.html</loc>
-    <lastmod>2023-03-08T10:33:30.649Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/solution.html</loc>
-    <lastmod>2023-03-08T10:33:31.176Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/title-slide.html</loc>
-    <lastmod>2023-03-08T10:33:31.763Z</lastmod>
+    <lastmod>2023-04-02T23:06:24.202Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202211-meetup/index.html</loc>
-    <lastmod>2023-03-08T10:33:33.631Z</lastmod>
+    <lastmod>2023-04-02T23:06:26.146Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202212-dreamtalk/index.html</loc>
-    <lastmod>2023-03-08T10:33:35.186Z</lastmod>
+    <lastmod>2023-04-02T23:06:27.791Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202212-youtube/index.html</loc>
-    <lastmod>2023-03-08T10:33:36.888Z</lastmod>
+    <lastmod>2023-04-02T23:06:29.577Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/index.html</loc>
-    <lastmod>2023-03-27T06:35:31.742Z</lastmod>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/00-who-am-i.html</loc>
+    <lastmod>2023-04-02T23:06:30.099Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/02-about-chatGPT.html</loc>
-    <lastmod>2023-03-18T01:03:10.524Z</lastmod>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/01-life-in-action.html</loc>
+    <lastmod>2023-04-02T23:06:30.642Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/00-who-am-i.html</loc>
-    <lastmod>2023-03-18T02:29:16.758Z</lastmod>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/02-about-chatGPT.html</loc>
+    <lastmod>2023-04-02T23:06:31.088Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/01-life-in-action.html</loc>
-    <lastmod>2023-03-21T00:58:39.475Z</lastmod>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/03-chatGPT-in-action.html</loc>
+    <lastmod>2023-04-02T23:06:31.520Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/03-chatGPT-in-action.html</loc>
-    <lastmod>2023-03-22T10:55:26.280Z</lastmod>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/04-limitation.html</loc>
+    <lastmod>2023-04-02T23:06:31.886Z</lastmod>
   </url>
   <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/04-limitation.html</loc>
-    <lastmod>2023-03-20T23:45:10.602Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/05-education.html</loc>
-    <lastmod>2023-03-18T00:05:32.839Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/index.html</loc>
-    <lastmod>2023-03-20T03:30:06.053Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/chatGPT.html</loc>
-    <lastmod>2023-03-20T03:29:31.050Z</lastmod>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/05-education.html</loc>
+    <lastmod>2023-04-02T23:06:32.304Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/99-seoul-r-meeup.html</loc>
-    <lastmod>2023-03-20T03:29:46.423Z</lastmod>
+    <lastmod>2023-04-02T23:06:32.701Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/chatGPT.html</loc>
+    <lastmod>2023-04-02T23:06:33.163Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/esg-country-classic.html</loc>
-    <lastmod>2023-03-20T03:29:34.278Z</lastmod>
+    <lastmod>2023-04-02T23:06:33.918Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/esg-country-digital.html</loc>
-    <lastmod>2023-03-20T03:29:42.424Z</lastmod>
+    <lastmod>2023-04-02T23:06:34.956Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/index.html</loc>
+    <lastmod>2023-04-02T23:06:37.078Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/office-war.html</loc>
-    <lastmod>2023-03-20T03:29:43.145Z</lastmod>
+    <lastmod>2023-04-02T23:06:37.740Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/20230320-krila/reference.html</loc>
-    <lastmod>2023-03-20T03:29:43.683Z</lastmod>
+    <lastmod>2023-04-02T23:06:38.102Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/00-who-am-i.html</loc>
+    <lastmod>2023-04-02T23:06:38.516Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/01-life-in-action.html</loc>
+    <lastmod>2023-04-02T23:06:39.246Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/02-about-chatGPT.html</loc>
+    <lastmod>2023-04-02T23:06:41.056Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/03-chatGPT-in-action.html</loc>
+    <lastmod>2023-04-02T23:06:41.532Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/04-limitation.html</loc>
+    <lastmod>2023-04-02T23:06:42.728Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/05-education.html</loc>
+    <lastmod>2023-04-02T23:06:43.138Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/20230324-kwangmyung/index.html</loc>
+    <lastmod>2023-04-02T23:06:44.855Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202304-gpt/00-who-am-i.html</loc>
+    <lastmod>2023-04-02T23:06:45.279Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202304-gpt/01-life-in-action.html</loc>
+    <lastmod>2023-04-02T23:06:45.810Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202304-gpt/02-about-chatGPT.html</loc>
+    <lastmod>2023-04-02T23:06:46.253Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202304-gpt/03-chatGPT-in-action.html</loc>
+    <lastmod>2023-04-02T23:06:47.514Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202304-gpt/04-limitation.html</loc>
+    <lastmod>2023-04-02T23:06:47.966Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202304-gpt/index.html</loc>
+    <lastmod>2023-04-02T23:17:03.235Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/index.html</loc>
+    <lastmod>2023-04-02T23:16:54.830Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/index.html</loc>
+    <lastmod>2023-04-02T23:16:11.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/problem.html</loc>
+    <lastmod>2023-04-02T23:16:49.770Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/references.html</loc>
+    <lastmod>2023-04-02T23:16:46.203Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/rstudio-history.html</loc>
+    <lastmod>2023-04-02T23:16:46.713Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/solution.html</loc>
+    <lastmod>2023-04-02T23:16:47.132Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202210-hongik/title-slide.html</loc>
+    <lastmod>2023-04-02T23:16:47.518Z</lastmod>
   </url>
 </urlset>

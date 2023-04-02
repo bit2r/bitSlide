@@ -1,0 +1,64 @@
+
+# chatGPT 한계와 문제점
+
+## 한계(?) [^limit] {.smaller}
+
+::: panel-tabset
+### 언어 및 이미지
+
+![](../../img/AI-performance_Dynabench-paper.png)
+
+### AI 생성이미지
+
+![](../../img/Timeline-of-AI-generated-faces.png){width="400"}
+
+### 백오피스 인건비 비교 [^2]
+
+![](../../img/outsourcing_rpa_ai.jpg){width="600"}
+
+[^2]: "The Case for Robotic Process Automation(RPA)", Optimal Corporation (under permission from Kinetic Consulting Services) chatGPT plus 연간 사용료 추가
+
+:::
+
+[^limit]: [Max Roser (December 06, 2022), The brief history of artificial intelligence: The world has changed fast -- what might be next?, Our World in Data](https://ourworldindata.org/brief-history-of-ai)
+
+
+
+## 1869년 MIT 입시문제
+
+::: panel-tabset
+### 산술 (Arithmetic) {.unnumbered}
+
+![](../../img/mit/mit-1869-arithmetic.jpg)
+
+### 기하 (Geometry) {.unnumbered}
+
+![](../../img/mit/mit_geometry.gif){width="75%"}
+
+### 대수 (Algebra) {.unnumbered}
+
+![](../../img/mit/mit-1869-algebra.jpg){width="60%"}
+:::
+
+::: aside
+자료출처: [Massachusetts Institute of Technology Entrance Examination, 1869-70](https://web.archive.org/web/20120403061216/http://libraries.mit.edu/archives/exhibits/exam/index.html)
+:::
+
+## 기계에 대처하는 선생님
+
+![](../../img/math_teachers.jfif){width="45%"}
+
+::: aside
+출처: 트위터 [`@eraser` MATH TEACHERS PROTEST AGAINST CALCULATOR USE](https://twitter.com/eraser/status/1547506194259972096)
+:::
+
+## 학술연구 (공부)
+
+<br> <br>
+
+![](../../img/writing_papers.jpg)
+
+::: aside
+[chatGPT - 챗GPT 시대 학술연구(R&D) ](https://r2bit.com/chatGPT/rnd.html)
+:::
+

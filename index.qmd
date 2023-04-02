@@ -10,7 +10,6 @@ listing:
   image-placeholder: img/social-card.png
   #categories: unnumbered
 page-layout: full
-include-in-header: assets/umami.html
 ---
 
 <p class="f6 measure lh-copy tc center">통계(데이터 과학), 기계학습, 딥러닝 관련 발표자료와 앱 공개를 통해 통계 대중화와 디지털 불평등 해소를 위해 함께 노력하고 있습니다.</p>
