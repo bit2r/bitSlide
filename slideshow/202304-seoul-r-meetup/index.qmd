@@ -1,0 +1,60 @@
+---
+title: "챗GPT와 데이터 과학"
+subtitle: "챗GPT와 디지털 글쓰기"
+author: "이광춘"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-04-13
+format: 
+  insper-revealjs:
+    self-contained: false
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+  gfm:
+    mermaid-format: png
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: ../../bibliography.bib
+csl: ../../apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  DT, Agile, DevOps
+2.  디지털 글쓰기
+3.  쉘 프로그래밍
+4.  출판
+5.  질의응답
+
+{{< include ../20230320-krila/99-seoul-r-meeup.qmd >}}
+
+{{< include 01-dt-agile-devops.qmd >}}
+
+{{< include 02-digital-writing.qmd >}}
+
+<!-- {{< include 03-solution.qmd >}} -->
+
+<!-- {{< include 04-design.qmd >}} -->
+
+<!-- {{< include 05-rstudio.qmd >}} -->
+
+<!-- {{< include 06-portfolio.qmd >}} -->
+
+<!-- {{< include reference.qmd >}} -->
+
+<!-- {{< include 10-end-slide.qmd >}} -->
+
+# 참고문헌
+
+::: {#refs}
+:::
+
+
+
+
+
+

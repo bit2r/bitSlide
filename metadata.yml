@@ -1,5 +1,18 @@
 # Internal slide decks
 
+- title: "서울 R 미트업(23년4월)"
+  subtitle: "챗GPT와 디지털 글쓰기"
+  author: "이광춘"
+  date: 2023-04-13
+  image: img/meetup_logo.jpg
+  path: slideshow/202304-seoul-r-meetup/index.qmd
+  categories:
+    - chatGPT
+    - "디지털 글쓰기"
+    - 한국 R 사용자회
+    - 서울 R 미트업
+    - 쿼토(Quarto)
+
 - title: "챗GPT"
   subtitle: "챗GPT 최신 동향"
   author: "이광춘"
