@@ -24,37 +24,27 @@ editor_options:
 
 ## 목차
 
-1.  DT, Agile, DevOps
+1.  문서 공장
 2.  디지털 글쓰기
-3.  쉘 프로그래밍
-4.  출판
+3.  DT, Agile, DevOps
+4.  CLI 데이터 과학 / 출판
 5.  질의응답
 
 {{< include ../20230320-krila/99-seoul-r-meeup.qmd >}}
 
-{{< include 01-dt-agile-devops.qmd >}}
+{{< include 01-factory.qmd >}}
 
 {{< include 02-digital-writing.qmd >}}
 
-<!-- {{< include 03-solution.qmd >}} -->
+{{< include 03-dt-agile-devops.qmd >}}
 
-<!-- {{< include 04-design.qmd >}} -->
+{{< include 04-publishing.qmd >}}
 
-<!-- {{< include 05-rstudio.qmd >}} -->
-
-<!-- {{< include 06-portfolio.qmd >}} -->
-
-<!-- {{< include reference.qmd >}} -->
-
-<!-- {{< include 10-end-slide.qmd >}} -->
+{{< include 05-end-slide.qmd >}}
 
 # 참고문헌
 
 ::: {#refs}
+
 :::
-
-
-
-
-
 

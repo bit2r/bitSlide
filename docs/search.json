@@ -1992,7 +1992,7 @@
     "href": "slideshow/202304-seoul-r-meetup/index.html#목차",
     "title": "챗GPT와 데이터 과학",
     "section": "목차",
-    "text": "목차\n\nDT, Agile, DevOps\n디지털 글쓰기\n쉘 프로그래밍\n출판\n질의응답"
+    "text": "목차\n\n문서 공장\n디지털 글쓰기\nDT, Agile, DevOps\nCLI 데이터 과학 / 출판\n질의응답"
   },
   {
     "objectID": "slideshow/202304-seoul-r-meetup/index.html#서울-r-미트업",
@@ -2301,5 +2301,103 @@
     "title": "사례",
     "section": "",
     "text": "사례\n\n한국 R 사용자회\n한국 R 컨퍼런스\n코로나 19 프로젝트"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#챗gpt-디지털-글쓰기",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#챗gpt-디지털-글쓰기",
+    "title": "챗GPT와 데이터 과학",
+    "section": "챗GPT 디지털 글쓰기",
+    "text": "챗GPT 디지털 글쓰기"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#쉘-프로그래밍",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#쉘-프로그래밍",
+    "title": "챗GPT와 데이터 과학",
+    "section": "쉘 프로그래밍",
+    "text": "쉘 프로그래밍"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#문서-공장-document-factory",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#문서-공장-document-factory",
+    "title": "챗GPT와 데이터 과학",
+    "section": "문서 공장 (Document Factory)",
+    "text": "문서 공장 (Document Factory)\n\n\n\n\n\n\n\n\n데이터 과학 문서\nPDF를 데이터로 보는 올바른 자세"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---웹사이트",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---웹사이트",
+    "title": "챗GPT와 데이터 과학",
+    "section": "한국 R 컨퍼런스 - 웹사이트",
+    "text": "한국 R 컨퍼런스 - 웹사이트\n\n\n\n\n\n\n\n\n제작방법"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---r-emojicomputer-발표자-템플릿",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---r-emojicomputer-발표자-템플릿",
+    "title": "챗GPT와 데이터 과학",
+    "section": "한국 R 컨퍼런스 - r emo::ji(\"computer\") 발표자 템플릿",
+    "text": "한국 R 컨퍼런스 - r emo::ji(\"computer\") 발표자 템플릿\n\n\n\n\n\n\n\n\n제작방법"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---r-emojihelp-후원",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---r-emojihelp-후원",
+    "title": "챗GPT와 데이터 과학",
+    "section": "한국 R 컨퍼런스 - r emo::ji(\"help\") 후원",
+    "text": "한국 R 컨퍼런스 - r emo::ji(\"help\") 후원\n\n\n\n\n\n\n\n\n제작방법"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---r-emojihelp-포스터",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---r-emojihelp-포스터",
+    "title": "챗GPT와 데이터 과학",
+    "section": "한국 R 컨퍼런스 - r emo::ji(\"help\") 포스터",
+    "text": "한국 R 컨퍼런스 - r emo::ji(\"help\") 포스터\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n\n제작방법"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---발표자-템플릿",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---발표자-템플릿",
+    "title": "챗GPT와 데이터 과학",
+    "section": "한국 R 컨퍼런스 - 발표자 템플릿",
+    "text": "한국 R 컨퍼런스 - 발표자 템플릿\n\n\n\n\n\n\n\n\n제작방법"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---후원",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---후원",
+    "title": "챗GPT와 데이터 과학",
+    "section": "한국 R 컨퍼런스 - 후원",
+    "text": "한국 R 컨퍼런스 - 후원\n\n\n\n\n\n\n\n\n제작방법"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---포스터",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#한국-r-컨퍼런스---포스터",
+    "title": "챗GPT와 데이터 과학",
+    "section": "한국 R 컨퍼런스 - 포스터",
+    "text": "한국 R 컨퍼런스 - 포스터\n\n\n\n\n\n\n\n\n제작방법"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#cli-gui-nli",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#cli-gui-nli",
+    "title": "챗GPT와 데이터 과학",
+    "section": "CLI → GUI → NLI",
+    "text": "CLI → GUI → NLI\n\n\n\n\n\n\n\n\n챗GPT 쉘 프로그래밍 책"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#출판",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#출판",
+    "title": "챗GPT와 데이터 과학",
+    "section": "출판",
+    "text": "출판\n\n\n                                 저자\n\n\n\n\ngraph TB\nstyle A fill:#E3B04B,stroke:#000,stroke-width:1px;\nstyle B fill:#FFF,stroke:#000,stroke-width:1px;\nstyle C fill:#FFF,stroke:#000,stroke-width:1px;\nstyle D fill:#FFF,stroke:#000,stroke-width:1px;\nstyle E fill:#FFF,stroke:#000,stroke-width:1px;\nstyle F fill:#FFF,stroke:#000,stroke-width:1px;\n\nA[완성된 원고] --&gt;|ISBN 부여| B[ISBN 번호 부여]\nB[ISBN 번호 부여] --&gt;|책 표지| C[책 표지 제작]\nC[책 표지 제작] --&gt;|출판사 번호 부여| D[출판사 번호 적용]\nD[출판사 번호 적용] --&gt;|인쇄| E[책 인쇄하기]\nE[책 인쇄하기] --&gt;|배포| F[도서 배포]\n\nclassDef mainNode fill:#E3B04B,stroke:#000,stroke-width:1px;\nclass A mainNode;\nclassDef subNode fill:#FFF,stroke:#000,stroke-width:1px;\nclass B,C,D,E,F subNode;\nclassDef arrow stroke:#000,stroke-width:1px;\nclass B,C,D,E,F arrow;\n\n\n\n\n\n\n                             출판사\n\n\n\n\ngraph TB\nstyle A fill:#E3B04B,stroke:#000,stroke-width:1px;\nstyle B fill:#FFF,stroke:#000,stroke-width:1px;\nstyle C fill:#FFF,stroke:#000,stroke-width:1px;\nstyle D fill:#FFF,stroke:#000,stroke-width:1px;\nstyle E fill:#FFF,stroke:#000,stroke-width:1px;\nstyle F fill:#FFF,stroke:#000,stroke-width:1px;\n\nA[조사연구] --&gt;|사업계획| B[사업계획 수립]\nB[사업계획 수립] --&gt;|법적 구조| C[법적 구조 선택]\nC[법적 구조 선택] --&gt;|사업자 출판등록| D[출판 사업자 등록]\nD[출판 사업자 등록] --&gt;|ISBN 신청| E[ISBN 신청]\nE[ISBN 신청] --&gt;|도서 카탈로그 생성| F[도서 카탈로그 생성]\n\nclassDef mainNode fill:#E3B04B,stroke:#000,stroke-width:1px;\nclass A mainNode;\nclassDef subNode fill:#FFF,stroke:#000,stroke-width:1px;\nclass B,C,D,E,F subNode;\nclassDef arrow stroke:#000,stroke-width:1px;\nclass B,C,D,E,F arrow;\n\n\n\n\n\n\n\n\n\n디지털 글쓰기 - 출판"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#section",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#section",
+    "title": "챗GPT와 데이터 과학",
+    "section": "",
+    "text": "한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#section-1",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#section-1",
+    "title": "챗GPT와 데이터 과학",
+    "section": "",
+    "text": "Martin, T., & Majidian, A. (2011). Beyond the known unknowns-finding fuzzy concepts for creative knowledge discovery. World Conference on Soft Computing, San Francisco.\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
   }
 ]

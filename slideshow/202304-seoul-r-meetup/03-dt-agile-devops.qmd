@@ -95,3 +95,20 @@ class B,C,D,E,F arrow;
 <br>
 
 ![](../../img/dt-agile-devops.jpg)
+
+
+## 챗GPT 디지털 글쓰기
+
+<br>
+
+![](../../img/chatGPT-writing.jpg)
+
+
+## 쉘 프로그래밍
+
+<br>
+
+![](../../img/chatGPT-writing-shell.jpg)
+
+
+

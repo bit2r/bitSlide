@@ -1,7 +1,0 @@
-# 사례
-
-- [한국 R 사용자회](https://github.com/bit2r/bit2r.github.io)
-
-- [한국 R 컨퍼런스](https://github.com/tidyverse-korea/rconf)
-
-- [코로나 19 프로젝트](http://code-states.netlify.app/)
