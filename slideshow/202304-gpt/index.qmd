@@ -38,9 +38,7 @@ editor_options:
 
 {{< include 04-limitation.qmd >}}
 
-
 {{< include ../20230320-krila/99-seoul-r-meeup.qmd >}}
 
-
-
+{{< include reference.qmd >}}
 
