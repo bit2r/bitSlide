@@ -32,6 +32,8 @@ editor_options:
 
 {{< include ../20230320-krila/99-seoul-r-meeup.qmd >}}
 
+{{< include 00-chatGPT.qmd >}}
+
 {{< include 01-factory.qmd >}}
 
 {{< include 02-digital-writing.qmd >}}
@@ -47,4 +49,5 @@ editor_options:
 ::: {#refs}
 
 :::
+
 

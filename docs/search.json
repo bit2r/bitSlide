@@ -2420,5 +2420,61 @@
     "title": "chatGPT",
     "section": "공개형 GPT vs 폐쇄형 GPT",
     "text": "공개형 GPT vs 폐쇄형 GPT\n\nStable DiffusionLLMGPT4ALL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 출처: (Zhao 기타, 2023)\nchatGPT - 오픈소스 S/W"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#챗gpt-란",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#챗gpt-란",
+    "title": "챗GPT와 데이터 과학",
+    "section": "챗GPT 란?",
+    "text": "챗GPT 란?\n\nPNG와 JPEGFoundation 모형\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n자료출처: Ted Chiang (February 9, 2023), “ChatGPT Is a Blurry JPEG of the Web - OpenAI’s chatbot offers paraphrases, whereas Google offers quotes. Which do we prefer?”, The New Yorker"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#거대-언어모형llm",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#거대-언어모형llm",
+    "title": "챗GPT와 데이터 과학",
+    "section": "거대 언어모형(LLM)",
+    "text": "거대 언어모형(LLM)\n\nLLM 진화80억 패러미터400억640억5,400억성능\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSharan Narang and Aakanksha Chowdhery (APRIL 04, 2022), “Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrough Performance”, Software Engineers, Google Research"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#공개형-gpt-vs-폐쇄형-gpt",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#공개형-gpt-vs-폐쇄형-gpt",
+    "title": "챗GPT와 데이터 과학",
+    "section": "공개형 GPT vs 폐쇄형 GPT",
+    "text": "공개형 GPT vs 폐쇄형 GPT\n\nStable DiffusionLLMGPT4ALL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 출처: (Zhao 기타, 2023)\nchatGPT - 오픈소스 S/W"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#hugginggpt",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#hugginggpt",
+    "title": "챗GPT와 데이터 과학",
+    "section": "HuggingGPT",
+    "text": "HuggingGPT\n\nLLM as ControllerHuggingGPT 개요사례\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n출처: (Shen 기타, 2023)"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#백만1억-사용자-fa-solid-rocket",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#백만1억-사용자-fa-solid-rocket",
+    "title": "챗GPT와 데이터 과학",
+    "section": "백만~1억 사용자 ",
+    "text": "백만~1억 사용자 \n백만, 5천만, 1억 가입자를 가질 때까지 걸린 소요시간\n\n전화기기술 진화chatGPT 백만빅3 서비스1억명 (소요 달수)\n\n\n\n\n\n(Song, 2019)\n\n\n\n\n\n\n\nRita McGrath(November 25, 2013), “The Pace of Technology Adoption is Speeding Up”, Harvard Business Review\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n출처: https://twitter.com/umarsaif/status/1610932387185315840\n\n\n\n\n\n\n\n출처: https://twitter.com/EconomyApp/status/1622029832099082241"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#ai를-바라보는-관점",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#ai를-바라보는-관점",
+    "title": "챗GPT와 데이터 과학",
+    "section": "AI를 바라보는 관점",
+    "text": "AI를 바라보는 관점\n\n트위터 Santiago I트위터 Santiago II버스탄 두 남자"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#대장-alpha",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#대장-alpha",
+    "title": "챗GPT와 데이터 과학",
+    "section": "3 대장 + \\(\\alpha\\)",
+    "text": "3 대장 + \\(\\alpha\\)"
+  },
+  {
+    "objectID": "slideshow/202304-seoul-r-meetup/index.html#한계-limit",
+    "href": "slideshow/202304-seoul-r-meetup/index.html#한계-limit",
+    "title": "챗GPT와 데이터 과학",
+    "section": "한계(?) 1",
+    "text": "한계(?) 1\n\n언어 및 이미지AI 생성이미지백오피스 인건비 비교 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMax Roser (December 06, 2022), The brief history of artificial intelligence: The world has changed fast – what might be next?, Our World in Data“The Case for Robotic Process Automation(RPA)”, Optimal Corporation (under permission from Kinetic Consulting Services) chatGPT plus 연간 사용료 추가"
   }
 ]
