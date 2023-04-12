@@ -1,5 +1,19 @@
 # Internal slide decks
 
+- title: "드림톡 콘서트 - 과학 행사"
+  subtitle: "오픈소스 소프트웨어"
+  author: "이광춘"
+  date: 2023-07-10
+  image: img/deep-style.jpg
+  path: slideshow/202307-dream-talk/index.qmd
+  categories:
+    - "오픈소스 소프트웨어"
+    - "디지털 글쓰기"
+    - "한국 R 사용자회"
+    - "오픈 통계 패키지"
+    - "쿼토(Quarto)"
+
+
 - title: "서울 R 미트업(23년4월)"
   subtitle: "챗GPT와 디지털 글쓰기"
   author: "이광춘"

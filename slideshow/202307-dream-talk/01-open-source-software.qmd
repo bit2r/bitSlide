@@ -1,0 +1,123 @@
+# 오픈소스 소프트웨어
+
+## 컴퓨터 하드웨어
+
+::: panel-tabset
+### 높이 1,000 미터
+
+![](../../img/computer-01.png){width="800"}
+
+### 높이 100 미터
+
+![](../../img/computer-02.png){width="800"}
+
+### 높이 10 미터
+
+![](../../img/computer-03.png){width="800"}
+
+### 높이 1 미터
+
+![](../../img/computer-04.png){width="1200"}
+:::
+
+## 컴퓨터 소프트웨어 [@meeker2017open]
+
+::: panel-tabset
+### 시스템 아키텍처
+
+![](../../img/fig-2-1-computer-system-architecture.png){width="1000"}
+
+### 상호작용
+
+![](../../img/fig-2-2-interaction-of-the-elements.png){width="800"}
+
+### 가상화
+
+![](../../img/fig-2-3-interaction-of-the-elements-with-virtualization.png){width="800"}
+
+### Inline 함수와 링킹
+
+![](../../img/fig-2-5-build-of-program.png){width="900"}
+:::
+
+
+## 오픈소스 소프트웨어
+
+::: panel-tabset
+### GPL 라이선스
+
+![](../../img/fig-3-1-direct-licensing-model.png){width="600"}
+
+### 일반적인 사례
+
+![](../../img/fig-4-1-governing-clearance.png){width="1000"}
+:::
+
+## 라이선스 문제
+
+::: panel-tabset
+### 라이선스 제한 문제
+
+![](../../img/fig-4-2-license-restriction-problems.png){width="1000"}
+
+### 라이선스 조건 문제
+
+![](../../img/fig-4-3-license-condition-problems.png){width="1000"}
+
+### 수평 비호환성 문제
+
+![](../../img/fig-4-5-problem-due-to-horizontal-incompatibility.png){width="1000"}
+:::
+
+## 라이선스 호환과 선택
+
+::: panel-tabset
+
+### 라이선스 호환성
+
+![](../../img/fig-4-4-license-compatibility.png){width="1000"}
+
+
+### 수평 호환성
+
+![](../../img/fig-4-6-horizontal-compatibility.png){width="1000"}
+
+### 라이선스 선택
+
+![](../../img/fig-license-selection.jpg){width="600"}
+:::
+
+
+## 콘텐츠와 데이터
+
+<br>
+
+### 데이터베이스 라이선스
+
+```{mermaid}
+graph TD
+  A["Database Licenses"] --> B["Open Database License (ODbL)"]
+  A --> C[Creative Commons licenses]
+  A --> D["GNU General Public License (GPL)"]
+  A --> E["Affero General Public License (AGPL)"]
+  A --> F[Proprietary Licenses]  
+```
+
+### 콘텐츠 라이선스
+
+```{mermaid}
+graph TD;
+    A["Content Licenses"] --> B[Public domain]
+    A --> C[Creative Commons licenses]
+    A --> D[All rights reserved]
+    C --> E[CC0]
+    C --> F[Attribution]
+    C --> G[Non-commercial]
+    C --> H[Share-alike]
+    C --> I[Custom]
+    D --> J[No use without permission]
+    D --> K[No copying without permission]
+    D --> L[No distribution without permission]  
+```
+
+
