@@ -3,7 +3,7 @@ title: "chatGPT"
 subtitle: "챗GPT 최신 동향"
 author: "이광춘"
 institute: "비영리법인 한국 R 사용자회"
-date: 2023-03-24
+date: 2023-04-21
 format: 
   insper-revealjs:
     self-contained: false
@@ -38,7 +38,7 @@ editor_options:
 
 {{< include 04-limitation.qmd >}}
 
-{{< include ../20230320-krila/99-seoul-r-meeup.qmd >}}
+{{< include seoul-r-meeup.qmd >}}
 
 {{< include reference.qmd >}}
 
