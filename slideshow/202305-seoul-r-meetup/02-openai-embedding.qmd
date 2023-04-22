@@ -1,0 +1,42 @@
+# OpenAI 임베딩 모형
+
+## 챗GPT API 가격
+
+::: panel-tabset
+### OpenAI API 가격
+
+![](../../img/embedding/pricing_g.png){width="600"}
+
+### 2022년 1월
+
+![](../../img/embedding/openai_embedding_performance.png){width="500"}
+
+:::
+
+::: aside
+한국 R 사용자회, ["chatGPT: GPT-4 성능"](https://r2bit.com/chatGPT/gpt4_performance.html) [@nils2022]
+ 
+:::
+
+## OpenAI 임베딩 {.smaller}
+
+:::{.panel-tabset}
+
+### 텍스트 → 벡터
+
+![](../../img/embedding/openai-embedding.gif)
+
+### OpenAI Embedding Models
+
+|                                                                       | Models                                                      | Use Cases                                                |
+|-----------------------|----------------------|---------------------------|
+| Text similarity: Captures semantic similarity between pieces of text. | text-similarity-{ada, babbage, curie, davinci}-001          | Clustering, regression, anomaly detection, visualization |
+| Text search: Semantic information retrieval over documents.           | text-search-{ada, babbage, curie, davinci}-{query, doc}-001 | Search, context relevance, information retrieval         |
+| Code search: Find relevant code with a query in natural language.     | code-search-{ada, babbage}-{code, text}-001                 | Code search and relevance                                |
+
+### 임베딩
+
+![](../../img/embedding/pinecone.jpg)
+
+:::
+

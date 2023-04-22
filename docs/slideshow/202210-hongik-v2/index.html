@@ -870,25 +870,25 @@
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb9-2"><a href="#cb9-2"></a>tidyr<span class="sc">::</span>who </span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="co">#&gt; # A tibble: 7,240 × 60</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a><span class="co">#&gt;    country     iso2  iso3   year new_s…¹ new_s…² new_s…³ new_s…⁴ new_s…⁵ new_s…⁶</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a><span class="co">#&gt;    &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;int&gt;   &lt;int&gt;   &lt;int&gt;   &lt;int&gt;   &lt;int&gt;   &lt;int&gt;   &lt;int&gt;</span></span>
-<span id="cb9-6"><a href="#cb9-6"></a><span class="co">#&gt;  1 Afghanistan AF    AFG    1980      NA      NA      NA      NA      NA      NA</span></span>
-<span id="cb9-7"><a href="#cb9-7"></a><span class="co">#&gt;  2 Afghanistan AF    AFG    1981      NA      NA      NA      NA      NA      NA</span></span>
-<span id="cb9-8"><a href="#cb9-8"></a><span class="co">#&gt;  3 Afghanistan AF    AFG    1982      NA      NA      NA      NA      NA      NA</span></span>
-<span id="cb9-9"><a href="#cb9-9"></a><span class="co">#&gt;  4 Afghanistan AF    AFG    1983      NA      NA      NA      NA      NA      NA</span></span>
-<span id="cb9-10"><a href="#cb9-10"></a><span class="co">#&gt;  5 Afghanistan AF    AFG    1984      NA      NA      NA      NA      NA      NA</span></span>
-<span id="cb9-11"><a href="#cb9-11"></a><span class="co">#&gt;  6 Afghanistan AF    AFG    1985      NA      NA      NA      NA      NA      NA</span></span>
-<span id="cb9-12"><a href="#cb9-12"></a><span class="co">#&gt;  7 Afghanistan AF    AFG    1986      NA      NA      NA      NA      NA      NA</span></span>
-<span id="cb9-13"><a href="#cb9-13"></a><span class="co">#&gt;  8 Afghanistan AF    AFG    1987      NA      NA      NA      NA      NA      NA</span></span>
-<span id="cb9-14"><a href="#cb9-14"></a><span class="co">#&gt;  9 Afghanistan AF    AFG    1988      NA      NA      NA      NA      NA      NA</span></span>
-<span id="cb9-15"><a href="#cb9-15"></a><span class="co">#&gt; 10 Afghanistan AF    AFG    1989      NA      NA      NA      NA      NA      NA</span></span>
-<span id="cb9-16"><a href="#cb9-16"></a><span class="co">#&gt; # … with 7,230 more rows, 50 more variables: new_sp_m65 &lt;int&gt;,</span></span>
-<span id="cb9-17"><a href="#cb9-17"></a><span class="co">#&gt; #   new_sp_f014 &lt;int&gt;, new_sp_f1524 &lt;int&gt;, new_sp_f2534 &lt;int&gt;,</span></span>
-<span id="cb9-18"><a href="#cb9-18"></a><span class="co">#&gt; #   new_sp_f3544 &lt;int&gt;, new_sp_f4554 &lt;int&gt;, new_sp_f5564 &lt;int&gt;,</span></span>
-<span id="cb9-19"><a href="#cb9-19"></a><span class="co">#&gt; #   new_sp_f65 &lt;int&gt;, new_sn_m014 &lt;int&gt;, new_sn_m1524 &lt;int&gt;,</span></span>
-<span id="cb9-20"><a href="#cb9-20"></a><span class="co">#&gt; #   new_sn_m2534 &lt;int&gt;, new_sn_m3544 &lt;int&gt;, new_sn_m4554 &lt;int&gt;,</span></span>
-<span id="cb9-21"><a href="#cb9-21"></a><span class="co">#&gt; #   new_sn_m5564 &lt;int&gt;, new_sn_m65 &lt;int&gt;, new_sn_f014 &lt;int&gt;,</span></span>
-<span id="cb9-22"><a href="#cb9-22"></a><span class="co">#&gt; #   new_sn_f1524 &lt;int&gt;, new_sn_f2534 &lt;int&gt;, new_sn_f3544 &lt;int&gt;, …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co">#&gt;    country  iso2  iso3   year new_sp_m014 new_sp_m1524 new_sp_m2534 new_sp_m3544</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="co">#&gt;    &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="co">#&gt;  1 Afghani… AF    AFG    1980          NA           NA           NA           NA</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a><span class="co">#&gt;  2 Afghani… AF    AFG    1981          NA           NA           NA           NA</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="co">#&gt;  3 Afghani… AF    AFG    1982          NA           NA           NA           NA</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a><span class="co">#&gt;  4 Afghani… AF    AFG    1983          NA           NA           NA           NA</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="co">#&gt;  5 Afghani… AF    AFG    1984          NA           NA           NA           NA</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="co">#&gt;  6 Afghani… AF    AFG    1985          NA           NA           NA           NA</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="co">#&gt;  7 Afghani… AF    AFG    1986          NA           NA           NA           NA</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a><span class="co">#&gt;  8 Afghani… AF    AFG    1987          NA           NA           NA           NA</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a><span class="co">#&gt;  9 Afghani… AF    AFG    1988          NA           NA           NA           NA</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a><span class="co">#&gt; 10 Afghani… AF    AFG    1989          NA           NA           NA           NA</span></span>
+<span id="cb9-16"><a href="#cb9-16"></a><span class="co">#&gt; # ℹ 7,230 more rows</span></span>
+<span id="cb9-17"><a href="#cb9-17"></a><span class="co">#&gt; # ℹ 52 more variables: new_sp_m4554 &lt;dbl&gt;, new_sp_m5564 &lt;dbl&gt;,</span></span>
+<span id="cb9-18"><a href="#cb9-18"></a><span class="co">#&gt; #   new_sp_m65 &lt;dbl&gt;, new_sp_f014 &lt;dbl&gt;, new_sp_f1524 &lt;dbl&gt;,</span></span>
+<span id="cb9-19"><a href="#cb9-19"></a><span class="co">#&gt; #   new_sp_f2534 &lt;dbl&gt;, new_sp_f3544 &lt;dbl&gt;, new_sp_f4554 &lt;dbl&gt;,</span></span>
+<span id="cb9-20"><a href="#cb9-20"></a><span class="co">#&gt; #   new_sp_f5564 &lt;dbl&gt;, new_sp_f65 &lt;dbl&gt;, new_sn_m014 &lt;dbl&gt;,</span></span>
+<span id="cb9-21"><a href="#cb9-21"></a><span class="co">#&gt; #   new_sn_m1524 &lt;dbl&gt;, new_sn_m2534 &lt;dbl&gt;, new_sn_m3544 &lt;dbl&gt;,</span></span>
+<span id="cb9-22"><a href="#cb9-22"></a><span class="co">#&gt; #   new_sn_m4554 &lt;dbl&gt;, new_sn_m5564 &lt;dbl&gt;, new_sn_m65 &lt;dbl&gt;, …</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-5-4">
@@ -912,7 +912,7 @@
 <div class="cell">
 <pre><code>#&gt; # A tibble: 76,046 × 6
 #&gt;    country      year var   sex   age   cases
-#&gt;    &lt;chr&gt;       &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
+#&gt;    &lt;chr&gt;       &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;
 #&gt;  1 Afghanistan  1997 sp    m     014       0
 #&gt;  2 Afghanistan  1997 sp    m     1524     10
 #&gt;  3 Afghanistan  1997 sp    m     2534      6
@@ -923,7 +923,7 @@
 #&gt;  8 Afghanistan  1997 sp    f     014       5
 #&gt;  9 Afghanistan  1997 sp    f     1524     38
 #&gt; 10 Afghanistan  1997 sp    f     2534     36
-#&gt; # … with 76,036 more rows</code></pre>
+#&gt; # ℹ 76,036 more rows</code></pre>
 </div>
 </div>
 </div>

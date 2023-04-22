@@ -18,7 +18,7 @@
   author: "이광춘"
   date: 2023-05-11
   image: img/meetup_logo.jpg
-  path: slideshow/202304-seoul-r-meetup/index.qmd
+  path: slideshow/202305-seoul-r-meetup/index.qmd
   categories:
     - chatGPT
     - "Text Embedding"
