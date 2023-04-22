@@ -1,0 +1,40 @@
+---
+title: "챗GPT와 데이터 과학"
+subtitle: "대통령 취임사 임베딩"
+author: "이광춘"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-04-13
+format: 
+  insper-revealjs:
+    self-contained: false
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/bit2r/bitSlide).
+  gfm:
+    mermaid-format: png
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: ../../bibliography.bib
+csl: ../../apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  한국어 임베딩과 R언어
+2.  
+3.  
+4.  
+5.  질의응답
+
+{{< include 01-seoul-r-embedding.qmd >}}
+
+{{< include seoul-r-meetup.qmd >}}
+
+{{< include 05-end-slide.qmd >}}
+
+
+

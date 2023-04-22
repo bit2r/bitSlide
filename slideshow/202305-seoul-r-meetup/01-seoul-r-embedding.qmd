@@ -1,0 +1,12 @@
+## 2022년
+
+::: {.center}
+
+```{=html}
+<iframe width="780" height="500" src="https://aidenhong.com/presentations/korean-embedding-with-r/korean-embedding-with-r.html#/" title="홍성학"></iframe>
+```
+:::
+
+::: aside
+홍성학 (2022년 9월 24일), "한국어 임베딩과 R언어", Seoul R Meetup 2022
+:::

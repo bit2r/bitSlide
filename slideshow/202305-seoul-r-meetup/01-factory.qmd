@@ -1,0 +1,44 @@
+
+# 문서 공장
+
+## 문서 공장 (Document Factory)
+
+![](../../img/document-factory.png)
+
+::: aside
+-   [데이터 과학 문서](https://statkclee.github.io/comp_document/)
+-   [PDF를 데이터로 보는 올바른 자세](https://statkclee.github.io/pdf/)
+:::
+
+## [한국 R 컨퍼런스](https://use-r.kr/) - 웹사이트
+
+![](../../img/rconf-website.png){fig-align="center" width="700"}
+
+::: aside
+-   [제작방법](https://github.com/tidyverse-korea/rconf)
+:::
+
+## [한국 R 컨퍼런스](https://use-r.kr/) - [발표자 템플릿](https://tidyverse-korea.github.io/templates/#1)
+
+![](../../img/rconf-template.png){fig-align="center" width="700"}
+
+::: aside
+-   [제작방법](https://github.com/tidyverse-korea/templates)
+:::
+
+## [한국 R 컨퍼런스](https://use-r.kr/) - [후원](https://tidyverse-korea.github.io/sponsor/#1)
+
+![](../../img/rconf-sponsor.png){fig-align="center" width="800"}
+
+::: aside
+-   [제작방법](https://github.com/tidyverse-korea/sponsor)
+:::
+
+## [한국 R 컨퍼런스](https://use-r.kr/) - [포스터](https://tidyverse-korea.github.io/poster/)
+
+![](../../img/rconf-poster.png){fig-align="center" width="800"}
+
+::: aside
+-   [제작방법](https://github.com/tidyverse-korea/poster)
+:::
+

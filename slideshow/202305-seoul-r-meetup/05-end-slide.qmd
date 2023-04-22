@@ -1,0 +1,8 @@
+#  {background-image="../202210-hongik-v2/fig/slide-end.png" background-size="contain"}
+
+# 참고문헌
+
+::: {#refs}
+
+:::
+
