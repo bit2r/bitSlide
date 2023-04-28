@@ -1,9 +1,9 @@
 ---
 title: "chatGPT"
 subtitle: "챗GPT 최신 동향"
-author: "이광춘"
+author: "이광춘/신종화"
 institute: "비영리법인 한국 R 사용자회"
-date: 2023-04-21
+date: 2023-04-26
 format: 
   insper-revealjs:
     self-contained: false
@@ -28,7 +28,7 @@ editor_options:
 4.  chatGPT 한계와 시사점
 5.  질의응답
 
-{{< include 00-who-am-i.qmd >}}
+<!-- {{< include 00-who-am-i.qmd >}} -->
 
 {{< include 01-life-in-action.qmd >}}
 

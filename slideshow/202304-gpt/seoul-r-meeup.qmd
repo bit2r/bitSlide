@@ -6,7 +6,7 @@
 ## 서울 R 미트업
 
 :::::{.columns}
-:::{.column}
+:::{.column width="40%"}
 
 ::: r-stack
 
@@ -20,10 +20,11 @@
 
 :::
 
-:::{.column}
+:::{.column width="60%"}
 ## 참여와 연대
 
 -   **서울R미트업 meetup.com**: [link](https://www.meetup.com/seoul-r-meetup)
+    - 주최자: 유충현/이광춘/홍성학/신종화
     -   **23년 4월 서울 R 미트업**: [link](https://www.meetup.com/seoul-r-meetup/events/292232899/)
     -   **23년 5월 서울 R 미트업**: [link](https://www.meetup.com/seoul-r-meetup/events/292966674/)
 -   세계 R 미트업 현황 (Global R Meetup Dashboard): [link](https://r-community.org/usergroups/)
