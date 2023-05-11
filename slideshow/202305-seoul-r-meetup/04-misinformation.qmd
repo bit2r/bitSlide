@@ -1,0 +1,46 @@
+# 챗GPT와 오정보
+
+## We Have No Moat
+
+```{mermaid}
+flowchart LR
+   subgraph "2021년 R 컨퍼런스: 챗GPT 이전"
+    A["R 컨퍼런스"] --> AB["키노트"] --> B["제작방법"]
+    end
+    
+    subgraph "서울 R 미트업: 챗GPT 이후"
+    direction LR
+        Youtube["챗GPT 오정보"] --> STT["STT: Whisper"]
+        Youtube                 --> Summary["요약: Langchain"]
+        Youtube                 --> Embedding["임베딩: Pinecone"]
+        Youtube                 --> ETC["..."]
+    end
+
+    B -.-> Moat["We Have No Moat,<br> And Neither Does OpenAI"]
+    STT -.-> Moat 
+    Summary -.-> Moat 
+    Embedding -.->  Moat
+    ETC -.->  Moat
+
+click A href "https://use-r.kr/"
+click AB href "https://www.youtube.com/watch?v=clNN1xAiEkw"
+click B href "https://statkclee.github.io/deep-learning/rconf-keynote.html"
+
+click Youtube href "https://www.youtube.com/watch?v=csqOtqFBybk"
+click STT href "https://r2bit.com/chatGPT/whisper.html"
+click Summary href "https://r2bit.com/chatGPT/news_release.html"
+click Embedding href "https://r2bit.com/chatGPT/misinfo_embedding.html"
+
+click Moat href "https://www.semianalysis.com/p/google-we-have-no-moat-and-neither"
+
+
+class A nodeStyle
+class AB,AC,AD,AE theoryStyle
+class B,C,D,E practiceStyle
+class F taskStyle
+
+classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+classDef theoryStyle fill:#f59542,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+classDef practiceStyle fill:#4287f5,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+classDef taskStyle fill:#42f548,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;
+```

@@ -11,7 +11,7 @@
     "href": "slideshow/202305-seoul-r-meetup/index.html#목차",
     "title": "챗GPT와 데이터 과학",
     "section": "목차",
-    "text": "목차\n\n한국어 임베딩과 R언어 (홍성학)\nOpenAI 임베딩 모형\n대통령 취임사\n질의응답"
+    "text": "목차\n\n챗GPT와 오정보\n한국어 임베딩과 R언어 (홍성학)\nOpenAI 임베딩 모형\n대통령 취임사\n질의응답"
   },
   {
     "objectID": "slideshow/202305-seoul-r-meetup/index.html#년",
@@ -25,14 +25,14 @@
     "href": "slideshow/202305-seoul-r-meetup/index.html#서울-r-미트업",
     "title": "챗GPT와 데이터 과학",
     "section": "서울 R 미트업",
-    "text": "서울 R 미트업\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n참여와 연대\n\n서울R미트업 meetup.com: link\n\n23년 4월 서울 R 미트업: link\n23년 5월 서울 R 미트업: link\n\n세계 R 미트업 현황 (Global R Meetup Dashboard): link\n한국 R 사용자회 (Korea R User Group): link\n한국 R 컨퍼런스 (Korea R Conference): link\n유튜브 채널 (Youtube Channel): link\n페이스북 그룹 (Facebook Group): link"
+    "text": "서울 R 미트업\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n참여와 연대\n\n서울R미트업 meetup.com: link\n\n23년 4월 서울 R 미트업: link\n23년 5월 서울 R 미트업: link\n23년 6월 서울 R 미트업: 준비중\n\n세계 R 미트업 현황 (Global R Meetup Dashboard): link\n한국 R 사용자회 (Korea R User Group): link\n한국 R 컨퍼런스 (Korea R Conference): link\n유튜브 채널 (Youtube Channel): link\n페이스북 그룹 (Facebook Group): link"
   },
   {
     "objectID": "slideshow/202305-seoul-r-meetup/index.html#참여와-연대",
     "href": "slideshow/202305-seoul-r-meetup/index.html#참여와-연대",
     "title": "챗GPT와 데이터 과학",
     "section": "참여와 연대",
-    "text": "참여와 연대\n\n서울R미트업 meetup.com: link\n\n23년 4월 서울 R 미트업: link\n23년 5월 서울 R 미트업: link\n\n세계 R 미트업 현황 (Global R Meetup Dashboard): link\n한국 R 사용자회 (Korea R User Group): link\n한국 R 컨퍼런스 (Korea R Conference): link\n유튜브 채널 (Youtube Channel): link\n페이스북 그룹 (Facebook Group): link"
+    "text": "참여와 연대\n\n서울R미트업 meetup.com: link\n\n23년 4월 서울 R 미트업: link\n23년 5월 서울 R 미트업: link\n23년 6월 서울 R 미트업: 준비중\n\n세계 R 미트업 현황 (Global R Meetup Dashboard): link\n한국 R 사용자회 (Korea R User Group): link\n한국 R 컨퍼런스 (Korea R Conference): link\n유튜브 채널 (Youtube Channel): link\n페이스북 그룹 (Facebook Group): link"
   },
   {
     "objectID": "slideshow/202305-seoul-r-meetup/index.html#챗gpt-api-가격",
@@ -432,5 +432,12 @@
     "title": "",
     "section": "",
     "text": "서울R미트업 meetup.com: link\n\n주최자: 유충현/이광춘/홍성학/신종화\n23년 4월 서울 R 미트업: link\n23년 5월 서울 R 미트업: link\n\n세계 R 미트업 현황 (Global R Meetup Dashboard): link\n한국 R 사용자회 (Korea R User Group): link\n한국 R 컨퍼런스 (Korea R Conference): link\n유튜브 채널 (Youtube Channel): link\n페이스북 그룹 (Facebook Group): link"
+  },
+  {
+    "objectID": "slideshow/202305-seoul-r-meetup/index.html#we-have-no-moat",
+    "href": "slideshow/202305-seoul-r-meetup/index.html#we-have-no-moat",
+    "title": "챗GPT와 데이터 과학",
+    "section": "We Have No Moat",
+    "text": "We Have No Moat\n\n\n\n\nflowchart LR\n   subgraph \"2021년 R 컨퍼런스: 챗GPT 이전\"\n    A[\"R 컨퍼런스\"] --&gt; AB[\"키노트\"] --&gt; B[\"제작방법\"]\n    end\n    \n    subgraph \"서울 R 미트업: 챗GPT 이후\"\n    direction LR\n        Youtube[\"챗GPT 오정보\"] --&gt; STT[\"STT: Whisper\"]\n        Youtube                 --&gt; Summary[\"요약: Langchain\"]\n        Youtube                 --&gt; Embedding[\"임베딩: Pinecone\"]\n        Youtube                 --&gt; ETC[\"...\"]\n    end\n\n    B -.-&gt; Moat[\"We Have No Moat,&lt;br&gt; And Neither Does OpenAI\"]\n    STT -.-&gt; Moat \n    Summary -.-&gt; Moat \n    Embedding -.-&gt;  Moat\n    ETC -.-&gt;  Moat\n\nclick A href \"https://use-r.kr/\"\nclick AB href \"https://www.youtube.com/watch?v=clNN1xAiEkw\"\nclick B href \"https://statkclee.github.io/deep-learning/rconf-keynote.html\"\n\nclick Youtube href \"https://www.youtube.com/watch?v=csqOtqFBybk\"\nclick STT href \"https://r2bit.com/chatGPT/whisper.html\"\nclick Summary href \"https://r2bit.com/chatGPT/news_release.html\"\nclick Embedding href \"https://r2bit.com/chatGPT/misinfo_embedding.html\"\n\nclick Moat href \"https://www.semianalysis.com/p/google-we-have-no-moat-and-neither\"\n\n\nclass A nodeStyle\nclass AB,AC,AD,AE theoryStyle\nclass B,C,D,E practiceStyle\nclass F taskStyle\n\nclassDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef theoryStyle fill:#f59542,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef practiceStyle fill:#4287f5,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef taskStyle fill:#42f548,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;"
   }
 ]

@@ -24,10 +24,15 @@ editor_options:
 
 ## 목차
 
+0.  챗GPT와 오정보
 1.  한국어 임베딩과 R언어 (홍성학)
 2.  OpenAI 임베딩 모형
 3.  대통령 취임사
 4.  질의응답
+
+{{< include seoul-r-meetup.qmd >}}
+
+{{< include 04-misinformation.qmd >}}
 
 {{< include 01-seoul-r-embedding.qmd >}}
 
@@ -35,9 +40,9 @@ editor_options:
 
 {{< include 03-president-inaugural.qmd >}}
 
-{{< include seoul-r-meetup.qmd >}}
-
 {{< include 05-end-slide.qmd >}}
+
+
 
 
 
