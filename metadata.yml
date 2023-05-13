@@ -1,5 +1,19 @@
 # Internal slide decks
 
+- title: "챗GPT"
+  subtitle: "챗GPT 최신 동향"
+  author: "이광춘"
+  date: 2023-05-18
+  image: img/ChatGPT_logo.png
+  path: chatGPT_202305.qmd
+  categories:
+    - chatGPT
+    - 한국 R 사용자회
+    - GPT-3/3.5/4
+    - 오픈소스 LLM
+    - 디지털 글쓰기
+    - 인공지능
+
 - title: "드림톡 콘서트 - 과학 행사"
   subtitle: "오픈소스 소프트웨어"
   author: "이광춘"

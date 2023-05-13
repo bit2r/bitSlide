@@ -1,0 +1,44 @@
+---
+title: "chatGPT"
+subtitle: "챗GPT 최신 동향"
+author: "이광춘/신종화"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-05-18
+format: 
+  insper-revealjs:
+    self-contained: false
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  체험 삶의 현장
+2.  chatGPT란?
+3.  chatGPT 실습
+4.  chatGPT 한계와 시사점
+5.  질의응답
+
+<!-- {{< include 00-who-am-i.qmd >}} -->
+
+{{< include slideshow/202305-gpt/01-life-in-action.qmd >}}
+
+<!-- {{< include 02-about-chatGPT.qmd >}} -->
+
+<!-- {{< include 03-chatGPT-in-action.qmd >}} -->
+
+<!-- {{< include 04-limitation.qmd >}} -->
+
+<!-- {{< include seoul-r-meeup.qmd >}} -->
+
+<!-- {{< include reference.qmd >}} -->
+

@@ -1,0 +1,11 @@
+{
+  "hash": "af7d44946241621c2fe0d8eb80cbac5a",
+  "result": {
+    "markdown": "---\ntitle: chatGPT 실습\n---\n\n\n\n## openAI 마이크로소프트 3 대장 + $\\alpha$\n\n![](../../img/openai-three-pillars.png)\n\n## chatGPT 3대장\n\n::: panel-tabset\n### 최강 3대장 {.unnumbered}\n\n![](../../img/big_three_original.png){width=\"800\"}\n\n### `chatGPT` 3대장 {.unnumbered}\n\n![](../../img/big_three_chatGPT.png){width=\"800\"}\n\n### --- {.unnumbered}\n\n### 글쓰기 {.unnumbered}\n\n![](../../img/chatgpt_writing.gif){width=\"700\"}\n\n### 그리기 {.unnumbered}\n\n![](../../img/chatGPT_visual.gif){width=\"700\"}\n\n### 코딩 {.unnumbered}\n\n![](../../img/chatGPT_coding.gif){width=\"700\"}\n:::\n\n## $\\alpha$ 추론\n\n::: panel-tabset\n### 문제\n\n#### 디오판토스 묘비\n\n신의 축복으로 태어난 그는 인생의 $\\frac{1}{6}$을 소년으로 보냈다. 그리고 다시 인생의 $\\frac{1}{12}$ 이 지난 뒤에는 얼굴에 수염이 자라기 시작했다. 다시 $\\frac{1}{7}$이 지난 뒤 그는 아름다운 여인을 맞이하여 화촉을 밝혔으며, 결혼한 지 5년 만에 귀한 아들을 얻었다. 아! 그러나 그의 가엾은 아들은 아버지의 반 밖에 살지 못했다. 아들을 먼저 보내고 깊은 슬픔에 빠진 그는 그 뒤 4년간 정수론에 몰입하여 스스로를 달래다가 일생을 마쳤다. [^1]\n\n### 수식 표현\n\n디오판토스가 정확히 언제 태어나고 언제 죽었는지는 명확하지 않지만, 그가 죽었을 때의 나이는 정확히 알 수 있다. 이를 방정식을 통해 풀어보자. 수식을 $x$에 대해 정리해서 풀면 84가 나온다.\n\n$$\\frac {x} {6} + \\frac {x} {12} + \\frac {x} {7} +  5 + \\frac {x} {2} + 4 = x$$\n\n### 손으로 풀기\n\n![](../../img/inference_hand.jpg){width=\"486\"}\n\n### `Sympy` 동원\n\n\n::: {.cell execution_count=1}\n``` {.python .cell-code}\nfrom sympy import *\nx = Symbol('x')\nDiophantus_puzzle = x/6 + x/12 + x/7 + 5 + x/2 + 4 - x\nsolve(Diophantus_puzzle, x, dict = True)\n```\n\n::: {.cell-output .cell-output-display execution_count=1}\n```\n[{x: 84}]\n```\n:::\n:::\n\n\n### `chatGPT` 풀기\n\n![](../../img/inference_gpt4.jpg){width=\"400\"}\n:::\n\n",
+    "supporting": [
+      "03-chatGPT-in-action_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

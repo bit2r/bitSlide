@@ -1,0 +1,107 @@
+# 삶의 현장
+
+## 백만\~1억 사용자 {{< fa solid rocket >}}
+
+백만, 5천만, 1억 가입자를 가질 때까지 걸린 소요시간
+
+::: panel-tabset
+## 전화기
+
+![[@song2019digital]](../../img/time-to-reach-springer.png){width="600"}
+
+## 기술 진화
+
+![[Rita McGrath(November 25, 2013), "The Pace of Technology Adoption is Speeding Up", Harvard Business Review](https://hbr.org/2013/11/the-pace-of-technology-adoption-is-speeding-up)](../../img/hbr_trends.png)
+
+## chatGPT 백만
+
+![](../../img/one_million_users.jpg){width="600"}
+
+## 빅3 서비스
+
+![출처: <https://twitter.com/umarsaif/status/1610932387185315840>](../../img/time-to-reach-5days.jfif)
+
+## 1억명 (소요 달수)
+
+![출처: <https://twitter.com/EconomyApp/status/1622029832099082241>](../../img/time-to-reach-100M.jfif){width="600"}
+:::
+
+## AI를 바라보는 관점
+
+::: panel-tabset
+### 트위터 Santiago I {.unnumbered}
+
+![](../../img/santiago_01.png)
+
+### 트위터 Santiago II {.unnumbered}
+
+![](../../img/santiago_02.png)
+
+### 버스탄 두 남자 {.unnumbered}
+
+![](../../img/two_men_on_a_bus.png){width="600"}
+:::
+
+## 3 대장 + $\alpha$
+
+![](../../img/openai-three-pillars.png)
+
+## 3 대장: 현대백화점
+
+::: panel-tabset
+### AI 직원
+
+<br> ![](../../img/hyundai-03.jpg)
+
+### 활용화면
+
+<br> ![](../../img/hyundai-01.jpg)
+
+### 루이스
+
+<br> ![](../../img/hyundai-02.jpg)
+:::
+
+## 3 대장: 마이크로소프트
+
+::: columns
+::: {.column width="60%"}
+<br> ![](../../img/productivity_at_microsoft.png)
+:::
+
+::: {.column width="40%"}
+<br>
+
+-   신규 코드의 **40%**가 Copilot으로 작성
+-   **75%의 개발자**가 업무에 더 큰 성취감을 느꼈습니다.
+-   **87%의 개발자**가 정신적 노력을 절약하는 데 도움이 되었다고 답했습니다.
+:::
+:::
+
+## 3 대장: 이미지
+
+<br> <br> ![](../../img/webtoon.png)
+
+::: aside
+웹툰을 제작하는 스튜디오에서는 웹툰 작가들과 어시스트들이 매우 노동집약적인 작업으로 창작활동을 하고 있다. 현재 웹툰 제작 공정은 콘티, 스케치, 라인(펜선), 채색, 배경, 출판 작업의 순서로 이뤄진다. 한국만화영상진흥원과 협력하는 실제 웹툰 작가들은 특정작업이 아닌 모든 공정에서 제작 생산성 향상을 위한 자동화 기술이 필요하다는 결론에 도달함. [@webtoon2021]
+:::
+
+## 3 대장: $\alpha$
+
+![](../../img/lsat_g.png){width="800"}
+
+::: aside
+출처: <https://r2bit.com/chatGPT/gpt4_performance.html> [@openai2023gpt4]
+:::
+
+## 시장 와해 사례 {{< fa solid book >}}
+
+공상과학 및 판타지 잡지 클라크스월드(Clarkesworld)는 AI가 생성한 소설라는 비난을 받은 후 신규 공상과학소설이 급증한 것이 AI 기계로 작성된 원인을 큰 것으로 파악하고 2월 20일부터 공식적으로 투고를 중단했다.
+
+::: {#sci-fiction layout-ncol="2"}
+![2023-02-15 기준](../../img/shutdown-01.jpg)
+
+![2023-02-20 기준](../../img/shutdown-02.jpg)
+:::
+
+[[Neil Clark (2023-02-15), "A Concerning Trend", CLARKESWORLD MAGAZINE](http://neil-clarke.com/a-concerning-trend/)]{.aside}
