@@ -1,17 +1,20 @@
-@import url(//db.onlinewebfonts.com/c/3718b9c08dfceed0abb9688dedf38d8d?family=Prelo+Medium);
+
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=IBM+Plex+Sans+KR&display=swap');
+
 
 /*-- scss:defaults --*/
 
+
 $body-bg: #fff;
 $body-color: #414042;
-$link-color: #C4161C;
-$code-color: #27A5A2;
-$code-block-border-color: #009491;
+$link-color: #3124DC;
+$code-color: #9795E6;
+$code-block-border-color: #9795E6;
 
-$presentation-heading-color: #C4161C;
+$presentation-heading-color: #174F99;
 $presentation-font-size-root: 30px;
 
-$font-family-sans-serif: "Prelo Medium";
+$font-family-sans-serif: "IBM Plex Sans KR";
 
 $presentation-slide-text-align: left;
 

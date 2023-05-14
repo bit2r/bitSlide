@@ -22,15 +22,19 @@ editor_options:
 
 ## 목차
 
-1.  체험 삶의 현장
-2.  chatGPT란?
-3.  chatGPT 실습
-4.  chatGPT 한계와 시사점
-5.  질의응답
+1.  들어가며
+1.  컴퓨터 기본지식과 역사
+1.  ~~체험 삶의 현장~~
+2.  ~~chatGPT란?~~
+3.  ~~chatGPT 실습~~
+4.  ~~chatGPT 한계와 시사점~~
+5.  ~~질의응답~~
 
-<!-- {{< include 00-who-am-i.qmd >}} -->
+{{< include slideshow/202305-gpt/seoul-r-meeup.qmd >}}
+{{< include slideshow/202305-gpt/00-who-am-i.qmd >}}
+{{< include slideshow/202305-gpt/00-open-source-software.qmd >}}
 
-{{< include slideshow/202305-gpt/01-life-in-action.qmd >}}
+<!-- {{< include slideshow/202305-gpt/01-life-in-action.qmd >}} -->
 
 <!-- {{< include 02-about-chatGPT.qmd >}} -->
 
@@ -41,4 +45,5 @@ editor_options:
 <!-- {{< include seoul-r-meeup.qmd >}} -->
 
 <!-- {{< include reference.qmd >}} -->
+
 

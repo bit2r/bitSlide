@@ -1,38 +1,44 @@
-#  {background-image="../../img/meetup_logo.jpg"}
+#  {background-image="img/meetup_logo.jpg"}
 
 ::: r-fit-text
 :::
 
-## 서울 R 미트업
+## 서울 R 미트업 {.smaller}
 
-:::::{.columns}
-:::{.column width="40%"}
-
+::: columns
+::: column
 ::: r-stack
-
-![](../../img/seoul-r-meetup-202304.jpg){width="320"}
-
+![](img/seoulr-r-meetup-june.jpg){.fragment width="320"}
 
 ::: fragment
-![](../../img/seoul-r-meetup-202305.jpg){.fragment width="320"}
+![](img/seoul-r-meetup-202305.jpg){.fragment width="320"}
+:::
+
+::: fragment
+![](img/seoul-r-meetup-AsiaR.jpg){.fragment width="320"}
+:::
+
+::: fragment
+![](img/seoul-r-meetup-202304.jpg){.fragment width="320"}
+:::
+
+
 :::
 :::
 
-:::
-
-:::{.column width="60%"}
+::: column
 ## 참여와 연대
 
 -   **서울R미트업 meetup.com**: [link](https://www.meetup.com/seoul-r-meetup)
-    - 주최자: 유충현/이광춘/홍성학/신종화
     -   **23년 4월 서울 R 미트업**: [link](https://www.meetup.com/seoul-r-meetup/events/292232899/)
     -   **23년 5월 서울 R 미트업**: [link](https://www.meetup.com/seoul-r-meetup/events/292966674/)
+    -   **23년 6월 서울 R 미트업**: [link](https://www.meetup.com/seoul-r-meetup/events/293485362/)
+    -   **23년 7월 서울 R 미트업**: 준비중
 -   세계 R 미트업 현황 (Global R Meetup Dashboard): [link](https://r-community.org/usergroups/)
 -   한국 R 사용자회 (Korea R User Group): [link](https://r2bit.com/)
 -   한국 R 컨퍼런스 (Korea R Conference): [link](https://use-r.kr/)
 -   유튜브 채널 (Youtube Channel): [link](https://www.youtube.com/channel/UCW-epmIvjBEhhVXw_F0Nqbw)
 -   페이스북 그룹 (Facebook Group): [link](https://www.facebook.com/groups/tidyverse)
-
 :::
-:::::
+:::
 
