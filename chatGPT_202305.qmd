@@ -30,8 +30,10 @@ editor_options:
 4.  ~~chatGPT 한계와 시사점~~
 5.  ~~질의응답~~
 
-{{< include slideshow/202305-gpt/seoul-r-meeup.qmd >}}
 {{< include slideshow/202305-gpt/00-who-am-i.qmd >}}
+
+{{< include slideshow/202305-gpt/seoul-r-meeup.qmd >}}
+
 {{< include slideshow/202305-gpt/00-open-source-software.qmd >}}
 
 <!-- {{< include slideshow/202305-gpt/01-life-in-action.qmd >}} -->
