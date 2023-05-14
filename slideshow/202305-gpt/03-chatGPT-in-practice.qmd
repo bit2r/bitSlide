@@ -1,0 +1,32 @@
+# chatGPT 실습
+
+## openAI 마이크로소프트 3 대장 + $\alpha$
+
+![](../../img/openai-three-pillars.png)
+
+## chatGPT 3대장
+
+::: panel-tabset
+### 최강 3대장 {.unnumbered}
+
+![](../../img/big_three_original.png){width="800"}
+
+### `chatGPT` 3대장 {.unnumbered}
+
+![](../../img/big_three_chatGPT.png){width="800"}
+
+### --- {.unnumbered}
+
+### 글쓰기 {.unnumbered}
+
+![](../../img/chatgpt_writing.gif){width="700"}
+
+### 그리기 {.unnumbered}
+
+![](../../img/chatGPT_visual.gif){width="700"}
+
+### 코딩 {.unnumbered}
+
+![](../../img/chatGPT_coding.gif){width="700"}
+:::
+

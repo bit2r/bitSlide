@@ -1,0 +1,294 @@
+# 대통령 취임사
+
+## 작업흐름
+
+<br> <br>
+
+![](../../img/embedding/embedding_workflow.jpg)
+
+
+## 원천 데이터
+
+<br> <br>
+
+![](../../img/embedding/inaugural_dataset.png)
+
+## 파일 연설문 {.smaller}
+
+```{r}
+#| output-location: slide
+#| echo: true
+library(tidyverse)
+
+presidents <- fs::dir_ls("../../data/Inaugural/")
+
+inaugural_tbl <- presidents %>% 
+  enframe(name = "파일경로") %>% 
+  separate(value, into = c("역대", "대통령"), sep="_") %>% 
+  mutate(대통령 = str_remove(대통령, "\\.txt")) %>% 
+  mutate(취임사 = map(파일경로, read_lines)) %>% 
+  mutate(취임사 = map_chr(취임사, paste0, collapse = " ")) %>% 
+  select(역대, 대통령, 취임사) %>% 
+  mutate(취임사 = str_squish(취임사)) %>% 
+  mutate(취임사 = str_replace_all(취임사, "ㆍ", ", "))
+
+inaugural_tbl 
+```
+
+
+## 임베딩 {.smaller}
+
+<br>
+
+```{r}
+#| eval: false
+#| echo: true
+library(httr)
+
+get_embedding <- function(inaugural_address) {
+  embeddings_url <- "https://api.openai.com/v1/embeddings"
+  auth <- add_headers(Authorization = paste("Bearer", Sys.getenv("OPENAI_API_KEY")))
+  body <- list(model = "text-embedding-ada-002", input = inaugural_address)
+  
+  resp <- POST(
+    embeddings_url,
+    auth,
+    body = body,
+    encode = "json"
+  )
+  
+  embeddings <- content(resp, as = "text", encoding = "UTF-8") %>%
+    jsonlite::fromJSON(flatten = TRUE) %>%
+    pluck("data", "embedding")
+  
+  Sys.sleep(1)
+  
+  return(embeddings)
+}
+
+# 1. 국문 취임사
+embedding_tbl <- inaugural_tbl %>% 
+  mutate(임베딩 = map(취임사, get_embedding)) %>% 
+  pull()
+```
+
+## 임베딩 벡터 {.smaller}
+
+<br>
+
+```{r}
+#| output-location: slide
+#| echo: true
+embedding_tbl <-  
+  read_rds("../../data/Inaugural.rds") %>% 
+  mutate(구분 = "국문 취임사")
+
+translated_embedding <- 
+  read_rds("../../data/translated_embedding.rds") %>% 
+  mutate(구분 = "영문번역 취임사") %>% 
+  rename(취임사 = 영문번역)
+
+inaugural_eng_embedding <- 
+  read_rds("../../data/inaugural_eng_embedding.rds") %>% 
+  mutate(구분 = "영문 취임사") %>% 
+  rename(취임사 = 영문취임사)
+
+api_embedding <- 
+  bind_rows(embedding_tbl, translated_embedding) %>% 
+  bind_rows(inaugural_eng_embedding)
+
+api_embedding %>% 
+  mutate(취임사 = str_sub(취임사, 1, 10)) %>% 
+  mutate(임베딩벡터 = map(임베딩, pluck, 1)) %>% 
+  mutate(벡터길이 = map_int(임베딩벡터, length)) %>% 
+  select(구분, 대통령, 취임사, 임베딩, 임베딩벡터, 벡터길이) 
+```
+
+
+## (코사인) 유사도 
+
+<br>
+
+두 임베딩 벡터 $\mathbf{u}$ 와 $\mathbf{v}$ 는 다음 공식을 사용하여 두 벡터간의 유사도를 구할 수 있다.
+
+<br>
+<br>
+
+$$
+\begin{equation*}
+\text{코사인 유사도}(\mathbf{u},\mathbf{v}) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}
+= \frac{\sum_{i=1}^n u_i v_i}{\sqrt{\sum_{i=1}^n u_i^2} \sqrt{\sum_{i=1}^n v_i^2}}
+\end{equation*}
+$$
+
+## 윤석열 대통령 취임사 {.smaller}
+
+<br>
+
+```{r}
+#| output-location: slide
+#| echo: true
+
+library(reactable)
+
+api_embedding_tbl <- api_embedding %>% 
+  select(구분, 대통령, 임베딩) %>% 
+  mutate(임베딩 = map(임베딩, unlist)) %>% 
+  mutate(임베딩크기 = str_length(임베딩)) %>% 
+  filter(임베딩크기 > 100)
+
+yoon_embedding <- api_embedding_tbl$임베딩[12][[1]]
+
+yoon_list <- list()
+
+for(i in 1:nrow(api_embedding_tbl)) {
+  yoon_list[[i]] <- lsa::cosine(yoon_embedding, api_embedding_tbl$임베딩[[i]])
+}
+
+api_embedding_tbl %>% 
+  select(-임베딩, -임베딩크기) %>% 
+  mutate(유사도 = yoon_list %>% unlist) %>% 
+  arrange(desc(유사도)) %>% 
+  reactable::reactable(
+    columns = list(유사도 = colDef(format = colFormat(separators = TRUE, digits = 3))),
+    # Table Theme
+    theme = reactableTheme(
+      backgroundColor = "#1D2024", color = "white", borderColor = "#666666",
+      paginationStyle = list(color = "white"), 
+      selectStyle = list(color = "black"),
+      headerStyle = list(color = "white", fontFamily = "NanumGothic"),
+      cellStyle = list(color = "#FAFAFA", 
+                        fontFamily = "NanumGothic, Consolas, Monaco, monospace", 
+                        fontSize = "14px")
+                           ))  
+```
+
+## 전체 취임사 유사도  {.smaller}
+
+<br>
+
+```{r}
+#| output-location: slide
+#| echo: true
+
+library(umap)
+
+embeddings_mat <- matrix(
+  unlist(api_embedding_tbl$임베딩), 
+  ncol = 1536, byrow = TRUE
+)
+
+embeddings_similarity <- embeddings_mat / sqrt(rowSums(embeddings_mat * embeddings_mat))
+embeddings_similarity <- embeddings_similarity %*% t(embeddings_similarity)
+
+## 정방행렬을 데이터프레임으로 변환
+
+취임사_구분자 <- api_embedding_tbl %>% 
+  mutate(구분명 = glue::glue("{대통령}_{str_remove(구분, ' ?취임사 ?')}")) %>% 
+  pull(구분명)
+
+취임사_colnames_tbl <- tibble(취임사_구분자 = 취임사_구분자) %>% 
+  mutate(name = glue::glue("V{1:30}"))
+
+embeddings_similarity_tbl <- embeddings_similarity %>% 
+  as.data.frame %>% 
+  mutate(구분자 = 취임사_구분자) %>%
+  column_to_rownames(var = "구분자") %>%
+  tibble::rownames_to_column()  %>%
+  tidyr::pivot_longer(-rowname) %>% 
+  # From A to B
+  left_join(취임사_colnames_tbl) %>% 
+  select(취임사_A = rowname, 취임사_B = 취임사_구분자, 유사도 = value)
+
+embeddings_similarity_tbl %>% 
+  filter(유사도 < 0.9999 ) %>% 
+  arrange(desc(유사도)) %>% 
+  mutate(대통령_A = str_extract(취임사_A, "[^_]+(?=_)"),
+         대통령_B = str_extract(취임사_B, "[^_]+(?=_)")) %>% 
+  filter(대통령_A != 대통령_B) %>% 
+  select(취임사_A, 취임사_B, 유사도) %>% 
+  reactable::reactable(
+    columns = list(유사도 = colDef(format = colFormat(separators = TRUE, digits = 3))),
+    # Table Theme
+    theme = reactableTheme(
+      backgroundColor = "#1D2024", color = "white", borderColor = "#666666",
+      paginationStyle = list(color = "white"), 
+      selectStyle = list(color = "black"),
+      headerStyle = list(color = "white", fontFamily = "NanumGothic"),
+      cellStyle = list(color = "#FAFAFA", 
+                        fontFamily = "NanumGothic, Consolas, Monaco, monospace", 
+                        fontSize = "14px")
+                           ))
+```
+
+## 시각화
+
+:::{.panel-tabset}
+
+### 국영문 {.smaller}
+
+```{r}
+#| output-location: column
+#| echo: true
+
+library(ggrepel)
+extrafont::loadfonts()
+
+inaugural_umap <- umap(embeddings_mat)
+
+umap_df <- inaugural_umap$layout %>%
+  as.data.frame()%>%
+  rename(UMAP1="V1",
+         UMAP2="V2") %>% 
+  bind_cols(api_embedding_tbl) %>% 
+  mutate(구분명 = glue::glue("{대통령}_{str_remove(구분, ' ?취임사 ?')}")) %>% 
+  select(UMAP1, UMAP2, 구분명)
+
+umap_df %>%
+  ggplot(aes(x = UMAP1, 
+             y = UMAP2))+
+    geom_point(size = 1.3, alpha = 0.8) +
+    geom_text_repel(aes(label=구분명)) +
+    theme_bw(base_family="NanumGothic")
+```
+
+
+### 영문 {.smaller}
+
+```{r}
+#| output-location: column
+#| echo: true
+
+# 영어만 추출
+only_english_tbl <- api_embedding_tbl %>% 
+  filter(str_detect(구분, "영문"))
+
+english_embeddings_mat <- matrix(
+  unlist(only_english_tbl$임베딩), 
+  ncol = 1536, byrow = TRUE
+)
+
+# 시각화
+english_umap <- umap(english_embeddings_mat)
+
+english_umap_df <- english_umap$layout %>%
+  as.data.frame()%>%
+  rename(UMAP1="V1",
+         UMAP2="V2") %>% 
+  bind_cols(only_english_tbl) %>% 
+  mutate(구분명 = glue::glue("{대통령}_{str_remove(구분, ' ?취임사 ?')}")) %>% 
+  select(UMAP1, UMAP2, 구분명)
+
+english_umap_df %>%
+  separate(구분명, into = c("대통령", "번역여부"), sep = "_") %>% 
+  ggplot(aes(x = UMAP1, 
+             y = UMAP2))+
+    geom_point(aes(color = 번역여부), size = 1.3, alpha = 0.8) +
+    geom_text_repel(aes(label=대통령)) +
+    theme_bw(base_family="NanumGothic") +
+    theme(legend.position = "top") +
+    labs(title = "대통령 취임사 유사도")
+```
+
+:::
+
