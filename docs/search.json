@@ -445,7 +445,7 @@
     "href": "chatGPT_202305.html#목차",
     "title": "chatGPT",
     "section": "목차",
-    "text": "목차\n\n들어가며\n컴퓨터 기본지식과 역사\n체험 삶의 현장\nchatGPT란?\nchatGPT 실습(사용자/개발자)\nchatGPT 한계와 시사점\n구글 검색 위기 (챗GPT와 오정보)\n질의응답"
+    "text": "목차\n\n들어가며\n컴퓨터 기본지식과 역사\n체험 삶의 현장\nDT, 애자일, DevOps → 오피스 전쟁\nchatGPT란?\nchatGPT 사용자 관점\nchatGPT 앱 개발자 관점\nchatGPT 한계와 시사점\n구글 검색 위기 (챗GPT와 오정보)\n질의응답"
   },
   {
     "objectID": "chatGPT_202305.html#백만1억-사용자-fa-solid-rocket",
@@ -1076,5 +1076,173 @@
     "title": "chatGPT",
     "section": "사례: 챗GPT와 오정보",
     "text": "사례: 챗GPT와 오정보\n\n\n\n\n\n\n\nflowchart LR\n    \n    subgraph SeoulR[\"서울 R 미트업: 챗GPT와 오정보\"]\n    direction LR\n        Youtube[\"챗GPT 오정보\"] --&gt; STT[\"STT: Whisper\"]\n        Youtube                 --&gt; Embedding[\"임베딩: OpenAI\"]\n        Youtube                 --&gt; Summary[\"요약: Langchain\"]\n        Youtube                 --&gt; Pinecone[\"벡터 DB: Pinecone\"]\n        Youtube                 --&gt; ETC[\"검색: 코사인 유사도\"]\n    end\n\n    STT -.-&gt; Moat[\"We Have No Moat,&lt;br&gt; And Neither Does OpenAI\"] \n    Embedding -.-&gt;  Moat\n    Summary -.-&gt; Moat \n    Pinecone -.-&gt;  Moat\n    ETC -.-&gt;  Moat\n\nclick SeoulR href \"https://r2bit.com/seoul-r/\"\n\nclick Youtube href \"https://youtu.be/3t9nPopr0QA\"\nclick STT href \"https://r2bit.com/chatGPT/whisper.html\"\nclick Summary href \"https://r2bit.com/chatGPT/news_release.html\"\nclick Embedding href \"https://r2bit.com/chatGPT/misinfo_embedding.html\"\n\nclick Moat href \"https://www.semianalysis.com/p/google-we-have-no-moat-and-neither\"\n\n\nclass A nodeStyle\nclass AB,AC,AD,AE theoryStyle\nclass B,C,D,E practiceStyle\nclass F taskStyle\n\nclassDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef theoryStyle fill:#f59542,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef practiceStyle fill:#4287f5,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef taskStyle fill:#42f548,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;\n\n\n\n\n\n\n\n“why misinformation is dangerous?”\n\n186 And we know that, you know, our surgeon general and other major leaders around the world have recognized the ways in which misinformation can affect our health, and they can affect the health of democracies\n\n130 And bullshit is a part of the misinformation story\n\n16   We've studied misinformation during the pandemic and during elections and all sorts of other topics\n\n\n\n\n\n챗GPT - 오정보 임베딩"
+  },
+  {
+    "objectID": "chatGPT_202305.html#디자인-씽킹",
+    "href": "chatGPT_202305.html#디자인-씽킹",
+    "title": "chatGPT",
+    "section": "디자인 씽킹",
+    "text": "디자인 씽킹\n\n\n\n\ngraph TD\nstyle A fill:#F5A623,stroke:#F5A623,stroke-width:2px;\nstyle B fill:#EFEFEF,stroke:#000,stroke-width:2px;\nstyle C fill:#EFEFEF,stroke:#000,stroke-width:2px;\nstyle D fill:#EFEFEF,stroke:#000,stroke-width:2px;\nstyle E fill:#EFEFEF,stroke:#000,stroke-width:2px;\nstyle F fill:#EFEFEF,stroke:#000,stroke-width:2px;\n\nA[공감하기] --&gt; B[문제 정의]\nB[문제 정의] --&gt; C[해결방법 찾기]\nC[해결방법 찾기] --&gt; D[시제품 제작]\nD[시제품 제작] --&gt; E[시험평가]\nE[시험평가] --&gt; F[반복하기]\nF[반복하기] --&gt; B[문제정의]\n\nclassDef mainNode fill:#F5A623,stroke:#EFEFEF,stroke-width:2px;\nclass A mainNode;\n\n\n\n\n\n\n\n디자인 씽킹(Design thinking) 은 공감, 창의성, 실험 등을 강조하는 문제 해결 방법론으로 혁신적인 솔루션을 개발하는 것을 목적으로 합니다."
+  },
+  {
+    "objectID": "chatGPT_202305.html#애자일-개발",
+    "href": "chatGPT_202305.html#애자일-개발",
+    "title": "chatGPT",
+    "section": "애자일 개발",
+    "text": "애자일 개발\n\n\n\n\ngraph TD\nstyle A fill:#F5A623,stroke:#F5A623,stroke-width:1px;\nstyle B fill:#EFEFEF,stroke:#000,stroke-width:1px;\nstyle C fill:#EFEFEF,stroke:#000,stroke-width:1px;\nstyle D fill:#EFEFEF,stroke:#000,stroke-width:1px;\nstyle E fill:#EFEFEF,stroke:#000,stroke-width:1px;\n\n\nA[Product Backlog] --&gt;|Sprint Planning| B[Sprint Backlog]\nB[Sprint Backlog] --&gt;|Daily Scrum| C[Development]\nC[Development] --&gt;|Sprint Review| D[Product Increment]\nD[Product Increment] --&gt;|Sprint Retrospective| E[Process Improvement]\nE[Process Improvement] --&gt;|Backlog Refinement| A[Product Backlog]\n\nclassDef mainNode fill:#4DB6AC,stroke:#000,stroke-width:1px;\nclass A mainNode;\nclassDef subNode fill:#FFF,stroke:#000,stroke-width:1px;\nclass B,C,D,E subNode;\nclassDef arrow stroke:#000,stroke-width:1px;\nclass B,C,D,E arrow;\n\n\n\n\n\n\n\n애자일(agile)은 개인과 상호작용, 작동하는 소프트웨어, 고객과의 협력, 변화에 대응하는 것을 가치로 두는 반복적이고 유연한 소프트웨어 개발 접근 방식입니다."
+  },
+  {
+    "objectID": "chatGPT_202305.html#데브옵스devops",
+    "href": "chatGPT_202305.html#데브옵스devops",
+    "title": "chatGPT",
+    "section": "데브옵스(DevOps)",
+    "text": "데브옵스(DevOps)\n\n\n\n\ngraph TD\nstyle A fill:#F5A623,stroke:#F5A623,stroke-width:1px;\nstyle B fill:#EFEFEF,stroke:#000,stroke-width:1px;\nstyle C fill:#EFEFEF,stroke:#000,stroke-width:1px;\nstyle D fill:#EFEFEF,stroke:#000,stroke-width:1px;\nstyle E fill:#EFEFEF,stroke:#000,stroke-width:1px;\nstyle F fill:#EFEFEF,stroke:#000,stroke-width:1px;\n\nA[\"계획 (Plan)\"] --&gt;|Code| B[Code]\nB[Code] --&gt;|Build| C[Build]\nC[Build] --&gt;|Test| D[Test]\nD[Test] --&gt;|Deploy| E[Deploy]\nE[Deploy] --&gt;|Operate| F[\"운영 (Operate)\"]\nF[\"운영 (Operate)\"] --&gt;|Monitor| A[\"계획 (Plan)\"]\n\nclassDef mainNode fill:#4DB6AC,stroke:#000,stroke-width:1px;\nclass A mainNode;\nclassDef subNode fill:#FFF,stroke:#000,stroke-width:1px;\nclass B,C,D,E,F subNode;\nclassDef arrow stroke:#000,stroke-width:1px;\nclass B,C,D,E,F arrow;\n\n\n\n\n\n\n\n“데브옵스(DevOps)는 자동화, 협업, 모니터링을 통해 소프트웨어 개발과 IT 운영을 결합하여 빠르고 안정적인 소프트웨어 제공을 가능하게 하는 소프트웨어 개발 방법론입니다.”"
+  },
+  {
+    "objectID": "chatGPT_202305.html#dt-agile-devops-1",
+    "href": "chatGPT_202305.html#dt-agile-devops-1",
+    "title": "chatGPT",
+    "section": "DT → Agile → DevOps",
+    "text": "DT → Agile → DevOps\n\n\nDAD챗GPT 디지털 글쓰기쉘 프로그래밍챗GPT → DT → Agile → DevOps"
+  },
+  {
+    "objectID": "chatGPT_202305.html#챗gpt-디지털-글쓰기",
+    "href": "chatGPT_202305.html#챗gpt-디지털-글쓰기",
+    "title": "chatGPT",
+    "section": "챗GPT 디지털 글쓰기",
+    "text": "챗GPT 디지털 글쓰기"
+  },
+  {
+    "objectID": "chatGPT_202305.html#쉘-프로그래밍",
+    "href": "chatGPT_202305.html#쉘-프로그래밍",
+    "title": "chatGPT",
+    "section": "쉘 프로그래밍",
+    "text": "쉘 프로그래밍"
+  },
+  {
+    "objectID": "chatGPT_202305.html#chatgpt-3대장-alpha-추론",
+    "href": "chatGPT_202305.html#chatgpt-3대장-alpha-추론",
+    "title": "chatGPT",
+    "section": "chatGPT 3대장 + \\(\\alpha\\) 추론",
+    "text": "chatGPT 3대장 + \\(\\alpha\\) 추론\n\n문제수식 표현손으로 풀기Sympy 동원chatGPT 풀기\n\n\n디오판토스 묘비\n신의 축복으로 태어난 그는 인생의 \\(\\frac{1}{6}\\)을 소년으로 보냈다. 그리고 다시 인생의 \\(\\frac{1}{12}\\) 이 지난 뒤에는 얼굴에 수염이 자라기 시작했다. 다시 \\(\\frac{1}{7}\\)이 지난 뒤 그는 아름다운 여인을 맞이하여 화촉을 밝혔으며, 결혼한 지 5년 만에 귀한 아들을 얻었다. 아! 그러나 그의 가엾은 아들은 아버지의 반 밖에 살지 못했다. 아들을 먼저 보내고 깊은 슬픔에 빠진 그는 그 뒤 4년간 정수론에 몰입하여 스스로를 달래다가 일생을 마쳤다. 1\n\n\n디오판토스가 정확히 언제 태어나고 언제 죽었는지는 명확하지 않지만, 그가 죽었을 때의 나이는 정확히 알 수 있다. 이를 방정식을 통해 풀어보자. 수식을 \\(x\\)에 대해 정리해서 풀면 84가 나온다.\n\\[\\frac {x} {6} + \\frac {x} {12} + \\frac {x} {7} +  5 + \\frac {x} {2} + 4 = x\\]\n\n\n\n\n\n\n\n\n\n\nfrom sympy import *\nx = Symbol('x')\nDiophantus_puzzle = x/6 + x/12 + x/7 + 5 + x/2 + 4 - x\nsolve(Diophantus_puzzle, x, dict = True)\n\n[{x: 84}]\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.microsoft.com/ko-kr/microsoft-365/business"
+  },
+  {
+    "objectID": "chatGPT_202305.html#챗gpt-오피스",
+    "href": "chatGPT_202305.html#챗gpt-오피스",
+    "title": "chatGPT",
+    "section": "챗GPT 오피스",
+    "text": "챗GPT 오피스\n\n인터페이스챗GPT 사용원인챗GPT AS-IS챗GPT TO-BE"
+  },
+  {
+    "objectID": "chatGPT_202305.html#오피스-전쟁",
+    "href": "chatGPT_202305.html#오피스-전쟁",
+    "title": "chatGPT",
+    "section": "오피스 전쟁",
+    "text": "오피스 전쟁\n\n\n\n\n\n\n\n\n\n\n항목\nMS 오피스 1\n구글 오피스 2\n리브레 오피스 3\n한컴 오피스 4\n\n\n\n\n문서 작성 및 편집\n워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공\n구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공\n라이터, 캘크, 임프레스 등의 데스크톱 앱 제공\n한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공\n\n\n협업 및 공유\n원드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능\n드롭박스나 구글 드라이브와 연동하여 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n\n\n이메일 및 채팅\nOutlook을 통해 비즈니스 메일 제공. Teams을 통해 채팅 및 화상 회의 가능\nGmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능\n이메일 및 채팅 기능 없음\n이메일 및 채팅 기능 없음\n\n\n가격\n1인당 월 5~20달러 다양한 요금제 제공. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작\n1인당 월 6~18달러까지 다양한 요금제 제공\n완전 무료\n개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요\n\n\n\nhttps://www.microsoft.com/ko-kr/microsoft-365/business“The Case for Robotic Process Automation(RPA)”, Optimal Corporation (under permission from Kinetic Consulting Services) chatGPT plus 연간 사용료 추가https://www.libreoffice.org/https://www.hancom.com/product/productMain.do"
+  },
+  {
+    "objectID": "chatGPT_202305.html#구글-검색의-종말",
+    "href": "chatGPT_202305.html#구글-검색의-종말",
+    "title": "chatGPT",
+    "section": "구글 검색의 종말(?)",
+    "text": "구글 검색의 종말(?)"
+  },
+  {
+    "objectID": "chatGPT_202305.html#오피스-전쟁-패러다임-충돌",
+    "href": "chatGPT_202305.html#오피스-전쟁-패러다임-충돌",
+    "title": "chatGPT",
+    "section": "오피스 전쟁: 패러다임 충돌",
+    "text": "오피스 전쟁: 패러다임 충돌"
+  },
+  {
+    "objectID": "chatGPT_202305.html#dt-agile-devops",
+    "href": "chatGPT_202305.html#dt-agile-devops",
+    "title": "chatGPT",
+    "section": "DT → Agile → DevOps",
+    "text": "DT → Agile → DevOps\n\n\nDAD챗GPT 디지털 글쓰기쉘 프로그래밍챗GPT → DT → Agile → DevOps"
+  },
+  {
+    "objectID": "chatGPT_202305.html#챗gpt-란",
+    "href": "chatGPT_202305.html#챗gpt-란",
+    "title": "chatGPT",
+    "section": "챗GPT 란?",
+    "text": "챗GPT 란?\n\nPNG와 JPEGFoundation 모형\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n자료출처: Ted Chiang (February 9, 2023), “ChatGPT Is a Blurry JPEG of the Web - OpenAI’s chatbot offers paraphrases, whereas Google offers quotes. Which do we prefer?”, The New Yorker"
+  },
+  {
+    "objectID": "chatGPT_202305.html#현재-나의-모습",
+    "href": "chatGPT_202305.html#현재-나의-모습",
+    "title": "chatGPT",
+    "section": "현재 나의 모습",
+    "text": "현재 나의 모습"
+  },
+  {
+    "objectID": "chatGPT_202305.html#llm-진화-1",
+    "href": "chatGPT_202305.html#llm-진화-1",
+    "title": "chatGPT",
+    "section": "LLM 진화",
+    "text": "LLM 진화\n\n\n\n\n\n\n\n(Yang 기타, 2023)"
+  },
+  {
+    "objectID": "chatGPT_202305.html#llm-1",
+    "href": "chatGPT_202305.html#llm-1",
+    "title": "chatGPT",
+    "section": "LLM",
+    "text": "LLM\n\n독점/상용 LLM오픈소스/공개 LLM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n\nShen, Y., Song, K., Tan, X., Li, D., Lu, W., & Zhuang, Y. (2023). HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in HuggingFace. https://arxiv.org/abs/2303.17580\n\n\nYang, J., Jin, H., Tang, R., Han, X., Feng, Q., Jiang, H., Yin, B., & Hu, X. (2023). Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond. https://arxiv.org/abs/2304.13712\n\n\nZhao, W. X., Zhou, K., Li, J., Tang, T., Wang, X., Hou, Y., Min, Y., Zhang, B., Zhang, J., Dong, Z., Du, Y., Yang, C., Chen, Y., Chen, Z., Jiang, J., Ren, R., Li, Y., Tang, X., Liu, Z., … Wen, J.-R. (2023). A Survey of Large Language Models. https://arxiv.org/abs/2303.18223"
+  },
+  {
+    "objectID": "chatGPT_202305.html#개발-방법론",
+    "href": "chatGPT_202305.html#개발-방법론",
+    "title": "chatGPT",
+    "section": "개발 방법론",
+    "text": "개발 방법론\n\n폭포수 모형V-모형스크럼기계학습 개발AI 앱 개발\n\n\n\n\n\n\ngraph TD\n    A[요구사항] --&gt; B[아키텍쳐/디자인]\n    B --&gt; C[구현]\n    C --&gt; D[검증/테스트]\n    D --&gt; E[유지보수]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 1: ?(caption)"
+  },
+  {
+    "objectID": "chatGPT_202305.html#폭포수-모형",
+    "href": "chatGPT_202305.html#폭포수-모형",
+    "title": "chatGPT",
+    "section": "폭포수 모형",
+    "text": "폭포수 모형\n\n\n\n\ngraph TD\n    A[요구사항] --&gt; B[아키텍쳐/디자인]\n    B --&gt; C[구현]\n    C --&gt; D[검증/테스트]\n    D --&gt; E[유지보수]"
+  },
+  {
+    "objectID": "chatGPT_202305.html#v-모형",
+    "href": "chatGPT_202305.html#v-모형",
+    "title": "chatGPT",
+    "section": "V-모형",
+    "text": "V-모형"
+  },
+  {
+    "objectID": "chatGPT_202305.html#스크럼",
+    "href": "chatGPT_202305.html#스크럼",
+    "title": "chatGPT",
+    "section": "스크럼",
+    "text": "스크럼"
+  },
+  {
+    "objectID": "chatGPT_202305.html#기계학습-개발",
+    "href": "chatGPT_202305.html#기계학습-개발",
+    "title": "chatGPT",
+    "section": "기계학습 개발",
+    "text": "기계학습 개발\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAI 앱 개발\n\n\n\n\n그림 1: ?(caption)\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "chatGPT_202305.html#langchain",
+    "href": "chatGPT_202305.html#langchain",
+    "title": "chatGPT",
+    "section": "LangChain",
+    "text": "LangChain\n\nLAMP모바일데이터 과학랭체인 컴포넌트OPL 프레임워크OPL 개발사례\n\n\n\n\n\n\n\n\n\n\nNative Development:\n\niOS: Swift and Objective-C are the main programming languages. Xcode is the primary IDE for iOS app development.\nAndroid: Kotlin and Java are the main programming languages. Android Studio is the primary IDE for Android app development.\n\nCross-Platform Development: These frameworks allow you to write code once and run it on multiple platforms.\n\nReact Native: A JavaScript framework for building native mobile apps using React and JavaScript.\nFlutter: A UI toolkit from Google for building natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language.\nXamarin: A .NET-based framework for building iOS and Android apps using C#.\n\nHybrid Mobile App Development: These are web applications packaged into a native wrapper.\n\nIonic: It uses web technologies like JavaScript, CSS, and HTML for development, and the apps can be distributed on different platforms.\nCordova/PhoneGap: These tools wrap your HTML/JavaScript app into a native container which can access the device functions of several platforms."
+  },
+  {
+    "objectID": "chatGPT_202305.html#데이터프레임",
+    "href": "chatGPT_202305.html#데이터프레임",
+    "title": "chatGPT",
+    "section": "데이터프레임",
+    "text": "데이터프레임\n\n\n\n\n\n\n\n\n펭귄: 라마인덱스 - 라마인덱스 펭귄 데이터 분석"
+  },
+  {
+    "objectID": "chatGPT_202305.html#sql",
+    "href": "chatGPT_202305.html#sql",
+    "title": "chatGPT",
+    "section": "SQL",
+    "text": "SQL\n\n\n\n\n\n\n\n\n챗GPT SQL - 소프트웨어 카펜트리"
   }
 ]
