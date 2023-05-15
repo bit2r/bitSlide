@@ -1,12 +1,11 @@
+# `chatGPT` → 챗GPT
 
-# `chatGPT`
-
-## chatGPT 란?
+## 챗GPT 란?
 
 ::: panel-tabset
 ### PNG와 JPEG
 
-![](../../img/png_jpg.png){width="651"}
+![](img/png_jpg.png){width="651"}
 
 ::: aside
 자료출처: [Ted Chiang (February 9, 2023), "ChatGPT Is a Blurry JPEG of the Web - OpenAI's chatbot offers paraphrases, whereas Google offers quotes. Which do we prefer?", The New Yorker](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
@@ -14,39 +13,51 @@
 
 ### Foundation 모형
 
-![](../../img/foundation_model.png){width="500"}
+![](img/foundation_model.png){width="500"}
 :::
 
 ## 거대 언어모형(LLM)
 
 ::: panel-tabset
-## LLM 진화
+### LLM 진화
 
-![](../../img/LLM_tree.gif)
+![](img/LLM_tree.gif)
 
-## 80억 패러미터
+### 80억 패러미터
 
-![](../../img/LLM_tree_8_billion.png)
+![](img/LLM_tree_8_billion.png)
 
-## 400억
+### 400억
 
-![](../../img/LLM_tree_40_billion.png)
+![](img/LLM_tree_40_billion.png)
 
-## 640억
+### 640억
 
-![](../../img/LLM_tree_62_billion.png)
+![](img/LLM_tree_62_billion.png)
 
-## 5,400억
+### 5,400억
 
-![](../../img/LLM_tree_540_billion.png)
+![](img/LLM_tree_540_billion.png)
 
-## 성능
+### 성능
 
-![](../../img/LLM_tree_performance.png)
+![](img/LLM_tree_performance.png)
 :::
 
 ::: aside
 [[Sharan Narang and Aakanksha Chowdhery (APRIL 04, 2022), "Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrough Performance", Software Engineers, Google Research](https://ai.googleblog.com/2022/04/pathways-language-model-palm-scaling-to.html)]{.aside}
+:::
+
+## 현재 나의 모습
+
+![](img/now_me.png)
+
+## LLM 진화
+
+![](img/evolution_tree.jpg){width="650"}
+
+::: aside
+[@yang2023harnessing]
 :::
 
 ## 공개형 GPT vs 폐쇄형 GPT
@@ -54,40 +65,59 @@
 ::: panel-tabset
 ### Stable Diffusion
 
-![](../../img/Stable-Diffusion-Developer-Adoption-1-scaled.webp){width="700"}
+![](img/Stable-Diffusion-Developer-Adoption-1-scaled.webp){width="700"}
 
 ### LLM
 
-![](../../img/llm_g.png){width="700"}
+![](img/llm_g.png){width="700"}
 
 ### GPT4ALL
 
-![](../../img/gpt4all-demo.jpg){width="700"}
+![](img/gpt4all-demo.jpg){width="700"}
+:::
+
+::: aside
+-   데이터 출처: [@zhao2023survey]
+-   [chatGPT - 오픈소스 S/W](https://r2bit.com/chatGPT/open_source.html)
+:::
+
+
+## LLM 
+
+:::{.panel-tabset}
+### 독점/상용 LLM
+
+![](img/llm_proprietary.jpg)
+
+### 오픈소스/공개 LLM
+
+![](img/llm_open_source.jpg)
 
 :::
 
 ::: aside
-- 데이터 출처: [@zhao2023survey] 
-- [chatGPT - 오픈소스 S/W](https://r2bit.com/chatGPT/open_source.html)
+[@fullstack2023]
 :::
+
 
 ## HuggingGPT
 
 ::: panel-tabset
 ### LLM as Controller
 
-![](../../img/huggingGPT.jpg)
+![](img/huggingGPT.jpg)
 
 ### HuggingGPT 개요
 
-![](../../img/huggingGPT-generate.jpg){width="500"}
+![](img/huggingGPT-generate.jpg){width="500"}
 
 ### 사례
 
-![](../../img/huggingGPT-example.jpg){width="500"}
+![](img/huggingGPT-example.jpg){width="500"}
 :::
 
 ::: aside
 출처: [@shen2023hugginggpt]
 :::
+
 
