@@ -1,4 +1,4 @@
-# `chatGPT` → 챗GPT
+# `chatGPT` &rarr; 챗GPT &rarr; LLM
 
 ## 챗GPT 란?
 
@@ -119,5 +119,4 @@
 ::: aside
 출처: [@shen2023hugginggpt]
 :::
-
 

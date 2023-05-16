@@ -23,15 +23,15 @@ editor_options:
 ## 목차
 
 1.  들어가며
-1.  컴퓨터 기본지식과 역사
-1.  체험 삶의 현장
-1.  DT, 애자일, DevOps &rarr; 오피스 전쟁
-1.  chatGPT란?
-1.  chatGPT 사용자 관점
-1.  chatGPT 앱 개발자 관점
-1.  chatGPT 한계와 시사점
-1.  구글 검색 위기 (챗GPT와 오정보)
-1.  질의응답
+2.  컴퓨터 기본지식과 역사
+3.  체험 삶의 현장
+4.  DT, 애자일, DevOps → 오피스 전쟁
+5.  chatGPT란?
+6.  chatGPT 사용자 관점
+7.  chatGPT 앱 개발자 관점
+8.  chatGPT 한계와 시사점
+9.  구글 검색 위기 (챗GPT와 오정보)
+10. 질의응답
 
 {{< include slideshow/202305-gpt/00-who-am-i.qmd >}}
 
@@ -41,11 +41,13 @@ editor_options:
 
 {{< include slideshow/202305-gpt/01-life-in-action.qmd >}}
 
-{{< include slideshow/202305-gpt/01-dt-agile-devops.qmd >}}
+{{< include slideshow/202305-gpt/02-office-interface.qmd >}}
 
-{{< include slideshow/202305-gpt/02-about-chatGPT.qmd >}}
+{{< include slideshow/202305-gpt/20-dt-agile-devops.qmd >}}
 
-{{< include slideshow/202305-gpt/chatGPT-development.qmd >}}
+{{< include slideshow/202305-gpt/21-prompt-engineering.qmd >}}
+
+{{< include slideshow/202305-gpt/20-LLM-chatGPT.qmd >}}
 
 {{< include slideshow/202305-gpt/03-chatGPT-in-practice.qmd >}}
 

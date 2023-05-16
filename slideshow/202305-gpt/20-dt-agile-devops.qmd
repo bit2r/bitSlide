@@ -1,0 +1,119 @@
+# DT, Agile, DevOps <br> 오피스 전쟁
+
+## 디자인 씽킹
+
+```{mermaid}
+graph TD
+style A fill:#F5A623,stroke:#F5A623,stroke-width:2px;
+style B fill:#EFEFEF,stroke:#000,stroke-width:2px;
+style C fill:#EFEFEF,stroke:#000,stroke-width:2px;
+style D fill:#EFEFEF,stroke:#000,stroke-width:2px;
+style E fill:#EFEFEF,stroke:#000,stroke-width:2px;
+style F fill:#EFEFEF,stroke:#000,stroke-width:2px;
+
+A[공감하기] --> B[문제 정의]
+B[문제 정의] --> C[해결방법 찾기]
+C[해결방법 찾기] --> D[시제품 제작]
+D[시제품 제작] --> E[시험평가]
+E[시험평가] --> F[반복하기]
+F[반복하기] --> B[문제정의]
+
+classDef mainNode fill:#F5A623,stroke:#EFEFEF,stroke-width:2px;
+class A mainNode;
+```
+
+::: aside
+**디자인 씽킹(Design thinking)** 은 공감, 창의성, 실험 등을 강조하는 문제 해결 방법론으로 혁신적인 솔루션을 개발하는 것을 목적으로 합니다.
+:::
+
+## 애자일 개발
+
+```{mermaid}
+graph TD
+style A fill:#F5A623,stroke:#F5A623,stroke-width:1px;
+style B fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style C fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style D fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style E fill:#EFEFEF,stroke:#000,stroke-width:1px;
+
+
+A[Product Backlog] -->|Sprint Planning| B[Sprint Backlog]
+B[Sprint Backlog] -->|Daily Scrum| C[Development]
+C[Development] -->|Sprint Review| D[Product Increment]
+D[Product Increment] -->|Sprint Retrospective| E[Process Improvement]
+E[Process Improvement] -->|Backlog Refinement| A[Product Backlog]
+
+classDef mainNode fill:#4DB6AC,stroke:#000,stroke-width:1px;
+class A mainNode;
+classDef subNode fill:#FFF,stroke:#000,stroke-width:1px;
+class B,C,D,E subNode;
+classDef arrow stroke:#000,stroke-width:1px;
+class B,C,D,E arrow;
+```
+
+::: aside
+**애자일(agile)**은 개인과 상호작용, 작동하는 소프트웨어, 고객과의 협력, 변화에 대응하는 것을 가치로 두는 반복적이고 유연한 소프트웨어 개발 접근 방식입니다.
+:::
+
+## 데브옵스(DevOps) {.smaller}
+
+```{mermaid}
+%%| fig-height: 6.0
+graph TD
+style A fill:#F5A623,stroke:#F5A623,stroke-width:1px;
+style B fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style C fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style D fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style E fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style F fill:#EFEFEF,stroke:#000,stroke-width:1px;
+
+A["계획 (Plan)"] -->|Code| B[Code]
+B[Code] -->|Build| C[Build]
+C[Build] -->|Test| D[Test]
+D[Test] -->|Deploy| E[Deploy]
+E[Deploy] -->|Operate| F["운영 (Operate)"]
+F["운영 (Operate)"] -->|Monitor| A["계획 (Plan)"]
+
+classDef mainNode fill:#4DB6AC,stroke:#000,stroke-width:1px;
+class A mainNode;
+classDef subNode fill:#FFF,stroke:#000,stroke-width:1px;
+class B,C,D,E,F subNode;
+classDef arrow stroke:#000,stroke-width:1px;
+class B,C,D,E,F arrow;
+```
+
+::: aside
+"**데브옵스(DevOps)**는 자동화, 협업, 모니터링을 통해 소프트웨어 개발과 IT 운영을 결합하여 빠르고 안정적인 소프트웨어 제공을 가능하게 하는 소프트웨어 개발 방법론입니다."
+:::
+
+## DT → Agile → DevOps {.smaller}
+
+<br>
+
+::: panel-tabset
+
+### 챗GPT → DT → Agile → DevOps
+
+<br>
+
+![](img/chatGPT-DT-Agile-DevOps.jpg)
+
+### DAD
+
+![](img/dt-agile-devops.jpg)
+
+### 챗GPT 디지털 글쓰기
+
+<br>
+
+![](img/chatGPT-writing.jpg)
+
+### 쉘 프로그래밍
+
+<br>
+
+![](img/chatGPT-writing-shell.jpg)
+
+:::
+
+

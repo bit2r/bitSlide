@@ -1,0 +1,104 @@
+# 챗GPT 개발자 <br> 프롬프트 디자인/엔지니어링
+
+## 소프트웨어 3.0
+
+::: columns
+::: column
+![](img/software_3.jpeg){width="441"}
+:::
+
+::: column
+#### Andrej Karpathy
+
+-   소프트웨어 1.0: 코드 작성을 통한 프로그래밍
+-   소프트웨어 2.0: 데이터셋 큐레이팅을 통한 프로그래밍
+-   소프트웨어 3.0: 프롬프트 엔지니어링을 통한 프로그래밍 (LLM에 입력으로 제공, GPT 스타일)
+:::
+:::
+
+## 개발 방법론
+
+::: panel-tabset
+## 폭포수 모형 {.unnumbered}
+
+```{mermaid}
+graph TD
+    A[요구사항] --> B[아키텍쳐/디자인]
+    B --> C[구현]
+    C --> D[검증/테스트]
+    D --> E[유지보수]
+```
+
+## V-모형 {.unnumbered}
+
+![](img/langchain_v_cycle.png)
+
+## 스크럼 {.unnumbered}
+
+![](img/langcahin_agile.png)
+
+## 기계학습 개발 {.unnumbered}
+
+::: {#fig-ml layout-ncol="2"}
+![](img/machine_learning_workflow.gif){width="423"}
+
+![](img/machine_learning_workflow.jpg){width="420"}
+:::
+
+## AI 앱 개발 {.unnumbered}
+
+![](img/chatGPT_app_workflow.jpg)
+:::
+
+## LangChain {.smaller}
+
+::: panel-tabset
+### LAMP {.unnumbered}
+
+![](img/LAMP_software_bundle.svg.png)
+
+### 모바일 {.unnumbered}
+
+-   Native Development:
+    -   iOS: Swift and Objective-C are the main programming languages. Xcode is the primary IDE for iOS app development.
+    -   Android: Kotlin and Java are the main programming languages. Android Studio is the primary IDE for Android app development.
+-   Cross-Platform Development: These frameworks allow you to write code once and run it on multiple platforms.
+    -   React Native: A JavaScript framework for building native mobile apps using React and JavaScript.
+    -   Flutter: A UI toolkit from Google for building natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language.
+    -   Xamarin: A .NET-based framework for building iOS and Android apps using C#.
+-   Hybrid Mobile App Development: These are web applications packaged into a native wrapper.
+    -   Ionic: It uses web technologies like JavaScript, CSS, and HTML for development, and the apps can be distributed on different platforms.
+    -   Cordova/PhoneGap: These tools wrap your HTML/JavaScript app into a native container which can access the device functions of several platforms.
+
+### 데이터 과학 {.unnumbered}
+
+![](img/horst-eco-r4ds.png)
+
+### 랭체인 컴포넌트 {.unnumbered}
+
+![](img/chatGPT_langcahin.jpg)
+
+### OPL 프레임워크 {.unnumbered}
+
+![](img/chatGPT_opl_framework.webp)
+
+### OPL 개발사례 {.unnumbered}
+
+![](img/chatGPT_opl_dataflow.webp)
+:::
+
+## 데이터프레임
+
+![](img/llama-penguins.jpg)
+
+::: aside
+-   [펭귄: 라마인덱스 - 라마인덱스 펭귄 데이터 분석](https://r2bit.com/chatGPT/llama_penguins.html)
+:::
+
+## SQL
+
+![](img/sql_workflow.jpg)
+
+::: aside
+-   [챗GPT SQL - 소프트웨어 카펜트리](https://r2bit.com/chatGPT/sql_openai.html)
+:::

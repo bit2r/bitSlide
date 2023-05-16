@@ -816,7 +816,7 @@
     "href": "chatGPT_202305.html#콘텐츠와-데이터",
     "title": "chatGPT",
     "section": "콘텐츠와 데이터",
-    "text": "콘텐츠와 데이터\n\n데이터 라이선스\n\n\n\n\ngraph TD\n  A[\"Data Licenses\"] --&gt; B[\"Open Data Licenses\"]\n  B --&gt; C[\"Creative Commons Zero&lt;br&gt; (CC0)\"]\n  B --&gt; D[\"Open Data Commons&lt;br&gt; Open Database License (ODbL)\"]\n  A --&gt; E[\"Proprietary Data Licenses\"]\n  A --&gt; F[\"Public Domain Data\"]  \n\n\n\n\n\n콘텐츠 라이선스\n\n\n\n\ngraph TD;\n    A[\"Content Licenses\"] --&gt; B[Public domain]\n    A --&gt; C[Creative Commons licenses]\n    A --&gt; D[All rights reserved]\n    C --&gt; E[CC0]\n    C --&gt; F[Attribution]\n    C --&gt; G[Non-commercial]\n    C --&gt; H[Share-alike]\n    C --&gt; I[Custom]\n    D --&gt; J[No use without permission]\n    D --&gt; K[No copying without permission]\n    D --&gt; L[No distribution without permission]"
+    "text": "콘텐츠와 데이터\n데이터 라이선스\n\n\n\n\ngraph TD\n  A[\"Data Licenses\"] --&gt; B[\"Open Data Licenses\"]\n  B --&gt; C[\"Creative Commons Zero&lt;br&gt; (CC0)\"]\n  B --&gt; D[\"Open Data Commons&lt;br&gt; Open Database License (ODbL)\"]\n  A --&gt; E[\"Proprietary Data Licenses\"]\n  A --&gt; F[\"Public Domain Data\"]  \n\n\n\n\n\n콘텐츠 라이선스\n\n\n\n\ngraph TD;\n    A[\"Content Licenses\"] --&gt; B[Public domain]\n    A --&gt; C[Creative Commons licenses]\n    A --&gt; D[All rights reserved]\n    C --&gt; E[CC0]\n    C --&gt; F[Attribution]\n    C --&gt; G[Non-commercial]\n    C --&gt; H[Share-alike]\n    C --&gt; I[Custom]\n    D --&gt; J[No use without permission]\n    D --&gt; K[No copying without permission]\n    D --&gt; L[No distribution without permission]"
   },
   {
     "objectID": "chatGPT_202305.html#강사소개-강의-개요",
@@ -928,7 +928,7 @@
     "href": "chatGPT_202305.html#시장-와해-사례-병원-fa-solid-hospital",
     "title": "chatGPT",
     "section": "시장 와해 사례: 병원 ",
-    "text": "시장 와해 사례: 병원 \n\n\n\n\n\n\n\n\n일본과 미국의 국제 연구팀에 따르면 미국에 본사를 둔 OpenAI가 개발한 인공지능 모델의 최신 버전이 일본의 의사 국가시험에 합격할 수 있는 능력을 입증했다고 합니다.\n그러나 AI는 인간 수험생의 평균 점수보다 낮은 점수를 받았고 환자의 안락사를 유도하는 옵션을 선택하는 등 일부 부적절한 답변을 제공했습니다.\n워싱턴 대학의 자연어 처리 전문 연구원 정고 카사이(Jungo Kasai)를 포함한 연구팀은 2018년부터 2022년까지 5년간 OpenAI의 대화형 AI 시스템인 ChatGPT와 GPT-4를 사용하여 국가 의사 자격시험을 치렀습니다.\nChatGPT는 모든 시험에서 불합격했습니다. 하지만 최신 시스템인 GPT-4는 모든 시험에서 합격점을 넘겼습니다.\n\n\n\n\n\n자료출처: The Yomiuri Shimbun, “AI Demonstrates Passing Score on Medical Practitioner Exam in Japan”, May 10, 2023"
+    "text": "시장 와해 사례: 병원 \n\n\n\n\n\n\n\n\n\n일본과 미국의 국제 연구팀에 따르면 미국에 본사를 둔 OpenAI가 개발한 인공지능 모델의 최신 버전이 일본의 의사 국가시험에 합격할 수 있는 능력을 입증했다고 합니다.\n그러나 AI는 인간 수험생의 평균 점수보다 낮은 점수를 받았고 환자의 안락사를 유도하는 옵션을 선택하는 등 일부 부적절한 답변을 제공했습니다.\n워싱턴 대학의 자연어 처리 전문 연구원 정고 카사이(Jungo Kasai)를 포함한 연구팀은 2018년부터 2022년까지 5년간 OpenAI의 대화형 AI 시스템인 ChatGPT와 GPT-4를 사용하여 국가 의사 자격시험을 치렀습니다.\nChatGPT는 모든 시험에서 불합격했습니다. 하지만 최신 시스템인 GPT-4는 모든 시험에서 합격점을 넘겼습니다.\n\n\n\n\n\n자료출처: The Yomiuri Shimbun, “AI Demonstrates Passing Score on Medical Practitioner Exam in Japan”, May 10, 2023"
   },
   {
     "objectID": "chatGPT_202305.html#시장-와해-사례-사교육-fa-solid-school",
@@ -1124,7 +1124,7 @@
     "href": "chatGPT_202305.html#chatgpt-3대장-alpha-추론",
     "title": "chatGPT",
     "section": "chatGPT 3대장 + \\(\\alpha\\) 추론",
-    "text": "chatGPT 3대장 + \\(\\alpha\\) 추론\n\n문제수식 표현손으로 풀기Sympy 동원chatGPT 풀기\n\n\n디오판토스 묘비\n신의 축복으로 태어난 그는 인생의 \\(\\frac{1}{6}\\)을 소년으로 보냈다. 그리고 다시 인생의 \\(\\frac{1}{12}\\) 이 지난 뒤에는 얼굴에 수염이 자라기 시작했다. 다시 \\(\\frac{1}{7}\\)이 지난 뒤 그는 아름다운 여인을 맞이하여 화촉을 밝혔으며, 결혼한 지 5년 만에 귀한 아들을 얻었다. 아! 그러나 그의 가엾은 아들은 아버지의 반 밖에 살지 못했다. 아들을 먼저 보내고 깊은 슬픔에 빠진 그는 그 뒤 4년간 정수론에 몰입하여 스스로를 달래다가 일생을 마쳤다. 1\n\n\n디오판토스가 정확히 언제 태어나고 언제 죽었는지는 명확하지 않지만, 그가 죽었을 때의 나이는 정확히 알 수 있다. 이를 방정식을 통해 풀어보자. 수식을 \\(x\\)에 대해 정리해서 풀면 84가 나온다.\n\\[\\frac {x} {6} + \\frac {x} {12} + \\frac {x} {7} +  5 + \\frac {x} {2} + 4 = x\\]\n\n\n\n\n\n\n\n\n\n\nfrom sympy import *\nx = Symbol('x')\nDiophantus_puzzle = x/6 + x/12 + x/7 + 5 + x/2 + 4 - x\nsolve(Diophantus_puzzle, x, dict = True)\n\n[{x: 84}]\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.microsoft.com/ko-kr/microsoft-365/business"
+    "text": "chatGPT 3대장 + \\(\\alpha\\) 추론\n\n문제수식 표현손으로 풀기Sympy 동원chatGPT 풀기\n\n\n디오판토스 묘비\n신의 축복으로 태어난 그는 인생의 \\(\\frac{1}{6}\\)을 소년으로 보냈다. 그리고 다시 인생의 \\(\\frac{1}{12}\\) 이 지난 뒤에는 얼굴에 수염이 자라기 시작했다. 다시 \\(\\frac{1}{7}\\)이 지난 뒤 그는 아름다운 여인을 맞이하여 화촉을 밝혔으며, 결혼한 지 5년 만에 귀한 아들을 얻었다. 아! 그러나 그의 가엾은 아들은 아버지의 반 밖에 살지 못했다. 아들을 먼저 보내고 깊은 슬픔에 빠진 그는 그 뒤 4년간 정수론에 몰입하여 스스로를 달래다가 일생을 마쳤다. [^1]\n\n\n디오판토스가 정확히 언제 태어나고 언제 죽었는지는 명확하지 않지만, 그가 죽었을 때의 나이는 정확히 알 수 있다. 이를 방정식을 통해 풀어보자. 수식을 \\(x\\)에 대해 정리해서 풀면 84가 나온다.\n\\[\\frac {x} {6} + \\frac {x} {12} + \\frac {x} {7} +  5 + \\frac {x} {2} + 4 = x\\]\n\n\n\n\n\n\n\n\n\n\nfrom sympy import *\nx = Symbol('x')\nDiophantus_puzzle = x/6 + x/12 + x/7 + 5 + x/2 + 4 - x\nsolve(Diophantus_puzzle, x, dict = True)\n\n[{x: 84}]"
   },
   {
     "objectID": "chatGPT_202305.html#챗gpt-오피스",
@@ -1138,7 +1138,7 @@
     "href": "chatGPT_202305.html#오피스-전쟁",
     "title": "chatGPT",
     "section": "오피스 전쟁",
-    "text": "오피스 전쟁\n\n\n\n\n\n\n\n\n\n\n항목\nMS 오피스 1\n구글 오피스 2\n리브레 오피스 3\n한컴 오피스 4\n\n\n\n\n문서 작성 및 편집\n워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공\n구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공\n라이터, 캘크, 임프레스 등의 데스크톱 앱 제공\n한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공\n\n\n협업 및 공유\n원드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능\n드롭박스나 구글 드라이브와 연동하여 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n\n\n이메일 및 채팅\nOutlook을 통해 비즈니스 메일 제공. Teams을 통해 채팅 및 화상 회의 가능\nGmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능\n이메일 및 채팅 기능 없음\n이메일 및 채팅 기능 없음\n\n\n가격\n1인당 월 5~20달러 다양한 요금제 제공. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작\n1인당 월 6~18달러까지 다양한 요금제 제공\n완전 무료\n개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요\n\n\n\nhttps://www.microsoft.com/ko-kr/microsoft-365/business“The Case for Robotic Process Automation(RPA)”, Optimal Corporation (under permission from Kinetic Consulting Services) chatGPT plus 연간 사용료 추가https://www.libreoffice.org/https://www.hancom.com/product/productMain.do"
+    "text": "오피스 전쟁\n\n\n\n\n\n\n\n\n\n\n항목\nMS 오피스 1\n구글 오피스 2\n리브레 오피스 3\n한컴 오피스 4\n\n\n\n\n문서 작성 및 편집\n워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공\n구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공\n라이터, 캘크, 임프레스 등의 데스크톱 앱 제공\n한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공\n\n\n협업 및 공유\n원드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능\n드롭박스나 구글 드라이브와 연동하여 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n\n\n이메일 및 채팅\nOutlook을 통해 비즈니스 메일 제공. Teams을 통해 채팅 및 화상 회의 가능\nGmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능\n이메일 및 채팅 기능 없음\n이메일 및 채팅 기능 없음\n\n\n가격\n1인당 월 5~20달러 다양한 요금제 제공. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작\n1인당 월 6~18달러까지 다양한 요금제 제공\n완전 무료\n개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\nhttps://www.microsoft.com/ko-kr/microsoft-365/businesshttps://workspace.google.com/intl/ko_kr/https://www.libreoffice.org/https://www.hancom.com/product/productMain.do"
   },
   {
     "objectID": "chatGPT_202305.html#구글-검색의-종말",
@@ -1159,7 +1159,7 @@
     "href": "chatGPT_202305.html#dt-agile-devops",
     "title": "chatGPT",
     "section": "DT → Agile → DevOps",
-    "text": "DT → Agile → DevOps\n\n\nDAD챗GPT 디지털 글쓰기쉘 프로그래밍챗GPT → DT → Agile → DevOps"
+    "text": "DT → Agile → DevOps\n\n\n챗GPT → DT → Agile → DevOpsDAD챗GPT 디지털 글쓰기쉘 프로그래밍"
   },
   {
     "objectID": "chatGPT_202305.html#챗gpt-란",
@@ -1244,5 +1244,68 @@
     "title": "chatGPT",
     "section": "SQL",
     "text": "SQL\n\n\n\n\n\n\n\n\n챗GPT SQL - 소프트웨어 카펜트리"
+  },
+  {
+    "objectID": "chatGPT_202305.html#시장-와해-사례-에너지-기업-fa-solid-oil",
+    "href": "chatGPT_202305.html#시장-와해-사례-에너지-기업-fa-solid-oil",
+    "title": "chatGPT",
+    "section": "시장 와해 사례: 에너지 기업 ",
+    "text": "시장 와해 사례: 에너지 기업 \n\n\n\n\nChatGPT가 비즈니스를 죽이고 있다고 회사가 말한 후 Chegg 주가는 40 % 이상 하락했다.\nChegg의 주가는 온라인 교육 회사가 ChatGPT가 성장을 저해하고 있다고 밝힌 후 폭락했습니다.\n\n“올해 상반기에는 ChatGPT가 신규 계정 성장에 눈에 띄는 영향을 미치지 않았고 신규 가입에 대한 기대치를 충족하고 있었습니다.”라고 월요일 저녁 실적 발표에서 댄 로젠스웨이그 CEO는 말했습니다. “하지만 3월부터 ChatGPT에 대한 학생들의 관심이 크게 급증했습니다. 이제 신규 고객 성장률에 영향을 미치고 있다고 생각합니다.”\n\nChegg, Inc.는 캘리포니아주 산타클라라에 본사를 둔 미국 교육 기술 회사로 숙제 도움, 디지털 및 실제 교과서 대여, 교과서, 온라인 튜터링 및 기타 학생 서비스를 제공.\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n\nEloundou, T., Manning, S., Mishkin, P., & Rock, D. (2023). GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models. https://arxiv.org/abs/2303.10130\n\n\nOpenAI. (2023). GPT-4 Technical Report. https://arxiv.org/abs/2303.08774\n\n\nSong, A. K. (2019). The Digital Entrepreneurial Ecosystem—a critique and reconfiguration. Small Business Economics, 53(3), 569–590.\n\n\n김현진. (2021). 웹툰 이미지 제작공정 단계별 활용 가능한 스케치 관련 인공지능 기술. 한국정보과학회.\n\n\n양정애. (2023). 챗GPT 이용 경험 및 인식 조사. 한국언론진흥재단. https://www.kpf.or.kr/front/board/boardContentsListPage.do?board_id=246\n\n\n\n\n자료출처: CNBC, “Chegg shares drop more than 40% after company says ChatGPT is killing its business”, May 2, 2023"
+  },
+  {
+    "objectID": "chatGPT_202305.html#시장-와해-사례-에너지-기업-fa-solid-gas",
+    "href": "chatGPT_202305.html#시장-와해-사례-에너지-기업-fa-solid-gas",
+    "title": "chatGPT",
+    "section": "시장 와해 사례: 에너지 기업 ",
+    "text": "시장 와해 사례: 에너지 기업 \n\n\n\n\nChatGPT가 비즈니스를 죽이고 있다고 회사가 말한 후 Chegg 주가는 40 % 이상 하락했다.\nChegg의 주가는 온라인 교육 회사가 ChatGPT가 성장을 저해하고 있다고 밝힌 후 폭락했습니다.\n\n“올해 상반기에는 ChatGPT가 신규 계정 성장에 눈에 띄는 영향을 미치지 않았고 신규 가입에 대한 기대치를 충족하고 있었습니다.”라고 월요일 저녁 실적 발표에서 댄 로젠스웨이그 CEO는 말했습니다. “하지만 3월부터 ChatGPT에 대한 학생들의 관심이 크게 급증했습니다. 이제 신규 고객 성장률에 영향을 미치고 있다고 생각합니다.”\n\nChegg, Inc.는 캘리포니아주 산타클라라에 본사를 둔 미국 교육 기술 회사로 숙제 도움, 디지털 및 실제 교과서 대여, 교과서, 온라인 튜터링 및 기타 학생 서비스를 제공.\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n\nEloundou, T., Manning, S., Mishkin, P., & Rock, D. (2023). GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models. https://arxiv.org/abs/2303.10130\n\n\nOpenAI. (2023). GPT-4 Technical Report. https://arxiv.org/abs/2303.08774\n\n\nSong, A. K. (2019). The Digital Entrepreneurial Ecosystem—a critique and reconfiguration. Small Business Economics, 53(3), 569–590.\n\n\n김현진. (2021). 웹툰 이미지 제작공정 단계별 활용 가능한 스케치 관련 인공지능 기술. 한국정보과학회.\n\n\n양정애. (2023). 챗GPT 이용 경험 및 인식 조사. 한국언론진흥재단. https://www.kpf.or.kr/front/board/boardContentsListPage.do?board_id=246\n\n\n\n\n자료출처: CNBC, “Chegg shares drop more than 40% after company says ChatGPT is killing its business”, May 2, 2023"
+  },
+  {
+    "objectID": "chatGPT_202305.html#시장-와해-사례-에너지-기업-fa-solid-fuel",
+    "href": "chatGPT_202305.html#시장-와해-사례-에너지-기업-fa-solid-fuel",
+    "title": "chatGPT",
+    "section": "시장 와해 사례: 에너지 기업 ",
+    "text": "시장 와해 사례: 에너지 기업 \n\n\n\n\nChatGPT가 비즈니스를 죽이고 있다고 회사가 말한 후 Chegg 주가는 40 % 이상 하락했다.\nChegg의 주가는 온라인 교육 회사가 ChatGPT가 성장을 저해하고 있다고 밝힌 후 폭락했습니다.\n\n“올해 상반기에는 ChatGPT가 신규 계정 성장에 눈에 띄는 영향을 미치지 않았고 신규 가입에 대한 기대치를 충족하고 있었습니다.”라고 월요일 저녁 실적 발표에서 댄 로젠스웨이그 CEO는 말했습니다. “하지만 3월부터 ChatGPT에 대한 학생들의 관심이 크게 급증했습니다. 이제 신규 고객 성장률에 영향을 미치고 있다고 생각합니다.”\n\nChegg, Inc.는 캘리포니아주 산타클라라에 본사를 둔 미국 교육 기술 회사로 숙제 도움, 디지털 및 실제 교과서 대여, 교과서, 온라인 튜터링 및 기타 학생 서비스를 제공.\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n\nEloundou, T., Manning, S., Mishkin, P., & Rock, D. (2023). GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models. https://arxiv.org/abs/2303.10130\n\n\nOpenAI. (2023). GPT-4 Technical Report. https://arxiv.org/abs/2303.08774\n\n\nSong, A. K. (2019). The Digital Entrepreneurial Ecosystem—a critique and reconfiguration. Small Business Economics, 53(3), 569–590.\n\n\n김현진. (2021). 웹툰 이미지 제작공정 단계별 활용 가능한 스케치 관련 인공지능 기술. 한국정보과학회.\n\n\n양정애. (2023). 챗GPT 이용 경험 및 인식 조사. 한국언론진흥재단. https://www.kpf.or.kr/front/board/boardContentsListPage.do?board_id=246\n\n\n\n\n자료출처: CNBC, “Chegg shares drop more than 40% after company says ChatGPT is killing its business”, May 2, 2023"
+  },
+  {
+    "objectID": "chatGPT_202305.html#시장-와해-사례-에너지-기업-fa-solid-energy",
+    "href": "chatGPT_202305.html#시장-와해-사례-에너지-기업-fa-solid-energy",
+    "title": "chatGPT",
+    "section": "시장 와해 사례: 에너지 기업 ",
+    "text": "시장 와해 사례: 에너지 기업 \n\n\n\n\nChatGPT가 비즈니스를 죽이고 있다고 회사가 말한 후 Chegg 주가는 40 % 이상 하락했다.\nChegg의 주가는 온라인 교육 회사가 ChatGPT가 성장을 저해하고 있다고 밝힌 후 폭락했습니다.\n\n“올해 상반기에는 ChatGPT가 신규 계정 성장에 눈에 띄는 영향을 미치지 않았고 신규 가입에 대한 기대치를 충족하고 있었습니다.”라고 월요일 저녁 실적 발표에서 댄 로젠스웨이그 CEO는 말했습니다. “하지만 3월부터 ChatGPT에 대한 학생들의 관심이 크게 급증했습니다. 이제 신규 고객 성장률에 영향을 미치고 있다고 생각합니다.”\n\nChegg, Inc.는 캘리포니아주 산타클라라에 본사를 둔 미국 교육 기술 회사로 숙제 도움, 디지털 및 실제 교과서 대여, 교과서, 온라인 튜터링 및 기타 학생 서비스를 제공.\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n\nEloundou, T., Manning, S., Mishkin, P., & Rock, D. (2023). GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models. https://arxiv.org/abs/2303.10130\n\n\nOpenAI. (2023). GPT-4 Technical Report. https://arxiv.org/abs/2303.08774\n\n\nSong, A. K. (2019). The Digital Entrepreneurial Ecosystem—a critique and reconfiguration. Small Business Economics, 53(3), 569–590.\n\n\n김현진. (2021). 웹툰 이미지 제작공정 단계별 활용 가능한 스케치 관련 인공지능 기술. 한국정보과학회.\n\n\n양정애. (2023). 챗GPT 이용 경험 및 인식 조사. 한국언론진흥재단. https://www.kpf.or.kr/front/board/boardContentsListPage.do?board_id=246\n\n\n\n\n자료출처: CNBC, “Chegg shares drop more than 40% after company says ChatGPT is killing its business”, May 2, 2023"
+  },
+  {
+    "objectID": "chatGPT_202305.html#시장-와해-사례-에너지-기업-fa-solid-solar-panel",
+    "href": "chatGPT_202305.html#시장-와해-사례-에너지-기업-fa-solid-solar-panel",
+    "title": "chatGPT",
+    "section": "시장 와해 사례: 에너지 기업 ",
+    "text": "시장 와해 사례: 에너지 기업 \n\n\n\n\n\n\n전 영국 지도자 보리스 존슨과 함께한 옥토퍼스 에너지 CEO 그렉 잭슨(Greg Jackson)\n\n\n\nAI가 에너지 회사에서 250명의 업무를 수행하고 숙련된 직원보다 고객을 더 잘 만족시키고 있다.\n영국에 본사를 둔 가정용 에너지 공급업체인 옥토퍼스 에너지의 CEO는 인공지능이 회사 직원 250명의 업무를 대신하고 있다고 말했다.\n런던 타임즈에 기고한 글에서 Greg Jackson은 회사가 몇 달 동안 AI를 실험해 왔다고 말했다. 그는 이 기술이 회사 시스템에 통합되어 2월부터 직원들이 일부 고객 이메일에 답장을 보내도록 허용하기 시작했다고 말했다.\n현재 AI는 고객 이메일의 3분의 1 이상에 답장하고 있으며, 이는 약 250명의 직원이 처리하는 업무라고 CEO는 말했다.\n\n“AI가 작성한 이메일의 고객 만족도는 80%로, 숙련되고 훈련된 사람이 작성한 65%보다 훨씬 높았다.”\n\n\n\n\n\n\n자료출처: CNBC, “Chegg shares drop more than 40% after company says ChatGPT is killing its business”, May 2, 2023"
+  },
+  {
+    "objectID": "chatGPT_202305.html#시장-와해-사례-미디어-광고-그룹-fa-solid-rectangle-ad",
+    "href": "chatGPT_202305.html#시장-와해-사례-미디어-광고-그룹-fa-solid-rectangle-ad",
+    "title": "chatGPT",
+    "section": "시장 와해 사례: 미디어 광고 그룹 ",
+    "text": "시장 와해 사례: 미디어 광고 그룹 \n\n\nOpenAI와 펜실베이나 대학교\n인공 지능이 개방되고 제너레이티브 AI를 제공하는 플랫폼을 통해 대중화됨에 따라 전체 직업의 최소 80%에서 업무가 변화할 것으로 예측된다. 대학 교육이 필요한 직업이 가장 큰 영향을 받을 것이며, 많은 경우 사람들이 수행하는 업무의 절반 이상이 AI의 영향을 받을 수 있다. 중요한 점은 영향을 받는 직업은 대체되는 것이 아니라 생성형 AI에 의해 크게 영향을 받거나 증강될 것이라는 점이다. (Eloundou 기타, 2023)\n\n통역사 및 번역가\n설문 조사 연구원\n시인, 작사가 및 창작 작가\n동물 과학자\n홍보 전문가\n수학자 / 세무사 / 금융 정량 분석가\n웹 및 디지털 인터페이스 디자이너\n\n\n설문조사와 광고기업\n\n\n\n(양정애, 2023)\n\n\n\n중국 최대 미디어 광고 그룹이 카피라이터와 디자이너 등에 대한 아웃소싱(외주)을 무기한 중단하고 챗GPT 같은 생성형 인공지능(AI) 기구로 대체를 선언했다. 14일 홍콩 사우스차이나모닝포스트(SCMP)에 따르면, 광고회사 블루포커스는 내부 이메일을 통해 “생성형 AI를 전적으로 수용하기 위해 카피라이터, 디자이너, 단기 계약직 등 특정 분야의 아웃소싱 비용을 즉시 절감할 것”이라고 밝혔다.\n\n\n\n\n\n\n챗GPT로 사라질 직업 1위는 세무사 아니었네…“번역가·통역사 더 위험”\n中최대 광고 기업 “단기 계약직, AI로 대체한다”"
+  },
+  {
+    "objectID": "chatGPT_202305.html#글쓰기-역사",
+    "href": "chatGPT_202305.html#글쓰기-역사",
+    "title": "chatGPT",
+    "section": "글쓰기 역사",
+    "text": "글쓰기 역사\n\n\n\n\n\n\n\n\n\n문자와 종이 역사"
+  },
+  {
+    "objectID": "chatGPT_202305.html#챗gpt-시대-사무실",
+    "href": "chatGPT_202305.html#챗gpt-시대-사무실",
+    "title": "chatGPT",
+    "section": "챗GPT 시대 사무실",
+    "text": "챗GPT 시대 사무실\n\n챗GPT 사용원인인터페이스챗GPT AS-IS챗GPT TO-BE"
+  },
+  {
+    "objectID": "chatGPT_202305.html#소프트웨어-3.0",
+    "href": "chatGPT_202305.html#소프트웨어-3.0",
+    "title": "chatGPT",
+    "section": "소프트웨어 3.0",
+    "text": "소프트웨어 3.0\n\n\n\n\n\n\n\n\nAndrej Karpathy\n\n소프트웨어 1.0: 코드 작성을 통한 프로그래밍\n소프트웨어 2.0: 데이터셋 큐레이팅을 통한 프로그래밍\n소프트웨어 3.0: 프롬프트 엔지니어링을 통한 프로그래밍 (LLM에 입력으로 제공, GPT 스타일)"
   }
 ]
