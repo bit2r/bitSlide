@@ -7,15 +7,15 @@
 ::: panel-tabset
 ### 언어 및 이미지
 
-![](../../img/AI-performance_Dynabench-paper.png)
+![](img/AI-performance_Dynabench-paper.png)
 
 ### AI 생성이미지
 
-![](../../img/Timeline-of-AI-generated-faces.png){width="400"}
+![](img/Timeline-of-AI-generated-faces.png){width="400"}
 
 ### 백오피스 인건비 비교 [^2]
 
-![](../../img/outsourcing_rpa_ai.jpg){width="600"}
+![](img/outsourcing_rpa_ai.jpg){width="600"}
 
 [^2]: "The Case for Robotic Process Automation(RPA)", Optimal Corporation (under permission from Kinetic Consulting Services) chatGPT plus 연간 사용료 추가
 
@@ -30,25 +30,25 @@
 
 ### 기술과 선생님
 
-![](../../img/math_teachers.jfif){width="30%"}
+![](img/math_teachers.jfif){width="30%"}
 
 ### 산술 {.unnumbered}
 
-![](../../img/mit/mit-1869-arithmetic.jpg)
+![](img/mit/mit-1869-arithmetic.jpg)
 
 ### 기하 {.unnumbered}
 
-![](../../img/mit/mit_geometry.gif){width="75%"}
+![](img/mit/mit_geometry.gif){width="75%"}
 
 ### 대수 {.unnumbered}
 
-![](../../img/mit/mit-1869-algebra.jpg){width="60%"}
+![](img/mit/mit-1869-algebra.jpg){width="60%"}
 
 ### 학술연구
 
 <br> 
 
-![](../../img/writing_papers.jpg)
+![](img/writing_papers.jpg)
 
 :::
 
@@ -94,7 +94,7 @@
 점차 오픈소스 거대언어모형(LLM)과 전략적 제휴를 통한 챗GPT 사용이 중장기적 추진방향으로 
 자리 잡고 있다.
 
-![](../../img/security-efficiency.jpg)
+![](img/security-efficiency.jpg)
 
 :::
 
@@ -114,9 +114,9 @@
 :::{#context layout-ncol=2}
 
 
-![](../../img/greg_brockman.jpg)
+![](img/greg_brockman.jpg)
 
-![](../../img/context_stuffing.jpg)
+![](img/context_stuffing.jpg)
 
 
 프롬프트 엔지니어링 (Context Stuffing)

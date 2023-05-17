@@ -1,4 +1,4 @@
-# `chatGPT` &rarr; 챗GPT &rarr; LLM
+# `chatGPT` → 챗GPT → LLM
 
 ## 챗GPT 란?
 
@@ -81,10 +81,9 @@
 -   [chatGPT - 오픈소스 S/W](https://r2bit.com/chatGPT/open_source.html)
 :::
 
+## LLM
 
-## LLM 
-
-:::{.panel-tabset}
+::: panel-tabset
 ### 독점/상용 LLM
 
 ![](img/llm_proprietary.jpg)
@@ -92,13 +91,39 @@
 ### 오픈소스/공개 LLM
 
 ![](img/llm_open_source.jpg)
-
 :::
 
 ::: aside
 [@fullstack2023]
 :::
 
+## 토큰 크기 (Context Length) {.smaller}
+
+::: panel-tabset
+### 표
+
+| 회사명    | LLM 모형           | Context 길이 (토큰 크기) | 텍스트 크기                |
+|-----------------|-----------------|--------------------|--------------------|
+| OpenAI    | GPT-1              | 512                      | 1 쪽, 4 단락, 36줄         |
+| 구글      | PaLM               | 512                      | ↑                          |
+| OpenAI    | GPT-2              | 1024                     | 2 쪽, 8 단락, 68줄         |
+| OpenAI    | GPT-3              | 2048                     | 1500 영단어, 4쪽, 139줄    |
+| OpenAI    | GPT-4              | 2048                     | ↑                          |
+| Meta      | Llama              | 2048                     | ↑                          |
+| OpenAI    | GPT-3.5-Turbo      | 4096                     | 9쪽, 369줄                 |
+| 구글      | PaLM2              | 8192                     | 13쪽, 단편 소설, 기술 문서 |
+| OpenAI    | GPT-4 8K           | 8192                     | ↑                          |
+| OpenAI    | GPT-4 32K          | 32000                    | 48쪽, 대학학위논문         |
+| MosaicML  | MPT-7B-StoryWriter | 65000                    | 98쪽                       |
+| Anthropic | Claude             | 100000                   | 150쪽, 소설책 반권         |
+
+### 그래프
+
+![](img/FsUnTB9aAAAkBCc.jfif){width="642"}
+
+--- Dan Fu @realDanFu <a href="https://twitter.com/realDanFu/status/1640762299408601089?s=20"> March 29, 2023</a>
+
+:::
 
 ## HuggingGPT
 

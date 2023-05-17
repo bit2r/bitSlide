@@ -23,15 +23,16 @@ editor_options:
 ## 목차
 
 1.  들어가며
-2.  컴퓨터 기본지식과 역사
-3.  체험 삶의 현장
-4.  DT, 애자일, DevOps → 오피스 전쟁
-5.  chatGPT란?
-6.  chatGPT 사용자 관점
-7.  chatGPT 앱 개발자 관점
-8.  chatGPT 한계와 시사점
-9.  구글 검색 위기 (챗GPT와 오정보)
-10. 질의응답
+1.  컴퓨터 기본지식과 역사
+1.  체험 삶의 현장
+1.  챗GPT 시대 오피스 전쟁
+1.  챗GPT 사용자 : Text-to-**X**
+1.  챗GPT 개발방법론 : DT, Agile, DevOps
+1.  챗GPT 개발자 : 프롬프트 디자인/엔지니어링
+1.  chatGPT와 LLM
+1. chatGPT 한계와 시사점
+1. 사례: 챗GPT와 오정보
+1. 질의응답
 
 {{< include slideshow/202305-gpt/00-who-am-i.qmd >}}
 
@@ -43,17 +44,17 @@ editor_options:
 
 {{< include slideshow/202305-gpt/02-office-interface.qmd >}}
 
+{{< include slideshow/202305-gpt/03-user-in-practice.qmd >}}
+
 {{< include slideshow/202305-gpt/20-dt-agile-devops.qmd >}}
 
 {{< include slideshow/202305-gpt/21-prompt-engineering.qmd >}}
 
 {{< include slideshow/202305-gpt/20-LLM-chatGPT.qmd >}}
 
-{{< include slideshow/202305-gpt/03-chatGPT-in-practice.qmd >}}
-
 {{< include slideshow/202305-gpt/04-limitation.qmd >}}
 
-{{< include slideshow/202305-gpt/05-google-search.qmd >}}
+{{< include slideshow/202305-gpt/misinformation.qmd >}}
 
 {{< include slideshow/202305-gpt/reference.qmd >}}
 

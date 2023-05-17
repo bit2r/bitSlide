@@ -214,3 +214,41 @@ Chegg, Inc.는 캘리포니아주 산타클라라에 본사를 둔 미국 교육
 - 자료출처: [CNBC, "Chegg shares drop more than 40% after company says ChatGPT is killing its business", May 2, 2023](https://www.cnbc.com/2023/05/02/chegg-drops-more-than-40percent-after-saying-chatgpt-is-killing-its-business.html)
 :::
 
+## 시장 와해 사례: Stackoverflow {{< fa solid code >}} {.smaller}
+
+<br>
+
+:::::{.columns}
+:::{.column}
+
+::: r-stack
+![](img/stack_overflow_chatgpt_2-1.png)
+
+::: fragment
+![](img/stack_overflow_chatgpt_3-1.png)
+:::
+
+::: fragment
+![](img/stack_overflow_chatgpt_4-1.png)
+:::
+
+
+:::
+
+
+:::
+:::{.column}
+##### 개발자들은 점점 더 많은 조언을 Stackoverflow 게시판이 아닌 AI 챗봇과 GitHub CoPilot에서 얻고 있다.
+
+- [스택 오버플로](https://stackoverflow.com/)의 트래픽은 2022년 1월 이후 매월 평균 6%씩 감소하고 있으며, 3월에는 13.9% 감소했다.
+- ChatGPT는 11월 말에 출시되어 전년 대비 실적은 없지만, [웹사이트](https://chat.openai.com/)는 그 짧은 시간 동안 전 세계 트래픽에서 Microsoft의 Bing 검색 엔진보다 더 많은 트래픽을 기록하며 세계에서 가장 인기 있는 디지털 자산 중 하나로 자리 잡았다. 3월에는 16억 건, 4월 상반기에는 9억 2,070만 건이 방문했다.
+- GitHub 웹사이트도 3월에 전년 대비 26.4% 증가한 5억 2,400만 건의 트래픽을 기록하는 등 강력한 성장세를 보이고 있는데, 일반적으로 Visual Studio Code와 같은 코드 편집기 내에서 이루어지는 CoPilot의 모든 사용량이 반영되어 있지는 않지만, 서비스 구독을 위해 웹사이트를 방문하는 사람들도 포함된다.
+- 2월부터 3월까지 GitHub CoPilot 무료 평가판 가입 페이지 방문 수는 3배 이상 증가하여 80만 건을 돌파했다.
+
+:::
+:::::
+
+::: aside
+- 자료출처: [David F. Carr (April 27, 2023), "Developers increasingly get advice from AI chatbots and GitHub CoPilot rather than Stack Overflow message boards", Similarweb Blog](https://www.similarweb.com/blog/insights/ai-news/stack-overflow-chatgpt/)
+:::
+

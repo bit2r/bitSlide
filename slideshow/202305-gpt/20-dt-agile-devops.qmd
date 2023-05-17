@@ -1,4 +1,4 @@
-# DT, Agile, DevOps <br> 오피스 전쟁
+# 챗GPT 개발방법론 <br> DT, Agile, DevOps
 
 ## 디자인 씽킹
 

@@ -1,4 +1,4 @@
-# 구글 검색
+# 챗GPT와 오정보
 
 ## 챗GPT API 가격
 
@@ -43,8 +43,7 @@ $$
 \end{equation*}
 $$
 
-
-## 자체 구글 검색 엔진
+## NLI 자사 검색 엔진 (구글 X)
 
 <br>
 
@@ -54,9 +53,8 @@ $$
 
 <br>
 
-:::::{.columns}
-:::{.column}
-
+::: columns
+::: column
 ```{mermaid}
 flowchart LR
     
@@ -95,26 +93,37 @@ classDef theoryStyle fill:#f59542,stroke:#000000,stroke-width:0.7px,font-weight:
 classDef practiceStyle fill:#4287f5,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
 classDef taskStyle fill:#42f548,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;
 ```
-
 :::
 
-:::{.column}
-> “why misinformation is dangerous?”
+::: column
+> "why misinformation is dangerous?"
 
-```
+```         
 186 And we know that, you know, our surgeon general and other major leaders around the world have recognized the ways in which misinformation can affect our health, and they can affect the health of democracies
 
 130 And bullshit is a part of the misinformation story
 
 16   We've studied misinformation during the pandemic and during elections and all sorts of other topics
 ```
-
 :::
-:::::
+:::
 
 ::: aside
-
-- [챗GPT - 오정보 임베딩](https://r2bit.com/chatGPT/misinfo_embedding.html)
-
+-   [챗GPT - 오정보 임베딩](https://r2bit.com/chatGPT/misinfo_embedding.html)
 :::
 
+## R 컨퍼런스 (2021)
+
+::: panel-tabset
+### 동영상
+
+{{< video https://www.youtube.com/watch?v=clNN1xAiEkw width="1050" height="450" >}}
+
+### 제작방법
+
+![](img/rconf_keynote_translation.jpg){fig-align="center" width="1050" height="450"}
+:::
+
+::: aside
+-   [한국 R 컨퍼런스 - Julia Silge Keynote번역(2021-11-17)](https://statkclee.github.io/deep-learning/rconf-keynote.html)
+:::
