@@ -23,15 +23,25 @@ editor_options:
 ## 목차
 
 1.  들어가며
+
 2.  컴퓨터 기본지식과 역사
+
 3.  체험 삶의 현장
+
 4.  챗GPT 시대 오피스 전쟁
+
 5.  챗GPT 사용자 : Text-to-**X**
+
 6.  챗GPT 개발방법론 : DT, Agile, DevOps
+
 7.  챗GPT 개발자 : 프롬프트 디자인/엔지니어링
+
 8.  chatGPT와 LLM
+
 9.  chatGPT 한계와 새시대(?)
+
 10. 사례: 챗GPT와 오정보
+
 11. 질의응답
 
 {{< include slideshow/202305-gpt/00-who-am-i.qmd >}}
@@ -50,6 +60,8 @@ editor_options:
 
 {{< include slideshow/202305-gpt/21-prompt-engineering.qmd >}}
 
+{{< include slideshow/202305-gpt/22-ai-app-dev.qmd >}}
+
 {{< include slideshow/202305-gpt/20-LLM-chatGPT.qmd >}}
 
 {{< include slideshow/202305-gpt/04-limitation.qmd >}}
@@ -58,3 +70,32 @@ editor_options:
 
 {{< include slideshow/202305-gpt/reference.qmd >}}
 
+# LLM
+
+## Transformer
+
+::: panel-tabset
+### DL 시대
+
+![](img/transformer-dl.jpg){width="1025"}
+
+### 삼국지
+
+![](img/transformer-three.jpg){width="793"}
+
+### 가자 Transformer 로
+
+![](img/transformer-evolution.jpg){width="1670"}
+
+### Transformer 입력
+
+::: columns
+::: column
+![](img/transformer-modal.jpg){width="403"}
+:::
+
+::: column
+![](img/transformer_feed.gif)
+:::
+:::
+:::

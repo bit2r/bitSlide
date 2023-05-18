@@ -1124,7 +1124,7 @@
     "href": "chatGPT_202305.html#chatgpt-3대장-alpha-추론",
     "title": "chatGPT",
     "section": "chatGPT 3대장 + \\(\\alpha\\) 추론",
-    "text": "chatGPT 3대장 + \\(\\alpha\\) 추론\n\n문제수식손 풀기SympychatGPTWolfram Plugin\n\n\n디오판토스 묘비\n신의 축복으로 태어난 그는 인생의 \\(\\frac{1}{6}\\)을 소년으로 보냈다. 그리고 다시 인생의 \\(\\frac{1}{12}\\) 이 지난 뒤에는 얼굴에 수염이 자라기 시작했다. 다시 \\(\\frac{1}{7}\\)이 지난 뒤 그는 아름다운 여인을 맞이하여 화촉을 밝혔으며, 결혼한 지 5년 만에 귀한 아들을 얻었다. 아! 그러나 그의 가엾은 아들은 아버지의 반 밖에 살지 못했다. 아들을 먼저 보내고 깊은 슬픔에 빠진 그는 그 뒤 4년간 정수론에 몰입하여 스스로를 달래다가 일생을 마쳤다. [^1]\n\n\n디오판토스가 정확히 언제 태어나고 언제 죽었는지는 명확하지 않지만, 그가 죽었을 때의 나이는 정확히 알 수 있다. 이를 방정식을 통해 풀어보자. 수식을 \\(x\\)에 대해 정리해서 풀면 84가 나온다.\n\\[\\frac {x} {6} + \\frac {x} {12} + \\frac {x} {7} +  5 + \\frac {x} {2} + 4 = x\\]\n\n\n\n\n\n\n\n\n\n\nfrom sympy import *\nx = Symbol('x')\nDiophantus_puzzle = x/6 + x/12 + x/7 + 5 + x/2 + 4 - x\nsolve(Diophantus_puzzle, x, dict = True)\n\n[{x: 84}]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n울프람 웹사이트"
+    "text": "chatGPT 3대장 + \\(\\alpha\\) 추론\n\n문제수식손 풀기SympychatGPTWolfram Plugin\n\n\n디오판토스 묘비\n신의 축복으로 태어난 그는 인생의 \\(\\frac{1}{6}\\)을 소년으로 보냈다. 그리고 다시 인생의 \\(\\frac{1}{12}\\) 이 지난 뒤에는 얼굴에 수염이 자라기 시작했다. 다시 \\(\\frac{1}{7}\\)이 지난 뒤 그는 아름다운 여인을 맞이하여 화촉을 밝혔으며, 결혼한 지 5년 만에 귀한 아들을 얻었다. 아! 그러나 그의 가엾은 아들은 아버지의 반 밖에 살지 못했다. 아들을 먼저 보내고 깊은 슬픔에 빠진 그는 그 뒤 4년간 정수론에 몰입하여 스스로를 달래다가 일생을 마쳤다. [^1]\n\n\n디오판토스가 정확히 언제 태어나고 언제 죽었는지는 명확하지 않지만, 그가 죽었을 때의 나이는 정확히 알 수 있다. 이를 방정식을 통해 풀어보자. 수식을 \\(x\\)에 대해 정리해서 풀면 84가 나온다.\n\\[\\frac {x} {6} + \\frac {x} {12} + \\frac {x} {7} +  5 + \\frac {x} {2} + 4 = x\\]\n\n\n\n\n\n\n\n\n\n\nfrom sympy import *\nx = Symbol('x')\nDiophantus_puzzle = x/6 + x/12 + x/7 + 5 + x/2 + 4 - x\nsolve(Diophantus_puzzle, x, dict = True)\n\n[{x: 84}]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n울프람 웹사이트"
   },
   {
     "objectID": "chatGPT_202305.html#챗gpt-오피스",
@@ -1229,7 +1229,7 @@
     "href": "chatGPT_202305.html#langchain",
     "title": "chatGPT",
     "section": "LangChain",
-    "text": "LangChain\n\nLAMP모바일데이터 과학랭체인 컴포넌트OPL 프레임워크OPL 개발사례\n\n\n\n\n\n\n\n\n\n\nNative Development:\n\niOS: Swift and Objective-C are the main programming languages. Xcode is the primary IDE for iOS app development.\nAndroid: Kotlin and Java are the main programming languages. Android Studio is the primary IDE for Android app development.\n\nCross-Platform Development: These frameworks allow you to write code once and run it on multiple platforms.\n\nReact Native: A JavaScript framework for building native mobile apps using React and JavaScript.\nFlutter: A UI toolkit from Google for building natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language.\nXamarin: A .NET-based framework for building iOS and Android apps using C#.\n\nHybrid Mobile App Development: These are web applications packaged into a native wrapper.\n\nIonic: It uses web technologies like JavaScript, CSS, and HTML for development, and the apps can be distributed on different platforms.\nCordova/PhoneGap: These tools wrap your HTML/JavaScript app into a native container which can access the device functions of several platforms."
+    "text": "LangChain\n\nLLM랭체인 컴포넌트OPL 프레임워크OPL 개발사례"
   },
   {
     "objectID": "chatGPT_202305.html#데이터프레임",
@@ -1930,5 +1930,33 @@
     "title": "챗GPT 사용자  Text-to-X",
     "section": "데이터 분석: Text-to-Analytics",
     "text": "데이터 분석: Text-to-Analytics\n\nPandasAILlamaIndex챗GPT SQLRTutor.ai\n\n\nPandas AI는 널리 사용되는 데이터 분석 및 조작 도구인 Pandas에 생성 인공 지능 기능을 추가한 Python 라이브러리다. Pandas AI는 판다스와 함께 사용하도록 설계되었으며, 판다스를 대체할 수 없다.\n \n\nchatGPT: 판다스 AI\n\n\n\n\n\n\n\n\n\nchatGPT: 펭귄 - 라마인덱스\n\n\n\n\n\n\n\n\n\nchatGPT: 챗GPT SQL\n\n\n\n\n\nChat with your data with RTutor\nRTutor"
+  },
+  {
+    "objectID": "chatGPT_202305.html#개발방법론-진화",
+    "href": "chatGPT_202305.html#개발방법론-진화",
+    "title": "chatGPT",
+    "section": "개발방법론 진화",
+    "text": "개발방법론 진화\n\n폭포수 모형V-모형스크럼SW 앱개발ML 앱개발AI 앱 개발\n\n\n\n\n\n\ngraph TD\n    A[요구사항] --&gt; B[아키텍쳐/디자인]\n    B --&gt; C[구현]\n    C --&gt; D[검증/테스트]\n    D --&gt; E[유지보수]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n그림 1: ?(caption)"
+  },
+  {
+    "objectID": "chatGPT_202305.html#역사",
+    "href": "chatGPT_202305.html#역사",
+    "title": "chatGPT",
+    "section": "역사",
+    "text": "역사\n\nDL 시대삼국지가자 Transformer 로Transformer 입력\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "chatGPT_202305.html#transformer",
+    "href": "chatGPT_202305.html#transformer",
+    "title": "chatGPT",
+    "section": "Transformer",
+    "text": "Transformer\n\nDL 시대삼국지가자 Transformer 로Transformer 입력\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "chatGPT_202305.html#llm-2",
+    "href": "chatGPT_202305.html#llm-2",
+    "title": "chatGPT",
+    "section": "LLM",
+    "text": "LLM\n\n독점/상용 LLM오픈소스/공개 LLM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Charles Frye, 2023)"
   }
 ]
