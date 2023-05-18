@@ -23,16 +23,16 @@ editor_options:
 ## 목차
 
 1.  들어가며
-1.  컴퓨터 기본지식과 역사
-1.  체험 삶의 현장
-1.  챗GPT 시대 오피스 전쟁
-1.  챗GPT 사용자 : Text-to-**X**
-1.  챗GPT 개발방법론 : DT, Agile, DevOps
-1.  챗GPT 개발자 : 프롬프트 디자인/엔지니어링
-1.  chatGPT와 LLM
-1. chatGPT 한계와 시사점
-1. 사례: 챗GPT와 오정보
-1. 질의응답
+2.  컴퓨터 기본지식과 역사
+3.  체험 삶의 현장
+4.  챗GPT 시대 오피스 전쟁
+5.  챗GPT 사용자 : Text-to-**X**
+6.  챗GPT 개발방법론 : DT, Agile, DevOps
+7.  챗GPT 개발자 : 프롬프트 디자인/엔지니어링
+8.  chatGPT와 LLM
+9.  chatGPT 한계와 새시대(?)
+10. 사례: 챗GPT와 오정보
+11. 질의응답
 
 {{< include slideshow/202305-gpt/00-who-am-i.qmd >}}
 

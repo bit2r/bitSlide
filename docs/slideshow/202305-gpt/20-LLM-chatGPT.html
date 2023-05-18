@@ -275,29 +275,137 @@ ga('send', {
 <div class="no-row-height column-margin column-container"><div class="">
 <p><span class="citation" data-cites="fullstack2023">[@fullstack2023]</span></p>
 </div></div></section>
-<section id="hugginggpt" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="hugginggpt">HuggingGPT</h2>
+<section id="토큰-크기-context-length" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="토큰-크기-context-length">토큰 크기 (Context Length)</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">LLM as Controller</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">HuggingGPT 개요</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">사례</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">표</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">그래프</a></li></ul>
 <div class="tab-content">
 <div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/huggingGPT.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="img/huggingGPT.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 27%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>회사명</th>
+<th>LLM 모형</th>
+<th>Context 길이 (토큰 크기)</th>
+<th>텍스트 크기</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OpenAI</td>
+<td>GPT-1</td>
+<td>512</td>
+<td>1 쪽, 4 단락, 36줄</td>
+</tr>
+<tr class="even">
+<td>구글</td>
+<td>PaLM</td>
+<td>512</td>
+<td>↑</td>
+</tr>
+<tr class="odd">
+<td>OpenAI</td>
+<td>GPT-2</td>
+<td>1024</td>
+<td>2 쪽, 8 단락, 68줄</td>
+</tr>
+<tr class="even">
+<td>OpenAI</td>
+<td>GPT-3</td>
+<td>2048</td>
+<td>1500 영단어, 4쪽, 139줄</td>
+</tr>
+<tr class="odd">
+<td>OpenAI</td>
+<td>GPT-4</td>
+<td>2048</td>
+<td>↑</td>
+</tr>
+<tr class="even">
+<td>Meta</td>
+<td>Llama</td>
+<td>2048</td>
+<td>↑</td>
+</tr>
+<tr class="odd">
+<td>OpenAI</td>
+<td>GPT-3.5-Turbo</td>
+<td>4096</td>
+<td>9쪽, 369줄</td>
+</tr>
+<tr class="even">
+<td>구글</td>
+<td>PaLM2</td>
+<td>8192</td>
+<td>13쪽, 단편 소설, 기술 문서</td>
+</tr>
+<tr class="odd">
+<td>OpenAI</td>
+<td>GPT-4 8K</td>
+<td>8192</td>
+<td>↑</td>
+</tr>
+<tr class="even">
+<td>OpenAI</td>
+<td>GPT-4 32K</td>
+<td>32000</td>
+<td>48쪽, 대학학위논문</td>
+</tr>
+<tr class="odd">
+<td>MosaicML</td>
+<td>MPT-7B-StoryWriter</td>
+<td>65000</td>
+<td>98쪽</td>
+</tr>
+<tr class="even">
+<td>Anthropic</td>
+<td>Claude</td>
+<td>100000</td>
+<td>150쪽, 소설책 반권</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/huggingGPT-generate.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="img/huggingGPT-generate.jpg" class="img-fluid figure-img" width="500"></a></p>
+<p><a href="img/FsUnTB9aAAAkBCc.jfif" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="img/FsUnTB9aAAAkBCc.jfif" class="img-fluid figure-img" width="642"></a></p>
+</figure>
+</div>
+<p>— Dan Fu <span class="citation" data-cites="realDanFu">@realDanFu</span> <a href="https://twitter.com/realDanFu/status/1640762299408601089?s=20"> March 29, 2023</a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="hugginggpt" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="hugginggpt">HuggingGPT</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">LLM as Controller</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">HuggingGPT 개요</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false">사례</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/huggingGPT.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="img/huggingGPT.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
-<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="img/huggingGPT-example.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="img/huggingGPT-example.jpg" class="img-fluid figure-img" width="500"></a></p>
+<p><a href="img/huggingGPT-generate.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="img/huggingGPT-generate.jpg" class="img-fluid figure-img" width="500"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/huggingGPT-example.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="img/huggingGPT-example.jpg" class="img-fluid figure-img" width="500"></a></p>
 </figure>
 </div>
 </div>
@@ -546,7 +654,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-05-14T01:24:12.100Z</lastmod>
+    <lastmod>2023-05-18T03:45:21.574Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-seoul-r-meetup/index.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/chatGPT_202305.html</loc>
-    <lastmod>2023-05-17T10:05:06.365Z</lastmod>
+    <lastmod>2023-05-18T03:45:33.828Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-gpt/00-who-am-i.html</loc>
@@ -98,10 +98,18 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-gpt/21-prompt-engineering.html</loc>
-    <lastmod>2023-05-16T23:56:32.044Z</lastmod>
+    <lastmod>2023-05-18T03:40:11.777Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-seoul-r-meetup/05-google-search.html</loc>
     <lastmod>2023-05-16T23:56:49.321Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-gpt/misinformation.html</loc>
+    <lastmod>2023-05-18T03:40:02.313Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-gpt/03-user-in-practice.html</loc>
+    <lastmod>2023-05-18T03:45:14.222Z</lastmod>
   </url>
 </urlset>

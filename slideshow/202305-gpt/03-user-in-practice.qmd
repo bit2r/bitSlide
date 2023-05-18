@@ -54,10 +54,15 @@ $$\frac {x} {6} + \frac {x} {12} + \frac {x} {7} +  5 + \frac {x} {2} + 4 = x$$
 
 ```{python tombstone}
 #| echo: true
+#| eval: false
 from sympy import *
 x = Symbol('x')
 Diophantus_puzzle = x/6 + x/12 + x/7 + 5 + x/2 + 4 - x
 solve(Diophantus_puzzle, x, dict = True)
+```
+
+```
+[{x: 84}]
 ```
 
 ### `chatGPT`
