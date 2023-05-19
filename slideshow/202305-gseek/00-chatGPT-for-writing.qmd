@@ -1,0 +1,185 @@
+# 디지털 글쓰기를 위한 챗GPT
+
+## 챗GPT 란? {.smaller}
+
+::: panel-tabset
+### PNG와 JPEG
+
+![](img/png_jpg.png){width="651"}
+
+### Foundation 모형
+
+![](img/foundation_model.png){width="500"}
+
+### 헬스케어
+
+![](img/LLM-heathcare-Stanford.jpg){width="1088"}
+:::
+
+::: aside
+[@Chiang_2023]
+[@Merritt_2023a]
+:::
+
+
+## 거대 언어모형(LLM)
+
+::: panel-tabset
+### LLM 진화
+
+![](img/LLM_tree.gif)
+
+### 80억 패러미터
+
+![](img/LLM_tree_8_billion.png)
+
+### 400억
+
+![](img/LLM_tree_40_billion.png)
+
+### 640억
+
+![](img/LLM_tree_62_billion.png)
+
+### 5,400억
+
+![](img/LLM_tree_540_billion.png)
+
+### 성능
+
+![](img/LLM_tree_performance.png)
+:::
+
+::: aside
+[[Sharan Narang and Aakanksha Chowdhery (APRIL 04, 2022), "Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrough Performance", Software Engineers, Google Research](https://ai.googleblog.com/2022/04/pathways-language-model-palm-scaling-to.html)]{.aside}
+:::
+
+## 모형크기
+
+<iframe src="https://ourworldindata.org/grapher/artificial-intelligence-training-computation?yScale=linear&amp;country=~PaLM+%28540B%29" loading="lazy" style="width: 100%; height: 600px; border: 0px none;">
+
+</iframe>
+
+
+
+## 소프트웨어 3.0
+
+::: columns
+::: column
+![](img/software_3.jpeg){width="441"}
+:::
+
+::: column
+#### Andrej Karpathy
+
+-   소프트웨어 1.0: 코드 작성을 통한 프로그래밍
+-   소프트웨어 2.0: 데이터셋 큐레이팅을 통한 프로그래밍
+-   소프트웨어 3.0: 프롬프트 엔지니어링을 통한 프로그래밍 (LLM에 입력으로 제공, GPT 스타일)
+:::
+:::
+
+
+## https://lifearchitect.ai/ {.smaller}
+
+::: {.panel-tabset .smaller}
+### IQ 분포
+
+![](img/2015-Alan-D-Thompson-IQ-Chart1.png)
+
+### LM 시험
+
+![](img/2022-Alan-D-Thompson-Language-Model-Tests-Rev-3.png){width="889"}
+
+### GPT-4
+
+![](img/2023-Alan-D-Thompson-GPT-4-Tests-Rev-3.png){width="889"}
+
+### 데이터셋
+
+![](img/2021-Alan-D-Thompson-Contents-of-GPT-3-and-GPT-Neo-Pile-v1-Rev-5.png){width="889"}
+
+### 딥마인드
+
+![](img/2022-Alan-D-Thompson-DeepMind-Models-Rev-2.png){width="889"}
+
+### 모형크기
+
+![](img/2023-Alan-D-Thompson-AI-Bubbles-Rev-7b.png){width="889"}
+
+### 능력
+
+![](img/2023-Alan-D-Thompson-LLM-Emerging-Rev-0.png){width="889"}
+
+### 비행기
+
+![](img/2023-Alan-D-Thompson-API-or-On-Premise-Rev-0b.png){width="889"}
+:::
+
+::: aside
+-   <https://lifearchitect.ai/models/> / Google Sheets: [바로가기](https://docs.google.com/spreadsheets/d/1O5KVQW1Hx5ZAkcg8AIRjbQLQzx2wVaLl0SqUu-ir9Fs/edit#gid=1158069878)
+:::
+
+
+
+## 프롬프트 공학
+
+::: panel-tabset
+### 언어(?)
+
+<br>
+
+<blockquote class="twitter-tweet">
+
+<p lang="en" dir="ltr">
+
+The hottest new programming language is English
+
+</p>
+
+--- Andrej Karpathy (@karpathy) <a href="https://twitter.com/karpathy/status/1617979122625712128?ref_src=twsrc%5Etfw">January 24, 2023</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+### 텍스트 생성
+
+<br>
+
+![](img/text-generation.gif){fig-align="center"}
+
+### 언어 모형
+
+![](img/generative-text.jpg){width="626"}
+
+### 프롬프트
+
+![](img/generative-text-prompt.jpg){width="952"}
+
+### 첫인사
+
+<br>
+
+:::::{.columns}
+:::{.column width="33%"}
+![](img/chatGPT_start.jpg)
+:::
+
+:::{.column width="33%"}
+
+![](img/prompt.jpg)
+:::
+
+:::{.column width="33%"}
+![](img/prompt-component.jpg)
+:::
+
+:::::
+
+:::
+
+
+
+
+

@@ -1,6 +1,22 @@
 # Internal slide decks
 
 - title: "챗GPT"
+  subtitle: "챗GPT 디지털 글쓰기"
+  author: "이광춘"
+  date: 2023-05-30
+  image: img/gyeonggi-do.jpg
+  path: chatGPT_gseek_20230530.qmd
+  categories:
+    - 인공지능
+    - chatGPT 활용
+    - 디지털 글쓰기
+    - 한국 R 사용자회
+    - 경기도
+    - 경기도 평행학습 포털
+    - GSEEK
+    - 쿼토(Quarto)
+
+- title: "챗GPT"
   subtitle: "Ai 시대의 챗GPT 활용과 미래산업환경"
   author: "이광춘"
   date: 2023-05-22

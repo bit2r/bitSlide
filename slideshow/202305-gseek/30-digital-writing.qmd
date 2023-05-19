@@ -1,0 +1,64 @@
+# 도구의 인간
+
+![](img/homo-faber.jpg)
+
+## 글쓰기 현재와 미래
+
+:::::{.columns}
+:::{.column}
+
+### 현재
+
+<br> 
+
+![](slideshow/202212-youtube/fig/jobshop.gif)
+:::
+
+:::{.column}
+### 미래
+
+<br> 
+
+![](slideshow/202212-youtube/fig/quarto_to_go.gif)
+:::
+
+:::::
+
+
+## 글쓰기 기본기 {.smaller}
+
+:::{.panel-tabset}
+
+### 데이터 과학
+
+![](img/horst-eco-r4ds.png)
+
+### 문서 복잡성
+
+![](img/markdown-writing.png)
+
+### 문서 패러다임
+
+![](img/data-conference-three-languages.png)
+
+:::
+
+
+## (과학기술) 글쓰기 진화
+
+:::{.panel-tabset}
+
+### 글쓰기 역사
+
+![](img/writing_history.jpg)
+
+### 도구의 진화
+
+![](img/writing-evolution.jpg)
+
+### 과학기술 글쓰기
+
+![](img/gseek-evolution.jpg)
+
+:::
+
