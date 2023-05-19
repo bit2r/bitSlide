@@ -70,32 +70,3 @@ editor_options:
 
 {{< include slideshow/202305-gpt/reference.qmd >}}
 
-# LLM
-
-## Transformer
-
-::: panel-tabset
-### DL 시대
-
-![](img/transformer-dl.jpg){width="1025"}
-
-### 삼국지
-
-![](img/transformer-three.jpg){width="793"}
-
-### 가자 Transformer 로
-
-![](img/transformer-evolution.jpg){width="1670"}
-
-### Transformer 입력
-
-::: columns
-::: column
-![](img/transformer-modal.jpg){width="403"}
-:::
-
-::: column
-![](img/transformer_feed.gif)
-:::
-:::
-:::

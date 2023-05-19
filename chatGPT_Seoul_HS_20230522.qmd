@@ -38,7 +38,23 @@ editor_options:
 
 1. 질의응답
 
-{{< include slideshow/202305-gpt/00-who-am-i.qmd >}}
+{{< include slideshow/202305-seoul/00-who-am-i.qmd >}}
 
-{{< include slideshow/202305-gpt/seoul-r-meeup.qmd >}}
+{{< include slideshow/202305-seoul/seoul-r-meeup.qmd >}}
+
+{{< include slideshow/202305-seoul/00-open-source-software.qmd >}}
+
+{{< include slideshow/202305-seoul/01-life-in-action.qmd >}}
+
+{{< include slideshow/202305-seoul/02-office-interface.qmd >}}
+
+{{< include slideshow/202305-seoul/03-user-in-practice.qmd >}}
+
+{{< include slideshow/202305-seoul/20-LLM-chatGPT.qmd >}}
+
+{{< include slideshow/202305-seoul/04-limitation.qmd >}}
+
+{{< include slideshow/202305-seoul/misinformation.qmd >}}
+
+{{< include slideshow/202305-seoul/reference.qmd >}}
 

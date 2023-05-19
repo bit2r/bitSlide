@@ -11,7 +11,11 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.299">
 
   <meta name="author" content="이광춘/신종화">
@@ -33,7 +37,91 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
   
   <script type="text/javascript">
@@ -337,6 +425,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -383,7 +474,7 @@
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure>
 <p><strong>AI 아바타</strong></p>
-<p><a href="img/profile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="img/profile.png" data-top="0" data-right="0" width="300"></a></p>
+<p><a href="img/profile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img data-src="img/profile.png" data-top="0" data-right="0" width="300"></a></p>
 </figure>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -411,16 +502,17 @@
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure>
-<p><a href="img/kyobo_dplanex.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="img/kyobo_dplanex.jpg"></a></p>
+<p><a href="img/seoul_hs.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img data-src="img/seoul_hs.png"></a></p>
 </figure>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><strong>강의상세</strong></p>
 <ul>
-<li>날짜 : 2023. 5. 18.(목) 19:00~21:00</li>
-<li>장소 : 교보타워 노블리에홀 또는 다목적홀</li>
-<li>대상 : 교보 비즈니스 파트와 테크닉 파트 실무자</li>
-<li>내용 : chatGPT 활용(비즈니스 - 테크닉 사이드)</li>
+<li>날짜 : 2023. 5. 22.(월) 10:30~12:00</li>
+<li>장소 : 서울고등학교 오영수 기념관</li>
+<li>대상 : 서울고등학교 학부모</li>
+<li>과정 : 2023년 서울고등학교 학부모아카데미</li>
+<li>내용 : Ai 시대의 챗GPT 활용과 미래산업환경</li>
 </ul>
 </div>
 </div>
@@ -488,12 +580,1780 @@
 </section>
 </div>
 </div>
+</section></section>
+<section>
+<section id="기본기와-역사" class="title-slide slide level1 center">
+<h1>기본기와 역사</h1>
 
-<p><img src="_extensions/padsInsper/insper/logo.png" class="slide-logo"></p>
-<div class="footer footer-default">
-<p>한국 R 사용자회 <a href="https://r2bit.com/chatGPT/">chatGPT</a>. theme <a href="https://github.com/padsInsper/quarto-insper-theme">insper</a> 소스코드 <a href="https://github.com/padsInsper/quarto-insper-theme">GitHub</a>.</p>
+</section>
+<section id="컴퓨터-하드웨어" class="slide level2">
+<h2>컴퓨터 하드웨어</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">높이 1,000 미터</a></li><li><a href="#tabset-2-2">높이 100 미터</a></li><li><a href="#tabset-2-3">높이 10 미터</a></li><li><a href="#tabset-2-4">높이 1 미터</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/computer-01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img data-src="img/computer-01.png" width="574"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/computer-02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img data-src="img/computer-02.png" width="800"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/computer-03.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img data-src="img/computer-03.png" width="676"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/computer-04.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img data-src="img/computer-04.png" width="1200"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="컴퓨터-소프트웨어-meeker2017open" class="slide level2">
+<h2>컴퓨터 소프트웨어 <span class="citation" data-cites="meeker2017open">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Meeker, 2017</a>)</span></h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">시스템 아키텍처</a></li><li><a href="#tabset-3-2">상호작용</a></li><li><a href="#tabset-3-3">가상화</a></li><li><a href="#tabset-3-4">Inline 함수와 링킹</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-2-1-computer-system-architecture.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img data-src="img/fig-2-1-computer-system-architecture.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-2-2-interaction-of-the-elements.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img data-src="img/fig-2-2-interaction-of-the-elements.png" width="800"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-2-3-interaction-of-the-elements-with-virtualization.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img data-src="img/fig-2-3-interaction-of-the-elements-with-virtualization.png" width="691"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-2-5-build-of-program.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img data-src="img/fig-2-5-build-of-program.png" width="724"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="오픈소스-소프트웨어" class="slide level2">
+<h2>오픈소스 소프트웨어</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">GPL 라이선스</a></li><li><a href="#tabset-4-2">일반적인 사례</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-3-1-direct-licensing-model.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img data-src="img/fig-3-1-direct-licensing-model.png" width="600"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-4-1-governing-clearance.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img data-src="img/fig-4-1-governing-clearance.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="라이선스-문제" class="slide level2">
+<h2>라이선스 문제</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">라이선스 제한 문제</a></li><li><a href="#tabset-5-2">라이선스 조건 문제</a></li><li><a href="#tabset-5-3">수평 비호환성 문제</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-4-2-license-restriction-problems.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img data-src="img/fig-4-2-license-restriction-problems.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-5-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-4-3-license-condition-problems.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img data-src="img/fig-4-3-license-condition-problems.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-5-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-4-5-problem-due-to-horizontal-incompatibility.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img data-src="img/fig-4-5-problem-due-to-horizontal-incompatibility.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="라이선스-호환과-선택" class="slide level2">
+<h2>라이선스 호환과 선택</h2>
+<div class="panel-tabset">
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">라이선스 호환성</a></li><li><a href="#tabset-6-2">수평 호환성</a></li><li><a href="#tabset-6-3">라이선스 선택</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-4-4-license-compatibility.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img data-src="img/fig-4-4-license-compatibility.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-4-6-horizontal-compatibility.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img data-src="img/fig-4-6-horizontal-compatibility.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-license-selection.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img data-src="img/fig-license-selection.jpg" width="600"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="콘텐츠와-데이터" class="slide level2">
+<h2>콘텐츠와 데이터</h2>
+<h3 id="데이터-라이선스">데이터 라이선스</h3>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+  A["Data Licenses"] --&gt; B["Open Data Licenses"]
+  B --&gt; C["Creative Commons Zero&lt;br&gt; (CC0)"]
+  B --&gt; D["Open Data Commons&lt;br&gt; Open Database License (ODbL)"]
+  A --&gt; E["Proprietary Data Licenses"]
+  A --&gt; F["Public Domain Data"]  
+</pre>
+</div>
+</div>
+</div>
+</div>
+<h3 id="콘텐츠-라이선스">콘텐츠 라이선스</h3>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph TD;
+    A["Content Licenses"] --&gt; B[Public domain]
+    A --&gt; C[Creative Commons licenses]
+    A --&gt; D[All rights reserved]
+    C --&gt; E[CC0]
+    C --&gt; F[Attribution]
+    C --&gt; G[Non-commercial]
+    C --&gt; H[Share-alike]
+    C --&gt; I[Custom]
+    D --&gt; J[No use without permission]
+    D --&gt; K[No copying without permission]
+    D --&gt; L[No distribution without permission]  
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="유닉스-vs-리눅스" class="slide level2 smaller scrollable">
+<h2>유닉스 vs 리눅스</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<h5 id="연도별-추세">연도별 추세</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/unix_linux.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="img/unix_linux.jpg" width="520" height="520"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:65%;">
+<h5 id="역사">역사</h5>
+<ul>
+<li>1969년: 켄 톰슨, 데니스 리치, 루그 도나우와 같은 AT&amp;T 벨 연구소의 연구원들에 의해 유닉스 운영 체제의 초기 버전이 개발되었다. 이들은 이전에 실패한 Multics 프로젝트에서 배운 경험을 바탕으로 새로운 운영 체제를 설계하다.</li>
+<li>1970년대 초: 유닉스는 C 언어로 재작성되었다. 이는 운영 체제를 더욱 쉽게 이식할 수 있게 만들었으며, 이것이 유닉스가 다양한 하드웨어에서 실행될 수 있게 된 중요한 이유 중 하나다. 유닉스는 대학과 연구 기관으로 확산되었다.</li>
+<li>1970년대 후반 ~ 1980년대: 유닉스의 확산은 이 시기에 가속화되었다. AT&amp;T는 유닉스를 상업적으로 판매하기 시작했고, 다른 기업들이 자체 유닉스 버전을 개발하기 시작했다. 이로 인해 BSD, SunOS, HP-UX 등 다양한 유닉스 변형이 생겨났고, 리처드 스톨만이 자유 S/W 운동을 시작하고 GNU 프로젝트를 개시하여, 리눅스와 결합하여 GNU/Linux를 만들게 된다.</li>
+<li>1990년대 ~ 현재: 1990년대에 들어서며 유닉스 계열의 운영 체제가 더욱 다양해졌다. BSD 계열의 운영 체제와 리눅스가 각광받았다. 리눅스는 핀란드의 리누스 토르발스에 의해 개발되었고, GNU 프로젝트의 여러 컴포넌트와 결합되어 오늘날 가장 널리 사용되는 유닉스 계열의 운영 체제 중 하나가 되었다.</li>
+<li>1990년대 ~ 현재 (계속): 퓨터, 임베디드 시스템, 스마트폰 등 매우 다양한 시스템에서 사용되고 있습니다. 특히, 유닉스 기반의 리눅스는 오픈 소스 운영 체제로서 세계의 많은 서버와 슈퍼 컴퓨터에서 사용되고 있으며, Android라는 가장 널리 사용되는 스마트폰 운영 체제의 핵심 부분도 되었다.</li>
+<li>2000년대 ~ 현재: MacOS 또한 BSD 유닉스를 기반으로 하여 개발된 유닉스 계열의 운영 체제다. 이를 통해 유닉스는 데스크톱 시스템에서도 널리 사용되고 있다.</li>
+</ul>
+</div>
+</div>
+
+<aside><div>
+<p>출처: <a href="https://top500.org/statistics/overtime/">DEVELOPMENT OVER TIME, TOP500.org</a></p>
+</div></aside></section>
+<section id="r-vs-s-plus" class="slide level2 smaller scrollable">
+<h2>R vs S-Plus</h2>
+<div class="column-page">
+<div class="columns">
+<div class="column" style="width:45%;">
+<h5 id="ss-plus">S/S-Plus</h5>
+<ul>
+<li><p>1976: S 프로그래밍 언어는 당시 범용 언어로는 잘 지원되지 않았던 데이터 분석을 위해 특별히 고안된 언어로, 벨 연구소의 존 챔버스와 그의 동료들에 의해 만들어졌다. S는 데이터프레임을 처리하는 능력과 함수를 일급 객체로 사용할 수 있다는 점에서 독보적이었다.</p></li>
+<li><p>1988년: 통계 과학 회사에서 S-PLUS라는 상용 버전의 S 언어를 출시했다. 이 버전에는 그래픽 사용자 인터페이스와 향상된 데이터 처리 기능 등 원래 S 언어에 없던 새로운 기능이 추가되었다.</p></li>
+<li><p>1993년: 회사가 MathSoft에 매각되었고, S-PLUS는 계속 개발되어 상업적으로 판매되었습니다.</p></li>
+</ul>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:50%;">
+<h5 id="r-언어">R 언어</h5>
+<ul>
+<li><p>1993: R은 뉴질랜드 오클랜드 대학교의 로스 이하카와 로버트 젠틀맨이 만들었다. R은 S 언어의 오픈 소스 구현으로 설계되었지만 빠르게 독자적인 정체성을 발전시켰다. R은 개발자의 이니셜을 따서 ’R’로 명명되었다.</p></li>
+<li><p>1995: R이 공개적으로 사용 가능해졌고, 오픈 소스였기 때문에 기능을 확장하기 위해 패키지를 기여하는 개발자 커뮤니티가 빠르게 모였다.</p></li>
+<li><p>1997년: R의 추가 개발을 감독하기 위해 R 개발 핵심 팀이 구성되었다. 이를 통해 R은 빠르게 진화하는 통계 컴퓨팅 분야에서 최신 상태를 유지하고 관련성을 유지할 수 있었다.</p></li>
+<li><p>2000년대와 그 이후: R의 인기는 지난 20년 동안 빠르게 성장했다. 포괄적인 통계 및 그래픽 기법과 오픈 소스 특성으로 인해 학계, 연구계는 물론 산업계에서도 인기가 높아졌다. 또한 패키지를 제공하는 방대한 커뮤니티의 도움을 받아 생물정보학, 머신러닝 등 다양한 분야로 기능을 확장하고 있다.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>출처: <a href="https://www.r-project.org/conferences/useR-2006/Slides/Chambers.pdf">History of S and R</a></p>
+</div></aside></section></section>
+<section>
+<section id="삶의-현장-사용자-개발자" class="title-slide slide level1 center">
+<h1>삶의 현장 <br> 사용자 / 개발자</h1>
+
+</section>
+<section id="백만1억-사용자-fa-solid-rocket" class="slide level2">
+<h2>백만~1억 사용자 <i class="fa-solid fa-rocket" aria-hidden="true"></i></h2>
+<p>백만, 5천만, 1억 가입자를 가질 때까지 걸린 소요시간</p>
+<div class="panel-tabset">
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">전화기</a></li><li><a href="#tabset-7-2">기술 진화</a></li><li><a href="#tabset-7-3">chatGPT 백만</a></li><li><a href="#tabset-7-4">빅3 서비스</a></li><li><a href="#tabset-7-5">1억명 (소요 달수)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/time-to-reach-springer.png" class="lightbox" title="[@song2019digital]" data-gallery="quarto-lightbox-gallery-43"><img data-src="img/time-to-reach-springer.png" width="600"></a></p>
+<p></p><figcaption><span class="citation" data-cites="song2019digital">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Song, 2019</a>)</span></figcaption><p></p>
+</figure>
+</div>
+</div>
+<div id="tabset-7-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/hbr_trends.png" class="lightbox" title="Rita McGrath(November 25, 2013), “The Pace of Technology Adoption is Speeding Up”, Harvard Business Review" data-gallery="quarto-lightbox-gallery-44"><img data-src="img/hbr_trends.png"></a></p>
+<p></p><figcaption><a href="https://hbr.org/2013/11/the-pace-of-technology-adoption-is-speeding-up">Rita McGrath(November 25, 2013), “The Pace of Technology Adoption is Speeding Up”, Harvard Business Review</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+<div id="tabset-7-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/one_million_users.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img data-src="img/one_million_users.jpg" width="600"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-7-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/time-to-reach-5days.jfif" class="lightbox" title="출처: https://twitter.com/umarsaif/status/1610932387185315840" data-gallery="quarto-lightbox-gallery-46"><img data-src="img/time-to-reach-5days.jfif"></a></p>
+<p></p><figcaption>출처: <a href="https://twitter.com/umarsaif/status/1610932387185315840" class="uri">https://twitter.com/umarsaif/status/1610932387185315840</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+<div id="tabset-7-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/time-to-reach-100M.jfif" class="lightbox" title="출처: https://twitter.com/EconomyApp/status/1622029832099082241" data-gallery="quarto-lightbox-gallery-47"><img data-src="img/time-to-reach-100M.jfif" width="600"></a></p>
+<p></p><figcaption>출처: <a href="https://twitter.com/EconomyApp/status/1622029832099082241" class="uri">https://twitter.com/EconomyApp/status/1622029832099082241</a></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="ai를-바라보는-관점" class="slide level2">
+<h2>AI를 바라보는 관점</h2>
+<div class="panel-tabset">
+<ul id="tabset-8" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-8-1">트위터 Santiago I</a></li><li><a href="#tabset-8-2">트위터 Santiago II</a></li><li><a href="#tabset-8-3">버스탄 두 남자</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/santiago_01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img data-src="img/santiago_01.png"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-8-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/santiago_02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img data-src="img/santiago_02.png"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-8-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/two_men_on_a_bus.png" class="lightbox" data-gallery="quarto-lightbox-gallery-50"><img data-src="img/two_men_on_a_bus.png" width="600"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="대장-alpha" class="slide level2">
+<h2>3 대장 + <span class="math inline">\(\alpha\)</span></h2>
+
+<img data-src="img/openai-three-pillars.png" class="r-stretch quarto-figure-center"></section>
+<section id="체험-삶의-현장" class="slide level2">
+<h2>체험 삶의 현장</h2>
+<div class="panel-tabset">
+<ul id="tabset-9" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-9-1">현대백화점 (글쓰기)</a></li><li><a href="#tabset-9-2">마이크로소프트 (코딩)</a></li><li><a href="#tabset-9-3">네이버 (그리기)</a></li><li><a href="#tabset-9-4">로스쿨 (추론)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1">
+<div class="columns">
+<div class="column">
+<p><br> <a href="img/hyundai-03.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-51"><img data-src="img/hyundai-03.jpg"></a></p>
+</div><div class="column">
+<p><br> <a href="img/hyundai-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-52"><img data-src="img/hyundai-02.jpg"></a></p>
+</div>
+</div>
+</div>
+<div id="tabset-9-2">
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/productivity_at_microsoft.png" class="lightbox" data-gallery="quarto-lightbox-gallery-53"><img data-src="img/productivity_at_microsoft.png"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<p><br></p>
+<ul>
+<li>신규 코드의 <strong>40%</strong>가 Copilot으로 작성</li>
+<li><strong>75%의 개발자</strong>가 업무에 더 큰 성취감을 느꼈습니다.</li>
+<li><strong>87%의 개발자</strong>가 정신적 노력을 절약하는 데 도움이 되었다고 답했습니다.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="tabset-9-3">
+<p><br> <br> <a href="img/webtoon.png" class="lightbox" data-gallery="quarto-lightbox-gallery-54"><img data-src="img/webtoon.png"></a></p>
+</div>
+<div id="tabset-9-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/lsat_g.png" class="lightbox" data-gallery="quarto-lightbox-gallery-55"><img data-src="img/lsat_g.png" width="636"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li>웹툰 출처: <span class="citation" data-cites="webtoon2021">(<a href="#/참고문헌" role="doc-biblioref" onclick="">김현진, 2021</a>)</span></li>
+<li>로스쿨 출처: <a href="https://r2bit.com/chatGPT/gpt4_performance.html" class="uri">https://r2bit.com/chatGPT/gpt4_performance.html</a> <span class="citation" data-cites="openai2023gpt4">(<a href="#/참고문헌" role="doc-biblioref" onclick="">OpenAI, 2023</a>)</span></li>
+</ul>
+</div></aside></section>
+<section id="시장-와해-사례-서점-fa-solid-book" class="slide level2">
+<h2>시장 와해 사례: 서점 <i class="fa-solid fa-book" aria-hidden="true"></i></h2>
+<p>공상과학 및 판타지 잡지 클라크스월드(Clarkesworld)는 AI가 생성한 소설라는 비난을 받은 후 신규 공상과학소설이 급증한 것이 AI 기계로 작성된 원인을 큰 것으로 파악하고 2월 20일부터 공식적으로 투고를 중단했다.</p>
+<div id="sci-fiction" class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><a href="img/shutdown-01.jpg" class="lightbox" title="2023-02-15 기준" data-gallery="quarto-lightbox-gallery-7"><img data-src="img/shutdown-01.jpg"></a></p>
+<p></p><figcaption>2023-02-15 기준</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><a href="img/shutdown-02.jpg" class="lightbox" title="2023-02-20 기준" data-gallery="quarto-lightbox-gallery-8"><img data-src="img/shutdown-02.jpg"></a></p>
+<p></p><figcaption>2023-02-20 기준</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="column-margin"><a href="http://neil-clarke.com/a-concerning-trend/">Neil Clark (2023-02-15), “A Concerning Trend”, CLARKESWORLD MAGAZINE</a></span></p>
+</section>
+<section id="시장-와해-사례-병원-fa-solid-hospital" class="slide level2 smaller">
+<h2>시장 와해 사례: 병원 <i class="fa-solid fa-hospital" aria-hidden="true"></i></h2>
+<p><br></p>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/japan-medical-exam.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="img/japan-medical-exam.jpg"></a></p>
+</figure>
+</div>
+</div><div class="column">
+<p>일본과 미국의 국제 연구팀에 따르면 미국에 본사를 둔 OpenAI가 개발한 인공지능 모델의 최신 버전이 일본의 의사 국가시험에 합격할 수 있는 능력을 입증했다고 합니다.</p>
+<p>그러나 AI는 인간 수험생의 평균 점수보다 낮은 점수를 받았고 환자의 안락사를 유도하는 옵션을 선택하는 등 일부 부적절한 답변을 제공했습니다.</p>
+<p>워싱턴 대학의 자연어 처리 전문 연구원 정고 카사이(Jungo Kasai)를 포함한 연구팀은 2018년부터 2022년까지 5년간 OpenAI의 대화형 AI 시스템인 ChatGPT와 GPT-4를 사용하여 국가 의사 자격시험을 치렀습니다.</p>
+<p>ChatGPT는 모든 시험에서 불합격했습니다. 하지만 최신 시스템인 GPT-4는 모든 시험에서 합격점을 넘겼습니다.</p>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li>자료출처: <a href="https://japannews.yomiuri.co.jp/society/general-news/20230510-108846/">The Yomiuri Shimbun, “AI Demonstrates Passing Score on Medical Practitioner Exam in Japan”, May 10, 2023</a></li>
+</ul>
+</div></aside></section>
+<section id="시장-와해-사례-사교육-fa-solid-school" class="slide level2 smaller">
+<h2>시장 와해 사례: 사교육 <i class="fa-solid fa-school" aria-hidden="true"></i></h2>
+<div class="columns">
+<div class="column">
+<p></p><div id="tweet-43266"></div><script>tweet={"url":"https:\/\/twitter.com\/khakimenez\/status\/1655110020999319552","author_name":"きMeñez ⠃⠗⠕⠺⠝","author_url":"https:\/\/twitter.com\/khakimenez","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EThe first victim of ChatGPT.\u003Ca href=\"https:\/\/twitter.com\/hashtag\/chegg?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#chegg\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/openai?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#openai\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/gpt?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#gpt\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/ChatGPT?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#ChatGPT\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/GPT4?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#GPT4\u003C\/a\u003E \u003Ca href=\"https:\/\/t.co\/CzAx8mFu11\"\u003Epic.twitter.com\/CzAx8mFu11\u003C\/a\u003E\u003C\/p\u003E&mdash; きMeñez ⠃⠗⠕⠺⠝ (@khakimenez) \u003Ca href=\"https:\/\/twitter.com\/khakimenez\/status\/1655110020999319552?ref_src=twsrc%5Etfw\"\u003EMay 7, 2023\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-43266").innerHTML = tweet["html"];</script><p></p>
+</div><div class="column">
+<h5 id="chatgpt가-비즈니스를-죽이고-있다고-회사가-말한-후-chegg-주가는-40-이상-하락했다.">ChatGPT가 비즈니스를 죽이고 있다고 회사가 말한 후 Chegg 주가는 40 % 이상 하락했다.</h5>
+<p><a href="https://www.chegg.com/">Chegg</a>의 주가는 온라인 교육 회사가 ChatGPT가 성장을 저해하고 있다고 밝힌 후 폭락했습니다.</p>
+<blockquote>
+<p>“올해 상반기에는 ChatGPT가 신규 계정 성장에 눈에 띄는 영향을 미치지 않았고 신규 가입에 대한 기대치를 충족하고 있었습니다.”라고 월요일 저녁 실적 발표에서 댄 로젠스웨이그 CEO는 말했습니다. “하지만 3월부터 ChatGPT에 대한 학생들의 관심이 크게 급증했습니다. 이제 신규 고객 성장률에 영향을 미치고 있다고 생각합니다.”</p>
+</blockquote>
+<p>Chegg, Inc.는 캘리포니아주 산타클라라에 본사를 둔 미국 교육 기술 회사로 숙제 도움, 디지털 및 실제 교과서 대여, 교과서, 온라인 튜터링 및 기타 학생 서비스를 제공.</p>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li>자료출처: <a href="https://www.cnbc.com/2023/05/02/chegg-drops-more-than-40percent-after-saying-chatgpt-is-killing-its-business.html">CNBC, “Chegg shares drop more than 40% after company says ChatGPT is killing its business”, May 2, 2023</a></li>
+</ul>
+</div></aside></section>
+<section id="시장-와해-사례-미디어-광고-그룹-fa-solid-rectangle-ad" class="slide level2 smaller">
+<h2>시장 와해 사례: 미디어 광고 그룹 <i class="fa-solid fa-rectangle-ad" aria-hidden="true"></i></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="openai와-펜실베이나-대학교">OpenAI와 펜실베이나 대학교</h3>
+<p>인공 지능이 개방되고 제너레이티브 AI를 제공하는 플랫폼을 통해 대중화됨에 따라 전체 직업의 최소 80%에서 업무가 변화할 것으로 예측된다. 대학 교육이 필요한 직업이 가장 큰 영향을 받을 것이며, 많은 경우 사람들이 수행하는 업무의 절반 이상이 AI의 영향을 받을 수 있다. 중요한 점은 영향을 받는 직업은 대체되는 것이 아니라 생성형 AI에 의해 크게 영향을 받거나 증강될 것이라는 점이다. <span class="citation" data-cites="eloundou2023gpts">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Eloundou 기타, 2023</a>)</span></p>
+<ul>
+<li>통역사 및 번역가</li>
+<li>설문 조사 연구원</li>
+<li>시인, 작사가 및 창작 작가</li>
+<li>동물 과학자</li>
+<li><strong>홍보 전문가</strong></li>
+<li>수학자 / 세무사 / 금융 정량 분석가</li>
+<li>웹 및 디지털 인터페이스 디자이너</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="설문조사와-광고기업">설문조사와 광고기업</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/kpf_survey.jpg" class="lightbox" title="[@kpf2023survey]" data-gallery="quarto-lightbox-gallery-10"><img data-src="img/kpf_survey.jpg"></a></p>
+<p></p><figcaption><span class="citation" data-cites="kpf2023survey">(<a href="#/참고문헌" role="doc-biblioref" onclick="">양정애, 2023</a>)</span></figcaption><p></p>
+</figure>
+</div>
+<blockquote>
+<p>중국 최대 미디어 광고 그룹이 카피라이터와 디자이너 등에 대한 아웃소싱(외주)을 무기한 중단하고 챗GPT 같은 생성형 인공지능(AI) 기구로 대체를 선언했다. 14일 홍콩 사우스차이나모닝포스트(SCMP)에 따르면, 광고회사 블루포커스는 내부 이메일을 통해 “생성형 AI를 전적으로 수용하기 위해 카피라이터, 디자이너, 단기 계약직 등 특정 분야의 아웃소싱 비용을 즉시 절감할 것”이라고 밝혔다.</p>
+</blockquote>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://v.daum.net/v/Kcnup4UNU7">챗GPT로 사라질 직업 1위는 세무사 아니었네…“번역가·통역사 더 위험”</a></li>
+<li><a href="https://n.news.naver.com/mnews/article/215/0001095495">中최대 광고 기업 “단기 계약직, AI로 대체한다”</a></li>
+</ul>
+</div></aside></section>
+<section id="시장-와해-사례-에너지-기업-fa-solid-solar-panel" class="slide level2 smaller">
+<h2>시장 와해 사례: 에너지 기업 <i class="fa-solid fa-solar-panel" aria-hidden="true"></i></h2>
+<p><br></p>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/octopus_energy.webp" class="lightbox" title="전 영국 지도자 보리스 존슨과 함께한 옥토퍼스 에너지 CEO 그렉 잭슨(Greg Jackson)" data-gallery="quarto-lightbox-gallery-11"><img data-src="img/octopus_energy.webp"></a></p>
+<p></p><figcaption>전 영국 지도자 보리스 존슨과 함께한 옥토퍼스 에너지 CEO 그렉 잭슨(Greg Jackson)</figcaption><p></p>
+</figure>
+</div>
+</div><div class="column">
+<h5 id="ai가-에너지-회사에서-250명의-업무를-수행하고-숙련된-직원보다-고객을-더-잘-만족시키고-있다.">AI가 에너지 회사에서 250명의 업무를 수행하고 숙련된 직원보다 고객을 더 잘 만족시키고 있다.</h5>
+<p>영국에 본사를 둔 가정용 에너지 공급업체인 옥토퍼스 에너지의 CEO는 인공지능이 회사 직원 250명의 업무를 대신하고 있다고 말했다.</p>
+<p>런던 타임즈에 기고한 글에서 Greg Jackson은 회사가 몇 달 동안 AI를 실험해 왔다고 말했다. 그는 이 기술이 회사 시스템에 통합되어 2월부터 직원들이 일부 고객 이메일에 답장을 보내도록 허용하기 시작했다고 말했다.</p>
+<p>현재 AI는 고객 이메일의 3분의 1 이상에 답장하고 있으며, 이는 약 250명의 직원이 처리하는 업무라고 CEO는 말했다.</p>
+<blockquote>
+<p>“AI가 작성한 이메일의 고객 만족도는 80%로, 숙련되고 훈련된 사람이 작성한 65%보다 훨씬 높았다.”</p>
+</blockquote>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li>자료출처: <a href="https://www.cnbc.com/2023/05/02/chegg-drops-more-than-40percent-after-saying-chatgpt-is-killing-its-business.html">CNBC, “Chegg shares drop more than 40% after company says ChatGPT is killing its business”, May 2, 2023</a></li>
+</ul>
+</div></aside></section>
+<section id="시장-와해-사례-stackoverflow-fa-solid-code" class="slide level2 smaller">
+<h2>시장 와해 사례: Stackoverflow <i class="fa-solid fa-code" aria-hidden="true"></i></h2>
+<p><br></p>
+<div class="columns">
+<div class="column">
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/stack_overflow_chatgpt_2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="img/stack_overflow_chatgpt_2-1.png"></a></p>
+</figure>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/stack_overflow_chatgpt_3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="img/stack_overflow_chatgpt_3-1.png"></a></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/stack_overflow_chatgpt_4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img data-src="img/stack_overflow_chatgpt_4-1.png"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column">
+<h5 id="개발자들은-점점-더-많은-조언을-stackoverflow-게시판이-아닌-ai-챗봇과-github-copilot에서-얻고-있다.">개발자들은 점점 더 많은 조언을 Stackoverflow 게시판이 아닌 AI 챗봇과 GitHub CoPilot에서 얻고 있다.</h5>
+<ul>
+<li><a href="https://stackoverflow.com/">스택 오버플로</a>의 트래픽은 2022년 1월 이후 매월 평균 6%씩 감소하고 있으며, 3월에는 13.9% 감소했다.</li>
+<li>ChatGPT는 11월 말에 출시되어 전년 대비 실적은 없지만, <a href="https://chat.openai.com/">웹사이트</a>는 그 짧은 시간 동안 전 세계 트래픽에서 Microsoft의 Bing 검색 엔진보다 더 많은 트래픽을 기록하며 세계에서 가장 인기 있는 디지털 자산 중 하나로 자리 잡았다. 3월에는 16억 건, 4월 상반기에는 9억 2,070만 건이 방문했다.</li>
+<li>GitHub 웹사이트도 3월에 전년 대비 26.4% 증가한 5억 2,400만 건의 트래픽을 기록하는 등 강력한 성장세를 보이고 있는데, 일반적으로 Visual Studio Code와 같은 코드 편집기 내에서 이루어지는 CoPilot의 모든 사용량이 반영되어 있지는 않지만, 서비스 구독을 위해 웹사이트를 방문하는 사람들도 포함된다.</li>
+<li>2월부터 3월까지 GitHub CoPilot 무료 평가판 가입 페이지 방문 수는 3배 이상 증가하여 80만 건을 돌파했다.</li>
+</ul>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li>자료출처: <a href="https://www.similarweb.com/blog/insights/ai-news/stack-overflow-chatgpt/">David F. Carr (April 27, 2023), “Developers increasingly get advice from AI chatbots and GitHub CoPilot rather than Stack Overflow message boards”, Similarweb Blog</a></li>
+</ul>
+</div></aside></section></section>
+<section>
+<section id="챗gpt-인터페이스-오피스-전쟁" class="title-slide slide level1 center">
+<h1>챗GPT 인터페이스 <br> 오피스 전쟁</h1>
+
+</section>
+<section id="구글-검색의-종말" class="slide level2">
+<h2>구글 검색의 종말(?)</h2>
+
+<img data-src="img/chatGPT-search.jpg" class="r-stretch quarto-figure-center"></section>
+<section id="글쓰기-역사" class="slide level2">
+<h2>글쓰기 역사</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/writing_history.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img data-src="img/writing_history.jpg"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://r2bit.com/quarto/writing_history.html">문자와 종이 역사</a></li>
+</ul>
+</div></aside></section>
+<section id="오피스-전쟁" class="slide level2 smaller">
+<h2>오피스 전쟁</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">항목</th>
+<th style="text-align: center;">MS 오피스 <sup>1</sup></th>
+<th style="text-align: center;">구글 오피스 <sup>2</sup></th>
+<th style="text-align: center;">리브레 오피스 <sup>3</sup></th>
+<th style="text-align: center;">한컴 오피스 <sup>4</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">문서 작성 및 편집</td>
+<td style="text-align: center;">워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공</td>
+<td style="text-align: center;">구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공</td>
+<td style="text-align: center;">라이터, 캘크, 임프레스 등의 데스크톱 앱 제공</td>
+<td style="text-align: center;">한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">협업 및 공유</td>
+<td style="text-align: center;">원드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움</td>
+<td style="text-align: center;">구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능</td>
+<td style="text-align: center;">드롭박스나 구글 드라이브와 연동하여 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움</td>
+<td style="text-align: center;">넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">이메일 및 채팅</td>
+<td style="text-align: center;">Outlook을 통해 비즈니스 메일 제공. Teams을 통해 채팅 및 화상 회의 가능</td>
+<td style="text-align: center;">Gmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능</td>
+<td style="text-align: center;">이메일 및 채팅 기능 없음</td>
+<td style="text-align: center;">이메일 및 채팅 기능 없음</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">가격</td>
+<td style="text-align: center;">1인당 월 5~20달러 다양한 요금제 제공. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작</td>
+<td style="text-align: center;">1인당 월 6~18달러까지 다양한 요금제 제공</td>
+<td style="text-align: center;">완전 무료</td>
+<td style="text-align: center;">개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요</td>
+</tr>
+</tbody>
+</table>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://ourworldindata.org/brief-history-of-ai">Max Roser (December 06, 2022), The brief history of artificial intelligence: The world has changed fast – what might be next?, Our World in Data</a></p></li><li id="fn2"><p>“The Case for Robotic Process Automation(RPA)”, Optimal Corporation (under permission from Kinetic Consulting Services) chatGPT plus 연간 사용료 추가</p></li><li id="fn3"><p>https://www.libreoffice.org/</p></li><li id="fn4"><p>https://www.hancom.com/product/productMain.do</p></li></ol></aside></section>
+<section id="오피스-전쟁-패러다임-충돌" class="slide level2">
+<h2>오피스 전쟁: 패러다임 충돌</h2>
+
+<img data-src="img/writing-evolution.jpg" class="r-stretch quarto-figure-center"></section>
+<section id="챗gpt-시대-사무실" class="slide level2">
+<h2>챗GPT 시대 사무실</h2>
+<div class="panel-tabset">
+<ul id="tabset-10" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-10-1">챗GPT 사용원인</a></li><li><a href="#tabset-10-2">인터페이스</a></li><li><a href="#tabset-10-3">챗GPT AS-IS</a></li><li><a href="#tabset-10-4">챗GPT TO-BE</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT_why.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-56"><img data-src="img/chatGPT_why.jpg" width="600"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-10-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT_interface.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-57"><img data-src="img/chatGPT_interface.jpg" width="500"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-10-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT-AS-IS.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-58"><img data-src="img/chatGPT-AS-IS.jpg"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-10-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT-TO-BE.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-59"><img data-src="img/chatGPT-TO-BE.jpg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="챗gpt가-이룬-대통합" class="slide level2">
+<h2>챗GPT가 이룬 대통합</h2>
+
+<img data-src="img/chatGPT-Text-to-X.jpg" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="챗gpt-사용자-text-to-x" class="title-slide slide level1 center">
+<h1>챗GPT 사용자 <br> Text-to-<strong>X</strong></h1>
+
+</section>
+<section id="openai-마이크로소프트-3-대장-alpha" class="slide level2">
+<h2>openAI 마이크로소프트 3 대장 + <span class="math inline">\(\alpha\)</span></h2>
+
+<img data-src="img/openai-three-pillars.png" class="r-stretch quarto-figure-center"></section>
+<section id="chatgpt-3대장" class="slide level2">
+<h2>chatGPT 3대장</h2>
+<div class="panel-tabset">
+<ul id="tabset-11" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-11-1">최강 3대장</a></li><li><a href="#tabset-11-2"><code>chatGPT</code> 3대장</a></li><li><a href="#tabset-11-3">—</a></li><li><a href="#tabset-11-4">글쓰기</a></li><li><a href="#tabset-11-5">그리기</a></li><li><a href="#tabset-11-6">코딩</a></li></ul>
+<div class="tab-content">
+<div id="tabset-11-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/big_three_original.png" class="lightbox" data-gallery="quarto-lightbox-gallery-60"><img data-src="img/big_three_original.png" width="800"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-11-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/big_three_chatGPT.png" class="lightbox" data-gallery="quarto-lightbox-gallery-61"><img data-src="img/big_three_chatGPT.png" width="800"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-11-3">
+
+</div>
+<div id="tabset-11-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatgpt_writing.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-62"><img data-src="img/chatgpt_writing.gif" width="700"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-11-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT_visual.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-63"><img data-src="img/chatGPT_visual.gif" width="700"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-11-6">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT_coding.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-64"><img data-src="img/chatGPT_coding.gif" width="700"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="chatgpt-3대장-alpha-추론" class="slide level2">
+<h2>chatGPT 3대장 + <span class="math inline">\(\alpha\)</span> 추론</h2>
+<div class="panel-tabset">
+<ul id="tabset-12" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-12-1">문제</a></li><li><a href="#tabset-12-2">수식</a></li><li><a href="#tabset-12-3">손 풀기</a></li><li><a href="#tabset-12-4"><code>Sympy</code></a></li><li><a href="#tabset-12-5"><code>chatGPT</code></a></li><li><a href="#tabset-12-6">Wolfram Plugin</a></li></ul>
+<div class="tab-content">
+<div id="tabset-12-1">
+<h4 id="디오판토스-묘비">디오판토스 묘비</h4>
+<p>신의 축복으로 태어난 그는 인생의 <span class="math inline">\(\frac{1}{6}\)</span>을 소년으로 보냈다. 그리고 다시 인생의 <span class="math inline">\(\frac{1}{12}\)</span> 이 지난 뒤에는 얼굴에 수염이 자라기 시작했다. 다시 <span class="math inline">\(\frac{1}{7}\)</span>이 지난 뒤 그는 아름다운 여인을 맞이하여 화촉을 밝혔으며, 결혼한 지 5년 만에 귀한 아들을 얻었다. 아! 그러나 그의 가엾은 아들은 아버지의 반 밖에 살지 못했다. 아들을 먼저 보내고 깊은 슬픔에 빠진 그는 그 뒤 4년간 정수론에 몰입하여 스스로를 달래다가 일생을 마쳤다. [^1]</p>
+</div>
+<div id="tabset-12-2">
+<p>디오판토스가 정확히 언제 태어나고 언제 죽었는지는 명확하지 않지만, 그가 죽었을 때의 나이는 정확히 알 수 있다. 이를 방정식을 통해 풀어보자. 수식을 <span class="math inline">\(x\)</span>에 대해 정리해서 풀면 84가 나온다.</p>
+<p><span class="math display">\[\frac {x} {6} + \frac {x} {12} + \frac {x} {7} +  5 + \frac {x} {2} + 4 = x\]</span></p>
+</div>
+<div id="tabset-12-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/inference_hand.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-65"><img data-src="img/inference_hand.jpg" width="486"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-12-4">
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">from</span> sympy <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>x <span class="op">=</span> Symbol(<span class="st">'x'</span>)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>Diophantus_puzzle <span class="op">=</span> x<span class="op">/</span><span class="dv">6</span> <span class="op">+</span> x<span class="op">/</span><span class="dv">12</span> <span class="op">+</span> x<span class="op">/</span><span class="dv">7</span> <span class="op">+</span> <span class="dv">5</span> <span class="op">+</span> x<span class="op">/</span><span class="dv">2</span> <span class="op">+</span> <span class="dv">4</span> <span class="op">-</span> x</span>
+<span id="cb1-4"><a href="#cb1-4"></a>solve(Diophantus_puzzle, x, <span class="bu">dict</span> <span class="op">=</span> <span class="va">True</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>[{x: 84}]</code></pre>
+</div>
+<div id="tabset-12-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/inference_gpt4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-66"><img data-src="img/inference_gpt4.jpg" width="400"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-12-6">
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/wolfram_alpha.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-67"><img data-src="img/wolfram_alpha.jpg" width="400"></a></p>
+</figure>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/wolfram_alpha_website.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-68"><img data-src="img/wolfram_alpha_website.jpg" width="400"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="https://www.wolframalpha.com/input?i=x%2F6+%2B+x%2F12+%2B+x%2F7+%2B+5+%2B+x%2F2+%2B+4+%3D+x">울프람 웹사이트</a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="autogpt-text-to-task" class="slide level2">
+<h2>AutoGPT: Text-to-Task</h2>
+<p><br></p>
+<video id="video_shortcode_videojs_video3" height="500" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="https://user-images.githubusercontent.com/70048414/232352935-55c6bf7c-3958-406e-8610-0913475a0b05.mp4"></video>
+
+<aside><div>
+<ul>
+<li><a href="https://github.com/Significant-Gravitas/Auto-GPT">Auto-GPT: An Autonomous GPT-4 Experiment</a></li>
+</ul>
+</div></aside></section>
+<section id="데이터-분석-text-to-analytics" class="slide level2">
+<h2>데이터 분석: Text-to-Analytics</h2>
+<div class="panel-tabset">
+<ul id="tabset-13" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-13-1">PandasAI</a></li><li><a href="#tabset-13-2">LlamaIndex</a></li><li><a href="#tabset-13-3">챗GPT SQL</a></li><li><a href="#tabset-13-4">RTutor.ai</a></li></ul>
+<div class="tab-content">
+<div id="tabset-13-1">
+<p><a href="https://github.com/gventuri/pandas-ai">Pandas AI</a>는 널리 사용되는 데이터 분석 및 조작 도구인 Pandas에 생성 인공 지능 기능을 추가한 Python 라이브러리다. <a href="https://github.com/gventuri/pandas-ai">Pandas AI</a>는 판다스와 함께 사용하도록 설계되었으며, 판다스를 대체할 수 없다.</p>
+<p><br> <br></p>
+<ul>
+<li><a href="https://r2bit.com/chatGPT/pandasai.html">chatGPT: 판다스 AI</a></li>
+</ul>
+</div>
+<div id="tabset-13-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/llama-penguins.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-69"><img data-src="img/llama-penguins.jpg" width="1274"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://r2bit.com/chatGPT/llama_penguins.html">chatGPT: 펭귄 - 라마인덱스</a></li>
+</ul>
+</div>
+<div id="tabset-13-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/sql_workflow.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-70"><img data-src="img/sql_workflow.jpg" width="1274"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://r2bit.com/chatGPT/sql_openai.html">chatGPT: 챗GPT SQL</a></li>
+</ul>
+</div>
+<div id="tabset-13-4">
+<video id="video_shortcode_videojs_video1" height="300" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="https://youtube.com/shorts/n4G8UuLc0Bs?feature=share"></video>
+<ul>
+<li><a href="https://youtube.com/shorts/n4G8UuLc0Bs?feature=share">Chat with your data with RTutor</a></li>
+<li><a href="http://rtutor.ai/">RTutor</a></li>
+</ul>
+</div>
+</div>
 </div>
 </section></section>
+<section>
+<section id="chatgpt-챗gpt-transformer-llm-오픈소스-sw" class="title-slide slide level1 center">
+<h1><code>chatGPT</code> → 챗GPT <br> Transformer → LLM → 오픈소스 S/W</h1>
+
+</section>
+<section id="챗gpt-란" class="slide level2 smaller">
+<h2>챗GPT 란?</h2>
+<div class="panel-tabset">
+<ul id="tabset-14" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-14-1">PNG와 JPEG</a></li><li><a href="#tabset-14-2">Foundation 모형</a></li><li><a href="#tabset-14-3">헬스케어</a></li></ul>
+<div class="tab-content">
+<div id="tabset-14-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/png_jpg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-71"><img data-src="img/png_jpg.png" width="651"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-14-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/foundation_model.png" class="lightbox" data-gallery="quarto-lightbox-gallery-72"><img data-src="img/foundation_model.png" width="500"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-14-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/LLM-heathcare-Stanford.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-73"><img data-src="img/LLM-heathcare-Stanford.jpg" width="1088"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="Chiang_2023">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Chiang, 2023</a>)</span> <span class="citation" data-cites="Merritt_2023a">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Merritt, 2023</a>)</span></p>
+</div></aside></section>
+<section id="거대-언어모형llm" class="slide level2">
+<h2>거대 언어모형(LLM)</h2>
+<div class="panel-tabset">
+<ul id="tabset-15" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-15-1">LLM 진화</a></li><li><a href="#tabset-15-2">80억 패러미터</a></li><li><a href="#tabset-15-3">400억</a></li><li><a href="#tabset-15-4">640억</a></li><li><a href="#tabset-15-5">5,400억</a></li><li><a href="#tabset-15-6">성능</a></li></ul>
+<div class="tab-content">
+<div id="tabset-15-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/LLM_tree.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-74"><img data-src="img/LLM_tree.gif"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-15-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/LLM_tree_8_billion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-75"><img data-src="img/LLM_tree_8_billion.png"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-15-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/LLM_tree_40_billion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-76"><img data-src="img/LLM_tree_40_billion.png"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-15-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/LLM_tree_62_billion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-77"><img data-src="img/LLM_tree_62_billion.png"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-15-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/LLM_tree_540_billion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-78"><img data-src="img/LLM_tree_540_billion.png"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-15-6">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/LLM_tree_performance.png" class="lightbox" data-gallery="quarto-lightbox-gallery-79"><img data-src="img/LLM_tree_performance.png"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p><span class="column-margin"><a href="https://ai.googleblog.com/2022/04/pathways-language-model-palm-scaling-to.html">Sharan Narang and Aakanksha Chowdhery (APRIL 04, 2022), “Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrough Performance”, Software Engineers, Google Research</a></span></p>
+</div></aside></section>
+<section id="모형크기" class="slide level2">
+<h2>모형크기</h2>
+<iframe src="https://ourworldindata.org/grapher/artificial-intelligence-training-computation?yScale=linear&amp;country=~PaLM+%28540B%29" loading="lazy" style="width: 100%; height: 600px; border: 0px none;">
+</iframe>
+</section>
+<section id="transformer" class="slide level2 smaller">
+<h2>Transformer</h2>
+<div class="panel-tabset">
+<ul id="tabset-16" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-16-1">DL 시대</a></li><li><a href="#tabset-16-2">삼국지</a></li><li><a href="#tabset-16-3">가자 Transformer 로</a></li><li><a href="#tabset-16-4">이유(Why)</a></li><li><a href="#tabset-16-5">패러미터 비율</a></li><li><a href="#tabset-16-6">Transformer 입력</a></li></ul>
+<div class="tab-content">
+<div id="tabset-16-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/transformer-dl.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-80"><img data-src="img/transformer-dl.jpg" width="941"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-16-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/transformer-three.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-81"><img data-src="img/transformer-three.jpg" width="728"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-16-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/transformer-evolution.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-82"><img data-src="img/transformer-evolution.jpg" width="1670"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-16-4">
+<div class="columns">
+<div class="column">
+<p></p><div id="tweet-39592"></div><script>tweet={"url":"https:\/\/twitter.com\/karpathy\/status\/1582807367988654081","author_name":"Andrej Karpathy","author_url":"https:\/\/twitter.com\/karpathy","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EThe Transformer is a magnificient neural network architecture because it is a general-purpose differentiable computer. It is simultaneously:\u003Cbr\u003E1) expressive (in the forward pass)\u003Cbr\u003E2) optimizable (via backpropagation+gradient descent)\u003Cbr\u003E3) efficient (high parallelism compute graph)\u003C\/p\u003E&mdash; Andrej Karpathy (@karpathy) \u003Ca href=\"https:\/\/twitter.com\/karpathy\/status\/1582807367988654081?ref_src=twsrc%5Etfw\"\u003EOctober 19, 2022\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-39592").innerHTML = tweet["html"];</script><p></p>
+</div><div class="column">
+<p>트랜스포머는 범용 차별화 컴퓨터이기 때문에 훌륭한 신경망 아키텍처입니다. 동시에</p>
+<ol type="1">
+<li>표현력 (순방향)</li>
+<li>최적화 가능(역전파 + 경사하강)</li>
+<li>효율적 (높은 병렬처리 연산 그래프)</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="tabset-16-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/transformer_decomposition.png" class="lightbox" data-gallery="quarto-lightbox-gallery-83"><img data-src="img/transformer_decomposition.png"></a></p>
+</figure>
+</div>
+
+</div>
+<div id="tabset-16-6">
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><br> <a href="img/transformer-modal.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-84"><img data-src="img/transformer-modal.jpg" width="403"></a></p>
+</div><div class="column" style="width:70%;">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/transformer_feed.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-85"><img data-src="img/transformer_feed.gif"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside><div>
+<p><span class="citation" data-cites="Huben_2023">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Huben, 2023</a>)</span></p>
+</div></aside></section>
+<section id="gpt는-어떻게-능력을-얻었나" class="slide level2">
+<h2>GPT는 어떻게 능력을 얻었나?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/gpt-evolution.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img data-src="img/gpt-evolution.png" width="915"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="fu2022gptroadmap">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Fu &amp; Khot, 2022</a>)</span></p>
+</div></aside></section>
+<section id="httpslifearchitect.ai" class="slide level2 smaller">
+<h2>https://lifearchitect.ai/</h2>
+<div class="panel-tabset smaller">
+<ul id="tabset-17" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-17-1">IQ 분포</a></li><li><a href="#tabset-17-2">LM 시험</a></li><li><a href="#tabset-17-3">GPT-4</a></li><li><a href="#tabset-17-4">데이터셋</a></li><li><a href="#tabset-17-5">딥마인드</a></li><li><a href="#tabset-17-6">모형크기</a></li><li><a href="#tabset-17-7">능력</a></li><li><a href="#tabset-17-8">비행기</a></li></ul>
+<div class="tab-content smaller">
+<div id="tabset-17-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/2015-Alan-D-Thompson-IQ-Chart1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-86"><img data-src="img/2015-Alan-D-Thompson-IQ-Chart1.png"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-17-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/2022-Alan-D-Thompson-Language-Model-Tests-Rev-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-87"><img data-src="img/2022-Alan-D-Thompson-Language-Model-Tests-Rev-3.png" width="889"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-17-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/2023-Alan-D-Thompson-GPT-4-Tests-Rev-3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-88"><img data-src="img/2023-Alan-D-Thompson-GPT-4-Tests-Rev-3.png" width="889"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-17-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/2021-Alan-D-Thompson-Contents-of-GPT-3-and-GPT-Neo-Pile-v1-Rev-5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-89"><img data-src="img/2021-Alan-D-Thompson-Contents-of-GPT-3-and-GPT-Neo-Pile-v1-Rev-5.png" width="889"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-17-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/2022-Alan-D-Thompson-DeepMind-Models-Rev-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-90"><img data-src="img/2022-Alan-D-Thompson-DeepMind-Models-Rev-2.png" width="889"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-17-6">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/2023-Alan-D-Thompson-AI-Bubbles-Rev-7b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-91"><img data-src="img/2023-Alan-D-Thompson-AI-Bubbles-Rev-7b.png" width="889"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-17-7">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/2023-Alan-D-Thompson-LLM-Emerging-Rev-0.png" class="lightbox" data-gallery="quarto-lightbox-gallery-92"><img data-src="img/2023-Alan-D-Thompson-LLM-Emerging-Rev-0.png" width="889"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-17-8">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/2023-Alan-D-Thompson-API-or-On-Premise-Rev-0b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-93"><img data-src="img/2023-Alan-D-Thompson-API-or-On-Premise-Rev-0b.png" width="889"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://lifearchitect.ai/models/" class="uri">https://lifearchitect.ai/models/</a> / Google Sheets: <a href="https://docs.google.com/spreadsheets/d/1O5KVQW1Hx5ZAkcg8AIRjbQLQzx2wVaLl0SqUu-ir9Fs/edit#gid=1158069878">바로가기</a></li>
+</ul>
+</div></aside></section>
+<section id="현재-나의-모습" class="slide level2">
+<h2>현재 나의 모습</h2>
+
+<img data-src="img/now_me.png" class="r-stretch quarto-figure-center"></section>
+<section id="llm-진화-1" class="slide level2">
+<h2>LLM 진화</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/evolution_tree.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img data-src="img/evolution_tree.jpg" width="650"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="yang2023harnessing">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Yang 기타, 2023</a>)</span></p>
+</div></aside></section>
+<section id="공개형-gpt-vs-폐쇄형-gpt" class="slide level2">
+<h2>공개형 GPT vs 폐쇄형 GPT</h2>
+<div class="panel-tabset">
+<ul id="tabset-18" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-18-1">Stable Diffusion</a></li><li><a href="#tabset-18-2">LLM</a></li><li><a href="#tabset-18-3">GPT4ALL</a></li></ul>
+<div class="tab-content">
+<div id="tabset-18-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/Stable-Diffusion-Developer-Adoption-1-scaled.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-94"><img data-src="img/Stable-Diffusion-Developer-Adoption-1-scaled.webp" width="700"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-18-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/llm_g.png" class="lightbox" data-gallery="quarto-lightbox-gallery-95"><img data-src="img/llm_g.png" width="700"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-18-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/gpt4all-demo.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-96"><img data-src="img/gpt4all-demo.jpg" width="700"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li>데이터 출처: <span class="citation" data-cites="zhao2023survey">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Zhao 기타, 2023</a>)</span></li>
+<li><a href="https://r2bit.com/chatGPT/open_source.html">chatGPT - 오픈소스 S/W</a></li>
+</ul>
+</div></aside></section>
+<section id="llm-1" class="slide level2">
+<h2>LLM</h2>
+<div class="panel-tabset">
+<ul id="tabset-19" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-19-1">독점/상용 LLM</a></li><li><a href="#tabset-19-2">오픈소스/공개 LLM</a></li></ul>
+<div class="tab-content">
+<div id="tabset-19-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/llm_proprietary.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-97"><img data-src="img/llm_proprietary.jpg"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-19-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/llm_open_source.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-98"><img data-src="img/llm_open_source.jpg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="fullstack2023">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Charles Frye, 2023</a>)</span></p>
+</div></aside></section>
+<section id="토큰-크기-context-length" class="slide level2 smaller">
+<h2>토큰 크기 (Context Length)</h2>
+<div class="panel-tabset">
+<ul id="tabset-20" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-20-1">표</a></li><li><a href="#tabset-20-2">그래프</a></li></ul>
+<div class="tab-content">
+<div id="tabset-20-1">
+<table>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>회사명</th>
+<th>LLM 모형</th>
+<th>Context 길이 (토큰 크기)</th>
+<th>텍스트 크기</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OpenAI</td>
+<td>GPT-1</td>
+<td>512</td>
+<td>1 쪽, 4 단락, 36줄</td>
+</tr>
+<tr class="even">
+<td>구글</td>
+<td>PaLM</td>
+<td>512</td>
+<td>↑</td>
+</tr>
+<tr class="odd">
+<td>OpenAI</td>
+<td>GPT-2</td>
+<td>1024</td>
+<td>2 쪽, 8 단락, 68줄</td>
+</tr>
+<tr class="even">
+<td>OpenAI</td>
+<td>GPT-3</td>
+<td>2048</td>
+<td>1500 영단어, 4쪽, 139줄</td>
+</tr>
+<tr class="odd">
+<td>OpenAI</td>
+<td>GPT-4</td>
+<td>2048</td>
+<td>↑</td>
+</tr>
+<tr class="even">
+<td>Meta</td>
+<td>Llama</td>
+<td>2048</td>
+<td>↑</td>
+</tr>
+<tr class="odd">
+<td>OpenAI</td>
+<td>GPT-3.5-Turbo</td>
+<td>4096</td>
+<td>9쪽, 369줄</td>
+</tr>
+<tr class="even">
+<td>구글</td>
+<td>PaLM2</td>
+<td>8192</td>
+<td>13쪽, 단편 소설, 기술 문서</td>
+</tr>
+<tr class="odd">
+<td>OpenAI</td>
+<td>GPT-4 8K</td>
+<td>8192</td>
+<td>↑</td>
+</tr>
+<tr class="even">
+<td>OpenAI</td>
+<td>GPT-4 32K</td>
+<td>32000</td>
+<td>48쪽, 대학학위논문</td>
+</tr>
+<tr class="odd">
+<td>MosaicML</td>
+<td>MPT-7B-StoryWriter</td>
+<td>65000</td>
+<td>98쪽</td>
+</tr>
+<tr class="even">
+<td>Anthropic</td>
+<td>Claude</td>
+<td>100000</td>
+<td>150쪽, 소설책 반권</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-20-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/FsUnTB9aAAAkBCc.jfif" class="lightbox" data-gallery="quarto-lightbox-gallery-99"><img data-src="img/FsUnTB9aAAAkBCc.jfif" width="642"></a></p>
+</figure>
+</div>
+<p>— Dan Fu <span class="citation" data-cites="realDanFu">(<a href="#/참고문헌" role="doc-biblioref" onclick=""><strong>realDanFu?</strong></a>)</span> <a href="https://twitter.com/realDanFu/status/1640762299408601089?s=20"> March 29, 2023</a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="hugginggpt" class="slide level2">
+<h2>HuggingGPT</h2>
+<div class="panel-tabset">
+<ul id="tabset-21" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-21-1">LLM as Controller</a></li><li><a href="#tabset-21-2">HuggingGPT 개요</a></li><li><a href="#tabset-21-3">사례</a></li></ul>
+<div class="tab-content">
+<div id="tabset-21-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/huggingGPT.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-100"><img data-src="img/huggingGPT.jpg"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-21-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/huggingGPT-generate.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-101"><img data-src="img/huggingGPT-generate.jpg" width="500"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-21-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/huggingGPT-example.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-102"><img data-src="img/huggingGPT-example.jpg" width="500"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>출처: <span class="citation" data-cites="shen2023hugginggpt">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Shen 기타, 2023</a>)</span></p>
+</div></aside></section></section>
+<section>
+<section id="챗gpt-한계와-새시대" class="title-slide slide level1 center">
+<h1>챗GPT 한계와 새시대(?)</h1>
+
+</section>
+<section id="한계-1" class="slide level2 smaller">
+<h2>한계(?) <sup>1</sup></h2>
+<div class="panel-tabset">
+<ul id="tabset-22" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-22-1">언어 및 이미지</a></li><li><a href="#tabset-22-2">AI 생성이미지</a></li><li><a href="#tabset-22-3">백오피스 인건비 비교 </a><sup>2</sup></li></ul>
+<div class="tab-content">
+<div id="tabset-22-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/AI-performance_Dynabench-paper.png" class="lightbox" data-gallery="quarto-lightbox-gallery-103"><img data-src="img/AI-performance_Dynabench-paper.png"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-22-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/Timeline-of-AI-generated-faces.png" class="lightbox" data-gallery="quarto-lightbox-gallery-104"><img data-src="img/Timeline-of-AI-generated-faces.png" width="400"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-22-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/outsourcing_rpa_ai.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-105"><img data-src="img/outsourcing_rpa_ai.jpg" width="600"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn5"><p><a href="https://ourworldindata.org/brief-history-of-ai">Max Roser (December 06, 2022), The brief history of artificial intelligence: The world has changed fast – what might be next?, Our World in Data</a></p></li><li id="fn6"><p>“The Case for Robotic Process Automation(RPA)”, Optimal Corporation (under permission from Kinetic Consulting Services) chatGPT plus 연간 사용료 추가</p></li></ol></aside></section>
+<section id="챗gpt시대-공부" class="slide level2">
+<h2>챗GPT시대 공부(?)</h2>
+<div class="panel-tabset">
+<ul id="tabset-23" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-23-1">기술과 선생님</a></li><li><a href="#tabset-23-2">산술</a></li><li><a href="#tabset-23-3">기하</a></li><li><a href="#tabset-23-4">대수</a></li><li><a href="#tabset-23-5">학술연구</a></li></ul>
+<div class="tab-content">
+<div id="tabset-23-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/math_teachers.jfif" class="lightbox" data-gallery="quarto-lightbox-gallery-106"><img data-src="img/math_teachers.jfif" style="width:30.0%"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-23-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/mit/mit-1869-arithmetic.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-107"><img data-src="img/mit/mit-1869-arithmetic.jpg"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-23-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/mit/mit_geometry.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-108"><img data-src="img/mit/mit_geometry.gif" style="width:75.0%"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-23-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/mit/mit-1869-algebra.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-109"><img data-src="img/mit/mit-1869-algebra.jpg" style="width:60.0%"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-23-5">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/writing_papers.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-110"><img data-src="img/writing_papers.jpg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li>출처: 트위터 <a href="https://twitter.com/eraser/status/1547506194259972096"><code>@eraser</code> MATH TEACHERS PROTEST AGAINST CALCULATOR USE</a> / 1869년 MIT 입시문제 <a href="https://web.archive.org/web/20120403061216/http://libraries.mit.edu/archives/exhibits/exam/index.html">Massachusetts Institute of Technology Entrance Examination, 1869-70</a> /</li>
+<li><a href="https://r2bit.com/chatGPT/rnd.html">chatGPT - 챗GPT 시대 학술연구(R&amp;D)</a></li>
+</ul>
+</div></aside></section>
+<section id="인터페이스-interface" class="slide level2 smaller">
+<h2>인터페이스 (Interface)</h2>
+<div class="panel-tabset">
+<ul id="tabset-24" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-24-1">진화과정</a></li><li><a href="#tabset-24-2">CLI</a></li><li><a href="#tabset-24-3">GUI</a></li><li><a href="#tabset-24-4">WUI</a></li><li><a href="#tabset-24-5">MUI</a></li><li><a href="#tabset-24-6">LUI</a></li></ul>
+<div class="tab-content">
+<div id="tabset-24-1">
+<p><br> <br> <br></p>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    
+    subgraph A["사용자 인터페이스"]
+    direction LR
+        CLI["CLI&lt;br&gt;Command Line Interface&lt;br&gt; 1950~"]     --&gt; GUI["GUI &lt;br&gt; Graphic User Inferface&lt;br&gt; 1970~"]
+        GUI               --&gt; WI["Web Interface &lt;br&gt; 1994~"]
+        WI --&gt; MI["Mobile Interface &lt;br&gt; 2007~"]
+        MI --&gt; NUI["LUI &lt;br&gt; Language User Interface &lt;br&gt; 2023~"]
+
+    end
+
+
+class A nodeStyle
+
+classDef nodeStyle fill:#fcfbfa,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-24-2">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_cli.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-111"><img data-src="img/ui_cli.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Computer_terminal" class="uri">https://en.wikipedia.org/wiki/Computer_terminal</a></li>
+</ul>
+</div>
+<div id="tabset-24-3">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_gui.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-112"><img data-src="img/ui_gui.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://kartsci.org/kocomu/computer-history/graphical-user-interface-history/" class="uri">https://kartsci.org/kocomu/computer-history/graphical-user-interface-history/</a></li>
+</ul>
+</div>
+<div id="tabset-24-4">
+<p><br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_web.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-113"><img data-src="img/ui_web.jpg"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-24-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_mi.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-114"><img data-src="img/ui_mi.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://www.huffpost.com/entry/uber-your-way-through-cit_b_1205446" class="uri">https://www.huffpost.com/entry/uber-your-way-through-cit_b_1205446</a></li>
+</ul>
+</div>
+<div id="tabset-24-6">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/sam_altman_LUI.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-115"><img data-src="img/sam_altman_LUI.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://twitter.com/sama/status/1515764302904377344" class="uri">https://twitter.com/sama/status/1515764302904377344</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="챗gpt-nui" class="slide level2 smaller">
+<h2>챗GPT NUI</h2>
+<div class="panel-tabset">
+<ul id="tabset-25" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-25-1">1:1 채팅</a></li><li><a href="#tabset-25-2">클릭하여 완료</a></li><li><a href="#tabset-25-3">자동완성</a></li><li><a href="#tabset-25-4">명령 팔레트</a></li></ul>
+<div class="tab-content">
+<div id="tabset-25-1">
+<ul>
+<li>챗GPT (ChatGPT)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatgpt_writing.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-116"><img data-src="img/chatgpt_writing.gif" width="634"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-25-2">
+<ul>
+<li>OpenAI Playground</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_playground.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-117"><img data-src="img/ui_playground.jpg" width="645"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-25-3">
+<ul>
+<li>GitHub Copilot</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_copilot.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-118"><img data-src="img/ui_copilot.gif"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e" class="uri">https://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e</a></li>
+</ul>
+</div>
+<div id="tabset-25-4">
+<div class="columns">
+<div class="column">
+<h4 id="사례-1">사례</h4>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/command-tree.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-119"><img data-src="img/command-tree.gif"></a></p>
+</figure>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/generate_code.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-120"><img data-src="img/generate_code.gif"></a></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<video id="video_shortcode_videojs_video2" width="500" height="400" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="https://blog.replit.com/images/ai/aimode_future.mp4"></video>
+</div>
+</div>
+<ul>
+<li><a href="https://blog.replit.com/clui" class="uri">https://blog.replit.com/clui</a></li>
+<li><a href="https://blog.replit.com/ai" class="uri">https://blog.replit.com/ai</a></li>
+</ul>
+</div><div class="column">
+<h4 id="command-palette-역사">Command Palette 역사</h4>
+<ul>
+<li>60년대로 거슬러 올라가는 명령 팔레트는 최근 기술 업계에서 다시 인기를 얻고 있으며 사용자 중심 소프트웨어의 필수적인 부분으로 간주됨.</li>
+<li>CLI는 개인용 컴퓨터가 대중화되기 전 초기 컴퓨팅을 지배했으며 사용자가 시스템을 작동하기 위해 특정 명령을 알아야 했다. 1984년 Apple의 매킨토시와 함께 도입된 그래픽 사용자 인터페이스(GUI)는 중요한 혁신으로 여겨졌지만, 소프트웨어의 복잡성이 증가함에 따라 GUI만으로는 탐색하기가 점점 더 어려워졌다.</li>
+<li>사용자가 항목 이름의 짧은 약어입력하여 앱과 파일을 검색할 수 있는 런처가 점점 더 보편화 되었다. 예를 들어 2001년에 출시된 Mac OS X용 LaunchBar, Quicksilver, 2005년에 출시된 Apple의 시스템 전체 Spotlight가 있다. 검색과 CLI의 결합은 <strong>Command Palette</strong>의 탄생으로 이어졌다.</li>
+<li>오늘날 우리가 알고 있는 현대식 명령 팔레트는 2011년 Sublime Text 2 베타 Joe Skinner가 처음 소개. 명령줄 사용에 익숙한 프로그래머들이 단축키를 모두 외울 필요 없이 더 빠르게 작업할 수 있어 중요한 발전이 됨.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="챗gpt와-오정보" class="title-slide slide level1 center">
+<h1>챗GPT와 오정보</h1>
+
+</section>
+<section id="r-컨퍼런스-2021" class="slide level2">
+<h2>R 컨퍼런스 (2021)</h2>
+<div class="panel-tabset">
+<ul id="tabset-26" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-26-1">동영상</a></li><li><a href="#tabset-26-2">제작방법</a></li></ul>
+<div class="tab-content">
+<div id="tabset-26-1">
+<iframe data-external="1" src="https://www.youtube.com/embed/clNN1xAiEkw" width="1050" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+<div id="tabset-26-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/rconf_keynote_translation.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-121"><img data-src="img/rconf_keynote_translation.jpg" width="1050" height="450"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://statkclee.github.io/deep-learning/rconf-keynote.html">한국 R 컨퍼런스 - Julia Silge Keynote번역(2021-11-17)</a></li>
+</ul>
+</div></aside></section>
+<section id="서울-r-미트업-챗gpt와-오정보" class="slide level2 smaller">
+<h2>서울 R 미트업: 챗GPT와 오정보</h2>
+<iframe data-external="1" src="https://www.youtube.com/embed/3t9nPopr0QA" width="1050" height="450" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</section>
+<section id="제작방법-1" class="slide level2 smaller">
+<h2>제작방법</h2>
+<p><br></p>
+<div class="columns">
+<div class="column">
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    
+    subgraph SeoulR["서울 R 미트업: 챗GPT와 오정보"]
+    direction LR
+        Youtube["챗GPT 오정보"] --&gt; STT["STT: Whisper"]
+        Youtube                 --&gt; Embedding["임베딩: OpenAI"]
+        Youtube                 --&gt; Summary["요약: Langchain"]
+        Youtube                 --&gt; Pinecone["벡터 DB: Pinecone"]
+        Youtube                 --&gt; ETC["검색: 코사인 유사도"]
+    end
+
+    STT -.-&gt; Moat["We Have No Moat,&lt;br&gt; And Neither Does OpenAI"] 
+    Embedding -.-&gt;  Moat
+    Summary -.-&gt; Moat 
+    Pinecone -.-&gt;  Moat
+    ETC -.-&gt;  Moat
+
+click SeoulR href "https://r2bit.com/seoul-r/"
+
+click Youtube href "https://youtu.be/3t9nPopr0QA"
+click STT href "https://r2bit.com/chatGPT/whisper.html"
+click Summary href "https://r2bit.com/chatGPT/news_release.html"
+click Embedding href "https://r2bit.com/chatGPT/misinfo_embedding.html"
+
+click Moat href "https://www.semianalysis.com/p/google-we-have-no-moat-and-neither"
+
+
+class A nodeStyle
+class AB,AC,AD,AE theoryStyle
+class B,C,D,E practiceStyle
+class F taskStyle
+
+classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+classDef theoryStyle fill:#f59542,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+classDef practiceStyle fill:#4287f5,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+classDef taskStyle fill:#42f548,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column">
+<blockquote>
+<p>“why misinformation is dangerous?”</p>
+</blockquote>
+<pre><code>186 And we know that, you know, our surgeon general and other major leaders around the world have recognized the ways in which misinformation can affect our health, and they can affect the health of democracies
+
+130 And bullshit is a part of the misinformation story
+
+16   We've studied misinformation during the pandemic and during elections and all sorts of other topics</code></pre>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://r2bit.com/chatGPT/misinfo_embedding.html">챗GPT - 오정보 임베딩</a></li>
+</ul>
+</div></aside></section>
+<section id="챗gpt-api-가격" class="slide level2">
+<h2>챗GPT API 가격</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/embedding/pricing_g.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img data-src="img/embedding/pricing_g.png" width="800"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<p>한국 R 사용자회, <a href="https://r2bit.com/chatGPT/gpt4_performance.html">“chatGPT: GPT-4 성능”</a> <span class="citation" data-cites="nils2022">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Reimers, 2022</a>)</span></p>
+</div></aside></section>
+<section id="openai-임베딩" class="slide level2 smaller">
+<h2>OpenAI 임베딩</h2>
+<div class="panel-tabset">
+<ul id="tabset-27" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-27-1">텍스트 → 벡터</a></li><li><a href="#tabset-27-2">OpenAI Embedding Models</a></li><li><a href="#tabset-27-3">임베딩</a></li></ul>
+<div class="tab-content">
+<div id="tabset-27-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/embedding/openai-embedding.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-122"><img data-src="img/embedding/openai-embedding.gif"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-27-2">
+<table>
+<colgroup>
+<col style="width: 31%">
+<col style="width: 30%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Models</th>
+<th>Use Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Text similarity: Captures semantic similarity between pieces of text.</td>
+<td>text-similarity-{ada, babbage, curie, davinci}-001</td>
+<td>Clustering, regression, anomaly detection, visualization</td>
+</tr>
+<tr class="even">
+<td>Text search: Semantic information retrieval over documents.</td>
+<td>text-search-{ada, babbage, curie, davinci}-{query, doc}-001</td>
+<td>Search, context relevance, information retrieval</td>
+</tr>
+<tr class="odd">
+<td>Code search: Find relevant code with a query in natural language.</td>
+<td>code-search-{ada, babbage}-{code, text}-001</td>
+<td>Code search and relevance</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-27-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/embedding/pinecone.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-123"><img data-src="img/embedding/pinecone.jpg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="코사인-유사도" class="slide level2">
+<h2>(코사인) 유사도</h2>
+<p><br></p>
+<p>두 임베딩 벡터 <span class="math inline">\(\mathbf{u}\)</span> 와 <span class="math inline">\(\mathbf{v}\)</span> 는 다음 공식을 사용하여 두 벡터간의 유사도를 구할 수 있다.</p>
+<p><br> <br></p>
+<p><span class="math display">\[
+\begin{equation*}
+\text{코사인 유사도}(\mathbf{u},\mathbf{v}) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}
+= \frac{\sum_{i=1}^n u_i v_i}{\sqrt{\sum_{i=1}^n u_i^2} \sqrt{\sum_{i=1}^n v_i^2}}
+\end{equation*}
+\]</span></p>
+</section>
+<section id="nli-자사-검색-엔진-구글-x" class="slide level2 smaller">
+<h2>NLI 자사 검색 엔진 (구글 X)</h2>
+
+<img data-src="img/google_search.jpg" class="r-stretch quarto-figure-center"></section></section>
+<section id="참고문헌" class="title-slide slide level1 smaller scrollable">
+<h1>참고문헌</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-fullstack2023" class="csl-entry" role="listitem">
+Charles Frye, J. T., Sergey Karayev. (2023). <em>LLM Bootcamp 2023</em>. <a href="https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/augmented-language-models/">https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/augmented-language-models/</a>
+</div>
+<div id="ref-Chiang_2023" class="csl-entry" role="listitem">
+Chiang, T. (2023). CHATGPT is a blurry JPEG of the web. In <em>The New Yorker</em>. <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web">https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web</a>
+</div>
+<div id="ref-eloundou2023gpts" class="csl-entry" role="listitem">
+Eloundou, T., Manning, S., Mishkin, P., &amp; Rock, D. (2023). <em>GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models</em>. <a href="https://arxiv.org/abs/2303.10130">https://arxiv.org/abs/2303.10130</a>
+</div>
+<div id="ref-fu2022gptroadmap" class="csl-entry" role="listitem">
+Fu, H., Yao; Peng, &amp; Khot, T. (2022). How does GPT Obtain its Ability? Tracing Emergent Abilities of Language Models to their Sources. <em>Yao Fu’s Notion</em>. <a href="https://yaofu.notion.site/How-does-GPT-Obtain-its-Ability-Tracing-Emergent-Abilities-of-Language-Models-to-their-Sources-b9a57ac0fcf74f30a1ab9e3e36fa1dc1">https://yaofu.notion.site/How-does-GPT-Obtain-its-Ability-Tracing-Emergent-Abilities-of-Language-Models-to-their-Sources-b9a57ac0fcf74f30a1ab9e3e36fa1dc1</a>
+</div>
+<div id="ref-Huben_2023" class="csl-entry" role="listitem">
+Huben, R. (2023). How does GPT-3 spend its 175b parameters? In <em>How does GPT-3 spend its 175B parameters? - by Robert Huben</em>. From AI to ZI. <a href="https://aizi.substack.com/p/how-does-gpt-3-spend-its-175b-parameters">https://aizi.substack.com/p/how-does-gpt-3-spend-its-175b-parameters</a>
+</div>
+<div id="ref-meeker2017open" class="csl-entry" role="listitem">
+Meeker, H. (2017). <em>Open Source For Business: A Practical Guide to Open Source Software Licensing</em>. Createspace Independent Publishing Platform. <a href="https://books.google.co.kr/books?id=aKHGswEACAAJ">https://books.google.co.kr/books?id=aKHGswEACAAJ</a>
+</div>
+<div id="ref-Merritt_2023a" class="csl-entry" role="listitem">
+Merritt, R. (2023). Beyond words: Large language models expand Ai’s horizon. In <em>NVIDIA Blog</em>. <a href="https://blogs.nvidia.com/blog/2022/10/10/llms-ai-horizon/">https://blogs.nvidia.com/blog/2022/10/10/llms-ai-horizon/</a>
+</div>
+<div id="ref-openai2023gpt4" class="csl-entry" role="listitem">
+OpenAI. (2023). <em>GPT-4 Technical Report</em>. <a href="https://arxiv.org/abs/2303.08774">https://arxiv.org/abs/2303.08774</a>
+</div>
+<div id="ref-nils2022" class="csl-entry" role="listitem">
+Reimers, N. (2022). <em>OpenAI GPT-3 Text Embeddings - Really a new state-of-the-art in dense text embeddings?</em> Medium.com. <a href="https://medium.com/@nils_reimers/openai-gpt-3-text-embeddings-really-a-new-state-of-the-art-in-dense-text-embeddings-6571fe3ec9d9">https://medium.com/@nils_reimers/openai-gpt-3-text-embeddings-really-a-new-state-of-the-art-in-dense-text-embeddings-6571fe3ec9d9</a>
+</div>
+<div id="ref-shen2023hugginggpt" class="csl-entry" role="listitem">
+Shen, Y., Song, K., Tan, X., Li, D., Lu, W., &amp; Zhuang, Y. (2023). <em>HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in HuggingFace</em>. <a href="https://arxiv.org/abs/2303.17580">https://arxiv.org/abs/2303.17580</a>
+</div>
+<div id="ref-song2019digital" class="csl-entry" role="listitem">
+Song, A. K. (2019). The Digital Entrepreneurial Ecosystem—a critique and reconfiguration. <em>Small Business Economics</em>, <em>53</em>(3), 569–590.
+</div>
+<div id="ref-yang2023harnessing" class="csl-entry" role="listitem">
+Yang, J., Jin, H., Tang, R., Han, X., Feng, Q., Jiang, H., Yin, B., &amp; Hu, X. (2023). <em>Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond</em>. <a href="https://arxiv.org/abs/2304.13712">https://arxiv.org/abs/2304.13712</a>
+</div>
+<div id="ref-zhao2023survey" class="csl-entry" role="listitem">
+Zhao, W. X., Zhou, K., Li, J., Tang, T., Wang, X., Hou, Y., Min, Y., Zhang, B., Zhang, J., Dong, Z., Du, Y., Yang, C., Chen, Y., Chen, Z., Jiang, J., Ren, R., Li, Y., Tang, X., Liu, Z., … Wen, J.-R. (2023). <em>A Survey of Large Language Models</em>. <a href="https://arxiv.org/abs/2303.18223">https://arxiv.org/abs/2303.18223</a>
+</div>
+<div id="ref-webtoon2021" class="csl-entry" role="listitem">
+김현진. (2021). 웹툰 이미지 제작공정 단계별 활용 가능한 스케치 관련 인공지능 기술. <em>한국정보과학회</em>.
+</div>
+<div id="ref-kpf2023survey" class="csl-entry" role="listitem">
+양정애. (2023). <em>챗GPT 이용 경험 및 인식 조사</em>. 한국언론진흥재단. <a href="https://www.kpf.or.kr/front/board/boardContentsListPage.do?board_id=246">https://www.kpf.or.kr/front/board/boardContentsListPage.do?board_id=246</a>
+</div>
+</div>
+
+
+<img src="_extensions/padsInsper/insper/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p>한국 R 사용자회 <a href="https://r2bit.com/chatGPT/">chatGPT</a>. theme <a href="https://github.com/padsInsper/quarto-insper-theme">insper</a> 소스코드 <a href="https://github.com/padsInsper/quarto-insper-theme">GitHub</a>.</p>
+</div>
+</section>
+
+
     </div>
   </div>
 
@@ -853,5 +2713,9 @@
     </script>
     
     
+    
+    
+    
 
+<script src="https://platform.twitter.com/widgets.js"></script>
 </body></html>

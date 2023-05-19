@@ -1971,14 +1971,14 @@
     "href": "chatGPT_Seoul_HS_20230522.html#강사소개-강의-개요",
     "title": "chatGPT",
     "section": "강사소개 & 강의 개요",
-    "text": "강사소개 & 강의 개요\n\n강사소개강의개요\n\n\n\n\n\n\nAI 아바타\n\n\n\n\n주요경력 및 학력\n\n(현) 비영리법인 한국 R 사용자회: 기술 이사\n(현) 국가교육위원회 전문위원: 과학/기술 분과\n(전) TCS: GS 칼텍스 디지털 아카데미 강사\n(전) 삼정 KPMG: Lighthouse AI 기술총괄\n(전) 웹젠: 데이터 과학자 TD\n(전) 현대자동차: 차량용 반도체 개발구매 \n\n\n\nKAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공\nRStudio Instructor - Tidyverse\nSeoul R Meetup Organizer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n강의상세\n\n날짜 : 2023. 5. 18.(목) 19:00~21:00\n장소 : 교보타워 노블리에홀 또는 다목적홀\n대상 : 교보 비즈니스 파트와 테크닉 파트 실무자\n내용 : chatGPT 활용(비즈니스 - 테크닉 사이드)"
+    "text": "강사소개 & 강의 개요\n\n강사소개강의개요\n\n\n\n\n\n\nAI 아바타\n\n\n\n\n주요경력 및 학력\n\n(현) 비영리법인 한국 R 사용자회: 기술 이사\n(현) 국가교육위원회 전문위원: 과학/기술 분과\n(전) TCS: GS 칼텍스 디지털 아카데미 강사\n(전) 삼정 KPMG: Lighthouse AI 기술총괄\n(전) 웹젠: 데이터 과학자 TD\n(전) 현대자동차: 차량용 반도체 개발구매 \n\n\n\nKAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공\nRStudio Instructor - Tidyverse\nSeoul R Meetup Organizer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n강의상세\n\n날짜 : 2023. 5. 22.(월) 10:30~12:00\n장소 : 서울고등학교 오영수 기념관\n대상 : 서울고등학교 학부모\n과정 : 2023년 서울고등학교 학부모아카데미\n내용 : Ai 시대의 챗GPT 활용과 미래산업환경"
   },
   {
     "objectID": "chatGPT_Seoul_HS_20230522.html#서울-r-미트업",
     "href": "chatGPT_Seoul_HS_20230522.html#서울-r-미트업",
     "title": "chatGPT",
     "section": "서울 R 미트업",
-    "text": "서울 R 미트업\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n참여와 연대\n\n서울R미트업 meetup.com: link\n\n23년 4월 서울 R 미트업: link\n23년 5월 서울 R 미트업: link\n23년 6월 서울 R 미트업: link\n23년 7월 서울 R 미트업: 준비중\n\n세계 R 미트업 현황 (Global R Meetup Dashboard): link\n한국 R 사용자회 (Korea R User Group): link\n한국 R 컨퍼런스 (Korea R Conference): link\n유튜브 채널 (Youtube Channel): link\n페이스북 그룹 (Facebook Group): link\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+    "text": "서울 R 미트업\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n참여와 연대\n\n서울R미트업 meetup.com: link\n\n23년 4월 서울 R 미트업: link\n23년 5월 서울 R 미트업: link\n23년 6월 서울 R 미트업: link\n23년 7월 서울 R 미트업: 준비중\n\n세계 R 미트업 현황 (Global R Meetup Dashboard): link\n한국 R 사용자회 (Korea R User Group): link\n한국 R 컨퍼런스 (Korea R Conference): link\n유튜브 채널 (Youtube Channel): link\n페이스북 그룹 (Facebook Group): link"
   },
   {
     "objectID": "chatGPT_Seoul_HS_20230522.html#참여와-연대",
@@ -2279,7 +2279,7 @@
     "href": "chatGPT_Seoul_HS_20230522.html#챗gpt-란",
     "title": "chatGPT",
     "section": "챗GPT 란?",
-    "text": "챗GPT 란?\n\nPNG와 JPEGFoundation 모형\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n자료출처: Ted Chiang (February 9, 2023), “ChatGPT Is a Blurry JPEG of the Web - OpenAI’s chatbot offers paraphrases, whereas Google offers quotes. Which do we prefer?”, The New Yorker"
+    "text": "챗GPT 란?\n\nPNG와 JPEGFoundation 모형헬스케어\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Chiang, 2023) (Merritt, 2023)"
   },
   {
     "objectID": "chatGPT_Seoul_HS_20230522.html#거대-언어모형llm",
@@ -2405,7 +2405,7 @@
     "href": "chatGPT_Seoul_HS_20230522.html#transformer",
     "title": "chatGPT",
     "section": "Transformer",
-    "text": "Transformer\n\nDL 시대삼국지가자 Transformer 로Transformer 입력\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+    "text": "Transformer\n\nDL 시대삼국지가자 Transformer 로이유(Why)패러미터 비율Transformer 입력\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n트랜스포머는 범용 차별화 컴퓨터이기 때문에 훌륭한 신경망 아키텍처입니다. 동시에\n\n표현력 (순방향)\n최적화 가능(역전파 + 경사하강)\n효율적 (높은 병렬처리 연산 그래프)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n(Huben, 2023)"
   },
   {
     "objectID": "slideshow/202305-gpt/22-ai-app-dev.html",
@@ -2427,5 +2427,61 @@
     "title": "AI 앱 개발",
     "section": "",
     "text": "LLM랭체인 컴포넌트OPL 프레임워크OPL 개발사례"
+  },
+  {
+    "objectID": "chatGPT_Seoul_HS_20230522.html#서울-r-미트업-챗gpt와-오정보",
+    "href": "chatGPT_Seoul_HS_20230522.html#서울-r-미트업-챗gpt와-오정보",
+    "title": "chatGPT",
+    "section": "서울 R 미트업: 챗GPT와 오정보",
+    "text": "서울 R 미트업: 챗GPT와 오정보"
+  },
+  {
+    "objectID": "chatGPT_Seoul_HS_20230522.html#제작방법-1",
+    "href": "chatGPT_Seoul_HS_20230522.html#제작방법-1",
+    "title": "chatGPT",
+    "section": "제작방법",
+    "text": "제작방법\n\n\n\n\n\n\n\nflowchart LR\n    \n    subgraph SeoulR[\"서울 R 미트업: 챗GPT와 오정보\"]\n    direction LR\n        Youtube[\"챗GPT 오정보\"] --&gt; STT[\"STT: Whisper\"]\n        Youtube                 --&gt; Embedding[\"임베딩: OpenAI\"]\n        Youtube                 --&gt; Summary[\"요약: Langchain\"]\n        Youtube                 --&gt; Pinecone[\"벡터 DB: Pinecone\"]\n        Youtube                 --&gt; ETC[\"검색: 코사인 유사도\"]\n    end\n\n    STT -.-&gt; Moat[\"We Have No Moat,&lt;br&gt; And Neither Does OpenAI\"] \n    Embedding -.-&gt;  Moat\n    Summary -.-&gt; Moat \n    Pinecone -.-&gt;  Moat\n    ETC -.-&gt;  Moat\n\nclick SeoulR href \"https://r2bit.com/seoul-r/\"\n\nclick Youtube href \"https://youtu.be/3t9nPopr0QA\"\nclick STT href \"https://r2bit.com/chatGPT/whisper.html\"\nclick Summary href \"https://r2bit.com/chatGPT/news_release.html\"\nclick Embedding href \"https://r2bit.com/chatGPT/misinfo_embedding.html\"\n\nclick Moat href \"https://www.semianalysis.com/p/google-we-have-no-moat-and-neither\"\n\n\nclass A nodeStyle\nclass AB,AC,AD,AE theoryStyle\nclass B,C,D,E practiceStyle\nclass F taskStyle\n\nclassDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef theoryStyle fill:#f59542,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef practiceStyle fill:#4287f5,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\nclassDef taskStyle fill:#42f548,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;\n\n\n\n\n\n\n\n“why misinformation is dangerous?”\n\n186 And we know that, you know, our surgeon general and other major leaders around the world have recognized the ways in which misinformation can affect our health, and they can affect the health of democracies\n\n130 And bullshit is a part of the misinformation story\n\n16   We've studied misinformation during the pandemic and during elections and all sorts of other topics\n\n\n\n\n\n챗GPT - 오정보 임베딩"
+  },
+  {
+    "objectID": "chatGPT_Seoul_HS_20230522.html#llm-1",
+    "href": "chatGPT_Seoul_HS_20230522.html#llm-1",
+    "title": "chatGPT",
+    "section": "LLM",
+    "text": "LLM\n\n독점/상용 LLM오픈소스/공개 LLM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Charles Frye, 2023)"
+  },
+  {
+    "objectID": "chatGPT_Seoul_HS_20230522.html#데이터셋",
+    "href": "chatGPT_Seoul_HS_20230522.html#데이터셋",
+    "title": "chatGPT",
+    "section": "데이터셋",
+    "text": "데이터셋\n \n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n\nhttps://lifearchitect.ai/models/"
+  },
+  {
+    "objectID": "chatGPT_Seoul_HS_20230522.html#httpslifearchitect.ai",
+    "href": "chatGPT_Seoul_HS_20230522.html#httpslifearchitect.ai",
+    "title": "chatGPT",
+    "section": "https://lifearchitect.ai/",
+    "text": "https://lifearchitect.ai/\n\nIQ 분포LM 시험GPT-4데이터셋딥마인드모형크기능력비행기\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://lifearchitect.ai/models/ / Google Sheets: 바로가기"
+  },
+  {
+    "objectID": "chatGPT_Seoul_HS_20230522.html#gpt는-어떻게-능력을-얻나요",
+    "href": "chatGPT_Seoul_HS_20230522.html#gpt는-어떻게-능력을-얻나요",
+    "title": "chatGPT",
+    "section": "GPT는 어떻게 능력을 얻나요?",
+    "text": "GPT는 어떻게 능력을 얻나요?\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n(fu2022gptroadmap?)"
+  },
+  {
+    "objectID": "chatGPT_Seoul_HS_20230522.html#gpt는-어떻게-능력을-얻었나",
+    "href": "chatGPT_Seoul_HS_20230522.html#gpt는-어떻게-능력을-얻었나",
+    "title": "chatGPT",
+    "section": "GPT는 어떻게 능력을 얻었나?",
+    "text": "GPT는 어떻게 능력을 얻었나?\n\n\n\n\n\n\n\n(Fu & Khot, 2022)"
+  },
+  {
+    "objectID": "chatGPT_Seoul_HS_20230522.html#모형크기",
+    "href": "chatGPT_Seoul_HS_20230522.html#모형크기",
+    "title": "chatGPT",
+    "section": "모형크기",
+    "text": "모형크기"
   }
 ]
