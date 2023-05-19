@@ -1,6 +1,21 @@
 # Internal slide decks
 
 - title: "챗GPT"
+  subtitle: "Ai 시대의 챗GPT 활용과 미래산업환경"
+  author: "이광춘"
+  date: 2023-05-22
+  image: img/seoul_hs.png
+  path: chatGPT_Seoul_HS_20230522.qmd
+  categories:
+    - 인공지능
+    - chatGPT 활용
+    - 한국 R 사용자회
+    - GPT-3/3.5/4
+    - 서울고등학교
+    - 디지털 글쓰기
+    - 미래산업환경
+
+- title: "챗GPT"
   subtitle: "챗GPT 최신 동향"
   author: "이광춘"
   date: 2023-05-18

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-05-18T03:45:21.574Z</lastmod>
+    <lastmod>2023-05-19T00:20:21.005Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-seoul-r-meetup/index.html</loc>
@@ -111,5 +111,13 @@
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-gpt/03-user-in-practice.html</loc>
     <lastmod>2023-05-18T03:45:14.222Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/chatGPT_Seoul_HS_20230522.html</loc>
+    <lastmod>2023-05-19T00:20:58.314Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-gpt/22-ai-app-dev.html</loc>
+    <lastmod>2023-05-19T00:17:12.530Z</lastmod>
   </url>
 </urlset>

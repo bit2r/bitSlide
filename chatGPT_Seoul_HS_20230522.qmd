@@ -1,0 +1,44 @@
+---
+title: "chatGPT"
+subtitle: "Ai 시대의 챗GPT 활용과 미래산업환경"
+author: "이광춘/신종화"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-05-22
+format: 
+  insper-revealjs:
+    self-contained: false
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  들어가며
+
+1.  컴퓨터 기본지식과 역사
+
+1.  체험 삶의 현장
+
+1.  챗GPT 시대 오피스 전쟁
+
+1.  챗GPT 사용자 : Text-to-**X**
+
+1.  chatGPT 한계와 새시대(?)
+
+1. 사례: 챗GPT와 오정보
+
+1. 질의응답
+
+{{< include slideshow/202305-gpt/00-who-am-i.qmd >}}
+
+{{< include slideshow/202305-gpt/seoul-r-meeup.qmd >}}
+
