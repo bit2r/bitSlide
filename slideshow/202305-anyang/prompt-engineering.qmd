@@ -1,0 +1,215 @@
+# 챗GPT 개발자 <br> 프롬프트 디자인/엔지니어링
+
+## 소프트웨어 3.0
+
+::: columns
+::: column
+![](img/software_3.jpeg){width="441"}
+:::
+
+::: column
+#### Andrej Karpathy
+
+-   소프트웨어 1.0: 코드 작성을 통한 프로그래밍
+-   소프트웨어 2.0: 데이터셋 큐레이팅을 통한 프로그래밍
+-   소프트웨어 3.0: 프롬프트 엔지니어링을 통한 프로그래밍 (LLM에 입력으로 제공, GPT 스타일)
+:::
+:::
+
+## 프롬프트 공학
+
+::: panel-tabset
+### 언어(?)
+
+<br>
+
+<blockquote class="twitter-tweet">
+
+<p lang="en" dir="ltr">
+
+The hottest new programming language is English
+
+</p>
+
+--- Andrej Karpathy (@karpathy) <a href="https://twitter.com/karpathy/status/1617979122625712128?ref_src=twsrc%5Etfw">January 24, 2023</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+### 텍스트 생성
+
+<br>
+
+![](img/text-generation.gif){fig-align="center"}
+
+### 언어 모형
+
+![](img/generative-text.jpg){width="626"}
+
+### 프롬프트
+
+![](img/generative-text-prompt.jpg){width="952"}
+
+### 첫인사
+
+<br>
+
+:::::{.columns}
+:::{.column width="33%"}
+![](img/chatGPT_start.jpg)
+:::
+
+:::{.column width="33%"}
+
+![](img/prompt.jpg)
+:::
+
+:::{.column width="33%"}
+![](img/prompt-component.jpg)
+:::
+
+:::::
+
+:::
+
+
+## 프롬프트 공학 사례 {.smaller}
+
+
+```{r}
+library(tidyverse)
+library(collapsibleTree)
+library(readxl)
+
+excel_filepath <- glue::glue("{here::here()}/data/chatGPT_applictions.xlsx")
+
+practice_raw <- read_excel(excel_filepath)
+
+practice <- practice_raw %>% 
+  fill(대구분, .direction = "down") %>% 
+  fill(중구분, .direction = "down") %>% 
+  mutate(소구분 = str_remove(소구분, "^[0-9]{1,2}\\.+ "))  %>% 
+  mutate(중구분 = str_remove(중구분, "[0-9]{1,2}$"))
+  
+
+collapsibleTree(practice, c("대구분", "중구분", "소구분"),
+                tooltipHtml = "tooltip",
+                root = "챗GPT 활용")
+```
+
+::: aside
+
+[서울 디지털재단](https://sdf.seoul.kr/)에서 챗GPT 활용 사례집을 업무활용과
+일상생활/창작활동/교육분야 로 나눠 두번에 걸쳐 보고서를 발간했다. [@sdf2023] [@sdf2023v2] 최근에는 교육분야 전반에 챗GPT 활용 책도 출간되었다. [@stan2023]
+
+:::
+
+## 개발자를 위한 프롬프트 공학 {.smaller}
+
+:::{.panel-tabset}
+### 두가지 원칙
+
+```{r}
+
+excel_filepath2 <- glue::glue("{here::here()}/data/prompt_engineering.xlsx")
+
+prompt_raw <- read_excel(excel_filepath2 , sheet = "guidelines")
+
+collapsibleTree(prompt_raw, c("원칙", "세부책략"),
+                tooltipHtml = "tooltip",
+                root = "프롬프트 작성원칙")
+```
+
+### NLP 개발업무
+
+```{r}
+practice_raw <- read_excel(excel_filepath2, sheet = "summary")
+
+collapsibleTree(practice_raw, c("실무작업", "세부작업"),
+                tooltipHtml = "tooltip",
+                root = "프롬프트\n 개발업무")
+```
+
+
+:::
+
+
+:::aside
+- [프롬프트 공학](https://r2bit.com/chatGPT/prompt.html)
+- [고급 프롬프트 공학](https://r2bit.com/chatGPT/prompt_adv.html)
+- [(개발자) 프롬프트 공학](https://r2bit.com/chatGPT/prompt_for_develoopers.html)
+:::
+
+## 배경 - 프롬프트 엔지니어링
+
+<br>
+
+:::{#context layout-ncol=2}
+
+
+![](img/greg_brockman.jpg)
+
+![](img/context_stuffing.jpg)
+
+
+프롬프트 엔지니어링 (Context Stuffing)
+
+:::
+
+
+
+::: {.aside}
+- [챗GPT시대 데이터 과학 - 파머 펭귄](https://shareg.pt/mcr4YOM)
+:::
+
+
+
+## 보안사고 {.smaller}
+
+:::{.panel-tabset}
+
+### 삼성전자와 이탈리아
+
+::::: {.columns}
+::: {.column width="50%"}
+### 삼성전자
+
+> 삼성전자 DS 부문 임직원 A씨는 반도체 설비 계측 데이터베이스(DB) 다운로드 프로그램의 소스 코드를 실행 중 오류를 확인했다. 문제가 된 소스 코드 전부를 복사해 챗GPT에 입력, 해결 방법을 문의했다. 삼성전자 설비 계측과 관련한 소스 코드가 오픈AI 학습 데이터로 입력된 셈이다.
+
+> 임직원 B씨는 수율·불량 설비 파악을 위해 작성한 프로그램 코드를 챗GPT에 입력하는 사고를 냈다. 관련 소스 전체를 챗GPT에 입력하고 코드 최적화를 요청했다. 임직원 C씨는 스마트폰으로 녹음한 회의 내용을 네이버 클로바 애플리케이션(앱)을 통해 문서 파일로 변환한 뒤 챗GPT에 입력했다. 회의록 작성 요청이 목적이다.
+:::
+
+::: {.column width="50%"}
+### 이탈리아
+
+> 로이터 통신 등에 따르면 이탈리아 데이터 보호청은 "챗GPT가 이탈리아의 개인정보 보호 기준과 규정을 충족할 때까지 서비스 접속을 일시적으로 차단할 것"이라고 밝혔다.<br>
+
+> 접속 차단 이유는 개인정보 침해 우려 때문이다. 이탈리아 당국은 챗GPT가 알고리즘 학습을 이유로, 개인정보를 대량으로 수집하고 저장하는 행위를 정당화할 법적 근거가 없다고 지적했다. 보호청은 챗GPT 개발사 오픈AI가 20일 이내에 해결책을 내놓지 않으면 전 세계 매출액의 최대 4%에 달하는 벌금을 물게 될 것이라고 경고하기도 했다.
+:::
+:::::
+
+### 보안과 효율
+
+**보안 vs 효율** 을 높고 많은 공공기관을 비롯한 기업들이 고민을 하고 있다.
+거대언어모형(LLM)에 기반하여 모든 것을 자체 개발하면 상관이 없으나
+현실적으로 GPT-3/3.5/4 모형을 갖춘 조직이 전무하지만, 이미 대다수의 
+사람이 오픈AI 챗GPT를 맛보았기 때문에 생산성 향상을 그냥 두고 넘어가기도 어려운 상황이다.
+이런 점에서 챗GPT 제한적 사용이 현재시점('23년 3월) 최선으로 보이며 
+점차 오픈소스 거대언어모형(LLM)과 전략적 제휴를 통한 챗GPT 사용이 중장기적 추진방향으로 
+자리 잡고 있다.
+
+![](img/security-efficiency.jpg)
+
+:::
+
+
+::: {.aside}
+- [정두용 (2023-03-30), "우려가 현실로…삼성전자, 챗GPT 빗장 풀자마자 ‘오남용’ 속출", 이코노미스트](https://economist.co.kr/article/view/ecn202303300057)
+
+- [민재용 (2023.04.02), "이탈리아도 챗GPT '차단'...서방 국가중 처음", 한국일보](https://m.hankookilbo.com/News/Read/A2023040208490005108)
+- [이동수 (2023.04.02.), "대기업 회의 내용 유출… ‘챗GPT 기밀 유출’ 우려가 현실로", 세계일보](https://n.news.naver.com/mnews/article/022/0003798570?sid=101)
+
+:::
+

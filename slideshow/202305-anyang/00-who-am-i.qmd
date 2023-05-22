@@ -1,0 +1,52 @@
+
+## 강사소개 & 강의 개요 {.smaller}
+
+::: panel-tabset
+### 강사소개
+
+::: {layout-ncol="2"}
+### AI 아바타
+
+![](img/profile.png){.absolute top="0" right="0" width="300"}
+
+### 주요경력 및 학력
+
+-   (현) 비영리법인 한국 R 사용자회: 기술 이사
+
+-   (현) 국가교육위원회 전문위원: 과학/기술 분과
+
+-   (전) TCS: GS 칼텍스 디지털 아카데미 강사
+
+-   (전) 삼정 KPMG: Lighthouse AI 기술총괄
+
+-   (전) 웹젠: 데이터 과학자 TD
+
+-   (전) 현대자동차: 차량용 반도체 개발구매 <br>
+
+    <br> <hr> <br>
+
+-   KAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공
+
+-   [RStudio Instructor](https://education.rstudio.com/trainers/people/lee+kwangchun/) - Tidyverse
+
+-   [Seoul R Meetup Organizer](https://r2bit.com/seoul-r/)
+:::
+
+### 강의개요
+
+::: {layout-ncol="2"}
+
+![](img/anyang.jpg)
+
+### 강의상세
+
+- 날짜 : 2023. 5. 30.(화) 01:30~04:30
+- 장소 : 안양시 정보화 교육장
+- 대상 : 안양시 공무원 30명
+- 내용
+  - (텍스트) 챗GPT 프롬프트 엔지니어링
+  - (코딩) 엑셀 
+  - (그리기) Text-to-Image
+
+:::
+:::

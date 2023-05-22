@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>발표자료 | 한국 R 사용자회 – handson</title>
+<title>발표자료 | 한국 R 사용자회 – ai-app-dev</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,6 +36,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -114,91 +117,114 @@ ga('send', {
 
 
 
-<section id="실습" class="level1">
-<h1>실습</h1>
-<section id="설치" class="level2">
-<h2 class="anchored" data-anchor-id="설치">설치</h2>
+<section id="ai-앱-개발" class="level1">
+<h1>AI 앱 개발</h1>
+<section id="개발방법론-진화" class="level2">
+<h2 class="anchored" data-anchor-id="개발방법론-진화">개발방법론 진화</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">폭포수 모형</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">V-모형</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">스크럼</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">SW 앱개발</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">ML 앱개발</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">AI 앱 개발</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <div>
-<pre class="mermaid mermaid-js">flowchart LR
-    
-    subgraph Factory["문서 공장"]
-    direction BT
-        Language --&gt; Document["문서: 마크다운 + 코드"]
-        Markdown --&gt; Document["문서: 마크다운 + 코드"]        
-        IDE   --&gt; Markdown["사람 언어(텍스트): 마크다운"]
-        IDE   --&gt; Language["기계 언어(코드): R, Python, Java, ..."]
-        Quarto   --&gt; IDE["편집기: RStudio/VS코드/쥬피터"]
-        Windows  --&gt; Quarto["쿼토(Quarto):&lt;br&gt; Pandoc 내장"]
-        Silicon["하드웨어"] --&gt; Windows["운영체제:&lt;br&gt;윈도우/리눅스/맥OS"]
-    end
-
-    ChatGPT["챗GPT: 콘텐츠"] --&gt; Factory
-    Factory --&gt; Output_PDF["파일(PDF)"]
-    Factory --&gt; Output_HTML["웹문서(HTML)"]
-    Factory --&gt; Output_ePub["전자책(ePub)"]
-    Factory --&gt; Output_Word["MS워드(word)"]
-    Factory --&gt; Output_Hwp["아래한글(HWP) ???"]
-    Factory --&gt; Output_Etc["..."]
-
-class Factory nodeStyle
-
-classDef nodeStyle fill:#ffffff,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
-
-click Quarto href "https://quarto.org/docs/download/"
-click IDE href "https://posit.co/download/rstudio-desktop/"
-click Language href "https://cran.rstudio.com/"
+<pre class="mermaid mermaid-js">graph TD
+    A[요구사항] --&gt; B[아키텍쳐/디자인]
+    B --&gt; C[구현]
+    C --&gt; D[검증/테스트]
+    D --&gt; E[유지보수]
 </pre>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="문제-해결" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="문제-해결">문제 해결</h2>
-<p><br> <br> <br> <br> <br> <br></p>
-<div class="columns">
-<div class="column" style="width:33%;">
-<section id="화면공유" class="level3">
-<h3 class="anchored" data-anchor-id="화면공유">화면공유</h3>
-</section>
-</div><div class="column" style="width:30%;">
-<section id="채팅창-질문" class="level3">
-<h3 class="anchored" data-anchor-id="채팅창-질문">채팅창: 질문</h3>
-</section>
-</div><div class="column" style="width:37%;">
-<section id="채팅창-오류-붙여넣기" class="level3">
-<h3 class="anchored" data-anchor-id="채팅창-오류-붙여넣기">채팅창: 오류 붙여넣기</h3>
-</section>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/langchain_v_cycle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/langchain_v_cycle.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/langcahin_agile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/langcahin_agile.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/LAMP_software_bundle.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/LAMP_software_bundle.svg.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div id="fig-ml" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="img/machine_learning_workflow.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/machine_learning_workflow.gif" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="img/machine_learning_workflow.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/machine_learning_workflow.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: <strong>?(caption)</strong></figcaption><p></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT_app_workflow.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/chatGPT_app_workflow.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
 </div>
 </div>
 </section>
-<section id="온라인-날적이" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="온라인-날적이">온라인 날적이</h2>
-<blockquote class="blockquote">
-<p>바로가기: <a href="https://bit.ly/42QwEbG" class="uri">https://bit.ly/42QwEbG</a></p>
-</blockquote>
-<ul>
-<li>목적: 챗GPT 디지털 글쓰기</li>
-<li>신청: 경기도평생학습포털 지식(GSEEK) <a href="https://www.gseek.kr/">지식홈페이지</a></li>
-<li>강의 PPT: https://r2bit.com/bitSlide/
-<ul>
-<li><a href="https://r2bit.com/bitSlide/chatGPT_gseek_20230530.html">강의슬라이드</a></li>
-</ul></li>
-<li>강의 교재: https://r2bit.com/chatGPT/</li>
-<li>실습 URL: https://r2bit.com/gpt-edu/</li>
-<li>챗GPT
-<ul>
-<li>OpenAI 챗GPT: https://chat.openai.com/chat</li>
-<li>MS(뉴빙): http://bing.com/?/ai</li>
-<li>MS(뉴빙 이미지 작성자) : https://www.bing.com/images/create</li>
-<li>네이버 클로버 OCR : https://clova.ai/ocr/</li>
-<li>카카오 B Edit: https://bedit.kakaobrain.com/</li>
-</ul></li>
-<li>사례: <a href="https://r2bit.com/curriculum/">데이터 과학 교재</a></li>
-</ul>
+<section id="langchain" class="level2">
+<h2 class="anchored" data-anchor-id="langchain">LangChain</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">LLM</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">랭체인 컴포넌트</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">OPL 프레임워크</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">OPL 개발사례</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/LLM_sLLM.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/LLM_sLLM.jpg" class="img-fluid figure-img" width="796"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT_langcahin.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/chatGPT_langcahin.jpg" class="img-fluid figure-img" width="774"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT_opl_framework.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/chatGPT_opl_framework.webp" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT_opl_dataflow.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="img/chatGPT_opl_dataflow.webp" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -439,6 +465,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 

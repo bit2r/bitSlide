@@ -1,0 +1,132 @@
+# 챗GPT와 오정보
+
+## R 컨퍼런스 (2021)
+
+::: panel-tabset
+### 동영상
+
+{{< video https://www.youtube.com/watch?v=clNN1xAiEkw width="1050" height="450" >}}
+
+### 제작방법
+
+![](img/rconf_keynote_translation.jpg){fig-align="center" width="1050" height="450"}
+:::
+
+::: aside
+-   [한국 R 컨퍼런스 - Julia Silge Keynote번역(2021-11-17)](https://statkclee.github.io/deep-learning/rconf-keynote.html)
+:::
+
+## 서울 R 미트업: 챗GPT와 오정보 {.smaller}
+
+{{< video youtubehttps://youtu.be/3t9nPopr0QA width="1050" height="450" >}}
+
+## 제작방법 {.smaller}
+
+<br>
+
+::: columns
+::: column
+```{mermaid}
+flowchart LR
+    
+    subgraph SeoulR["서울 R 미트업: 챗GPT와 오정보"]
+    direction LR
+        Youtube["챗GPT 오정보"] --> STT["STT: Whisper"]
+        Youtube                 --> Embedding["임베딩: OpenAI"]
+        Youtube                 --> Summary["요약: Langchain"]
+        Youtube                 --> Pinecone["벡터 DB: Pinecone"]
+        Youtube                 --> ETC["검색: 코사인 유사도"]
+    end
+
+    STT -.-> Moat["We Have No Moat,<br> And Neither Does OpenAI"] 
+    Embedding -.->  Moat
+    Summary -.-> Moat 
+    Pinecone -.->  Moat
+    ETC -.->  Moat
+
+click SeoulR href "https://r2bit.com/seoul-r/"
+
+click Youtube href "https://youtu.be/3t9nPopr0QA"
+click STT href "https://r2bit.com/chatGPT/whisper.html"
+click Summary href "https://r2bit.com/chatGPT/news_release.html"
+click Embedding href "https://r2bit.com/chatGPT/misinfo_embedding.html"
+
+click Moat href "https://www.semianalysis.com/p/google-we-have-no-moat-and-neither"
+
+
+class A nodeStyle
+class AB,AC,AD,AE theoryStyle
+class B,C,D,E practiceStyle
+class F taskStyle
+
+classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+classDef theoryStyle fill:#f59542,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+classDef practiceStyle fill:#4287f5,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+classDef taskStyle fill:#42f548,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:12px;
+```
+:::
+
+::: column
+> "why misinformation is dangerous?"
+
+```         
+186 And we know that, you know, our surgeon general and other major leaders around the world have recognized the ways in which misinformation can affect our health, and they can affect the health of democracies
+
+130 And bullshit is a part of the misinformation story
+
+16   We've studied misinformation during the pandemic and during elections and all sorts of other topics
+```
+:::
+:::
+
+::: aside
+-   [챗GPT - 오정보 임베딩](https://r2bit.com/chatGPT/misinfo_embedding.html)
+:::
+
+## 챗GPT API 가격
+
+![](img/embedding/pricing_g.png){width="800"}
+
+::: aside
+한국 R 사용자회, ["chatGPT: GPT-4 성능"](https://r2bit.com/chatGPT/gpt4_performance.html) [@nils2022]
+:::
+
+## OpenAI 임베딩 {.smaller}
+
+::: panel-tabset
+### 텍스트 → 벡터
+
+![](img/embedding/openai-embedding.gif)
+
+### OpenAI Embedding Models
+
+|                                                                       | Models                                                      | Use Cases                                                |
+|-----------------------|----------------------|---------------------------|
+| Text similarity: Captures semantic similarity between pieces of text. | text-similarity-{ada, babbage, curie, davinci}-001          | Clustering, regression, anomaly detection, visualization |
+| Text search: Semantic information retrieval over documents.           | text-search-{ada, babbage, curie, davinci}-{query, doc}-001 | Search, context relevance, information retrieval         |
+| Code search: Find relevant code with a query in natural language.     | code-search-{ada, babbage}-{code, text}-001                 | Code search and relevance                                |
+
+### 임베딩
+
+![](img/embedding/pinecone.jpg)
+:::
+
+## (코사인) 유사도
+
+<br>
+
+두 임베딩 벡터 $\mathbf{u}$ 와 $\mathbf{v}$ 는 다음 공식을 사용하여 두 벡터간의 유사도를 구할 수 있다.
+
+<br> <br>
+
+$$
+\begin{equation*}
+\text{코사인 유사도}(\mathbf{u},\mathbf{v}) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}
+= \frac{\sum_{i=1}^n u_i v_i}{\sqrt{\sum_{i=1}^n u_i^2} \sqrt{\sum_{i=1}^n v_i^2}}
+\end{equation*}
+$$
+
+## NLI 자사 검색 엔진 (구글 X) {.smaller}
+
+![](img/google_search.jpg)
+

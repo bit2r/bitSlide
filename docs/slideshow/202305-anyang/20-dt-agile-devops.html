@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>발표자료 | 한국 R 사용자회 – handson</title>
+<title>발표자료 | 한국 R 사용자회 – dt-agile-devops</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,6 +36,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -70,7 +73,7 @@ ga('send', {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -108,97 +111,158 @@ ga('send', {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 
 
-<section id="실습" class="level1">
-<h1>실습</h1>
-<section id="설치" class="level2">
-<h2 class="anchored" data-anchor-id="설치">설치</h2>
+<section id="챗gpt-개발방법론-dt-agile-devops" class="level1 page-columns page-full">
+<h1>챗GPT 개발방법론 <br> DT, Agile, DevOps</h1>
+<section id="디자인-씽킹" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="디자인-씽킹">디자인 씽킹</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <div>
-<pre class="mermaid mermaid-js">flowchart LR
-    
-    subgraph Factory["문서 공장"]
-    direction BT
-        Language --&gt; Document["문서: 마크다운 + 코드"]
-        Markdown --&gt; Document["문서: 마크다운 + 코드"]        
-        IDE   --&gt; Markdown["사람 언어(텍스트): 마크다운"]
-        IDE   --&gt; Language["기계 언어(코드): R, Python, Java, ..."]
-        Quarto   --&gt; IDE["편집기: RStudio/VS코드/쥬피터"]
-        Windows  --&gt; Quarto["쿼토(Quarto):&lt;br&gt; Pandoc 내장"]
-        Silicon["하드웨어"] --&gt; Windows["운영체제:&lt;br&gt;윈도우/리눅스/맥OS"]
-    end
+<pre class="mermaid mermaid-js">graph TD
+style A fill:#F5A623,stroke:#F5A623,stroke-width:2px;
+style B fill:#EFEFEF,stroke:#000,stroke-width:2px;
+style C fill:#EFEFEF,stroke:#000,stroke-width:2px;
+style D fill:#EFEFEF,stroke:#000,stroke-width:2px;
+style E fill:#EFEFEF,stroke:#000,stroke-width:2px;
+style F fill:#EFEFEF,stroke:#000,stroke-width:2px;
 
-    ChatGPT["챗GPT: 콘텐츠"] --&gt; Factory
-    Factory --&gt; Output_PDF["파일(PDF)"]
-    Factory --&gt; Output_HTML["웹문서(HTML)"]
-    Factory --&gt; Output_ePub["전자책(ePub)"]
-    Factory --&gt; Output_Word["MS워드(word)"]
-    Factory --&gt; Output_Hwp["아래한글(HWP) ???"]
-    Factory --&gt; Output_Etc["..."]
+A[공감하기] --&gt; B[문제 정의]
+B[문제 정의] --&gt; C[해결방법 찾기]
+C[해결방법 찾기] --&gt; D[시제품 제작]
+D[시제품 제작] --&gt; E[시험평가]
+E[시험평가] --&gt; F[반복하기]
+F[반복하기] --&gt; B[문제정의]
 
-class Factory nodeStyle
-
-classDef nodeStyle fill:#ffffff,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
-
-click Quarto href "https://quarto.org/docs/download/"
-click IDE href "https://posit.co/download/rstudio-desktop/"
-click Language href "https://cran.rstudio.com/"
+classDef mainNode fill:#F5A623,stroke:#EFEFEF,stroke-width:2px;
+class A mainNode;
 </pre>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="문제-해결" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="문제-해결">문제 해결</h2>
-<p><br> <br> <br> <br> <br> <br></p>
-<div class="columns">
-<div class="column" style="width:33%;">
-<section id="화면공유" class="level3">
-<h3 class="anchored" data-anchor-id="화면공유">화면공유</h3>
-</section>
-</div><div class="column" style="width:30%;">
-<section id="채팅창-질문" class="level3">
-<h3 class="anchored" data-anchor-id="채팅창-질문">채팅창: 질문</h3>
-</section>
-</div><div class="column" style="width:37%;">
-<section id="채팅창-오류-붙여넣기" class="level3">
-<h3 class="anchored" data-anchor-id="채팅창-오류-붙여넣기">채팅창: 오류 붙여넣기</h3>
-</section>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>디자인 씽킹(Design thinking)</strong> 은 공감, 창의성, 실험 등을 강조하는 문제 해결 방법론으로 혁신적인 솔루션을 개발하는 것을 목적으로 합니다.</p>
+</div></div></section>
+<section id="애자일-개발" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="애자일-개발">애자일 개발</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+style A fill:#F5A623,stroke:#F5A623,stroke-width:1px;
+style B fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style C fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style D fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style E fill:#EFEFEF,stroke:#000,stroke-width:1px;
+
+
+A[Product Backlog] --&gt;|Sprint Planning| B[Sprint Backlog]
+B[Sprint Backlog] --&gt;|Daily Scrum| C[Development]
+C[Development] --&gt;|Sprint Review| D[Product Increment]
+D[Product Increment] --&gt;|Sprint Retrospective| E[Process Improvement]
+E[Process Improvement] --&gt;|Backlog Refinement| A[Product Backlog]
+
+classDef mainNode fill:#4DB6AC,stroke:#000,stroke-width:1px;
+class A mainNode;
+classDef subNode fill:#FFF,stroke:#000,stroke-width:1px;
+class B,C,D,E subNode;
+classDef arrow stroke:#000,stroke-width:1px;
+class B,C,D,E arrow;
+</pre>
 </div>
 </div>
-</section>
-<section id="온라인-날적이" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="온라인-날적이">온라인 날적이</h2>
-<blockquote class="blockquote">
-<p>바로가기: <a href="https://bit.ly/42QwEbG" class="uri">https://bit.ly/42QwEbG</a></p>
-</blockquote>
-<ul>
-<li>목적: 챗GPT 디지털 글쓰기</li>
-<li>신청: 경기도평생학습포털 지식(GSEEK) <a href="https://www.gseek.kr/">지식홈페이지</a></li>
-<li>강의 PPT: https://r2bit.com/bitSlide/
-<ul>
-<li><a href="https://r2bit.com/bitSlide/chatGPT_gseek_20230530.html">강의슬라이드</a></li>
-</ul></li>
-<li>강의 교재: https://r2bit.com/chatGPT/</li>
-<li>실습 URL: https://r2bit.com/gpt-edu/</li>
-<li>챗GPT
-<ul>
-<li>OpenAI 챗GPT: https://chat.openai.com/chat</li>
-<li>MS(뉴빙): http://bing.com/?/ai</li>
-<li>MS(뉴빙 이미지 작성자) : https://www.bing.com/images/create</li>
-<li>네이버 클로버 OCR : https://clova.ai/ocr/</li>
-<li>카카오 B Edit: https://bedit.kakaobrain.com/</li>
-</ul></li>
-<li>사례: <a href="https://r2bit.com/curriculum/">데이터 과학 교재</a></li>
-</ul>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><strong>애자일(agile)</strong>은 개인과 상호작용, 작동하는 소프트웨어, 고객과의 협력, 변화에 대응하는 것을 가치로 두는 반복적이고 유연한 소프트웨어 개발 접근 방식입니다.</p>
+</div></div></section>
+<section id="데브옵스devops" class="level2 smaller page-columns page-full">
+<h2 class="smaller anchored" data-anchor-id="데브옵스devops">데브옵스(DevOps)</h2>
+<div class="cell" data-fig-height="6">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+style A fill:#F5A623,stroke:#F5A623,stroke-width:1px;
+style B fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style C fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style D fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style E fill:#EFEFEF,stroke:#000,stroke-width:1px;
+style F fill:#EFEFEF,stroke:#000,stroke-width:1px;
+
+A["계획 (Plan)"] --&gt;|Code| B[Code]
+B[Code] --&gt;|Build| C[Build]
+C[Build] --&gt;|Test| D[Test]
+D[Test] --&gt;|Deploy| E[Deploy]
+E[Deploy] --&gt;|Operate| F["운영 (Operate)"]
+F["운영 (Operate)"] --&gt;|Monitor| A["계획 (Plan)"]
+
+classDef mainNode fill:#4DB6AC,stroke:#000,stroke-width:1px;
+class A mainNode;
+classDef subNode fill:#FFF,stroke:#000,stroke-width:1px;
+class B,C,D,E,F subNode;
+classDef arrow stroke:#000,stroke-width:1px;
+class B,C,D,E,F arrow;
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>“<strong>데브옵스(DevOps)</strong>는 자동화, 협업, 모니터링을 통해 소프트웨어 개발과 IT 운영을 결합하여 빠르고 안정적인 소프트웨어 제공을 가능하게 하는 소프트웨어 개발 방법론입니다.”</p>
+</div></div></section>
+<section id="dt-agile-devops" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="dt-agile-devops">DT → Agile → DevOps</h2>
+<p><br></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">챗GPT → DT → Agile → DevOps</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">DAD</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">챗GPT 디지털 글쓰기</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">쉘 프로그래밍</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT-DT-Agile-DevOps.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/chatGPT-DT-Agile-DevOps.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/dt-agile-devops.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/dt-agile-devops.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT-writing.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/chatGPT-writing.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT-writing-shell.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/chatGPT-writing-shell.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -439,6 +503,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 

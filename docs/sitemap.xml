@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-05-19T08:56:51.429Z</lastmod>
+    <lastmod>2023-05-22T07:46:41.334Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-seoul-r-meetup/index.html</loc>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/chatGPT_Seoul_HS_20230522.html</loc>
-    <lastmod>2023-05-19T03:45:42.599Z</lastmod>
+    <lastmod>2023-05-22T07:30:21.952Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-gpt/22-ai-app-dev.html</loc>
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/chatGPT_gseek_20230530.html</loc>
-    <lastmod>2023-05-19T09:04:45.304Z</lastmod>
+    <lastmod>2023-05-22T07:46:02.216Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-seoul/00-open-source-software.html</loc>
@@ -194,7 +194,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-gseek/40-handson.html</loc>
-    <lastmod>2023-05-19T08:56:38.500Z</lastmod>
+    <lastmod>2023-05-22T07:28:28.590Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-gseek/reference.html</loc>
@@ -203,5 +203,69 @@
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-gseek/seoul-r-meeup.html</loc>
     <lastmod>2023-05-19T08:56:39.597Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/chatGPT_anyang_20230530.html</loc>
+    <lastmod>2023-05-22T07:47:05.227Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/00-open-source-software.html</loc>
+    <lastmod>2023-05-22T07:28:32.129Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/00-who-am-i.html</loc>
+    <lastmod>2023-05-22T07:34:23.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/01-life-in-action.html</loc>
+    <lastmod>2023-05-22T07:28:01.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/02-office-interface.html</loc>
+    <lastmod>2023-05-22T07:28:01.895Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/03-user-in-practice.html</loc>
+    <lastmod>2023-05-22T07:28:16.312Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/04-limitation.html</loc>
+    <lastmod>2023-05-22T07:28:17.232Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/20-LLM-chatGPT.html</loc>
+    <lastmod>2023-05-22T07:28:18.741Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/20-dt-agile-devops.html</loc>
+    <lastmod>2023-05-22T07:28:19.380Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/21-prompt-engineering.html</loc>
+    <lastmod>2023-05-22T07:28:25.240Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/22-ai-app-dev.html</loc>
+    <lastmod>2023-05-22T07:28:25.973Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/misinformation.html</loc>
+    <lastmod>2023-05-22T07:28:26.706Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/reference.html</loc>
+    <lastmod>2023-05-22T07:28:27.325Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/seoul-r-meeup.html</loc>
+    <lastmod>2023-05-22T07:28:27.951Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/office-interface.html</loc>
+    <lastmod>2023-05-22T07:41:59.483Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/prompt-engineering.html</loc>
+    <lastmod>2023-05-22T07:45:20.087Z</lastmod>
   </url>
 </urlset>

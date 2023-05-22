@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>발표자료 | 한국 R 사용자회 – handson</title>
+<title>발표자료 | 한국 R 사용자회 – reference</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -63,9 +82,6 @@ ga('send', {
   'anonymizeIp': true,
 });
 </script>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -114,94 +130,13 @@ ga('send', {
 
 
 
-<section id="실습" class="level1">
-<h1>실습</h1>
-<section id="설치" class="level2">
-<h2 class="anchored" data-anchor-id="설치">설치</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-    
-    subgraph Factory["문서 공장"]
-    direction BT
-        Language --&gt; Document["문서: 마크다운 + 코드"]
-        Markdown --&gt; Document["문서: 마크다운 + 코드"]        
-        IDE   --&gt; Markdown["사람 언어(텍스트): 마크다운"]
-        IDE   --&gt; Language["기계 언어(코드): R, Python, Java, ..."]
-        Quarto   --&gt; IDE["편집기: RStudio/VS코드/쥬피터"]
-        Windows  --&gt; Quarto["쿼토(Quarto):&lt;br&gt; Pandoc 내장"]
-        Silicon["하드웨어"] --&gt; Windows["운영체제:&lt;br&gt;윈도우/리눅스/맥OS"]
-    end
+<section id="참고문헌" class="level1">
+<h1>참고문헌</h1>
+<div id="refs" role="list">
 
-    ChatGPT["챗GPT: 콘텐츠"] --&gt; Factory
-    Factory --&gt; Output_PDF["파일(PDF)"]
-    Factory --&gt; Output_HTML["웹문서(HTML)"]
-    Factory --&gt; Output_ePub["전자책(ePub)"]
-    Factory --&gt; Output_Word["MS워드(word)"]
-    Factory --&gt; Output_Hwp["아래한글(HWP) ???"]
-    Factory --&gt; Output_Etc["..."]
-
-class Factory nodeStyle
-
-classDef nodeStyle fill:#ffffff,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
-
-click Quarto href "https://quarto.org/docs/download/"
-click IDE href "https://posit.co/download/rstudio-desktop/"
-click Language href "https://cran.rstudio.com/"
-</pre>
 </div>
-</div>
-</div>
-</div>
-</section>
-<section id="문제-해결" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="문제-해결">문제 해결</h2>
-<p><br> <br> <br> <br> <br> <br></p>
-<div class="columns">
-<div class="column" style="width:33%;">
-<section id="화면공유" class="level3">
-<h3 class="anchored" data-anchor-id="화면공유">화면공유</h3>
-</section>
-</div><div class="column" style="width:30%;">
-<section id="채팅창-질문" class="level3">
-<h3 class="anchored" data-anchor-id="채팅창-질문">채팅창: 질문</h3>
-</section>
-</div><div class="column" style="width:37%;">
-<section id="채팅창-오류-붙여넣기" class="level3">
-<h3 class="anchored" data-anchor-id="채팅창-오류-붙여넣기">채팅창: 오류 붙여넣기</h3>
-</section>
-</div>
-</div>
-</section>
-<section id="온라인-날적이" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="온라인-날적이">온라인 날적이</h2>
-<blockquote class="blockquote">
-<p>바로가기: <a href="https://bit.ly/42QwEbG" class="uri">https://bit.ly/42QwEbG</a></p>
-</blockquote>
-<ul>
-<li>목적: 챗GPT 디지털 글쓰기</li>
-<li>신청: 경기도평생학습포털 지식(GSEEK) <a href="https://www.gseek.kr/">지식홈페이지</a></li>
-<li>강의 PPT: https://r2bit.com/bitSlide/
-<ul>
-<li><a href="https://r2bit.com/bitSlide/chatGPT_gseek_20230530.html">강의슬라이드</a></li>
-</ul></li>
-<li>강의 교재: https://r2bit.com/chatGPT/</li>
-<li>실습 URL: https://r2bit.com/gpt-edu/</li>
-<li>챗GPT
-<ul>
-<li>OpenAI 챗GPT: https://chat.openai.com/chat</li>
-<li>MS(뉴빙): http://bing.com/?/ai</li>
-<li>MS(뉴빙 이미지 작성자) : https://www.bing.com/images/create</li>
-<li>네이버 클로버 OCR : https://clova.ai/ocr/</li>
-<li>카카오 B Edit: https://bedit.kakaobrain.com/</li>
-</ul></li>
-<li>사례: <a href="https://r2bit.com/curriculum/">데이터 과학 교재</a></li>
-</ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
