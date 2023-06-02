@@ -1,5 +1,24 @@
 # Internal slide decks
 
+
+
+- title: "챗GPT와 데이터 사이언스"
+  subtitle: "데이터 역량강화 특강"
+  author: "이광춘"
+  date: 2023-07-04
+  image: img/kwangmyung_logo.jpg
+  path: chatGPT_kwangmyung_20230704.qmd
+  categories:
+    - "4차 산업혁명"  
+    - "인공지능 (AI)"
+    - "한국 R 사용자회"
+    - "광명시"
+    - "빅데이터"
+    - "Text-to-X"
+    - "데이터 역량강화"
+    - "데이터 과학"
+    - "사무 자동화/지능화"
+
 - title: "챗GPT"
   subtitle: "챗GPT 4차 산업혁명"
   author: "이광춘"
