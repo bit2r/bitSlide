@@ -1,6 +1,6 @@
 ---
 title: "챗GPT"
-subtitle: "챗GPT 실무교육"
+subtitle: "챗GPT 4차 산업혁명"
 author: "이광춘/신종화"
 institute: "비영리법인 한국 R 사용자회"
 date: 2023-06-19
