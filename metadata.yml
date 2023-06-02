@@ -1,6 +1,24 @@
 # Internal slide decks
 
 - title: "챗GPT"
+  subtitle: "챗GPT 4차 산업혁명"
+  author: "이광춘"
+  date: 2023-06-19
+  image: img/gg_hrd.webp
+  path: chatGPT_gg_edu_20230619.qmd
+  categories:
+    - "4차 산업혁명"  
+    - "인공지능 (AI)"
+    - "한국 R 사용자회"
+    - "경기도"
+    - "인재개발원 신규자"
+    - "Text-to-X"
+    - "프롬프트 엔지니어링"
+    - "챗GPT 활용"
+    - "사무 자동화/지능화"
+
+
+- title: "챗GPT"
   subtitle: "챗GPT 실무교육"
   author: "이광춘"
   date: 2023-05-30

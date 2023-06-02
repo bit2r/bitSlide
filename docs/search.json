@@ -4253,7 +4253,7 @@
     "href": "chatGPT_anyang_20230530.html#보안사고",
     "title": "챗GPT",
     "section": "보안사고",
-    "text": "보안사고\n\n삼성전자와 이탈리아보안과 효율\n\n\n\n\n삼성전자\n\n삼성전자 DS 부문 임직원 A씨는 반도체 설비 계측 데이터베이스(DB) 다운로드 프로그램의 소스 코드를 실행 중 오류를 확인했다. 문제가 된 소스 코드 전부를 복사해 챗GPT에 입력, 해결 방법을 문의했다. 삼성전자 설비 계측과 관련한 소스 코드가 오픈AI 학습 데이터로 입력된 셈이다.\n\n\n임직원 B씨는 수율·불량 설비 파악을 위해 작성한 프로그램 코드를 챗GPT에 입력하는 사고를 냈다. 관련 소스 전체를 챗GPT에 입력하고 코드 최적화를 요청했다. 임직원 C씨는 스마트폰으로 녹음한 회의 내용을 네이버 클로바 애플리케이션(앱)을 통해 문서 파일로 변환한 뒤 챗GPT에 입력했다. 회의록 작성 요청이 목적이다.\n\n\n이탈리아\n\n로이터 통신 등에 따르면 이탈리아 데이터 보호청은 “챗GPT가 이탈리아의 개인정보 보호 기준과 규정을 충족할 때까지 서비스 접속을 일시적으로 차단할 것”이라고 밝혔다.\n\n\n접속 차단 이유는 개인정보 침해 우려 때문이다. 이탈리아 당국은 챗GPT가 알고리즘 학습을 이유로, 개인정보를 대량으로 수집하고 저장하는 행위를 정당화할 법적 근거가 없다고 지적했다. 보호청은 챗GPT 개발사 오픈AI가 20일 이내에 해결책을 내놓지 않으면 전 세계 매출액의 최대 4%에 달하는 벌금을 물게 될 것이라고 경고하기도 했다.\n\n\n\n\n\n보안 vs 효율 을 높고 많은 공공기관을 비롯한 기업들이 고민을 하고 있다. 거대언어모형(LLM)에 기반하여 모든 것을 자체 개발하면 상관이 없으나 현실적으로 GPT-3/3.5/4 모형을 갖춘 조직이 전무하지만, 이미 대다수의 사람이 오픈AI 챗GPT를 맛보았기 때문에 생산성 향상을 그냥 두고 넘어가기도 어려운 상황이다. 이런 점에서 챗GPT 제한적 사용이 현재시점(’23년 3월) 최선으로 보이며 점차 오픈소스 거대언어모형(LLM)과 전략적 제휴를 통한 챗GPT 사용이 중장기적 추진방향으로 자리 잡고 있다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n정두용 (2023-03-30), “우려가 현실로…삼성전자, 챗GPT 빗장 풀자마자 ‘오남용’ 속출”, 이코노미스트\n민재용 (2023.04.02), “이탈리아도 챗GPT ‘차단’…서방 국가중 처음”, 한국일보\n이동수 (2023.04.02.), “대기업 회의 내용 유출… ‘챗GPT 기밀 유출’ 우려가 현실로”, 세계일보"
+    "text": "보안사고\n\n삼성전자와 이탈리아보안과 효율\n\n\n\n\n삼성전자\n\n삼성전자 DS 부문 임직원 A씨는 반도체 설비 계측 데이터베이스(DB) 다운로드 프로그램의 소스 코드를 실행 중 오류를 확인했다. 문제가 된 소스 코드 전부를 복사해 챗GPT에 입력, 해결 방법을 문의했다. 삼성전자 설비 계측과 관련한 소스 코드가 오픈AI 학습 데이터로 입력된 셈이다.\n\n\n임직원 B씨는 수율·불량 설비 파악을 위해 작성한 프로그램 코드를 챗GPT에 입력하는 사고를 냈다. 관련 소스 전체를 챗GPT에 입력하고 코드 최적화를 요청했다. 임직원 C씨는 스마트폰으로 녹음한 회의 내용을 네이버 클로바 애플리케이션(앱)을 통해 문서 파일로 변환한 뒤 챗GPT에 입력했다. 회의록 작성 요청이 목적이다.\n\n\n이탈리아\n\n로이터 통신 등에 따르면 이탈리아 데이터 보호청은 “챗GPT가 이탈리아의 개인정보 보호 기준과 규정을 충족할 때까지 서비스 접속을 일시적으로 차단할 것”이라고 밝혔다.\n\n\n접속 차단 이유는 개인정보 침해 우려 때문이다. 이탈리아 당국은 챗GPT가 알고리즘 학습을 이유로, 개인정보를 대량으로 수집하고 저장하는 행위를 정당화할 법적 근거가 없다고 지적했다. 보호청은 챗GPT 개발사 오픈AI가 20일 이내에 해결책을 내놓지 않으면 전 세계 매출액의 최대 4%에 달하는 벌금을 물게 될 것이라고 경고하기도 했다.\n\n\n\n\n\n보안 vs 효율 을 높고 많은 공공기관을 비롯한 기업들이 고민을 하고 있다. 거대언어모형(LLM)에 기반하여 모든 것을 자체 개발하면 상관이 없으나 현실적으로 GPT-3/3.5/4 모형을 갖춘 조직이 전무하지만, 이미 대다수의 사람이 오픈AI 챗GPT를 맛보았기 때문에 생산성 향상을 그냥 두고 넘어가기도 어려운 상황이다. 이런 점에서 챗GPT 제한적 사용이 현재시점(’23년 3월) 최선으로 보이며 점차 오픈소스 거대언어모형(LLM)과 전략적 제휴를 통한 챗GPT 사용이 중장기적 추진방향으로 자리 잡고 있다.\n\n\n\n\n\n\n\n\n\n\n\n정두용 (2023-03-30), “우려가 현실로…삼성전자, 챗GPT 빗장 풀자마자 ‘오남용’ 속출”, 이코노미스트\n민재용 (2023.04.02), “이탈리아도 챗GPT ‘차단’…서방 국가중 처음”, 한국일보\n이동수 (2023.04.02.), “대기업 회의 내용 유출… ‘챗GPT 기밀 유출’ 우려가 현실로”, 세계일보"
   },
   {
     "objectID": "slideshow/202305-anyang/office-interface.html",
@@ -4408,5 +4408,187 @@
     "title": "챗GPT 개발자  프롬프트 디자인/엔지니어링",
     "section": "",
     "text": "삼성전자와 이탈리아보안과 효율\n\n\n\n\n\n\n\n삼성전자 DS 부문 임직원 A씨는 반도체 설비 계측 데이터베이스(DB) 다운로드 프로그램의 소스 코드를 실행 중 오류를 확인했다. 문제가 된 소스 코드 전부를 복사해 챗GPT에 입력, 해결 방법을 문의했다. 삼성전자 설비 계측과 관련한 소스 코드가 오픈AI 학습 데이터로 입력된 셈이다.\n\n\n임직원 B씨는 수율·불량 설비 파악을 위해 작성한 프로그램 코드를 챗GPT에 입력하는 사고를 냈다. 관련 소스 전체를 챗GPT에 입력하고 코드 최적화를 요청했다. 임직원 C씨는 스마트폰으로 녹음한 회의 내용을 네이버 클로바 애플리케이션(앱)을 통해 문서 파일로 변환한 뒤 챗GPT에 입력했다. 회의록 작성 요청이 목적이다.\n\n\n\n\n\n\n로이터 통신 등에 따르면 이탈리아 데이터 보호청은 “챗GPT가 이탈리아의 개인정보 보호 기준과 규정을 충족할 때까지 서비스 접속을 일시적으로 차단할 것”이라고 밝혔다.\n\n\n접속 차단 이유는 개인정보 침해 우려 때문이다. 이탈리아 당국은 챗GPT가 알고리즘 학습을 이유로, 개인정보를 대량으로 수집하고 저장하는 행위를 정당화할 법적 근거가 없다고 지적했다. 보호청은 챗GPT 개발사 오픈AI가 20일 이내에 해결책을 내놓지 않으면 전 세계 매출액의 최대 4%에 달하는 벌금을 물게 될 것이라고 경고하기도 했다.\n\n\n\n\n\n\n보안 vs 효율 을 높고 많은 공공기관을 비롯한 기업들이 고민을 하고 있다. 거대언어모형(LLM)에 기반하여 모든 것을 자체 개발하면 상관이 없으나 현실적으로 GPT-3/3.5/4 모형을 갖춘 조직이 전무하지만, 이미 대다수의 사람이 오픈AI 챗GPT를 맛보았기 때문에 생산성 향상을 그냥 두고 넘어가기도 어려운 상황이다. 이런 점에서 챗GPT 제한적 사용이 현재시점(’23년 3월) 최선으로 보이며 점차 오픈소스 거대언어모형(LLM)과 전략적 제휴를 통한 챗GPT 사용이 중장기적 추진방향으로 자리 잡고 있다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n정두용 (2023-03-30), “우려가 현실로…삼성전자, 챗GPT 빗장 풀자마자 ‘오남용’ 속출”, 이코노미스트\n민재용 (2023.04.02), “이탈리아도 챗GPT ‘차단’…서방 국가중 처음”, 한국일보\n이동수 (2023.04.02.), “대기업 회의 내용 유출… ‘챗GPT 기밀 유출’ 우려가 현실로”, 세계일보"
+  },
+  {
+    "objectID": "chatGPT_anyang_20230530.html#스프레드쉬트",
+    "href": "chatGPT_anyang_20230530.html#스프레드쉬트",
+    "title": "챗GPT",
+    "section": "스프레드쉬트",
+    "text": "스프레드쉬트\n\n\n\n\n왜 엑셀(?)\n데이터 기본기\n챗GPT 엑셀"
+  },
+  {
+    "objectID": "chatGPT_anyang_20230530.html#스프레드쉬트-1",
+    "href": "chatGPT_anyang_20230530.html#스프레드쉬트-1",
+    "title": "챗GPT",
+    "section": "스프레드쉬트",
+    "text": "스프레드쉬트\n\n\n\n\n왜 엑셀(?)\n데이터 기본기\n챗GPT 엑셀\n\n\n\n\n\n왜 엑셀(?)"
+  },
+  {
+    "objectID": "chatGPT_anyang_20230530.html#스프레드쉬트-2",
+    "href": "chatGPT_anyang_20230530.html#스프레드쉬트-2",
+    "title": "챗GPT",
+    "section": "스프레드쉬트",
+    "text": "스프레드쉬트\n\n\n\n\n왜 엑셀(?)\n데이터 기본기\n챗GPT 엑셀\n\n\n\n\n\n데이터 기본기"
+  },
+  {
+    "objectID": "chatGPT_anyang_20230530.html#스프레드쉬트-3",
+    "href": "chatGPT_anyang_20230530.html#스프레드쉬트-3",
+    "title": "챗GPT",
+    "section": "스프레드쉬트",
+    "text": "스프레드쉬트\n\n\n\n\n왜 엑셀(?)\n데이터 기본기\n챗GPT 엑셀\n\n\n\n\n\n챗GPT 엑셀"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#목차",
+    "href": "chatGPT_gg_edu_20230619.html#목차",
+    "title": "챗GPT",
+    "section": "목차",
+    "text": "목차\n\n강사소개 및 미트업 안내\n챗GPT 기본기\n챗GPT 시대 오피스 전쟁 (사무 자동화 → 사무 지능화)\n챗GPT 체험 삶의 현장\n프롬프트 엔지니어링 (Text-to-X)\n챗GPT 실습\n질의응답"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#강사소개-강의-개요",
+    "href": "chatGPT_gg_edu_20230619.html#강사소개-강의-개요",
+    "title": "챗GPT",
+    "section": "강사소개 & 강의 개요",
+    "text": "강사소개 & 강의 개요\n\n강사소개강의개요\n\n\n\n\n\n\nAI 아바타\n\n\n\n\n주요경력 및 학력\n\n(현) 비영리법인 한국 R 사용자회: 기술 이사\n(현) 국가교육위원회 전문위원: 과학/기술 분과\n(현) 건국대학교 챗GPT 데이터 사이언스 과정: 외래교수\n(전) TCS: GS 칼텍스 디지털 아카데미 강사\n(전) 연세대학교 데이터 사이언스: 겸임교수\n(전) 삼정 KPMG: Lighthouse AI 기술총괄\n(전) 웹젠: 데이터 과학자 TD\n(전) 현대모비스: 차량용 반도체 개발구매 \n(전) 현대자동차: VAATZ / FTA \n\n\n\nKAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공\nRStudio Instructor - Tidyverse\nSeoul R Meetup Organizer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n강의상세\n\n날짜 : 2023. 6. 19.(월) 13:00~15:00\n장소 : 비대면\n대상 : 경기도 신규임용 공무원\n내용\n\n4차 산업혁명\n챗GPT\nText-to-X\n사무 자동화 → 사무 지능화\n프롬프트 엔지니어링"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#서울-r-미트업",
+    "href": "chatGPT_gg_edu_20230619.html#서울-r-미트업",
+    "title": "챗GPT",
+    "section": "서울 R 미트업",
+    "text": "서울 R 미트업\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n참여와 연대\n\n서울R미트업 meetup.com: link\n\n23년 4월 서울 R 미트업: link\n23년 5월 서울 R 미트업: link\n23년 6월 서울 R 미트업: link\n23년 7월 서울 R 미트업: 준비중\n\n세계 R 미트업 현황 (Global R Meetup Dashboard): link\n한국 R 사용자회 (Korea R User Group): link\n한국 R 컨퍼런스 (Korea R Conference): link\n유튜브 채널 (Youtube Channel): link\n페이스북 그룹 (Facebook Group): link"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#참여와-연대",
+    "href": "chatGPT_gg_edu_20230619.html#참여와-연대",
+    "title": "챗GPT",
+    "section": "참여와 연대",
+    "text": "참여와 연대\n\n서울R미트업 meetup.com: link\n\n23년 4월 서울 R 미트업: link\n23년 5월 서울 R 미트업: link\n23년 6월 서울 R 미트업: link\n23년 7월 서울 R 미트업: 준비중\n\n세계 R 미트업 현황 (Global R Meetup Dashboard): link\n한국 R 사용자회 (Korea R User Group): link\n한국 R 컨퍼런스 (Korea R Conference): link\n유튜브 채널 (Youtube Channel): link\n페이스북 그룹 (Facebook Group): link"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#구글-검색의-종말",
+    "href": "chatGPT_gg_edu_20230619.html#구글-검색의-종말",
+    "title": "챗GPT",
+    "section": "구글 검색의 종말(?)",
+    "text": "구글 검색의 종말(?)"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#글쓰기-역사",
+    "href": "chatGPT_gg_edu_20230619.html#글쓰기-역사",
+    "title": "챗GPT",
+    "section": "글쓰기 역사",
+    "text": "글쓰기 역사\n\n\n\n\n\n\n\n\n\n문자와 종이 역사"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#오피스-전쟁",
+    "href": "chatGPT_gg_edu_20230619.html#오피스-전쟁",
+    "title": "챗GPT",
+    "section": "오피스 전쟁",
+    "text": "오피스 전쟁\n\n\n\n\n\n\n\n\n\n\n항목\nMS 오피스 1\n구글 오피스 2\n리브레 오피스 3\n한컴 오피스 4\n\n\n\n\n문서 작성 및 편집\n워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공\n구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공\n라이터, 캘크, 임프레스 등의 데스크톱 앱 제공\n한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공\n\n\n협업 및 공유\n원드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능\n드롭박스나 구글 드라이브와 연동하여 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n\n\n이메일 및 채팅\nOutlook을 통해 비즈니스 메일 제공. Teams을 통해 채팅 및 화상 회의 가능\nGmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능\n이메일 및 채팅 기능 없음\n이메일 및 채팅 기능 없음\n\n\n가격\n1인당 월 5~20달러 다양한 요금제 제공. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작\n1인당 월 6~18달러까지 다양한 요금제 제공\n완전 무료\n개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요\n\n\n\nhttps://www.microsoft.com/ko-kr/microsoft-365/businesshttps://workspace.google.com/intl/ko_kr/https://www.libreoffice.org/https://www.hancom.com/product/productMain.do"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#오피스-전쟁-패러다임-충돌",
+    "href": "chatGPT_gg_edu_20230619.html#오피스-전쟁-패러다임-충돌",
+    "title": "챗GPT",
+    "section": "오피스 전쟁: 패러다임 충돌",
+    "text": "오피스 전쟁: 패러다임 충돌"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#챗gpt-시대-사무실",
+    "href": "chatGPT_gg_edu_20230619.html#챗gpt-시대-사무실",
+    "title": "챗GPT",
+    "section": "챗GPT 시대 사무실",
+    "text": "챗GPT 시대 사무실\n\n챗GPT 사용원인인터페이스챗GPT AS-IS챗GPT TO-BE"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#챗gpt가-이룬-대통합",
+    "href": "chatGPT_gg_edu_20230619.html#챗gpt가-이룬-대통합",
+    "title": "챗GPT",
+    "section": "챗GPT가 이룬 대통합",
+    "text": "챗GPT가 이룬 대통합"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#인터페이스-interface",
+    "href": "chatGPT_gg_edu_20230619.html#인터페이스-interface",
+    "title": "챗GPT",
+    "section": "인터페이스 (Interface)",
+    "text": "인터페이스 (Interface)\n\n진화과정CLIGUIWUIMUILUI\n\n\n  \n\n\n\n\nflowchart TB\n    \n    subgraph A[\"사용자 인터페이스\"]\n    direction LR\n        CLI[\"CLI&lt;br&gt;Command Line Interface&lt;br&gt; 1950~\"]     --&gt; GUI[\"GUI &lt;br&gt; Graphic User Inferface&lt;br&gt; 1970~\"]\n        GUI               --&gt; WI[\"Web Interface &lt;br&gt; 1994~\"]\n        WI --&gt; MI[\"Mobile Interface &lt;br&gt; 2007~\"]\n        MI --&gt; NUI[\"LUI &lt;br&gt; Language User Interface &lt;br&gt; 2023~\"]\n\n    end\n\n\nclass A nodeStyle\n\nclassDef nodeStyle fill:#fcfbfa,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://en.wikipedia.org/wiki/Computer_terminal\n\n\n\n\n\n\n\n\n\n\nhttps://kartsci.org/kocomu/computer-history/graphical-user-interface-history/\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.huffpost.com/entry/uber-your-way-through-cit_b_1205446\n\n\n\n\n\n\n\n\n\nhttps://twitter.com/sama/status/1515764302904377344"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#챗gpt-nui",
+    "href": "chatGPT_gg_edu_20230619.html#챗gpt-nui",
+    "title": "챗GPT",
+    "section": "챗GPT NUI",
+    "text": "챗GPT NUI\n\n1:1 채팅클릭하여 완료자동완성명령 팔레트\n\n\n\n챗GPT (ChatGPT)\n\n\n\n\n\n\n\n\n\nOpenAI Playground\n\n\n\n\n\n\n\n\n\nGitHub Copilot\n\n\n\n\n\n\n\nhttps://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e\n\n\n\n\n\n사례\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://blog.replit.com/clui\nhttps://blog.replit.com/ai\n\n\nCommand Palette 역사\n\n60년대로 거슬러 올라가는 명령 팔레트는 최근 기술 업계에서 다시 인기를 얻고 있으며 사용자 중심 소프트웨어의 필수적인 부분으로 간주됨.\nCLI는 개인용 컴퓨터가 대중화되기 전 초기 컴퓨팅을 지배했으며 사용자가 시스템을 작동하기 위해 특정 명령을 알아야 했다. 1984년 Apple의 매킨토시와 함께 도입된 그래픽 사용자 인터페이스(GUI)는 중요한 혁신으로 여겨졌지만, 소프트웨어의 복잡성이 증가함에 따라 GUI만으로는 탐색하기가 점점 더 어려워졌다.\n사용자가 항목 이름의 짧은 약어입력하여 앱과 파일을 검색할 수 있는 런처가 점점 더 보편화 되었다. 예를 들어 2001년에 출시된 Mac OS X용 LaunchBar, Quicksilver, 2005년에 출시된 Apple의 시스템 전체 Spotlight가 있다. 검색과 CLI의 결합은 Command Palette의 탄생으로 이어졌다.\n오늘날 우리가 알고 있는 현대식 명령 팔레트는 2011년 Sublime Text 2 베타 Joe Skinner가 처음 소개. 명령줄 사용에 익숙한 프로그래머들이 단축키를 모두 외울 필요 없이 더 빠르게 작업할 수 있어 중요한 발전이 됨."
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#소프트웨어-3.0",
+    "href": "chatGPT_gg_edu_20230619.html#소프트웨어-3.0",
+    "title": "챗GPT",
+    "section": "소프트웨어 3.0",
+    "text": "소프트웨어 3.0\n\n\n\n\n\n\n\n\nAndrej Karpathy\n\n소프트웨어 1.0: 코드 작성을 통한 프로그래밍\n소프트웨어 2.0: 데이터셋 큐레이팅을 통한 프로그래밍\n소프트웨어 3.0: 프롬프트 엔지니어링을 통한 프로그래밍 (LLM에 입력으로 제공, GPT 스타일)"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#프롬프트-공학",
+    "href": "chatGPT_gg_edu_20230619.html#프롬프트-공학",
+    "title": "챗GPT",
+    "section": "프롬프트 공학",
+    "text": "프롬프트 공학\n\n언어(?)텍스트 생성언어 모형프롬프트첫인사\n\n\n\n\n\nThe hottest new programming language is English\n\n— Andrej Karpathy ((karpathy?)) January 24, 2023"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#프롬프트-공학-사례",
+    "href": "chatGPT_gg_edu_20230619.html#프롬프트-공학-사례",
+    "title": "챗GPT",
+    "section": "프롬프트 공학 사례",
+    "text": "프롬프트 공학 사례\n\n\n\n\n\n\n\n\n서울 디지털재단에서 챗GPT 활용 사례집을 업무활용과 일상생활/창작활동/교육분야 로 나눠 두번에 걸쳐 보고서를 발간했다. (\"ChatGPT활용연구TFT, 2023) (ChatGPT활용연구TFT, 2023) 최근에는 교육분야 전반에 챗GPT 활용 책도 출간되었다. (Skrabut, 2023)"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#개발자를-위한-프롬프트-공학",
+    "href": "chatGPT_gg_edu_20230619.html#개발자를-위한-프롬프트-공학",
+    "title": "챗GPT",
+    "section": "개발자를 위한 프롬프트 공학",
+    "text": "개발자를 위한 프롬프트 공학\n\n두가지 원칙NLP 개발업무\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n프롬프트 공학\n고급 프롬프트 공학\n(개발자) 프롬프트 공학"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#배경---프롬프트-엔지니어링",
+    "href": "chatGPT_gg_edu_20230619.html#배경---프롬프트-엔지니어링",
+    "title": "챗GPT",
+    "section": "배경 - 프롬프트 엔지니어링",
+    "text": "배경 - 프롬프트 엔지니어링\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n프롬프트 엔지니어링 (Context Stuffing)\n\n\n\n\n\n\n챗GPT시대 데이터 과학 - 파머 펭귄"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#보안사고",
+    "href": "chatGPT_gg_edu_20230619.html#보안사고",
+    "title": "챗GPT",
+    "section": "보안사고",
+    "text": "보안사고\n\n삼성전자와 이탈리아보안과 효율\n\n\n\n\n삼성전자\n\n삼성전자 DS 부문 임직원 A씨는 반도체 설비 계측 데이터베이스(DB) 다운로드 프로그램의 소스 코드를 실행 중 오류를 확인했다. 문제가 된 소스 코드 전부를 복사해 챗GPT에 입력, 해결 방법을 문의했다. 삼성전자 설비 계측과 관련한 소스 코드가 오픈AI 학습 데이터로 입력된 셈이다.\n\n\n임직원 B씨는 수율·불량 설비 파악을 위해 작성한 프로그램 코드를 챗GPT에 입력하는 사고를 냈다. 관련 소스 전체를 챗GPT에 입력하고 코드 최적화를 요청했다. 임직원 C씨는 스마트폰으로 녹음한 회의 내용을 네이버 클로바 애플리케이션(앱)을 통해 문서 파일로 변환한 뒤 챗GPT에 입력했다. 회의록 작성 요청이 목적이다.\n\n\n이탈리아\n\n로이터 통신 등에 따르면 이탈리아 데이터 보호청은 “챗GPT가 이탈리아의 개인정보 보호 기준과 규정을 충족할 때까지 서비스 접속을 일시적으로 차단할 것”이라고 밝혔다.\n\n\n접속 차단 이유는 개인정보 침해 우려 때문이다. 이탈리아 당국은 챗GPT가 알고리즘 학습을 이유로, 개인정보를 대량으로 수집하고 저장하는 행위를 정당화할 법적 근거가 없다고 지적했다. 보호청은 챗GPT 개발사 오픈AI가 20일 이내에 해결책을 내놓지 않으면 전 세계 매출액의 최대 4%에 달하는 벌금을 물게 될 것이라고 경고하기도 했다.\n\n\n\n\n\n보안 vs 효율 을 높고 많은 공공기관을 비롯한 기업들이 고민을 하고 있다. 거대언어모형(LLM)에 기반하여 모든 것을 자체 개발하면 상관이 없으나 현실적으로 GPT-3/3.5/4 모형을 갖춘 조직이 전무하지만, 이미 대다수의 사람이 오픈AI 챗GPT를 맛보았기 때문에 생산성 향상을 그냥 두고 넘어가기도 어려운 상황이다. 이런 점에서 챗GPT 제한적 사용이 현재시점(’23년 3월) 최선으로 보이며 점차 오픈소스 거대언어모형(LLM)과 전략적 제휴를 통한 챗GPT 사용이 중장기적 추진방향으로 자리 잡고 있다.\n\n\n\n\n\n\n\n\n\n\n\n정두용 (2023-03-30), “우려가 현실로…삼성전자, 챗GPT 빗장 풀자마자 ‘오남용’ 속출”, 이코노미스트\n민재용 (2023.04.02), “이탈리아도 챗GPT ‘차단’…서방 국가중 처음”, 한국일보\n이동수 (2023.04.02.), “대기업 회의 내용 유출… ‘챗GPT 기밀 유출’ 우려가 현실로”, 세계일보"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#스프레드쉬트",
+    "href": "chatGPT_gg_edu_20230619.html#스프레드쉬트",
+    "title": "챗GPT",
+    "section": "스프레드쉬트",
+    "text": "스프레드쉬트\n\n\n\n\n왜 엑셀(?)\n데이터 기본기\n챗GPT 엑셀"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#스프레드쉬트-1",
+    "href": "chatGPT_gg_edu_20230619.html#스프레드쉬트-1",
+    "title": "챗GPT",
+    "section": "스프레드쉬트",
+    "text": "스프레드쉬트\n\n\n\n\n왜 엑셀(?)\n데이터 기본기\n챗GPT 엑셀\n\n\n\n\n\n왜 엑셀(?)"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#스프레드쉬트-2",
+    "href": "chatGPT_gg_edu_20230619.html#스프레드쉬트-2",
+    "title": "챗GPT",
+    "section": "스프레드쉬트",
+    "text": "스프레드쉬트\n\n\n\n\n왜 엑셀(?)\n데이터 기본기\n챗GPT 엑셀\n\n\n\n\n\n데이터 기본기"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#스프레드쉬트-3",
+    "href": "chatGPT_gg_edu_20230619.html#스프레드쉬트-3",
+    "title": "챗GPT",
+    "section": "스프레드쉬트",
+    "text": "스프레드쉬트\n\n\n\n\n왜 엑셀(?)\n데이터 기본기\n챗GPT 엑셀\n\n\n\n\n\n챗GPT 엑셀"
   }
 ]

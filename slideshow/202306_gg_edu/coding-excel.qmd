@@ -1,0 +1,78 @@
+# (코딩) 엑셀
+
+## 스프레드쉬트 {auto-animate="true"}
+
+::: columns
+::: column
+::: {style="margin-top: 100px;"}
+-   [왜 엑셀(?)](https://r2bit.com/quarto/excel_why.html)
+-   [데이터 기본기](https://r2bit.com/quarto/excel_dc.html)
+-   [챗GPT 엑셀](https://r2bit.com/quarto/excel_chatGPT.html)
+:::
+:::
+
+::: column
+![](img/ds-xls-data-format-logic.png){width="648"}
+:::
+:::
+
+## 스프레드쉬트 {auto-animate="true"}
+
+::: columns
+::: column
+::: {style="margin-top: 100px;"}
+-   [왜 엑셀(?)](https://r2bit.com/quarto/excel_why.html)
+-   [데이터 기본기](https://r2bit.com/quarto/excel_dc.html)
+-   [챗GPT 엑셀](https://r2bit.com/quarto/excel_chatGPT.html)
+:::
+:::
+
+::: column
+
+::: {style="margin-top: 150px; font-size: 2.5em; color: black;"}
+-   [왜 엑셀(?)](https://r2bit.com/quarto/excel_why.html)
+:::
+
+:::
+:::
+
+
+## 스프레드쉬트 {auto-animate="true"}
+
+::: columns
+::: column
+::: {style="margin-top: 100px;"}
+-   [왜 엑셀(?)](https://r2bit.com/quarto/excel_why.html)
+-   [데이터 기본기](https://r2bit.com/quarto/excel_dc.html)
+-   [챗GPT 엑셀](https://r2bit.com/quarto/excel_chatGPT.html)
+:::
+:::
+
+::: column
+
+::: {style="margin-top: 150px; font-size: 2.0em; color: black;"}
+-   [데이터 기본기](https://r2bit.com/quarto/excel_dc.html)
+:::
+
+:::
+:::
+
+## 스프레드쉬트 {auto-animate="true"}
+
+::: columns
+::: column
+::: {style="margin-top: 100px;"}
+-   [왜 엑셀(?)](https://r2bit.com/quarto/excel_why.html)
+-   [데이터 기본기](https://r2bit.com/quarto/excel_dc.html)
+-   [챗GPT 엑셀](https://r2bit.com/quarto/excel_chatGPT.html)
+:::
+:::
+
+::: column
+
+::: {style="margin-top: 150px; font-size: 2.0em; color: black;"}
+-   [챗GPT 엑셀](https://r2bit.com/quarto/excel_chatGPT.html)
+:::
+
+:::
+:::
