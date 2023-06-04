@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources: 
+    - "data/*.mp3"
   render:
     - "*.qmd"
     - "!2021-amia-informatics-summit/"
@@ -46,7 +48,7 @@ filters:
 lightbox: auto
 
 execute:
-  freeze: true
+  freeze: auto
 
 date-format: "YYYY 년 MM 월 DD일"
 

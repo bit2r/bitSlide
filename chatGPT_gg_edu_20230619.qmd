@@ -7,6 +7,7 @@ date: 2023-06-19
 format: 
   insper-revealjs:
     self-contained: false
+    code-overflow: wrap
     footer: |
       한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
 date-format: long
@@ -24,26 +25,35 @@ editor_options:
 
 1.  강사소개 및 미트업 안내
 
-2.  챗GPT 기본기
+2.  챗GPT 체험 삶의 현장
 
-3.  챗GPT 시대 오피스 전쟁 (사무 자동화 &rarr; 사무 지능화)
+    -   실습: 자료조사
 
-4.  챗GPT 체험 삶의 현장 
+3.  챗GPT 시대 오피스 전쟁 (사무 자동화 → 사무 지능화)
 
-5.  프롬프트 엔지니어링 (Text-to-X)
+    -   실습: 글쓰기
 
-6.  챗GPT 실습
+4.  프롬프트 엔지니어링 (Text-to-X)
 
-7.  질의응답
+    -   실습: 그리기
+
+5.  AutoGPT, 엑셀과 추론
+
+    -   실습: 수능문제풀이
+
+6.  질의응답
 
 {{< include slideshow/202306_gg_edu/00-who-am-i.qmd >}}
 
-<!-- {{< include slideshow/202305-anyang/seoul-r-meeup.qmd >}} -->
+{{< include slideshow/202306_gg_edu/seoul-r-meeup.qmd >}}
 
-<!-- {{< include slideshow/202305-anyang/office-interface.qmd >}} -->
+{{< include slideshow/202306_gg_edu/01-life-in-action.qmd >}}
 
-<!-- {{< include slideshow/202305-anyang/prompt-engineering.qmd >}} -->
+{{< include slideshow/202306_gg_edu/office-interface.qmd >}}
 
-<!-- {{< include slideshow/202305-anyang/coding-excel.qmd >}} -->
+{{< include slideshow/202306_gg_edu/prompt-engineering.qmd >}}
+
+{{< include slideshow/202306_gg_edu/03-user-in-practice.qmd >}}
 
 {{< include slideshow/202306_gg_edu/reference.qmd >}}
+

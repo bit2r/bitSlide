@@ -2,8 +2,8 @@
 
 
 
-- title: "챗GPT와 데이터 사이언스"
-  subtitle: "데이터 역량강화 특강"
+- title: "공공데이터 이해 및 데이터 활용역량"
+  subtitle: "챗GPT와 데이터 사이언스"
   author: "이광춘"
   date: 2023-07-04
   image: img/kwangmyung_logo.jpg
@@ -12,6 +12,7 @@
     - "4차 산업혁명"  
     - "인공지능 (AI)"
     - "한국 R 사용자회"
+    - "공공데이터"
     - "광명시"
     - "빅데이터"
     - "Text-to-X"
