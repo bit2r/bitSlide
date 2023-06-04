@@ -356,6 +356,14 @@
       margin-right: 0; 
     }
   </style>
+  
+  <script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+  <script src="site_libs/react-17.0.0/react.min.js"></script>
+  <script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+  <script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
+  <script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+  <link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+  <script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -382,8 +390,8 @@
 <h2>목차</h2>
 <ol type="1">
 <li><p>강사소개 및 미트업 안내</p></li>
-<li><p>챗GPT 시대 오피스 전쟁 (사무 자동화 → 사무 지능화)</p></li>
-<li><p>공공데이터</p></li>
+<li><p>공공데이터 현황</p></li>
+<li><p>공공데이터 사례: 선거 공공데이터</p></li>
 <li><p>데이터 문해력</p></li>
 <li><p>데이터 과학</p></li>
 <li><p>…</p></li>
@@ -401,7 +409,7 @@
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure>
 <p><strong>AI 아바타</strong></p>
-<p><a href="img/profile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="img/profile.png" data-top="0" data-right="0" width="300"></a></p>
+<p><a href="img/profile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="img/profile.png" data-top="0" data-right="0" width="300"></a></p>
 </figure>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -410,6 +418,7 @@
 <li><p>(현) 비영리법인 한국 R 사용자회: 기술 이사</p></li>
 <li><p>(현) 국가교육위원회 전문위원: 과학/기술 분과</p></li>
 <li><p>(현) 건국대학교 챗GPT 데이터 사이언스 과정: 외래교수</p></li>
+<li><p>(현) 경기도 빅데이터 위원회 자문위원</p></li>
 <li><p>(전) TCS: GS 칼텍스 디지털 아카데미 강사</p></li>
 <li><p>(전) 연세대학교 데이터 사이언스: 겸임교수</p></li>
 <li><p>(전) 삼정 KPMG: Lighthouse AI 기술총괄</p></li>
@@ -432,7 +441,7 @@
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure>
-<p><a href="img/kwangmyung_logo.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="img/kwangmyung_logo.jpg"></a></p>
+<p><a href="img/kwangmyung_logo.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="img/kwangmyung_logo.jpg"></a></p>
 </figure>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -443,6 +452,7 @@
 <li>대상 : 광명시 소속 공무원</li>
 <li>내용
 <ul>
+<li>“공공데이터”</li>
 <li>“데이터 역량강화”</li>
 <li>“데이터 과학”</li>
 <li>“사무 자동화/지능화”</li>
@@ -456,11 +466,608 @@
 </div>
 </div>
 </div>
-<!-- {{< include slideshow/202305-anyang/seoul-r-meeup.qmd >}} -->
-<!-- {{< include slideshow/202305-anyang/office-interface.qmd >}} -->
-<!-- {{< include slideshow/202305-anyang/prompt-engineering.qmd >}} -->
-<!-- {{< include slideshow/202305-anyang/coding-excel.qmd >}} -->
 </section>
+<section>
+<section id="section" class="title-slide slide level1 center" data-background-image="img/meetup_logo.jpg">
+<h1></h1>
+<div class="r-fit-text">
+
+</div>
+</section>
+<section id="서울-r-미트업" class="slide level2 smaller">
+<h2>서울 R 미트업</h2>
+<div class="columns">
+<div class="column">
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/seoul-r-meetup-july.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="img/seoul-r-meetup-july.jpg" width="320"></a></p>
+</figure>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/seoulr-r-meetup-june.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="img/seoulr-r-meetup-june.jpg" width="320"></a></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/seoul-r-meetup-202305.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="img/seoul-r-meetup-202305.jpg" width="320"></a></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/seoul-r-meetup-AsiaR.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="img/seoul-r-meetup-AsiaR.jpg" width="320"></a></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/seoul-r-meetup-202304.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="img/seoul-r-meetup-202304.jpg" width="320"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column">
+<section id="참여와-연대" class="slide level2">
+<h2>참여와 연대</h2>
+<ul>
+<li><strong>서울R미트업 meetup.com</strong>: <a href="https://www.meetup.com/seoul-r-meetup">link</a>
+<ul>
+<li><strong>23년 4월 서울 R 미트업</strong>: <a href="https://www.meetup.com/seoul-r-meetup/events/292232899/">link</a></li>
+<li><strong>23년 5월 서울 R 미트업</strong>: <a href="https://www.meetup.com/seoul-r-meetup/events/292966674/">link</a></li>
+<li><strong>23년 6월 서울 R 미트업</strong>: <a href="https://www.meetup.com/seoul-r-meetup/events/293485362/">link</a></li>
+<li><strong>23년 7월 서울 R 미트업</strong>: <a href="https://www.meetup.com/seoul-r-meetup/events/293929603/">link</a></li>
+</ul></li>
+<li>세계 R 미트업 현황 (Global R Meetup Dashboard): <a href="https://r-community.org/usergroups/">link</a></li>
+<li>한국 R 사용자회 (Korea R User Group): <a href="https://r2bit.com/">link</a></li>
+<li>한국 R 컨퍼런스 (Korea R Conference): <a href="https://use-r.kr/">link</a></li>
+<li>유튜브 채널 (Youtube Channel): <a href="https://www.youtube.com/channel/UCW-epmIvjBEhhVXw_F0Nqbw">link</a></li>
+<li>페이스북 그룹 (Facebook Group): <a href="https://www.facebook.com/groups/tidyverse">link</a></li>
+</ul>
+</section>
+</div>
+</div>
+</section></section>
+<section>
+<section id="공공데이터-현황" class="title-slide slide level1 center">
+<h1>공공데이터 <br> 현황</h1>
+
+</section>
+<section id="공공데이터-포털" class="slide level2 smaller">
+<h2>공공데이터 포털</h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f9a29e4051c348650f0d" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-f9a29e4051c348650f0d">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"지자체_목록":["공공데이터포털","강원도","경기도","경상남도","경상북도","광주광역시","대구광역시","대전광역시","부산광역시","서울특별시","세종특별자치시","울산광역시","인천광역시","전라남도","전라북도","제주도","충청남도","충청북도"],"포털명":["공공데이터포털","강원 공공데이터","경기데이터드림","경남 빅데이터 허브 플랫폼","경북 공공데이터&통계","광주광역시 빅데이터 통합플랫폼","대구 D데이터허브","x","부산 공공데이터포털","서울 열린데이터광장","x","울산광역시 데이터포털","인천광역시 데이터포털","전라남도 빅데이터허브","전라북도 빅데이터허브","제주 데이터허브","충청남도 공공데이터 개방","충청북도 빅데이터 허브 플랫폼"],"x2021_7_현황_점검":["o","o","o","o","o","o","o",null,"o","o",null,"o","o","x","o","o","o","x"],"x2022_04_유지_여부_점검":["x","x","o","x","x","x","o",null,"o","o",null,"x","x","신규","o","o","o","신규"]},"columns":[{"id":"지자체_목록","name":"지자체_목록","type":"character"},{"id":"포털명","name":"포털명","type":"character","minWidth":200},{"id":"x2021_7_현황_점검","name":"x2021_7_현황_점검","type":"character"},{"id":"x2022_04_유지_여부_점검","name":"x2022_04_유지_여부_점검","type":"character"}],"defaultPageSize":10,"dataKey":"11904639a92e5d7d2f6d6c67c601843e"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://forum.datahub.kr/t/topic/128">김학래, “2022 데이터 인사이트 세미나”, 중앙대학교 HIKE 연구실</a><br>
+</li>
+</ul>
+</div></aside></section>
+<section id="공공데이터-자료-제공-형식" class="slide level2 smaller">
+<h2>공공데이터 자료 제공 형식</h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-76aea42359dac4201f13" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-76aea42359dac4201f13">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"포털_목록":["공공데이터포털","강원 공공데이터","경기데이터드림","경남 빅데이터 허브 플랫폼","경북 공공데이터&통계","광주광역시 빅데이터 통합플랫폼","대구 D데이터허브","부산 공공데이터포털","서울 열린데이터광장","울산광역시 데이터포털","인천광역시 데이터포털","전라남도 빅데이터허브","전라북도 빅데이터허브","제주 데이터허브","충청남도 공공데이터 개방","충청북도 빅데이터 허브 플랫폼"],"서비스_유형":["LINK, LOD, REST, RSS/ATOM,YSOAP,Y다운로드,Y배송 및 기타","LINK,YSHEET,YCHART,YOPENYAPI,YMAP,YFILE","FILE,YLINK,YSHEET,YMAP,YCHART,YOPENYAPI","-","파일,YAPI,Y데이터,Y오픈API","파일,Y링크","API,YFILE","SHEET,YMAP,YAPI,YFILE,YLINK","SHEET,YOpenAPI,YFILE,YCHART,YLINK","-","FILE,YOpenAPI","FILE,YOPENAPI,YSHEET","CSV, EXCEL, GRID, CHART,YMAP,YFILE,YLINK,YAPI","FILE,YAPI,YLINK,Y영상,Y차트","-","-"]},"columns":[{"id":"포털_목록","name":"포털_목록","type":"character","minWidth":60},{"id":"서비스_유형","name":"서비스_유형","type":"character"}],"defaultPageSize":10,"dataKey":"52c1b20e880229ff64585d3d7dfa8195"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://forum.datahub.kr/t/topic/128">김학래, “2022 데이터 인사이트 세미나”, 중앙대학교 HIKE 연구실</a><br>
+</li>
+</ul>
+</div></aside></section>
+<section id="공공데이터-정해진-미래" class="slide level2">
+<h2>공공데이터 정해진 미래(?)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/hike-data-insight.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="img/public/hike-data-insight.jpg"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://forum.datahub.kr/t/topic/128">김학래, “2022 데이터 인사이트 세미나”, 중앙대학교 HIKE 연구실</a><br>
+</li>
+</ul>
+</div></aside></section></section>
+<section>
+<section id="선거-공공데이터" class="title-slide slide level1 center">
+<h1>선거 공공데이터</h1>
+
+</section>
+<section id="오픈-데이터-포럼" class="slide level2 smaller">
+<h2>오픈 데이터 포럼</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/odf_election.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="img/odf_election.jpg" width="237"></a></p>
+</figure>
+</div>
+</div><div class="column">
+<h3 id="선거관련-데이터-및-사법기관의-공공데이터-개방현황과-개선방안">선거관련 데이터 및 사법기관의 공공데이터 개방현황과 개선방안</h3>
+<p>2022년 7월 열린세미나를 개최합니다. 이번 주제는 선거관련 데이터의 개방현황과 사법기관 공공데이터의 개방현황 그리고 개선방안을 함께 살펴보는 시간을 준비했습니다 관심있는 분들의 많은 참여와 의견 바랍니다.</p>
+<ul>
+<li><p>일시: 2022. 7. 28.(목) 14~17시</p></li>
+<li><p>참여방법:</p>
+<ol type="1">
+<li>서울창업허브(서울특별시 마포구 공덕동 백범로31길 21) 본관 10층 대강당<br>
+</li>
+<li>웹세미나 (유튜브/오픈데이터포럼 공식채널)</li>
+</ol></li>
+<li><p>주제: 선거관련 데이터 및 사법기관의 공공데이터 개방현황과 개선방안</p></li>
+<li><p>참가신청 : https://www.onoffmix.com/event/259343</p></li>
+<li><p>온·오프라인 사전 신청자에 한에서 이벤트를 통해 소정의 기념품 을 준비했으므로, 많은 관심과 참여 부탁드리겠습니다</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="주요-선거-일정" class="slide level2">
+<h2>주요 선거 일정</h2>
+<p><br> <br> <br></p>
+<!-- Timeline generated in R 4.2.2 by googleVis 0.7.0 package -->
+<!-- Sun Jun  4 19:34:04 2023 -->
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataTimelineID87f04ff3229b () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+"대통령",
+"15대",
+new Date(1997,11,18,0,0,0),
+new Date(2002,11,18,0,0,0)
+],
+[
+"대통령",
+"16대",
+new Date(2002,11,19,0,0,0),
+new Date(2007,11,18,0,0,0)
+],
+[
+"대통령",
+"17대",
+new Date(2007,11,19,0,0,0),
+new Date(2012,11,19,0,0,0)
+],
+[
+"대통령",
+"18대",
+new Date(2012,11,19,0,0,0),
+new Date(2017,4,9,0,0,0)
+],
+[
+"대통령",
+"19대",
+new Date(2017,4,10,0,0,0),
+new Date(2022,4,9,0,0,0)
+],
+[
+"대통령",
+"20대",
+new Date(2022,4,10,0,0,0),
+new Date(2027,4,9,0,0,0)
+],
+[
+"국회의원",
+"17대",
+new Date(2004,4,30,0,0,0),
+new Date(2008,4,29,0,0,0)
+],
+[
+"국회의원",
+"18대",
+new Date(2008,4,30,0,0,0),
+new Date(2012,4,29,0,0,0)
+],
+[
+"국회의원",
+"19대",
+new Date(2012,4,30,0,0,0),
+new Date(2016,4,29,0,0,0)
+],
+[
+"국회의원",
+"20대",
+new Date(2016,4,30,0,0,0),
+new Date(2020,4,29,0,0,0)
+],
+[
+"국회의원",
+"21대",
+new Date(2020,4,30,0,0,0),
+new Date(2024,4,29,0,0,0)
+],
+[
+"국회의원",
+"22대",
+new Date(2024,4,30,0,0,0),
+new Date(2028,4,29,0,0,0)
+],
+[
+"지방선거",
+"3회",
+new Date(2002,6,1,0,0,0),
+new Date(2006,5,30,0,0,0)
+],
+[
+"지방선거",
+"4회",
+new Date(2006,6,1,0,0,0),
+new Date(2010,5,30,0,0,0)
+],
+[
+"지방선거",
+"5회",
+new Date(2010,6,1,0,0,0),
+new Date(2014,5,30,0,0,0)
+],
+[
+"지방선거",
+"6회",
+new Date(2014,6,1,0,0,0),
+new Date(2018,5,30,0,0,0)
+],
+[
+"지방선거",
+"7회",
+new Date(2018,6,1,0,0,0),
+new Date(2022,5,30,0,0,0)
+],
+[
+"지방선거",
+"8회",
+new Date(2022,6,1,0,0,0),
+new Date(2026,5,30,0,0,0)
+] 
+];
+data.addColumn('string','type');
+data.addColumn('string','subtype');
+data.addColumn('datetime','start');
+data.addColumn('datetime','end');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartTimelineID87f04ff3229b() {
+var data = gvisDataTimelineID87f04ff3229b();
+var options = {};
+options["height"] = 500;
+
+    var chart = new google.visualization.Timeline(
+    document.getElementById('TimelineID87f04ff3229b')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "timeline";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartTimelineID87f04ff3229b);
+})();
+function displayChartTimelineID87f04ff3229b() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+<!-- jsChart -->
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTimelineID87f04ff3229b"></script>
+<!-- divChart -->
+<div id="TimelineID87f04ff3229b" style="width: automatic; height: 500;">
+
+</div>
+</section>
+<section id="중앙선관위-데이터-제공방식" class="slide level2 smaller">
+<h2>중앙선관위 데이터 제공방식</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">중앙선관위: 웹사이트</a></li><li><a href="#tabset-2-2">중앙선관위 - 자료실</a></li><li><a href="#tabset-2-3">공공데이터포털 - API</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/asia-nec-info.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="img/public/asia-nec-info.jpg" width="835"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nesdc_download_files.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="img/public/nesdc_download_files.png" width="897"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/asia-data-portal-api.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="img/public/asia-data-portal-api.jpg" width="869"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="중앙선관위-제공-데이터" class="slide level2 smaller">
+<h2>중앙선관위 제공 데이터</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">투/개표</a></li><li><a href="#tabset-3-2">여론조사</a></li><li><a href="#tabset-3-3">의식조사</a></li><li><a href="#tabset-3-4">정당회계</a></li><li><a href="#tabset-3-5">TV토론</a></li><li><a href="#tabset-3-6">지도</a></li><li><a href="#tabset-3-7">정책공약</a></li><li><a href="#tabset-3-8">공보물</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/asia-nec-info.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="img/public/asia-nec-info.jpg" width="759"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="http://info.nec.go.kr/">선거통계시스템</a></li>
+</ul>
+</div>
+<div id="tabset-3-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-nesdc.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img data-src="img/public/nec-nesdc.jpg" width="719"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://www.nesdc.go.kr/portal/main.do">중앙선거여론조사심의위원회</a></li>
+</ul>
+</div>
+<div id="tabset-3-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-minds-pdf.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img data-src="img/public/nec-minds-pdf.jpg" width="399"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://www.nec.go.kr/site/nec/ex/bbs/View.do?cbIdx=1129&amp;bcIdx=187615">제20대 대통령선거 유권자의식조사, PDF</a></li>
+</ul>
+</div>
+<div id="tabset-3-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-party.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img data-src="img/public/nec-party.jpg" width="339"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://www.nec.go.kr/site/nec/ex/bbs/View.do?cbIdx=1129&amp;bcIdx=151337">2020년도 정당의 활동개황 및 회계보고, PDF</a></li>
+</ul>
+</div>
+<div id="tabset-3-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-debate.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img data-src="img/public/nec-debate.jpg" width="658"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://debates.go.kr/2022_vote/sub01/sub01_1.php?substg=1&amp;id=632">제 20대 대통령선거 후보자 토론회 다시보기</a></li>
+</ul>
+</div>
+<div id="tabset-3-6">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-precinct-map.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img data-src="img/public/nec-precinct-map.jpg" width="708"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://github.com/vuski/admdongkor">선거구지도 - 대한민국 행정동 경계(admdongkor)</a></li>
+</ul>
+</div>
+<div id="tabset-3-7">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-precinct-map.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img data-src="img/public/nec-precinct-map.jpg" width="708"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://policy.nec.go.kr/">정책공약마당</a></li>
+</ul>
+</div>
+<div id="tabset-3-8">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-phamplet.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img data-src="img/public/nec-phamplet.jpg" width="593"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://http://elecinfo.nec.go.kr/">선거정보도서관-후보자선전물</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="데이터-사이언스-사례" class="slide level2 smaller">
+<h2>데이터 사이언스 사례</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">사전투표율</a></li><li><a href="#tabset-4-2">역대선거</a></li><li><a href="#tabset-4-3">여론조사</a></li><li><a href="#tabset-4-4">TV 토론</a></li><li><a href="#tabset-4-5">지도</a></li><li><a href="#tabset-4-6">공약</a></li><li><a href="#tabset-4-7">정당사무소</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-ds-early-voting.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img data-src="img/public/nec-ds-early-voting.jpeg" width="707"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002815847">제20대 대통령 선거, 사전투표 역사를 새로 쓰다</a></li>
+</ul>
+</div>
+<div id="tabset-4-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-ds-local-election.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img data-src="img/public/nec-ds-local-election.jpeg" width="707"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="http://www.ohmynews.com/NWS_Web/View/at_pg_w.aspx?CNTN_CD=A0002820588">지방선거 시도지사 절반, 5월 12일 결정된다</a></li>
+</ul>
+</div>
+<div id="tabset-4-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-ds-polls.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img data-src="img/public/nec-ds-polls.jpeg" width="707"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="http://www.ohmynews.com/NWS_Web/View/at_pg_w.aspx?CNTN_CD=A0002802812">여론조사를 네 분류로 나눠보니, 눈에 띄는 흐름</a></li>
+</ul>
+</div>
+<div id="tabset-4-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-ds-debate.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img data-src="img/public/nec-ds-debate.jpeg" width="707"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002814657">데이터를 통해 본 대선 TV 토론회</a></li>
+</ul>
+</div>
+<div id="tabset-4-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-ds-map.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img data-src="img/public/nec-ds-map.jpeg" width="707"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="http://www.ohmynews.com/NWS_Web/View/at_pg_w.aspx?CNTN_CD=A0002818973">대선득표율로 지방선거 판세를 가늠해보자</a></li>
+</ul>
+</div>
+<div id="tabset-4-6">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-ds-policy.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img data-src="img/public/nec-ds-policy.jpeg" width="707"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="http://www.ohmynews.com/NWS_Web/View/at_pg_w.aspx?CNTN_CD=A0002810838">유력 대선후보 4인, 10대 공약 중 압도적 분야는 ‘00’</a></li>
+</ul>
+</div>
+<div id="tabset-4-7">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/nec-ds-party.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img data-src="img/public/nec-ds-party.jpeg" width="511"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="http://www.ohmynews.com/NWS_Web/View/at_pg_w.aspx?CNTN_CD=A0002810396">양강 구도 속 부지런히 움직이는 제3후보는?</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="krvote-데이터-패키지" class="slide level2 smaller">
+<h2><code>krvote</code> 데이터 패키지</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">패키지</a></li><li><a href="#tabset-5-2">데이터 패키지</a></li><li><a href="#tabset-5-3">전처리작업</a></li><li><a href="#tabset-5-4">후처리작업</a></li><li><a href="#tabset-5-5"><code>krvote</code></a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/asia-pkg-why.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img data-src="img/public/asia-pkg-why.jpg" width="933"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://rstudio4edu.github.io/rstudio4edu-book/">Desirée De Leon, Alison Hill, “A Handbook for Teaching and Learning with R and RStudio”, 2019-09-11</a></li>
+</ul>
+</div>
+<div id="tabset-5-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/asia-pkg-overview.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img data-src="img/public/asia-pkg-overview.jpg" width="776"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://rstudio4edu.github.io/rstudio4edu-book/">Desirée De Leon, Alison Hill, “A Handbook for Teaching and Learning with R and RStudio”, 2019-09-11</a></li>
+</ul>
+</div>
+<div id="tabset-5-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/asia-data-workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img data-src="img/public/asia-data-workflow.png" width="1330"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://ai-carpentry.github.io/krvote/">이광춘, “krvote - 대한민국 선거 데이터 패키지”, 2022-06-09</a></li>
+</ul>
+</div>
+<div id="tabset-5-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/public/asia-data-workflow-pkg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img data-src="img/public/asia-data-workflow-pkg.png" width="1487"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://ai-carpentry.github.io/krvote/">이광춘, “krvote - 대한민국 선거 데이터 패키지”, 2022-06-09</a></li>
+</ul>
+</div>
+<div id="tabset-5-5">
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-590926d5bc8a0e8cd5be" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-590926d5bc8a0e8cd5be">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"데이터셋":["by_election_2021","casting_votes","chongun_winner","code_election","code_gusigun","code_party","code_precinct","counting_votes","early_voting","education_2010","education_2014","education_2018","election_20121219","election_20170509","election_20220309","general_2012","general_2016","general_2020","local_edu_20140604","local_edu_20180613","local_edu_gg_20140604","local_edu_seoul_20140604","local_precinct","local_sgg_20140604","local_sgg_20180613","local_sgg_20220601","local_sgg_winner","local_sido_20140604","local_sido_20180613","local_sido_20220601","local_winner","nec_sgg_code","precinct_2020","precinct_local","president_winner","voter_emd","voter_gusigun","voter_precinct","voter_sido","voter_station"],"데이터설명":["서울, 부산 시장 재보궐선거","선거별 구시군별 투표수","","중앙선거관리위원회 선거코드","중앙선거관리위원회 구시군코드 공공데이터포털 - 중앙선거관리위원회 구시군코드 검색어: 중앙선거관리위원회 코드정보","중앙선거관리위원회 정당코드","중앙선거관리위원회 선거구 코드","구시군, 선거구별 득표수","사전투표 현황","제5회 시도 교육감","제6회 교육감선거","제7회 교육감선거","제18대 대통령선거 2012년","제19대 대통령선거 2017년","제20대 대통령선거 2022년","제19대 국회의원선거","제20대 국회의원선거","제21대 국회의원선거","","","제6회 지방선거 - 교육감 - 경기","제6회 지방선거 - 교육감 - 서울","","제6회 지방선거 - 구시군의장","제7회 지선 구시군의장","","","제6회 지방선거 - 지도지사","제7회 지방선거 - 시도지사","","","시도, 구시군 마스터 코드","","","","선거별 구시군, 읍면동별 유권자수","선거별 구시군별 유권자수","선거별 구시군, 선거구별 유권자수","선거별 시도별 유권자수","투표구별 선거인수"]},"columns":[{"id":"데이터셋","name":"데이터셋","type":"character"},{"id":"데이터설명","name":"데이터설명","type":"character"}],"filterable":true,"defaultPageSize":7,"dataKey":"3d58ad72a7209d623c404e9a2d71cd75"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2" data-background-image="img/question.jpg">
+<h2></h2>
+<div class="r-fit-text">
+<p><span style="color: blue; font-size:92px;"><a href="https://statkclee.github.io/president/social-dashboard.html">제20대 대통령 선거</a></span></p>
+</div>
+</section></section>
 <section id="참고문헌" class="title-slide slide level1 smaller scrollable">
 <h1>참고문헌</h1>
 <div id="refs" role="list">
@@ -683,6 +1290,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

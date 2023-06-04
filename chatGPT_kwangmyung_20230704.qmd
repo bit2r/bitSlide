@@ -24,9 +24,9 @@ editor_options:
 
 1.  강사소개 및 미트업 안내
 
-2.  챗GPT 시대 오피스 전쟁 (사무 자동화 &rarr; 사무 지능화)
+2.  공공데이터 현황
 
-3.  공공데이터
+3.  공공데이터 사례: 선거 공공데이터
 
 4.  데이터 문해력
 
@@ -38,12 +38,11 @@ editor_options:
 
 {{< include slideshow/202307_kwangmyung/00-who-am-i.qmd >}}
 
-<!-- {{< include slideshow/202305-anyang/seoul-r-meeup.qmd >}} -->
+{{< include slideshow/202307_kwangmyung/seoul-r-meeup.qmd >}}
 
-<!-- {{< include slideshow/202305-anyang/office-interface.qmd >}} -->
+{{< include slideshow/202307_kwangmyung/public_data.qmd >}}
 
-<!-- {{< include slideshow/202305-anyang/prompt-engineering.qmd >}} -->
-
-<!-- {{< include slideshow/202305-anyang/coding-excel.qmd >}} -->
+{{< include slideshow/202307_kwangmyung/public_data_election.qmd >}}
 
 {{< include slideshow/202307_kwangmyung/reference.qmd >}}
+

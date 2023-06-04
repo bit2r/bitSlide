@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.299">
@@ -40,15 +40,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색"
   }
 }</script>
 <script>
@@ -63,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-date','listing-title','listing-subtitle','listing-image','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-filters","listing-lightbox","listing-execute","listing-date-format","listing-language","listing-title","listing-subtitle","listing-author","listing-institute","listing-date","listing-lang","listing-bibliography","listing-csl","listing-editor_options","listing-path","listing-outputHref","listing-date-modified","listing-categories","listing-image","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-knitr"],
+      searchColumns: ["listing-project","listing-lang","listing-website","listing-format","listing-filters","listing-lightbox","listing-execute","listing-date-format","listing-language","listing-title","listing-subtitle","listing-author","listing-institute","listing-date","listing-bibliography","listing-csl","listing-editor_options","listing-path","listing-outputHref","listing-date-modified","listing-categories","listing-image","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-knitr"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -111,7 +111,7 @@ ga('send', {
     <img src="./img/koRea_logo.png" alt="Home" class="navbar-logo">
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -210,7 +210,7 @@ ga('send', {
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="4차 산업혁명,인공지능 (AI),한국 R 사용자회,공공데이터,광명시,빅데이터,Text-to-X,데이터 역량강화,데이터 과학,사무 자동화/지능화" data-listing-date-sort="1688396400000" data-listing-file-modified-sort="1685841822443" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="1" data-categories="4차 산업혁명,인공지능 (AI),한국 R 사용자회,공공데이터,광명시,빅데이터,Text-to-X,데이터 역량강화,데이터 과학,사무 자동화/지능화" data-listing-date-sort="1688396400000" data-listing-file-modified-sort="1685879848419" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <a href="./chatGPT_kwangmyung_20230704.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -902,7 +902,7 @@ observable js
 </div>
 </div>
 <div class="listing-no-matching d-none">
-No matching items
+일치 없음
 </div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -959,12 +959,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "복사완료!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "복사완료!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
