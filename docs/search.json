@@ -5184,7 +5184,7 @@
     "href": "chatGPT_kwangmyung_20230704.html#목차",
     "title": "공공데이터 이해, 데이터 활용역량",
     "section": "목차",
-    "text": "목차\n\n강사소개 및 미트업 안내\n공공데이터 현황\n공공데이터 사례: 선거 공공데이터\n데이터 문해력\n데이터 과학\n…\n질의응답"
+    "text": "목차\n\n강사소개 및 미트업 안내\n공공데이터 현황\n공공데이터 사례: 선거 공공데이터\n데이터 문해력\n데이터 과학\n질의응답"
   },
   {
     "objectID": "chatGPT_kwangmyung_20230704.html#강사소개-강의-개요",
@@ -6095,5 +6095,68 @@
     "title": "공공데이터 이해, 데이터 활용역량",
     "section": "",
     "text": "제20대 대통령 선거"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#러시아-월드컵-독일전",
+    "href": "chatGPT_kwangmyung_20230704.html#러시아-월드컵-독일전",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "러시아 월드컵 (독일전)",
+    "text": "러시아 월드컵 (독일전)\n\n\n\n\n\n\n\n\n러시아 월드컵(2018) - 한국 vs 독일"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#년-런던-코로나19",
+    "href": "chatGPT_kwangmyung_20230704.html#년-런던-코로나19",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "1854년 런던 코로나19",
+    "text": "1854년 런던 코로나19\n\n팬데믹데이터-1데이터-2탐정시각화(1854)시각화(2022)메타버스\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1854 Broad Street cholera outbreak"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#지진해일-대피소",
+    "href": "chatGPT_kwangmyung_20230704.html#지진해일-대피소",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "지진해일 대피소",
+    "text": "지진해일 대피소\n\n\n\n\n\n\n\nxwMOOC (2018-01-17), “지진해일 대피소 - crosstalk”"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#손씻기-역사",
+    "href": "chatGPT_kwangmyung_20230704.html#손씻기-역사",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "손씻기 역사",
+    "text": "손씻기 역사\n\n출생사망데이터병원별 비교시간별 비교사망율 분포통계검정\n\n\n\n\n\n\n\n\n\n\n\n연도별\n\n\n\n\n\n\n  \n    \n    \n      year\n      births\n      deaths\n      clinic\n    \n  \n  \n    1841\n3,036\n237\nclinic 1\n    1842\n3,287\n518\nclinic 1\n    1843\n3,060\n274\nclinic 1\n    1844\n3,157\n260\nclinic 1\n    1845\n3,492\n241\nclinic 1\n    1846\n4,010\n459\nclinic 1\n    1841\n2,442\n86\nclinic 2\n    1842\n2,659\n202\nclinic 2\n    1843\n2,739\n164\nclinic 2\n    1844\n2,956\n68\nclinic 2\n    1845\n3,241\n66\nclinic 2\n    1846\n3,754\n105\nclinic 2\n  \n  \n  \n\n\n\n\n\n월별\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nstatistic\np.value\nparameter\nconf.low\nconf.high\nmethod\nalternative\n\n\n\n\n-9.610071\n0\n92.43544\n-0.1013066\n-0.0666066\nWelch Two Sample t-test\ntwo.sided\n\n\n\n\n\n\n\n\n\n\n이광춘, “손씻기 그리고 통계 - 제멜바이스”"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#정규분포",
+    "href": "chatGPT_kwangmyung_20230704.html#정규분포",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "정규분포",
+    "text": "정규분포\n\n골턴 보드동영상모의실험실제사례 - 신장미국 대학생 신장\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n육군 신체측정정보 : 육군 신체측정 데이터(수시 업데이터)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#회귀분석---mlb-투수-유전자는-유전이-될까",
+    "href": "chatGPT_kwangmyung_20230704.html#회귀분석---mlb-투수-유전자는-유전이-될까",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "회귀분석 - MLB 투수 유전자는 유전이 될까?",
+    "text": "회귀분석 - MLB 투수 유전자는 유전이 될까?\n\n\n\n\n\n\n\n회귀분석 - MLB 투수 유전자는 유전이 될까?"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#폭격비행기",
+    "href": "chatGPT_kwangmyung_20230704.html#폭격비행기",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "폭격비행기",
+    "text": "폭격비행기\n\n세계대전 - 유럽세계대전 - 태평양대공포폭격기 데이터고민업그레이드"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#나이팅게일---백의천사",
+    "href": "chatGPT_kwangmyung_20230704.html#나이팅게일---백의천사",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "나이팅게일 - 백의천사",
+    "text": "나이팅게일 - 백의천사\n\n나이팅게일크림전쟁데이터시각화\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n위키백과, “플로렌스 나이팅게일”\n위키백과, “크림전쟁”"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#나폴레옹-러시아-침공",
+    "href": "chatGPT_kwangmyung_20230704.html#나폴레옹-러시아-침공",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "나폴레옹 러시아 침공",
+    "text": "나폴레옹 러시아 침공\n\n나폴레옹미나르 지도실제 침공데이터시각화\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n생존병사 수\n\n\n\n\n\n\n\n\n후퇴 기온\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRe-Visions of Minard"
   }
 ]

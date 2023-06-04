@@ -30,11 +30,9 @@ editor_options:
 
 4.  데이터 문해력
 
-5.  데이터 과학
+5.  ~~데이터 과학~~
 
-6.  ...
-
-7.  질의응답
+6.  질의응답
 
 {{< include slideshow/202307_kwangmyung/00-who-am-i.qmd >}}
 
@@ -43,6 +41,8 @@ editor_options:
 {{< include slideshow/202307_kwangmyung/public_data.qmd >}}
 
 {{< include slideshow/202307_kwangmyung/public_data_election.qmd >}}
+
+{{< include slideshow/202307_kwangmyung/public_data_literacy.qmd >}}
 
 {{< include slideshow/202307_kwangmyung/reference.qmd >}}
 
