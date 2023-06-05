@@ -302,3 +302,31 @@ kobis %>%
 
 ![](img/gg_edu_survey.jpg){width="481"}
 :::
+
+
+## 실업통계
+
+<br>
+
+:::::{layout-ncol=3}
+
+### 미국 실직사유
+
+![](img/ai_jobs.jfif)
+
+
+### 중앙일보 시각화
+
+![](img/ai_jobs_korean.jpg)
+
+### 사무노동자 변화
+
+![](img/ai_jobs_white_color.jpg)
+
+
+:::::
+
+
+::: aside
+- [김남준 (2023.06.05.), "카피라이터까지…챗GPT발 고소득 전문직 실직 시작됐다", 중앙일보](https://n.news.naver.com/mnews/article/025/0003284701?sid=101)
+:::
