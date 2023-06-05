@@ -1,0 +1,106 @@
+# 데이터 과학
+
+## 데이터 과학 {.smaller}
+
+> 데이터 사이언스(Data Science)는 데이터를 다루는 과학이다. 따라서 자연법칙을 다루는 자연과학과 맥이 닿아있다. 자연법칙을 측정하여 데이터프레임(`DataFrame`)으로 나타내면 **변수(Variable)**, **관측점(Observation)**, **값(Value)**으로 표현된다.
+
+![](img/public/data-science-overview.png)
+
+
+## 데이터 과학 (넓은 의미)
+
+![](img/horst-eco-r4ds.png)
+
+## 데이터 과학 욕구단계설
+
+::: panel-tabset
+### 매슬로 욕구단계설
+
+![](img/pyramid-needs.png)
+
+### 가치 피라미드
+
+![](img/pyramid-data-science.png)
+:::
+
+## 가치 {.smaller}
+
+<small>
+
+<ul>
+
+<li>기술 분석(Descriptive Analytics): 무슨 일이 있었나? (What happened?)</li>
+
+<li>진단 분석(Diagnostic Analytics): 왜 일어났나? (Why did it happen?)</li>
+
+<li>예측 분석(Predictive Analytics): 무슨 일이 일어날까? (What will happen?)</li>
+
+<li>처방 분석(Prescriptive Analytics): 어떻게 그런 일을 일으킬까? (How can we make it happen?)</li>
+
+</ul>
+
+</small>
+
+![](img/public/ds-gartner.png){fig-align="center" width="562"}
+
+
+## 30년의 변화를 그림으로 표현
+
+![](img/public/intree-xy-f.png){fig-align="center" width="777"}
+
+::: aside
+[이광춘(2019-01-26), "Data Scientist 가 바라본 제조업의 발전 전략 및 방안", Intree 4.0 World Forum](https://statkclee.github.io/ds-authoring/intree-seminar-2019-01.html)
+:::
+
+## 데이터 경제와 산업 {.smaller}
+
+::: columns
+::: column
+### 데이터 자원
+
+![](img/public/economist-bigdata-oil.png)
+:::
+
+::: column
+### 파이프라인
+
+![](img/public/data-economy-industry.png)
+:::
+:::
+
+::: aside
+[이광춘 (2020-07-21), "기업운영혁신을 위한 데이터 과학: 기업의 활용방안", 포항산업과학연구원(RIST)](https://statkclee.github.io/ds-authoring/ds-rist.html)
+:::
+
+
+
+## AI/ML/DL vs 데이터 과학 {.smaller}
+
+<br>
+
+![](img/public/tidyvese_os.png){fig-align="center" width="873"}
+
+::: aside
+[한국통계학회 소식지 2019년 10월호](https://statkclee.github.io/ds-authoring/ds-stat-tidyverse.html)
+:::
+
+## `tidyverse`
+
+![](img/public/maso_tidyverse.png){.smaller fig-align="center" width="925"}
+
+::: columns
+::: {.column .smaller}
+-   기존 자료구조를 재사용
+-   파이프 연산자로 간단한 함수를 조합
+-   함수형 프로그래밍을 적극 사용
+-   기계가 아닌 인간을 위한 설계
+:::
+
+::: column
+-   Reuse existing data structures.
+-   Compose simple functions with the pipe.
+-   Embrace functional programming.
+-   Design for humans.
+:::
+:::
+

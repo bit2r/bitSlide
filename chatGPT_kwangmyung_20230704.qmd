@@ -24,19 +24,25 @@ editor_options:
 
 1.  강사소개 및 미트업 안내
 
-2.  공공데이터 현황
+2.  지표로 보는 대한민국
 
-3.  공공데이터 사례: 선거 공공데이터
+3.  공공데이터 현황
 
-4.  데이터 문해력
+4.  공공데이터 사례: 선거 공공데이터
 
-5.  ~~데이터 과학~~
+5.  데이터 문해력
 
-6.  질의응답
+6.  데이터 과학
+
+7.  챗GPT 디지털 **글쓰기**
+
+8.  질의응답
 
 {{< include slideshow/202307_kwangmyung/00-who-am-i.qmd >}}
 
 {{< include slideshow/202307_kwangmyung/seoul-r-meeup.qmd >}}
+
+{{< include slideshow/202307_kwangmyung/DT_metrics.qmd >}}
 
 {{< include slideshow/202307_kwangmyung/public_data.qmd >}}
 
@@ -44,5 +50,10 @@ editor_options:
 
 {{< include slideshow/202307_kwangmyung/public_data_literacy.qmd >}}
 
-{{< include slideshow/202307_kwangmyung/reference.qmd >}}
+{{< include slideshow/202307_kwangmyung/public_data_science.qmd >}}
+
+{{< include slideshow/202307_kwangmyung/30-digital-writing.qmd >}}
+
+<!-- {{< include slideshow/202307_kwangmyung/reference.qmd >}} -->
+
 

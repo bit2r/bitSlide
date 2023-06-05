@@ -25,27 +25,31 @@ editor_options:
 
 1.  강사소개 및 미트업 안내
 
-2.  챗GPT 체험 삶의 현장
+2.  4차 산업혁명 디지털 전환
+
+3.  챗GPT 체험 삶의 현장
 
     -   실습: 자료조사
 
-3.  챗GPT 시대 오피스 전쟁 (사무 자동화 → 사무 지능화)
+4.  챗GPT 시대 오피스 전쟁 (사무 자동화 → 사무 지능화)
 
     -   실습: 글쓰기
 
-4.  프롬프트 엔지니어링 (Text-to-X)
+5.  프롬프트 엔지니어링 (Text-to-X)
 
     -   실습: 그리기
 
-5.  AutoGPT, 엑셀과 추론
+6.  AutoGPT, 엑셀과 추론
 
     -   실습: 수능문제풀이
 
-6.  질의응답
+7.  질의응답
 
 {{< include slideshow/202306_gg_edu/00-who-am-i.qmd >}}
 
 {{< include slideshow/202306_gg_edu/seoul-r-meeup.qmd >}}
+
+{{< include slideshow/202306_gg_edu/DT_metrics.qmd >}}
 
 {{< include slideshow/202306_gg_edu/01-life-in-action.qmd >}}
 

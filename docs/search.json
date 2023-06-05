@@ -4442,7 +4442,7 @@
     "href": "chatGPT_gg_edu_20230619.html#목차",
     "title": "챗GPT",
     "section": "목차",
-    "text": "목차\n\n강사소개 및 미트업 안내\n챗GPT 체험 삶의 현장\n\n실습: 자료조사\n\n챗GPT 시대 오피스 전쟁 (사무 자동화 → 사무 지능화)\n\n실습: 글쓰기\n\n프롬프트 엔지니어링 (Text-to-X)\n\n실습: 그리기\n\nAutoGPT, 엑셀과 추론\n\n실습: 수능문제풀이\n\n질의응답"
+    "text": "목차\n\n강사소개 및 미트업 안내\n4차 산업혁명 디지털 전환\n챗GPT 체험 삶의 현장\n\n실습: 자료조사\n\n챗GPT 시대 오피스 전쟁 (사무 자동화 → 사무 지능화)\n\n실습: 글쓰기\n\n프롬프트 엔지니어링 (Text-to-X)\n\n실습: 그리기\n\nAutoGPT, 엑셀과 추론\n\n실습: 수능문제풀이\n\n질의응답"
   },
   {
     "objectID": "chatGPT_gg_edu_20230619.html#강사소개-강의-개요",
@@ -5184,7 +5184,7 @@
     "href": "chatGPT_kwangmyung_20230704.html#목차",
     "title": "공공데이터 이해, 데이터 활용역량",
     "section": "목차",
-    "text": "목차\n\n강사소개 및 미트업 안내\n공공데이터 현황\n공공데이터 사례: 선거 공공데이터\n데이터 문해력\n데이터 과학\n질의응답"
+    "text": "목차\n\n강사소개 및 미트업 안내\n지표로 보는 대한민국\n공공데이터 현황\n공공데이터 사례: 선거 공공데이터\n데이터 문해력\n데이터 과학\n챗GPT 디지털 글쓰기\n질의응답"
   },
   {
     "objectID": "chatGPT_kwangmyung_20230704.html#강사소개-강의-개요",
@@ -6158,5 +6158,264 @@
     "title": "공공데이터 이해, 데이터 활용역량",
     "section": "나폴레옹 러시아 침공",
     "text": "나폴레옹 러시아 침공\n\n나폴레옹미나르 지도실제 침공데이터시각화\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n생존병사 수\n\n\n\n\n\n\n\n\n후퇴 기온\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRe-Visions of Minard"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#데이터-과학-1",
+    "href": "chatGPT_kwangmyung_20230704.html#데이터-과학-1",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "데이터 과학",
+    "text": "데이터 과학\n\n데이터 사이언스(Data Science)는 데이터를 다루는 과학이다. 따라서 자연법칙을 다루는 자연과학과 맥이 닿아있다. 자연법칙을 측정하여 데이터프레임(DataFrame)으로 나타내면 변수(Variable), 관측점(Observation), 값(Value)으로 표현된다."
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#aimldl-vs-데이터-과학",
+    "href": "chatGPT_kwangmyung_20230704.html#aimldl-vs-데이터-과학",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "AI/ML/DL vs 데이터 과학",
+    "text": "AI/ML/DL vs 데이터 과학\n\n\n\n\n\n\n\n\n한국통계학회 소식지 2019년 10월호"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#tidyverse",
+    "href": "chatGPT_kwangmyung_20230704.html#tidyverse",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "tidyverse",
+    "text": "tidyverse\n\n\n\n\n기존 자료구조를 재사용\n파이프 연산자로 간단한 함수를 조합\n함수형 프로그래밍을 적극 사용\n기계가 아닌 인간을 위한 설계\n\n\n\nReuse existing data structures.\nCompose simple functions with the pipe.\nEmbrace functional programming.\nDesign for humans."
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#년의-변화를-그림으로-표현",
+    "href": "chatGPT_kwangmyung_20230704.html#년의-변화를-그림으로-표현",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "30년의 변화를 그림으로 표현",
+    "text": "30년의 변화를 그림으로 표현\n\n\n\n\n\n\n\n이광춘(2019-01-26), “Data Scientist 가 바라본 제조업의 발전 전략 및 방안”, Intree 4.0 World Forum"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#데이터-경제와-산업",
+    "href": "chatGPT_kwangmyung_20230704.html#데이터-경제와-산업",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "데이터 경제와 산업",
+    "text": "데이터 경제와 산업\n\n\n데이터 자원\n\n\n\n\n\n\n파이프라인\n\n\n\n\n\n\n\n\n\n이광춘 (2020-07-21), “기업운영혁신을 위한 데이터 과학: 기업의 활용방안”, 포항산업과학연구원(RIST)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#가치",
+    "href": "chatGPT_kwangmyung_20230704.html#가치",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "가치",
+    "text": "가치\n\n\n\n기술 분석(Descriptive Analytics): 무슨 일이 있었나? (What happened?)\n\n\n진단 분석(Diagnostic Analytics): 왜 일어났나? (Why did it happen?)\n\n\n예측 분석(Predictive Analytics): 무슨 일이 일어날까? (What will happen?)\n\n\n처방 분석(Prescriptive Analytics): 어떻게 그런 일을 일으킬까? (How can we make it happen?)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#데이터-과학-넓은-의미",
+    "href": "chatGPT_kwangmyung_20230704.html#데이터-과학-넓은-의미",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "데이터 과학 (넓은 의미)",
+    "text": "데이터 과학 (넓은 의미)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#데이터-과학-욕구단계설",
+    "href": "chatGPT_kwangmyung_20230704.html#데이터-과학-욕구단계설",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "데이터 과학 욕구단계설",
+    "text": "데이터 과학 욕구단계설\n\n매슬로 욕구단계설가치 피라미드"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#글쓰기-현재와-미래",
+    "href": "chatGPT_kwangmyung_20230704.html#글쓰기-현재와-미래",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "글쓰기 현재와 미래",
+    "text": "글쓰기 현재와 미래\n\n\n현재\n\n\n\n\n\n\n\n미래"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#글쓰기-기본기",
+    "href": "chatGPT_kwangmyung_20230704.html#글쓰기-기본기",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "글쓰기 기본기",
+    "text": "글쓰기 기본기\n\n데이터 과학문서 복잡성문서 패러다임"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#과학기술-글쓰기-진화",
+    "href": "chatGPT_kwangmyung_20230704.html#과학기술-글쓰기-진화",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "(과학기술) 글쓰기 진화",
+    "text": "(과학기술) 글쓰기 진화\n\n글쓰기 역사도구의 진화과학기술 글쓰기챗GPT 디지털 글쓰기\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n경기도 평생학습포털(GSEEK) 챗GPT 디지털 글쓰기\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#전통적-지표",
+    "href": "chatGPT_kwangmyung_20230704.html#전통적-지표",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "전통적 지표",
+    "text": "전통적 지표\n \n\n\n\n\n\n\n\n\n위키백과 OECD"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#전통-지표-기준-강대국",
+    "href": "chatGPT_kwangmyung_20230704.html#전통-지표-기준-강대국",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "전통 지표 기준 강대국",
+    "text": "전통 지표 기준 강대국"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#확장-전통-지표",
+    "href": "chatGPT_kwangmyung_20230704.html#확장-전통-지표",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "확장 전통 지표",
+    "text": "확장 전통 지표\n \n\n\n\n\n\n\n\n\n위키백과 OECD"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#확장-지표-기준-선진국",
+    "href": "chatGPT_kwangmyung_20230704.html#확장-지표-기준-선진국",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "확장 지표 기준 선진국",
+    "text": "확장 지표 기준 선진국"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표",
+    "text": "디지털 강대국 지표\n\n\n디지털 정부 순위\n정부 인공지능 준비지수\n데이터 경제 순위\n산업용 로봇 밀도\n세계 경쟁력 보고서\nIMD 세계 경쟁력 연감"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---디지털-정부-순위",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---디지털-정부-순위",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - 디지털 정부 순위",
+    "text": "디지털 강대국 지표 - 디지털 정부 순위"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---인공지능-준비지수",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---인공지능-준비지수",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - 인공지능 준비지수",
+    "text": "디지털 강대국 지표 - 인공지능 준비지수"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---데이터-경제",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---데이터-경제",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - 데이터 경제",
+    "text": "디지털 강대국 지표 - 데이터 경제"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---산업용-로봇",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---산업용-로봇",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - 산업용 로봇",
+    "text": "디지털 강대국 지표 - 산업용 로봇"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---wef-세계-경쟁력",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---wef-세계-경쟁력",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - WEF 세계 경쟁력",
+    "text": "디지털 강대국 지표 - WEF 세계 경쟁력"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---imd-디지털-경쟁력",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---imd-디지털-경쟁력",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - IMD 디지털 경쟁력",
+    "text": "디지털 강대국 지표 - IMD 디지털 경쟁력"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---종합",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---종합",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - 종합",
+    "text": "디지털 강대국 지표 - 종합"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---종합-시각화",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---종합-시각화",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - 종합 시각화",
+    "text": "디지털 강대국 지표 - 종합 시각화"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#전통적-지표",
+    "href": "chatGPT_gg_edu_20230619.html#전통적-지표",
+    "title": "챗GPT",
+    "section": "전통적 지표",
+    "text": "전통적 지표\n \n\n\n\n\n\n\n\n\n위키백과 OECD"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#전통-지표-기준-강대국",
+    "href": "chatGPT_gg_edu_20230619.html#전통-지표-기준-강대국",
+    "title": "챗GPT",
+    "section": "전통 지표 기준 강대국",
+    "text": "전통 지표 기준 강대국"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#확장-전통-지표",
+    "href": "chatGPT_gg_edu_20230619.html#확장-전통-지표",
+    "title": "챗GPT",
+    "section": "확장 전통 지표",
+    "text": "확장 전통 지표\n \n\n\n\n\n\n\n\n\n위키백과 OECD"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#확장-지표-기준-선진국",
+    "href": "chatGPT_gg_edu_20230619.html#확장-지표-기준-선진국",
+    "title": "챗GPT",
+    "section": "확장 지표 기준 선진국",
+    "text": "확장 지표 기준 선진국"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표",
+    "href": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표",
+    "text": "디지털 강대국 지표\n\n\n디지털 정부 순위\n정부 인공지능 준비지수\n데이터 경제 순위\n산업용 로봇 밀도\n세계 경쟁력 보고서\nIMD 세계 경쟁력 연감"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---디지털-정부-순위",
+    "href": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---디지털-정부-순위",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - 디지털 정부 순위",
+    "text": "디지털 강대국 지표 - 디지털 정부 순위"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---인공지능-준비지수",
+    "href": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---인공지능-준비지수",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - 인공지능 준비지수",
+    "text": "디지털 강대국 지표 - 인공지능 준비지수"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---데이터-경제",
+    "href": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---데이터-경제",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - 데이터 경제",
+    "text": "디지털 강대국 지표 - 데이터 경제"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---산업용-로봇",
+    "href": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---산업용-로봇",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - 산업용 로봇",
+    "text": "디지털 강대국 지표 - 산업용 로봇"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---wef-세계-경쟁력",
+    "href": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---wef-세계-경쟁력",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - WEF 세계 경쟁력",
+    "text": "디지털 강대국 지표 - WEF 세계 경쟁력"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---imd-디지털-경쟁력",
+    "href": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---imd-디지털-경쟁력",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - IMD 디지털 경쟁력",
+    "text": "디지털 강대국 지표 - IMD 디지털 경쟁력"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---종합",
+    "href": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---종합",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - 종합",
+    "text": "디지털 강대국 지표 - 종합"
+  },
+  {
+    "objectID": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---종합-시각화",
+    "href": "chatGPT_gg_edu_20230619.html#디지털-강대국-지표---종합-시각화",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - 종합 시각화",
+    "text": "디지털 강대국 지표 - 종합 시각화"
   }
 ]
