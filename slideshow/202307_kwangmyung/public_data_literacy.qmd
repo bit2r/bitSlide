@@ -1,3 +1,8 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 # 데이터 문해력이라고 쓰고 <br> 데이터 활용역량이라고 읽는다.
 
 ## 러시아 월드컵 (독일전)
@@ -52,7 +57,8 @@ Snow.deaths %>%
 ### 시각화(1854)
 
 ```{r london-map}
-ggmap::register_google(key = Sys.getenv("GOOGLE_MAP_API_KEY"))
+#| eval: false
+ggmap::register_google(key = Sys.getenv("GOOGLE_MAP_API_KEY"), write = TRUE)
 london_map <- get_map(c(-.137,51.513), zoom=17)
 london <- ggmap(london_map) 
 SnowMap(main ="스노우가 작성한 콜레라 지도", density=TRUE)
@@ -61,6 +67,7 @@ SnowMap(main ="스노우가 작성한 콜레라 지도", density=TRUE)
 ### 시각화(2022)
 
 ```{r john-snow-hist-data-now, out.width="100%"}
+#| eval: false
 # download.file("http://rtwilson.com/downloads/SnowGIS_SHP.zip",
 #               dest="data/SnowGIS.zip", mode="wb")
 

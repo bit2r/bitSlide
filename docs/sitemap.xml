@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-06-04T11:59:26.867Z</lastmod>
+    <lastmod>2023-06-05T01:04:55.780Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-seoul-r-meetup/index.html</loc>
@@ -270,7 +270,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/chatGPT_gg_edu_20230619.html</loc>
-    <lastmod>2023-06-05T00:51:29.069Z</lastmod>
+    <lastmod>2023-06-05T01:05:34.565Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-anyang/coding-excel.html</loc>
@@ -334,7 +334,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/chatGPT_kwangmyung_20230704.html</loc>
-    <lastmod>2023-06-05T00:58:14.395Z</lastmod>
+    <lastmod>2023-06-05T01:05:02.052Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202307_kwangmyung/00-open-source-software.html</loc>
@@ -399,5 +399,13 @@
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202307_kwangmyung/public_data_election.html</loc>
     <lastmod>2023-06-04T12:02:52.553Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_kwangmyung/public_data_literacy.html</loc>
+    <lastmod>2023-06-05T01:04:50.033Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_kwangmyung/public_data_science.html</loc>
+    <lastmod>2023-06-05T01:04:43.475Z</lastmod>
   </url>
 </urlset>
