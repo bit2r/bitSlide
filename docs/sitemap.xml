@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-06-05T01:04:55.780Z</lastmod>
+    <lastmod>2023-06-12T13:57:34.951Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-seoul-r-meetup/index.html</loc>
@@ -286,7 +286,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202306_gg_edu/01-life-in-action.html</loc>
-    <lastmod>2023-06-04T03:11:16.234Z</lastmod>
+    <lastmod>2023-06-12T13:00:32.289Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202306_gg_edu/03-user-in-practice.html</loc>
@@ -407,5 +407,85 @@
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202307_kwangmyung/public_data_science.html</loc>
     <lastmod>2023-06-05T01:04:43.475Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/kunkuk_20230701.html</loc>
+    <lastmod>2023-06-12T13:57:50.990Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_gg_edu/publishing.html</loc>
+    <lastmod>2023-06-12T13:00:27.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_gg_edu/setup.html</loc>
+    <lastmod>2023-06-12T13:00:28.307Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/00-open-source-software.html</loc>
+    <lastmod>2023-06-12T13:51:47.094Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/00-who-am-i.html</loc>
+    <lastmod>2023-06-12T13:51:15.444Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/01-life-in-action.html</loc>
+    <lastmod>2023-06-12T13:51:20.164Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/03-user-in-practice.html</loc>
+    <lastmod>2023-06-12T13:51:24.664Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/04-limitation.html</loc>
+    <lastmod>2023-06-12T13:51:25.408Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/20-LLM-chatGPT.html</loc>
+    <lastmod>2023-06-12T13:51:26.771Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/20-dt-agile-devops.html</loc>
+    <lastmod>2023-06-12T13:51:27.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/22-ai-app-dev.html</loc>
+    <lastmod>2023-06-12T13:51:27.896Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/DT_metrics.html</loc>
+    <lastmod>2023-06-12T13:51:36.269Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/coding-excel.html</loc>
+    <lastmod>2023-06-12T13:51:36.761Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/misinformation.html</loc>
+    <lastmod>2023-06-12T13:51:37.332Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/office-interface.html</loc>
+    <lastmod>2023-06-12T13:51:38.165Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/prompt-engineering.html</loc>
+    <lastmod>2023-06-12T13:51:42.190Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/publishing.html</loc>
+    <lastmod>2023-06-12T13:51:42.748Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/reference.html</loc>
+    <lastmod>2023-06-12T13:51:43.208Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/seoul-r-meeup.html</loc>
+    <lastmod>2023-06-12T13:51:43.721Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/setup.html</loc>
+    <lastmod>2023-06-12T13:51:44.170Z</lastmod>
   </url>
 </urlset>

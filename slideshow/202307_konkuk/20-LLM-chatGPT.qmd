@@ -1,0 +1,260 @@
+# `chatGPT` → 챗GPT <br> Transformer &rarr; LLM &rarr; 오픈소스 S/W
+
+## 챗GPT 란? {.smaller}
+
+::: panel-tabset
+### PNG와 JPEG
+
+![](img/png_jpg.png){width="651"}
+
+### Foundation 모형
+
+![](img/foundation_model.png){width="500"}
+
+### 헬스케어
+
+![](img/LLM-heathcare-Stanford.jpg){width="1088"}
+:::
+
+::: aside
+[@Chiang_2023]
+[@Merritt_2023a]
+:::
+
+
+
+## 거대 언어모형(LLM)
+
+::: panel-tabset
+### LLM 진화
+
+![](img/LLM_tree.gif)
+
+### 80억 패러미터
+
+![](img/LLM_tree_8_billion.png)
+
+### 400억
+
+![](img/LLM_tree_40_billion.png)
+
+### 640억
+
+![](img/LLM_tree_62_billion.png)
+
+### 5,400억
+
+![](img/LLM_tree_540_billion.png)
+
+### 성능
+
+![](img/LLM_tree_performance.png)
+:::
+
+::: aside
+[[Sharan Narang and Aakanksha Chowdhery (APRIL 04, 2022), "Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrough Performance", Software Engineers, Google Research](https://ai.googleblog.com/2022/04/pathways-language-model-palm-scaling-to.html)]{.aside}
+:::
+
+## 모형크기
+
+<iframe src="https://ourworldindata.org/grapher/artificial-intelligence-training-computation?yScale=linear&amp;country=~PaLM+%28540B%29" loading="lazy" style="width: 100%; height: 600px; border: 0px none;">
+
+</iframe>
+
+## Transformer {.smaller}
+
+::: panel-tabset
+### DL 시대
+
+![](img/transformer-dl.jpg){width="941"}
+
+### 삼국지
+
+![](img/transformer-three.jpg){width="728"}
+
+### 가자 Transformer 로
+
+![](img/transformer-evolution.jpg){width="1670"}
+
+### 이유(Why)
+
+::: columns
+::: column
+{{< tweet karpathy 1582807367988654081 >}}
+:::
+
+::: column
+트랜스포머는 범용 차별화 컴퓨터이기 때문에 훌륭한 신경망 아키텍처입니다. 동시에
+
+1.  표현력 (순방향)
+2.  최적화 가능(역전파 + 경사하강)
+3.  효율적 (높은 병렬처리 연산 그래프)
+:::
+:::
+
+### 패러미터 비율
+
+![](img/transformer_decomposition.png)
+
+::: aside
+[@Huben_2023]
+:::
+
+### Transformer 입력
+
+::: columns
+::: {.column width="30%"}
+<br> ![](img/transformer-modal.jpg){width="403"}
+:::
+
+::: {.column width="70%"}
+<br>
+
+![](img/transformer_feed.gif)
+:::
+:::
+:::
+
+## GPT는 어떻게 능력을 얻었나?
+
+![](img/gpt-evolution.png){width="915"}
+
+::: aside
+[@fu2022gptroadmap]
+:::
+
+## https://lifearchitect.ai/ {.smaller}
+
+::: {.panel-tabset .smaller}
+### IQ 분포
+
+![](img/2015-Alan-D-Thompson-IQ-Chart1.png)
+
+### LM 시험
+
+![](img/2022-Alan-D-Thompson-Language-Model-Tests-Rev-3.png){width="889"}
+
+### GPT-4
+
+![](img/2023-Alan-D-Thompson-GPT-4-Tests-Rev-3.png){width="889"}
+
+### 데이터셋
+
+![](img/2021-Alan-D-Thompson-Contents-of-GPT-3-and-GPT-Neo-Pile-v1-Rev-5.png){width="889"}
+
+### 딥마인드
+
+![](img/2022-Alan-D-Thompson-DeepMind-Models-Rev-2.png){width="889"}
+
+### 모형크기
+
+![](img/2023-Alan-D-Thompson-AI-Bubbles-Rev-7b.png){width="889"}
+
+### 능력
+
+![](img/2023-Alan-D-Thompson-LLM-Emerging-Rev-0.png){width="889"}
+
+### 비행기
+
+![](img/2023-Alan-D-Thompson-API-or-On-Premise-Rev-0b.png){width="889"}
+:::
+
+::: aside
+-   <https://lifearchitect.ai/models/> / Google Sheets: [바로가기](https://docs.google.com/spreadsheets/d/1O5KVQW1Hx5ZAkcg8AIRjbQLQzx2wVaLl0SqUu-ir9Fs/edit#gid=1158069878)
+:::
+
+## 현재 나의 모습
+
+![](img/now_me.png)
+
+## LLM 진화
+
+![](img/evolution_tree.jpg){width="650"}
+
+::: aside
+[@yang2023harnessing]
+:::
+
+## 공개형 GPT vs 폐쇄형 GPT
+
+::: panel-tabset
+### Stable Diffusion
+
+![](img/Stable-Diffusion-Developer-Adoption-1-scaled.webp){width="700"}
+
+### LLM
+
+![](img/llm_g.png){width="700"}
+
+### GPT4ALL
+
+![](img/gpt4all-demo.jpg){width="700"}
+:::
+
+::: aside
+-   데이터 출처: [@zhao2023survey]
+-   [chatGPT - 오픈소스 S/W](https://r2bit.com/chatGPT/open_source.html)
+:::
+
+## LLM
+
+::: panel-tabset
+### 독점/상용 LLM
+
+![](img/llm_proprietary.jpg)
+
+### 오픈소스/공개 LLM
+
+![](img/llm_open_source.jpg)
+:::
+
+::: aside
+[@fullstack2023]
+:::
+
+## 토큰 크기 (Context Length) {.smaller}
+
+::: panel-tabset
+### 표
+
+| 회사명    | LLM 모형           | Context 길이 (토큰 크기) | 텍스트 크기                |
+|------------------|------------------|------------------|------------------|
+| OpenAI    | GPT-1              | 512                      | 1 쪽, 4 단락, 36줄         |
+| 구글      | PaLM               | 512                      | ↑                          |
+| OpenAI    | GPT-2              | 1024                     | 2 쪽, 8 단락, 68줄         |
+| OpenAI    | GPT-3              | 2048                     | 1500 영단어, 4쪽, 139줄    |
+| OpenAI    | GPT-4              | 2048                     | ↑                          |
+| Meta      | Llama              | 2048                     | ↑                          |
+| OpenAI    | GPT-3.5-Turbo      | 4096                     | 9쪽, 369줄                 |
+| 구글      | PaLM2              | 8192                     | 13쪽, 단편 소설, 기술 문서 |
+| OpenAI    | GPT-4 8K           | 8192                     | ↑                          |
+| OpenAI    | GPT-4 32K          | 32000                    | 48쪽, 대학학위논문         |
+| MosaicML  | MPT-7B-StoryWriter | 65000                    | 98쪽                       |
+| Anthropic | Claude             | 100000                   | 150쪽, 소설책 반권         |
+
+### 그래프
+
+![](img/FsUnTB9aAAAkBCc.jfif){width="642"}
+
+--- Dan Fu @realDanFu <a href="https://twitter.com/realDanFu/status/1640762299408601089?s=20"> March 29, 2023</a>
+:::
+
+## HuggingGPT
+
+::: panel-tabset
+### LLM as Controller
+
+![](img/huggingGPT.jpg)
+
+### HuggingGPT 개요
+
+![](img/huggingGPT-generate.jpg){width="500"}
+
+### 사례
+
+![](img/huggingGPT-example.jpg){width="500"}
+:::
+
+::: aside
+출처: [@shen2023hugginggpt]
+:::

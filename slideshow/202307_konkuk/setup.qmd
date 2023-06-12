@@ -1,0 +1,63 @@
+
+# 실습
+
+## 실습개요 {.smaller}
+
+<br>
+
+```{mermaid}
+graph TB
+    Input("각종 문서<br>HWP, PDF, PPT, XLSX, PNG/JPG, JSON, SQL, ...") --> Document
+
+    subgraph "실습범위"
+        direction TB
+        Contents("챗GPT 실습") --> TEXT("체험 삶의 현장")
+        TEXT -.-> Survey("자료조사")
+        Contents --> Office("오피스 전쟁")
+        Office -.-> Report("글쓰기 시놉시스")
+        Contents --> Prompt("프롬프트")
+        Prompt -.-> Image("영화 포스터")
+        Contents --> Text2X("Text-to-X")
+        Text2X -.-> Reasoning("추론<br>AutoGPT<br>코딩<br>엑셀")
+    end
+
+    Document["실습범위"] --> Publishing("챗GPT 디지털 글쓰기 출판")
+
+    style Document fill:#f5f5f5,stroke:#333,stroke-width:3px
+    style Survey fill:#059fff,stroke:#333,stroke-width:1px
+    style Report fill:#059fff,stroke:#333,stroke-width:1px
+    style Image fill:#059fff,stroke:#333,stroke-width:1px
+    style Reasoning fill:#059fff,stroke:#333,stroke-width:1px        
+    style Contents fill:#059fff,stroke:#333,stroke-width:1px
+
+```
+
+
+## 실습 사전 준비 {.smaller}
+
+```{mermaid}
+flowchart TB
+    
+    setup["환경설정<br>MS(OpenAI), 구글(Bard)"]     --> practice
+
+    subgraph practice["챗GPT 실습"]
+    direction LR
+        survey["자료조사<br>대한민국 영화통계"]     --> writing["챗GPT 프롬프트 <br> 대박 영화 시놉시스 제작"]
+        writing               --> image["Text-to-Image<br> 대박영화 포스터 제작"]
+        image --> excle["정형 데이터 <br> 엑셀"]
+        image --> autoGPT["작업 자동화 <br> AutoGPT"]
+        image --> reasoning["추론 <br> 수능문제풀이"]
+    end
+
+    practice     --> workshop["챗GPT 출판<br>bitPublish, PDF"]
+
+
+class practice nodeStyle
+
+classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+```
+
+
+::: aside
+<https://r2bit.com/gpt-edu/gghr_20230619.html>
+:::

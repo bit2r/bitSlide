@@ -1,6 +1,26 @@
 # Internal slide decks
 
 
+- title: "챗GPT와 데이터 사이언스"
+  subtitle: "건국대 미래지식교육원 전문교육과정"
+  author: "이광춘"
+  date: 2023-07-01
+  image: img/konkuk/konkuk_logo.png
+  path: kunkuk_20230701.qmd
+  categories:
+    - "챗GPT"
+    - "데이터 사이언스"
+    - "소프트웨어 카펜트리"
+    - "글로벌 수료증"
+    - "디지털 전환"
+    - "Text-to-X"
+    - "건국대"
+    - "미래지식교육원"
+    - "전문교육과정"
+    - "한국 R 사용자회"
+    - "AI 앱"
+    - "R/Python/SQL"
+    - "프롬프트 엔지니어링"
 
 - title: "공공데이터 이해 및 데이터 활용역량"
   subtitle: "챗GPT와 데이터 사이언스"

@@ -1,0 +1,121 @@
+---
+title: "챗GPT와 데이터 사이언스"
+subtitle: "건국대 미래지식교육원 전문교육과정"
+author: "이광춘/신종화"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-07-01
+format: 
+  insper-revealjs:
+    self-contained: false
+    code-overflow: wrap
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  강사소개 및 미트업 안내
+
+2.  커리큘럼
+
+3.  챗GPT 데이터 사이언스 과정
+
+
+{{< include slideshow/202307_konkuk/00-who-am-i.qmd >}}
+
+{{< include slideshow/202307_konkuk/seoul-r-meeup.qmd >}}
+
+# 챗GPT 데이터 사이언스 <br> 과정 소개
+
+## 커리큘럼 {.smaller}
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(gt)
+library(gtExtras)
+extrafont::loadfonts()
+
+curriculum_raw <- read_excel("data/건국대_커리큘럼.xlsx")
+
+curriculum <- curriculum_raw %>% 
+  fill(everything(), .direction="down") %>% 
+  mutate(날짜 = as.Date(날짜)) %>% 
+  mutate(주차 = glue::glue("{주차} 주차"))
+
+## 첫번째
+curriculum_first <- curriculum %>% 
+  filter(dplyr::row_number() <=10)
+
+curriculum_first_gt <- curriculum_first %>%   
+  gt(groupname_col = c("주차", "날짜")) %>% 
+    cols_align(align = "center") %>% 
+  opt_table_font(
+    font = list(
+      google_font(name = "Sunflower"),
+      "NanumGothic"
+    )
+  ) %>% 
+  gt_theme_pff() %>% 
+  tab_style(
+    style = list(
+      "font-variant: small-caps;"
+    ),
+    locations = cells_body(columns = everything())
+  ) %>% 
+  tab_header(
+    title =
+      htmltools::tagList(
+        htmltools::tags$div(
+          style = htmltools::css(
+            `text-align` = "center"
+          ),
+          htmltools::HTML(
+            web_image("img/konkuk/tools.png")
+          )
+        ),
+        htmltools::tags$div(
+          htmltools::tags$strong("챗GPT 데이터 사이언스"),
+          "전문교육과정"
+        )
+      )
+  )
+
+## 두번째
+curriculum_second <- curriculum %>% 
+  filter(dplyr::row_number() > 10)
+
+curriculum_second_gt <- curriculum_second %>%   
+  gt(groupname_col = c("주차", "날짜")) %>% 
+    cols_align(align = "center") %>% 
+  opt_table_font(
+    font = list(
+      google_font(name = "Sunflower"),
+      "NanumGothic"
+    )
+  ) %>% 
+  gt_theme_pff() %>% 
+  tab_style(
+    style = list(
+      "font-variant: small-caps;"
+    ),
+    locations = cells_body(columns = everything())
+  ) 
+
+## 결합
+
+listed_tables <- list(curriculum_first_gt, curriculum_second_gt)
+
+gt_two_column_layout(listed_tables)
+
+```
+
