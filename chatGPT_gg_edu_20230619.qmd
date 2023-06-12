@@ -51,6 +51,10 @@ editor_options:
 
 {{< include slideshow/202306_gg_edu/DT_metrics.qmd >}}
 
+<!-- 실습준비 -->
+
+{{< include slideshow/202306_gg_edu/setup.qmd >}}
+
 {{< include slideshow/202306_gg_edu/01-life-in-action.qmd >}}
 
 {{< include slideshow/202306_gg_edu/office-interface.qmd >}}
@@ -58,6 +62,10 @@ editor_options:
 {{< include slideshow/202306_gg_edu/prompt-engineering.qmd >}}
 
 {{< include slideshow/202306_gg_edu/03-user-in-practice.qmd >}}
+
+<!-- 출판 워크샵 -->
+
+{{< include slideshow/202306_gg_edu/publishing.qmd >}}
 
 {{< include slideshow/202306_gg_edu/reference.qmd >}}
 
