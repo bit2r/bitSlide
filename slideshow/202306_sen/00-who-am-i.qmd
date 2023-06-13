@@ -1,0 +1,86 @@
+## 강사소개 & 강의 개요 {.smaller}
+
+::: panel-tabset
+### 강사 (이광춘)
+
+::: {layout-ncol="2"}
+### AI 아바타
+
+![](img/profile.png){.absolute top="0" right="0" width="300"}
+
+### 주요경력 및 학력
+
+-   (현) 비영리법인 한국 R 사용자회: 기술 이사
+
+-   (현) 국가교육위원회 전문위원: 과학/기술 분과
+
+-   (현) 건국대학교 챗GPT 데이터 사이언스 과정: 외래교수
+
+-   (전) TCS: GS 칼텍스 디지털 아카데미 강사
+
+-   (전) 연세대학교 데이터 사이언스: 겸임교수
+
+-   (전) 삼정 KPMG: Lighthouse AI 기술총괄
+
+-   (전) 웹젠: 데이터 과학자 TD
+
+-   (전) 현대모비스: 차량용 반도체 개발구매 <br>
+
+-   (전) 현대자동차: VAATZ / FTA <br>
+
+    <br> <hr> <br>
+
+-   KAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공
+
+-   [RStudio Instructor](https://education.rstudio.com/trainers/people/lee+kwangchun/) - Tidyverse
+
+-   [Seoul R Meetup Organizer](https://r2bit.com/seoul-r/)
+:::
+
+### 강사 (신종화)
+
+::: {layout-ncol="2"}
+### 프로필 사진
+
+![](img/shin_jh.png){.absolute top="0" right="0" width="300"}
+
+### 주요경력 및 학력
+
+-   (현) 비영리법인 한국 R 사용자회: 사무총장
+-   (전) 서울시교육청 교육감실 (비서실장)
+-   (전) 고려대학교 노동문제연구소 연구위원
+-   (전) 서울과학종합대학원  조교수
+-   (전) 518연구소(전남대) 전임연구원
+
+    <br> <hr> <br>
+
+-   고려대 사회학과
+-   영국 Warwick 대학교 사회학 박사
+-   핀란드헬싱키경제대학 대학원졸업 (E-MBA)
+
+:::
+
+
+### 강의개요
+
+::: {layout-ncol="2"}
+
+![](img/sen_logo.png)
+
+### 강의상세
+
+- 날짜 : 2023. 6. 27.~ 30 (화~금) 15:00~17:30
+- 장소 : 서울교육청 교육연수원 스마트실
+- 대상 : 초중등 교원 20명
+- 내용
+  - 디지털 글쓰기
+  - 챗GPT
+  - Text-to-X
+  - 출판
+  - 프롬프트 엔지니어링
+  - 쿼토(Quarto)
+  - 문서화 프로그래밍
+  - `bitPublish`
+:::
+:::
+

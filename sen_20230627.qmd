@@ -1,0 +1,66 @@
+---
+title: "챗GPT 디지털 글쓰기 출판"
+subtitle: "서울 교육청 교육연수"
+author: "이광춘/신종화"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-06-27
+format: 
+  insper-revealjs:
+    self-contained: false
+    code-overflow: wrap
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  강사소개 및 강의개요
+
+2.  챗GPT 데이터 사이언스 과정
+
+    -   교육기관 소개
+    -   과정 소개
+    -   과정 혜택
+    -   커리큘럼
+    -   수료증(건국대, 카펜트리)
+    -   과정 신청
+
+3.  서울 R 미트업
+
+{{< include slideshow/202306_sen/00-who-am-i.qmd >}}
+
+{{< include slideshow/202306_sen/seoul-r-meeup.qmd >}}
+
+{{< include slideshow/202306_sen/01-open-source-software.qmd >}}
+
+{{< include slideshow/202306_sen/setup.qmd >}}
+
+{{< include slideshow/202306_sen/02-life-in-action.qmd >}}
+
+{{< include slideshow/202306_sen/03-office-interface.qmd >}} 
+
+{{< include slideshow/202306_sen/04-user-in-practice.qmd >}}
+
+{{< include slideshow/202306_sen/05-prompt-engineering.qmd >}}
+
+{{< include slideshow/202306_sen/publishing.qmd >}}
+
+{{< include slideshow/202306_sen/reference.qmd >}}
+
+{{< include slideshow/202306_sen/LLM-chatGPT.qmd >}}
+
+{{< include slideshow/202306_sen/limitation.qmd >}}
+
+
+
+
+

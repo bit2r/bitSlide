@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-06-13T06:33:58.069Z</lastmod>
+    <lastmod>2023-06-13T09:06:22.453Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-seoul-r-meetup/index.html</loc>
@@ -494,7 +494,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/curriculum.html</loc>
-    <lastmod>2023-06-13T04:43:56.083Z</lastmod>
+    <lastmod>2023-06-13T08:20:53.602Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202306_workshop/hands_on_workshop.html</loc>
@@ -507,5 +507,57 @@
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202306_workshop/who-we-are.html</loc>
     <lastmod>2023-06-13T06:33:08.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/sen_20230627.html</loc>
+    <lastmod>2023-06-13T09:06:48.680Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_sen/00-who-am-i.html</loc>
+    <lastmod>2023-06-13T09:06:13.888Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_sen/01-open-source-software.html</loc>
+    <lastmod>2023-06-13T09:05:52.891Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_sen/02-life-in-action.html</loc>
+    <lastmod>2023-06-13T09:05:57.671Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_sen/03-office-interface.html</loc>
+    <lastmod>2023-06-13T09:05:58.564Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_sen/04-user-in-practice.html</loc>
+    <lastmod>2023-06-13T09:06:03.206Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_sen/05-prompt-engineering.html</loc>
+    <lastmod>2023-06-13T09:06:07.309Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_sen/LLM-chatGPT.html</loc>
+    <lastmod>2023-06-13T09:06:08.607Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_sen/limitation.html</loc>
+    <lastmod>2023-06-13T09:06:09.357Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_sen/publishing.html</loc>
+    <lastmod>2023-06-13T09:06:09.881Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_sen/reference.html</loc>
+    <lastmod>2023-06-13T09:06:10.320Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_sen/seoul-r-meeup.html</loc>
+    <lastmod>2023-06-13T09:06:10.811Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_sen/setup.html</loc>
+    <lastmod>2023-06-13T09:06:11.305Z</lastmod>
   </url>
 </urlset>

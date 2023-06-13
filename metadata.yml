@@ -1,5 +1,20 @@
 # Internal slide decks
 
+- title: "챗GPT 디지털 글쓰기 출판"
+  subtitle: "서울 교육청"
+  author: "비영리법인 한국 R 사용자회"
+  date: 2023-06-27
+  image: img/sen_logo.png
+  path: sen_20230627.qmd
+  categories:
+    - "챗GPT"
+    - "디지털 글쓰기"
+    - "출판"
+    - "한국 R 사용자회"
+    - "쿼토(Quarto)"
+    - "문서화 프로그래밍"
+    - "서울교육청"
+    - "bitPublish"
 
 - title: "챗GPT 디지털 글쓰기 출판"
   subtitle: "한국 R 사용자회 워크샵"
