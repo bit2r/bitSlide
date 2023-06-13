@@ -27,12 +27,21 @@ editor_options:
 
 2.  실습 준비
 
-3.  워크샵 
+3.  워크샵
+
+4.  출판 
 
 
-{{< include slideshow/202306_workshop/00-who-am-i.qmd >}}
+{{< include slideshow/202306_workshop/who-we-are.qmd >}}
+
+{{< include slideshow/202306_workshop/seoul-r-meeup.qmd >}}
 
 {{< include slideshow/202306_workshop/setup.qmd >}}
 
-{{< include slideshow/202306_workshop/seoul-r-meeup.qmd >}}
+{{< include slideshow/202306_workshop/hands_on_workshop.qmd >}}
+
+{{< include slideshow/202306_workshop/publishing.qmd >}}
+
+
+
 

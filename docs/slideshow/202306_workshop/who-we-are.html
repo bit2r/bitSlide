@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>발표자료 | 한국 R 사용자회 – setup</title>
+<title>발표자료 | 한국 R 사용자회 – who-we-are</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,6 +36,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "일치 없음",
@@ -63,14 +66,11 @@ ga('send', {
   'anonymizeIp': true,
 });
 </script>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -108,92 +108,86 @@ ga('send', {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
-<!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
-
-
-
-<section id="실습-준비" class="level1 page-columns page-full">
-<h1>실습 준비</h1>
-<section id="실습개요" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="실습개요">실습개요</h2>
-<p><br></p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<div>
-<pre class="mermaid mermaid-js">graph TB
-    Input("각종 문서&lt;br&gt;HWP, PDF, PPT, XLSX, PNG/JPG, JSON, SQL, ...") --&gt; Document
-
-    subgraph "실습범위"
-        direction TB
-        Contents("챗GPT 실습") --&gt; TEXT("체험 삶의 현장")
-        TEXT -.-&gt; Survey("자료조사")
-        Contents --&gt; Office("오피스 전쟁")
-        Office -.-&gt; Report("글쓰기 시놉시스")
-        Contents --&gt; Prompt("프롬프트")
-        Prompt -.-&gt; Image("영화 포스터")
-        Contents --&gt; Text2X("Text-to-X")
-        Text2X -.-&gt; Reasoning("추론&lt;br&gt;AutoGPT&lt;br&gt;코딩&lt;br&gt;엑셀")
-    end
-
-    Document["실습범위"] --&gt; Publishing("챗GPT 디지털 글쓰기 출판")
-
-    style Document fill:#f5f5f5,stroke:#333,stroke-width:3px
-    style Survey fill:#059fff,stroke:#333,stroke-width:1px
-    style Report fill:#059fff,stroke:#333,stroke-width:1px
-    style Image fill:#059fff,stroke:#333,stroke-width:1px
-    style Reasoning fill:#059fff,stroke:#333,stroke-width:1px        
-    style Contents fill:#059fff,stroke:#333,stroke-width:1px
-
-</pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="실습-사전-준비" class="level2 smaller page-columns page-full">
-<h2 class="smaller anchored" data-anchor-id="실습-사전-준비">실습 사전 준비</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
     
-    setup["환경설정&lt;br&gt;MS(OpenAI), 구글(Bard)"]     --&gt; practice
-
-    subgraph practice["챗GPT 실습"]
-    direction LR
-        survey["자료조사&lt;br&gt;대한민국 영화통계"]     --&gt; writing["챗GPT 프롬프트 &lt;br&gt; 대박 영화 시놉시스 제작"]
-        writing               --&gt; image["Text-to-Image&lt;br&gt; 대박영화 포스터 제작"]
-        image --&gt; excle["정형 데이터 &lt;br&gt; 엑셀"]
-        image --&gt; autoGPT["작업 자동화 &lt;br&gt; AutoGPT"]
-        image --&gt; reasoning["추론 &lt;br&gt; 수능문제풀이"]
-    end
-
-    practice     --&gt; workshop["챗GPT 출판&lt;br&gt;bitPublish, PDF"]
-
-
-class practice nodeStyle
-
-classDef nodeStyle fill:#93c47d,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
-</pre>
-</div>
-</div>
-</div>
-</div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
 
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p><a href="https://r2bit.com/gpt-edu/gghr_20230619.html" class="uri">https://r2bit.com/gpt-edu/gghr_20230619.html</a></p>
-</div></div></section>
+<section id="강사소개-강의-개요" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="강사소개-강의-개요">강사소개 &amp; 강의 개요</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">강사소개</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">워크샵 개요</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<section id="비영리법인-한국-r-사용자회" class="level3">
+<h3 class="anchored" data-anchor-id="비영리법인-한국-r-사용자회">비영리법인 한국 R 사용자회</h3>
+<p><a href="img/avengers.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/avengers.jpg" class="img-fluid figure-img" data-top="0" data-right="0"></a></p>
+</section></figure>
+</div></div></div></div></div></div></section>
+</main></div>
+<section id="주요연혁" class="level3 quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<h3 data-anchor-id="주요연혁">주요연혁</h3>
+<ul>
+<li><p>한국 R 사용자회 공익법인 등록 (2023.06)</p></li>
+<li><p>한국 R 사용자회 출판업 등록 (2023.05)</p></li>
+<li><p>교보그룹 디플래닉스 서울 R 미트업 후원 (2023.04)</p></li>
+<li><p>한국 R 사용자회 비영리법인 인가 (2022.02)</p></li>
+<li><p>한국 R 컨퍼런스 개최 (2021.11)</p></li>
+<li><p>한국 R 사용자회 고유번호증 단체 등록 (2021.07)</p></li>
+<li><p>국내 첫 R Consortium 후원 단체 지정 (2021.04)</p></li>
+<li><p>Tidyverse Korea 커뮤니티 츨범 (2017.06)</p>
+<p><br></p>
+<hr>
+<p><br></p></li>
+<li><p>인천서구강소특수 연구용역 (2023.06)</p></li>
+<li><p>서울교육청 사회단체보조금 지원사업 (2022.11)</p></li>
+<li><p>나눔국민운동본부 생애주기별 나눔교육 (2022.08)</p></li>
+</ul>
 </section>
 
-</main> <!-- /main -->
+
+
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="img/sungkyunkwan-university-logo.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/sungkyunkwan-university-logo.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<section id="워크샵-상세내용" class="level3 quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<h3 data-anchor-id="워크샵-상세내용">워크샵 상세내용</h3>
+<ul>
+<li>강의일시 : 2023. 6. 24 (토) 13:00 ~ 17:00</li>
+<li>장소 : 성균관대학교 국제관 9B208</li>
+<li>대상 : 한국 R 사용자회 회원</li>
+<li>모집정원: 20명</li>
+<li>참가신청: <a href="https://event-us.kr/data-science/event/64397">바로가기</a></li>
+<li>참가비: 100,000 원</li>
+<li>내용
+<ul>
+<li>챗GPT 활용 글감 작성(챗GPT)</li>
+<li>디지털 글쓰기 외양(Quarto)</li>
+<li>콘텐츠 배포와 공유(GitHub/Quarto Pub)</li>
+<li>전자출판(BitPublish)</li>
+</ul></li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -427,7 +421,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+ <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox","loop":true});</script>
 
 
 

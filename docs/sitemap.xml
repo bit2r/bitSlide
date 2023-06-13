@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-06-13T04:48:04.649Z</lastmod>
+    <lastmod>2023-06-13T06:33:58.069Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-seoul-r-meetup/index.html</loc>
@@ -290,7 +290,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202306_gg_edu/03-user-in-practice.html</loc>
-    <lastmod>2023-06-04T03:11:21.026Z</lastmod>
+    <lastmod>2023-06-13T06:32:56.358Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202306_gg_edu/04-limitation.html</loc>
@@ -322,7 +322,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202306_gg_edu/prompt-engineering.html</loc>
-    <lastmod>2023-06-04T03:11:26.023Z</lastmod>
+    <lastmod>2023-06-13T06:33:00.478Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202306_gg_edu/reference.html</loc>
@@ -410,7 +410,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/kunkuk_20230701.html</loc>
-    <lastmod>2023-06-13T04:48:14.312Z</lastmod>
+    <lastmod>2023-06-13T06:33:11.945Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202306_gg_edu/publishing.html</loc>
@@ -490,10 +490,22 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/workshop_20230624.html</loc>
-    <lastmod>2023-06-13T04:48:29.691Z</lastmod>
+    <lastmod>2023-06-13T06:34:04.101Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202307_konkuk/curriculum.html</loc>
     <lastmod>2023-06-13T04:43:56.083Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_workshop/hands_on_workshop.html</loc>
+    <lastmod>2023-06-13T06:33:06.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_workshop/setup.html</loc>
+    <lastmod>2023-06-13T06:33:07.501Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202306_workshop/who-we-are.html</loc>
+    <lastmod>2023-06-13T06:33:08.010Z</lastmod>
   </url>
 </urlset>
