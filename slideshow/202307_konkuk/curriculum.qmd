@@ -88,7 +88,7 @@ library(gt)
 library(gtExtras)
 extrafont::loadfonts()
 
-curriculum_raw <- read_excel("data/건국대_커리큘럼.xlsx")
+curriculum_raw <- read_excel(glue::glue("{here::here()}/data/건국대_커리큘럼.xlsx"))
 
 curriculum <- curriculum_raw %>% 
   fill(everything(), .direction="down") %>% 

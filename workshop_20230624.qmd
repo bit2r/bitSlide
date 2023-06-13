@@ -1,0 +1,38 @@
+---
+title: "챗GPT 디지털 글쓰기 출판"
+subtitle: "한국 R 사용자회 워크샵"
+author: " "
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-06-24
+format: 
+  insper-revealjs:
+    self-contained: false
+    code-overflow: wrap
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  워크샵 및 미트업 안내
+
+2.  실습 준비
+
+3.  워크샵 
+
+
+{{< include slideshow/202306_workshop/00-who-am-i.qmd >}}
+
+{{< include slideshow/202306_workshop/setup.qmd >}}
+
+{{< include slideshow/202306_workshop/seoul-r-meeup.qmd >}}
+

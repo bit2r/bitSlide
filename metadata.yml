@@ -1,6 +1,22 @@
 # Internal slide decks
 
 
+- title: "챗GPT 디지털 글쓰기 출판"
+  subtitle: "한국 R 사용자회 워크샵"
+  author: "비영리법인 한국 R 사용자회"
+  date: 2023-06-24
+  image: img/publishing_workshop.jpg
+  path: workshop_20230624.qmd
+  categories:
+    - "챗GPT"
+    - "디지털 글쓰기"
+    - "출판"
+    - "한국 R 사용자회"
+    - "쿼토(Quarto)"
+    - "문서화 프로그래밍"
+    - "R/Python/SQL/LaTeX"
+    - "프롬프트 엔지니어링"
+
 - title: "챗GPT와 데이터 사이언스"
   subtitle: "건국대 미래지식교육원 전문교육과정"
   author: "이광춘"

@@ -185,9 +185,10 @@ collapsibleTree(practice_raw, c("실무작업", "세부작업"),
 -   [이동수 (2023.04.02.), "대기업 회의 내용 유출... '챗GPT 기밀 유출' 우려가 현실로", 세계일보](https://n.news.naver.com/mnews/article/022/0003798570?sid=101)
 :::
 
-## 실습
+## 실습: Text-to-Image {.smaller}
 
 ::: panel-tabset
+
 ### Text-to-Image 프롬프트
 
 프롬프트를 사용하여 생성형 이미지 제작 전문가로 역할을 해주세요. Dall-E 2를 생성형 이미지 제작을 위한 기본 엔진으로 설정하고 다음 텍스트를 이미지 생성용 텍스트 프롬프트로 작성한 10단어 내외로 작성 후 영어로 번역하시오.
@@ -210,31 +211,29 @@ English translation: "The double life of Deok-su, a special agent and a team of 
 
 ### 이미지 생성자
 
-![](img/_7562ceef-812d-4290-92a2-c1f4cda703ba.jfif){fig-align="center" width="500"}
+
+![](img/_7562ceef-812d-4290-92a2-c1f4cda703ba.jfif){fig-align="center" width="400"}
 
 -   [바로가기](https://www.bing.com/images/create/the-double-life-of-deok-su2c-a-special-agent-and-a-/647bf625534745f991d24e18bc1f8d7f?id=aVZQTeLr7wd7X2MHqWnqCQ%3d%3d&view=detailv2&idpp=genimg&FORM=GCRIDP&mode=overlay)
 
 ### 스타일 적용
 
-:::::{.columns}
-:::{.column}
+::: columns
+::: column
 The double life of Deok-su, a special agent and a team of chicken shop owners, no characters, Peter Mohrbacher, uplight, hyper detail, street level view, analog photography, digital painting
 
 <br>
 
-- [바로가기](https://www.bing.com/images/create/the-double-life-of-deok-su2c-a-special-agent-and-a-/647bf8d1338646d9a2fcb56dc098c17b?id=0In2NDCSDGkecC8aTOeNvg%3d%3d&view=detailv2&idpp=genimg&FORM=GCRIDP&mode=overlay)
+-   [바로가기](https://www.bing.com/images/create/the-double-life-of-deok-su2c-a-special-agent-and-a-/647bf8d1338646d9a2fcb56dc098c17b?id=0In2NDCSDGkecC8aTOeNvg%3d%3d&view=detailv2&idpp=genimg&FORM=GCRIDP&mode=overlay)
 :::
-:::{.column}
+
+::: column
 ![](img/_5c6ff735-8b51-4307-b267-44f8cb0ec7e2.jfif)
 :::
-:::::
-
-
+:::
 :::
 
 ::: aside
-
-- [Text-to-Image](https://r2bit.com/chatGPT/text_to_images.html)
-
+-   [Text-to-Image](https://r2bit.com/chatGPT/text_to_images.html)
 :::
 
