@@ -1,5 +1,24 @@
 # 디지털 전환 지표 <br> ㄴ 전통 지표
 
+## 4차 산업혁명을 넘어서 ...
+
+
+:::{.panel-tabset}
+### 생각의 진화
+
+![](img/gg/ct-unplugged-4th-paradigm-korea.png)
+
+### 인간과 기계의 분업
+
+![[@cummings2014man]](img/gg/man-machine-role-allocation.png)
+
+### 챗GPT와 글쓰기
+
+![](img/gseek-evolution.jpg)
+
+:::
+
+
 ## 전통적 지표 
 <br>
 <br>
@@ -14,7 +33,8 @@
 
 ## 전통 지표 기준 강대국 {.smaller}
 
-```{r oecd-stats }
+```{r}
+#| label:  oecd-stats-traditional
 library(tidyverse)
 library(countrycode)
 library(reactable)
@@ -75,7 +95,8 @@ oecd_df %>%
 
 ## 확장 지표 기준 선진국 {.smaller}
 
-```{r oecd-esg-extended}
+```{r}
+#| label: oecd-esg-extended-quarto
 
 oecd_df %>% 
   select("country", "flags", "income_inequality", "hdi", "fsi", "cpi", "ief", "gpi", "wpfi", "di") %>% 
@@ -139,7 +160,8 @@ oecd_df %>%
 
 ## 디지털 강대국 지표 - 디지털 정부 순위 {.smaller}
 
-```{r digital-index-government}
+```{r}
+#| label: digital-index-government-quarto
 library(tidyverse)
 library(reactable)
 library(htmltools)
@@ -189,7 +211,8 @@ oecd_df %>%
 
 ## 디지털 강대국 지표 - 인공지능 준비지수 {.smaller}
 
-```{r digital-index-ai-government}
+```{r}
+#| label:  digital-index-ai-gov
 
 oecd_df %>% 
   arrange(ai_rank) %>% 
@@ -227,7 +250,8 @@ oecd_df %>%
  
 ## 디지털 강대국 지표 - 데이터 경제 {.smaller}
 
-```{r digital-index-data-economy}
+```{r}
+#| label: digital-index-data-eco
 
 oecd_df %>% 
   arrange(ai_rank) %>% 
@@ -265,7 +289,8 @@ oecd_df %>%
 
 ## 디지털 강대국 지표 - 산업용 로봇 {.smaller}
 
-```{r digital-index-robot}
+```{r}
+#| label: digital-index-robot-quarto
 
 oecd_df %>% 
   arrange(robot_rank) %>% 
@@ -303,7 +328,8 @@ oecd_df %>%
 
 ## 디지털 강대국 지표 - WEF 세계 경쟁력 {.smaller}
 
-```{r digital-index-competitiveness}
+```{r}
+#| label: digital-index-comp
 
 oecd_df %>% 
   arrange(wef_rank) %>% 
@@ -340,7 +366,8 @@ oecd_df %>%
 
 ## 디지털 강대국 지표 - IMD 디지털 경쟁력 {.smaller}
 
-```{r digital-index-imd}
+```{r}
+#| label: digital-index-imd-quarto
 
 oecd_df %>% 
   arrange(digital_rank) %>% 
@@ -378,7 +405,8 @@ oecd_df %>%
 
 ## 디지털 강대국 지표 - 종합 {.smaller}
 
-```{r digital-index-summary}
+```{r}
+#| label: digital-index-summary-quarto
 
 oecd_df %>% 
   arrange(robot_rank) %>% 
@@ -431,6 +459,8 @@ oecd_df %>%
 ## 디지털 강대국 지표 - 종합 시각화 {.smaller}
 
 ```{r}
+#| fig-width: 10
+#| fig-height: 7
 library(plotly)
 library(tidymodels)
 library(embed)
@@ -482,5 +512,4 @@ plot_tbl %>%
     add_text(text = ~country, showlegend = FALSE, textposition = "top right")
 
 ```
-
 

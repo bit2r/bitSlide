@@ -1,4 +1,3 @@
-
 # 문서화 프로그래밍과 출판
 
 ## 문서화 프로그래밍 {.smaller}
@@ -51,4 +50,126 @@ graph LR
 ::: aside
 <https://event-us.kr/data-science/event/64397>
 :::
+
+## 챗GPT 데이터 사이언스 {.smaller}
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(gt)
+library(gtExtras)
+extrafont::loadfonts()
+
+curriculum_raw <- read_excel(glue::glue("{here::here()}/data/건국대_커리큘럼.xlsx"))
+
+curriculum <- curriculum_raw %>% 
+  fill(everything(), .direction="down") %>% 
+  mutate(날짜 = as.Date(날짜)) %>% 
+  mutate(주차 = glue::glue("{주차} 주차"))
+
+## 첫번째
+curriculum_first <- curriculum %>% 
+  filter(dplyr::row_number() <=10)
+
+curriculum_first_gt <- curriculum_first %>%   
+  gt(groupname_col = c("주차", "날짜")) %>% 
+    cols_align(align = "center") %>% 
+  opt_table_font(
+    font = list(
+      google_font(name = "Sunflower"),
+      "NanumGothic"
+    )
+  ) %>% 
+  gt_theme_pff() %>% 
+  tab_style(
+    style = list(
+      "font-variant: small-caps;"
+    ),
+    locations = cells_body(columns = everything())
+  ) %>% 
+  tab_header(
+    title =
+      htmltools::tagList(
+        htmltools::tags$div(
+          style = htmltools::css(
+            `text-align` = "center"
+          ),
+          htmltools::HTML(
+            web_image("img/konkuk/tools.png")
+          )
+        ),
+        htmltools::tags$div(
+          htmltools::tags$strong("챗GPT 데이터 사이언스"),
+          "전문교육과정"
+        )
+      )
+  )
+
+## 두번째
+curriculum_second <- curriculum %>% 
+  filter(dplyr::row_number() > 10)
+
+curriculum_second_gt <- curriculum_second %>%   
+  gt(groupname_col = c("주차", "날짜")) %>% 
+    cols_align(align = "center") %>% 
+  opt_table_font(
+    font = list(
+      google_font(name = "Sunflower"),
+      "NanumGothic"
+    )
+  ) %>% 
+  gt_theme_pff() %>% 
+  tab_style(
+    style = list(
+      "font-variant: small-caps;"
+    ),
+    locations = cells_body(columns = everything())
+  ) 
+
+## 결합
+
+listed_tables <- list(curriculum_first_gt, curriculum_second_gt)
+
+gt_two_column_layout(listed_tables)
+
+```
+
+::: aside
+[건국대 미래지식교육원 전문교육과정](https://r2bit.com/bitSlide/kunkuk_20230701.html#/title-slide)
+:::
+
+## 개방형 문서와 챗GPT {.smaller}
+
+#### 챗GPT 프롬프트
+
+> 웹사이트(<https://r2bit.com/bitSlide/kunkuk_20230701.html#/title-slide>)에서 챗GPT와 데이터 사이언스 - 건국대 미래지식교육원 전문교육과정 페이스북 게시글로 작성해주세요.
+
+#### 챗GPT 결과
+
+안녕하세요! 👋 건국대 미래지식교육원에서 '챗GPT와 데이터 사이언스' 전문교육과정을 개설합니다! 🎉
+
+🗓️ 일시: 2023년 7월 1일부터 8월 26일까지 매주 토요일 10:00 - 17:00
+
+💻 교육내용: 챗GPT를 이용한 데이터 사이언스, 소프트웨어 카펜트리, 디지털 전환, Text-to-X, AI 앱, 프롬프트 엔지니어링 등을 R, Python, SQL 등을 활용하여 핸즈온으로 실습합니다.
+
+🎯 대상: 전산 비전공자 대학생(석박사 포함) 및 직장인
+💰 수강료: 1,650,000원
+👥 모집인원: 25명
+
+🎓 수료 후에는 '챗GPT와 데이터 사이언스' 전문과정 건국대 및 소프트웨어 카펜트리 수료증이 발급됩니다.
+
+🎉 과정상세: https://r2bit.com/bitSlide/kunkuk_20230701.html
+📝 신청방법: https://edulife2.konkuk.ac.kr/EdulifeS_New/Index
+
+📧 문의사항: victor@r2bit.com 이메일로 연락주세요.
+
+'챗GPT와 데이터 사이언스'로 함께 실력을 키우며 AI 시대를 선도해 나가요! 기대합니다! 🚀
+
+`#건국대 #미래지식교육원 #챗GPT #데이터사이언스 #소프트웨어카펜트리 #R/Python/SQL/OPL #쿼토`
+
+
+::: aside
+<https://chat.openai.com/share/0fc4a355-a898-4d3b-a5ff-92ee4083df1b>
+:::
+
 
