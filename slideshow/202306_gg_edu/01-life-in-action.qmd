@@ -239,6 +239,34 @@ Chegg, Inc.는 캘리포니아주 산타클라라에 본사를 둔 미국 교육
 -   자료출처: [David F. Carr (April 27, 2023), "Developers increasingly get advice from AI chatbots and GitHub CoPilot rather than Stack Overflow message boards", Similarweb Blog](https://www.similarweb.com/blog/insights/ai-news/stack-overflow-chatgpt/)
 :::
 
+## 실업통계
+
+<br>
+
+:::::{layout-ncol=3}
+
+### 미국 실직사유
+
+![](img/ai_jobs.jfif)
+
+
+### 중앙일보 시각화
+
+![](img/ai_jobs_korean.jpg)
+
+### 사무노동자 변화
+
+![](img/ai_jobs_white_color.jpg)
+
+
+:::::
+
+
+::: aside
+- [김남준 (2023.06.05.), "카피라이터까지…챗GPT발 고소득 전문직 실직 시작됐다", 중앙일보](https://n.news.naver.com/mnews/article/025/0003284701?sid=101)
+:::
+
+
 ## 실습: 자료조사 {.smaller}
 
 ::: panel-tabset
@@ -304,29 +332,3 @@ kobis %>%
 :::
 
 
-## 실업통계
-
-<br>
-
-:::::{layout-ncol=3}
-
-### 미국 실직사유
-
-![](img/ai_jobs.jfif)
-
-
-### 중앙일보 시각화
-
-![](img/ai_jobs_korean.jpg)
-
-### 사무노동자 변화
-
-![](img/ai_jobs_white_color.jpg)
-
-
-:::::
-
-
-::: aside
-- [김남준 (2023.06.05.), "카피라이터까지…챗GPT발 고소득 전문직 실직 시작됐다", 중앙일보](https://n.news.naver.com/mnews/article/025/0003284701?sid=101)
-:::

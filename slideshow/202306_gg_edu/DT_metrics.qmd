@@ -115,27 +115,39 @@ oecd_df %>%
           }")
         ),
         flags = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 70
         ),
         income_inequality = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 110
         ),
         hdi = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 80
         ),
         fsi = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 80
         ),
         cpi = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 80
         ),  
         ief = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 80
         ),
         gpi = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 80
         ),
         wpfi = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
+          width = 80
+        ),
+        di = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 80
         )        
     )
