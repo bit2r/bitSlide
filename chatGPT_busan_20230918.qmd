@@ -1,0 +1,45 @@
+---
+title: "AI(챗GPT) 글쓰기"
+subtitle: "챗GPT, 데이터 사이언스, 디지털 글쓰기"
+author: "이광춘/신종화"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-09-18
+format: 
+  insper-revealjs:
+    self-contained: false
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  강사소개 및 미트업 안내
+
+2.  지표로 보는 대한민국
+
+3.  공공데이터 현황
+
+4.  데이터 문해력
+
+5.  데이터 과학
+
+6.  챗GPT 디지털 **글쓰기**
+
+7.  질의응답
+
+{{< include slideshow/202309_busan/00-who-am-i.qmd >}}
+
+{{< include slideshow/202309_busan/seoul-r-meeup.qmd >}}
+
+{{< include slideshow/202309_busan/reference.qmd >}}
+
+

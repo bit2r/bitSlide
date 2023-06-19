@@ -2,6 +2,23 @@
 
 
 - title: "챗GPT (데이터 과학) 디지털 글쓰기"
+  subtitle: "부산광역시"
+  author: "비영리법인 한국 R 사용자회"
+  date: 2023-09-18
+  image: img/busan_logo.png
+  path: chatGPT_busan_20230918.qmd
+  categories:
+    - "챗GPT"
+    - "디지털 글쓰기"
+    - "데이터 사이언스"
+    - "한국 R 사용자회"
+    - "쿼토(Quarto)"
+    - "문서화 프로그래밍"
+    - "부산광역시"
+    - "디지털 전환"
+
+
+- title: "챗GPT (데이터 과학) 디지털 글쓰기"
   subtitle: "순천향대학교"
   author: "비영리법인 한국 R 사용자회"
   date: 2023-07-06

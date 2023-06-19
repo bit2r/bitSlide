@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-06-19T03:18:20.433Z</lastmod>
+    <lastmod>2023-06-19T03:27:56.833Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202305-seoul-r-meetup/index.html</loc>
@@ -579,5 +579,21 @@
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202307_sch/seoul-r-meeup.html</loc>
     <lastmod>2023-06-19T03:18:09.930Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/chatGPT_busan_20230918.html</loc>
+    <lastmod>2023-06-19T03:28:57.666Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_busan/00-who-am-i.html</loc>
+    <lastmod>2023-06-19T03:28:44.479Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_busan/reference.html</loc>
+    <lastmod>2023-06-19T03:27:45.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_busan/seoul-r-meeup.html</loc>
+    <lastmod>2023-06-19T03:27:46.522Z</lastmod>
   </url>
 </urlset>
