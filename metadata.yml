@@ -1,5 +1,22 @@
 # Internal slide decks
 
+
+- title: "챗GPT (데이터 과학) 디지털 글쓰기"
+  subtitle: "순천향대학교"
+  author: "비영리법인 한국 R 사용자회"
+  date: 2023-07-06
+  image: img/sch_logo.jpg
+  path: chatGPT_sch_20230706.qmd
+  categories:
+    - "챗GPT"
+    - "디지털 글쓰기"
+    - "데이터 사이언스"
+    - "한국 R 사용자회"
+    - "쿼토(Quarto)"
+    - "문서화 프로그래밍"
+    - "순천향대학교"
+    - "디지털 전환"
+    
 - title: "챗GPT 디지털 글쓰기 출판"
   subtitle: "서울 교육청"
   author: "비영리법인 한국 R 사용자회"
