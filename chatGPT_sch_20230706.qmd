@@ -1,6 +1,6 @@
 ---
-title: "AI(챗GPT) 글쓰기"
-subtitle: "챗GPT, 데이터 사이언스, 디지털 글쓰기"
+title: "챗GPT: 사람과 AI 분업"
+subtitle: "챗GPT (데이터 과학) 문서화 프로그래밍"
 author: "이광춘/신종화"
 institute: "비영리법인 한국 R 사용자회"
 date: 2023-07-06
