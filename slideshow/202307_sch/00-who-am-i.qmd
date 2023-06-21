@@ -1,4 +1,3 @@
-
 ## 강사소개 & 강의 개요 {.smaller}
 
 ::: panel-tabset
@@ -7,7 +6,7 @@
 ::: {layout-ncol="2"}
 ### AI 아바타
 
-![](img/profile.png){.absolute top="0" right="0" width="300"}
+![](img/profile.png){.absolute top="0" right="0" fig-align="center" width="300"}
 
 ### 주요경력 및 학력
 
@@ -31,7 +30,11 @@
 
 -   (전) 현대자동차: VAATZ / FTA <br>
 
-    <br> <hr> <br>
+    <br>
+
+    <hr>
+
+    <br>
 
 -   KAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공
 
@@ -43,17 +46,21 @@
 ### 강의개요
 
 ::: {layout-ncol="2"}
-
 ![](img/sch_logo.jpg)
 
 ### 강의상세
 
-- 날짜 : 2023. 07. 06.(목) 14:00~16:00
-- 장소 : 순천향대학교
-- 대상 : 미정
-- 내용
-  - "챗GPT"
-  - "Text-to-X"
-
+-   날짜 : 2023. 07. 06.(목) 14:00\~15:50
+-   장소 : 순천향대학교 내 강의실 추후 공지 예정)
+-   대상 : 산학협력단 직원 30\~40명
+-   내용
+    -   챗GPT
+    -   인공지능(AI)
+    -   삶의 현장
+    -   오픈소스 LLM
+    -   Text-to-X
+    -   프롬프트 공학
+    -   디지털 글쓰기
+    -   "사무 자동화/지능화"
 :::
 :::
