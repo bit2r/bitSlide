@@ -1,0 +1,123 @@
+# 문서화 프로그래밍 커뮤니티 <br> 챗GPT 디지털 글쓰기 출판
+
+## 문서화 프로그래밍 {.smaller}
+
+::: panel-tabset
+### 개발과 저작
+
+<br> <br>
+
+```{mermaid}
+graph LR
+
+    subgraph "소프트웨어"
+        direction LR
+        sourcecode[소스코드] --> package1[패키지]
+        package1 --> product1["제품(S/W)"]
+        product1 --> distribute1[배포]
+        distribute1 --> service1["서비스<br>(앱)"]
+    end
+    
+    subgraph "문서"
+        direction LR
+        text[텍스트] --> package2[패키지]
+        package2 --> product2["제품(문서)"]
+        product2 --> distribute2[배포]
+        distribute2 --> service2["서비스<br>(출판)"]
+    end
+
+    style 소프트웨어 fill:#f5f5f5,stroke:#333,stroke-width:3px
+    style 문서 fill:#b5b5b5,stroke:#111,stroke-width:3px
+
+    style sourcecode fill:#ffeeee,stroke:#f66,stroke-width:2px
+    style package1 fill:#eeffee,stroke:#6f6,stroke-width:2px
+    style product1 fill:#eeeeff,stroke:#66f,stroke-width:2px
+    style distribute1 fill:#eefeee,stroke:#6ff,stroke-width:2px
+    style service1 fill:#ffeeee,stroke:#f66,stroke-width:2px
+
+    style text fill:#ffeeee,stroke:#f66,stroke-width:2px
+    style package2 fill:#eeffee,stroke:#6f6,stroke-width:2px
+    style product2 fill:#eeeeff,stroke:#66f,stroke-width:2px
+    style distribute2 fill:#eefeee,stroke:#6ff,stroke-width:2px
+    style service2 fill:#ffeeee,stroke:#f66,stroke-width:2px
+```
+
+### 출판 워크샵
+
+![](img/chatGPT_workshop.png){fig-align="center" width="354"}
+:::
+
+::: aside
+<https://event-us.kr/data-science/event/64397>
+:::
+
+## 글쓰기 {.smaller}
+
+::: panel-tabset
+### AI 시대 글쓰기
+
+![](img/digital-writing-overview.png){fig-align="center" width="862"}
+
+### 글쓰기 역사
+
+![](img/writing_history.jpg)
+
+### 디지털 글쓰기
+
+[![](https://mermaid.ink/img/pako:eNqNlNFr00Acx_-VcHtx0LJK2INBBrLhXjrQriBofLgmlyaYXsr1gpYxKFpBsLKVdbphV-qLvvQhMod50H-ouf4P3uWSpalGeiFw-d3v8_v97vu73BEwPBMBDTQJbNtKtaZjHSt8GDak-4_qz3TAvn_iEx08V8rlHWXXwxRh2kn9On5DoukCJ6LRiH3rLfqhMg977CyYhwHHpb8YpkOQQR0Px_lS6xPiUAc3Oc-peXCaZqzDhou4dTEc56Ik_rHPvihBkD_DaHKxGPULPXf5dkWwwYBd_WAfZlu1rcPH1fsNssN-j6Kz4hQPnaZPUJLj669Cvz0HckFaQoaT_uLiXGwjGRJA2FwRWcb3SAtSaU-1zC2s6C3Nop6bGfsSsMuewi5D9nG4htR1G7XQv1EpuUNjyaNZyPpjRbrl4sYRlPzIik36mOD8Ze-v1sKrsOv5NEOj6TvRpvM--_xmrQAEWYggbCxVz4JwufoC-fdQ2_W6La66XJMb-WtppQnZksgXBIuTmVBzfn3DxtM1GiH5OEsNQROR-Ni8ZZPTO-z1LJoMNnNBltwf-NT2lt2nPTYZ8lkhcQAN28EoQ_hvOb_ub64qk2yRdl10q5DluK62YW2Lp9ShxHuBtA1VVZN5-aVjUltT26_y-O05lnxl-55lWcX8XcFndNKCJLdRUSvq2mzWmDS3ahlq5b88KIEW4ikdk9-HRyKaDqg4ZzrQ-NREFvRdqgMdH3NX6FPvsIsNoFHioxLw2yakKPn7U2Mb4qeexz8t6Hb4NzId6pEDeeXGN-_xH68P-q8?type=png)](https://mermaid.live/edit#pako:eNqNlNFr00Acx_-VcHtx0LJK2INBBrLhXjrQriBofLgmlyaYXsr1gpYxKFpBsLKVdbphV-qLvvQhMod50H-ouf4P3uWSpalGeiFw-d3v8_v97vu73BEwPBMBDTQJbNtKtaZjHSt8GDak-4_qz3TAvn_iEx08V8rlHWXXwxRh2kn9On5DoukCJ6LRiH3rLfqhMg977CyYhwHHpb8YpkOQQR0Px_lS6xPiUAc3Oc-peXCaZqzDhou4dTEc56Ik_rHPvihBkD_DaHKxGPULPXf5dkWwwYBd_WAfZlu1rcPH1fsNssN-j6Kz4hQPnaZPUJLj669Cvz0HckFaQoaT_uLiXGwjGRJA2FwRWcb3SAtSaU-1zC2s6C3Nop6bGfsSsMuewi5D9nG4htR1G7XQv1EpuUNjyaNZyPpjRbrl4sYRlPzIik36mOD8Ze-v1sKrsOv5NEOj6TvRpvM--_xmrQAEWYggbCxVz4JwufoC-fdQ2_W6La66XJMb-WtppQnZksgXBIuTmVBzfn3DxtM1GiH5OEsNQROR-Ni8ZZPTO-z1LJoMNnNBltwf-NT2lt2nPTYZ8lkhcQAN28EoQ_hvOb_ub64qk2yRdl10q5DluK62YW2Lp9ShxHuBtA1VVZN5-aVjUltT26_y-O05lnxl-55lWcX8XcFndNKCJLdRUSvq2mzWmDS3ahlq5b88KIEW4ikdk9-HRyKaDqg4ZzrQ-NREFvRdqgMdH3NX6FPvsIsNoFHioxLw2yakKPn7U2Mb4qeexz8t6Hb4NzId6pEDeeXGN-_xH68P-q8)
+:::
+
+::: aside
+[지식(GSeek): 디지털 글쓰기](https://r2bit.com/gpt-edu/gseek_20230530.html)
+:::
+
+## 글쓰기 → 커뮤니티 {.smaller}
+
+::: panel-tabset
+### 글쓰기
+
+![](img/birds-eye-view.png){fig-align="center" width="887"}
+
+### 재현가능 과학 글쓰기
+
+![](img/compendium-rr.png){fig-align="center" width="986"}
+
+### 글꼴
+
+![](img/font-classification.png){fig-align="center" width="401"}
+
+### 책구성
+
+![](img/latex-project-structure.png){fig-align="center" width="895"}
+
+### $\LaTeX$ X 한국 R 사용자 그룹
+
+::: {layout-ncol="2"}
+![](img/KTSmeta.png)
+
+![](img/koRea_logo.png)
+:::
+
+### 챗GPT 출판
+
+:::::{.columns}
+:::{.column}
+![](img/bitPublish_logo.png){fig-align="center" width="432"}
+
+:::
+
+:::{.column}
+![](img/book_cover.png){width="785"}
+
+-   [`bitPublish`](https://github.com/bit2r/bitPublish)
+-   [챗GPT 유닉스 쉘 - 자동화](https://github.com/bit2r/gpt-shell)
+:::
+
+:::::
+
+:::
+
+::: aside
+[한국 R 사용자회](https://r2bit.com/) X [한글 $\TeX$ 사용자 그룹](http://www.ktug.org/)
+:::
+

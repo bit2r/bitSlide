@@ -1,0 +1,48 @@
+# 계산기 프로그램
+
+## 진화과정 {.smaller}
+
+::: panel-tabset
+### 종이와 연필
+
+<br>
+<br>
+
+![](img/calculator/pen-and-paper.gif){fig-align="center"}
+
+### 주판
+
+<br>
+<br>
+
+![](img/calculator/abacus-calculator.gif){fig-align="center"}
+
+### 사람 계산기
+
+![](img/calculator/human_calculator.gif){fig-align="center"}
+
+### CLI
+
+![](img/calculator/coding_calculator_run.gif){fig-align="center" width="835"}
+
+### GUI
+
+![](img/calculator/coding_calculator_gui_run.gif){fig-align="center" width="855"}
+
+### 웹앱
+
+![](img/calculator/shiny_calculator.gif){fig-align="center" width="458"}
+
+### 모바일
+
+![](img/calculator/android_calculator.gif){fig-align="center" width="232"}
+
+### AI 스피커
+
+![](img/calculator/ai_calculator.gif){fig-align="center" width="232"}
+:::
+
+::: aside
+[chatGPT - 계산기 프로그램](https://r2bit.com/chatGPT/calculator.html)
+:::
+

@@ -191,17 +191,24 @@
     - 디플래닉스
     
 - title: "드림톡 콘서트 - 과학 행사"
-  subtitle: "오픈소스 소프트웨어"
+  subtitle: "오픈 소스 소프트웨어(코딩)"
   author: "이광춘"
   date: 2023-07-10
   image: img/deep-style.jpg
-  path: slideshow/202307-dream-talk/index.qmd
+  path: dream_talk_20230710.qmd
   categories:
     - "오픈소스 소프트웨어"
     - "디지털 글쓰기"
     - "한국 R 사용자회"
     - "오픈 통계 패키지"
     - "쿼토(Quarto)"
+    - 하드웨어/소프트웨어
+    - 챗GPT 사용자 인터페이스
+    - 다양한 소프트웨어 개발방법
+    - 계산기 프로그램
+    - 문서화 프로그래밍 커뮤니티
+    - 챗GPT 디지털 글쓰기 출판
+    
 
 - title: "서울 R 미트업(23년5월)"
   subtitle: "대통령 취임사 임베딩"

@@ -1,0 +1,42 @@
+---
+title: "드림톡 콘서트 - 과학 행사"
+subtitle: "오픈 소스 소프트웨어(코딩)"
+author: "이광춘"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-07-10
+format: 
+  insper-revealjs:
+    self-contained: false
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  오픈소스 소프트웨어
+2.  챗GPT 인터페이스
+3.  다양한 소프트웨어 개발방법
+4.  계산기 프로그램
+5.  문서화 프로그래밍 커뮤니티
+6.  질의응답
+
+{{< include slideshow/202307-dream-talk/00-who-am-i.qmd >}}
+
+{{< include slideshow/202307-dream-talk/01-open-source-software.qmd >}}
+
+{{< include slideshow/202307-dream-talk/02-user-interface.qmd >}}
+
+{{< include slideshow/202307-dream-talk/03-calculator.qmd >}}
+
+{{< include slideshow/202307-dream-talk/04-community.qmd >}}
+
+{{< include slideshow/202307-dream-talk/reference.qmd >}}
+

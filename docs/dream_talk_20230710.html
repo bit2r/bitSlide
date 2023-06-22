@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="ko-KR"><head>
+<link href="./img/koRea_logo.ico" rel="icon">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.361">
+
+  <meta name="author" content="이광춘">
+  <title>발표자료 | 한국 R 사용자회 - 드림톡 콘서트 - 과학 행사</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  
+  <script type="text/javascript">
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-229551680-1', 'auto');
+
+  ga('send', {
+    hitType: 'pageview',
+    'anonymizeIp': true,
+  });
+  </script>
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">드림톡 콘서트 - 과학 행사</h1>
+  <p class="subtitle">오픈 소스 소프트웨어(코딩)</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+이광춘 
+</div>
+        <p class="quarto-title-affiliation">
+            비영리법인 한국 R 사용자회
+          </p>
+    </div>
+</div>
+
+  <p class="date">2023년 7월 10일</p>
+</section>
+<section id="목차" class="slide level2">
+<h2>목차</h2>
+<ol type="1">
+<li>오픈소스 소프트웨어</li>
+<li>챗GPT 인터페이스</li>
+<li>다양한 소프트웨어 개발방법</li>
+<li>계산기 프로그램</li>
+<li>문서화 프로그래밍 커뮤니티</li>
+<li>질의응답</li>
+</ol>
+</section>
+<section id="강사소개-강의-개요" class="slide level2 smaller">
+<h2>강사소개 &amp; 강의 개요</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">강사 (이광춘)</a></li><li><a href="#tabset-1-2">강의개요</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><strong>AI 아바타</strong></p>
+<p><a href="img/profile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="img/profile.png" data-top="0" data-right="0" width="300"></a></p>
+</figure>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>주요경력 및 학력</strong></p>
+<ul>
+<li><p>(현) <a href="https://r2bit.com/">공익법인 한국 R 사용자회</a>: 기술 이사</p></li>
+<li><p>(현) 국가교육위원회 전문위원: 과학/기술 분과</p></li>
+<li><p>(현) <a href="https://r2bit.com/bitSlide/kunkuk_20230701.html#/title-slide">건국대학교 챗GPT 데이터 사이언스 과정</a>: 외래교수</p></li>
+<li><p>(현) 경기도 빅데이터 위원회 자문위원</p></li>
+<li><p>(전) TCS: GS 칼텍스 디지털 아카데미 강사</p></li>
+<li><p>(전) 연세대학교 데이터 사이언스: 겸임교수</p></li>
+<li><p>(전) 삼정 KPMG: Lighthouse AI 기술총괄</p></li>
+<li><p>(전) 웹젠: 데이터 과학자 TD</p></li>
+<li><p>(전) 현대모비스: 차량용 반도체 개발구매 <br></p></li>
+<li><p>(전) 현대자동차: VAATZ / FTA <br></p>
+<p><br></p>
+<hr>
+<p><br></p></li>
+<li><p>KAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공</p></li>
+<li><p><a href="https://education.rstudio.com/trainers/people/lee+kwangchun/">RStudio Instructor</a> - Tidyverse</p></li>
+<li><p><a href="https://r2bit.com/seoul-r/">Seoul R Meetup Organizer</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><a href="img/busan_nam_HS.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="img/busan_nam_HS.jpg"></a></p>
+</figure>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><strong>강의상세</strong></p>
+<ul>
+<li>자율형 교육과정: 다들배움 - 과학 강연</li>
+<li>날짜 : 2023. 7. 10. (월) 10:30 ~ 12:30</li>
+<li>장소 : 부산남고</li>
+<li>대상 : 25명</li>
+<li>내용: 오픈 소스 소프트웨어(코딩)
+<ul>
+<li>하드웨어/소프트웨어</li>
+<li>챗GPT 사용자 인터페이스</li>
+<li>다양한 소프트웨어 개발방법</li>
+<li>계산기 프로그램</li>
+<li>문서화 프로그래밍 커뮤니티</li>
+<li>챗GPT 디지털 글쓰기 출판</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="오픈소스-소프트웨어" class="title-slide slide level1 center">
+<h1>오픈소스 소프트웨어</h1>
+
+</section>
+<section id="컴퓨터-하드웨어" class="slide level2">
+<h2>컴퓨터 하드웨어</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">높이 1,000 미터</a></li><li><a href="#tabset-2-2">높이 100 미터</a></li><li><a href="#tabset-2-3">높이 10 미터</a></li><li><a href="#tabset-2-4">높이 1 미터</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/computer-01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="img/computer-01.png" width="800"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/computer-02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="img/computer-02.png" width="800"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/computer-03.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="img/computer-03.png" width="800"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/computer-04.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="img/computer-04.png" width="1200"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="컴퓨터-소프트웨어-meeker2017open" class="slide level2">
+<h2>컴퓨터 소프트웨어 <span class="citation" data-cites="meeker2017open">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Meeker, 2017</a>)</span></h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">시스템 아키텍처</a></li><li><a href="#tabset-3-2">상호작용</a></li><li><a href="#tabset-3-3">가상화</a></li><li><a href="#tabset-3-4">Inline 함수와 링킹</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-2-1-computer-system-architecture.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="img/fig-2-1-computer-system-architecture.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-2-2-interaction-of-the-elements.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="img/fig-2-2-interaction-of-the-elements.png" width="800"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-2-3-interaction-of-the-elements-with-virtualization.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img data-src="img/fig-2-3-interaction-of-the-elements-with-virtualization.png" width="800"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-2-5-build-of-program.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img data-src="img/fig-2-5-build-of-program.png" width="900"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="오픈소스-소프트웨어-1" class="slide level2">
+<h2>오픈소스 소프트웨어</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">GPL 라이선스</a></li><li><a href="#tabset-4-2">일반적인 사례</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-3-1-direct-licensing-model.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img data-src="img/fig-3-1-direct-licensing-model.png" width="600"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-4-1-governing-clearance.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img data-src="img/fig-4-1-governing-clearance.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="라이선스-문제" class="slide level2">
+<h2>라이선스 문제</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">라이선스 제한 문제</a></li><li><a href="#tabset-5-2">라이선스 조건 문제</a></li><li><a href="#tabset-5-3">수평 비호환성 문제</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-4-2-license-restriction-problems.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img data-src="img/fig-4-2-license-restriction-problems.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-5-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-4-3-license-condition-problems.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img data-src="img/fig-4-3-license-condition-problems.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-5-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-4-5-problem-due-to-horizontal-incompatibility.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img data-src="img/fig-4-5-problem-due-to-horizontal-incompatibility.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="라이선스-호환과-선택" class="slide level2">
+<h2>라이선스 호환과 선택</h2>
+<div class="panel-tabset">
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">라이선스 호환성</a></li><li><a href="#tabset-6-2">수평 호환성</a></li><li><a href="#tabset-6-3">라이선스 선택</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-4-4-license-compatibility.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img data-src="img/fig-4-4-license-compatibility.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-4-6-horizontal-compatibility.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img data-src="img/fig-4-6-horizontal-compatibility.png" width="1000"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/fig-license-selection.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img data-src="img/fig-license-selection.jpg" width="600"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="콘텐츠와-데이터" class="slide level2">
+<h2>콘텐츠와 데이터</h2>
+<p><br></p>
+<h3 id="데이터베이스-라이선스">데이터베이스 라이선스</h3>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+  A["Database Licenses"] --&gt; B["Open Database License (ODbL)"]
+  A --&gt; C[Creative Commons licenses]
+  A --&gt; D["GNU General Public License (GPL)"]
+  A --&gt; E["Affero General Public License (AGPL)"]
+  A --&gt; F[Proprietary Licenses]  
+</pre>
+</div>
+</div>
+</div>
+</div>
+<h3 id="콘텐츠-라이선스">콘텐츠 라이선스</h3>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph TD;
+    A["Content Licenses"] --&gt; B[Public domain]
+    A --&gt; C[Creative Commons licenses]
+    A --&gt; D[All rights reserved]
+    C --&gt; E[CC0]
+    C --&gt; F[Attribution]
+    C --&gt; G[Non-commercial]
+    C --&gt; H[Share-alike]
+    C --&gt; I[Custom]
+    D --&gt; J[No use without permission]
+    D --&gt; K[No copying without permission]
+    D --&gt; L[No distribution without permission]  
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="챗gpt-인터페이스" class="title-slide slide level1 center">
+<h1>챗GPT 인터페이스</h1>
+
+</section>
+<section id="소프트웨어-3.0" class="slide level2">
+<h2>소프트웨어 3.0</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/software_3.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="img/software_3.jpeg" width="441"></a></p>
+</figure>
+</div>
+</div><div class="column">
+<h4 id="andrej-karpathy">Andrej Karpathy</h4>
+<ul>
+<li>소프트웨어 1.0: 코드 작성을 통한 프로그래밍</li>
+<li>소프트웨어 2.0: 데이터셋 큐레이팅을 통한 프로그래밍</li>
+<li>소프트웨어 3.0: 프롬프트 엔지니어링을 통한 프로그래밍 (LLM에 입력으로 제공, GPT 스타일)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="프롬프트-공학" class="slide level2">
+<h2>프롬프트 공학</h2>
+<div class="panel-tabset">
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">언어(?)</a></li><li><a href="#tabset-7-2">텍스트 생성</a></li><li><a href="#tabset-7-3">언어 모형</a></li><li><a href="#tabset-7-4">프롬프트</a></li><li><a href="#tabset-7-5">첫인사</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1">
+<p><br></p>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+</p><p>The hottest new programming language is English</p>
+<p></p>
+<p>— Andrej Karpathy (<span class="citation" data-cites="karpathy">(<a href="#/참고문헌" role="doc-biblioref" onclick=""><strong>karpathy?</strong></a>)</span>) <a href="https://twitter.com/karpathy/status/1617979122625712128?ref_src=twsrc%5Etfw">January 24, 2023</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<div id="tabset-7-2">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/text-generation.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img data-src="img/text-generation.gif"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-7-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/generative-text.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img data-src="img/generative-text.jpg" width="626"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-7-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/generative-text-prompt.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img data-src="img/generative-text-prompt.jpg" width="952"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-7-5">
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT_start.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img data-src="img/chatGPT_start.jpg"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/prompt.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img data-src="img/prompt.jpg"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/prompt-component.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img data-src="img/prompt-component.jpg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="구글-검색의-종말" class="slide level2">
+<h2>구글 검색의 종말(?)</h2>
+
+<img data-src="img/chatGPT-search.jpg" class="r-stretch quarto-figure-center"></section>
+<section id="글쓰기-역사" class="slide level2">
+<h2>글쓰기 역사</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/writing_history.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="img/writing_history.jpg"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://r2bit.com/quarto/writing_history.html">문자와 종이 역사</a></li>
+</ul>
+</div></aside></section>
+<section id="오피스-전쟁" class="slide level2 smaller">
+<h2>오피스 전쟁</h2>
+<table>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">항목</th>
+<th style="text-align: center;">MS 오피스 <sup>1</sup></th>
+<th style="text-align: center;">구글 오피스 <sup>2</sup></th>
+<th style="text-align: center;">리브레 오피스 <sup>3</sup></th>
+<th style="text-align: center;">한컴 오피스 <sup>4</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">문서 작성 및 편집</td>
+<td style="text-align: center;">워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공</td>
+<td style="text-align: center;">구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공</td>
+<td style="text-align: center;">라이터, 캘크, 임프레스 등의 데스크톱 앱 제공</td>
+<td style="text-align: center;">한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">협업 및 공유</td>
+<td style="text-align: center;">원드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움</td>
+<td style="text-align: center;">구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능</td>
+<td style="text-align: center;">드롭박스나 구글 드라이브와 연동하여 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움</td>
+<td style="text-align: center;">넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">이메일 및 채팅</td>
+<td style="text-align: center;">Outlook을 통해 비즈니스 메일 제공. Teams을 통해 채팅 및 화상 회의 가능</td>
+<td style="text-align: center;">Gmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능</td>
+<td style="text-align: center;">이메일 및 채팅 기능 없음</td>
+<td style="text-align: center;">이메일 및 채팅 기능 없음</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">가격</td>
+<td style="text-align: center;">1인당 월 5~20달러 다양한 요금제 제공. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작</td>
+<td style="text-align: center;">1인당 월 6~18달러까지 다양한 요금제 제공</td>
+<td style="text-align: center;">완전 무료</td>
+<td style="text-align: center;">개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요</td>
+</tr>
+</tbody>
+</table>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>https://www.microsoft.com/ko-kr/microsoft-365/business</p></li><li id="fn2"><p>https://workspace.google.com/intl/ko_kr/</p></li><li id="fn3"><p>https://www.libreoffice.org/</p></li><li id="fn4"><p>https://www.hancom.com/product/productMain.do</p></li></ol></aside></section>
+<section id="오피스-전쟁-패러다임-충돌" class="slide level2">
+<h2>오피스 전쟁: 패러다임 충돌</h2>
+
+<img data-src="img/writing-evolution.jpg" class="r-stretch quarto-figure-center"></section>
+<section id="챗gpt-시대-사무실" class="slide level2">
+<h2>챗GPT 시대 사무실</h2>
+<div class="panel-tabset">
+<ul id="tabset-8" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-8-1">챗GPT 사용원인</a></li><li><a href="#tabset-8-2">인터페이스</a></li><li><a href="#tabset-8-3">챗GPT AS-IS</a></li><li><a href="#tabset-8-4">챗GPT TO-BE</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT_why.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img data-src="img/chatGPT_why.jpg" width="600"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-8-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT_interface.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img data-src="img/chatGPT_interface.jpg" width="500"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-8-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT-AS-IS.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img data-src="img/chatGPT-AS-IS.jpg"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-8-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT-TO-BE.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img data-src="img/chatGPT-TO-BE.jpg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="챗gpt가-이룬-대통합" class="slide level2">
+<h2>챗GPT가 이룬 대통합</h2>
+
+<img data-src="img/chatGPT-Text-to-X.jpg" class="r-stretch quarto-figure-center"></section>
+<section id="인터페이스-interface" class="slide level2 smaller">
+<h2>인터페이스 (Interface)</h2>
+<div class="panel-tabset">
+<ul id="tabset-9" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-9-1">진화과정</a></li><li><a href="#tabset-9-2">CLI</a></li><li><a href="#tabset-9-3">GUI</a></li><li><a href="#tabset-9-4">WUI</a></li><li><a href="#tabset-9-5">MUI</a></li><li><a href="#tabset-9-6">LUI</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1">
+<p><br> <br> <br></p>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    
+    subgraph A["사용자 인터페이스"]
+    direction LR
+        CLI["CLI&lt;br&gt;Command Line Interface&lt;br&gt; 1950~"]     --&gt; GUI["GUI &lt;br&gt; Graphic User Inferface&lt;br&gt; 1970~"]
+        GUI               --&gt; WI["Web Interface &lt;br&gt; 1994~"]
+        WI --&gt; MI["Mobile Interface &lt;br&gt; 2007~"]
+        MI --&gt; NUI["LUI &lt;br&gt; Language User Interface &lt;br&gt; 2023~"]
+
+    end
+
+
+class A nodeStyle
+
+classDef nodeStyle fill:#fcfbfa,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-9-2">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_cli.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img data-src="img/ui_cli.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Computer_terminal" class="uri">https://en.wikipedia.org/wiki/Computer_terminal</a></li>
+</ul>
+</div>
+<div id="tabset-9-3">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_gui.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img data-src="img/ui_gui.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://kartsci.org/kocomu/computer-history/graphical-user-interface-history/" class="uri">https://kartsci.org/kocomu/computer-history/graphical-user-interface-history/</a></li>
+</ul>
+</div>
+<div id="tabset-9-4">
+<p><br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_web.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img data-src="img/ui_web.jpg"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-9-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_mi.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img data-src="img/ui_mi.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://www.huffpost.com/entry/uber-your-way-through-cit_b_1205446" class="uri">https://www.huffpost.com/entry/uber-your-way-through-cit_b_1205446</a></li>
+</ul>
+</div>
+<div id="tabset-9-6">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/sam_altman_LUI.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img data-src="img/sam_altman_LUI.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://twitter.com/sama/status/1515764302904377344" class="uri">https://twitter.com/sama/status/1515764302904377344</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="챗gpt-nui" class="slide level2 smaller">
+<h2>챗GPT NUI</h2>
+<div class="panel-tabset">
+<ul id="tabset-10" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-10-1">1:1 채팅</a></li><li><a href="#tabset-10-2">클릭하여 완료</a></li><li><a href="#tabset-10-3">자동완성</a></li><li><a href="#tabset-10-4">명령 팔레트</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1">
+<ul>
+<li>챗GPT (ChatGPT)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatgpt_writing.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img data-src="img/chatgpt_writing.gif" width="634"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-10-2">
+<ul>
+<li>OpenAI Playground</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_playground.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img data-src="img/ui_playground.jpg" width="645"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-10-3">
+<ul>
+<li>GitHub Copilot</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_copilot.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img data-src="img/ui_copilot.gif"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e" class="uri">https://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e</a></li>
+</ul>
+</div>
+<div id="tabset-10-4">
+<div class="columns">
+<div class="column">
+<h4 id="사례">사례</h4>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/command-tree.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img data-src="img/command-tree.gif"></a></p>
+</figure>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/generate_code.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img data-src="img/generate_code.gif"></a></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<video id="video_shortcode_videojs_video1" width="500" height="400" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="https://blog.replit.com/images/ai/aimode_future.mp4"></video>
+</div>
+</div>
+<ul>
+<li><a href="https://blog.replit.com/clui" class="uri">https://blog.replit.com/clui</a></li>
+<li><a href="https://blog.replit.com/ai" class="uri">https://blog.replit.com/ai</a></li>
+</ul>
+</div><div class="column">
+<h4 id="command-palette-역사">Command Palette 역사</h4>
+<ul>
+<li>60년대로 거슬러 올라가는 명령 팔레트는 최근 기술 업계에서 다시 인기를 얻고 있으며 사용자 중심 소프트웨어의 필수적인 부분으로 간주됨.</li>
+<li>CLI는 개인용 컴퓨터가 대중화되기 전 초기 컴퓨팅을 지배했으며 사용자가 시스템을 작동하기 위해 특정 명령을 알아야 했다. 1984년 Apple의 매킨토시와 함께 도입된 그래픽 사용자 인터페이스(GUI)는 중요한 혁신으로 여겨졌지만, 소프트웨어의 복잡성이 증가함에 따라 GUI만으로는 탐색하기가 점점 더 어려워졌다.</li>
+<li>사용자가 항목 이름의 짧은 약어입력하여 앱과 파일을 검색할 수 있는 런처가 점점 더 보편화 되었다. 예를 들어 2001년에 출시된 Mac OS X용 LaunchBar, Quicksilver, 2005년에 출시된 Apple의 시스템 전체 Spotlight가 있다. 검색과 CLI의 결합은 <strong>Command Palette</strong>의 탄생으로 이어졌다.</li>
+<li>오늘날 우리가 알고 있는 현대식 명령 팔레트는 2011년 Sublime Text 2 베타 Joe Skinner가 처음 소개. 명령줄 사용에 익숙한 프로그래머들이 단축키를 모두 외울 필요 없이 더 빠르게 작업할 수 있어 중요한 발전이 됨.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="계산기-프로그램" class="title-slide slide level1 center">
+<h1>계산기 프로그램</h1>
+
+</section>
+<section id="진화과정-1" class="slide level2 smaller">
+<h2>진화과정</h2>
+<div class="panel-tabset">
+<ul id="tabset-11" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-11-1">종이와 연필</a></li><li><a href="#tabset-11-2">주판</a></li><li><a href="#tabset-11-3">사람 계산기</a></li><li><a href="#tabset-11-4">CLI</a></li><li><a href="#tabset-11-5">GUI</a></li><li><a href="#tabset-11-6">웹앱</a></li><li><a href="#tabset-11-7">모바일</a></li><li><a href="#tabset-11-8">AI 스피커</a></li></ul>
+<div class="tab-content">
+<div id="tabset-11-1">
+<p><br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/calculator/pen-and-paper.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img data-src="img/calculator/pen-and-paper.gif"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-11-2">
+<p><br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/calculator/abacus-calculator.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img data-src="img/calculator/abacus-calculator.gif"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-11-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/calculator/human_calculator.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-46"><img data-src="img/calculator/human_calculator.gif"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-11-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/calculator/coding_calculator_run.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-47"><img data-src="img/calculator/coding_calculator_run.gif" width="835"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-11-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/calculator/coding_calculator_gui_run.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img data-src="img/calculator/coding_calculator_gui_run.gif" width="855"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-11-6">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/calculator/shiny_calculator.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img data-src="img/calculator/shiny_calculator.gif" width="458"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-11-7">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/calculator/android_calculator.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-50"><img data-src="img/calculator/android_calculator.gif" width="232"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-11-8">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/calculator/ai_calculator.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-51"><img data-src="img/calculator/ai_calculator.gif" width="232"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p><a href="https://r2bit.com/chatGPT/calculator.html">chatGPT - 계산기 프로그램</a></p>
+</div></aside></section></section>
+<section>
+<section id="문서화-프로그래밍-커뮤니티-챗gpt-디지털-글쓰기-출판" class="title-slide slide level1 center">
+<h1>문서화 프로그래밍 커뮤니티 <br> 챗GPT 디지털 글쓰기 출판</h1>
+
+</section>
+<section id="문서화-프로그래밍" class="slide level2 smaller">
+<h2>문서화 프로그래밍</h2>
+<div class="panel-tabset">
+<ul id="tabset-12" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-12-1">개발과 저작</a></li><li><a href="#tabset-12-2">출판 워크샵</a></li></ul>
+<div class="tab-content">
+<div id="tabset-12-1">
+<p><br> <br></p>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+
+    subgraph "소프트웨어"
+        direction LR
+        sourcecode[소스코드] --&gt; package1[패키지]
+        package1 --&gt; product1["제품(S/W)"]
+        product1 --&gt; distribute1[배포]
+        distribute1 --&gt; service1["서비스&lt;br&gt;(앱)"]
+    end
+    
+    subgraph "문서"
+        direction LR
+        text[텍스트] --&gt; package2[패키지]
+        package2 --&gt; product2["제품(문서)"]
+        product2 --&gt; distribute2[배포]
+        distribute2 --&gt; service2["서비스&lt;br&gt;(출판)"]
+    end
+
+    style 소프트웨어 fill:#f5f5f5,stroke:#333,stroke-width:3px
+    style 문서 fill:#b5b5b5,stroke:#111,stroke-width:3px
+
+    style sourcecode fill:#ffeeee,stroke:#f66,stroke-width:2px
+    style package1 fill:#eeffee,stroke:#6f6,stroke-width:2px
+    style product1 fill:#eeeeff,stroke:#66f,stroke-width:2px
+    style distribute1 fill:#eefeee,stroke:#6ff,stroke-width:2px
+    style service1 fill:#ffeeee,stroke:#f66,stroke-width:2px
+
+    style text fill:#ffeeee,stroke:#f66,stroke-width:2px
+    style package2 fill:#eeffee,stroke:#6f6,stroke-width:2px
+    style product2 fill:#eeeeff,stroke:#66f,stroke-width:2px
+    style distribute2 fill:#eefeee,stroke:#6ff,stroke-width:2px
+    style service2 fill:#ffeeee,stroke:#f66,stroke-width:2px
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-12-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT_workshop.png" class="lightbox" data-gallery="quarto-lightbox-gallery-52"><img data-src="img/chatGPT_workshop.png" width="354"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p><a href="https://event-us.kr/data-science/event/64397" class="uri">https://event-us.kr/data-science/event/64397</a></p>
+</div></aside></section>
+<section id="글쓰기" class="slide level2 smaller">
+<h2>글쓰기</h2>
+<div class="panel-tabset">
+<ul id="tabset-13" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-13-1">AI 시대 글쓰기</a></li><li><a href="#tabset-13-2">글쓰기 역사</a></li><li><a href="#tabset-13-3">디지털 글쓰기</a></li></ul>
+<div class="tab-content">
+<div id="tabset-13-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/digital-writing-overview.png" class="lightbox" data-gallery="quarto-lightbox-gallery-53"><img data-src="img/digital-writing-overview.png" width="862"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-13-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/writing_history.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-54"><img data-src="img/writing_history.jpg"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-13-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://mermaid.live/edit#pako:eNqNlNFr00Acx_-VcHtx0LJK2INBBrLhXjrQriBofLgmlyaYXsr1gpYxKFpBsLKVdbphV-qLvvQhMod50H-ouf4P3uWSpalGeiFw-d3v8_v97vu73BEwPBMBDTQJbNtKtaZjHSt8GDak-4_qz3TAvn_iEx08V8rlHWXXwxRh2kn9On5DoukCJ6LRiH3rLfqhMg977CyYhwHHpb8YpkOQQR0Px_lS6xPiUAc3Oc-peXCaZqzDhou4dTEc56Ik_rHPvihBkD_DaHKxGPULPXf5dkWwwYBd_WAfZlu1rcPH1fsNssN-j6Kz4hQPnaZPUJLj669Cvz0HckFaQoaT_uLiXGwjGRJA2FwRWcb3SAtSaU-1zC2s6C3Nop6bGfsSsMuewi5D9nG4htR1G7XQv1EpuUNjyaNZyPpjRbrl4sYRlPzIik36mOD8Ze-v1sKrsOv5NEOj6TvRpvM--_xmrQAEWYggbCxVz4JwufoC-fdQ2_W6La66XJMb-WtppQnZksgXBIuTmVBzfn3DxtM1GiH5OEsNQROR-Ni8ZZPTO-z1LJoMNnNBltwf-NT2lt2nPTYZ8lkhcQAN28EoQ_hvOb_ub64qk2yRdl10q5DluK62YW2Lp9ShxHuBtA1VVZN5-aVjUltT26_y-O05lnxl-55lWcX8XcFndNKCJLdRUSvq2mzWmDS3ahlq5b88KIEW4ikdk9-HRyKaDqg4ZzrQ-NREFvRdqgMdH3NX6FPvsIsNoFHioxLw2yakKPn7U2Mb4qeexz8t6Hb4NzId6pEDeeXGN-_xH68P-q8"><img data-src="https://mermaid.ink/img/pako:eNqNlNFr00Acx_-VcHtx0LJK2INBBrLhXjrQriBofLgmlyaYXsr1gpYxKFpBsLKVdbphV-qLvvQhMod50H-ouf4P3uWSpalGeiFw-d3v8_v97vu73BEwPBMBDTQJbNtKtaZjHSt8GDak-4_qz3TAvn_iEx08V8rlHWXXwxRh2kn9On5DoukCJ6LRiH3rLfqhMg977CyYhwHHpb8YpkOQQR0Px_lS6xPiUAc3Oc-peXCaZqzDhou4dTEc56Ik_rHPvihBkD_DaHKxGPULPXf5dkWwwYBd_WAfZlu1rcPH1fsNssN-j6Kz4hQPnaZPUJLj669Cvz0HckFaQoaT_uLiXGwjGRJA2FwRWcb3SAtSaU-1zC2s6C3Nop6bGfsSsMuewi5D9nG4htR1G7XQv1EpuUNjyaNZyPpjRbrl4sYRlPzIik36mOD8Ze-v1sKrsOv5NEOj6TvRpvM--_xmrQAEWYggbCxVz4JwufoC-fdQ2_W6La66XJMb-WtppQnZksgXBIuTmVBzfn3DxtM1GiH5OEsNQROR-Ni8ZZPTO-z1LJoMNnNBltwf-NT2lt2nPTYZ8lkhcQAN28EoQ_hvOb_ub64qk2yRdl10q5DluK62YW2Lp9ShxHuBtA1VVZN5-aVjUltT26_y-O05lnxl-55lWcX8XcFndNKCJLdRUSvq2mzWmDS3ahlq5b88KIEW4ikdk9-HRyKaDqg4ZzrQ-NREFvRdqgMdH3NX6FPvsIsNoFHioxLw2yakKPn7U2Mb4qeexz8t6Hb4NzId6pEDeeXGN-_xH68P-q8?type=png.png"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p><a href="https://r2bit.com/gpt-edu/gseek_20230530.html">지식(GSeek): 디지털 글쓰기</a></p>
+</div></aside></section>
+<section id="글쓰기-커뮤니티" class="slide level2 smaller">
+<h2>글쓰기 → 커뮤니티</h2>
+<div class="panel-tabset">
+<ul id="tabset-14" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-14-1">글쓰기</a></li><li><a href="#tabset-14-2">재현가능 과학 글쓰기</a></li><li><a href="#tabset-14-3">글꼴</a></li><li><a href="#tabset-14-4">책구성</a></li><li><a href="#tabset-14-5"><span class="math inline">\(\LaTeX\)</span> X 한국 R 사용자 그룹</a></li><li><a href="#tabset-14-6">챗GPT 출판</a></li></ul>
+<div class="tab-content">
+<div id="tabset-14-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/birds-eye-view.png" class="lightbox" data-gallery="quarto-lightbox-gallery-55"><img data-src="img/birds-eye-view.png" width="887"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-14-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/compendium-rr.png" class="lightbox" data-gallery="quarto-lightbox-gallery-56"><img data-src="img/compendium-rr.png" width="986"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-14-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/font-classification.png" class="lightbox" data-gallery="quarto-lightbox-gallery-57"><img data-src="img/font-classification.png" width="401"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-14-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/latex-project-structure.png" class="lightbox" data-gallery="quarto-lightbox-gallery-58"><img data-src="img/latex-project-structure.png" width="895"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-14-5">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><a href="img/KTSmeta.png" class="lightbox" data-gallery="quarto-lightbox-gallery-59"><img data-src="img/KTSmeta.png"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><a href="img/koRea_logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-60"><img data-src="img/koRea_logo.png"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-14-6">
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/bitPublish_logo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-61"><img data-src="img/bitPublish_logo.png" width="432"></a></p>
+</figure>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/book_cover.png" class="lightbox" data-gallery="quarto-lightbox-gallery-62"><img data-src="img/book_cover.png" width="785"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://github.com/bit2r/bitPublish"><code>bitPublish</code></a></li>
+<li><a href="https://github.com/bit2r/gpt-shell">챗GPT 유닉스 쉘 - 자동화</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p><a href="https://r2bit.com/">한국 R 사용자회</a> X <a href="http://www.ktug.org/">한글 <span class="math inline">\(\TeX\)</span> 사용자 그룹</a></p>
+</div></aside></section></section>
+<section id="참고문헌" class="title-slide slide level1 smaller scrollable">
+<h1>참고문헌</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-meeker2017open" class="csl-entry" role="listitem">
+Meeker, H. (2017). <em>Open Source For Business: A Practical Guide to Open Source Software Licensing</em>. Createspace Independent Publishing Platform. <a href="https://books.google.co.kr/books?id=aKHGswEACAAJ">https://books.google.co.kr/books?id=aKHGswEACAAJ</a>
+</div>
+</div>
+
+
+<img src="_extensions/padsInsper/insper/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p>한국 R 사용자회 <a href="https://r2bit.com/chatGPT/">chatGPT</a>. theme <a href="https://github.com/padsInsper/quarto-insper-theme">insper</a> 소스코드 <a href="https://github.com/padsInsper/quarto-insper-theme">GitHub</a>.</p>
+</div>
+</section>
+
+
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "복사완료!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "복사완료!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+    
+    
+
+</body></html>
