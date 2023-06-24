@@ -14,7 +14,8 @@
 
 ## 전통 지표 기준 강대국 {.smaller}
 
-```{r oecd-stats }
+```{r}
+#| label:  oecd-stats-traditional
 library(tidyverse)
 library(countrycode)
 library(reactable)
@@ -75,7 +76,8 @@ oecd_df %>%
 
 ## 확장 지표 기준 선진국 {.smaller}
 
-```{r oecd-esg-extended}
+```{r}
+#| label: oecd-esg-extended-quarto
 
 oecd_df %>% 
   select("country", "flags", "income_inequality", "hdi", "fsi", "cpi", "ief", "gpi", "wpfi", "di") %>% 
@@ -94,27 +96,39 @@ oecd_df %>%
           }")
         ),
         flags = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 70
         ),
         income_inequality = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 110
         ),
         hdi = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 80
         ),
         fsi = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 80
         ),
         cpi = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 80
         ),  
         ief = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 80
         ),
         gpi = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 80
         ),
         wpfi = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
+          width = 80
+        ),
+        di = colDef(
+          format = colFormat(separators = TRUE, digits = 1),
           width = 80
         )        
     )
@@ -139,7 +153,8 @@ oecd_df %>%
 
 ## 디지털 강대국 지표 - 디지털 정부 순위 {.smaller}
 
-```{r digital-index-government}
+```{r}
+#| label: digital-index-government-quarto
 library(tidyverse)
 library(reactable)
 library(htmltools)
@@ -189,7 +204,8 @@ oecd_df %>%
 
 ## 디지털 강대국 지표 - 인공지능 준비지수 {.smaller}
 
-```{r digital-index-ai-government}
+```{r}
+#| label:  digital-index-ai-gov
 
 oecd_df %>% 
   arrange(ai_rank) %>% 
@@ -227,7 +243,8 @@ oecd_df %>%
  
 ## 디지털 강대국 지표 - 데이터 경제 {.smaller}
 
-```{r digital-index-data-economy}
+```{r}
+#| label: digital-index-data-eco
 
 oecd_df %>% 
   arrange(ai_rank) %>% 
@@ -265,7 +282,8 @@ oecd_df %>%
 
 ## 디지털 강대국 지표 - 산업용 로봇 {.smaller}
 
-```{r digital-index-robot}
+```{r}
+#| label: digital-index-robot-quarto
 
 oecd_df %>% 
   arrange(robot_rank) %>% 
@@ -303,7 +321,8 @@ oecd_df %>%
 
 ## 디지털 강대국 지표 - WEF 세계 경쟁력 {.smaller}
 
-```{r digital-index-competitiveness}
+```{r}
+#| label: digital-index-comp
 
 oecd_df %>% 
   arrange(wef_rank) %>% 
@@ -340,7 +359,8 @@ oecd_df %>%
 
 ## 디지털 강대국 지표 - IMD 디지털 경쟁력 {.smaller}
 
-```{r digital-index-imd}
+```{r}
+#| label: digital-index-imd-quarto
 
 oecd_df %>% 
   arrange(digital_rank) %>% 
@@ -378,7 +398,8 @@ oecd_df %>%
 
 ## 디지털 강대국 지표 - 종합 {.smaller}
 
-```{r digital-index-summary}
+```{r}
+#| label: digital-index-summary-quarto
 
 oecd_df %>% 
   arrange(robot_rank) %>% 
@@ -431,6 +452,9 @@ oecd_df %>%
 ## 디지털 강대국 지표 - 종합 시각화 {.smaller}
 
 ```{r}
+#| fig-width: 8
+#| fig-height: 6
+#| fig-align: "center"
 library(plotly)
 library(tidymodels)
 library(embed)

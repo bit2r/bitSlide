@@ -362,5 +362,530 @@
     "title": "참고문헌",
     "section": "",
     "text": "참고문헌"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#목차",
+    "href": "chatGPT_kwangmyung_20230704.html#목차",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "목차",
+    "text": "목차\n\n강사소개 및 미트업 안내\n(디지털) 지표로 보는 대한민국\n공공데이터 현황\n공공데이터 사례: 선거 공공데이터\n[광명시] : 어린이 교통사고\n데이터 문해력\n(챗GPT) 데이터 과학\n오피스 → 챗GPT 디지털 글쓰기\n질의응답"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#차-산업혁명을-넘어서",
+    "href": "chatGPT_kwangmyung_20230704.html#차-산업혁명을-넘어서",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "4차 산업혁명을 넘어서 …",
+    "text": "4차 산업혁명을 넘어서 …\n\n생각의 진화인간과 기계의 분업챗GPT와 글쓰기\n\n\n\n\n\n\n\n\n\n\n\n\n(Cummings, 2014)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#전통적-지표",
+    "href": "chatGPT_kwangmyung_20230704.html#전통적-지표",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "전통적 지표",
+    "text": "전통적 지표\n \n\n\n\n\n\n\n\n\n위키백과 OECD"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#전통-지표-기준-강대국",
+    "href": "chatGPT_kwangmyung_20230704.html#전통-지표-기준-강대국",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "전통 지표 기준 강대국",
+    "text": "전통 지표 기준 강대국"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#확장-전통-지표",
+    "href": "chatGPT_kwangmyung_20230704.html#확장-전통-지표",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "확장 전통 지표",
+    "text": "확장 전통 지표\n \n\n\n\n\n\n\n\n\n위키백과 OECD"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#확장-지표-기준-선진국",
+    "href": "chatGPT_kwangmyung_20230704.html#확장-지표-기준-선진국",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "확장 지표 기준 선진국",
+    "text": "확장 지표 기준 선진국"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표",
+    "text": "디지털 강대국 지표\n\n\n디지털 정부 순위\n정부 인공지능 준비지수\n데이터 경제 순위\n산업용 로봇 밀도\n세계 경쟁력 보고서\nIMD 세계 경쟁력 연감"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---디지털-정부-순위",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---디지털-정부-순위",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - 디지털 정부 순위",
+    "text": "디지털 강대국 지표 - 디지털 정부 순위"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---인공지능-준비지수",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---인공지능-준비지수",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - 인공지능 준비지수",
+    "text": "디지털 강대국 지표 - 인공지능 준비지수"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---데이터-경제",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---데이터-경제",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - 데이터 경제",
+    "text": "디지털 강대국 지표 - 데이터 경제"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---산업용-로봇",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---산업용-로봇",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - 산업용 로봇",
+    "text": "디지털 강대국 지표 - 산업용 로봇"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---wef-세계-경쟁력",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---wef-세계-경쟁력",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - WEF 세계 경쟁력",
+    "text": "디지털 강대국 지표 - WEF 세계 경쟁력"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---imd-디지털-경쟁력",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---imd-디지털-경쟁력",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - IMD 디지털 경쟁력",
+    "text": "디지털 강대국 지표 - IMD 디지털 경쟁력"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---종합",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---종합",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - 종합",
+    "text": "디지털 강대국 지표 - 종합"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---종합-시각화",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-강대국-지표---종합-시각화",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 강대국 지표 - 종합 시각화",
+    "text": "디지털 강대국 지표 - 종합 시각화"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#보고서",
+    "href": "chatGPT_kwangmyung_20230704.html#보고서",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "보고서",
+    "text": "보고서\n\n\n\n\n디지털 뉴딜, 지역균형 문제 해결과 지역균형 발전방안 (이광춘, 2020)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#디지털-뉴딜",
+    "href": "chatGPT_kwangmyung_20230704.html#디지털-뉴딜",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "디지털 뉴딜",
+    "text": "디지털 뉴딜\n\n\n\n\n디지털 뉴딜, 지역균형 문제 해결과 지역균형 발전방안 (이광춘, 2020)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#강사소개-강의-개요",
+    "href": "chatGPT_kwangmyung_20230704.html#강사소개-강의-개요",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "강사소개 & 강의 개요",
+    "text": "강사소개 & 강의 개요\n\n강사소개강의개요\n\n\n\n\n\n\nAI 아바타\n\n\n\n\n주요경력 및 학력\n\n(현) 공익법인 한국 R 사용자회: 기술 이사\n(현) 국가교육위원회 전문위원: 과학/기술 분과\n(현) 건국대학교 챗GPT 데이터 사이언스 과정: 외래교수\n(현) 경기도 빅데이터 위원회 자문위원\n(전) TCS: GS 칼텍스 디지털 아카데미 강사\n(전) 연세대학교 데이터 사이언스: 겸임교수\n(전) 삼정 KPMG: Lighthouse AI 기술총괄\n(전) 웹젠: 데이터 과학자 TD\n(전) 현대모비스: 차량용 반도체 개발구매 \n(전) 현대자동차: VAATZ / FTA \n\n\n\nKAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공\nRStudio Instructor - Tidyverse\nSeoul R Meetup Organizer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n강의상세\n\n날짜 : 2023. 7. 04.(월) 16:00~17:30\n장소 : 광명시청\n대상 : 광명시 소속 공무원\n내용\n\n“공공데이터”\n“데이터 역량강화”\n“데이터 과학”\n“사무 자동화/지능화”\n“챗GPT”\n“Text-to-X”"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#서울-r-미트업",
+    "href": "chatGPT_kwangmyung_20230704.html#서울-r-미트업",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "서울 R 미트업",
+    "text": "서울 R 미트업\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n참여와 연대\n\n서울R미트업 meetup.com: link\n\n23년 4월 서울 R 미트업: link\n23년 5월 서울 R 미트업: link\n23년 6월 서울 R 미트업: link\n23년 7월 서울 R 미트업: link\n\n세계 R 미트업 현황 (Global R Meetup Dashboard): link\n한국 R 사용자회 (Korea R User Group): link\n한국 R 컨퍼런스 (Korea R Conference): link\n유튜브 채널 (Youtube Channel): link\n페이스북 그룹 (Facebook Group): link"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#참여와-연대",
+    "href": "chatGPT_kwangmyung_20230704.html#참여와-연대",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "참여와 연대",
+    "text": "참여와 연대\n\n서울R미트업 meetup.com: link\n\n23년 4월 서울 R 미트업: link\n23년 5월 서울 R 미트업: link\n23년 6월 서울 R 미트업: link\n23년 7월 서울 R 미트업: link\n\n세계 R 미트업 현황 (Global R Meetup Dashboard): link\n한국 R 사용자회 (Korea R User Group): link\n한국 R 컨퍼런스 (Korea R Conference): link\n유튜브 채널 (Youtube Channel): link\n페이스북 그룹 (Facebook Group): link"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#보도자료",
+    "href": "chatGPT_kwangmyung_20230704.html#보도자료",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "보도자료",
+    "text": "보도자료\n\n\n\n\n\n\n\n\n2019-11-19 ‘민식이법’ 빨리 통과되기를” 엄마 눈물의 호소에…"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#최근-뉴스-링크",
+    "href": "chatGPT_kwangmyung_20230704.html#최근-뉴스-링크",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "최근 뉴스 링크",
+    "text": "최근 뉴스 링크\n\n2023-05-23 스쿨존 사고 왜 되풀이 되나요…막을 방법 있잖아요\n2023-04-28 초등학교 등굣길 덮친 1.8t 낙하물… 안전불감증이 낳은 인재\n2021-03-19 등교하다 참변…같은 날 벌어진 ‘초등생 사망 사고’\n2022-12-17 강남 스쿨존 인근서 초등학생 버스에 치여 숨져\n2019-11-19 ‘민식이법’ 빨리 통과되기를” 엄마 눈물의 호소에…"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#뉴스-링크",
+    "href": "chatGPT_kwangmyung_20230704.html#뉴스-링크",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "뉴스 링크",
+    "text": "뉴스 링크\n\n2023-05-23 스쿨존 사고 왜 되풀이 되나요…막을 방법 있잖아요\n2023-04-28 초등학교 등굣길 덮친 1.8t 낙하물… 안전불감증이 낳은 인재\n2021-03-19 등교하다 참변…같은 날 벌어진 ‘초등생 사망 사고’\n2022-12-17 강남 스쿨존 인근서 초등학생 버스에 치여 숨져\n2019-11-19 ‘민식이법’ 빨리 통과되기를” 엄마 눈물의 호소에…"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#보도자료-1",
+    "href": "chatGPT_kwangmyung_20230704.html#보도자료-1",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "보도자료",
+    "text": "보도자료\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#cctv-현황",
+    "href": "chatGPT_kwangmyung_20230704.html#cctv-현황",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "CCTV 현황",
+    "text": "CCTV 현황\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#초등학교-주변-cctv-현황",
+    "href": "chatGPT_kwangmyung_20230704.html#초등학교-주변-cctv-현황",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "초등학교 주변 CCTV 현황",
+    "text": "초등학교 주변 CCTV 현황\n\n\n\n\n\n\n\n\n제작방법: 경기도 광명시 - 학교와 CCTV"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#어린이-교통사고-통계",
+    "href": "chatGPT_kwangmyung_20230704.html#어린이-교통사고-통계",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "어린이 교통사고 통계",
+    "text": "어린이 교통사고 통계\n\n사고유형별 어린이 사망교통사고건수 추세\n\n\n\n\n\n\n\n\n  \n    \n      광명시 보행 어린이 교통사고\n    \n    \n      TAAS 교통사고분석시스템 (2014~2022)\n    \n    \n      사고유형\n      \n        교통사고 어린이 구분\n      \n      합계\n    \n    \n      사망자수\n      중상자수\n      경상자수\n    \n  \n  \n    차대사람 - 기타\n0\n11\n34\n45\n    차대사람 - 길가장자리구역통행중\n0\n3\n12\n15\n    차대사람 - 보도통행중\n0\n2\n5\n7\n    차대사람 - 차도통행중\n0\n3\n8\n11\n    차대사람 - 횡단중\n3\n33\n59\n95\n    차대차 - 기타\n0\n1\n2\n3\n    차대차 - 측면충돌\n0\n3\n0\n3\n    합계\n3\n56\n120\n179"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#글쓰기-현재와-미래",
+    "href": "chatGPT_kwangmyung_20230704.html#글쓰기-현재와-미래",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "글쓰기 현재와 미래",
+    "text": "글쓰기 현재와 미래\n\n\n현재\n\n\n\n\n\n\n\n미래"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#글쓰기-기본기",
+    "href": "chatGPT_kwangmyung_20230704.html#글쓰기-기본기",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "글쓰기 기본기",
+    "text": "글쓰기 기본기\n\n데이터 과학문서 복잡성문서 패러다임"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#행정-글쓰기-진화",
+    "href": "chatGPT_kwangmyung_20230704.html#행정-글쓰기-진화",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "(행정) 글쓰기 진화",
+    "text": "(행정) 글쓰기 진화\n\n글쓰기 역사도구의 진화행정 글쓰기챗GPT 디지털 글쓰기\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n경기도 평생학습포털(GSEEK) 챗GPT 디지털 글쓰기"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#글쓰기문서-제작-현재와-미래",
+    "href": "chatGPT_kwangmyung_20230704.html#글쓰기문서-제작-현재와-미래",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "글쓰기(문서 제작) 현재와 미래",
+    "text": "글쓰기(문서 제작) 현재와 미래\n\n\n현재\n\n\n\n\n\n\n\n미래"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#문서제작-글쓰기-기본기",
+    "href": "chatGPT_kwangmyung_20230704.html#문서제작-글쓰기-기본기",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "문서제작 → 글쓰기 기본기",
+    "text": "문서제작 → 글쓰기 기본기\n\n데이터 과학문서 복잡성문서 패러다임"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#문서화-프로그래밍",
+    "href": "chatGPT_kwangmyung_20230704.html#문서화-프로그래밍",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "문서화 프로그래밍",
+    "text": "문서화 프로그래밍\n\n개발과 저작출판 워크샵챗GPT 유닉스 쉘→출판사\n\n\n \n\n\n\n\ngraph LR\n\n    subgraph \"소프트웨어\"\n        direction LR\n        sourcecode[소스코드] --&gt; package1[패키지]\n        package1 --&gt; product1[\"제품(S/W)\"]\n        product1 --&gt; distribute1[배포]\n        distribute1 --&gt; service1[\"서비스&lt;br&gt;(앱)\"]\n    end\n    \n    subgraph \"문서\"\n        direction LR\n        text[텍스트] --&gt; package2[패키지]\n        package2 --&gt; product2[\"제품(문서)\"]\n        product2 --&gt; distribute2[배포]\n        distribute2 --&gt; service2[\"서비스&lt;br&gt;(출판)\"]\n    end\n\n    style 소프트웨어 fill:#f5f5f5,stroke:#333,stroke-width:3px\n    style 문서 fill:#b5b5b5,stroke:#111,stroke-width:3px\n\n    style sourcecode fill:#ffeeee,stroke:#f66,stroke-width:2px\n    style package1 fill:#eeffee,stroke:#6f6,stroke-width:2px\n    style product1 fill:#eeeeff,stroke:#66f,stroke-width:2px\n    style distribute1 fill:#eefeee,stroke:#6ff,stroke-width:2px\n    style service1 fill:#ffeeee,stroke:#f66,stroke-width:2px\n\n    style text fill:#ffeeee,stroke:#f66,stroke-width:2px\n    style package2 fill:#eeffee,stroke:#6f6,stroke-width:2px\n    style product2 fill:#eeeeff,stroke:#66f,stroke-width:2px\n    style distribute2 fill:#eefeee,stroke:#6ff,stroke-width:2px\n    style service2 fill:#ffeeee,stroke:#f66,stroke-width:2px\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n워크샵: https://event-us.kr/data-science/event/64397, 소스코드: https://github.com/bit2r/gpt-shell"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#데이터-과학-1",
+    "href": "chatGPT_kwangmyung_20230704.html#데이터-과학-1",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "데이터 과학",
+    "text": "데이터 과학\n\n데이터 사이언스(Data Science)는 데이터를 다루는 과학이다. 따라서 자연법칙을 다루는 자연과학과 맥이 닿아있다. 자연법칙을 측정하여 데이터프레임(DataFrame)으로 나타내면 변수(Variable), 관측점(Observation), 값(Value)으로 표현된다."
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#데이터-과학-넓은-의미",
+    "href": "chatGPT_kwangmyung_20230704.html#데이터-과학-넓은-의미",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "데이터 과학 (넓은 의미)",
+    "text": "데이터 과학 (넓은 의미)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#데이터-과학-욕구단계설",
+    "href": "chatGPT_kwangmyung_20230704.html#데이터-과학-욕구단계설",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "데이터 과학 욕구단계설",
+    "text": "데이터 과학 욕구단계설\n\n매슬로 욕구단계설가치 피라미드"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#가치",
+    "href": "chatGPT_kwangmyung_20230704.html#가치",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "가치",
+    "text": "가치\n\n\n\n기술 분석(Descriptive Analytics): 무슨 일이 있었나? (What happened?)\n\n\n진단 분석(Diagnostic Analytics): 왜 일어났나? (Why did it happen?)\n\n\n예측 분석(Predictive Analytics): 무슨 일이 일어날까? (What will happen?)\n\n\n처방 분석(Prescriptive Analytics): 어떻게 그런 일을 일으킬까? (How can we make it happen?)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#년의-변화를-그림으로-표현",
+    "href": "chatGPT_kwangmyung_20230704.html#년의-변화를-그림으로-표현",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "30년의 변화를 그림으로 표현",
+    "text": "30년의 변화를 그림으로 표현\n\n\n\n\n\n\n\n이광춘(2019-01-26), “Data Scientist 가 바라본 제조업의 발전 전략 및 방안”, Intree 4.0 World Forum"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#데이터-경제와-산업",
+    "href": "chatGPT_kwangmyung_20230704.html#데이터-경제와-산업",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "데이터 경제와 산업",
+    "text": "데이터 경제와 산업\n\n\n데이터 자원\n\n\n\n\n\n\n파이프라인\n\n\n\n\n\n\n\n\n\n이광춘 (2020-07-21), “기업운영혁신을 위한 데이터 과학: 기업의 활용방안”, 포항산업과학연구원(RIST)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#aimldl-vs-데이터-과학",
+    "href": "chatGPT_kwangmyung_20230704.html#aimldl-vs-데이터-과학",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "AI/ML/DL vs 데이터 과학",
+    "text": "AI/ML/DL vs 데이터 과학\n\n\n\n\n\n\n\n\n한국통계학회 소식지 2019년 10월호 (이광춘, 2019)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#tidyverse",
+    "href": "chatGPT_kwangmyung_20230704.html#tidyverse",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "tidyverse",
+    "text": "tidyverse\n\n\n\n\n기존 자료구조를 재사용\n파이프 연산자로 간단한 함수를 조합\n함수형 프로그래밍을 적극 사용\n기계가 아닌 인간을 위한 설계\n\n\n\nReuse existing data structures.\nCompose simple functions with the pipe.\nEmbrace functional programming.\nDesign for humans."
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#aimldl-그리고-데이터-과학",
+    "href": "chatGPT_kwangmyung_20230704.html#aimldl-그리고-데이터-과학",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "AI/ML/DL 그리고 데이터 과학",
+    "text": "AI/ML/DL 그리고 데이터 과학\n\n\n\n\n\n\n\n\n한국통계학회 소식지 2019년 10월호 (이광춘, 2019)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#공공데이터-포털",
+    "href": "chatGPT_kwangmyung_20230704.html#공공데이터-포털",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "공공데이터 포털",
+    "text": "공공데이터 포털\n\n\n\n\n\n\n\n\n\n\n김학래, “2022 데이터 인사이트 세미나”, 중앙대학교 HIKE 연구실"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#공공데이터-자료-제공-형식",
+    "href": "chatGPT_kwangmyung_20230704.html#공공데이터-자료-제공-형식",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "공공데이터 자료 제공 형식",
+    "text": "공공데이터 자료 제공 형식\n\n\n\n\n\n\n\n\n\n\n김학래, “2022 데이터 인사이트 세미나”, 중앙대학교 HIKE 연구실"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#공공데이터-정해진-미래",
+    "href": "chatGPT_kwangmyung_20230704.html#공공데이터-정해진-미래",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "공공데이터 정해진 미래(?)",
+    "text": "공공데이터 정해진 미래(?)\n\n\n\n\n\n\n\n\n김학래, “2022 데이터 인사이트 세미나”, 중앙대학교 HIKE 연구실"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#오픈-데이터-포럼",
+    "href": "chatGPT_kwangmyung_20230704.html#오픈-데이터-포럼",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "오픈 데이터 포럼",
+    "text": "오픈 데이터 포럼\n\n\n\n\n\n\n\n\n선거관련 데이터 및 사법기관의 공공데이터 개방현황과 개선방안\n2022년 7월 열린세미나를 개최합니다. 이번 주제는 선거관련 데이터의 개방현황과 사법기관 공공데이터의 개방현황 그리고 개선방안을 함께 살펴보는 시간을 준비했습니다 관심있는 분들의 많은 참여와 의견 바랍니다.\n\n일시: 2022. 7. 28.(목) 14~17시\n참여방법:\n\n서울창업허브(서울특별시 마포구 공덕동 백범로31길 21) 본관 10층 대강당\n\n웹세미나 (유튜브/오픈데이터포럼 공식채널)\n\n주제: 선거관련 데이터 및 사법기관의 공공데이터 개방현황과 개선방안\n참가신청 : https://www.onoffmix.com/event/259343\n온·오프라인 사전 신청자에 한에서 이벤트를 통해 소정의 기념품 을 준비했으므로, 많은 관심과 참여 부탁드리겠습니다"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#주요-선거-일정",
+    "href": "chatGPT_kwangmyung_20230704.html#주요-선거-일정",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "주요 선거 일정",
+    "text": "주요 선거 일정"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#중앙선관위-데이터-제공방식",
+    "href": "chatGPT_kwangmyung_20230704.html#중앙선관위-데이터-제공방식",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "중앙선관위 데이터 제공방식",
+    "text": "중앙선관위 데이터 제공방식\n\n중앙선관위: 웹사이트중앙선관위 - 자료실공공데이터포털 - API"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#중앙선관위-제공-데이터",
+    "href": "chatGPT_kwangmyung_20230704.html#중앙선관위-제공-데이터",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "중앙선관위 제공 데이터",
+    "text": "중앙선관위 제공 데이터\n\n투/개표여론조사의식조사정당회계TV토론지도정책공약공보물\n\n\n\n\n\n\n\n\n선거통계시스템\n\n\n\n\n\n\n\n\n\n중앙선거여론조사심의위원회\n\n\n\n\n\n\n\n\n\n제20대 대통령선거 유권자의식조사, PDF\n\n\n\n\n\n\n\n\n\n2020년도 정당의 활동개황 및 회계보고, PDF\n\n\n\n\n\n\n\n\n\n제 20대 대통령선거 후보자 토론회 다시보기\n\n\n\n\n\n\n\n\n\n선거구지도 - 대한민국 행정동 경계(admdongkor)\n\n\n\n\n\n\n\n\n\n정책공약마당\n\n\n\n\n\n\n\n\n\n선거정보도서관-후보자선전물"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#데이터-사이언스-사례",
+    "href": "chatGPT_kwangmyung_20230704.html#데이터-사이언스-사례",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "데이터 사이언스 사례",
+    "text": "데이터 사이언스 사례\n\n사전투표율역대선거여론조사TV 토론지도공약정당사무소\n\n\n\n\n\n\n\n\n제20대 대통령 선거, 사전투표 역사를 새로 쓰다\n\n\n\n\n\n\n\n\n\n지방선거 시도지사 절반, 5월 12일 결정된다\n\n\n\n\n\n\n\n\n\n여론조사를 네 분류로 나눠보니, 눈에 띄는 흐름\n\n\n\n\n\n\n\n\n\n데이터를 통해 본 대선 TV 토론회\n\n\n\n\n\n\n\n\n\n대선득표율로 지방선거 판세를 가늠해보자\n\n\n\n\n\n\n\n\n\n유력 대선후보 4인, 10대 공약 중 압도적 분야는 ‘00’\n\n\n\n\n\n\n\n\n\n양강 구도 속 부지런히 움직이는 제3후보는?"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#krvote-데이터-패키지",
+    "href": "chatGPT_kwangmyung_20230704.html#krvote-데이터-패키지",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "krvote 데이터 패키지",
+    "text": "krvote 데이터 패키지\n\n패키지데이터 패키지전처리작업후처리작업krvote\n\n\n\n\n\n\n\n\nDesirée De Leon, Alison Hill, “A Handbook for Teaching and Learning with R and RStudio”, 2019-09-11\n\n\n\n\n\n\n\n\n\nDesirée De Leon, Alison Hill, “A Handbook for Teaching and Learning with R and RStudio”, 2019-09-11\n\n\n\n\n\n\n\n\n\n이광춘, “krvote - 대한민국 선거 데이터 패키지”, 2022-06-09\n\n\n\n\n\n\n\n\n\n이광춘, “krvote - 대한민국 선거 데이터 패키지”, 2022-06-09"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#section-1",
+    "href": "chatGPT_kwangmyung_20230704.html#section-1",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "",
+    "text": "제20대 대통령 선거"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#러시아-월드컵-독일전",
+    "href": "chatGPT_kwangmyung_20230704.html#러시아-월드컵-독일전",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "러시아 월드컵 (독일전)",
+    "text": "러시아 월드컵 (독일전)\n\n\n\n\n\n\n\n\n러시아 월드컵(2018) - 한국 vs 독일"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#년-런던-코로나19",
+    "href": "chatGPT_kwangmyung_20230704.html#년-런던-코로나19",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "1854년 런던 코로나19",
+    "text": "1854년 런던 코로나19\n\n팬데믹데이터-1데이터-2탐정시각화(1854)시각화(2022)메타버스\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1854 Broad Street cholera outbreak"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#지진해일-대피소",
+    "href": "chatGPT_kwangmyung_20230704.html#지진해일-대피소",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "지진해일 대피소",
+    "text": "지진해일 대피소\n\n\n\n\n\n\n\nxwMOOC (2018-01-17), “지진해일 대피소 - crosstalk”"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#손씻기-역사",
+    "href": "chatGPT_kwangmyung_20230704.html#손씻기-역사",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "손씻기 역사",
+    "text": "손씻기 역사\n\n출생사망데이터병원별 비교시간별 비교사망율 분포통계검정\n\n\n\n\n\n\n\n\n\n\n\n연도별\n\n\n\n\n\n\n  \n    \n    \n      year\n      births\n      deaths\n      clinic\n    \n  \n  \n    1841\n3,036\n237\nclinic 1\n    1842\n3,287\n518\nclinic 1\n    1843\n3,060\n274\nclinic 1\n    1844\n3,157\n260\nclinic 1\n    1845\n3,492\n241\nclinic 1\n    1846\n4,010\n459\nclinic 1\n    1841\n2,442\n86\nclinic 2\n    1842\n2,659\n202\nclinic 2\n    1843\n2,739\n164\nclinic 2\n    1844\n2,956\n68\nclinic 2\n    1845\n3,241\n66\nclinic 2\n    1846\n3,754\n105\nclinic 2\n  \n  \n  \n\n\n\n\n\n월별\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nstatistic\np.value\nparameter\nconf.low\nconf.high\nmethod\nalternative\n\n\n\n\n-9.610071\n0\n92.43544\n-0.1013066\n-0.0666066\nWelch Two Sample t-test\ntwo.sided\n\n\n\n\n\n\n\n\n\n\n이광춘, “손씻기 그리고 통계 - 제멜바이스”"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#정규분포",
+    "href": "chatGPT_kwangmyung_20230704.html#정규분포",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "정규분포",
+    "text": "정규분포\n\n골턴 보드동영상모의실험실제사례 - 신장미국 대학생 신장\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n육군 신체측정정보 : 육군 신체측정 데이터(수시 업데이터)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#나폴레옹-러시아-침공",
+    "href": "chatGPT_kwangmyung_20230704.html#나폴레옹-러시아-침공",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "나폴레옹 러시아 침공",
+    "text": "나폴레옹 러시아 침공\n\n나폴레옹미나르 지도실제 침공데이터시각화\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n생존병사 수\n\n\n\n\n\n\n\n\n후퇴 기온\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRe-Visions of Minard"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#나이팅게일---백의천사",
+    "href": "chatGPT_kwangmyung_20230704.html#나이팅게일---백의천사",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "나이팅게일 - 백의천사",
+    "text": "나이팅게일 - 백의천사\n\n나이팅게일크림전쟁데이터시각화\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n위키백과, “플로렌스 나이팅게일”\n위키백과, “크림전쟁”"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#회귀분석---mlb-투수-유전자는-유전이-될까",
+    "href": "chatGPT_kwangmyung_20230704.html#회귀분석---mlb-투수-유전자는-유전이-될까",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "회귀분석 - MLB 투수 유전자는 유전이 될까?",
+    "text": "회귀분석 - MLB 투수 유전자는 유전이 될까?\n\n\n\n\n\n\n\n회귀분석 - MLB 투수 유전자는 유전이 될까?"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#폭격비행기",
+    "href": "chatGPT_kwangmyung_20230704.html#폭격비행기",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "폭격비행기",
+    "text": "폭격비행기\n\n세계대전 - 유럽세계대전 - 태평양대공포폭격기 데이터고민업그레이드"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#openai-마이크로소프트-3-대장-alpha",
+    "href": "chatGPT_kwangmyung_20230704.html#openai-마이크로소프트-3-대장-alpha",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "openAI 마이크로소프트 3 대장 + \\(\\alpha\\)",
+    "text": "openAI 마이크로소프트 3 대장 + \\(\\alpha\\)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#chatgpt-3대장",
+    "href": "chatGPT_kwangmyung_20230704.html#chatgpt-3대장",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "chatGPT 3대장",
+    "text": "chatGPT 3대장\n\n최강 3대장chatGPT 3대장—글쓰기그리기코딩"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#chatgpt-3대장-alpha-추론",
+    "href": "chatGPT_kwangmyung_20230704.html#chatgpt-3대장-alpha-추론",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "chatGPT 3대장 + \\(\\alpha\\) 추론",
+    "text": "chatGPT 3대장 + \\(\\alpha\\) 추론\n\n문제수식손 풀기SympychatGPTWolfram Plugin\n\n\n디오판토스 묘비\n신의 축복으로 태어난 그는 인생의 \\(\\frac{1}{6}\\)을 소년으로 보냈다. 그리고 다시 인생의 \\(\\frac{1}{12}\\) 이 지난 뒤에는 얼굴에 수염이 자라기 시작했다. 다시 \\(\\frac{1}{7}\\)이 지난 뒤 그는 아름다운 여인을 맞이하여 화촉을 밝혔으며, 결혼한 지 5년 만에 귀한 아들을 얻었다. 아! 그러나 그의 가엾은 아들은 아버지의 반 밖에 살지 못했다. 아들을 먼저 보내고 깊은 슬픔에 빠진 그는 그 뒤 4년간 정수론에 몰입하여 스스로를 달래다가 일생을 마쳤다. [^1]\n\n\n디오판토스가 정확히 언제 태어나고 언제 죽었는지는 명확하지 않지만, 그가 죽었을 때의 나이는 정확히 알 수 있다. 이를 방정식을 통해 풀어보자. 수식을 \\(x\\)에 대해 정리해서 풀면 84가 나온다.\n\\[\\frac {x} {6} + \\frac {x} {12} + \\frac {x} {7} +  5 + \\frac {x} {2} + 4 = x\\]\n\n\n\n\n\n\n\n\n\n\nfrom sympy import *\nx = Symbol('x')\nDiophantus_puzzle = x/6 + x/12 + x/7 + 5 + x/2 + 4 - x\nsolve(Diophantus_puzzle, x, dict = True)\n\n[{x: 84}]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n울프람 웹사이트"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#autogpt-text-to-task",
+    "href": "chatGPT_kwangmyung_20230704.html#autogpt-text-to-task",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "AutoGPT: Text-to-Task",
+    "text": "AutoGPT: Text-to-Task\n\n\n\n\n\nAuto-GPT: An Autonomous GPT-4 Experiment"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#데이터-분석-text-to-analytics",
+    "href": "chatGPT_kwangmyung_20230704.html#데이터-분석-text-to-analytics",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "데이터 분석: Text-to-Analytics",
+    "text": "데이터 분석: Text-to-Analytics\n\nPandasAILlamaIndex챗GPT SQLRTutor.ai\n\n\nPandas AI는 널리 사용되는 데이터 분석 및 조작 도구인 Pandas에 생성 인공 지능 기능을 추가한 Python 라이브러리다. Pandas AI는 판다스와 함께 사용하도록 설계되었으며, 판다스를 대체할 수 없다.\n \n\nchatGPT: 판다스 AI\n\n\n\n\n\n\n\n\n\nchatGPT: 펭귄 - 라마인덱스\n\n\n\n\n\n\n\n\n\nchatGPT: 챗GPT SQL\n\n\n\n\n\nChat with your data with RTutor\nRTutor"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#구글-검색의-종말",
+    "href": "chatGPT_kwangmyung_20230704.html#구글-검색의-종말",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "구글 검색의 종말(?)",
+    "text": "구글 검색의 종말(?)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#글쓰기-역사",
+    "href": "chatGPT_kwangmyung_20230704.html#글쓰기-역사",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "글쓰기 역사",
+    "text": "글쓰기 역사\n\n\n\n\n\n\n\n\n\n문자와 종이 역사"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#오피스-전쟁",
+    "href": "chatGPT_kwangmyung_20230704.html#오피스-전쟁",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "오피스 전쟁",
+    "text": "오피스 전쟁\n\n\n\n\n\n\n\n\n\n\n항목\nMS 오피스 1\n구글 오피스 2\n리브레 오피스 3\n한컴 오피스 4\n\n\n\n\n문서 작성 및 편집\n워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공\n구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공\n라이터, 캘크, 임프레스 등의 데스크톱 앱 제공\n한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공\n\n\n협업 및 공유\n원드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능\n드롭박스나 구글 드라이브와 연동하여 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n\n\n이메일 및 채팅\nOutlook을 통해 비즈니스 메일 제공. Teams을 통해 채팅 및 화상 회의 가능\nGmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능\n이메일 및 채팅 기능 없음\n이메일 및 채팅 기능 없음\n\n\n가격\n1인당 월 5~20달러 다양한 요금제 제공. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작\n1인당 월 6~18달러까지 다양한 요금제 제공\n완전 무료\n개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요\n\n\n\nhttps://www.microsoft.com/ko-kr/microsoft-365/businesshttps://workspace.google.com/intl/ko_kr/https://www.libreoffice.org/https://www.hancom.com/product/productMain.do"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#오피스-전쟁-패러다임-충돌",
+    "href": "chatGPT_kwangmyung_20230704.html#오피스-전쟁-패러다임-충돌",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "오피스 전쟁: 패러다임 충돌",
+    "text": "오피스 전쟁: 패러다임 충돌"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#챗gpt-시대-사무실",
+    "href": "chatGPT_kwangmyung_20230704.html#챗gpt-시대-사무실",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "챗GPT 시대 사무실",
+    "text": "챗GPT 시대 사무실\n\n챗GPT 사용원인인터페이스챗GPT AS-IS챗GPT TO-BE"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#챗gpt가-이룬-대통합",
+    "href": "chatGPT_kwangmyung_20230704.html#챗gpt가-이룬-대통합",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "챗GPT가 이룬 대통합",
+    "text": "챗GPT가 이룬 대통합"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#인터페이스-interface",
+    "href": "chatGPT_kwangmyung_20230704.html#인터페이스-interface",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "인터페이스 (Interface)",
+    "text": "인터페이스 (Interface)\n\n진화과정CLIGUIWUIMUILUI\n\n\n  \n\n\n\n\nflowchart TB\n    \n    subgraph A[\"사용자 인터페이스\"]\n    direction LR\n        CLI[\"CLI&lt;br&gt;Command Line Interface&lt;br&gt; 1950~\"]     --&gt; GUI[\"GUI &lt;br&gt; Graphic User Inferface&lt;br&gt; 1970~\"]\n        GUI               --&gt; WI[\"Web Interface &lt;br&gt; 1994~\"]\n        WI --&gt; MI[\"Mobile Interface &lt;br&gt; 2007~\"]\n        MI --&gt; NUI[\"LUI &lt;br&gt; Language User Interface &lt;br&gt; 2023~\"]\n\n    end\n\n\nclass A nodeStyle\n\nclassDef nodeStyle fill:#fcfbfa,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://en.wikipedia.org/wiki/Computer_terminal\n\n\n\n\n\n\n\n\n\n\nhttps://kartsci.org/kocomu/computer-history/graphical-user-interface-history/\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.huffpost.com/entry/uber-your-way-through-cit_b_1205446\n\n\n\n\n\n\n\n\n\nhttps://twitter.com/sama/status/1515764302904377344"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#챗gpt-nui",
+    "href": "chatGPT_kwangmyung_20230704.html#챗gpt-nui",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "챗GPT NUI",
+    "text": "챗GPT NUI\n\n1:1 채팅클릭하여 완료자동완성명령 팔레트\n\n\n\n챗GPT (ChatGPT)\n\n\n\n\n\n\n\n\n\nOpenAI Playground\n\n\n\n\n\n\n\n\n\nGitHub Copilot\n\n\n\n\n\n\n\nhttps://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e\n\n\n\n\n\n사례\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://blog.replit.com/clui\nhttps://blog.replit.com/ai\n\n\nCommand Palette 역사\n\n60년대로 거슬러 올라가는 명령 팔레트는 최근 기술 업계에서 다시 인기를 얻고 있으며 사용자 중심 소프트웨어의 필수적인 부분으로 간주됨.\nCLI는 개인용 컴퓨터가 대중화되기 전 초기 컴퓨팅을 지배했으며 사용자가 시스템을 작동하기 위해 특정 명령을 알아야 했다. 1984년 Apple의 매킨토시와 함께 도입된 그래픽 사용자 인터페이스(GUI)는 중요한 혁신으로 여겨졌지만, 소프트웨어의 복잡성이 증가함에 따라 GUI만으로는 탐색하기가 점점 더 어려워졌다.\n사용자가 항목 이름의 짧은 약어입력하여 앱과 파일을 검색할 수 있는 런처가 점점 더 보편화 되었다. 예를 들어 2001년에 출시된 Mac OS X용 LaunchBar, Quicksilver, 2005년에 출시된 Apple의 시스템 전체 Spotlight가 있다. 검색과 CLI의 결합은 Command Palette의 탄생으로 이어졌다.\n오늘날 우리가 알고 있는 현대식 명령 팔레트는 2011년 Sublime Text 2 베타 Joe Skinner가 처음 소개. 명령줄 사용에 익숙한 프로그래머들이 단축키를 모두 외울 필요 없이 더 빠르게 작업할 수 있어 중요한 발전이 됨."
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#section",
+    "href": "chatGPT_kwangmyung_20230704.html#section",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "",
+    "text": "제20대 대통령 선거"
   }
 ]
