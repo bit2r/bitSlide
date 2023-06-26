@@ -52,3 +52,73 @@ graph LR
 <https://event-us.kr/data-science/event/64397>
 :::
 
+## 글쓰기 {.smaller}
+
+::: panel-tabset
+### AI 시대 글쓰기
+
+![](img/digital-writing-overview.png){fig-align="center" width="862"}
+
+### 글쓰기 역사
+
+![](img/writing_history.jpg)
+
+### 디지털 글쓰기
+
+[![](https://mermaid.ink/img/pako:eNqNlNFr00Acx_-VcHtx0LJK2INBBrLhXjrQriBofLgmlyaYXsr1gpYxKFpBsLKVdbphV-qLvvQhMod50H-ouf4P3uWSpalGeiFw-d3v8_v97vu73BEwPBMBDTQJbNtKtaZjHSt8GDak-4_qz3TAvn_iEx08V8rlHWXXwxRh2kn9On5DoukCJ6LRiH3rLfqhMg977CyYhwHHpb8YpkOQQR0Px_lS6xPiUAc3Oc-peXCaZqzDhou4dTEc56Ik_rHPvihBkD_DaHKxGPULPXf5dkWwwYBd_WAfZlu1rcPH1fsNssN-j6Kz4hQPnaZPUJLj669Cvz0HckFaQoaT_uLiXGwjGRJA2FwRWcb3SAtSaU-1zC2s6C3Nop6bGfsSsMuewi5D9nG4htR1G7XQv1EpuUNjyaNZyPpjRbrl4sYRlPzIik36mOD8Ze-v1sKrsOv5NEOj6TvRpvM--_xmrQAEWYggbCxVz4JwufoC-fdQ2_W6La66XJMb-WtppQnZksgXBIuTmVBzfn3DxtM1GiH5OEsNQROR-Ni8ZZPTO-z1LJoMNnNBltwf-NT2lt2nPTYZ8lkhcQAN28EoQ_hvOb_ub64qk2yRdl10q5DluK62YW2Lp9ShxHuBtA1VVZN5-aVjUltT26_y-O05lnxl-55lWcX8XcFndNKCJLdRUSvq2mzWmDS3ahlq5b88KIEW4ikdk9-HRyKaDqg4ZzrQ-NREFvRdqgMdH3NX6FPvsIsNoFHioxLw2yakKPn7U2Mb4qeexz8t6Hb4NzId6pEDeeXGN-_xH68P-q8?type=png)](https://mermaid.live/edit#pako:eNqNlNFr00Acx_-VcHtx0LJK2INBBrLhXjrQriBofLgmlyaYXsr1gpYxKFpBsLKVdbphV-qLvvQhMod50H-ouf4P3uWSpalGeiFw-d3v8_v97vu73BEwPBMBDTQJbNtKtaZjHSt8GDak-4_qz3TAvn_iEx08V8rlHWXXwxRh2kn9On5DoukCJ6LRiH3rLfqhMg977CyYhwHHpb8YpkOQQR0Px_lS6xPiUAc3Oc-peXCaZqzDhou4dTEc56Ik_rHPvihBkD_DaHKxGPULPXf5dkWwwYBd_WAfZlu1rcPH1fsNssN-j6Kz4hQPnaZPUJLj669Cvz0HckFaQoaT_uLiXGwjGRJA2FwRWcb3SAtSaU-1zC2s6C3Nop6bGfsSsMuewi5D9nG4htR1G7XQv1EpuUNjyaNZyPpjRbrl4sYRlPzIik36mOD8Ze-v1sKrsOv5NEOj6TvRpvM--_xmrQAEWYggbCxVz4JwufoC-fdQ2_W6La66XJMb-WtppQnZksgXBIuTmVBzfn3DxtM1GiH5OEsNQROR-Ni8ZZPTO-z1LJoMNnNBltwf-NT2lt2nPTYZ8lkhcQAN28EoQ_hvOb_ub64qk2yRdl10q5DluK62YW2Lp9ShxHuBtA1VVZN5-aVjUltT26_y-O05lnxl-55lWcX8XcFndNKCJLdRUSvq2mzWmDS3ahlq5b88KIEW4ikdk9-HRyKaDqg4ZzrQ-NREFvRdqgMdH3NX6FPvsIsNoFHioxLw2yakKPn7U2Mb4qeexz8t6Hb4NzId6pEDeeXGN-_xH68P-q8)
+:::
+
+::: aside
+[지식(GSeek): 디지털 글쓰기](https://r2bit.com/gpt-edu/gseek_20230530.html)
+:::
+
+## 글쓰기 → 커뮤니티 {.smaller}
+
+::: panel-tabset
+### 글쓰기
+
+![](img/birds-eye-view.png){fig-align="center" width="887"}
+
+### 재현가능 과학 글쓰기
+
+![](img/compendium-rr.png){fig-align="center" width="986"}
+
+### 글꼴
+
+![](img/font-classification.png){fig-align="center" width="401"}
+
+### 책구성
+
+![](img/latex-project-structure.png){fig-align="center" width="895"}
+
+### $\LaTeX$ X 한국 R 사용자 그룹
+
+::: {layout-ncol="2"}
+![](img/KTSmeta.png)
+
+![](img/koRea_logo.png)
+:::
+
+### 챗GPT 출판
+
+:::::{.columns}
+:::{.column}
+![](img/bitPublish_logo.png){fig-align="center" width="432"}
+
+:::
+
+:::{.column}
+![](img/book_cover.png){width="785"}
+
+-   [`bitPublish`](https://github.com/bit2r/bitPublish)
+-   [챗GPT 유닉스 쉘 - 자동화](https://github.com/bit2r/gpt-shell)
+:::
+
+:::::
+
+:::
+
+::: aside
+[한국 R 사용자회](https://r2bit.com/) X [한글 $\TeX$ 사용자 그룹](http://www.ktug.org/)
+:::
+
