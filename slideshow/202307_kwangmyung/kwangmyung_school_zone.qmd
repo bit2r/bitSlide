@@ -9,6 +9,46 @@
 - 2019-11-19 ['민식이법' 빨리 통과되기를" 엄마 눈물의 호소에...](https://www.hankookilbo.com/News/Read/201911190828371273)
 :::
 
+<!-- ## 보도자료 {.smaller} -->
+
+<!-- ::: columns -->
+<!-- ::: {.column width="40%"} -->
+
+<!-- ::: r-stack -->
+<!-- ![2023-05-23](img/school_zone/20230520_hani.jpg){.fragment fig-align="center" width="320" height="285"} -->
+
+<!-- ::: fragment -->
+<!-- ![2023-04-28](img/school_zone/20230428_kookje.jpg){.fragment width="320" height="285"} -->
+<!-- ::: -->
+
+<!-- ::: fragment -->
+<!-- ![2021-03-19](img/school_zone/20210319-edaily.jpg){.fragment width="320" height="285"} -->
+<!-- ::: -->
+
+<!-- ::: fragment -->
+<!-- ![2022-12-17](img/school_zone/2022-12-17-inews24.jpg){.fragment width="320" height="285"} -->
+<!-- ::: -->
+
+<!-- ::: fragment -->
+<!-- ![2019-11-19](img/school_zone/20191119-hankook.jpg){.fragment width="320" height="285"} -->
+<!-- ::: -->
+
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ::: {.column width="60%"} -->
+<!-- ## 뉴스 링크 -->
+
+<!-- -   2023-05-23 [스쿨존 사고 왜 되풀이 되나요...막을 방법 있잖아요](https://www.hani.co.kr/arti/society/society_general/1092568.html) -->
+<!-- -   2023-04-28 [초등학교 등굣길 덮친 1.8t 낙하물... 안전불감증이 낳은 인재](http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0300&key=20230428.99099009103) -->
+<!-- -   2021-03-19 [등교하다 참변...같은 날 벌어진 '초등생 사망 사고'](https://www.edaily.co.kr/news/read?newsId=01348086628984960&mediaCodeNo=257) -->
+<!-- -   2022-12-17 [강남 스쿨존 인근서 초등학생 버스에 치여 숨져](https://www.inews24.com/view/1549752) -->
+<!-- -   2019-11-19 ['민식이법' 빨리 통과되기를" 엄마 눈물의 호소에...](https://www.hankookilbo.com/News/Read/201911190828371273) -->
+<!-- ::: -->
+<!-- ::: -->
+
+
+
 ## 초등학교 주변 CCTV 현황 {.smaller}
 
 ```{r}
@@ -147,7 +187,7 @@ accident_tbl %>%
 ```
 
 
-### 교통사고건수 추세
+### 교통사고건수 추세{.smaller}
 
 ```{r}
 
@@ -175,42 +215,52 @@ accident %>%
 :::
 
 
+## 광명시 유동인구(KT) {.smaller}
 
-<!-- ## 보도자료 {.smaller} -->
 
-<!-- ::: columns -->
-<!-- ::: {.column width="40%"} -->
+:::{layout-nrow=2}
 
-<!-- ::: r-stack -->
-<!-- ![2023-05-23](img/school_zone/20230520_hani.jpg){.fragment fig-align="center" width="320" height="285"} -->
+![](img/kwangmyung/광명시_월별_유동인구.png)
 
-<!-- ::: fragment -->
-<!-- ![2023-04-28](img/school_zone/20230428_kookje.jpg){.fragment width="320" height="285"} -->
-<!-- ::: -->
+![](img/kwangmyung/광명시_월별_동별_유동인구.png)
 
-<!-- ::: fragment -->
-<!-- ![2021-03-19](img/school_zone/20210319-edaily.jpg){.fragment width="320" height="285"} -->
-<!-- ::: -->
+![](img/kwangmyung/광명시_월별_동별_세대별_유동인구.png)
 
-<!-- ::: fragment -->
-<!-- ![2022-12-17](img/school_zone/2022-12-17-inews24.jpg){.fragment width="320" height="285"} -->
-<!-- ::: -->
+![](img/kwangmyung/광명시_월별_동별_성별_유동인구.png)
 
-<!-- ::: fragment -->
-<!-- ![2019-11-19](img/school_zone/20191119-hankook.jpg){.fragment width="320" height="285"} -->
-<!-- ::: -->
+![](img/kwangmyung/광명시_소하2동_연도별_유동인구.png)
 
-<!-- ::: -->
-<!-- ::: -->
+:::
 
-<!-- ::: {.column width="60%"} -->
-<!-- ## 뉴스 링크 -->
+::: aside
+데이터출처: 경기도 데이터 분석센터 KT 유동인구 (2018년 1월 ~ 2022년 12월)
+:::
 
-<!-- -   2023-05-23 [스쿨존 사고 왜 되풀이 되나요...막을 방법 있잖아요](https://www.hani.co.kr/arti/society/society_general/1092568.html) -->
-<!-- -   2023-04-28 [초등학교 등굣길 덮친 1.8t 낙하물... 안전불감증이 낳은 인재](http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0300&key=20230428.99099009103) -->
-<!-- -   2021-03-19 [등교하다 참변...같은 날 벌어진 '초등생 사망 사고'](https://www.edaily.co.kr/news/read?newsId=01348086628984960&mediaCodeNo=257) -->
-<!-- -   2022-12-17 [강남 스쿨존 인근서 초등학생 버스에 치여 숨져](https://www.inews24.com/view/1549752) -->
-<!-- -   2019-11-19 ['민식이법' 빨리 통과되기를" 엄마 눈물의 호소에...](https://www.hankookilbo.com/News/Read/201911190828371273) -->
-<!-- ::: -->
-<!-- ::: -->
+
+## 광명시 카드사용금액(BC) &rarr; 작업중 {.smaller}
+
+
+:::{layout-nrow=2}
+
+![](img/kwangmyung/korea_block.png)
+
+![](img/kwangmyung/gg_km_inset.png)
+
+![](img/kwangmyung/km_cell_grid_gg.png)
+
+![](img/kwangmyung/km_cell_point_gg.png)
+
+![](img/kwangmyung/km_cell_block_point_gg.png)
+
+![](img/kwangmyung/km_소하2동_gg_map.png)
+
+:::
+
+
+::: aside
+데이터출처: 경기도 데이터 분석센터 BC카드 사용내역 (2018년 1월 ~ 2022년 12월)
+:::
+
+
+
 

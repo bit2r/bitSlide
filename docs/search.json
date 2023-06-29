@@ -368,7 +368,7 @@
     "href": "chatGPT_kwangmyung_20230704.html#목차",
     "title": "공공데이터 이해, 데이터 활용역량",
     "section": "목차",
-    "text": "목차\n\n강사소개 및 미트업 안내\n(디지털) 지표로 보는 대한민국\n공공데이터 현황\n공공데이터 사례: 선거 공공데이터\n[광명시] : 어린이 교통사고\n데이터 문해력\n(챗GPT) 데이터 과학\n오피스 → 챗GPT 디지털 글쓰기\n질의응답"
+    "text": "목차\n\n강사소개 및 미트업 안내\n(디지털) 지표로 보는 대한민국\n공공데이터 현황\n공공데이터 사례: 선거 공공데이터\n[광명시] : 어린이 교통사고, 유동인구, 카드사용\n데이터 문해력\n(챗GPT) 데이터 과학\n오피스 → 챗GPT 디지털 글쓰기\n질의응답"
   },
   {
     "objectID": "chatGPT_kwangmyung_20230704.html#차-산업혁명을-넘어서",
@@ -487,7 +487,7 @@
     "href": "chatGPT_kwangmyung_20230704.html#강사소개-강의-개요",
     "title": "공공데이터 이해, 데이터 활용역량",
     "section": "강사소개 & 강의 개요",
-    "text": "강사소개 & 강의 개요\n\n강사소개강의개요\n\n\n\n\n\n\nAI 아바타\n\n\n\n\n주요경력 및 학력\n\n(현) 공익법인 한국 R 사용자회: 기술 이사\n(현) 국가교육위원회 전문위원: 과학/기술 분과\n(현) 건국대학교 챗GPT 데이터 사이언스 과정: 외래교수\n(현) 경기도 빅데이터 위원회 자문위원\n(전) TCS: GS 칼텍스 디지털 아카데미 강사\n(전) 연세대학교 데이터 사이언스: 겸임교수\n(전) 삼정 KPMG: Lighthouse AI 기술총괄\n(전) 웹젠: 데이터 과학자 TD\n(전) 현대모비스: 차량용 반도체 개발구매 \n(전) 현대자동차: VAATZ / FTA \n\n\n\nKAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공\nRStudio Instructor - Tidyverse\nSeoul R Meetup Organizer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n강의상세\n\n날짜 : 2023. 7. 04.(월) 16:00~17:30\n장소 : 광명시청\n대상 : 광명시 소속 공무원\n내용\n\n“공공데이터”\n“데이터 역량강화”\n“데이터 과학”\n“사무 자동화/지능화”\n“챗GPT”\n“Text-to-X”"
+    "text": "강사소개 & 강의 개요\n\n강사소개강의개요\n\n\n\n\n\n\nAI 아바타\n\n\n\n\n주요경력 및 학력\n\n(현) 공익법인 한국 R 사용자회: 기술 이사\n(현) 국가교육위원회 전문위원: 과학/기술 분과\n(현) 건국대학교 챗GPT 데이터 사이언스 과정: 외래교수\n(현) 경기도 빅데이터 위원회 자문위원\n(전) TCS: GS 칼텍스 디지털 아카데미 강사\n(전) 연세대학교 데이터 사이언스: 겸임교수\n(전) 삼정 KPMG: Lighthouse AI 기술총괄\n(전) 웹젠: 데이터 과학자 TD\n(전) 현대모비스: 차량용 반도체 개발구매 \n(전) 현대자동차: VAATZ / FTA \n\n\n\nKAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공\nRStudio Instructor - Tidyverse\nSeoul R Meetup Organizer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n강의상세\n\n날짜 : 2023. 7. 04.(월) 16:00~17:30\n장소 : 광명시청\n대상 : 광명시 소속 공무원\n내용\n\n“공공데이터”\n“데이터 역량강화”\n“데이터 과학”\n“광명시 어린이 교통사고/유동인구”\n“사무 자동화/지능화”\n“챗GPT”\n“Text-to-X”"
   },
   {
     "objectID": "chatGPT_kwangmyung_20230704.html#서울-r-미트업",
@@ -508,7 +508,7 @@
     "href": "chatGPT_kwangmyung_20230704.html#보도자료",
     "title": "공공데이터 이해, 데이터 활용역량",
     "section": "보도자료",
-    "text": "보도자료\n\n\n\n\n\n\n\n\n2019-11-19 ‘민식이법’ 빨리 통과되기를” 엄마 눈물의 호소에…"
+    "text": "보도자료\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2019-11-19 ‘민식이법’ 빨리 통과되기를” 엄마 눈물의 호소에…"
   },
   {
     "objectID": "chatGPT_kwangmyung_20230704.html#최근-뉴스-링크",
@@ -1356,5 +1356,47 @@
     "title": "챗GPT 디지털 글쓰기 출판",
     "section": "챗GPT NUI",
     "text": "챗GPT NUI\n\n1:1 채팅클릭하여 완료자동완성명령 팔레트\n\n\n\n챗GPT (ChatGPT)\n\n\n\n\n\n\n\n\n\nOpenAI Playground\n\n\n\n\n\n\n\n\n\nGitHub Copilot\n\n\n\n\n\n\n\nhttps://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e\n\n\n\n\n\n사례\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://blog.replit.com/clui\nhttps://blog.replit.com/ai\n\n\nCommand Palette 역사\n\n60년대로 거슬러 올라가는 명령 팔레트는 최근 기술 업계에서 다시 인기를 얻고 있으며 사용자 중심 소프트웨어의 필수적인 부분으로 간주됨.\nCLI는 개인용 컴퓨터가 대중화되기 전 초기 컴퓨팅을 지배했으며 사용자가 시스템을 작동하기 위해 특정 명령을 알아야 했다. 1984년 Apple의 매킨토시와 함께 도입된 그래픽 사용자 인터페이스(GUI)는 중요한 혁신으로 여겨졌지만, 소프트웨어의 복잡성이 증가함에 따라 GUI만으로는 탐색하기가 점점 더 어려워졌다.\n사용자가 항목 이름의 짧은 약어입력하여 앱과 파일을 검색할 수 있는 런처가 점점 더 보편화 되었다. 예를 들어 2001년에 출시된 Mac OS X용 LaunchBar, Quicksilver, 2005년에 출시된 Apple의 시스템 전체 Spotlight가 있다. 검색과 CLI의 결합은 Command Palette의 탄생으로 이어졌다.\n오늘날 우리가 알고 있는 현대식 명령 팔레트는 2011년 Sublime Text 2 베타 Joe Skinner가 처음 소개. 명령줄 사용에 익숙한 프로그래머들이 단축키를 모두 외울 필요 없이 더 빠르게 작업할 수 있어 중요한 발전이 됨.\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#엑셀-선-넘네",
+    "href": "chatGPT_kwangmyung_20230704.html#엑셀-선-넘네",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "엑셀 선 넘네!!!",
+    "text": "엑셀 선 넘네!!!\n\n세미나엑셀 구성엑셀 참사복잡성6가지 이유엑셀 → 챗GPT\n\n\n\n\n\n\n\n\n\n\n\n\n스프레드쉬트는 데이터, 서식, 수식으로 구성된다.\n숫자 데이터를 엑셀로 가져오게 되면 엑셀 내장 함수를 통해 수식 계산을 수행한다.\n엑셀 사용자 본인 혹은 외부 사람을 위해 서식을 입히는 과정을 거쳐 비로소 완성된 스프레드쉬트가 된다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n회사\n손실\n날짜\n영향\n참사 개요\n\n\n\n\nMouchel\n£ 4.3백만\n’10.11월\nCEO 사임, 주가폭락\n연금펀드평가 £ 4.3백만 엑셀 오류\n\n\nC&C Group\n£ 9 백만\n’09.7월\n주가 15% 하락 등\n매출 3% 상승이 아니고 5% 하락, 엑셀 오류\n\n\nKing 펀드\n£ 130 백만\n’11.05월\n브래드 이미지 하락\n웨일즈 지방 NHS 지출 엑셀 오류\n\n\nAXA Rosenberg\n£ 150 백만\n’11.02월\n은폐, 벌금, 브래드 이미지 하락\n엑셀 오류를 감춰서 $242 백만 벌금\n\n\nJP Morgan Chase\n£ 250 백만\n’13.01월\n명성, 고객 신뢰도 저하\n바젤 II VaR 위험 평가 엑셀 오류\n\n\nMagellan 펀드\n£ 1.6 십억\n’95.01월\n투자자에게 약속한 배당금 지급 못함\n음수 부호 누락으로 자본이득 과대계상\n\n\n미연방준비위원회\n£ 2.5 십억\n’10.10월\n명확하지 않음\n리볼빙 카드 신용액 산출 과정에 엑셀 오류\n\n\n\n\n\n   \n\n\n\n\n\n스프레드쉬트 사용 이유\n\n항상 엑셀을 사용했다: 항상 데이터를 엑셀로 저장하고 분석해서 사용했다. 하지만, 버튼 하나로 데이터를 내보내기 쉽다.\n데이터베이스를 사용할 만큼 데이터가 충분하지 않다: 데이터가 작아서 데이터베이스를 사용할 이유를 찾지 못하지만, 사업이 커지고, 업무량이 늘어나면서 엑셀 작업량이 높아지고, 복잡성도 커지고, 엑셀 자체에서 처리되는 시간도 늘어난다.\n\n\n\n엑셀 → 다른 도구\n\n한번에 한사람만 작업이 가능하다.\n데이터 감사는 데이터베이스에서만 가능\n데이터베이스는 정형화된 작업흐름을 지원한다.\n데이터베이스는 엑셀보다 모형을 보다 잘 지원한다.\n데이터베이스로 보고서 생성이 수월하다.\n데이터베이스는 보안이 강력하고 규제하기 좋다.\n\n\n\nR은 시각화와 통계 데이터 전처리에 좋다.\n파이썬은 AI 기능 도입에 좋다.\nGit/GitHub 은 재현성과 버젼제어에 좋다.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n스터디 뽀개기 7월 (2016-07-30), 분석행(Train to data-analysis), 탈옥(jailbreakr) – 엑셀에서 탈출… 자유, “위기의 스프레드쉬트”, THE DIRTY DOZEN 12 MODELLING HORROR STORIES & SPREADSHEET DISASTERS"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#엑셀-선-넘네-aside",
+    "href": "chatGPT_kwangmyung_20230704.html#엑셀-선-넘네-aside",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "엑셀 선 넘네!!! {aside}",
+    "text": "엑셀 선 넘네!!! {aside}\n\n세미나엑셀 구성엑셀 참사6가지 이유복잡성\n\n\n\n\n\n\n\n스프레드쉬트는 데이터, 서식, 수식으로 구성된다.\n숫자 데이터를 엑셀로 가져오게 되면 엑셀 내장 함수를 통해 수식 계산을 수행한다.\n엑셀 사용자 본인 혹은 외부 사람을 위해 서식을 입히는 과정을 거쳐 비로소 완성된 스프레드쉬트가 된다.\n\n\n\n\n\n\n스프레이드쉬트 참사라고 쓰고 우리나라에서는 엑셀 참사라고 읽는다.\n\n\n\n\n\n\n\n\n\n\n\n회사\n손실\n날짜\n영향\n참사 개요\n\n\n\n\nMouchel\n£ 4.3백만\n’10.11월\nCEO 사임, 주가폭락\n연금펀드평가 £ 4.3백만 엑셀 오류\n\n\nC&C Group\n£ 9 백만\n’09.7월\n주가 15% 하락 등\n매출 3% 상승이 아니고 5% 하락, 엑셀 오류\n\n\nKing 펀드\n£ 130 백만\n’11.05월\n브래드 이미지 하락\n웨일즈 지방 NHS 지출 엑셀 오류\n\n\nAXA Rosenberg\n£ 150 백만\n’11.02월\n은폐, 벌금, 브래드 이미지 하락\n엑셀 오류를 감춰서 $242 백만 벌금\n\n\nJP Morgan Chase\n£ 250 백만\n’13.01월\n명성, 고객 신뢰도 저하\n바젤 II VaR 위험 평가 엑셀 오류\n\n\nMagellan 펀드\n£ 1.6 십억\n’95.01월\n투자자에게 약속한 배당금 지급 못함\n음수 부호 누락으로 자본이득 과대계상\n\n\n미연방준비위원회\n£ 2.5 십억\n’10.10월\n명확하지 않음\n리볼빙 카드 신용액 산출 과정에 엑셀 오류\n\n\n\n\n\n\n\n스프레드쉬트 사용 이유\n\n항상 엑셀을 사용했다: 항상 데이터를 엑셀로 저장하고 분석해서 사용했다. 하지만, 버튼 하나로 데이터를 내보내기 쉽다.\n데이터베이스를 사용할 만큼 데이터가 충분하지 않다: 데이터가 작아서 데이터베이스를 사용할 이유를 찾지 못하지만, 사업이 커지고, 업무량이 늘어나면서 엑셀 작업량이 높아지고, 복잡성도 커지고, 엑셀 자체에서 처리되는 시간도 늘어난다.\n\n\n\n한번에 한사람만 작업이 가능하다.\n데이터 감사는 데이터베이스에서만 가능\n데이터베이스는 정형화된 작업흐름을 지원한다.\n데이터베이스는 엑셀보다 모형을 보다 잘 지원한다.\n데이터베이스로 보고서 생성이 수월하다.\n데이터베이스는 보안이 강력하고 규제하기 좋다.\n\n\n\n\n  \n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n스터디 뽀개기 7월 (2016-07-30), 분석행(Train to data-analysis)\n\n탈옥(jailbreakr) – 엑셀에서 탈출… 자유\n\nTHE DIRTY DOZEN 12 MODELLING HORROR STORIES & SPREADSHEET DISASTERS\n\n데이터 과학, “위기의 스프레드쉬트”\n\n탈옥(jailbreakr) – 엑셀에서 탈출… 자유"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#광명시-유동인구kt",
+    "href": "chatGPT_kwangmyung_20230704.html#광명시-유동인구kt",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "광명시 유동인구(KT)",
+    "text": "광명시 유동인구(KT)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터출처: 경기도 데이터 분석센터 KT 유동인구 (2018년 1월 ~ 2022년 12월)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#광명시-유동인구kt-.smaller",
+    "href": "chatGPT_kwangmyung_20230704.html#광명시-유동인구kt-.smaller",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "광명시 유동인구(KT) {.smaller]}",
+    "text": "광명시 유동인구(KT) {.smaller]}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n데이터출처: KT 유동인구 (2018년 1월 ~ 2022년 12월)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#광명시-카드사용금액bc",
+    "href": "chatGPT_kwangmyung_20230704.html#광명시-카드사용금액bc",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "광명시 카드사용금액(BC)",
+    "text": "광명시 카드사용금액(BC)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n데이터출처: 경기도 데이터 분석센터 BC카드 사용내역 (2018년 1월 ~ 2022년 12월)"
+  },
+  {
+    "objectID": "chatGPT_kwangmyung_20230704.html#광명시-카드사용금액bc-작업중",
+    "href": "chatGPT_kwangmyung_20230704.html#광명시-카드사용금액bc-작업중",
+    "title": "공공데이터 이해, 데이터 활용역량",
+    "section": "광명시 카드사용금액(BC) → 작업중",
+    "text": "광명시 카드사용금액(BC) → 작업중\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터출처: 경기도 데이터 분석센터 BC카드 사용내역 (2018년 1월 ~ 2022년 12월)"
   }
 ]

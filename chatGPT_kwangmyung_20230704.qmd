@@ -30,13 +30,13 @@ editor_options:
 
 4.  공공데이터 사례: 선거 공공데이터
 
-5.  \[광명시\] : 어린이 교통사고
+5.  \[광명시\] : 어린이 교통사고, 유동인구, ~~카드사용~~
 
 6.  데이터 문해력
 
 7.  (챗GPT) 데이터 과학
 
-8.  오피스 &rarr; 챗GPT 디지털 **글쓰기**
+8.  오피스 → 챗GPT 디지털 **글쓰기**
 
 9.  질의응답
 
@@ -46,8 +46,7 @@ editor_options:
 
 ## 4차 산업혁명을 넘어서 ...
 
-:::{.panel-tabset}
-
+::: panel-tabset
 ### 생각의 진화
 
 ![](img/gg/ct-unplugged-4th-paradigm-korea.png)
@@ -59,17 +58,16 @@ editor_options:
 ### 챗GPT와 글쓰기
 
 ![](img/gseek-evolution.jpg)
-
 :::
 
 ## 디지털 뉴딜
 
-<iframe src="data/디지털_뉴딜.pdf" title="디지털 뉴딜" width="960" height="600"></iframe>
+<iframe src="data/디지털_뉴딜.pdf" title="디지털 뉴딜" width="960" height="600">
+
+</iframe>
 
 ::: aside
-
 디지털 뉴딜, 지역균형 문제 해결과 지역균형 발전방안 [@lee2020krila]
-
 :::
 
 {{< include slideshow/202307_kwangmyung/DT_metrics.qmd >}}
@@ -89,4 +87,5 @@ editor_options:
 {{< include slideshow/202307_kwangmyung/30-digital-writing.qmd >}}
 
 {{< include slideshow/202307_kwangmyung/reference.qmd >}}
+
 
