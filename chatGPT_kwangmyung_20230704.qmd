@@ -38,7 +38,7 @@ editor_options:
 
 8.  오피스 → 챗GPT 디지털 **글쓰기**
 
-9.  질의응답
+9.  질의응답!
 
 {{< include slideshow/202307_kwangmyung/00-who-am-i.qmd >}}
 
