@@ -1,3 +1,8 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 # 어린이 교통사고 <br> 광명시
 
 ## 보도자료 {.smaller}
@@ -59,9 +64,9 @@ library(tidyverse)
 library(leaflet)
 library(fontawesome)
 
-cctv_tbl <- read_rds("data/km_cctv_tbl.rds")
-km_sf <- read_rds("data/km_km_sf.rds")
-km_school <- read_rds("data/km_km_school.rds")
+cctv_tbl <- read_rds(glue::glue("{here::here()}/data/km_cctv_tbl.rds"))
+km_sf <- read_rds(glue::glue("{here::here()}/data/km_km_sf.rds"))
+km_school <- read_rds(glue::glue("{here::here()}/data/km_km_school.rds"))
 
 cctv_icons <- awesomeIconList(
   "다목적" = makeAwesomeIcon(
@@ -150,9 +155,9 @@ library(gt)
 library(gtExtras)
 library(readxl)
 
-accident_2016 <- read_excel("../map_challenge/data/km_accident_2014_2016.xlsx")
-accident_2019 <- read_excel("../map_challenge/data/km_accident_2017_2019.xlsx")
-accident_2022 <- read_excel("../map_challenge/data/km_accident_2020_2022.xlsx")
+accident_2016 <- read_excel(glue::glue("{here::here()}/data/km_accident_2014_2016.xlsx"))
+accident_2019 <- read_excel(glue::glue("{here::here()}/data/km_accident_2017_2019.xlsx"))
+accident_2022 <- read_excel(glue::glue("{here::here()}/data/km_accident_2020_2022.xlsx"))
 
 accident_tbl <- bind_rows(accident_2016, accident_2019) %>% 
   bind_rows(accident_2022)
@@ -191,7 +196,7 @@ accident_tbl %>%
 
 ```{r}
 
-accident_raw <- read_excel("../map_challenge/data/어린이_교통사고건수_시도_시_군_구__20230624195028.xlsx", sheet = "데이터",
+accident_raw <- read_excel(glue::glue("{here::here()}/data/어린이_교통사고건수_시도_시_군_구__20230624195028.xlsx"), sheet = "데이터",
            skip = 2)
 
 accident <- accident_raw %>% 

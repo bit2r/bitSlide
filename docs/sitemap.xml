@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-06-22T14:54:17.609Z</lastmod>
+    <lastmod>2023-06-29T14:57:53.457Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/chatGPT_sch_20230706.html</loc>
-    <lastmod>2023-06-22T14:45:14.208Z</lastmod>
+    <lastmod>2023-06-29T14:58:02.842Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/dream_talk_20230710.html</loc>
@@ -38,10 +38,54 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/chatGPT_kwangmyung_20230704.html</loc>
-    <lastmod>2023-06-29T03:11:57.023Z</lastmod>
+    <lastmod>2023-06-29T14:55:37.646Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/sen_20230627.html</loc>
-    <lastmod>2023-06-26T08:43:46.845Z</lastmod>
+    <lastmod>2023-06-29T13:47:02.198Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_kwangmyung/kwangmyung_school_zone.html</loc>
+    <lastmod>2023-06-29T14:57:22.291Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_kwangmyung/public_data_science.html</loc>
+    <lastmod>2023-06-29T14:56:55.507Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_sch/02-life-in-action.html</loc>
+    <lastmod>2023-06-29T14:57:00.370Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_sch/03-office-interface.html</loc>
+    <lastmod>2023-06-29T14:57:01.320Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_sch/04-user-in-practice.html</loc>
+    <lastmod>2023-06-29T14:57:05.905Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_sch/05-prompt-engineering.html</loc>
+    <lastmod>2023-06-29T14:57:10.047Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_sch/LLM-chatGPT.html</loc>
+    <lastmod>2023-06-29T14:57:11.376Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_sch/labor_of_division.html</loc>
+    <lastmod>2023-06-29T14:57:15.425Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_sch/limitation.html</loc>
+    <lastmod>2023-06-29T14:57:16.239Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_sch/publishing.html</loc>
+    <lastmod>2023-06-29T14:57:16.958Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202307_sch/setup.html</loc>
+    <lastmod>2023-06-29T14:57:17.453Z</lastmod>
   </url>
 </urlset>

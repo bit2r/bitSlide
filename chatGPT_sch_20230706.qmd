@@ -22,14 +22,43 @@ editor_options:
 
 ## 목차
 
-1.  강사소개 및 미트업 안내
+1.  강사소개 및 강의개요
 
-2.  질의응답
+2.  체험 삶의 현장
+
+3.  챗GPT 시대 오피스 전쟁
+
+4.  챗GPT 사용자 : Text-to-**X**
+
+5.  프롬프트 공학
+
+6.  AI와 사람 노동의 분업
+
+7.  문서화 프로그래밍과 출판
+
+8.  참고문헌
 
 {{< include slideshow/202307_sch/00-who-am-i.qmd >}}
 
 {{< include slideshow/202307_sch/seoul-r-meeup.qmd >}}
 
+{{< include slideshow/202307_sch/setup.qmd >}}
+
+{{< include slideshow/202307_sch/02-life-in-action.qmd >}}
+
+{{< include slideshow/202307_sch/03-office-interface.qmd >}}
+
+{{< include slideshow/202307_sch/04-user-in-practice.qmd >}}
+
+{{< include slideshow/202307_sch/05-prompt-engineering.qmd >}}
+
+{{< include slideshow/202307_sch/labor_of_division.qmd >}}
+
+{{< include slideshow/202307_sch/publishing.qmd >}}
+
 {{< include slideshow/202307_sch/reference.qmd >}}
 
+{{< include slideshow/202307_sch/LLM-chatGPT.qmd >}}
+
+{{< include slideshow/202307_sch/limitation.qmd >}}
 
