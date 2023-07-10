@@ -1,6 +1,19 @@
 # Internal slide decks
 
 
+- title: "후쿠시마 오염수 방류"
+  subtitle: "경기도 해안선 인접 구시군 영향"
+  author: "공익법인 한국 R 사용자회"
+  date: 2023-07-11
+  image: img/후쿠시마.jpg
+  path: fukushima_20230710.qmd
+  categories:
+    - "후쿠시마 원전사고"
+    - "오염수 방류"
+    - "경기도 해안선"
+    - "국가/지방 항구"
+    - "평택, 화성, 안산, 김포"
+
 - title: "챗GPT (데이터 과학) 디지털 글쓰기"
   subtitle: "부산광역시"
   author: "공익법인 한국 R 사용자회"
