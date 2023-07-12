@@ -1,0 +1,46 @@
+---
+title: "챗GPT 데이터 사이언스<br>문서화 프로그래밍"
+subtitle: "건국대 미래지식교육원 전문교육과정"
+author: "이광춘"
+institute: "공익법인 한국 R 사용자회"
+date: 2023-09-01
+format: 
+  insper-revealjs:
+    self-contained: false
+    code-overflow: wrap
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  강사소개 및 강의개요
+
+2.  챗GPT 데이터 사이언스 과정
+
+    -   교육기관 소개
+    -   과정 소개
+    -   과정 혜택
+    -   커리큘럼
+    -   수료증(건국대, 카펜트리)
+    -   과정 신청
+
+3.  서울 R 미트업
+
+{{< include slideshow/202309_konkuk/00-who-am-i.qmd >}}
+
+{{< include slideshow/202309_konkuk/curriculum.qmd >}}
+
+{{< include slideshow/202309_konkuk/seoul-r-meeup.qmd >}}
+
+
+

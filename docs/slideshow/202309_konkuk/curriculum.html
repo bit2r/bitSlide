@@ -1,0 +1,2366 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>발표자료 | 한국 R 사용자회 – curriculum</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../img/koRea_logo.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-229551680-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/koRea_logo.png" alt="Home" class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://r2bit.com" rel="" target="">
+ <span class="menu-text">한국 R 사용자회</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bit2r/slides" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub repo">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+
+<section id="챗gpt-데이터-사이언스-과정-소개" class="level1 page-columns page-full">
+<h1>챗GPT 데이터 사이언스 <br> 과정 소개</h1>
+<section id="교육기관-소개" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="교육기관-소개">교육기관 소개</h2>
+<div class="columns">
+<div class="column">
+<p><br></p>
+<p><a href="https://edulife2.konkuk.ac.kr/">건국대학교 미래지식교육원</a>은 평생학습사회를 선도하고 평등한 학습 기회를 제공하는 초우량 교육 파트너로서의 역할을 다하고 있습니다. 비전은 수요자 중심의 교육 서비스를 제공하여 교육의 책무를 완성하는 것입니다. 이를 통해 우리는 모든 학습자에게 필요한 지식과 기술을 제공하며, 학습자의 성공을 우리의 성공으로 간주합니다.</p>
+<p><br></p>
+<p>교육원 교육 목표는 합리적 의사 결정 과정과 문제 해결 능력을 갖춘 자기 주도적 학습자를 양성하는 것입니다. 학습자 중심의 우월성, 다양성, 협력성을 추구하며, 각 학습자가 개인적 역량을 향상시킬 수 있도록 도움을 제공합니다. 건국대학교 미래지식교육원에서 시작해 당신의 미래를 위한 능력을 키우세요.</p>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/konkuk/konkuk_about.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/konkuk/konkuk_about.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="과정-소개" class="level2 smaller page-columns page-full">
+<h2 class="smaller anchored" data-anchor-id="과정-소개">과정 소개</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/konkuk/konkuk_ai_01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/konkuk/konkuk_ai_01.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div><div class="column">
+<p>“통계, 데이터 분석, 기계학습, 딥러닝의 전문가에 대한 수요는 가속도를 붙여 성장하고 있습니다 - 이 트렌드는 챗GPT의 도입으로 더욱 확대되고 있습니다. 과학기술정보통신부와 미국 노동통계국의 보고서에 따르면, 2026년까지 각각 18,148개, 1,150만의 새로운 일자리가 예상되고 있습니다. <strong>챗GPT 데이터 과학</strong>은 이 복잡한 데이터 풍부한 세상에서 통찰력을 얻고 중요한 결정을 내릴 수 있는 능력을 부여하며, 그 결과, 다양한 산업 분야에서 조직에 가치를 제공합니다.</p>
+<p><br></p>
+<p><strong>건국대 전문교육과정</strong>은 데이터의 진정한 가치를 발굴하고, 챗GPT와 글로벌 <strong>소프트웨어 카펜트리</strong> 커뮤니티의 경험을 결합해 데이터 분석 기술을 혁신적으로 발전시키는 교육 프로그램으로 설계되었습니다. 데이터 과학 분야에 진출을 꿈꾸는 분, 기존 경력에 새로운 통찰력을 추가하고자 하는 분, 혹은 업무에 독특한 가치를 부가하고자 하는 분이라면, 이 과정을 통해 최첨단 데이터 활용 기법을 배울 수 있습니다.”</p>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="https://www.kdata.or.kr/kr/board/info_01/boardView.do?pageIndex=1&amp;bbsIdx=33253&amp;searchCondition=all&amp;searchKeyword=">한국데이터 산업진흥원, “2021 데이터산업현황조사 보고서”</a></p>
+</div></div></section>
+<section id="과정-혜택" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="과정-혜택">과정 혜택</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/konkuk/konkuk_ai_02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/konkuk/konkuk_ai_02.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ol type="1">
+<li><p>강의는 전문가로서의 데이터 과학 경력 20년을 넘기는 한국 R 사용자회 인력으로, Software Carpentry와 Posit/RStudio Tidyverse의 글로벌 인증 강사 자격을 보유하고 있으며 건국대, 연세대, 성균관대, 서울과학종합대학원, 명지대, 제주대, 홍익대 등 다양한 데이터 과학 강의를 진행했습니다.</p></li>
+<li><p>챗GPT를 활용한 데이터 과학 과정을 통해 최신 인공지능 기술을 이해하고 그 적용 방법을 배울 수 있을 뿐만 아니라, 수료자는 건국대학교의 전문 과정과 Software Carpentry에서 인증하는 수료증을 받게 됩니다.</p></li>
+<li><p>챗GPT 데이터 과학 과정에서 배운 이론과 개념들을 본인 및 팀 프로젝트에 직접 적용해보는 경험을 통한 실질적인 멘토링을 받게 됩니다.</p></li>
+<li><p>이론 강의는 최소화하여 실습 중심의 교육을 제공하며, 팀 프로젝트를 진행하게 되어 과정을 마칠 때에는 본인의 포트폴리오 웹사이트를 구축할 수 있게 됩니다.</p></li>
+<li><p>또한, 이 과정에 참여하는 수강생들은 서울 R 사용자 모임인 ’서울 R 미트업’에도 참여할 기회를 얻게 되어, 같은 관심사를 가진 사람들과 네트워킹을 하며 서로의 경험과 지식을 공유하는 풍요로운 경험을 쌓을 수 있습니다.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="커리큘럼" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="커리큘럼">커리큘럼</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'tibble' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dplyr' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.1     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'gt' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtExtras)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>extrafont<span class="sc">::</span><span class="fu">loadfonts</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumGothic
+Registering font with R using windowsFonts(): NanumGothicExtraBold
+Registering font with R using windowsFonts(): NanumGothic Light
+Registering font with R using windowsFonts(): MaruBuri Bold
+Registering font with R using windowsFonts(): MAaruBuri ExtraLight
+Registering font with R using windowsFonts(): MaruBuri Light
+Registering font with R using windowsFonts(): MaruBuri Regular
+Registering font with R using windowsFonts(): MaruBuri SemiBold
+Registering font with R using windowsFonts(): Agency FB
+Registering font with R using windowsFonts(): Algerian
+Registering font with R using windowsFonts(): AlternateGothic2 BT
+Registering font with R using windowsFonts(): Ami R
+Registering font with R using windowsFonts(): Arial Black
+Registering font with R using windowsFonts(): Arial
+Registering font with R using windowsFonts(): Arial Narrow
+Registering font with R using windowsFonts(): Arial Rounded MT Bold
+Registering font with R using windowsFonts(): Bahnschrift
+Registering font with R using windowsFonts(): Baskerville Old Face
+Registering font with R using windowsFonts(): Bauhaus 93
+Registering font with R using windowsFonts(): Bell MT
+Registering font with R using windowsFonts(): Berlin Sans FB
+Registering font with R using windowsFonts(): Berlin Sans FB Demi
+Registering font with R using windowsFonts(): Bernard MT Condensed
+Registering font with R using windowsFonts(): Blackadder ITC
+Registering font with R using windowsFonts(): Bodoni MT
+Registering font with R using windowsFonts(): Bodoni MT Black
+Registering font with R using windowsFonts(): Bodoni MT Condensed
+Registering font with R using windowsFonts(): Bodoni MT Poster Compressed
+Registering font with R using windowsFonts(): Book Antiqua
+Registering font with R using windowsFonts(): Bookman Old Style
+Registering font with R using windowsFonts(): Bookshelf Symbol 7
+Registering font with R using windowsFonts(): Bradley Hand ITC
+Registering font with R using windowsFonts(): Britannic Bold
+Registering font with R using windowsFonts(): Broadway
+Registering font with R using windowsFonts(): Brush Script MT
+Registering font with R using windowsFonts(): Calibri
+Registering font with R using windowsFonts(): Calibri Light
+Registering font with R using windowsFonts(): Californian FB
+Registering font with R using windowsFonts(): Calisto MT
+Registering font with R using windowsFonts(): Cambria
+Registering font with R using windowsFonts(): Candara
+Registering font with R using windowsFonts(): Candara Light
+Registering font with R using windowsFonts(): Cascadia Code
+Registering font with R using windowsFonts(): Cascadia Mono
+Registering font with R using windowsFonts(): Castellar
+Registering font with R using windowsFonts(): Centaur
+Registering font with R using windowsFonts(): Century
+Registering font with R using windowsFonts(): Century Gothic
+Registering font with R using windowsFonts(): Century Schoolbook
+Registering font with R using windowsFonts(): Chiller
+Registering font with R using windowsFonts(): Colonna MT
+Registering font with R using windowsFonts(): Comic Sans MS
+Registering font with R using windowsFonts(): Consolas
+Registering font with R using windowsFonts(): Constantia
+Registering font with R using windowsFonts(): Cooper Black
+Registering font with R using windowsFonts(): Copperplate Gothic Bold
+Registering font with R using windowsFonts(): Copperplate Gothic Light
+Registering font with R using windowsFonts(): Corbel
+Registering font with R using windowsFonts(): Corbel Light
+Registering font with R using windowsFonts(): Courier New
+Registering font with R using windowsFonts(): Curlz MT
+Registering font with R using windowsFonts(): D2Coding ligature
+Registering font with R using windowsFonts(): Dubai
+Registering font with R using windowsFonts(): Dubai Light
+Registering font with R using windowsFonts(): Dubai Medium
+Registering font with R using windowsFonts(): Ebrima
+Registering font with R using windowsFonts(): Edwardian Script ITC
+Registering font with R using windowsFonts(): Elephant
+Registering font with R using windowsFonts(): Engravers MT
+Registering font with R using windowsFonts(): Eras Bold ITC
+Registering font with R using windowsFonts(): Eras Demi ITC
+Registering font with R using windowsFonts(): Eras Light ITC
+Registering font with R using windowsFonts(): Eras Medium ITC
+Registering font with R using windowsFonts(): Felix Titling
+Registering font with R using windowsFonts(): Footlight MT Light
+Registering font with R using windowsFonts(): Forte
+Registering font with R using windowsFonts(): Franklin Gothic Book
+Registering font with R using windowsFonts(): Franklin Gothic Demi
+Registering font with R using windowsFonts(): Franklin Gothic Demi Cond
+Registering font with R using windowsFonts(): Franklin Gothic Heavy
+Registering font with R using windowsFonts(): Franklin Gothic Medium
+Registering font with R using windowsFonts(): Franklin Gothic Medium Cond
+Registering font with R using windowsFonts(): Freestyle Script
+Registering font with R using windowsFonts(): French Script MT
+Registering font with R using windowsFonts(): Gabriola
+Registering font with R using windowsFonts(): Gadugi
+Registering font with R using windowsFonts(): Garamond
+Registering font with R using windowsFonts(): Georgia
+Registering font with R using windowsFonts(): Gigi
+Registering font with R using windowsFonts(): Gill Sans Ultra Bold
+Registering font with R using windowsFonts(): Gill Sans Ultra Bold Condensed
+Registering font with R using windowsFonts(): Gill Sans MT
+Registering font with R using windowsFonts(): Gill Sans MT Condensed
+Registering font with R using windowsFonts(): Gill Sans MT Ext Condensed Bold
+Registering font with R using windowsFonts(): Gloucester MT Extra Condensed
+Registering font with R using windowsFonts(): Goudy Old Style
+Registering font with R using windowsFonts(): Goudy Stout
+Registering font with R using windowsFonts(): HYGraphic-Medium
+Registering font with R using windowsFonts(): HYGungSo-Bold
+Registering font with R using windowsFonts(): HYGothic-Extra
+Registering font with R using windowsFonts(): HYGothic-Medium
+Registering font with R using windowsFonts(): HYHeadLine-Medium
+Registering font with R using windowsFonts(): HYMyeongJo-Extra
+Registering font with R using windowsFonts(): HYSinMyeongJo-Medium
+Registering font with R using windowsFonts(): HYPMokGak-Bold
+Registering font with R using windowsFonts(): HYPost-Light
+Registering font with R using windowsFonts(): HYPost-Medium
+Registering font with R using windowsFonts(): HYShortSamul-Medium
+Registering font with R using windowsFonts(): Haettenschweiler
+Registering font with R using windowsFonts(): Harlow Solid Italic
+Registering font with R using windowsFonts(): Harrington
+Registering font with R using windowsFonts(): Headline R
+Registering font with R using windowsFonts(): High Tower Text
+Registering font with R using windowsFonts(): HoloLens MDL2 Assets
+Registering font with R using windowsFonts(): Impact
+Registering font with R using windowsFonts(): Imprint MT Shadow
+Registering font with R using windowsFonts(): Informal Roman
+Registering font with R using windowsFonts(): Ink Free
+Registering font with R using windowsFonts(): Javanese Text
+Registering font with R using windowsFonts(): Jokerman
+Registering font with R using windowsFonts(): Juice ITC
+Registering font with R using windowsFonts(): Kristen ITC
+Registering font with R using windowsFonts(): Kunstler Script
+Registering font with R using windowsFonts(): Wide Latin
+Registering font with R using windowsFonts(): Leelawadee
+Registering font with R using windowsFonts(): Leelawadee UI
+Registering font with R using windowsFonts(): Leelawadee UI Semilight
+Registering font with R using windowsFonts(): Lucida Bright
+Registering font with R using windowsFonts(): Lucida Calligraphy
+Registering font with R using windowsFonts(): Lucida Console
+Registering font with R using windowsFonts(): Lucida Fax
+Registering font with R using windowsFonts(): Lucida Handwriting
+Registering font with R using windowsFonts(): Lucida Sans
+Registering font with R using windowsFonts(): Lucida Sans Typewriter
+Registering font with R using windowsFonts(): Lucida Sans Unicode
+Registering font with R using windowsFonts(): Magic R
+Registering font with R using windowsFonts(): Magneto
+Registering font with R using windowsFonts(): Maiandra GD
+Registering font with R using windowsFonts(): Malgun Gothic
+Registering font with R using windowsFonts(): Malgun Gothic Semilight
+Registering font with R using windowsFonts(): Marlett
+Registering font with R using windowsFonts(): Matura MT Script Capitals
+Registering font with R using windowsFonts(): Microsoft Himalaya
+Registering font with R using windowsFonts(): Microsoft Yi Baiti
+Registering font with R using windowsFonts(): Microsoft New Tai Lue
+Registering font with R using windowsFonts(): Microsoft PhagsPa
+Registering font with R using windowsFonts(): Microsoft Sans Serif
+Registering font with R using windowsFonts(): Microsoft Tai Le
+Registering font with R using windowsFonts(): Microsoft Uighur
+Registering font with R using windowsFonts(): Mistral
+Registering font with R using windowsFonts(): Modern No. 20
+Registering font with R using windowsFonts(): Mongolian Baiti
+Registering font with R using windowsFonts(): Monotype Corsiva
+Registering font with R using windowsFonts(): MS Outlook
+Registering font with R using windowsFonts(): MS Reference Sans Serif
+Registering font with R using windowsFonts(): MS Reference Specialty
+Registering font with R using windowsFonts(): MT Extra
+Registering font with R using windowsFonts(): MV Boli
+Registering font with R using windowsFonts(): Myanmar Text
+Registering font with R using windowsFonts(): NanumBarunGothic
+Registering font with R using windowsFonts(): NanumBarunGothic Light
+Registering font with R using windowsFonts(): NanumBarunGothic UltraLight
+Registering font with R using windowsFonts(): NanumBarunpen
+Registering font with R using windowsFonts(): NanumBarunpen Bold
+Registering font with R using windowsFonts(): New Gulim
+Registering font with R using windowsFonts(): Niagara Engraved
+Registering font with R using windowsFonts(): Niagara Solid
+Registering font with R using windowsFonts(): Nirmala UI
+Registering font with R using windowsFonts(): Nirmala UI Semilight
+Registering font with R using windowsFonts(): OCR A Extended
+Registering font with R using windowsFonts(): Old English Text MT
+Registering font with R using windowsFonts(): Onyx
+Registering font with R using windowsFonts(): Palace Script MT
+Registering font with R using windowsFonts(): Palatino Linotype
+Registering font with R using windowsFonts(): Papyrus
+Registering font with R using windowsFonts(): Parchment
+Registering font with R using windowsFonts(): Perpetua
+Registering font with R using windowsFonts(): Perpetua Titling MT
+Registering font with R using windowsFonts(): Playbill
+Registering font with R using windowsFonts(): Poor Richard
+Registering font with R using windowsFonts(): Pristina
+Registering font with R using windowsFonts(): Pyunji R
+Registering font with R using windowsFonts(): Rage Italic
+Registering font with R using windowsFonts(): Ravie
+Registering font with R using windowsFonts(): Rockwell
+Registering font with R using windowsFonts(): Rockwell Condensed
+Registering font with R using windowsFonts(): Rockwell Extra Bold
+Registering font with R using windowsFonts(): Script MT Bold
+Registering font with R using windowsFonts(): Segoe MDL2 Assets
+Registering font with R using windowsFonts(): Segoe Print
+Registering font with R using windowsFonts(): Segoe Script
+Registering font with R using windowsFonts(): Segoe UI
+Registering font with R using windowsFonts(): Segoe UI Light
+Registering font with R using windowsFonts(): Segoe UI Semibold
+Registering font with R using windowsFonts(): Segoe UI Semilight
+Registering font with R using windowsFonts(): Segoe UI Black
+Registering font with R using windowsFonts(): Segoe UI Emoji
+Registering font with R using windowsFonts(): Segoe UI Historic
+Registering font with R using windowsFonts(): Segoe UI Symbol
+Registering font with R using windowsFonts(): Showcard Gothic
+Registering font with R using windowsFonts(): SimSun-ExtB
+Registering font with R using windowsFonts(): Snap ITC
+Registering font with R using windowsFonts(): Stencil
+Registering font with R using windowsFonts(): Sylfaen
+Registering font with R using windowsFonts(): Symbol
+Registering font with R using windowsFonts(): Tahoma
+Registering font with R using windowsFonts(): Tempus Sans ITC
+Registering font with R using windowsFonts(): Times New Roman
+Registering font with R using windowsFonts(): Trebuchet MS
+Registering font with R using windowsFonts(): Tw Cen MT
+Registering font with R using windowsFonts(): Tw Cen MT Condensed
+Registering font with R using windowsFonts(): Tw Cen MT Condensed Extra Bold
+Registering font with R using windowsFonts(): Verdana
+Registering font with R using windowsFonts(): Viner Hand ITC
+Registering font with R using windowsFonts(): Vivaldi
+Registering font with R using windowsFonts(): Vladimir Script
+Registering font with R using windowsFonts(): Webdings
+Registering font with R using windowsFonts(): Wingdings
+Registering font with R using windowsFonts(): Wingdings 2
+Registering font with R using windowsFonts(): Wingdings 3
+Registering font with R using windowsFonts(): Yet R
+Registering font with R using pdfFont(): Agency FB
+Registering font with R using pdfFont(): Algerian
+Registering font with R using pdfFont(): AlternateGothic2 BT
+Registering font with R using pdfFont(): Ami R
+Registering font with R using pdfFont(): Arial
+Registering font with R using pdfFont(): Arial Black
+Registering font with R using pdfFont(): Arial Narrow
+Registering font with R using pdfFont(): Arial Rounded MT Bold
+Registering font with R using pdfFont(): Bahnschrift
+Registering font with R using pdfFont(): Baskerville Old Face
+Registering font with R using pdfFont(): Bauhaus 93
+Registering font with R using pdfFont(): Bell MT
+Registering font with R using pdfFont(): Berlin Sans FB
+No regular (non-bold, non-italic) version of Berlin Sans FB Demi. Skipping setup for this font.
+Registering font with R using pdfFont(): Bernard MT Condensed
+Registering font with R using pdfFont(): Blackadder ITC
+Registering font with R using pdfFont(): Bodoni MT
+Registering font with R using pdfFont(): Bodoni MT Black
+Registering font with R using pdfFont(): Bodoni MT Condensed
+Registering font with R using pdfFont(): Bodoni MT Poster Compressed
+Registering font with R using pdfFont(): Book Antiqua
+Registering font with R using pdfFont(): Bookman Old Style
+Registering font with R using pdfFont(): Bookshelf Symbol 7
+Registering font with R using pdfFont(): Bradley Hand ITC
+Registering font with R using pdfFont(): Britannic Bold
+Registering font with R using pdfFont(): Broadway
+No regular (non-bold, non-italic) version of Brush Script MT. Skipping setup for this font.
+Registering font with R using pdfFont(): Calibri
+Registering font with R using pdfFont(): Calibri Light
+Registering font with R using pdfFont(): Californian FB
+Registering font with R using pdfFont(): Calisto MT
+No regular (non-bold, non-italic) version of Cambria. Skipping setup for this font.
+Registering font with R using pdfFont(): Candara
+Registering font with R using pdfFont(): Candara Light
+Registering font with R using pdfFont(): Cascadia Code
+Registering font with R using pdfFont(): Cascadia Mono
+Registering font with R using pdfFont(): Castellar
+Registering font with R using pdfFont(): Centaur
+Registering font with R using pdfFont(): Century
+Registering font with R using pdfFont(): Century Gothic
+Registering font with R using pdfFont(): Century Schoolbook
+Registering font with R using pdfFont(): Chiller
+Registering font with R using pdfFont(): Colonna MT
+Registering font with R using pdfFont(): Comic Sans MS
+Registering font with R using pdfFont(): Consolas
+Registering font with R using pdfFont(): Constantia
+Registering font with R using pdfFont(): Cooper Black
+Registering font with R using pdfFont(): Copperplate Gothic Bold
+Registering font with R using pdfFont(): Copperplate Gothic Light
+Registering font with R using pdfFont(): Corbel
+Registering font with R using pdfFont(): Corbel Light
+Registering font with R using pdfFont(): Courier New
+Registering font with R using pdfFont(): Curlz MT
+Registering font with R using pdfFont(): D2Coding ligature
+Registering font with R using pdfFont(): Dubai
+Registering font with R using pdfFont(): Dubai Light
+Registering font with R using pdfFont(): Dubai Medium
+Registering font with R using pdfFont(): Ebrima
+Registering font with R using pdfFont(): Edwardian Script ITC
+Registering font with R using pdfFont(): Elephant
+Registering font with R using pdfFont(): Engravers MT
+Registering font with R using pdfFont(): Eras Bold ITC
+Registering font with R using pdfFont(): Eras Demi ITC
+Registering font with R using pdfFont(): Eras Light ITC
+Registering font with R using pdfFont(): Eras Medium ITC
+Registering font with R using pdfFont(): Felix Titling
+Registering font with R using pdfFont(): Footlight MT Light
+Registering font with R using pdfFont(): Forte
+Registering font with R using pdfFont(): Franklin Gothic Book
+Registering font with R using pdfFont(): Franklin Gothic Demi
+Registering font with R using pdfFont(): Franklin Gothic Demi Cond
+Registering font with R using pdfFont(): Franklin Gothic Heavy
+Registering font with R using pdfFont(): Franklin Gothic Medium
+Registering font with R using pdfFont(): Franklin Gothic Medium Cond
+Registering font with R using pdfFont(): Freestyle Script
+Registering font with R using pdfFont(): French Script MT
+Registering font with R using pdfFont(): Gabriola
+Registering font with R using pdfFont(): Gadugi
+Registering font with R using pdfFont(): Garamond
+Registering font with R using pdfFont(): Georgia
+Registering font with R using pdfFont(): Gigi
+Registering font with R using pdfFont(): Gill Sans MT
+Registering font with R using pdfFont(): Gill Sans MT Condensed
+Registering font with R using pdfFont(): Gill Sans MT Ext Condensed Bold
+Registering font with R using pdfFont(): Gill Sans Ultra Bold
+Registering font with R using pdfFont(): Gill Sans Ultra Bold Condensed
+Registering font with R using pdfFont(): Gloucester MT Extra Condensed
+Registering font with R using pdfFont(): Goudy Old Style
+Registering font with R using pdfFont(): Goudy Stout
+Registering font with R using pdfFont(): Haettenschweiler
+No regular (non-bold, non-italic) version of Harlow Solid Italic. Skipping setup for this font.
+Registering font with R using pdfFont(): Harrington
+Registering font with R using pdfFont(): Headline R
+Registering font with R using pdfFont(): High Tower Text
+Registering font with R using pdfFont(): HoloLens MDL2 Assets
+Registering font with R using pdfFont(): HYGothic-Extra
+Registering font with R using pdfFont(): HYGothic-Medium
+Registering font with R using pdfFont(): HYGraphic-Medium
+Registering font with R using pdfFont(): HYGungSo-Bold
+Registering font with R using pdfFont(): HYHeadLine-Medium
+Registering font with R using pdfFont(): HYMyeongJo-Extra
+Registering font with R using pdfFont(): HYPMokGak-Bold
+Registering font with R using pdfFont(): HYPost-Light
+Registering font with R using pdfFont(): HYPost-Medium
+Registering font with R using pdfFont(): HYShortSamul-Medium
+Registering font with R using pdfFont(): HYSinMyeongJo-Medium
+Registering font with R using pdfFont(): Impact
+Registering font with R using pdfFont(): Imprint MT Shadow
+Registering font with R using pdfFont(): Informal Roman
+Registering font with R using pdfFont(): Ink Free
+Registering font with R using pdfFont(): Javanese Text
+Registering font with R using pdfFont(): Jokerman
+Registering font with R using pdfFont(): Juice ITC
+Registering font with R using pdfFont(): Kristen ITC
+Registering font with R using pdfFont(): Kunstler Script
+Registering font with R using pdfFont(): Leelawadee
+Registering font with R using pdfFont(): Leelawadee UI
+Registering font with R using pdfFont(): Leelawadee UI Semilight
+More than one version of regular/bold/italic found for Lucida Bright. Skipping setup for this font.
+No regular (non-bold, non-italic) version of Lucida Calligraphy. Skipping setup for this font.
+Registering font with R using pdfFont(): Lucida Console
+More than one version of regular/bold/italic found for Lucida Fax. Skipping setup for this font.
+No regular (non-bold, non-italic) version of Lucida Handwriting. Skipping setup for this font.
+More than one version of regular/bold/italic found for Lucida Sans. Skipping setup for this font.
+Registering font with R using pdfFont(): Lucida Sans Typewriter
+Registering font with R using pdfFont(): Lucida Sans Unicode
+More than one version of regular/bold/italic found for MAaruBuri ExtraLight. Skipping setup for this font.
+Registering font with R using pdfFont(): Magic R
+No regular (non-bold, non-italic) version of Magneto. Skipping setup for this font.
+Registering font with R using pdfFont(): Maiandra GD
+Registering font with R using pdfFont(): Malgun Gothic
+Registering font with R using pdfFont(): Malgun Gothic Semilight
+Registering font with R using pdfFont(): Marlett
+More than one version of regular/bold/italic found for MaruBuri Bold. Skipping setup for this font.
+More than one version of regular/bold/italic found for MaruBuri Light. Skipping setup for this font.
+More than one version of regular/bold/italic found for MaruBuri Regular. Skipping setup for this font.
+More than one version of regular/bold/italic found for MaruBuri SemiBold. Skipping setup for this font.
+Registering font with R using pdfFont(): Matura MT Script Capitals
+Registering font with R using pdfFont(): Microsoft Himalaya
+Registering font with R using pdfFont(): Microsoft New Tai Lue
+Registering font with R using pdfFont(): Microsoft PhagsPa
+Registering font with R using pdfFont(): Microsoft Sans Serif
+Registering font with R using pdfFont(): Microsoft Tai Le
+Registering font with R using pdfFont(): Microsoft Uighur
+Registering font with R using pdfFont(): Microsoft Yi Baiti
+Registering font with R using pdfFont(): Mistral
+Registering font with R using pdfFont(): Modern No. 20
+Registering font with R using pdfFont(): Mongolian Baiti
+Registering font with R using pdfFont(): Monotype Corsiva
+Registering font with R using pdfFont(): MS Outlook
+Registering font with R using pdfFont(): MS Reference Sans Serif
+Registering font with R using pdfFont(): MS Reference Specialty
+Registering font with R using pdfFont(): MT Extra
+Registering font with R using pdfFont(): MV Boli
+Registering font with R using pdfFont(): Myanmar Text
+Registering font with R using pdfFont(): NanumBarunGothic
+Registering font with R using pdfFont(): NanumBarunGothic Light
+Registering font with R using pdfFont(): NanumBarunGothic UltraLight
+Registering font with R using pdfFont(): NanumBarunpen
+No regular (non-bold, non-italic) version of NanumBarunpen Bold. Skipping setup for this font.
+Registering font with R using pdfFont(): NanumGothic
+Registering font with R using pdfFont(): NanumGothic Light
+Registering font with R using pdfFont(): NanumGothicExtraBold
+Registering font with R using pdfFont(): New Gulim
+Registering font with R using pdfFont(): Niagara Engraved
+Registering font with R using pdfFont(): Niagara Solid
+Registering font with R using pdfFont(): Nirmala UI
+Registering font with R using pdfFont(): Nirmala UI Semilight
+Registering font with R using pdfFont(): OCR A Extended
+Registering font with R using pdfFont(): Old English Text MT
+Registering font with R using pdfFont(): Onyx
+Registering font with R using pdfFont(): Palace Script MT
+Registering font with R using pdfFont(): Palatino Linotype
+Registering font with R using pdfFont(): Papyrus
+Registering font with R using pdfFont(): Parchment
+Registering font with R using pdfFont(): Perpetua
+Registering font with R using pdfFont(): Perpetua Titling MT
+Registering font with R using pdfFont(): Playbill
+Registering font with R using pdfFont(): Poor Richard
+Registering font with R using pdfFont(): Pristina
+Registering font with R using pdfFont(): Pyunji R
+No regular (non-bold, non-italic) version of Rage Italic. Skipping setup for this font.
+Registering font with R using pdfFont(): Ravie
+Registering font with R using pdfFont(): Rockwell
+Registering font with R using pdfFont(): Rockwell Condensed
+Registering font with R using pdfFont(): Rockwell Extra Bold
+Registering font with R using pdfFont(): Script MT Bold
+Registering font with R using pdfFont(): Segoe MDL2 Assets
+Registering font with R using pdfFont(): Segoe Print
+Registering font with R using pdfFont(): Segoe Script
+Registering font with R using pdfFont(): Segoe UI
+Registering font with R using pdfFont(): Segoe UI Black
+Registering font with R using pdfFont(): Segoe UI Emoji
+Registering font with R using pdfFont(): Segoe UI Historic
+Registering font with R using pdfFont(): Segoe UI Light
+Registering font with R using pdfFont(): Segoe UI Semibold
+Registering font with R using pdfFont(): Segoe UI Semilight
+Registering font with R using pdfFont(): Segoe UI Symbol
+Registering font with R using pdfFont(): Showcard Gothic
+Registering font with R using pdfFont(): SimSun-ExtB
+Registering font with R using pdfFont(): Snap ITC
+Registering font with R using pdfFont(): Stencil
+Registering font with R using pdfFont(): Sylfaen
+Registering font with R using pdfFont(): Symbol
+Registering font with R using pdfFont(): Tahoma
+Registering font with R using pdfFont(): Tempus Sans ITC
+Registering font with R using pdfFont(): Times New Roman
+Registering font with R using pdfFont(): Trebuchet MS
+Registering font with R using pdfFont(): Tw Cen MT
+Registering font with R using pdfFont(): Tw Cen MT Condensed
+Registering font with R using pdfFont(): Tw Cen MT Condensed Extra Bold
+Registering font with R using pdfFont(): Verdana
+Registering font with R using pdfFont(): Viner Hand ITC
+No regular (non-bold, non-italic) version of Vivaldi. Skipping setup for this font.
+Registering font with R using pdfFont(): Vladimir Script
+Registering font with R using pdfFont(): Webdings
+Registering font with R using pdfFont(): Wide Latin
+Registering font with R using pdfFont(): Wingdings
+Registering font with R using pdfFont(): Wingdings 2
+Registering font with R using pdfFont(): Wingdings 3
+Registering font with R using pdfFont(): Yet R
+Registering font with R using postscriptFont(): Agency FB
+Registering font with R using postscriptFont(): Algerian
+Registering font with R using postscriptFont(): AlternateGothic2 BT
+Registering font with R using postscriptFont(): Ami R
+Registering font with R using postscriptFont(): Arial
+Registering font with R using postscriptFont(): Arial Black
+Registering font with R using postscriptFont(): Arial Narrow
+Registering font with R using postscriptFont(): Arial Rounded MT Bold
+Registering font with R using postscriptFont(): Bahnschrift
+Registering font with R using postscriptFont(): Baskerville Old Face
+Registering font with R using postscriptFont(): Bauhaus 93
+Registering font with R using postscriptFont(): Bell MT
+Registering font with R using postscriptFont(): Berlin Sans FB
+No regular (non-bold, non-italic) version of Berlin Sans FB Demi. Skipping setup for this font.
+Registering font with R using postscriptFont(): Bernard MT Condensed
+Registering font with R using postscriptFont(): Blackadder ITC
+Registering font with R using postscriptFont(): Bodoni MT
+Registering font with R using postscriptFont(): Bodoni MT Black
+Registering font with R using postscriptFont(): Bodoni MT Condensed
+Registering font with R using postscriptFont(): Bodoni MT Poster Compressed
+Registering font with R using postscriptFont(): Book Antiqua
+Registering font with R using postscriptFont(): Bookman Old Style
+Registering font with R using postscriptFont(): Bookshelf Symbol 7
+Registering font with R using postscriptFont(): Bradley Hand ITC
+Registering font with R using postscriptFont(): Britannic Bold
+Registering font with R using postscriptFont(): Broadway
+No regular (non-bold, non-italic) version of Brush Script MT. Skipping setup for this font.
+Registering font with R using postscriptFont(): Calibri
+Registering font with R using postscriptFont(): Calibri Light
+Registering font with R using postscriptFont(): Californian FB
+Registering font with R using postscriptFont(): Calisto MT
+No regular (non-bold, non-italic) version of Cambria. Skipping setup for this font.
+Registering font with R using postscriptFont(): Candara
+Registering font with R using postscriptFont(): Candara Light
+Registering font with R using postscriptFont(): Cascadia Code
+Registering font with R using postscriptFont(): Cascadia Mono
+Registering font with R using postscriptFont(): Castellar
+Registering font with R using postscriptFont(): Centaur
+Registering font with R using postscriptFont(): Century
+Registering font with R using postscriptFont(): Century Gothic
+Registering font with R using postscriptFont(): Century Schoolbook
+Registering font with R using postscriptFont(): Chiller
+Registering font with R using postscriptFont(): Colonna MT
+Registering font with R using postscriptFont(): Comic Sans MS
+Registering font with R using postscriptFont(): Consolas
+Registering font with R using postscriptFont(): Constantia
+Registering font with R using postscriptFont(): Cooper Black
+Registering font with R using postscriptFont(): Copperplate Gothic Bold
+Registering font with R using postscriptFont(): Copperplate Gothic Light
+Registering font with R using postscriptFont(): Corbel
+Registering font with R using postscriptFont(): Corbel Light
+Registering font with R using postscriptFont(): Courier New
+Registering font with R using postscriptFont(): Curlz MT
+Registering font with R using postscriptFont(): D2Coding ligature
+Registering font with R using postscriptFont(): Dubai
+Registering font with R using postscriptFont(): Dubai Light
+Registering font with R using postscriptFont(): Dubai Medium
+Registering font with R using postscriptFont(): Ebrima
+Registering font with R using postscriptFont(): Edwardian Script ITC
+Registering font with R using postscriptFont(): Elephant
+Registering font with R using postscriptFont(): Engravers MT
+Registering font with R using postscriptFont(): Eras Bold ITC
+Registering font with R using postscriptFont(): Eras Demi ITC
+Registering font with R using postscriptFont(): Eras Light ITC
+Registering font with R using postscriptFont(): Eras Medium ITC
+Registering font with R using postscriptFont(): Felix Titling
+Registering font with R using postscriptFont(): Footlight MT Light
+Registering font with R using postscriptFont(): Forte
+Registering font with R using postscriptFont(): Franklin Gothic Book
+Registering font with R using postscriptFont(): Franklin Gothic Demi
+Registering font with R using postscriptFont(): Franklin Gothic Demi Cond
+Registering font with R using postscriptFont(): Franklin Gothic Heavy
+Registering font with R using postscriptFont(): Franklin Gothic Medium
+Registering font with R using postscriptFont(): Franklin Gothic Medium Cond
+Registering font with R using postscriptFont(): Freestyle Script
+Registering font with R using postscriptFont(): French Script MT
+Registering font with R using postscriptFont(): Gabriola
+Registering font with R using postscriptFont(): Gadugi
+Registering font with R using postscriptFont(): Garamond
+Registering font with R using postscriptFont(): Georgia
+Registering font with R using postscriptFont(): Gigi
+Registering font with R using postscriptFont(): Gill Sans MT
+Registering font with R using postscriptFont(): Gill Sans MT Condensed
+Registering font with R using postscriptFont(): Gill Sans MT Ext Condensed Bold
+Registering font with R using postscriptFont(): Gill Sans Ultra Bold
+Registering font with R using postscriptFont(): Gill Sans Ultra Bold Condensed
+Registering font with R using postscriptFont(): Gloucester MT Extra Condensed
+Registering font with R using postscriptFont(): Goudy Old Style
+Registering font with R using postscriptFont(): Goudy Stout
+Registering font with R using postscriptFont(): Haettenschweiler
+No regular (non-bold, non-italic) version of Harlow Solid Italic. Skipping setup for this font.
+Registering font with R using postscriptFont(): Harrington
+Registering font with R using postscriptFont(): Headline R
+Registering font with R using postscriptFont(): High Tower Text
+Registering font with R using postscriptFont(): HoloLens MDL2 Assets
+Registering font with R using postscriptFont(): HYGothic-Extra
+Registering font with R using postscriptFont(): HYGothic-Medium
+Registering font with R using postscriptFont(): HYGraphic-Medium
+Registering font with R using postscriptFont(): HYGungSo-Bold
+Registering font with R using postscriptFont(): HYHeadLine-Medium
+Registering font with R using postscriptFont(): HYMyeongJo-Extra
+Registering font with R using postscriptFont(): HYPMokGak-Bold
+Registering font with R using postscriptFont(): HYPost-Light
+Registering font with R using postscriptFont(): HYPost-Medium
+Registering font with R using postscriptFont(): HYShortSamul-Medium
+Registering font with R using postscriptFont(): HYSinMyeongJo-Medium
+Registering font with R using postscriptFont(): Impact
+Registering font with R using postscriptFont(): Imprint MT Shadow
+Registering font with R using postscriptFont(): Informal Roman
+Registering font with R using postscriptFont(): Ink Free
+Registering font with R using postscriptFont(): Javanese Text
+Registering font with R using postscriptFont(): Jokerman
+Registering font with R using postscriptFont(): Juice ITC
+Registering font with R using postscriptFont(): Kristen ITC
+Registering font with R using postscriptFont(): Kunstler Script
+Registering font with R using postscriptFont(): Leelawadee
+Registering font with R using postscriptFont(): Leelawadee UI
+Registering font with R using postscriptFont(): Leelawadee UI Semilight
+More than one version of regular/bold/italic found for Lucida Bright. Skipping setup for this font.
+No regular (non-bold, non-italic) version of Lucida Calligraphy. Skipping setup for this font.
+Registering font with R using postscriptFont(): Lucida Console
+More than one version of regular/bold/italic found for Lucida Fax. Skipping setup for this font.
+No regular (non-bold, non-italic) version of Lucida Handwriting. Skipping setup for this font.
+More than one version of regular/bold/italic found for Lucida Sans. Skipping setup for this font.
+Registering font with R using postscriptFont(): Lucida Sans Typewriter
+Registering font with R using postscriptFont(): Lucida Sans Unicode
+More than one version of regular/bold/italic found for MAaruBuri ExtraLight. Skipping setup for this font.
+Registering font with R using postscriptFont(): Magic R
+No regular (non-bold, non-italic) version of Magneto. Skipping setup for this font.
+Registering font with R using postscriptFont(): Maiandra GD
+Registering font with R using postscriptFont(): Malgun Gothic
+Registering font with R using postscriptFont(): Malgun Gothic Semilight
+Registering font with R using postscriptFont(): Marlett
+More than one version of regular/bold/italic found for MaruBuri Bold. Skipping setup for this font.
+More than one version of regular/bold/italic found for MaruBuri Light. Skipping setup for this font.
+More than one version of regular/bold/italic found for MaruBuri Regular. Skipping setup for this font.
+More than one version of regular/bold/italic found for MaruBuri SemiBold. Skipping setup for this font.
+Registering font with R using postscriptFont(): Matura MT Script Capitals
+Registering font with R using postscriptFont(): Microsoft Himalaya
+Registering font with R using postscriptFont(): Microsoft New Tai Lue
+Registering font with R using postscriptFont(): Microsoft PhagsPa
+Registering font with R using postscriptFont(): Microsoft Sans Serif
+Registering font with R using postscriptFont(): Microsoft Tai Le
+Registering font with R using postscriptFont(): Microsoft Uighur
+Registering font with R using postscriptFont(): Microsoft Yi Baiti
+Registering font with R using postscriptFont(): Mistral
+Registering font with R using postscriptFont(): Modern No. 20
+Registering font with R using postscriptFont(): Mongolian Baiti
+Registering font with R using postscriptFont(): Monotype Corsiva
+Registering font with R using postscriptFont(): MS Outlook
+Registering font with R using postscriptFont(): MS Reference Sans Serif
+Registering font with R using postscriptFont(): MS Reference Specialty
+Registering font with R using postscriptFont(): MT Extra
+Registering font with R using postscriptFont(): MV Boli
+Registering font with R using postscriptFont(): Myanmar Text
+Registering font with R using postscriptFont(): NanumBarunGothic
+Registering font with R using postscriptFont(): NanumBarunGothic Light
+Registering font with R using postscriptFont(): NanumBarunGothic UltraLight
+Registering font with R using postscriptFont(): NanumBarunpen
+No regular (non-bold, non-italic) version of NanumBarunpen Bold. Skipping setup for this font.
+Registering font with R using postscriptFont(): NanumGothic
+Registering font with R using postscriptFont(): NanumGothic Light
+Registering font with R using postscriptFont(): NanumGothicExtraBold
+Registering font with R using postscriptFont(): New Gulim
+Registering font with R using postscriptFont(): Niagara Engraved
+Registering font with R using postscriptFont(): Niagara Solid
+Registering font with R using postscriptFont(): Nirmala UI
+Registering font with R using postscriptFont(): Nirmala UI Semilight
+Registering font with R using postscriptFont(): OCR A Extended
+Registering font with R using postscriptFont(): Old English Text MT
+Registering font with R using postscriptFont(): Onyx
+Registering font with R using postscriptFont(): Palace Script MT
+Registering font with R using postscriptFont(): Palatino Linotype
+Registering font with R using postscriptFont(): Papyrus
+Registering font with R using postscriptFont(): Parchment
+Registering font with R using postscriptFont(): Perpetua
+Registering font with R using postscriptFont(): Perpetua Titling MT
+Registering font with R using postscriptFont(): Playbill
+Registering font with R using postscriptFont(): Poor Richard
+Registering font with R using postscriptFont(): Pristina
+Registering font with R using postscriptFont(): Pyunji R
+No regular (non-bold, non-italic) version of Rage Italic. Skipping setup for this font.
+Registering font with R using postscriptFont(): Ravie
+Registering font with R using postscriptFont(): Rockwell
+Registering font with R using postscriptFont(): Rockwell Condensed
+Registering font with R using postscriptFont(): Rockwell Extra Bold
+Registering font with R using postscriptFont(): Script MT Bold
+Registering font with R using postscriptFont(): Segoe MDL2 Assets
+Registering font with R using postscriptFont(): Segoe Print
+Registering font with R using postscriptFont(): Segoe Script
+Registering font with R using postscriptFont(): Segoe UI
+Registering font with R using postscriptFont(): Segoe UI Black
+Registering font with R using postscriptFont(): Segoe UI Emoji
+Registering font with R using postscriptFont(): Segoe UI Historic
+Registering font with R using postscriptFont(): Segoe UI Light
+Registering font with R using postscriptFont(): Segoe UI Semibold
+Registering font with R using postscriptFont(): Segoe UI Semilight
+Registering font with R using postscriptFont(): Segoe UI Symbol
+Registering font with R using postscriptFont(): Showcard Gothic
+Registering font with R using postscriptFont(): SimSun-ExtB
+Registering font with R using postscriptFont(): Snap ITC
+Registering font with R using postscriptFont(): Stencil
+Registering font with R using postscriptFont(): Sylfaen
+Registering font with R using postscriptFont(): Symbol
+Registering font with R using postscriptFont(): Tahoma
+Registering font with R using postscriptFont(): Tempus Sans ITC
+Registering font with R using postscriptFont(): Times New Roman
+Registering font with R using postscriptFont(): Trebuchet MS
+Registering font with R using postscriptFont(): Tw Cen MT
+Registering font with R using postscriptFont(): Tw Cen MT Condensed
+Registering font with R using postscriptFont(): Tw Cen MT Condensed Extra Bold
+Registering font with R using postscriptFont(): Verdana
+Registering font with R using postscriptFont(): Viner Hand ITC
+No regular (non-bold, non-italic) version of Vivaldi. Skipping setup for this font.
+Registering font with R using postscriptFont(): Vladimir Script
+Registering font with R using postscriptFont(): Webdings
+Registering font with R using postscriptFont(): Wide Latin
+Registering font with R using postscriptFont(): Wingdings
+Registering font with R using postscriptFont(): Wingdings 2
+Registering font with R using postscriptFont(): Wingdings 3
+Registering font with R using postscriptFont(): Yet R</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>curriculum_raw <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"{here::here()}/data/건국대_커리큘럼.xlsx"</span>), <span class="at">sheet =</span> <span class="st">"202309"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>curriculum <span class="ot">&lt;-</span> curriculum_raw <span class="sc">%&gt;%</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fill</span>(<span class="fu">everything</span>(), <span class="at">.direction=</span><span class="st">"down"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(날짜 <span class="ot">=</span> <span class="fu">as.Date</span>(날짜)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(주차 <span class="ot">=</span> glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"{주차} 주차"</span>))</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="do">## 첫번째</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>curriculum_first <span class="ot">&lt;-</span> curriculum <span class="sc">%&gt;%</span> </span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dplyr<span class="sc">::</span><span class="fu">row_number</span>() <span class="sc">&lt;=</span><span class="dv">10</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>curriculum_first_gt <span class="ot">&lt;-</span> curriculum_first <span class="sc">%&gt;%</span>   </span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>(<span class="at">groupname_col =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"날짜"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_font</span>(</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">font =</span> <span class="fu">list</span>(</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NanumGothic"</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_pff</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>      <span class="st">"font-variant: small-caps;"</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>      htmltools<span class="sc">::</span><span class="fu">tagList</span>(</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>          <span class="at">style =</span> htmltools<span class="sc">::</span><span class="fu">css</span>(</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">text-align</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"center"</span></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>          ),</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span><span class="fu">HTML</span>(</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>            <span class="fu">web_image</span>(<span class="st">"img/konkuk/tools.png"</span>)</span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">strong</span>(<span class="st">"챗GPT 데이터 사이언스"</span>),</span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>          <span class="st">"전문교육과정"</span></span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a><span class="do">## 두번째</span></span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>curriculum_second <span class="ot">&lt;-</span> curriculum <span class="sc">%&gt;%</span> </span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dplyr<span class="sc">::</span><span class="fu">row_number</span>() <span class="sc">&gt;</span> <span class="dv">10</span>)</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>curriculum_second_gt <span class="ot">&lt;-</span> curriculum_second <span class="sc">%&gt;%</span>   </span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>(<span class="at">groupname_col =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"날짜"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_font</span>(</span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">font =</span> <span class="fu">list</span>(</span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>      <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NanumGothic"</span></span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_pff</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>      <span class="st">"font-variant: small-caps;"</span></span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a><span class="do">## 결합</span></span>
+<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a>listed_tables <span class="ot">&lt;-</span> <span class="fu">list</span>(curriculum_first_gt, curriculum_second_gt)</span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a><span class="fu">gt_two_column_layout</span>(listed_tables)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div>
+<div style="display: inline-block;float:left;">
+<div id="ktmwtezuiz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#ktmwtezuiz table {
+  font-family: Roboto, Sunflower, NanumGothic, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#ktmwtezuiz thead, #ktmwtezuiz tbody, #ktmwtezuiz tfoot, #ktmwtezuiz tr, #ktmwtezuiz td, #ktmwtezuiz th {
+  border-style: none;
+}
+
+#ktmwtezuiz p {
+  margin: 0;
+  padding: 0;
+}
+
+#ktmwtezuiz .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ktmwtezuiz .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#ktmwtezuiz .gt_title {
+  color: #333333;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ktmwtezuiz .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ktmwtezuiz .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ktmwtezuiz .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ktmwtezuiz .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ktmwtezuiz .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ktmwtezuiz .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ktmwtezuiz .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ktmwtezuiz .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ktmwtezuiz .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ktmwtezuiz .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ktmwtezuiz .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#ktmwtezuiz .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ktmwtezuiz .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ktmwtezuiz .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ktmwtezuiz .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ktmwtezuiz .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ktmwtezuiz .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ktmwtezuiz .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ktmwtezuiz .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ktmwtezuiz .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ktmwtezuiz .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#ktmwtezuiz .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ktmwtezuiz .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ktmwtezuiz .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ktmwtezuiz .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ktmwtezuiz .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ktmwtezuiz .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#ktmwtezuiz .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ktmwtezuiz .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ktmwtezuiz .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ktmwtezuiz .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ktmwtezuiz .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ktmwtezuiz .gt_left {
+  text-align: left;
+}
+
+#ktmwtezuiz .gt_center {
+  text-align: center;
+}
+
+#ktmwtezuiz .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ktmwtezuiz .gt_font_normal {
+  font-weight: normal;
+}
+
+#ktmwtezuiz .gt_font_bold {
+  font-weight: bold;
+}
+
+#ktmwtezuiz .gt_font_italic {
+  font-style: italic;
+}
+
+#ktmwtezuiz .gt_super {
+  font-size: 65%;
+}
+
+#ktmwtezuiz .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#ktmwtezuiz .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ktmwtezuiz .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ktmwtezuiz .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ktmwtezuiz .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ktmwtezuiz .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ktmwtezuiz .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><div style="text-align:center;"><img src="img/konkuk/tools.png" style="height:30px;"></div>
+<div>
+  <strong>챗GPT 데이터 사이언스</strong>
+  전문교육과정
+</div></td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="강의주제">강의주제</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="강의내용">강의내용</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="수업방법">수업방법</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="1 주차 - 2023-09-02">1 주차 - 2023-09-02</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="1 주차 - 2023-09-02  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 언어</td>
+<td headers="1 주차 - 2023-09-02  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT와 데이터 사이언스</td>
+<td headers="1 주차 - 2023-09-02  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="1 주차 - 2023-09-02  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 사이언스 언어</td>
+<td headers="1 주차 - 2023-09-02  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Tidyverse와 챗GPT</td>
+<td headers="1 주차 - 2023-09-02  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="1 주차 - 2023-09-02  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 언어</td>
+<td headers="1 주차 - 2023-09-02  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">파이썬/R/SQL 그리고 API</td>
+<td headers="1 주차 - 2023-09-02  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="2 주차 - 2023-09-09">2 주차 - 2023-09-09</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2 주차 - 2023-09-09  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">소프트웨어 카펜트리 (기본기)</td>
+<td headers="2 주차 - 2023-09-09  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">자동화: 유닉스 쉘</td>
+<td headers="2 주차 - 2023-09-09  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="2 주차 - 2023-09-09  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">소프트웨어 카펜트리 (기본기)</td>
+<td headers="2 주차 - 2023-09-09  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">버전제어: Git / GitHub</td>
+<td headers="2 주차 - 2023-09-09  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="3 주차 - 2023-09-16">3 주차 - 2023-09-16</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="3 주차 - 2023-09-16  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">소프트웨어 카펜트리 (기본기)</td>
+<td headers="3 주차 - 2023-09-16  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">파이썬 / R</td>
+<td headers="3 주차 - 2023-09-16  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="3 주차 - 2023-09-16  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">소프트웨어 카펜트리 (기본기)</td>
+<td headers="3 주차 - 2023-09-16  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터베이스</td>
+<td headers="3 주차 - 2023-09-16  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="4 주차 - 2023-09-23">4 주차 - 2023-09-23</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="4 주차 - 2023-09-23  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 자료구조</td>
+<td headers="4 주차 - 2023-09-23  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">숫자/범주 --&gt; 데이터프레임</td>
+<td headers="4 주차 - 2023-09-23  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="4 주차 - 2023-09-23  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">데이터 과학 자료구조</td>
+<td headers="4 주차 - 2023-09-23  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">날짜/공간정보/네트워크</td>
+<td headers="4 주차 - 2023-09-23  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="4 주차 - 2023-09-23  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 자료구조</td>
+<td headers="4 주차 - 2023-09-23  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">텍스트/이미지/오디오</td>
+<td headers="4 주차 - 2023-09-23  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+<div style="display: inline-block;float:right;">
+<div id="wkalgadqks" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#wkalgadqks table {
+  font-family: Roboto, Sunflower, NanumGothic, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#wkalgadqks thead, #wkalgadqks tbody, #wkalgadqks tfoot, #wkalgadqks tr, #wkalgadqks td, #wkalgadqks th {
+  border-style: none;
+}
+
+#wkalgadqks p {
+  margin: 0;
+  padding: 0;
+}
+
+#wkalgadqks .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#wkalgadqks .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#wkalgadqks .gt_title {
+  color: #333333;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#wkalgadqks .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#wkalgadqks .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wkalgadqks .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wkalgadqks .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wkalgadqks .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#wkalgadqks .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#wkalgadqks .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#wkalgadqks .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#wkalgadqks .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#wkalgadqks .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#wkalgadqks .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#wkalgadqks .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#wkalgadqks .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#wkalgadqks .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#wkalgadqks .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wkalgadqks .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wkalgadqks .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#wkalgadqks .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#wkalgadqks .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#wkalgadqks .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wkalgadqks .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#wkalgadqks .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#wkalgadqks .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wkalgadqks .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wkalgadqks .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#wkalgadqks .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wkalgadqks .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#wkalgadqks .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wkalgadqks .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wkalgadqks .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wkalgadqks .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wkalgadqks .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wkalgadqks .gt_left {
+  text-align: left;
+}
+
+#wkalgadqks .gt_center {
+  text-align: center;
+}
+
+#wkalgadqks .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#wkalgadqks .gt_font_normal {
+  font-weight: normal;
+}
+
+#wkalgadqks .gt_font_bold {
+  font-weight: bold;
+}
+
+#wkalgadqks .gt_font_italic {
+  font-style: italic;
+}
+
+#wkalgadqks .gt_super {
+  font-size: 65%;
+}
+
+#wkalgadqks .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#wkalgadqks .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#wkalgadqks .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#wkalgadqks .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#wkalgadqks .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#wkalgadqks .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#wkalgadqks .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="강의주제">강의주제</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="강의내용">강의내용</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="수업방법">수업방법</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="- 주차 - 2023-09-30">- 주차 - 2023-09-30</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="- 주차 - 2023-09-30  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">추석</td>
+<td headers="- 주차 - 2023-09-30  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">텍스트/이미지/오디오</td>
+<td headers="- 주차 - 2023-09-30  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="5 주차 - 2023-10-07">5 주차 - 2023-10-07</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="5 주차 - 2023-10-07  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 사이언스 문법</td>
+<td headers="5 주차 - 2023-10-07  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 문법(dplyr)</td>
+<td headers="5 주차 - 2023-10-07  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="5 주차 - 2023-10-07  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 문법</td>
+<td headers="5 주차 - 2023-10-07  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">시각화 문법(ggplot)</td>
+<td headers="5 주차 - 2023-10-07  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="5 주차 - 2023-10-07  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 사이언스 문법</td>
+<td headers="5 주차 - 2023-10-07  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">표 문법(gt)</td>
+<td headers="5 주차 - 2023-10-07  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="6 주차 - 2023-10-14">6 주차 - 2023-10-14</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="6 주차 - 2023-10-14  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td headers="6 주차 - 2023-10-14  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">디지털 보고서(PDF, HTML, PPT)</td>
+<td headers="6 주차 - 2023-10-14  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="6 주차 - 2023-10-14  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td headers="6 주차 - 2023-10-14  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Serverless 대쉬보드, R/Python 대쉬보드</td>
+<td headers="6 주차 - 2023-10-14  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="6 주차 - 2023-10-14  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td headers="6 주차 - 2023-10-14  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">기계학습 모형 API 배포</td>
+<td headers="6 주차 - 2023-10-14  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="7 주차 - 2023-10-21">7 주차 - 2023-10-21</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="7 주차 - 2023-10-21  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">챗GPT 문서화 프로그래밍과 출판</td>
+<td headers="7 주차 - 2023-10-21  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">쿼토(Quarto) 기본기, HTML/PDF/웹슬라이드 제작</td>
+<td headers="7 주차 - 2023-10-21  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="7 주차 - 2023-10-21  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT 문서화 프로그래밍과 출판</td>
+<td headers="7 주차 - 2023-10-21  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">Paramterized Documents</td>
+<td headers="7 주차 - 2023-10-21  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="7 주차 - 2023-10-21  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">챗GPT 문서화 프로그래밍과 출판</td>
+<td headers="7 주차 - 2023-10-21  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">LaTeX 기본기, bitPublish 과학기술 출판</td>
+<td headers="7 주차 - 2023-10-21  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="8 주차 - 2023-10-28">8 주차 - 2023-10-28</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="8 주차 - 2023-10-28  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td headers="8 주차 - 2023-10-28  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">디지털 보고서(PDF, HTML, PPT)</td>
+<td headers="8 주차 - 2023-10-28  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="8 주차 - 2023-10-28  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td headers="8 주차 - 2023-10-28  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Serverless 대쉬보드, R/Python 대쉬보드</td>
+<td headers="8 주차 - 2023-10-28  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="8 주차 - 2023-10-28  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td headers="8 주차 - 2023-10-28  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">기계학습 모형 API 배포</td>
+<td headers="8 주차 - 2023-10-28  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="9 주차 - 2023-11-04">9 주차 - 2023-11-04</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="9 주차 - 2023-11-04  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">함수형, 병렬 프로그래밍, 기계학습</td>
+<td headers="9 주차 - 2023-11-04  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 분석 함수형 프로그래밍 (purrr)</td>
+<td headers="9 주차 - 2023-11-04  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="9 주차 - 2023-11-04  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">함수형, 병렬 프로그래밍, 기계학습</td>
+<td headers="9 주차 - 2023-11-04  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">빅데이터 처리를 위한 병렬 프로그래밍</td>
+<td headers="9 주차 - 2023-11-04  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="9 주차 - 2023-11-04  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">함수형, 병렬 프로그래밍, 기계학습</td>
+<td headers="9 주차 - 2023-11-04  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Tidymodels 기계학습과 MLOps</td>
+<td headers="9 주차 - 2023-11-04  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="10 주차 - 2023-11-11">10 주차 - 2023-11-11</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="10 주차 - 2023-11-11  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT와 오픈소스</td>
+<td headers="10 주차 - 2023-11-11  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">(오픈소스) 거대언어모형(LLM)</td>
+<td headers="10 주차 - 2023-11-11  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="10 주차 - 2023-11-11  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">챗GPT와 오픈소스</td>
+<td headers="10 주차 - 2023-11-11  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Write/Draw/Coding/Reasoning</td>
+<td headers="10 주차 - 2023-11-11  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="10 주차 - 2023-11-11  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT와 오픈소스</td>
+<td headers="10 주차 - 2023-11-11  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">AI 시대 데이터 사이언스 제품개발 방법</td>
+<td headers="10 주차 - 2023-11-11  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="11 주차 - 2023-11-18">11 주차 - 2023-11-18</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="11 주차 - 2023-11-18  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Prompt Engineering</td>
+<td headers="11 주차 - 2023-11-18  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">사용자 및 개발자를 위한 프롬프트 공학</td>
+<td headers="11 주차 - 2023-11-18  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="11 주차 - 2023-11-18  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">Prompt Engineering</td>
+<td headers="11 주차 - 2023-11-18  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">OpenAI API 기반 NLP 개발</td>
+<td headers="11 주차 - 2023-11-18  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="11 주차 - 2023-11-18  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Prompt Engineering</td>
+<td headers="11 주차 - 2023-11-18  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">OPL(OpenAI, Pinecone, Langchain) 프레임워크</td>
+<td headers="11 주차 - 2023-11-18  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="12 주차 - 2023-11-25">12 주차 - 2023-11-25</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="12 주차 - 2023-11-25  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT AI 앱 프로젝트</td>
+<td headers="12 주차 - 2023-11-25  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">오픈소스 LLM 기반 AI 데이터 분석 제품</td>
+<td headers="12 주차 - 2023-11-25  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="12 주차 - 2023-11-25  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">챗GPT AI 앱 프로젝트</td>
+<td headers="12 주차 - 2023-11-25  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 사이언스 AutoGPT</td>
+<td headers="12 주차 - 2023-11-25  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="12 주차 - 2023-11-25  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT AI 앱 프로젝트</td>
+<td headers="12 주차 - 2023-11-25  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT AI 프로젝트 발표</td>
+<td headers="12 주차 - 2023-11-25  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="국내외-수료증-예시" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="국내외-수료증-예시">국내외 수료증 (예시)</h2>
+<p><br></p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="img/konkuk/konkuk_certificate.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="국내 건국대 전문과정 수료증"><img src="img/konkuk/konkuk_certificate.png" class="img-fluid figure-img" width="353"></a></p>
+<figcaption class="figure-caption">국내 건국대 전문과정 수료증</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="img/konkuk/SWC_certificate.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="해외 소프트웨어 카펜트리 수료증"><img src="img/konkuk/SWC_certificate.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">해외 소프트웨어 카펜트리 수료증</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="과정-신청" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="과정-신청">과정 신청</h2>
+<div class="columns">
+<div class="column" style="width:47.5%;">
+<section id="모집-대상-및-자격-조건" class="level4">
+<h4 class="anchored" data-anchor-id="모집-대상-및-자격-조건">🎯 모집 대상 및 자격 조건</h4>
+<p>“챗GPT 데이터 과학” 과정은 전산 비전공자 대학생(석박사 포함) 및 직장인을 대상으로 합니다.</p>
+</section>
+<section id="강좌-개요" class="level4">
+<h4 class="anchored" data-anchor-id="강좌-개요">📚 강좌 개요</h4>
+<p>챗GPT의 도입으로 이전과는 전혀 다른 세계가 펼쳐지고 있습니다. 21세기 가장 섹시한 직업 데이터 과학자로서 필히 갖추어야 하는 역량으로 챗GPT/AI 이해를 넘어 개발 및 활용을 통해 가치를 창출하는 역량이 강조되고 있습니다. 챗GPT를 중심으로 데이터 과학을 새로 해석하고 핸즈온 실습을 통해 이해를 심화시키고, 챗GPT 수행 프로젝트로 마무리하게 됩니다.</p>
+</section>
+<section id="교육-목적-및-기대-효과" class="level4">
+<h4 class="anchored" data-anchor-id="교육-목적-및-기대-효과">🎓 교육 목적 및 기대 효과</h4>
+<ul>
+<li>챗GPT 중심 데이터 사이언스 교육을 바탕으로 AI를 활용한 역량 강화</li>
+<li>AI를 활용한 사무생산성(문서/데이터분석/모형개발/SW개발) 향상을 위한 역량 배가</li>
+<li>글로벌 소프트웨어 카펜트리 수료증 취득</li>
+</ul>
+</section>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:47.5%;">
+<section id="특이사항" class="level4">
+<h4 class="anchored" data-anchor-id="특이사항">⚠️ 특이사항</h4>
+<ol type="1">
+<li>소프트웨어 카펜트리 자격증을 발급받기 위해서는 2,3주차 과정을 필히 이수해야함</li>
+<li>핸즈온 프로젝트 실습교육을 기본으로 하고 이론이 필요한 경우에만 이론적 사항을 다룸</li>
+</ol>
+<p><br></p>
+</section>
+<section id="과정-신청-1" class="level4">
+<h4 class="anchored" data-anchor-id="과정-신청-1">🖊️ 과정 신청</h4>
+<p>과정에 신청하려면 아래의 ‘신청하기’ 링크를 클릭하세요.</p>
+<p>📝 <a href="https://edulife2.konkuk.ac.kr/EdulifeS_New/Index">신청하기</a></p>
+<p><br></p>
+</section>
+<section id="연락처" class="level4">
+<h4 class="anchored" data-anchor-id="연락처">📞 연락처</h4>
+<p>질문이나 의견이 있으시면 아래 연락처로 문의 주세요.</p>
+<ul>
+<li>이메일: victor@r2bit.com</li>
+</ul>
+</section>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":true});</script>
+
+
+
+</body></html>

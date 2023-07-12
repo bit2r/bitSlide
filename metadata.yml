@@ -1,6 +1,28 @@
 # Internal slide decks
 
 
+- title: "챗GPT 데이터 사이언스 문서화 프로그래밍"
+  subtitle: "건국대 미래지식교육원 전문교육과정"
+  author: "이광춘"
+  date: 2023-09-01
+  image: img/konkuk/konkuk_ChatGPT_logo.jpg
+  path: konkuk_20230901.qmd
+  categories:
+    - "챗GPT"
+    - "데이터 사이언스"
+    - "소프트웨어 카펜트리"
+    - "글로벌 수료증"
+    - "디지털 전환"
+    - "Text-to-X"
+    - "건국대"
+    - "미래지식교육원"
+    - "전문교육과정"
+    - "한국 R 사용자회"
+    - "AI 앱"
+    - "R/Python/SQL"
+    - "프롬프트 엔지니어링"
+
+
 - title: "후쿠시마 오염수 방류"
   subtitle: "경기도 해안선 인접 구시군 영향"
   author: "공익법인 한국 R 사용자회"

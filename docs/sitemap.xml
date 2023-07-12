@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-07-10T06:48:26.177Z</lastmod>
+    <lastmod>2023-07-12T11:54:55.619Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/chatGPT_sch_20230706.html</loc>
@@ -95,5 +95,29 @@
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202307_fukushima/reference.html</loc>
     <lastmod>2023-07-10T06:45:31.544Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/kunkuk_20230901.html</loc>
+    <lastmod>2023-07-12T13:42:46.597Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_konkuk/00-who-am-i.html</loc>
+    <lastmod>2023-07-12T11:03:15.632Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_konkuk/coding-excel.html</loc>
+    <lastmod>2023-07-12T10:58:08.021Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_konkuk/curriculum.html</loc>
+    <lastmod>2023-07-12T11:15:22.181Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_konkuk/seoul-r-meeup.html</loc>
+    <lastmod>2023-07-12T10:58:13.987Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/konkuk_20230901.html</loc>
+    <lastmod>2023-07-12T13:54:26.441Z</lastmod>
   </url>
 </urlset>
