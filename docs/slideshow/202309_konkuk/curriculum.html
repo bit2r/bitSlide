@@ -151,8 +151,11 @@ ga('send', {
 
 
 
-<section id="챗gpt-데이터-사이언스-과정-소개" class="level1 page-columns page-full">
-<h1>챗GPT 데이터 사이언스 <br> 과정 소개</h1>
+<section id="section" class="level1 page-columns page-full" data-background-image="img/konkuk/chatgpt_code_interpreter.jpg">
+<h1 data-background-image="img/konkuk/chatgpt_code_interpreter.jpg"></h1>
+<div class="r-fit-text">
+
+</div>
 <section id="교육기관-소개" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="교육기관-소개">교육기관 소개</h2>
 <div class="columns">
@@ -192,19 +195,20 @@ ga('send', {
 <section id="과정-혜택" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="과정-혜택">과정 혜택</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="img/konkuk/konkuk_ai_02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/konkuk/konkuk_ai_02.jpg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:60%;">
 <ol type="1">
 <li><p>강의는 전문가로서의 데이터 과학 경력 20년을 넘기는 한국 R 사용자회 인력으로, Software Carpentry와 Posit/RStudio Tidyverse의 글로벌 인증 강사 자격을 보유하고 있으며 건국대, 연세대, 성균관대, 서울과학종합대학원, 명지대, 제주대, 홍익대 등 다양한 데이터 과학 강의를 진행했습니다.</p></li>
 <li><p>챗GPT를 활용한 데이터 과학 과정을 통해 최신 인공지능 기술을 이해하고 그 적용 방법을 배울 수 있을 뿐만 아니라, 수료자는 건국대학교의 전문 과정과 Software Carpentry에서 인증하는 수료증을 받게 됩니다.</p></li>
 <li><p>챗GPT 데이터 과학 과정에서 배운 이론과 개념들을 본인 및 팀 프로젝트에 직접 적용해보는 경험을 통한 실질적인 멘토링을 받게 됩니다.</p></li>
 <li><p>이론 강의는 최소화하여 실습 중심의 교육을 제공하며, 팀 프로젝트를 진행하게 되어 과정을 마칠 때에는 본인의 포트폴리오 웹사이트를 구축할 수 있게 됩니다.</p></li>
 <li><p>또한, 이 과정에 참여하는 수강생들은 서울 R 사용자 모임인 ’서울 R 미트업’에도 참여할 기회를 얻게 되어, 같은 관심사를 가진 사람들과 네트워킹을 하며 서로의 경험과 지식을 공유하는 풍요로운 경험을 쌓을 수 있습니다.</p></li>
+<li><p>본 과정을 이수하면서 강사를 비롯한 동료로부터도 인정을 받게 되면 상담을 통해서 취업 및 오픈소스 프로젝트, 비영리 공익법인 활동 관련 도움도 드립니다.</p></li>
 </ol>
 </div>
 </div>
@@ -911,102 +915,112 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>curriculum <span class="ot">&lt;-</span> curriculum_raw <span class="sc">%&gt;%</span> </span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fill</span>(<span class="fu">everything</span>(), <span class="at">.direction=</span><span class="st">"down"</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(날짜 <span class="ot">=</span> <span class="fu">as.Date</span>(날짜)) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(주차 <span class="ot">=</span> glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"{주차} 주차"</span>))</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(주차 <span class="ot">=</span> glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"{주차} 주차"</span>)) </span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="do">## 첫번째</span></span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>curriculum_first <span class="ot">&lt;-</span> curriculum <span class="sc">%&gt;%</span> </span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dplyr<span class="sc">::</span><span class="fu">row_number</span>() <span class="sc">&lt;=</span><span class="dv">10</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dplyr<span class="sc">::</span><span class="fu">row_number</span>() <span class="sc">&lt;=</span><span class="dv">14</span>)</span>
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>curriculum_first_gt <span class="ot">&lt;-</span> curriculum_first <span class="sc">%&gt;%</span>   </span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>(<span class="at">groupname_col =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"날짜"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_font</span>(</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">font =</span> <span class="fu">list</span>(</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NanumGothic"</span></span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_pff</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>      <span class="st">"font-variant: small-caps;"</span></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>(<span class="at">groupname_col =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"날짜"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># gt() %&gt;% </span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_pff</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.font.size =</span> <span class="dv">5</span>,</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># heading.title.font.size = 7,</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">data_row.padding =</span> <span class="fu">px</span>(<span class="dv">2</span>)</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_font</span>(</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">font =</span> <span class="fu">list</span>(</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>      <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NanumGothic"</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span></span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>      htmltools<span class="sc">::</span><span class="fu">tagList</span>(</span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>          <span class="at">style =</span> htmltools<span class="sc">::</span><span class="fu">css</span>(</span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">text-align</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"center"</span></span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>          ),</span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span><span class="fu">HTML</span>(</span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>            <span class="fu">web_image</span>(<span class="st">"img/konkuk/tools.png"</span>)</span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>          )</span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>        ),</span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">strong</span>(<span class="st">"챗GPT 데이터 사이언스"</span>),</span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>          <span class="st">"전문교육과정"</span></span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>      )</span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a><span class="do">## 두번째</span></span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>curriculum_second <span class="ot">&lt;-</span> curriculum <span class="sc">%&gt;%</span> </span>
-<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dplyr<span class="sc">::</span><span class="fu">row_number</span>() <span class="sc">&gt;</span> <span class="dv">10</span>)</span>
-<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>curriculum_second_gt <span class="ot">&lt;-</span> curriculum_second <span class="sc">%&gt;%</span>   </span>
-<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>(<span class="at">groupname_col =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"날짜"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_font</span>(</span>
-<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">font =</span> <span class="fu">list</span>(</span>
-<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>      <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
-<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NanumGothic"</span></span>
-<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_pff</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
-<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>      <span class="st">"font-variant: small-caps;"</span></span>
-<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
-<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a>  ) </span>
-<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a><span class="do">## 결합</span></span>
-<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a>listed_tables <span class="ot">&lt;-</span> <span class="fu">list</span>(curriculum_first_gt, curriculum_second_gt)</span>
-<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a><span class="fu">gt_two_column_layout</span>(listed_tables)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>      <span class="st">"font-variant: small-caps;"</span></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>      htmltools<span class="sc">::</span><span class="fu">tagList</span>(</span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>          <span class="at">style =</span> htmltools<span class="sc">::</span><span class="fu">css</span>(</span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">text-align</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"center"</span></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>          ),</span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span><span class="fu">HTML</span>(</span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>            <span class="fu">web_image</span>(<span class="st">"img/konkuk/tools.png"</span>)</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">strong</span>(<span class="st">"챗GPT 데이터 사이언스 전문교육과정"</span>)</span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a><span class="do">## 두번째</span></span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>curriculum_second <span class="ot">&lt;-</span> curriculum <span class="sc">%&gt;%</span> </span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dplyr<span class="sc">::</span><span class="fu">row_number</span>() <span class="sc">&gt;</span> <span class="dv">14</span>)</span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>curriculum_second_gt <span class="ot">&lt;-</span> curriculum_second <span class="sc">%&gt;%</span>   </span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>(<span class="at">groupname_col =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"날짜"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>  <span class="co"># gt() %&gt;% </span></span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_pff</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.font.size =</span> <span class="fu">px</span>(7L),</span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>    <span class="at">data_row.padding =</span> <span class="fu">px</span>(<span class="dv">1</span>)</span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_font</span>(</span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a>    <span class="at">font =</span> <span class="fu">list</span>(</span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a>      <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NanumGothic"</span></span>
+<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a>      <span class="st">"font-variant: small-caps;"</span></span>
+<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a><span class="do">## 결합</span></span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a>listed_tables <span class="ot">&lt;-</span> <span class="fu">list</span>(curriculum_first_gt, curriculum_second_gt)</span>
+<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a><span class="fu">gt_two_column_layout</span>(listed_tables)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div>
 <div style="display: inline-block;float:left;">
-<div id="ktmwtezuiz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#ktmwtezuiz table {
-  font-family: Roboto, Sunflower, NanumGothic, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+<div id="fylkzlkpqq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#fylkzlkpqq table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ktmwtezuiz thead, #ktmwtezuiz tbody, #ktmwtezuiz tfoot, #ktmwtezuiz tr, #ktmwtezuiz td, #ktmwtezuiz th {
+#fylkzlkpqq thead, #fylkzlkpqq tbody, #fylkzlkpqq tfoot, #fylkzlkpqq tr, #fylkzlkpqq td, #fylkzlkpqq th {
   border-style: none;
 }
 
-#ktmwtezuiz p {
+#fylkzlkpqq p {
   margin: 0;
   padding: 0;
 }
 
-#ktmwtezuiz .gt_table {
+#fylkzlkpqq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
-  font-size: 12px;
+  font-size: 5px;
   font-weight: normal;
   font-style: normal;
   background-color: #FFFFFF;
@@ -1025,12 +1039,12 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#ktmwtezuiz .gt_caption {
+#fylkzlkpqq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ktmwtezuiz .gt_title {
+#fylkzlkpqq .gt_title {
   color: #333333;
   font-size: 30px;
   font-weight: bold;
@@ -1042,7 +1056,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-bottom-width: 0;
 }
 
-#ktmwtezuiz .gt_subtitle {
+#fylkzlkpqq .gt_subtitle {
   color: #333333;
   font-size: 16px;
   font-weight: initial;
@@ -1054,7 +1068,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-top-width: 0;
 }
 
-#ktmwtezuiz .gt_heading {
+#fylkzlkpqq .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -1066,13 +1080,13 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#ktmwtezuiz .gt_bottom_border {
+#fylkzlkpqq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ktmwtezuiz .gt_col_headings {
+#fylkzlkpqq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 3px;
   border-top-color: rgba(255, 255, 255, 0);
@@ -1087,7 +1101,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#ktmwtezuiz .gt_col_heading {
+#fylkzlkpqq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1107,7 +1121,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   overflow-x: hidden;
 }
 
-#ktmwtezuiz .gt_column_spanner_outer {
+#fylkzlkpqq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1119,15 +1133,15 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   padding-right: 4px;
 }
 
-#ktmwtezuiz .gt_column_spanner_outer:first-child {
+#fylkzlkpqq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ktmwtezuiz .gt_column_spanner_outer:last-child {
+#fylkzlkpqq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ktmwtezuiz .gt_column_spanner {
+#fylkzlkpqq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color: rgba(255, 255, 255, 0);
@@ -1139,11 +1153,11 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   width: 100%;
 }
 
-#ktmwtezuiz .gt_spanner_row {
+#fylkzlkpqq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ktmwtezuiz .gt_group_heading {
+#fylkzlkpqq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1169,7 +1183,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   text-align: left;
 }
 
-#ktmwtezuiz .gt_empty_group_heading {
+#fylkzlkpqq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1184,17 +1198,17 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   vertical-align: middle;
 }
 
-#ktmwtezuiz .gt_from_md > :first-child {
+#fylkzlkpqq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ktmwtezuiz .gt_from_md > :last-child {
+#fylkzlkpqq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ktmwtezuiz .gt_row {
-  padding-top: 6px;
-  padding-bottom: 6px;
+#fylkzlkpqq .gt_row {
+  padding-top: 2px;
+  padding-bottom: 2px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 10px;
@@ -1211,7 +1225,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   overflow-x: hidden;
 }
 
-#ktmwtezuiz .gt_stub {
+#fylkzlkpqq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1224,7 +1238,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   padding-right: 5px;
 }
 
-#ktmwtezuiz .gt_stub_row_group {
+#fylkzlkpqq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1238,15 +1252,15 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   vertical-align: top;
 }
 
-#ktmwtezuiz .gt_row_group_first td {
+#fylkzlkpqq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ktmwtezuiz .gt_row_group_first th {
+#fylkzlkpqq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ktmwtezuiz .gt_summary_row {
+#fylkzlkpqq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1256,16 +1270,16 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   padding-right: 5px;
 }
 
-#ktmwtezuiz .gt_first_summary_row {
+#fylkzlkpqq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ktmwtezuiz .gt_first_summary_row.thick {
+#fylkzlkpqq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ktmwtezuiz .gt_last_summary_row {
+#fylkzlkpqq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1275,7 +1289,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#ktmwtezuiz .gt_grand_summary_row {
+#fylkzlkpqq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1285,7 +1299,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   padding-right: 5px;
 }
 
-#ktmwtezuiz .gt_first_grand_summary_row {
+#fylkzlkpqq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1295,7 +1309,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#ktmwtezuiz .gt_last_grand_summary_row_top {
+#fylkzlkpqq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1305,11 +1319,11 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#ktmwtezuiz .gt_striped {
+#fylkzlkpqq .gt_striped {
   background-color: #F5F5F5;
 }
 
-#ktmwtezuiz .gt_table_body {
+#fylkzlkpqq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1318,7 +1332,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#ktmwtezuiz .gt_footnotes {
+#fylkzlkpqq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1332,7 +1346,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#ktmwtezuiz .gt_footnote {
+#fylkzlkpqq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1341,7 +1355,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   padding-right: 5px;
 }
 
-#ktmwtezuiz .gt_sourcenotes {
+#fylkzlkpqq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1355,7 +1369,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#ktmwtezuiz .gt_sourcenote {
+#fylkzlkpqq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1363,63 +1377,63 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   padding-right: 5px;
 }
 
-#ktmwtezuiz .gt_left {
+#fylkzlkpqq .gt_left {
   text-align: left;
 }
 
-#ktmwtezuiz .gt_center {
+#fylkzlkpqq .gt_center {
   text-align: center;
 }
 
-#ktmwtezuiz .gt_right {
+#fylkzlkpqq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ktmwtezuiz .gt_font_normal {
+#fylkzlkpqq .gt_font_normal {
   font-weight: normal;
 }
 
-#ktmwtezuiz .gt_font_bold {
+#fylkzlkpqq .gt_font_bold {
   font-weight: bold;
 }
 
-#ktmwtezuiz .gt_font_italic {
+#fylkzlkpqq .gt_font_italic {
   font-style: italic;
 }
 
-#ktmwtezuiz .gt_super {
+#fylkzlkpqq .gt_super {
   font-size: 65%;
 }
 
-#ktmwtezuiz .gt_footnote_marks {
+#fylkzlkpqq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ktmwtezuiz .gt_asterisk {
+#fylkzlkpqq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ktmwtezuiz .gt_indent_1 {
+#fylkzlkpqq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ktmwtezuiz .gt_indent_2 {
+#fylkzlkpqq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ktmwtezuiz .gt_indent_3 {
+#fylkzlkpqq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ktmwtezuiz .gt_indent_4 {
+#fylkzlkpqq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ktmwtezuiz .gt_indent_5 {
+#fylkzlkpqq .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1428,8 +1442,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
     <tr class="gt_heading">
       <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><div style="text-align:center;"><img src="img/konkuk/tools.png" style="height:30px;"></div>
 <div>
-  <strong>챗GPT 데이터 사이언스</strong>
-  전문교육과정
+  <strong>챗GPT 데이터 사이언스 전문교육과정</strong>
 </div></td>
     </tr>
     
@@ -1482,6 +1495,24 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
     <tr><td headers="4 주차 - 2023-09-23  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 자료구조</td>
 <td headers="4 주차 - 2023-09-23  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">텍스트/이미지/오디오</td>
 <td headers="4 주차 - 2023-09-23  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="- 주차 - 2023-09-30">- 주차 - 2023-09-30</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="- 주차 - 2023-09-30  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">추석</td>
+<td headers="- 주차 - 2023-09-30  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">텍스트/이미지/오디오</td>
+<td headers="- 주차 - 2023-09-30  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="5 주차 - 2023-10-07">5 주차 - 2023-10-07</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="5 주차 - 2023-10-07  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 사이언스 문법</td>
+<td headers="5 주차 - 2023-10-07  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 문법(dplyr)</td>
+<td headers="5 주차 - 2023-10-07  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="5 주차 - 2023-10-07  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 문법</td>
+<td headers="5 주차 - 2023-10-07  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">시각화 문법(ggplot)</td>
+<td headers="5 주차 - 2023-10-07  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="5 주차 - 2023-10-07  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 사이언스 문법</td>
+<td headers="5 주차 - 2023-10-07  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">표 문법(gt)</td>
+<td headers="5 주차 - 2023-10-07  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
   </tbody>
   
   
@@ -1489,32 +1520,32 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
 </div>
 </div>
 <div style="display: inline-block;float:right;">
-<div id="wkalgadqks" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#wkalgadqks table {
-  font-family: Roboto, Sunflower, NanumGothic, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+<div id="akdgslxtyb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#akdgslxtyb table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wkalgadqks thead, #wkalgadqks tbody, #wkalgadqks tfoot, #wkalgadqks tr, #wkalgadqks td, #wkalgadqks th {
+#akdgslxtyb thead, #akdgslxtyb tbody, #akdgslxtyb tfoot, #akdgslxtyb tr, #akdgslxtyb td, #akdgslxtyb th {
   border-style: none;
 }
 
-#wkalgadqks p {
+#akdgslxtyb p {
   margin: 0;
   padding: 0;
 }
 
-#wkalgadqks .gt_table {
+#akdgslxtyb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
   margin-left: auto;
   margin-right: auto;
   color: #333333;
-  font-size: 12px;
+  font-size: 7px;
   font-weight: normal;
   font-style: normal;
   background-color: #FFFFFF;
@@ -1533,12 +1564,12 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#wkalgadqks .gt_caption {
+#akdgslxtyb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wkalgadqks .gt_title {
+#akdgslxtyb .gt_title {
   color: #333333;
   font-size: 30px;
   font-weight: bold;
@@ -1550,7 +1581,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-bottom-width: 0;
 }
 
-#wkalgadqks .gt_subtitle {
+#akdgslxtyb .gt_subtitle {
   color: #333333;
   font-size: 16px;
   font-weight: initial;
@@ -1562,7 +1593,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-top-width: 0;
 }
 
-#wkalgadqks .gt_heading {
+#akdgslxtyb .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -1574,13 +1605,13 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#wkalgadqks .gt_bottom_border {
+#akdgslxtyb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wkalgadqks .gt_col_headings {
+#akdgslxtyb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 3px;
   border-top-color: rgba(255, 255, 255, 0);
@@ -1595,7 +1626,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#wkalgadqks .gt_col_heading {
+#akdgslxtyb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1615,7 +1646,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   overflow-x: hidden;
 }
 
-#wkalgadqks .gt_column_spanner_outer {
+#akdgslxtyb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1627,15 +1658,15 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   padding-right: 4px;
 }
 
-#wkalgadqks .gt_column_spanner_outer:first-child {
+#akdgslxtyb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wkalgadqks .gt_column_spanner_outer:last-child {
+#akdgslxtyb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wkalgadqks .gt_column_spanner {
+#akdgslxtyb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color: rgba(255, 255, 255, 0);
@@ -1647,11 +1678,11 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   width: 100%;
 }
 
-#wkalgadqks .gt_spanner_row {
+#akdgslxtyb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wkalgadqks .gt_group_heading {
+#akdgslxtyb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1677,7 +1708,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   text-align: left;
 }
 
-#wkalgadqks .gt_empty_group_heading {
+#akdgslxtyb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1692,17 +1723,17 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   vertical-align: middle;
 }
 
-#wkalgadqks .gt_from_md > :first-child {
+#akdgslxtyb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wkalgadqks .gt_from_md > :last-child {
+#akdgslxtyb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wkalgadqks .gt_row {
-  padding-top: 6px;
-  padding-bottom: 6px;
+#akdgslxtyb .gt_row {
+  padding-top: 1px;
+  padding-bottom: 1px;
   padding-left: 5px;
   padding-right: 5px;
   margin: 10px;
@@ -1719,7 +1750,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   overflow-x: hidden;
 }
 
-#wkalgadqks .gt_stub {
+#akdgslxtyb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -1732,7 +1763,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   padding-right: 5px;
 }
 
-#wkalgadqks .gt_stub_row_group {
+#akdgslxtyb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1746,15 +1777,15 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   vertical-align: top;
 }
 
-#wkalgadqks .gt_row_group_first td {
+#akdgslxtyb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wkalgadqks .gt_row_group_first th {
+#akdgslxtyb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wkalgadqks .gt_summary_row {
+#akdgslxtyb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1764,16 +1795,16 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   padding-right: 5px;
 }
 
-#wkalgadqks .gt_first_summary_row {
+#akdgslxtyb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wkalgadqks .gt_first_summary_row.thick {
+#akdgslxtyb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wkalgadqks .gt_last_summary_row {
+#akdgslxtyb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1783,7 +1814,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#wkalgadqks .gt_grand_summary_row {
+#akdgslxtyb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1793,7 +1824,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   padding-right: 5px;
 }
 
-#wkalgadqks .gt_first_grand_summary_row {
+#akdgslxtyb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1803,7 +1834,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#wkalgadqks .gt_last_grand_summary_row_top {
+#akdgslxtyb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1813,11 +1844,11 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#wkalgadqks .gt_striped {
+#akdgslxtyb .gt_striped {
   background-color: #F5F5F5;
 }
 
-#wkalgadqks .gt_table_body {
+#akdgslxtyb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1826,7 +1857,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#wkalgadqks .gt_footnotes {
+#akdgslxtyb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1840,7 +1871,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#wkalgadqks .gt_footnote {
+#akdgslxtyb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1849,7 +1880,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   padding-right: 5px;
 }
 
-#wkalgadqks .gt_sourcenotes {
+#akdgslxtyb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1863,7 +1894,7 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#wkalgadqks .gt_sourcenote {
+#akdgslxtyb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1871,63 +1902,63 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
   padding-right: 5px;
 }
 
-#wkalgadqks .gt_left {
+#akdgslxtyb .gt_left {
   text-align: left;
 }
 
-#wkalgadqks .gt_center {
+#akdgslxtyb .gt_center {
   text-align: center;
 }
 
-#wkalgadqks .gt_right {
+#akdgslxtyb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wkalgadqks .gt_font_normal {
+#akdgslxtyb .gt_font_normal {
   font-weight: normal;
 }
 
-#wkalgadqks .gt_font_bold {
+#akdgslxtyb .gt_font_bold {
   font-weight: bold;
 }
 
-#wkalgadqks .gt_font_italic {
+#akdgslxtyb .gt_font_italic {
   font-style: italic;
 }
 
-#wkalgadqks .gt_super {
+#akdgslxtyb .gt_super {
   font-size: 65%;
 }
 
-#wkalgadqks .gt_footnote_marks {
+#akdgslxtyb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wkalgadqks .gt_asterisk {
+#akdgslxtyb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wkalgadqks .gt_indent_1 {
+#akdgslxtyb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wkalgadqks .gt_indent_2 {
+#akdgslxtyb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wkalgadqks .gt_indent_3 {
+#akdgslxtyb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wkalgadqks .gt_indent_4 {
+#akdgslxtyb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wkalgadqks .gt_indent_5 {
+#akdgslxtyb .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1941,24 +1972,6 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr class="gt_group_heading_row">
-      <th colspan="3" class="gt_group_heading" scope="colgroup" id="- 주차 - 2023-09-30">- 주차 - 2023-09-30</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="- 주차 - 2023-09-30  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">추석</td>
-<td headers="- 주차 - 2023-09-30  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">텍스트/이미지/오디오</td>
-<td headers="- 주차 - 2023-09-30  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
-    <tr class="gt_group_heading_row">
-      <th colspan="3" class="gt_group_heading" scope="colgroup" id="5 주차 - 2023-10-07">5 주차 - 2023-10-07</th>
-    </tr>
-    <tr class="gt_row_group_first"><td headers="5 주차 - 2023-10-07  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 사이언스 문법</td>
-<td headers="5 주차 - 2023-10-07  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 문법(dplyr)</td>
-<td headers="5 주차 - 2023-10-07  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
-    <tr><td headers="5 주차 - 2023-10-07  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 문법</td>
-<td headers="5 주차 - 2023-10-07  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">시각화 문법(ggplot)</td>
-<td headers="5 주차 - 2023-10-07  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
-    <tr><td headers="5 주차 - 2023-10-07  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 사이언스 문법</td>
-<td headers="5 주차 - 2023-10-07  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">표 문법(gt)</td>
-<td headers="5 주차 - 2023-10-07  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
     <tr class="gt_group_heading_row">
       <th colspan="3" class="gt_group_heading" scope="colgroup" id="6 주차 - 2023-10-14">6 주차 - 2023-10-14</th>
     </tr>
@@ -2060,13 +2073,13 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="img/konkuk/konkuk_certificate.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="국내 건국대 전문과정 수료증"><img src="img/konkuk/konkuk_certificate.png" class="img-fluid figure-img" width="353"></a></p>
+<p><a href="img/konkuk/konkuk_certificate.png" class="lightbox" title="국내 건국대 전문과정 수료증" data-gallery="quarto-lightbox-gallery-4"><img src="img/konkuk/konkuk_certificate.png" class="img-fluid figure-img" width="353"></a></p>
 <figcaption class="figure-caption">국내 건국대 전문과정 수료증</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="img/konkuk/SWC_certificate.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="해외 소프트웨어 카펜트리 수료증"><img src="img/konkuk/SWC_certificate.png" class="img-fluid figure-img"></a></p>
+<p><a href="img/konkuk/SWC_certificate.png" class="lightbox" title="해외 소프트웨어 카펜트리 수료증" data-gallery="quarto-lightbox-gallery-5"><img src="img/konkuk/SWC_certificate.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">해외 소프트웨어 카펜트리 수료증</figcaption>
 </figure>
 </div>
@@ -2076,39 +2089,38 @@ Registering font with R using postscriptFont(): Yet R</code></pre>
 <section id="과정-신청" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="과정-신청">과정 신청</h2>
 <div class="columns">
-<div class="column" style="width:47.5%;">
+<div class="column" style="width:56%;">
 <section id="모집-대상-및-자격-조건" class="level4">
 <h4 class="anchored" data-anchor-id="모집-대상-및-자격-조건">🎯 모집 대상 및 자격 조건</h4>
 <p>“챗GPT 데이터 과학” 과정은 전산 비전공자 대학생(석박사 포함) 및 직장인을 대상으로 합니다.</p>
 </section>
 <section id="강좌-개요" class="level4">
 <h4 class="anchored" data-anchor-id="강좌-개요">📚 강좌 개요</h4>
-<p>챗GPT의 도입으로 이전과는 전혀 다른 세계가 펼쳐지고 있습니다. 21세기 가장 섹시한 직업 데이터 과학자로서 필히 갖추어야 하는 역량으로 챗GPT/AI 이해를 넘어 개발 및 활용을 통해 가치를 창출하는 역량이 강조되고 있습니다. 챗GPT를 중심으로 데이터 과학을 새로 해석하고 핸즈온 실습을 통해 이해를 심화시키고, 챗GPT 수행 프로젝트로 마무리하게 됩니다.</p>
+<p>아래한글, 엑셀, 파워포인트 시대가 끝나, 챗GPT 시대에 맞는 새 도구를 배우는 것이 중요합니다. AI 기본기 유닉스 쉘, Git/GitHub, R/파이썬, SQL을 워크샵을 통해 소프트웨어 카펜트리 글로벌 자격증을 획득하고, 데이터 사이언스 기본문법(데이터, 그래프, 표)을 확실히 합니다. 이는 챗GPT 데이터 사이언스 문서화 프로그래밍(ChatGPT Literate Programming for Data Science) 과정으로 이어져 앞으로 어떠한 변화가 펼쳐지더라도 유연하게 대처할 기본기를 착실히 다지게 됩니다. 특히, 챗GPT 데이터 사이언스와 과학기술 근간이 되는 재현가능한 디지털 글쓰기 (PDF, PPT, 대쉬보드, 논문, 보고서, 웹사이트 등) 및 빅데이터 처리를 위한 함수형/병렬 프로그래밍과 문서 자동화 기법(Parameterized Documents)과 대쉬보드 제작을 통한 의사결정, 기계학습 모형개발을 통한 자동화를 학습하고 챗GPT 프로젝트를 통해 내재화함으로써 나 홀로 개발을 넘어, 팀, 커뮤니티로 범위를 넓히는 교육으로 마무리합니다.</p>
 </section>
-<section id="교육-목적-및-기대-효과" class="level4">
-<h4 class="anchored" data-anchor-id="교육-목적-및-기대-효과">🎓 교육 목적 및 기대 효과</h4>
-<ul>
-<li>챗GPT 중심 데이터 사이언스 교육을 바탕으로 AI를 활용한 역량 강화</li>
-<li>AI를 활용한 사무생산성(문서/데이터분석/모형개발/SW개발) 향상을 위한 역량 배가</li>
-<li>글로벌 소프트웨어 카펜트리 수료증 취득</li>
-</ul>
-</section>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:47.5%;">
 <section id="특이사항" class="level4">
 <h4 class="anchored" data-anchor-id="특이사항">⚠️ 특이사항</h4>
 <ol type="1">
 <li>소프트웨어 카펜트리 자격증을 발급받기 위해서는 2,3주차 과정을 필히 이수해야함</li>
 <li>핸즈온 프로젝트 실습교육을 기본으로 하고 이론이 필요한 경우에만 이론적 사항을 다룸</li>
 </ol>
-<p><br></p>
+</section>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:42%;">
+<section id="교육-목적-및-기대-효과" class="level4">
+<h4 class="anchored" data-anchor-id="교육-목적-및-기대-효과">🎓 교육 목적 및 기대 효과</h4>
+<ul>
+<li>챗GPT 데이터 사이언스 문서화 프로그래밍 AI 활용 역량 강화</li>
+<li>챗GPT 활용 사무 및 개발 생산성(문서/데이터분석/모형개발/SW개발) 향상</li>
+<li>데이터 사이언스와 문서 및 SW 개발분야 사람과 AI 업무분장 결정 능력과 사람과 AI 협업을 통한 신규 가치 창출</li>
+<li>글로벌 소프트웨어 카펜트리 수료증 취득</li>
+</ul>
 </section>
 <section id="과정-신청-1" class="level4">
 <h4 class="anchored" data-anchor-id="과정-신청-1">🖊️ 과정 신청</h4>
 <p>과정에 신청하려면 아래의 ‘신청하기’ 링크를 클릭하세요.</p>
-<p>📝 <a href="https://edulife2.konkuk.ac.kr/EdulifeS_New/Index">신청하기</a></p>
-<p><br></p>
+<p>📝 <a href="https://edulife2.konkuk.ac.kr/EdulifeS_New/Detail?yy=2023&amp;shtm=B01012&amp;corsDetaCd=002054&amp;sbjtId=0020&amp;sprfNo=00002840">신청하기</a></p>
 </section>
 <section id="연락처" class="level4">
 <h4 class="anchored" data-anchor-id="연락처">📞 연락처</h4>
@@ -2359,7 +2371,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
