@@ -1,4 +1,10 @@
 
+#  {background-image="img/konkuk/chatgpt_code_interpreter.jpg"}
+
+::: r-fit-text
+:::
+
+
 ## 교육기관 소개 {.smaller}
 
 ::: columns
