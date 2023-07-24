@@ -1,0 +1,66 @@
+## 강사소개 & 강의 개요 {.smaller}
+
+::: panel-tabset
+### 강사소개
+
+::: {layout-ncol="2"}
+### AI 아바타
+
+![](img/profile.png){.absolute top="0" right="0" fig-align="center" width="300"}
+
+### 주요경력 및 학력
+
+-   (현) [공익법인 한국 R 사용자회](https://r2bit.com/): 기술 이사
+
+-   (현) 국가교육위원회 전문위원: 과학/기술 분과
+
+-   (현) [건국대학교 챗GPT 데이터 사이언스 과정](https://r2bit.com/bitSlide/konkuk_20230901.html#/title-slide): 외래교수
+
+-   (현) 경기도 빅데이터 위원회 자문위원
+
+-   (전) TCS: GS 칼텍스 디지털 아카데미 강사
+
+-   (전) 연세대학교 데이터 사이언스: 겸임교수
+
+-   (전) 삼정 KPMG: Lighthouse AI 기술총괄
+
+-   (전) 웹젠: 데이터 과학자 TD
+
+-   (전) 현대모비스: 차량용 반도체 개발구매 <br>
+
+-   (전) 현대자동차: VAATZ / FTA <br>
+
+    <br>
+
+    <hr>
+
+    <br>
+
+-   KAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공
+
+-   [RStudio Instructor](https://education.rstudio.com/trainers/people/lee+kwangchun/) - Tidyverse
+
+-   [Seoul R Meetup Organizer](https://r2bit.com/seoul-r/)
+:::
+
+### 강의개요
+
+::: {layout-ncol="2"}
+![](img/kwangmyung_logo.jpg)
+
+### 강의상세
+
+-   날짜 : 2023. 08. 11.(금) 17:00\~18:00
+-   장소 : 광명시청
+-   대상 : 광명시
+-   내용
+    -   챗GPT 행정
+    -   인공지능(AI)
+    -   삶의 현장
+    -   Text-to-X    
+    -   챗GPT-X
+    -   프롬프트 공학
+    -   디지털 글쓰기
+    -   "사무 자동화/지능화"
+:::
+:::

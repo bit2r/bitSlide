@@ -1,6 +1,23 @@
 # Internal slide decks
 
 
+- title: "챗GPT"
+  subtitle: "광명시"
+  author: "이광춘"
+  date: 2023-08-11
+  image: img/kwangmyung_ChatGPT.jpg
+  path: kwangmyung_20230811.qmd
+  categories:
+    - "챗GPT"
+    - "데이터 사이언스"
+    - "디지털 전환"
+    - "Text-to-X"
+    - "광명시"
+    - "한국 R 사용자회"
+    - "챗GPT + 행정"
+    - "프롬프트 엔지니어링"
+
+
 - title: "챗GPT 데이터 사이언스 문서화 프로그래밍"
   subtitle: "건국대 미래지식교육원 전문교육과정"
   author: "이광춘"

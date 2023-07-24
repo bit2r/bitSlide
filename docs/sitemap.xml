@@ -2,10 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-07-14T00:31:59.993Z</lastmod>
+    <lastmod>2023-07-24T13:42:29.886Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/konkuk_20230901.html</loc>
     <lastmod>2023-07-14T00:32:05.870Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/kwangmyung_20230811.html</loc>
+    <lastmod>2023-07-24T13:42:41.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/00-who-am-i.html</loc>
+    <lastmod>2023-07-24T13:42:17.959Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/02-life-in-action.html</loc>
+    <lastmod>2023-07-24T13:41:55.106Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/03-office-interface.html</loc>
+    <lastmod>2023-07-24T13:41:56.177Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/04-user-in-practice.html</loc>
+    <lastmod>2023-07-24T13:42:01.146Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/05-prompt-engineering.html</loc>
+    <lastmod>2023-07-24T13:42:05.534Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/LLM-chatGPT.html</loc>
+    <lastmod>2023-07-24T13:42:06.862Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/labor_of_division.html</loc>
+    <lastmod>2023-07-24T13:42:12.078Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/limitation.html</loc>
+    <lastmod>2023-07-24T13:42:12.850Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/publishing.html</loc>
+    <lastmod>2023-07-24T13:42:13.502Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/reference.html</loc>
+    <lastmod>2023-07-24T13:42:13.995Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/seoul-r-meeup.html</loc>
+    <lastmod>2023-07-24T13:42:14.588Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/setup.html</loc>
+    <lastmod>2023-07-24T13:42:15.157Z</lastmod>
   </url>
 </urlset>

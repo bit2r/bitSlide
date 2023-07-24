@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>발표자료 | 한국 R 사용자회 – office-interface</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../img/koRea_logo.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-229551680-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/koRea_logo.png" alt="Home" class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://r2bit.com" rel="" target="">
+ <span class="menu-text">한국 R 사용자회</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bit2r/slides" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub repo">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+
+<section id="챗gpt-인터페이스-오피스-전쟁" class="level1 page-columns page-full">
+<h1>챗GPT 인터페이스 <br> 오피스 전쟁</h1>
+<section id="구글-검색의-종말" class="level2">
+<h2 class="anchored" data-anchor-id="구글-검색의-종말">구글 검색의 종말(?)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT-search.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/chatGPT-search.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="글쓰기-역사" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="글쓰기-역사">글쓰기 역사</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/writing_history.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/writing_history.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<ul>
+<li><a href="https://r2bit.com/quarto/writing_history.html">문자와 종이 역사</a></li>
+</ul>
+</div></div></section>
+<section id="오피스-전쟁" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="오피스-전쟁">오피스 전쟁</h2>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">항목</th>
+<th style="text-align: center;">MS 오피스 <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></th>
+<th style="text-align: center;">구글 오피스 <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></th>
+<th style="text-align: center;">리브레 오피스 <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></th>
+<th style="text-align: center;">한컴 오피스 <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">문서 작성 및 편집</td>
+<td style="text-align: center;">워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공</td>
+<td style="text-align: center;">구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공</td>
+<td style="text-align: center;">라이터, 캘크, 임프레스 등의 데스크톱 앱 제공</td>
+<td style="text-align: center;">한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">협업 및 공유</td>
+<td style="text-align: center;">원드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움</td>
+<td style="text-align: center;">구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능</td>
+<td style="text-align: center;">드롭박스나 구글 드라이브와 연동하여 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움</td>
+<td style="text-align: center;">넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">이메일 및 채팅</td>
+<td style="text-align: center;">Outlook을 통해 비즈니스 메일 제공. Teams을 통해 채팅 및 화상 회의 가능</td>
+<td style="text-align: center;">Gmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능</td>
+<td style="text-align: center;">이메일 및 채팅 기능 없음</td>
+<td style="text-align: center;">이메일 및 채팅 기능 없음</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">가격</td>
+<td style="text-align: center;">1인당 월 5~20달러 다양한 요금제 제공. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작</td>
+<td style="text-align: center;">1인당 월 6~18달러까지 다양한 요금제 제공</td>
+<td style="text-align: center;">완전 무료</td>
+<td style="text-align: center;">개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="오피스-전쟁-패러다임-충돌" class="level2">
+<h2 class="anchored" data-anchor-id="오피스-전쟁-패러다임-충돌">오피스 전쟁: 패러다임 충돌</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/writing-evolution.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/writing-evolution.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="챗gpt-시대-사무실" class="level2">
+<h2 class="anchored" data-anchor-id="챗gpt-시대-사무실">챗GPT 시대 사무실</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">챗GPT 사용원인</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">인터페이스</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">챗GPT AS-IS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">챗GPT TO-BE</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT_why.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/chatGPT_why.jpg" class="img-fluid figure-img" width="600"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT_interface.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/chatGPT_interface.jpg" class="img-fluid figure-img" width="500"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT-AS-IS.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/chatGPT-AS-IS.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT-TO-BE.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/chatGPT-TO-BE.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="챗gpt가-이룬-대통합" class="level2">
+<h2 class="anchored" data-anchor-id="챗gpt가-이룬-대통합">챗GPT가 이룬 대통합</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT-Text-to-X.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/chatGPT-Text-to-X.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+<section id="인터페이스-interface" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="인터페이스-interface">인터페이스 (Interface)</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">진화과정</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">CLI</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">GUI</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">WUI</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-5" role="tab" aria-controls="tabset-2-5" aria-selected="false">MUI</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-6" role="tab" aria-controls="tabset-2-6" aria-selected="false">LUI</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><br> <br> <br></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    
+    subgraph A["사용자 인터페이스"]
+    direction LR
+        CLI["CLI&lt;br&gt;Command Line Interface&lt;br&gt; 1950~"]     --&gt; GUI["GUI &lt;br&gt; Graphic User Inferface&lt;br&gt; 1970~"]
+        GUI               --&gt; WI["Web Interface &lt;br&gt; 1994~"]
+        WI --&gt; MI["Mobile Interface &lt;br&gt; 2007~"]
+        MI --&gt; NUI["LUI &lt;br&gt; Language User Interface &lt;br&gt; 2023~"]
+
+    end
+
+
+class A nodeStyle
+
+classDef nodeStyle fill:#fcfbfa,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/ui_cli.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/ui_cli.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Computer_terminal" class="uri">https://en.wikipedia.org/wiki/Computer_terminal</a></li>
+</ul>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/ui_gui.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="img/ui_gui.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://kartsci.org/kocomu/computer-history/graphical-user-interface-history/" class="uri">https://kartsci.org/kocomu/computer-history/graphical-user-interface-history/</a></li>
+</ul>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<p><br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/ui_web.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="img/ui_web.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-5-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/ui_mi.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="img/ui_mi.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://www.huffpost.com/entry/uber-your-way-through-cit_b_1205446" class="uri">https://www.huffpost.com/entry/uber-your-way-through-cit_b_1205446</a></li>
+</ul>
+</div>
+<div id="tabset-2-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-6-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/sam_altman_LUI.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="img/sam_altman_LUI.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://twitter.com/sama/status/1515764302904377344" class="uri">https://twitter.com/sama/status/1515764302904377344</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="챗gpt-nui" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="챗gpt-nui">챗GPT NUI</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">1:1 채팅</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">클릭하여 완료</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">자동완성</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-4" role="tab" aria-controls="tabset-3-4" aria-selected="false">명령 팔레트</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<ul>
+<li>챗GPT (ChatGPT)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatgpt_writing.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="img/chatgpt_writing.gif" class="img-fluid figure-img" width="634"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<ul>
+<li>OpenAI Playground</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/ui_playground.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="img/ui_playground.jpg" class="img-fluid figure-img" width="645"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<ul>
+<li>GitHub Copilot</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/ui_copilot.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="img/ui_copilot.gif" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e" class="uri">https://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e</a></li>
+</ul>
+</div>
+<div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
+<div class="columns">
+<div class="column">
+<section id="사례" class="level4">
+<h4 class="anchored" data-anchor-id="사례">사례</h4>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/command-tree.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="img/command-tree.gif" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/generate_code.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="img/generate_code.gif" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" width="500" height="400" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="https://blog.replit.com/images/ai/aimode_future.mp4"></video></div>
+</div>
+</div>
+<ul>
+<li><a href="https://blog.replit.com/clui" class="uri">https://blog.replit.com/clui</a></li>
+<li><a href="https://blog.replit.com/ai" class="uri">https://blog.replit.com/ai</a></li>
+</ul>
+</section>
+</div><div class="column">
+<section id="command-palette-역사" class="level4">
+<h4 class="anchored" data-anchor-id="command-palette-역사">Command Palette 역사</h4>
+<ul>
+<li>60년대로 거슬러 올라가는 명령 팔레트는 최근 기술 업계에서 다시 인기를 얻고 있으며 사용자 중심 소프트웨어의 필수적인 부분으로 간주됨.</li>
+<li>CLI는 개인용 컴퓨터가 대중화되기 전 초기 컴퓨팅을 지배했으며 사용자가 시스템을 작동하기 위해 특정 명령을 알아야 했다. 1984년 Apple의 매킨토시와 함께 도입된 그래픽 사용자 인터페이스(GUI)는 중요한 혁신으로 여겨졌지만, 소프트웨어의 복잡성이 증가함에 따라 GUI만으로는 탐색하기가 점점 더 어려워졌다.</li>
+<li>사용자가 항목 이름의 짧은 약어입력하여 앱과 파일을 검색할 수 있는 런처가 점점 더 보편화 되었다. 예를 들어 2001년에 출시된 Mac OS X용 LaunchBar, Quicksilver, 2005년에 출시된 Apple의 시스템 전체 Spotlight가 있다. 검색과 CLI의 결합은 <strong>Command Palette</strong>의 탄생으로 이어졌다.</li>
+<li>오늘날 우리가 알고 있는 현대식 명령 팔레트는 2011년 Sublime Text 2 베타 Joe Skinner가 처음 소개. 명령줄 사용에 익숙한 프로그래머들이 단축키를 모두 외울 필요 없이 더 빠르게 작업할 수 있어 중요한 발전이 됨.</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="실습-글쓰기" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="실습-글쓰기">실습: 글쓰기</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">프롬프트</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">출력결과</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">–</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false">영화제목 프롬프트</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>영화전문 시나리오 저작자의 역할을 수행바랍니다. 두편의 영화 시놉시스가 백틱(```)으로 감싸져 있습니다. 다음 두 영화 시놉시스를 하나로 합하여 전혀 새로운 영화 시놉시스를 300자 이내로 작성해주세요.</p>
+<p>```</p>
+<p>첫번째 영화: 극한직업</p>
+<p>각종 범죄 현장에서 물리적인 고난과 위험을 감수하며 사건을 해결하는 특수 대원들의 이야기. 그러나 그들의 직업은 상상을 초월하는 극한의 직업, 치킨집 사장이었다.</p>
+<p>두번째 영화: 국제시장</p>
+<p>덕수(황정민)의 가족은 흥남 철수 때 부산 국제시장에 내려온 피난민이다. 전쟁통에 아버지를 잃은 덕수는 졸지에 어머니와 두 동생의 생계를 책임지게 됐다. 동생의 학비와 생활비를 벌기 위해 자신의 꿈을 버린 채 친구 달구(오달수)와 함께 서독의 탄광으로, 베트남전으로 뛰어들어야 했던 덕수. 덕분에 사랑하는 아내 영자(김윤진)를 만날 수 있었고, 토끼 같은 자식들을 대학에 보낼 수 있었지만, 그의 인생에서 ’그’는 한번도 없었다.</p>
+<p>```</p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p>“극한의 시장”</p>
+<p>특수대원으로 활동하며 범죄를 막아내던 독특한 팀, 그들은 모두 특별한 신분을 가진 치킨집 사장들이다. 하지만 팀의 리더인 덕수는 더 큰 비밀을 가지고 있다. 그는 흥남 철수 때 부산 국제시장에 피난 온 가족을 부양하기 위해 자신의 꿈을 포기하고 독일 탄광, 베트남전으로 뛰어들어야 했다. 이제 그는 양면의 삶을 이어가면서, 치킨집을 운영하며 범죄를 막아내는 독특한 팀과 함께, 자신의 가족을 보호하고, 사랑하는 아내 영자와 함께 삶을 살아가야 한다. 그의 인생에 ’그’는 없지만, 그의 삶은 여전히 희망과 사랑으로 가득 차 있다.</p>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+
+</div>
+<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
+<p>프롬프트: 매력적인 시놉시스 제목을 5개 이미티콘을 적절히 넣어 작성해주세요.</p>
+<p>출력결과:</p>
+<ul>
+<li>“🔥극한의 선택: 🍗치킨집 특수대원⚔️ vs.&nbsp;국제시장🌍 생존자”</li>
+<li>“💥덕수의 두 세계: 특수대원으로서의 삶🕵️‍♂️와 국제시장에서의 삶🌏”</li>
+<li>“🐓치킨집에서의 특수작전🔫: 국제시장🌏의 비밀스러운 생존자”</li>
+<li>“🛠️하루아침에 특수대원🔫, 밤에는 국제시장🌏의 생존자: 덕수의 이중생활🎭”</li>
+<li>“🎬영화 속으로: 🔥극한의 시장에서🌏 치킨집 특수대원🕵️‍♂️으로 변신한 덕수의 이야기”</li>
+</ul>
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://sharegpt.com/c/UqcCAkR">ShareGPT</a></li>
+</ul>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">각주</h2>
+
+<ol>
+<li id="fn1"><p>https://www.microsoft.com/ko-kr/microsoft-365/business<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>https://workspace.google.com/intl/ko_kr/<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>https://www.libreoffice.org/<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>https://www.hancom.com/product/productMain.do<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":true});</script>
+<script>videojs(video_shortcode_videojs_video1);</script>
+
+
+
+</body></html>

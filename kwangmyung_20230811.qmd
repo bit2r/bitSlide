@@ -1,0 +1,34 @@
+---
+title: "챗GPT"
+subtitle: "광명시"
+author: "이광춘"
+institute: "공익법인 한국 R 사용자회"
+date: 2023-08-11
+format: 
+  insper-revealjs:
+    self-contained: false
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  강사소개 및 강의개요
+1.  ~~체험 삶의 현장~~
+1.  ~~오마이뉴스 신문기사~~
+1.  ~~기본기로 돌아가자~~
+1.  ~~챗GPT 데이터 사이언스~~
+1.  ~~챗GPT 행정~~
+
+{{< include slideshow/202308_kwangmyung/00-who-am-i.qmd >}}
+
+{{< include slideshow/202308_kwangmyung/seoul-r-meeup.qmd >}}

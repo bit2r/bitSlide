@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.361">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>발표자료 | 한국 R 사용자회 – prompt-engineering</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../img/koRea_logo.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-229551680-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+<script src="../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="../../site_libs/d3-4.10.2/d3.min.js"></script>
+<link href="../../site_libs/collapsibleTree-0.1.6/collapsibleTree.css" rel="stylesheet">
+<script src="../../site_libs/collapsibleTree-binding-0.1.7/collapsibleTree.js"></script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/koRea_logo.png" alt="Home" class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://r2bit.com" rel="" target="">
+ <span class="menu-text">한국 R 사용자회</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bit2r/slides" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub repo">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+
+<section id="챗gpt-개발자-프롬프트-디자인엔지니어링" class="level1 page-columns page-full">
+<h1>챗GPT 개발자 <br> 프롬프트 디자인/엔지니어링</h1>
+<section id="소프트웨어-3.0" class="level2">
+<h2 class="anchored" data-anchor-id="소프트웨어-3.0">소프트웨어 3.0</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/software_3.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/software_3.jpeg" class="img-fluid figure-img" width="441"></a></p>
+</figure>
+</div>
+</div><div class="column">
+<section id="andrej-karpathy" class="level4">
+<h4 class="anchored" data-anchor-id="andrej-karpathy">Andrej Karpathy</h4>
+<ul>
+<li>소프트웨어 1.0: 코드 작성을 통한 프로그래밍</li>
+<li>소프트웨어 2.0: 데이터셋 큐레이팅을 통한 프로그래밍</li>
+<li>소프트웨어 3.0: 프롬프트 엔지니어링을 통한 프로그래밍 (LLM에 입력으로 제공, GPT 스타일)</li>
+</ul>
+</section>
+</div>
+</div>
+</section>
+<section id="프롬프트-공학" class="level2">
+<h2 class="anchored" data-anchor-id="프롬프트-공학">프롬프트 공학</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">언어(?)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">텍스트 생성</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">언어 모형</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">프롬프트</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">첫인사</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><br></p>
+<blockquote class="twitter-tweet blockquote">
+<p lang="en" dir="ltr">
+</p><p>The hottest new programming language is English</p>
+<p></p>
+<p>— Andrej Karpathy (<span class="citation" data-cites="karpathy">@karpathy</span>) <a href="https://twitter.com/karpathy/status/1617979122625712128?ref_src=twsrc%5Etfw">January 24, 2023</a></p>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/text-generation.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/text-generation.gif" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/generative-text.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/generative-text.jpg" class="img-fluid figure-img" width="626"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/generative-text-prompt.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/generative-text-prompt.jpg" class="img-fluid figure-img" width="952"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chatGPT_start.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/chatGPT_start.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/prompt.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/prompt.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/prompt-component.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/prompt-component.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="프롬프트-공학-사례" class="level2 smaller page-columns page-full">
+<h2 class="smaller anchored" data-anchor-id="프롬프트-공학-사례">프롬프트 공학 사례</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'tibble' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dplyr' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.1     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(collapsibleTree)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'collapsibleTree' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>excel_filepath <span class="ot">&lt;-</span> glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"{here::here()}/data/chatGPT_applictions.xlsx"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>practice_raw <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(excel_filepath)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>practice <span class="ot">&lt;-</span> practice_raw <span class="sc">%&gt;%</span> </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fill</span>(대구분, <span class="at">.direction =</span> <span class="st">"down"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fill</span>(중구분, <span class="at">.direction =</span> <span class="st">"down"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(소구분 <span class="ot">=</span> <span class="fu">str_remove</span>(소구분, <span class="st">"^[0-9]{1,2}</span><span class="sc">\\</span><span class="st">.+ "</span>))  <span class="sc">%&gt;%</span> </span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(중구분 <span class="ot">=</span> <span class="fu">str_remove</span>(중구분, <span class="st">"[0-9]{1,2}$"</span>))</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="fu">collapsibleTree</span>(practice, <span class="fu">c</span>(<span class="st">"대구분"</span>, <span class="st">"중구분"</span>, <span class="st">"소구분"</span>),</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>                <span class="at">tooltipHtml =</span> <span class="st">"tooltip"</span>,</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>                <span class="at">root =</span> <span class="st">"챗GPT 활용"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="collapsibleTree html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-d967ce829303442095bc" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-d967ce829303442095bc">{"x":{"data":{"name":"챗GPT 활용","children":[{"name":"업무활용","children":[{"name":"보고서 작성용 참고자료 조사"},{"name":"사업기획시 아이디어 도출"},{"name":"글쓰기, 보도자료, 번역 및 교정 등"},{"name":"엑셀 업무 활용"},{"name":"프로그래밍(업무자동화)"}]},{"name":"일상생활 활용","children":[{"name":"법률 자문"},{"name":"건강 상담"},{"name":"심리 상담  "},{"name":"학업, 직업 등 진로 상담  "},{"name":"자동차 정비 문의  "},{"name":"쓰레기 처리 방법 문의  "},{"name":"음식요리 검색  "},{"name":"육아 관련 상담  "}]},{"name":"창작활동 활용","children":[{"name":"글쓰기 활용  "},{"name":"음악 작업 활용  "},{"name":"그림이미지 활용  "}]},{"name":"교육","children":[{"name":"수업 준비","children":[{"name":"코스 설명 생성하기"},{"name":"학습 목표 및 목적 생성하기"},{"name":"강의 계획 작성"},{"name":"교실 활동 만들기"},{"name":"아이스 브레이커 질문 및 활동 목록 개발하기"},{"name":"커뮤니티 구축 활동 파악하기"},{"name":"예시 만들기"},{"name":"수업 시작을 위한 아이디어"},{"name":"강의 노트 만들기"},{"name":"화이트보드 레이아웃"},{"name":"루브릭 만들기"},{"name":"프로젝트 아이디어 생성"},{"name":"토론 질문 생성하기"},{"name":"과제 프롬프트 테스트하기"}]},{"name":"교육 지원 제공","children":[{"name":"에세이 채점"},{"name":"독해력"},{"name":"매들리브 스토리 만들기"},{"name":"주제 개요 만들기"},{"name":"글쓰기 프롬프트 생성"},{"name":"쓰기 샘플 준비"},{"name":"다양한 작업에 대한 쓰기 지침 작성"},{"name":"개인 맞춤형 학습 계획"},{"name":"프레젠테이션 개요 작성"},{"name":"더미 데이터 생성"}]},{"name":"평가","children":[{"name":"빈칸 채우기 연습 문제 만들기"},{"name":"시험 문제 생성하기"},{"name":"대화형 퀴즈"}]},{"name":"학습보조도구 제작","children":[{"name":"학습 가이드 만들기"},{"name":"어휘 목록 만들기"},{"name":"플래시 카드 만들기"}]},{"name":"교실 모둠활동 개발","children":[{"name":"에세이를 확인하여 AI가 작성했는지 확인하기"},{"name":"AI 생성 텍스트에 대한 비판적 분석"},{"name":"토론 지원"},{"name":"인터랙티브 소설 쓰기"},{"name":"시뮬레이션 기반 학습"},{"name":"대화 생성"},{"name":"과제의 일부로 AI 사용 필요"},{"name":"학생이 학과에서 AI를 사용할 수 있는 방법 나열하기"},{"name":"생각하기, 짝짓기, 공유와 함께 사용"},{"name":"채팅GPT의 반응 예측하기"},{"name":"채팅GPT의 응답 채점하기"}]},{"name":"학생이 챗GPT 활용","children":[{"name":"작문 지원"},{"name":"언어 번역"},{"name":"언어 토론 파트너"},{"name":"디지털 튜터"},{"name":"Q&A 세션"},{"name":"스피치 및 프레젠테이션 지원"},{"name":"디지털 스토리텔링"},{"name":"기사 요약"},{"name":"주제 명확히 하기"},{"name":"개인 맞춤형 학습"},{"name":"연구 지원"},{"name":"불완전한 노트 필기 구체화"}]},{"name":"컴퓨터 프로그래밍","children":[{"name":"코드 작성하기"},{"name":"코드가 하는 일 설명하기"},{"name":"스크립트 문제 해결"},{"name":"SQL 코드 작성"},{"name":"HTML 코드 정리"},{"name":"애플리케이션 스크립트 작성"},{"name":"코드에 주석 추가하기"}]}]}]},"options":{"hierarchy":["대구분","중구분","소구분"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":true,"margin":{"top":20,"bottom":20,"left":60,"right":170},"fill":"lightsteelblue"}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="https://sdf.seoul.kr/">서울 디지털재단</a>에서 챗GPT 활용 사례집을 업무활용과 일상생활/창작활동/교육분야 로 나눠 두번에 걸쳐 보고서를 발간했다. <span class="citation" data-cites="sdf2023">[@sdf2023]</span> <span class="citation" data-cites="sdf2023v2">[@sdf2023v2]</span> 최근에는 교육분야 전반에 챗GPT 활용 책도 출간되었다. <span class="citation" data-cites="stan2023">[@stan2023]</span></p>
+</div></div></section>
+<section id="개발자를-위한-프롬프트-공학" class="level2 smaller page-columns page-full">
+<h2 class="smaller anchored" data-anchor-id="개발자를-위한-프롬프트-공학">개발자를 위한 프롬프트 공학</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">두가지 원칙</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">NLP 개발업무</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>excel_filepath2 <span class="ot">&lt;-</span> glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"{here::here()}/data/prompt_engineering.xlsx"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>prompt_raw <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(excel_filepath2 , <span class="at">sheet =</span> <span class="st">"guidelines"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">collapsibleTree</span>(prompt_raw, <span class="fu">c</span>(<span class="st">"원칙"</span>, <span class="st">"세부책략"</span>),</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">tooltipHtml =</span> <span class="st">"tooltip"</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">root =</span> <span class="st">"프롬프트 작성원칙"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="collapsibleTree html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-3e9786665c388ad7db16" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-3e9786665c388ad7db16">{"x":{"data":{"name":"프롬프트 작성원칙","children":[{"name":"명확한 지시명령어 작성","children":[{"name":"구분자 사용(Delimiter)"},{"name":"출력형식(HTML, JSON)"},{"name":"조건 확인"},{"name":"퓨삿(Few-Shot) 학습"}]},{"name":"모형에게 생각시간 제공","children":[{"name":"수행작업 단계 명시"},{"name":"모델 스스로 해결책 찾도록 지시"}]}]},"options":{"hierarchy":["원칙","세부책략"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":true,"margin":{"top":20,"bottom":20,"left":70,"right":110},"fill":"lightsteelblue"}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>practice_raw <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(excel_filepath2, <span class="at">sheet =</span> <span class="st">"summary"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">collapsibleTree</span>(practice_raw, <span class="fu">c</span>(<span class="st">"실무작업"</span>, <span class="st">"세부작업"</span>),</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">tooltipHtml =</span> <span class="st">"tooltip"</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">root =</span> <span class="st">"프롬프트</span><span class="sc">\n</span><span class="st"> 개발업무"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="collapsibleTree html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-510b3b4d972b3650071b" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-510b3b4d972b3650071b">{"x":{"data":{"name":"프롬프트\n 개발업무","children":[{"name":"요약","children":[{"name":"간략한 요약"},{"name":"(배송/배달/가격) 초점 두고 요약"},{"name":"요약 대신 관련부문 추출"}]},{"name":"추론","children":[{"name":"(긍/부정) 감성"},{"name":"감정 유형 식별"},{"name":"고객 분노 여부"},{"name":"제품과 회사명 추출"},{"name":"한번에 반복작업"},{"name":"토필 추론"}]},{"name":"번역","children":[{"name":"언어감지"},{"name":"번역"},{"name":"격시 및 비격식 문장"},{"name":"범용 글로벌 번역기"},{"name":"어조 변환"},{"name":"자료형(JSON 등) 변환"},{"name":"문법/맞춤법 교정"},{"name":"교정"}]},{"name":"챗봇","children":[{"name":"챗봇"}]}]},"options":{"hierarchy":["실무작업","세부작업"],"input":null,"attribute":"leafCount","linkLength":null,"fontSize":10,"tooltip":false,"collapsed":true,"zoomable":true,"margin":{"top":20,"bottom":20,"left":75,"right":120},"fill":"lightsteelblue"}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<ul>
+<li><a href="https://r2bit.com/chatGPT/prompt.html">프롬프트 공학</a></li>
+<li><a href="https://r2bit.com/chatGPT/prompt_adv.html">고급 프롬프트 공학</a></li>
+<li><a href="https://r2bit.com/chatGPT/prompt_for_develoopers.html">(개발자) 프롬프트 공학</a></li>
+</ul>
+</div></div></section>
+<section id="배경---프롬프트-엔지니어링" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="배경---프롬프트-엔지니어링">배경 - 프롬프트 엔지니어링</h2>
+<p><br></p>
+<div id="context" class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="img/greg_brockman.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/greg_brockman.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="img/context_stuffing.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/context_stuffing.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p>프롬프트 엔지니어링 (Context Stuffing)</p>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<ul>
+<li><a href="https://shareg.pt/mcr4YOM">챗GPT시대 데이터 과학 - 파머 펭귄</a></li>
+</ul>
+</div></div></section>
+<section id="보안사고" class="level2 smaller page-columns page-full">
+<h2 class="smaller anchored" data-anchor-id="보안사고">보안사고</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">삼성전자와 이탈리아</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">보안과 효율</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="삼성전자" class="level3">
+<h3 class="anchored" data-anchor-id="삼성전자">삼성전자</h3>
+<blockquote class="blockquote">
+<p>삼성전자 DS 부문 임직원 A씨는 반도체 설비 계측 데이터베이스(DB) 다운로드 프로그램의 소스 코드를 실행 중 오류를 확인했다. 문제가 된 소스 코드 전부를 복사해 챗GPT에 입력, 해결 방법을 문의했다. 삼성전자 설비 계측과 관련한 소스 코드가 오픈AI 학습 데이터로 입력된 셈이다.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>임직원 B씨는 수율·불량 설비 파악을 위해 작성한 프로그램 코드를 챗GPT에 입력하는 사고를 냈다. 관련 소스 전체를 챗GPT에 입력하고 코드 최적화를 요청했다. 임직원 C씨는 스마트폰으로 녹음한 회의 내용을 네이버 클로바 애플리케이션(앱)을 통해 문서 파일로 변환한 뒤 챗GPT에 입력했다. 회의록 작성 요청이 목적이다.</p>
+</blockquote>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="이탈리아" class="level3">
+<h3 class="anchored" data-anchor-id="이탈리아">이탈리아</h3>
+<blockquote class="blockquote">
+<p>로이터 통신 등에 따르면 이탈리아 데이터 보호청은 “챗GPT가 이탈리아의 개인정보 보호 기준과 규정을 충족할 때까지 서비스 접속을 일시적으로 차단할 것”이라고 밝혔다.<br></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>접속 차단 이유는 개인정보 침해 우려 때문이다. 이탈리아 당국은 챗GPT가 알고리즘 학습을 이유로, 개인정보를 대량으로 수집하고 저장하는 행위를 정당화할 법적 근거가 없다고 지적했다. 보호청은 챗GPT 개발사 오픈AI가 20일 이내에 해결책을 내놓지 않으면 전 세계 매출액의 최대 4%에 달하는 벌금을 물게 될 것이라고 경고하기도 했다.</p>
+</blockquote>
+</section>
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><strong>보안 vs 효율</strong> 을 높고 많은 공공기관을 비롯한 기업들이 고민을 하고 있다. 거대언어모형(LLM)에 기반하여 모든 것을 자체 개발하면 상관이 없으나 현실적으로 GPT-3/3.5/4 모형을 갖춘 조직이 전무하지만, 이미 대다수의 사람이 오픈AI 챗GPT를 맛보았기 때문에 생산성 향상을 그냥 두고 넘어가기도 어려운 상황이다. 이런 점에서 챗GPT 제한적 사용이 현재시점(’23년 3월) 최선으로 보이며 점차 오픈소스 거대언어모형(LLM)과 전략적 제휴를 통한 챗GPT 사용이 중장기적 추진방향으로 자리 잡고 있다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/security-efficiency.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="img/security-efficiency.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<ul>
+<li><p><a href="https://economist.co.kr/article/view/ecn202303300057">정두용 (2023-03-30), “우려가 현실로…삼성전자, 챗GPT 빗장 풀자마자 ‘오남용’ 속출”, 이코노미스트</a></p></li>
+<li><p><a href="https://m.hankookilbo.com/News/Read/A2023040208490005108">민재용 (2023.04.02), “이탈리아도 챗GPT ‘차단’…서방 국가중 처음”, 한국일보</a></p></li>
+<li><p><a href="https://n.news.naver.com/mnews/article/022/0003798570?sid=101">이동수 (2023.04.02.), “대기업 회의 내용 유출… ‘챗GPT 기밀 유출’ 우려가 현실로”, 세계일보</a></p></li>
+</ul>
+</div></div></section>
+<section id="실습-text-to-image" class="level2 smaller page-columns page-full">
+<h2 class="smaller anchored" data-anchor-id="실습-text-to-image">실습: Text-to-Image</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Text-to-Image 프롬프트</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">출력결과</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">–</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-4" role="tab" aria-controls="tabset-4-4" aria-selected="false">이미지 생성자</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-5" role="tab" aria-controls="tabset-4-5" aria-selected="false">스타일 적용</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>프롬프트를 사용하여 생성형 이미지 제작 전문가로 역할을 해주세요. Dall-E 2를 생성형 이미지 제작을 위한 기본 엔진으로 설정하고 다음 텍스트를 이미지 생성용 텍스트 프롬프트로 작성한 10단어 내외로 작성 후 영어로 번역하시오.</p>
+<p>특수대원으로 활동하며 범죄를 막아내던 독특한 팀, 그들은 모두 특별한 신분을 가진 치킨집 사장들이다. 하지만 팀의 리더인 덕수는 더 큰 비밀을 가지고 있다. 그는 흥남 철수 때 부산 국제시장에 피난 온 가족을 부양하기 위해 자신의 꿈을 포기하고 독일 탄광, 베트남전으로 뛰어들어야 했다. 이제 그는 양면의 삶을 이어가면서, 치킨집을 운영하며 범죄를 막아내는 독특한 팀과 함께, 자신의 가족을 보호하고, 사랑하는 아내 영자와 함께 삶을 살아가야 한다. 그의 인생에 ’그’는 없지만, 그의 삶은 여전히 희망과 사랑으로 가득 차 있다.</p>
+<p><br></p>
+<p><a href="https://sharegpt.com/c/4wxy0Pz">ShareGPT</a></p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p><br></p>
+<p>텍스트 프롬프트(10단어): “특별대원이자 치킨집 사장들의 팀, 덕수의 양면적인 삶.”</p>
+<p>English translation: “The double life of Deok-su, a special agent and a team of chicken shop owners.”</p>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+
+</div>
+<div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/_7562ceef-812d-4290-92a2-c1f4cda703ba.jfif" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="img/_7562ceef-812d-4290-92a2-c1f4cda703ba.jfif" class="img-fluid figure-img" width="400"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://www.bing.com/images/create/the-double-life-of-deok-su2c-a-special-agent-and-a-/647bf625534745f991d24e18bc1f8d7f?id=aVZQTeLr7wd7X2MHqWnqCQ%3d%3d&amp;view=detailv2&amp;idpp=genimg&amp;FORM=GCRIDP&amp;mode=overlay">바로가기</a></li>
+</ul>
+</div>
+<div id="tabset-4-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-5-tab">
+<div class="columns">
+<div class="column">
+<p>The double life of Deok-su, a special agent and a team of chicken shop owners, no characters, Peter Mohrbacher, uplight, hyper detail, street level view, analog photography, digital painting</p>
+<p><br></p>
+<ul>
+<li><a href="https://www.bing.com/images/create/the-double-life-of-deok-su2c-a-special-agent-and-a-/647bf8d1338646d9a2fcb56dc098c17b?id=0In2NDCSDGkecC8aTOeNvg%3d%3d&amp;view=detailv2&amp;idpp=genimg&amp;FORM=GCRIDP&amp;mode=overlay">바로가기</a></li>
+</ul>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/_5c6ff735-8b51-4307-b267-44f8cb0ec7e2.jfif" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="img/_5c6ff735-8b51-4307-b267-44f8cb0ec7e2.jfif" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<ul>
+<li><a href="https://r2bit.com/chatGPT/text_to_images.html">Text-to-Image</a></li>
+</ul>
+</div></div></section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","loop":true});</script>
+
+
+
+</body></html>

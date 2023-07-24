@@ -1,0 +1,175 @@
+
+# 챗GPT 한계와 새시대(?)
+
+## 한계(?) [^1] {.smaller}
+
+[^1]: [Max Roser (December 06, 2022), The brief history of artificial intelligence: The world has changed fast -- what might be next?, Our World in Data](https://ourworldindata.org/brief-history-of-ai)
+
+::: panel-tabset
+### 언어 및 이미지
+
+![](img/AI-performance_Dynabench-paper.png)
+
+### AI 생성이미지
+
+![](img/Timeline-of-AI-generated-faces.png){width="400"}
+
+### 백오피스 인건비 비교 [^2]
+
+![](img/outsourcing_rpa_ai.jpg){width="600"}
+:::
+
+[^2]: "The Case for Robotic Process Automation(RPA)", Optimal Corporation (under permission from Kinetic Consulting Services) chatGPT plus 연간 사용료 추가
+
+## 챗GPT시대 공부(?)
+
+::: panel-tabset
+### 기술과 선생님
+
+![](img/math_teachers.jfif){width="30%"}
+
+### 산술 {.unnumbered}
+
+![](img/mit/mit-1869-arithmetic.jpg)
+
+### 기하 {.unnumbered}
+
+![](img/mit/mit_geometry.gif){width="75%"}
+
+### 대수 {.unnumbered}
+
+![](img/mit/mit-1869-algebra.jpg){width="60%"}
+
+### 학술연구
+
+<br>
+
+![](img/writing_papers.jpg)
+:::
+
+::: aside
+-   출처: 트위터 [`@eraser` MATH TEACHERS PROTEST AGAINST CALCULATOR USE](https://twitter.com/eraser/status/1547506194259972096) / 1869년 MIT 입시문제 [Massachusetts Institute of Technology Entrance Examination, 1869-70](https://web.archive.org/web/20120403061216/http://libraries.mit.edu/archives/exhibits/exam/index.html) /
+-   [chatGPT - 챗GPT 시대 학술연구(R&D)](https://r2bit.com/chatGPT/rnd.html)
+:::
+
+## 인터페이스 (Interface) {.smaller}
+
+::: panel-tabset
+### 진화과정
+
+<br> <br> <br>
+
+```{mermaid}
+flowchart TB
+    
+    subgraph A["사용자 인터페이스"]
+    direction LR
+        CLI["CLI<br>Command Line Interface<br> 1950~"]     --> GUI["GUI <br> Graphic User Inferface<br> 1970~"]
+        GUI               --> WI["Web Interface <br> 1994~"]
+        WI --> MI["Mobile Interface <br> 2007~"]
+        MI --> NUI["LUI <br> Language User Interface <br> 2023~"]
+
+    end
+
+
+class A nodeStyle
+
+classDef nodeStyle fill:#fcfbfa,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+```
+
+### CLI
+
+<br>
+
+![](img/ui_cli.jpg)
+
+-   <https://en.wikipedia.org/wiki/Computer_terminal>
+
+### GUI
+
+<br>
+
+![](img/ui_gui.jpg)
+
+-   <https://kartsci.org/kocomu/computer-history/graphical-user-interface-history/>
+
+### WUI
+
+<br> <br>
+
+![](img/ui_web.jpg)
+
+### MUI
+
+![](img/ui_mi.jpg)
+
+-   <https://www.huffpost.com/entry/uber-your-way-through-cit_b_1205446>
+
+### LUI
+
+![](img/sam_altman_LUI.jpg)
+
+-   <https://twitter.com/sama/status/1515764302904377344>
+:::
+
+## 챗GPT NUI {.smaller}
+
+::: panel-tabset
+### 1:1 채팅
+
+-   챗GPT (ChatGPT)
+
+![](img/chatgpt_writing.gif){fig-align="center" width="634"}
+
+### 클릭하여 완료
+
+-   OpenAI Playground
+
+![](img/ui_playground.jpg){fig-align="center" width="645"}
+
+### 자동완성
+
+-   GitHub Copilot
+
+![](img/ui_copilot.gif){fig-align="center"}
+
+-   <https://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e>
+
+### 명령 팔레트
+
+:::::{.columns}
+:::{.column}
+#### 사례
+::: r-stack
+![](img/command-tree.gif)
+
+::: fragment
+![](img/generate_code.gif)
+:::
+
+::: fragment
+{{< video https://blog.replit.com/images/ai/aimode_future.mp4 width="500" height="400"  >}}
+:::
+
+
+:::
+
+- <https://blog.replit.com/clui>
+- <https://blog.replit.com/ai>
+
+:::
+
+
+:::{.column}
+#### Command Palette 역사
+
+- 60년대로 거슬러 올라가는 명령 팔레트는 최근 기술 업계에서 다시 인기를 얻고 있으며 사용자 중심 소프트웨어의 필수적인 부분으로 간주됨.
+- CLI는 개인용 컴퓨터가 대중화되기 전 초기 컴퓨팅을 지배했으며 사용자가 시스템을 작동하기 위해 특정 명령을 알아야 했다. 1984년 Apple의 매킨토시와 함께 도입된 그래픽 사용자 인터페이스(GUI)는 중요한 혁신으로 여겨졌지만, 소프트웨어의 복잡성이 증가함에 따라 GUI만으로는 탐색하기가 점점 더 어려워졌다.
+- 사용자가 항목 이름의 짧은 약어입력하여 앱과 파일을 검색할 수 있는 런처가 점점 더 보편화 되었다. 예를 들어 2001년에 출시된 Mac OS X용 LaunchBar, Quicksilver, 2005년에 출시된 Apple의 시스템 전체 Spotlight가 있다. 검색과 CLI의 결합은 **Command Palette**의 탄생으로 이어졌다.
+- 오늘날 우리가 알고 있는 현대식 명령 팔레트는 2011년 Sublime Text 2 베타 Joe Skinner가 처음 소개. 명령줄 사용에 익숙한 프로그래머들이 단축키를 모두 외울 필요 없이 더 빠르게 작업할 수 있어 중요한 발전이 됨.
+:::
+
+:::::
+
+:::
+
