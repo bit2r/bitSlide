@@ -34,13 +34,11 @@ editor_options:
     -   수료증(건국대, 카펜트리)
     -   과정 신청
 
-3.  서울 R 미트업
+3.  도서증정과 서울 R 미트업 참여 기회
 
 {{< include slideshow/202309_konkuk/00-who-am-i.qmd >}}
 
 {{< include slideshow/202309_konkuk/curriculum.qmd >}}
 
 {{< include slideshow/202309_konkuk/seoul-r-meeup.qmd >}}
-
-
 
