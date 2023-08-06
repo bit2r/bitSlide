@@ -23,17 +23,20 @@ editor_options:
 ## 목차
 
 1.  강사소개 및 강의개요
-2.  체험 삶의 현장
-3.  오마이뉴스 시민기자
-4.  노동의 분업
-5.  ~~수능영어와 수학~~
-6.  ~~기본기로 돌아가자~~
-7.  ~~챗GPT 데이터 사이언스~~
-8.  ~~챗GPT 행정~~
+1.  전통, 디지털 지표
+1.  체험 삶의 현장
+1.  오마이뉴스 시민기자
+1.  노동의 분업
+1.  수능영어와 수학
+1.  챗GPT 행정 (오피스 프로그램)
+1.  챗GPT 데이터 사이언스
+
 
 {{< include slideshow/202308_kwangmyung/00-who-am-i.qmd >}}
 
 {{< include slideshow/202308_kwangmyung/seoul-r-meeup.qmd >}}
+
+{{< include slideshow/202308_kwangmyung/DT_metrics.qmd >}}
 
 {{< include slideshow/202308_kwangmyung/02-life-in-action.qmd >}}
 
@@ -41,6 +44,15 @@ editor_options:
 
 {{< include slideshow/202308_kwangmyung/labor_of_division.qmd >}}
 
+{{< include slideshow/202308_kwangmyung/04-user-in-practice.qmd >}}
+
+{{< include slideshow/202308_kwangmyung/03-office-interface.qmd >}}
+
+{{< include slideshow/202308_kwangmyung/kwangmyung_cctv.qmd >}}
+
 {{< include slideshow/202308_kwangmyung/reference.qmd >}}
+
+{{< include slideshow/202308_kwangmyung/LLM-chatGPT.qmd >}}
+
 
 

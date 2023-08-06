@@ -3287,7 +3287,7 @@
     "href": "kwangmyung_20230811.html#목차",
     "title": "챗GPT",
     "section": "목차",
-    "text": "목차\n\n강사소개 및 강의개요\n체험 삶의 현장\n오마이뉴스 시민기자\n노동의 분업\n수능영어와 수학\n기본기로 돌아가자\n챗GPT 데이터 사이언스\n챗GPT 행정"
+    "text": "목차\n\n강사소개 및 강의개요\n전통, 디지털 지표\n체험 삶의 현장\n오마이뉴스 시민기자\n노동의 분업\n수능영어와 수학\n챗GPT 행정 (오피스 프로그램)\n챗GPT 데이터 사이언스"
   },
   {
     "objectID": "kwangmyung_20230811.html#강사소개-강의-개요",
@@ -3973,7 +3973,7 @@
     "href": "kwangmyung_20230811.html#ai-성능-1",
     "title": "챗GPT",
     "section": "AI 성능 1",
-    "text": "AI 성능 1\n\n\n\n\n\n\n\n\nMax Roser (December 06, 2022), The brief history of artificial intelligence: The world has changed fast – what might be next?, Our World in Data"
+    "text": "AI 성능 1\n\n\n\n\n\n\n\n\nhttps://www.microsoft.com/ko-kr/microsoft-365/business"
   },
   {
     "objectID": "kwangmyung_20230811.html#모라벡의-역설moravecs-paradox",
@@ -4016,5 +4016,320 @@
     "title": "챗GPT",
     "section": "챗GPT 뉴스기사 작성",
     "text": "챗GPT 뉴스기사 작성\n\n뉴스 착상데이터셋분석과 코딩표와 그래프챗GPT 기사작성뉴스송고\n\n\n\n\n\n\n\n\n제22대 총선 후보자선출규정 특별당규 개정 청원\n\n\n\n\n\n\n\n\n\n대한민국 제21대 국회의원 선거 더불어민주당 후보 목록\n\n\n\n\n\n\n\n\n\n제22대 국회의원 선거구\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n제22대 총선 후보자선출규정 개정 청원"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#openai-마이크로소프트-3-대장-alpha",
+    "href": "kwangmyung_20230811.html#openai-마이크로소프트-3-대장-alpha",
+    "title": "챗GPT",
+    "section": "openAI 마이크로소프트 3 대장 + \\(\\alpha\\)",
+    "text": "openAI 마이크로소프트 3 대장 + \\(\\alpha\\)"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#chatgpt-3대장",
+    "href": "kwangmyung_20230811.html#chatgpt-3대장",
+    "title": "챗GPT",
+    "section": "chatGPT 3대장",
+    "text": "chatGPT 3대장\n\n최강 3대장chatGPT 3대장—글쓰기그리기코딩"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#chatgpt-3대장-alpha-추론",
+    "href": "kwangmyung_20230811.html#chatgpt-3대장-alpha-추론",
+    "title": "챗GPT",
+    "section": "chatGPT 3대장 + \\(\\alpha\\) 추론",
+    "text": "chatGPT 3대장 + \\(\\alpha\\) 추론\n\n문제수식손 풀기SympychatGPTWolfram Plugin\n\n\n디오판토스 묘비\n신의 축복으로 태어난 그는 인생의 \\(\\frac{1}{6}\\)을 소년으로 보냈다. 그리고 다시 인생의 \\(\\frac{1}{12}\\) 이 지난 뒤에는 얼굴에 수염이 자라기 시작했다. 다시 \\(\\frac{1}{7}\\)이 지난 뒤 그는 아름다운 여인을 맞이하여 화촉을 밝혔으며, 결혼한 지 5년 만에 귀한 아들을 얻었다. 아! 그러나 그의 가엾은 아들은 아버지의 반 밖에 살지 못했다. 아들을 먼저 보내고 깊은 슬픔에 빠진 그는 그 뒤 4년간 정수론에 몰입하여 스스로를 달래다가 일생을 마쳤다. [^1]\n\n\n디오판토스가 정확히 언제 태어나고 언제 죽었는지는 명확하지 않지만, 그가 죽었을 때의 나이는 정확히 알 수 있다. 이를 방정식을 통해 풀어보자. 수식을 \\(x\\)에 대해 정리해서 풀면 84가 나온다.\n\\[\\frac {x} {6} + \\frac {x} {12} + \\frac {x} {7} +  5 + \\frac {x} {2} + 4 = x\\]\n\n\n\n\n\n\n\n\n\n\nfrom sympy import *\nx = Symbol('x')\nDiophantus_puzzle = x/6 + x/12 + x/7 + 5 + x/2 + 4 - x\nsolve(Diophantus_puzzle, x, dict = True)\n\n[{x: 84}]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n울프람 웹사이트"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#autogpt-text-to-task",
+    "href": "kwangmyung_20230811.html#autogpt-text-to-task",
+    "title": "챗GPT",
+    "section": "AutoGPT: Text-to-Task",
+    "text": "AutoGPT: Text-to-Task\n\n\n\n\n\nAuto-GPT: An Autonomous GPT-4 Experiment"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#데이터-분석-text-to-analytics",
+    "href": "kwangmyung_20230811.html#데이터-분석-text-to-analytics",
+    "title": "챗GPT",
+    "section": "데이터 분석: Text-to-Analytics",
+    "text": "데이터 분석: Text-to-Analytics\n\nPandasAILlamaIndex챗GPT SQLRTutor.ai\n\n\nPandas AI는 널리 사용되는 데이터 분석 및 조작 도구인 Pandas에 생성 인공 지능 기능을 추가한 Python 라이브러리다. Pandas AI는 판다스와 함께 사용하도록 설계되었으며, 판다스를 대체할 수 없다.\n \n\nchatGPT: 판다스 AI\n\n\n\n\n\n\n\n\n\nchatGPT: 펭귄 - 라마인덱스\n\n\n\n\n\n\n\n\n\nchatGPT: 챗GPT SQL\n\n\n\n\n\nChat with your data with RTutor\nRTutor"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#실습",
+    "href": "kwangmyung_20230811.html#실습",
+    "title": "챗GPT",
+    "section": "실습",
+    "text": "실습\n\n수능영어문제프롬프트출력결과\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n다음 지문을 보고 문제를 푸세요. 지문과 문제는 백틱(`) 세개로 감싸여 있고 다음과 같이 되어 있습니다.\n```  지문과 문제  ```\n출력:\n\n영어지문 전체를 한글로 번역한다.\n정답을 제시하고 이유도 설명한다.\n\n```  다음을 듣고, 남자가 하는 말의 목적으로 가장 적절한 것을 고르시오. M: Hello, Lockwood High School students. This is your school librarian, Mr. Wilkins. I’m sure you’re aware that our school librar y is hosting a bookmark design competition. I encourage students of all grades to par ticipate in the competition. The winning designs will be made into bookmarks, which will be distributed to librar y visitors. We’re also giving out a variety of other prizes. So don’t let this great oppor tunity slip away. Since the registration period for the bookmark design competition ends this Friday, make sure you visit our school librar y to submit your application. Come and par ticipate to display your creativity and talents.\n다음을 듣고, 남자가 하는 말의 목적으로 가장 적절한 것을 고르시오. ① 도서관의 변경된 운영 시간을 안내하려고 ② 독후감 쓰기 대회의 일정을 공지하려고 ③ 책갈피 디자인 대회 참가를 독려하려고 ④ 기한 내 도서 반납을 촉구하려고 ⑤ 전자책 이용 방법을 설명하려고 ```\n\n\n다음은 영어 지문의 한글 번역입니다:\n안녕하세요, 록우드 고등학교 학생 여러분. 저는 교사 월킨스입니다. 아마도 여러분들은 저희 학교 도서관에서 책갈피 디자인 대회를 개최한다는 사실을 알고 있을 것입니다. 저희는 모든 학년의 학생들이 이 대회에 참가하도록 권장합니다. 우승 디자인은 책갈피로 만들어져서 도서관 방문자들에게 배포될 것입니다. 우리는 또한 다양한 상품을 제공하고 있습니다. 그러니 이 좋은 기회를 놓치지 마십시오. 책갈피 디자인 대회의 등록 기간은 이번 주 금요일에 종료되기 때문에, 신청을 제출하려면 반드시 학교 도서관을 방문해야 합니다. 참여하여 여러분의 창의력과 재능을 표출해보세요.\n위 지문에 대한 문제는 다음과 같습니다:\n다음을 듣고, 남자가 하는 말의 목적으로 가장 적절한 것을 고르시오. ① 도서관의 변경된 운영 시간을 안내하려고 ② 독후감 쓰기 대회의 일정을 공지하려고 ③ 책갈피 디자인 대회 참가를 독려하려고 ④ 기한 내 도서 반납을 촉구하려고 ⑤ 전자책 이용 방법을 설명하려고\n정답은 ③ 책갈피 디자인 대회 참가를 독려하려고 입니다.\n남자의 말에서는 책갈피 디자인 대회를 언급하고, 학생들에게 대회에 참가할 것을 권장하고 있습니다. 그래서 남자의 목적은 책갈피 디자인 대회 참가를 독려하는 것입니다.\n\n\n\n\n\n\nShareGPT"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#구글-검색의-종말",
+    "href": "kwangmyung_20230811.html#구글-검색의-종말",
+    "title": "챗GPT",
+    "section": "구글 검색의 종말(?)",
+    "text": "구글 검색의 종말(?)"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#글쓰기-역사",
+    "href": "kwangmyung_20230811.html#글쓰기-역사",
+    "title": "챗GPT",
+    "section": "글쓰기 역사",
+    "text": "글쓰기 역사\n\n\n\n\n\n\n\n\n\n문자와 종이 역사"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#오피스-전쟁",
+    "href": "kwangmyung_20230811.html#오피스-전쟁",
+    "title": "챗GPT",
+    "section": "오피스 전쟁",
+    "text": "오피스 전쟁\n\n\n\n\n\n\n\n\n\n\n항목\nMS 오피스 1\n구글 오피스 2\n리브레 오피스 3\n한컴 오피스 4\n\n\n\n\n문서 작성 및 편집\n워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공\n구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공\n라이터, 캘크, 임프레스 등의 데스크톱 앱 제공\n한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공\n\n\n협업 및 공유\n원드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능\n드롭박스나 구글 드라이브와 연동하여 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움\n\n\n이메일 및 채팅\nOutlook을 통해 비즈니스 메일 제공. Teams을 통해 채팅 및 화상 회의 가능\nGmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능\n이메일 및 채팅 기능 없음\n이메일 및 채팅 기능 없음\n\n\n가격\n1인당 월 5~20달러 다양한 요금제 제공. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작\n1인당 월 6~18달러까지 다양한 요금제 제공\n완전 무료\n개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요\n\n\n\nhttps://www.microsoft.com/ko-kr/microsoft-365/businesshttps://workspace.google.com/intl/ko_kr/https://www.libreoffice.org/https://www.hancom.com/product/productMain.do"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#오피스-전쟁-패러다임-충돌",
+    "href": "kwangmyung_20230811.html#오피스-전쟁-패러다임-충돌",
+    "title": "챗GPT",
+    "section": "오피스 전쟁: 패러다임 충돌",
+    "text": "오피스 전쟁: 패러다임 충돌"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#챗gpt-시대-사무실",
+    "href": "kwangmyung_20230811.html#챗gpt-시대-사무실",
+    "title": "챗GPT",
+    "section": "챗GPT 시대 사무실",
+    "text": "챗GPT 시대 사무실\n\n챗GPT 사용원인인터페이스챗GPT AS-IS챗GPT TO-BE"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#챗gpt가-이룬-대통합",
+    "href": "kwangmyung_20230811.html#챗gpt가-이룬-대통합",
+    "title": "챗GPT",
+    "section": "챗GPT가 이룬 대통합",
+    "text": "챗GPT가 이룬 대통합"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#인터페이스-interface",
+    "href": "kwangmyung_20230811.html#인터페이스-interface",
+    "title": "챗GPT",
+    "section": "인터페이스 (Interface)",
+    "text": "인터페이스 (Interface)\n\n진화과정CLIGUIWUIMUILUI\n\n\n  \n\n\n\n\nflowchart TB\n    \n    subgraph A[\"사용자 인터페이스\"]\n    direction LR\n        CLI[\"CLI&lt;br&gt;Command Line Interface&lt;br&gt; 1950~\"]     --&gt; GUI[\"GUI &lt;br&gt; Graphic User Inferface&lt;br&gt; 1970~\"]\n        GUI               --&gt; WI[\"Web Interface &lt;br&gt; 1994~\"]\n        WI --&gt; MI[\"Mobile Interface &lt;br&gt; 2007~\"]\n        MI --&gt; NUI[\"LUI &lt;br&gt; Language User Interface &lt;br&gt; 2023~\"]\n\n    end\n\n\nclass A nodeStyle\n\nclassDef nodeStyle fill:#fcfbfa,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://en.wikipedia.org/wiki/Computer_terminal\n\n\n\n\n\n\n\n\n\n\nhttps://kartsci.org/kocomu/computer-history/graphical-user-interface-history/\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.huffpost.com/entry/uber-your-way-through-cit_b_1205446\n\n\n\n\n\n\n\n\n\nhttps://twitter.com/sama/status/1515764302904377344"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#챗gpt-nui",
+    "href": "kwangmyung_20230811.html#챗gpt-nui",
+    "title": "챗GPT",
+    "section": "챗GPT NUI",
+    "text": "챗GPT NUI\n\n1:1 채팅클릭하여 완료자동완성명령 팔레트\n\n\n\n챗GPT (ChatGPT)\n\n\n\n\n\n\n\n\n\nOpenAI Playground\n\n\n\n\n\n\n\n\n\nGitHub Copilot\n\n\n\n\n\n\n\nhttps://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e\n\n\n\n\n\n사례\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://blog.replit.com/clui\nhttps://blog.replit.com/ai\n\n\nCommand Palette 역사\n\n60년대로 거슬러 올라가는 명령 팔레트는 최근 기술 업계에서 다시 인기를 얻고 있으며 사용자 중심 소프트웨어의 필수적인 부분으로 간주됨.\nCLI는 개인용 컴퓨터가 대중화되기 전 초기 컴퓨팅을 지배했으며 사용자가 시스템을 작동하기 위해 특정 명령을 알아야 했다. 1984년 Apple의 매킨토시와 함께 도입된 그래픽 사용자 인터페이스(GUI)는 중요한 혁신으로 여겨졌지만, 소프트웨어의 복잡성이 증가함에 따라 GUI만으로는 탐색하기가 점점 더 어려워졌다.\n사용자가 항목 이름의 짧은 약어입력하여 앱과 파일을 검색할 수 있는 런처가 점점 더 보편화 되었다. 예를 들어 2001년에 출시된 Mac OS X용 LaunchBar, Quicksilver, 2005년에 출시된 Apple의 시스템 전체 Spotlight가 있다. 검색과 CLI의 결합은 Command Palette의 탄생으로 이어졌다.\n오늘날 우리가 알고 있는 현대식 명령 팔레트는 2011년 Sublime Text 2 베타 Joe Skinner가 처음 소개. 명령줄 사용에 익숙한 프로그래머들이 단축키를 모두 외울 필요 없이 더 빠르게 작업할 수 있어 중요한 발전이 됨."
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#실습-글쓰기",
+    "href": "kwangmyung_20230811.html#실습-글쓰기",
+    "title": "챗GPT",
+    "section": "실습: 글쓰기",
+    "text": "실습: 글쓰기\n\n프롬프트출력결과–영화제목 프롬프트\n\n\n영화전문 시나리오 저작자의 역할을 수행바랍니다. 두편의 영화 시놉시스가 백틱(```)으로 감싸져 있습니다. 다음 두 영화 시놉시스를 하나로 합하여 전혀 새로운 영화 시놉시스를 300자 이내로 작성해주세요.\n```\n첫번째 영화: 극한직업\n각종 범죄 현장에서 물리적인 고난과 위험을 감수하며 사건을 해결하는 특수 대원들의 이야기. 그러나 그들의 직업은 상상을 초월하는 극한의 직업, 치킨집 사장이었다.\n두번째 영화: 국제시장\n덕수(황정민)의 가족은 흥남 철수 때 부산 국제시장에 내려온 피난민이다. 전쟁통에 아버지를 잃은 덕수는 졸지에 어머니와 두 동생의 생계를 책임지게 됐다. 동생의 학비와 생활비를 벌기 위해 자신의 꿈을 버린 채 친구 달구(오달수)와 함께 서독의 탄광으로, 베트남전으로 뛰어들어야 했던 덕수. 덕분에 사랑하는 아내 영자(김윤진)를 만날 수 있었고, 토끼 같은 자식들을 대학에 보낼 수 있었지만, 그의 인생에서 ’그’는 한번도 없었다.\n```\n\n\n“극한의 시장”\n특수대원으로 활동하며 범죄를 막아내던 독특한 팀, 그들은 모두 특별한 신분을 가진 치킨집 사장들이다. 하지만 팀의 리더인 덕수는 더 큰 비밀을 가지고 있다. 그는 흥남 철수 때 부산 국제시장에 피난 온 가족을 부양하기 위해 자신의 꿈을 포기하고 독일 탄광, 베트남전으로 뛰어들어야 했다. 이제 그는 양면의 삶을 이어가면서, 치킨집을 운영하며 범죄를 막아내는 독특한 팀과 함께, 자신의 가족을 보호하고, 사랑하는 아내 영자와 함께 삶을 살아가야 한다. 그의 인생에 ’그’는 없지만, 그의 삶은 여전히 희망과 사랑으로 가득 차 있다.\n\n\n\n\n\n프롬프트: 매력적인 시놉시스 제목을 5개 이미티콘을 적절히 넣어 작성해주세요.\n출력결과:\n\n“🔥극한의 선택: 🍗치킨집 특수대원⚔️ vs. 국제시장🌍 생존자”\n“💥덕수의 두 세계: 특수대원으로서의 삶🕵️‍♂️와 국제시장에서의 삶🌏”\n“🐓치킨집에서의 특수작전🔫: 국제시장🌏의 비밀스러운 생존자”\n“🛠️하루아침에 특수대원🔫, 밤에는 국제시장🌏의 생존자: 덕수의 이중생활🎭”\n“🎬영화 속으로: 🔥극한의 시장에서🌏 치킨집 특수대원🕵️‍♂️으로 변신한 덕수의 이야기”\n\n\n\n\n\nShareGPT"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#챗gpt-란",
+    "href": "kwangmyung_20230811.html#챗gpt-란",
+    "title": "챗GPT",
+    "section": "챗GPT 란?",
+    "text": "챗GPT 란?\n\nPNG와 JPEGFoundation 모형헬스케어\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Chiang, 2023) (Merritt, 2023)"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#거대-언어모형llm",
+    "href": "kwangmyung_20230811.html#거대-언어모형llm",
+    "title": "챗GPT",
+    "section": "거대 언어모형(LLM)",
+    "text": "거대 언어모형(LLM)\n\nLLM 진화80억 패러미터400억640억5,400억성능\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSharan Narang and Aakanksha Chowdhery (APRIL 04, 2022), “Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrough Performance”, Software Engineers, Google Research"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#모형크기",
+    "href": "kwangmyung_20230811.html#모형크기",
+    "title": "챗GPT",
+    "section": "모형크기",
+    "text": "모형크기"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#transformer",
+    "href": "kwangmyung_20230811.html#transformer",
+    "title": "챗GPT",
+    "section": "Transformer",
+    "text": "Transformer\n\nDL 시대삼국지가자 Transformer 로이유(Why)패러미터 비율Transformer 입력\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n트랜스포머는 범용 차별화 컴퓨터이기 때문에 훌륭한 신경망 아키텍처입니다. 동시에\n\n표현력 (순방향)\n최적화 가능(역전파 + 경사하강)\n효율적 (높은 병렬처리 연산 그래프)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n(Huben, 2023)"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#gpt는-어떻게-능력을-얻었나",
+    "href": "kwangmyung_20230811.html#gpt는-어떻게-능력을-얻었나",
+    "title": "챗GPT",
+    "section": "GPT는 어떻게 능력을 얻었나?",
+    "text": "GPT는 어떻게 능력을 얻었나?\n\n\n\n\n\n\n\n(Fu & Khot, 2022)"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#httpslifearchitect.ai",
+    "href": "kwangmyung_20230811.html#httpslifearchitect.ai",
+    "title": "챗GPT",
+    "section": "https://lifearchitect.ai/",
+    "text": "https://lifearchitect.ai/\n\nIQ 분포LM 시험GPT-4데이터셋딥마인드모형크기능력비행기\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://lifearchitect.ai/models/ / Google Sheets: 바로가기"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#현재-나의-모습",
+    "href": "kwangmyung_20230811.html#현재-나의-모습",
+    "title": "챗GPT",
+    "section": "현재 나의 모습",
+    "text": "현재 나의 모습"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#llm-진화-1",
+    "href": "kwangmyung_20230811.html#llm-진화-1",
+    "title": "챗GPT",
+    "section": "LLM 진화",
+    "text": "LLM 진화\n\n\n\n\n\n\n\n(Yang 기타, 2023)"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#공개형-gpt-vs-폐쇄형-gpt",
+    "href": "kwangmyung_20230811.html#공개형-gpt-vs-폐쇄형-gpt",
+    "title": "챗GPT",
+    "section": "공개형 GPT vs 폐쇄형 GPT",
+    "text": "공개형 GPT vs 폐쇄형 GPT\n\nStable DiffusionLLMGPT4ALL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터 출처: (Zhao 기타, 2023)\nchatGPT - 오픈소스 S/W"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#llm-1",
+    "href": "kwangmyung_20230811.html#llm-1",
+    "title": "챗GPT",
+    "section": "LLM",
+    "text": "LLM\n\n독점/상용 LLM오픈소스/공개 LLM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(Charles Frye, 2023)"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#토큰-크기-context-length",
+    "href": "kwangmyung_20230811.html#토큰-크기-context-length",
+    "title": "챗GPT",
+    "section": "토큰 크기 (Context Length)",
+    "text": "토큰 크기 (Context Length)\n\n표그래프\n\n\n\n\n\n\n\n\n\n\n\n회사명\nLLM 모형\nContext 길이 (토큰 크기)\n텍스트 크기\n\n\n\n\nOpenAI\nGPT-1\n512\n1 쪽, 4 단락, 36줄\n\n\n구글\nPaLM\n512\n↑\n\n\nOpenAI\nGPT-2\n1024\n2 쪽, 8 단락, 68줄\n\n\nOpenAI\nGPT-3\n2048\n1500 영단어, 4쪽, 139줄\n\n\nOpenAI\nGPT-4\n2048\n↑\n\n\nMeta\nLlama\n2048\n↑\n\n\nOpenAI\nGPT-3.5-Turbo\n4096\n9쪽, 369줄\n\n\n구글\nPaLM2\n8192\n13쪽, 단편 소설, 기술 문서\n\n\nOpenAI\nGPT-4 8K\n8192\n↑\n\n\nOpenAI\nGPT-4 32K\n32000\n48쪽, 대학학위논문\n\n\nMosaicML\nMPT-7B-StoryWriter\n65000\n98쪽\n\n\nAnthropic\nClaude\n100000\n150쪽, 소설책 반권\n\n\n\n\n\n\n\n\n\n\n— Dan Fu (realDanFu?)  March 29, 2023"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#hugginggpt",
+    "href": "kwangmyung_20230811.html#hugginggpt",
+    "title": "챗GPT",
+    "section": "HuggingGPT",
+    "text": "HuggingGPT\n\nLLM as ControllerHuggingGPT 개요사례\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n출처: (Shen 기타, 2023)"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#보도자료",
+    "href": "kwangmyung_20230811.html#보도자료",
+    "title": "챗GPT",
+    "section": "보도자료",
+    "text": "보도자료\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2019-11-19 ‘민식이법’ 빨리 통과되기를” 엄마 눈물의 호소에…"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#초등학교-주변-cctv-현황",
+    "href": "kwangmyung_20230811.html#초등학교-주변-cctv-현황",
+    "title": "챗GPT",
+    "section": "초등학교 주변 CCTV 현황",
+    "text": "초등학교 주변 CCTV 현황\n\n\n\n\n\n\n\n\n제작방법: 경기도 광명시 - 학교와 CCTV"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#어린이-교통사고-통계",
+    "href": "kwangmyung_20230811.html#어린이-교통사고-통계",
+    "title": "챗GPT",
+    "section": "어린이 교통사고 통계",
+    "text": "어린이 교통사고 통계\n\n사고유형별 어린이 사망교통사고건수 추세\n\n\n\n\n\n\n\n  \n    \n      광명시 보행 어린이 교통사고\n    \n    \n      TAAS 교통사고분석시스템 (2014~2022)\n    \n    \n      사고유형\n      \n        교통사고 어린이 구분\n      \n      합계\n    \n    \n      사망자수\n      중상자수\n      경상자수\n    \n  \n  \n    차대사람 - 기타\n0\n11\n34\n45\n    차대사람 - 길가장자리구역통행중\n0\n3\n12\n15\n    차대사람 - 보도통행중\n0\n2\n5\n7\n    차대사람 - 차도통행중\n0\n3\n8\n11\n    차대사람 - 횡단중\n3\n33\n59\n95\n    차대차 - 기타\n0\n1\n2\n3\n    차대차 - 측면충돌\n0\n3\n0\n3\n    합계\n3\n56\n120\n179"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#광명시-유동인구kt",
+    "href": "kwangmyung_20230811.html#광명시-유동인구kt",
+    "title": "챗GPT",
+    "section": "광명시 유동인구(KT)",
+    "text": "광명시 유동인구(KT)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터출처: 경기도 데이터 분석센터 KT 유동인구 (2018년 1월 ~ 2022년 12월)"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#광명시-카드사용금액bc-작업중",
+    "href": "kwangmyung_20230811.html#광명시-카드사용금액bc-작업중",
+    "title": "챗GPT",
+    "section": "광명시 카드사용금액(BC) → 작업중",
+    "text": "광명시 카드사용금액(BC) → 작업중\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터출처: 경기도 데이터 분석센터 BC카드 사용내역 (2018년 1월 ~ 2022년 12월)"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#전통적-지표",
+    "href": "kwangmyung_20230811.html#전통적-지표",
+    "title": "챗GPT",
+    "section": "전통적 지표",
+    "text": "전통적 지표\n \n\n\n\n\n\n\n\n\n위키백과 OECD"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#전통-지표-기준-강대국",
+    "href": "kwangmyung_20230811.html#전통-지표-기준-강대국",
+    "title": "챗GPT",
+    "section": "전통 지표 기준 강대국",
+    "text": "전통 지표 기준 강대국"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#확장-전통-지표",
+    "href": "kwangmyung_20230811.html#확장-전통-지표",
+    "title": "챗GPT",
+    "section": "확장 전통 지표",
+    "text": "확장 전통 지표\n \n\n\n\n\n\n\n\n\n위키백과 OECD"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#확장-지표-기준-선진국",
+    "href": "kwangmyung_20230811.html#확장-지표-기준-선진국",
+    "title": "챗GPT",
+    "section": "확장 지표 기준 선진국",
+    "text": "확장 지표 기준 선진국"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#디지털-강대국-지표",
+    "href": "kwangmyung_20230811.html#디지털-강대국-지표",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표",
+    "text": "디지털 강대국 지표\n\n\n\n\n\n\n디지털 정부 순위\n정부 인공지능 준비지수\n데이터 경제 순위\n산업용 로봇 밀도\n세계 경쟁력 보고서\nIMD 세계 경쟁력 연감"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#디지털-강대국-지표---디지털-정부-순위",
+    "href": "kwangmyung_20230811.html#디지털-강대국-지표---디지털-정부-순위",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - 디지털 정부 순위",
+    "text": "디지털 강대국 지표 - 디지털 정부 순위"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#디지털-강대국-지표---인공지능-준비지수",
+    "href": "kwangmyung_20230811.html#디지털-강대국-지표---인공지능-준비지수",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - 인공지능 준비지수",
+    "text": "디지털 강대국 지표 - 인공지능 준비지수"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#디지털-강대국-지표---데이터-경제",
+    "href": "kwangmyung_20230811.html#디지털-강대국-지표---데이터-경제",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - 데이터 경제",
+    "text": "디지털 강대국 지표 - 데이터 경제"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#디지털-강대국-지표---산업용-로봇",
+    "href": "kwangmyung_20230811.html#디지털-강대국-지표---산업용-로봇",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - 산업용 로봇",
+    "text": "디지털 강대국 지표 - 산업용 로봇"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#디지털-강대국-지표---wef-세계-경쟁력",
+    "href": "kwangmyung_20230811.html#디지털-강대국-지표---wef-세계-경쟁력",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - WEF 세계 경쟁력",
+    "text": "디지털 강대국 지표 - WEF 세계 경쟁력"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#디지털-강대국-지표---imd-디지털-경쟁력",
+    "href": "kwangmyung_20230811.html#디지털-강대국-지표---imd-디지털-경쟁력",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - IMD 디지털 경쟁력",
+    "text": "디지털 강대국 지표 - IMD 디지털 경쟁력"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#디지털-강대국-지표---종합",
+    "href": "kwangmyung_20230811.html#디지털-강대국-지표---종합",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - 종합",
+    "text": "디지털 강대국 지표 - 종합"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#디지털-강대국-지표---종합-시각화",
+    "href": "kwangmyung_20230811.html#디지털-강대국-지표---종합-시각화",
+    "title": "챗GPT",
+    "section": "디지털 강대국 지표 - 종합 시각화",
+    "text": "디지털 강대국 지표 - 종합 시각화"
   }
 ]

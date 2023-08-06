@@ -1,3 +1,13 @@
+## 챗GPT 도서 증정 {.smaller}
+
+> 저자가 직접 저술한 **챗GPT 도서**를 수강생에게 증정합니다.
+
+::: {#book layout-ncol="2"}
+![챗GPT 유닉스 쉘 (23년 8월 출간 예정)](img/book/2023_07_25-챗GPT-유닉스-쉘(아웃라인)-1.jpg){fig-align="center" width="354"}
+
+![챗GPT 데이터 사이언스 (23년 11월 출간 예정)](img/book/book_2nd.png){fig-align="center" width="402"}
+:::
+
 #  {background-image="img/meetup_logo.jpg"}
 
 ::: r-fit-text
@@ -64,12 +74,3 @@
 :::
 
 
-## 챗GPT 도서 증정 {.smaller}
-
-> 저자가 직접 저술한 **챗GPT 도서**를 수강생에게 증정합니다.
-
-::: {#book layout-ncol="2"}
-![챗GPT 유닉스 쉘 (23년 8월 출간 예정)](img/book/2023_07_25-챗GPT-유닉스-쉘(아웃라인)-1.jpg){fig-align="center" width="354"}
-
-![챗GPT 데이터 사이언스 (23년 11월 출간 예정)](img/book/book_2nd.png){fig-align="center" width="402"}
-:::
