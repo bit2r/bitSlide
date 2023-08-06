@@ -11,8 +11,10 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.361">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.4.288">
 
   <meta name="author" content="이광춘">
   <title>발표자료 | 한국 R 사용자회 - 챗GPT</title>
@@ -33,7 +35,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   
   <script type="text/javascript">
@@ -174,7 +195,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -337,6 +359,17 @@
       margin-right: 0; 
     }
   </style>
+  <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+  <script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+  <script src="site_libs/plotly-binding-4.10.2/plotly.js"></script>
+  <script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+  <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+  <link href="site_libs/crosstalk-1.2.0.9000/css/crosstalk.min.css" rel="stylesheet">
+  <script src="site_libs/crosstalk-1.2.0.9000/js/crosstalk.min.js"></script>
+  <link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+  <script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -363,8 +396,10 @@
 <h2>목차</h2>
 <ol type="1">
 <li>강사소개 및 강의개요</li>
-<li><del>체험 삶의 현장</del></li>
-<li><del>오마이뉴스 신문기사</del></li>
+<li>체험 삶의 현장</li>
+<li>오마이뉴스 시민기자</li>
+<li>노동의 분업</li>
+<li><del>수능영어와 수학</del></li>
 <li><del>기본기로 돌아가자</del></li>
 <li><del>챗GPT 데이터 사이언스</del></li>
 <li><del>챗GPT 행정</del></li>
@@ -381,7 +416,7 @@
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure>
 <p><strong>AI 아바타</strong></p>
-<p><a href="img/profile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="img/profile.png" data-top="0" data-right="0" width="300"></a></p>
+<p><a href="img/profile.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="img/profile.png" data-top="0" data-right="0" width="300"></a></p>
 </figure>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -413,7 +448,7 @@
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure>
-<p><a href="img/kwangmyung_logo.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="img/kwangmyung_logo.jpg"></a></p>
+<p><a href="img/kwangmyung_logo.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="img/kwangmyung_logo.jpg"></a></p>
 </figure>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -456,41 +491,48 @@
 <div class="r-stack">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="img/seoul-r-meetup-august.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="img/seoul-r-meetup-august.jpg" width="320"></a></p>
+<p><a href="img/seoul-r-meetup-september.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="img/seoul-r-meetup-september.jpg" width="320"></a></p>
 </figure>
 </div>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="img/seoul-r-meetup-july.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="img/seoul-r-meetup-july.jpg" width="320"></a></p>
-</figure>
-</div>
-</div>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="img/seoulr-r-meetup-june.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="img/seoulr-r-meetup-june.jpg" width="320"></a></p>
+<p><a href="img/seoul-r-meetup-august.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="img/seoul-r-meetup-august.jpg" width="320"></a></p>
 </figure>
 </div>
 </div>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="img/seoul-r-meetup-202305.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="img/seoul-r-meetup-202305.jpg" width="320"></a></p>
+<p><a href="img/seoul-r-meetup-july.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="img/seoul-r-meetup-july.jpg" width="320"></a></p>
 </figure>
 </div>
 </div>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="img/seoul-r-meetup-AsiaR.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="img/seoul-r-meetup-AsiaR.jpg" width="320"></a></p>
+<p><a href="img/seoulr-r-meetup-june.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="img/seoulr-r-meetup-june.jpg" width="320"></a></p>
 </figure>
 </div>
 </div>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="img/seoul-r-meetup-202304.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="img/seoul-r-meetup-202304.jpg" width="320"></a></p>
+<p><a href="img/seoul-r-meetup-202305.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="img/seoul-r-meetup-202305.jpg" width="320"></a></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/seoul-r-meetup-AsiaR.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="img/seoul-r-meetup-AsiaR.jpg" width="320"></a></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/seoul-r-meetup-202304.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="img/seoul-r-meetup-202304.jpg" width="320"></a></p>
 </figure>
 </div>
 </div>
@@ -506,6 +548,7 @@
 <li><strong>23년 6월 서울 R 미트업</strong>: <a href="https://www.meetup.com/seoul-r-meetup/events/293485362/">link</a></li>
 <li><strong>23년 7월 서울 R 미트업</strong>: <a href="https://www.meetup.com/seoul-r-meetup/events/293929603/">link</a></li>
 <li><strong>23년 8월 서울 R 미트업</strong>: <a href="https://www.meetup.com/seoul-r-meetup/events/294651161/">link</a></li>
+<li><strong>23년 9월 서울 R 미트업</strong>: link</li>
 </ul></li>
 <li>세계 R 미트업 현황 (Global R Meetup Dashboard): <a href="https://r-community.org/usergroups/">link</a></li>
 <li>한국 R 사용자회 (Korea R User Group): <a href="https://r2bit.com/">link</a></li>
@@ -516,12 +559,1257 @@
 </section>
 </div>
 </div>
-
-<p><img src="_extensions/padsInsper/insper/logo.png" class="slide-logo"></p>
-<div class="footer footer-default">
-<p>한국 R 사용자회 <a href="https://r2bit.com/chatGPT/">chatGPT</a>. theme <a href="https://github.com/padsInsper/quarto-insper-theme">insper</a> 소스코드 <a href="https://github.com/padsInsper/quarto-insper-theme">GitHub</a>.</p>
+</section>
+<section id="챗gpt-도서-증정" class="slide level2 smaller">
+<h2>챗GPT 도서 증정</h2>
+<blockquote>
+<p>저자가 직접 저술한 <strong>챗GPT 도서</strong>를 수강생에게 증정합니다.</p>
+</blockquote>
+<div id="book" class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 46.8%;justify-content: center;">
+<figure>
+<p><a href="img/book/2023_07_25-챗GPT-유닉스-쉘(아웃라인)-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="챗GPT 유닉스 쉘 (23년 8월 출간 예정)"><img data-src="img/book/2023_07_25-챗GPT-유닉스-쉘(아웃라인)-1.jpg" width="354"></a></p>
+<figcaption>챗GPT 유닉스 쉘 (23년 8월 출간 예정)</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 53.2%;justify-content: center;">
+<figure>
+<p><a href="img/book/book_2nd.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="챗GPT 데이터 사이언스 (23년 11월 출간 예정)"><img data-src="img/book/book_2nd.png" width="402"></a></p>
+<figcaption>챗GPT 데이터 사이언스 (23년 11월 출간 예정)</figcaption>
+</figure>
+</div>
+</div>
 </div>
 </section></section>
+<section>
+<section id="삶의-현장-사용자-개발자" class="title-slide slide level1 center">
+<h1>삶의 현장 <br> 사용자 / 개발자</h1>
+
+</section>
+<section id="백만1억-사용자" class="slide level2">
+<h2>백만~1억 사용자 <i class="fa-solid fa-rocket" aria-hidden="true"></i></h2>
+<p>백만, 5천만, 1억 가입자를 가질 때까지 걸린 소요시간</p>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">전화기</a></li><li><a href="#tabset-2-2">기술 진화</a></li><li><a href="#tabset-2-3">chatGPT 백만</a></li><li><a href="#tabset-2-4">빅3 서비스</a></li><li><a href="#tabset-2-5">1억명 (소요 달수)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/time-to-reach-springer.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="[@song2019digital]"><img data-src="img/time-to-reach-springer.png" width="600"></a></p>
+<figcaption><span class="citation" data-cites="song2019digital">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Song, 2019</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/hbr_trends.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Rita McGrath(November 25, 2013), “The Pace of Technology Adoption is Speeding Up”, Harvard Business Review"><img data-src="img/hbr_trends.png"></a></p>
+<figcaption><a href="https://hbr.org/2013/11/the-pace-of-technology-adoption-is-speeding-up">Rita McGrath(November 25, 2013), “The Pace of Technology Adoption is Speeding Up”, Harvard Business Review</a></figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/one_million_users.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img data-src="img/one_million_users.jpg" width="600"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-2-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/time-to-reach-5days.jfif" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="출처: https://twitter.com/umarsaif/status/1610932387185315840"><img data-src="img/time-to-reach-5days.jfif"></a></p>
+<figcaption>출처: <a href="https://twitter.com/umarsaif/status/1610932387185315840" class="uri">https://twitter.com/umarsaif/status/1610932387185315840</a></figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/time-to-reach-100M.jfif" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="출처: https://twitter.com/EconomyApp/status/1622029832099082241"><img data-src="img/time-to-reach-100M.jfif" width="600"></a></p>
+<figcaption>출처: <a href="https://twitter.com/EconomyApp/status/1622029832099082241" class="uri">https://twitter.com/EconomyApp/status/1622029832099082241</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="ai를-바라보는-관점" class="slide level2">
+<h2>AI를 바라보는 관점</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">트위터 Santiago I</a></li><li><a href="#tabset-3-2">트위터 Santiago II</a></li><li><a href="#tabset-3-3">버스탄 두 남자</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/santiago_01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img data-src="img/santiago_01.png"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/santiago_02.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img data-src="img/santiago_02.png"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/two_men_on_a_bus.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img data-src="img/two_men_on_a_bus.png" width="600"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="대장-alpha" class="slide level2">
+<h2>3 대장 + <span class="math inline">\(\alpha\)</span></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/openai-three-pillars.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img data-src="img/openai-three-pillars.png"></a></p>
+</figure>
+</div>
+</section>
+<section id="체험-삶의-현장" class="slide level2">
+<h2>체험 삶의 현장</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">현대백화점 (글쓰기)</a></li><li><a href="#tabset-4-2">마이크로소프트 (코딩)</a></li><li><a href="#tabset-4-3">네이버 (그리기)</a></li><li><a href="#tabset-4-4">로스쿨 (추론)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="columns">
+<div class="column">
+<p><br> <a href="img/hyundai-03.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img data-src="img/hyundai-03.jpg"></a></p>
+</div><div class="column">
+<p><br> <a href="img/hyundai-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img data-src="img/hyundai-02.jpg"></a></p>
+</div>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/productivity_at_microsoft.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img data-src="img/productivity_at_microsoft.png"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<p><br></p>
+<ul>
+<li>신규 코드의 <strong>40%</strong>가 Copilot으로 작성</li>
+<li><strong>75%의 개발자</strong>가 업무에 더 큰 성취감을 느꼈습니다.</li>
+<li><strong>87%의 개발자</strong>가 정신적 노력을 절약하는 데 도움이 되었다고 답했습니다.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="tabset-4-3">
+<p><br> <br> <a href="img/webtoon.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img data-src="img/webtoon.png"></a></p>
+</div>
+<div id="tabset-4-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/lsat_g.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img data-src="img/lsat_g.png" width="636"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li>웹툰 출처: <span class="citation" data-cites="webtoon2021">(<a href="#/참고문헌" role="doc-biblioref" onclick="">김현진, 2021</a>)</span></li>
+<li>로스쿨 출처: <a href="https://r2bit.com/chatGPT/gpt4_performance.html" class="uri">https://r2bit.com/chatGPT/gpt4_performance.html</a> <span class="citation" data-cites="openai2023gpt4">(<a href="#/참고문헌" role="doc-biblioref" onclick="">OpenAI, 2023</a>)</span></li>
+</ul>
+</div></aside></section>
+<section id="시장-와해-사례-서점" class="slide level2">
+<h2>시장 와해 사례: 서점 <i class="fa-solid fa-book" aria-hidden="true"></i></h2>
+<p>공상과학 및 판타지 잡지 클라크스월드(Clarkesworld)는 AI가 생성한 소설라는 비난을 받은 후 신규 공상과학소설이 급증한 것이 AI 기계로 작성된 원인을 큰 것으로 파악하고 2월 20일부터 공식적으로 투고를 중단했다.</p>
+<div id="sci-fiction" class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><a href="img/shutdown-01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="2023-02-15 기준"><img data-src="img/shutdown-01.jpg"></a></p>
+<figcaption>2023-02-15 기준</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<p><a href="img/shutdown-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="2023-02-20 기준"><img data-src="img/shutdown-02.jpg"></a></p>
+<figcaption>2023-02-20 기준</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="column-margin"><a href="http://neil-clarke.com/a-concerning-trend/">Neil Clark (2023-02-15), “A Concerning Trend”, CLARKESWORLD MAGAZINE</a></span></p>
+</section>
+<section id="시장-와해-사례-병원" class="slide level2 smaller">
+<h2>시장 와해 사례: 병원 <i class="fa-solid fa-hospital" aria-hidden="true"></i></h2>
+<p><br></p>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/japan-medical-exam.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img data-src="img/japan-medical-exam.jpg"></a></p>
+</figure>
+</div>
+</div><div class="column">
+<p>일본과 미국의 국제 연구팀에 따르면 미국에 본사를 둔 OpenAI가 개발한 인공지능 모델의 최신 버전이 일본의 의사 국가시험에 합격할 수 있는 능력을 입증했다고 합니다.</p>
+<p>그러나 AI는 인간 수험생의 평균 점수보다 낮은 점수를 받았고 환자의 안락사를 유도하는 옵션을 선택하는 등 일부 부적절한 답변을 제공했습니다.</p>
+<p>워싱턴 대학의 자연어 처리 전문 연구원 정고 카사이(Jungo Kasai)를 포함한 연구팀은 2018년부터 2022년까지 5년간 OpenAI의 대화형 AI 시스템인 ChatGPT와 GPT-4를 사용하여 국가 의사 자격시험을 치렀습니다.</p>
+<p>ChatGPT는 모든 시험에서 불합격했습니다. 하지만 최신 시스템인 GPT-4는 모든 시험에서 합격점을 넘겼습니다.</p>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li>자료출처: <a href="https://japannews.yomiuri.co.jp/society/general-news/20230510-108846/">The Yomiuri Shimbun, “AI Demonstrates Passing Score on Medical Practitioner Exam in Japan”, May 10, 2023</a></li>
+</ul>
+</div></aside></section>
+<section id="시장-와해-사례-사교육" class="slide level2 smaller">
+<h2>시장 와해 사례: 사교육 <i class="fa-solid fa-school" aria-hidden="true"></i></h2>
+<div class="columns">
+<div class="column">
+<p></p><div id="tweet-52242"></div><script>tweet={"url":"https:\/\/twitter.com\/khakimenez\/status\/1655110020999319552","author_name":"きMeñez ⠃⠗⠕⠺⠝","author_url":"https:\/\/twitter.com\/khakimenez","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EThe first victim of ChatGPT.\u003Ca href=\"https:\/\/twitter.com\/hashtag\/chegg?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#chegg\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/openai?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#openai\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/gpt?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#gpt\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/ChatGPT?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#ChatGPT\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/GPT4?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#GPT4\u003C\/a\u003E \u003Ca href=\"https:\/\/t.co\/CzAx8mFu11\"\u003Epic.twitter.com\/CzAx8mFu11\u003C\/a\u003E\u003C\/p\u003E&mdash; きMeñez ⠃⠗⠕⠺⠝ (@khakimenez) \u003Ca href=\"https:\/\/twitter.com\/khakimenez\/status\/1655110020999319552?ref_src=twsrc%5Etfw\"\u003EMay 7, 2023\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-52242").innerHTML = tweet["html"];</script><p></p>
+</div><div class="column">
+<h5 id="chatgpt가-비즈니스를-죽이고-있다고-회사가-말한-후-chegg-주가는-40-이상-하락했다.">ChatGPT가 비즈니스를 죽이고 있다고 회사가 말한 후 Chegg 주가는 40 % 이상 하락했다.</h5>
+<p><a href="https://www.chegg.com/">Chegg</a>의 주가는 온라인 교육 회사가 ChatGPT가 성장을 저해하고 있다고 밝힌 후 폭락했습니다.</p>
+<blockquote>
+<p>“올해 상반기에는 ChatGPT가 신규 계정 성장에 눈에 띄는 영향을 미치지 않았고 신규 가입에 대한 기대치를 충족하고 있었습니다.”라고 월요일 저녁 실적 발표에서 댄 로젠스웨이그 CEO는 말했습니다. “하지만 3월부터 ChatGPT에 대한 학생들의 관심이 크게 급증했습니다. 이제 신규 고객 성장률에 영향을 미치고 있다고 생각합니다.”</p>
+</blockquote>
+<p>Chegg, Inc.는 캘리포니아주 산타클라라에 본사를 둔 미국 교육 기술 회사로 숙제 도움, 디지털 및 실제 교과서 대여, 교과서, 온라인 튜터링 및 기타 학생 서비스를 제공.</p>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li>자료출처: <a href="https://www.cnbc.com/2023/05/02/chegg-drops-more-than-40percent-after-saying-chatgpt-is-killing-its-business.html">CNBC, “Chegg shares drop more than 40% after company says ChatGPT is killing its business”, May 2, 2023</a></li>
+</ul>
+</div></aside></section>
+<section id="시장-와해-사례-미디어-광고-그룹" class="slide level2 smaller">
+<h2>시장 와해 사례: 미디어 광고 그룹 <i class="fa-solid fa-rectangle-ad" aria-hidden="true"></i></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="openai와-펜실베이나-대학교">OpenAI와 펜실베이나 대학교</h3>
+<p>인공 지능이 개방되고 제너레이티브 AI를 제공하는 플랫폼을 통해 대중화됨에 따라 전체 직업의 최소 80%에서 업무가 변화할 것으로 예측된다. 대학 교육이 필요한 직업이 가장 큰 영향을 받을 것이며, 많은 경우 사람들이 수행하는 업무의 절반 이상이 AI의 영향을 받을 수 있다. 중요한 점은 영향을 받는 직업은 대체되는 것이 아니라 생성형 AI에 의해 크게 영향을 받거나 증강될 것이라는 점이다. <span class="citation" data-cites="eloundou2023gpts">(<a href="#/참고문헌" role="doc-biblioref" onclick="">Eloundou 기타, 2023</a>)</span></p>
+<ul>
+<li>통역사 및 번역가</li>
+<li>설문 조사 연구원</li>
+<li>시인, 작사가 및 창작 작가</li>
+<li>동물 과학자</li>
+<li><strong>홍보 전문가</strong></li>
+<li>수학자 / 세무사 / 금융 정량 분석가</li>
+<li>웹 및 디지털 인터페이스 디자이너</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="설문조사와-광고기업">설문조사와 광고기업</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/kpf_survey.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="[@kpf2023survey]"><img data-src="img/kpf_survey.jpg"></a></p>
+<figcaption><span class="citation" data-cites="kpf2023survey">(<a href="#/참고문헌" role="doc-biblioref" onclick="">양정애, 2023</a>)</span></figcaption>
+</figure>
+</div>
+<blockquote>
+<p>중국 최대 미디어 광고 그룹이 카피라이터와 디자이너 등에 대한 아웃소싱(외주)을 무기한 중단하고 챗GPT 같은 생성형 인공지능(AI) 기구로 대체를 선언했다. 14일 홍콩 사우스차이나모닝포스트(SCMP)에 따르면, 광고회사 블루포커스는 내부 이메일을 통해 “생성형 AI를 전적으로 수용하기 위해 카피라이터, 디자이너, 단기 계약직 등 특정 분야의 아웃소싱 비용을 즉시 절감할 것”이라고 밝혔다.</p>
+</blockquote>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://v.daum.net/v/Kcnup4UNU7">챗GPT로 사라질 직업 1위는 세무사 아니었네…“번역가·통역사 더 위험”</a></li>
+<li><a href="https://n.news.naver.com/mnews/article/215/0001095495">中최대 광고 기업 “단기 계약직, AI로 대체한다”</a></li>
+</ul>
+</div></aside></section>
+<section id="시장-와해-사례-stackoverflow" class="slide level2 smaller">
+<h2>시장 와해 사례: Stackoverflow <i class="fa-solid fa-code" aria-hidden="true"></i></h2>
+<p><br></p>
+<div class="columns">
+<div class="column">
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/stack_overflow_chatgpt_2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img data-src="img/stack_overflow_chatgpt_2-1.png"></a></p>
+</figure>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/stack_overflow_chatgpt_3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img data-src="img/stack_overflow_chatgpt_3-1.png"></a></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/stack_overflow_chatgpt_4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img data-src="img/stack_overflow_chatgpt_4-1.png"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column">
+<h5 id="개발자들은-점점-더-많은-조언을-stackoverflow-게시판이-아닌-ai-챗봇과-github-copilot에서-얻고-있다.">개발자들은 점점 더 많은 조언을 Stackoverflow 게시판이 아닌 AI 챗봇과 GitHub CoPilot에서 얻고 있다.</h5>
+<ul>
+<li><a href="https://stackoverflow.com/">스택 오버플로</a>의 트래픽은 2022년 1월 이후 매월 평균 6%씩 감소하고 있으며, 3월에는 13.9% 감소했다.</li>
+<li>ChatGPT는 11월 말에 출시되어 전년 대비 실적은 없지만, <a href="https://chat.openai.com/">웹사이트</a>는 그 짧은 시간 동안 전 세계 트래픽에서 Microsoft의 Bing 검색 엔진보다 더 많은 트래픽을 기록하며 세계에서 가장 인기 있는 디지털 자산 중 하나로 자리 잡았다. 3월에는 16억 건, 4월 상반기에는 9억 2,070만 건이 방문했다.</li>
+<li>GitHub 웹사이트도 3월에 전년 대비 26.4% 증가한 5억 2,400만 건의 트래픽을 기록하는 등 강력한 성장세를 보이고 있는데, 일반적으로 Visual Studio Code와 같은 코드 편집기 내에서 이루어지는 CoPilot의 모든 사용량이 반영되어 있지는 않지만, 서비스 구독을 위해 웹사이트를 방문하는 사람들도 포함된다.</li>
+<li>2월부터 3월까지 GitHub CoPilot 무료 평가판 가입 페이지 방문 수는 3배 이상 증가하여 80만 건을 돌파했다.</li>
+</ul>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li>자료출처: <a href="https://www.similarweb.com/blog/insights/ai-news/stack-overflow-chatgpt/">David F. Carr (April 27, 2023), “Developers increasingly get advice from AI chatbots and GitHub CoPilot rather than Stack Overflow message boards”, Similarweb Blog</a></li>
+</ul>
+</div></aside></section>
+<section id="실업통계" class="slide level2">
+<h2>실업통계</h2>
+<p><br></p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure>
+<p><strong>미국 실직사유</strong></p>
+<p><a href="img/ai_jobs.jfif" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img data-src="img/ai_jobs.jfif"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure>
+<p><strong>중앙일보 시각화</strong></p>
+<p><a href="img/ai_jobs_korean.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img data-src="img/ai_jobs_korean.jpg"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 33.3%;justify-content: center;">
+<figure>
+<p><strong>사무노동자 변화</strong></p>
+<p><a href="img/ai_jobs_white_color.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img data-src="img/ai_jobs_white_color.jpg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://n.news.naver.com/mnews/article/025/0003284701?sid=101">김남준 (2023.06.05.), “카피라이터까지…챗GPT발 고소득 전문직 실직 시작됐다”, 중앙일보</a></li>
+</ul>
+</div></aside></section>
+<section id="실습-자료조사" class="slide level2 smaller">
+<h2>실습: 자료조사</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">실제자료</a></li><li><a href="#tabset-5-2">프롬프트</a></li><li><a href="#tabset-5-3">출력결과</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<div class="cell">
+<div class="cell-output-display">
+<div id="dzakqfydiz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#dzakqfydiz table {
+  font-family: 'IBM Plex Sans KR', sans-serif, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dzakqfydiz thead, #dzakqfydiz tbody, #dzakqfydiz tfoot, #dzakqfydiz tr, #dzakqfydiz td, #dzakqfydiz th {
+  border-style: none;
+}
+
+#dzakqfydiz p {
+  margin: 0;
+  padding: 0;
+}
+
+#dzakqfydiz .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dzakqfydiz .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dzakqfydiz .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dzakqfydiz .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dzakqfydiz .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dzakqfydiz .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dzakqfydiz .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dzakqfydiz .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dzakqfydiz .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dzakqfydiz .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dzakqfydiz .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dzakqfydiz .gt_column_spanner {
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: #334422;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dzakqfydiz .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dzakqfydiz .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dzakqfydiz .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#dzakqfydiz .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dzakqfydiz .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dzakqfydiz .gt_row {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dzakqfydiz .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dzakqfydiz .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dzakqfydiz .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dzakqfydiz .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dzakqfydiz .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dzakqfydiz .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#dzakqfydiz .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dzakqfydiz .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dzakqfydiz .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dzakqfydiz .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#dzakqfydiz .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dzakqfydiz .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#dzakqfydiz .gt_table_body {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #FFFFFF;
+}
+
+#dzakqfydiz .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dzakqfydiz .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dzakqfydiz .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dzakqfydiz .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dzakqfydiz .gt_left {
+  text-align: left;
+}
+
+#dzakqfydiz .gt_center {
+  text-align: center;
+}
+
+#dzakqfydiz .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dzakqfydiz .gt_font_normal {
+  font-weight: normal;
+}
+
+#dzakqfydiz .gt_font_bold {
+  font-weight: bold;
+}
+
+#dzakqfydiz .gt_font_italic {
+  font-style: italic;
+}
+
+#dzakqfydiz .gt_super {
+  font-size: 65%;
+}
+
+#dzakqfydiz .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dzakqfydiz .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dzakqfydiz .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dzakqfydiz .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dzakqfydiz .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dzakqfydiz .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dzakqfydiz .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="순위">순위</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="영화명">영화명</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="개봉일">개봉일</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="매출액">매출액</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="관객수">관객수</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="스크린수">스크린수</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="국적">국적</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="color: #A9A9A9; font-family: 'Source Sans Pro'; text-transform: uppercase;" scope="col" id="배급사">배급사</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="순위" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1</td>
+<td headers="영화명" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">명량</td>
+<td headers="개봉일" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2014-07-30</td>
+<td headers="매출액" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,357</td>
+<td headers="관객수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,761</td>
+<td headers="스크린수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1587</td>
+<td headers="국적" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">한국</td>
+<td headers="배급사" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">(주)씨제이이엔엠</td></tr>
+    <tr><td headers="순위" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2</td>
+<td headers="영화명" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">극한직업</td>
+<td headers="개봉일" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2019-01-23</td>
+<td headers="매출액" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,396</td>
+<td headers="관객수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,626</td>
+<td headers="스크린수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1978</td>
+<td headers="국적" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">한국</td>
+<td headers="배급사" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">(주)씨제이이엔엠</td></tr>
+    <tr><td headers="순위" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">3</td>
+<td headers="영화명" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">신과함께-죄와 벌</td>
+<td headers="개봉일" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2017-12-20</td>
+<td headers="매출액" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,157</td>
+<td headers="관객수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,441</td>
+<td headers="스크린수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1912</td>
+<td headers="국적" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">한국</td>
+<td headers="배급사" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">롯데쇼핑㈜롯데엔터테인먼트</td></tr>
+    <tr><td headers="순위" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">4</td>
+<td headers="영화명" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">국제시장</td>
+<td headers="개봉일" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2014-12-17</td>
+<td headers="매출액" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,109</td>
+<td headers="관객수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,426</td>
+<td headers="스크린수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">966</td>
+<td headers="국적" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">한국</td>
+<td headers="배급사" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">(주)씨제이이엔엠</td></tr>
+    <tr><td headers="순위" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">5</td>
+<td headers="영화명" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">어벤져스: 엔드게임</td>
+<td headers="개봉일" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2019-04-24</td>
+<td headers="매출액" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,222</td>
+<td headers="관객수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,393</td>
+<td headers="스크린수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2835</td>
+<td headers="국적" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">미국</td>
+<td headers="배급사" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">월트디즈니컴퍼니코리아 유한책임회사</td></tr>
+    <tr><td headers="순위" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">6</td>
+<td headers="영화명" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">겨울왕국 2</td>
+<td headers="개봉일" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2019-11-21</td>
+<td headers="매출액" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,148</td>
+<td headers="관객수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,375</td>
+<td headers="스크린수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2648</td>
+<td headers="국적" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">미국</td>
+<td headers="배급사" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">월트디즈니컴퍼니코리아 유한책임회사</td></tr>
+    <tr><td headers="순위" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">7</td>
+<td headers="영화명" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">아바타</td>
+<td headers="개봉일" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2009-12-17</td>
+<td headers="매출액" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,284</td>
+<td headers="관객수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,362</td>
+<td headers="스크린수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">912</td>
+<td headers="국적" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">미국</td>
+<td headers="배급사" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">주식회사 해리슨앤컴퍼니,이십세기폭스코리아(주)</td></tr>
+    <tr><td headers="순위" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">8</td>
+<td headers="영화명" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">베테랑</td>
+<td headers="개봉일" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2015-08-05</td>
+<td headers="매출액" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,052</td>
+<td headers="관객수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,341</td>
+<td headers="스크린수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1064</td>
+<td headers="국적" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">한국</td>
+<td headers="배급사" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">(주)씨제이이엔엠</td></tr>
+    <tr><td headers="순위" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">9</td>
+<td headers="영화명" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">괴물</td>
+<td headers="개봉일" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2006-07-27</td>
+<td headers="매출액" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">0</td>
+<td headers="관객수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,302</td>
+<td headers="스크린수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">167</td>
+<td headers="국적" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">한국</td>
+<td headers="배급사" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">(주)쇼박스</td></tr>
+    <tr><td headers="순위" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">10</td>
+<td headers="영화명" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">도둑들</td>
+<td headers="개봉일" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">2012-07-25</td>
+<td headers="매출액" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">937</td>
+<td headers="관객수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1,298</td>
+<td headers="스크린수" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">1072</td>
+<td headers="국적" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">한국,홍콩</td>
+<td headers="배급사" class="gt_row gt_center" style="font-family: 'Source Sans Pro'; font-weight: 400;">(주)쇼박스</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li>자료출처: 영진위 <a href="https://www.kobis.or.kr/kobis/business/stat/offc/findFormerBoxOfficeList.do">역대 박스오피스 (공식통계기준)</a></li>
+</ul>
+</div>
+<div id="tabset-5-2">
+<p><br></p>
+<pre><code>관람객 기준으로 가장 많은 관람객을 갖는 한국 영화 상위 5개 알려주세요 시놉시스는 200자 길이로 작성해주세요. 출력형식은 다음과 같은 형태로 마크다운 소스파일 형태로 출력해 주세요.
+
+|순위|영화명| 연도|감독|주연| 제작사|배급사|관객수|시놉시스|</code></pre>
+<p><br> <br></p>
+<ul>
+<li><a href="https://sharegpt.com/c/AN4egco">ShareGPT</a></li>
+</ul>
+</div>
+<div id="tabset-5-3">
+<p>죄송합니다, 그러나 저의 지식 업데이트는 2021년 9월까지이므로, 그 시점 이후의 정보를 제공할 수는 없습니다. 그럼에도 불구하고, 2021년 9월까지 기준으로 가장 많은 관람객을 가진 한국 영화 상위 5개를 제공하겠습니다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/gg_edu_survey.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img data-src="img/gg_edu_survey.jpg" width="481"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="오마이뉴스-시민기자" class="title-slide slide level1 center">
+<h1>오마이뉴스 <br> 시민기자</h1>
+
+</section>
+<section id="챗gpt-뉴스기사" class="slide level2 smaller">
+<h2>챗GPT 뉴스기사</h2>
+<div class="columns">
+<div class="column">
+<h3 id="신문기사">신문기사</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/omn_precinct.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img data-src="img/omn_precinct.jpg" width="588"></a></p>
+</figure>
+</div>
+</div><div class="column">
+<h3 id="작업흐름">작업흐름</h3>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph TB
+    A[기사 착상] --&gt; B[데이터 확보]
+    B --&gt; C[분석]
+    C --&gt; D[표/그래프]
+    D --&gt; E[기사작성]
+    
+    style A fill:#f9d79c,stroke:#f39c12,stroke-width:2px
+    style B fill:#aed6f1,stroke:#2e86c1,stroke-width:2px
+    style C fill:#d7bde2,stroke:#884ea0,stroke-width:2px
+    style D fill:#a2d9ce,stroke:#17a589,stroke-width:2px
+    style E fill:#fcf3cf,stroke:#f1c40f,stroke-width:2px
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://omn.kr/24x03">지난 총선 민주당 데이터 보니, 수도권도 ‘단수공천’ 집중 ‘총선 후보자선출규정 특별당규 개정’ 청원동의 5만 넘어… 민주당의 답변에 ‘주목’</a></li>
+</ul>
+</div></aside></section>
+<section id="챗gpt-뉴스기사-작성" class="slide level2 smaller">
+<h2>챗GPT 뉴스기사 작성</h2>
+<div class="panel-tabset">
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">뉴스 착상</a></li><li><a href="#tabset-6-2">데이터셋</a></li><li><a href="#tabset-6-3">분석과 코딩</a></li><li><a href="#tabset-6-4">표와 그래프</a></li><li><a href="#tabset-6-5">챗GPT 기사작성</a></li><li><a href="#tabset-6-6">뉴스송고</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/omn_petition.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img data-src="img/omn_petition.jpg" width="549"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://petitions.theminjoo.kr/23175005A8KKNN2">제22대 총선 후보자선출규정 특별당규 개정 청원</a></li>
+</ul>
+</div>
+<div id="tabset-6-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/omn_wiki.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img data-src="img/omn_wiki.jpg" width="549"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%A0%9C21%EB%8C%80_%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90_%EC%84%A0%EA%B1%B0_%EB%8D%94%EB%B6%88%EC%96%B4%EB%AF%BC%EC%A3%BC%EB%8B%B9_%ED%9B%84%EB%B3%B4_%EB%AA%A9%EB%A1%9D">대한민국 제21대 국회의원 선거 더불어민주당 후보 목록</a></li>
+</ul>
+</div>
+<div id="tabset-6-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/omn_coding.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img data-src="img/omn_coding.jpg" width="549"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://r2bit.com/map_challenge/precinct.html">제22대 국회의원 선거구</a></li>
+</ul>
+</div>
+<div id="tabset-6-4">
+<div class="columns">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/omn_table.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img data-src="img/omn_table.png" width="192"></a></p>
+</figure>
+</div><div class="column">
+
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/omn_graph.png" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img data-src="img/omn_graph.png" width="500"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-6-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/omn_chatGPT.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img data-src="img/omn_chatGPT.jpg" width="549"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://chat.openai.com/c/22df0b60-30d2-4d3a-ae5f-2115cb5893f3">제22대 총선 후보자선출규정 개정 청원</a></li>
+</ul>
+</div>
+<div id="tabset-6-6">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/omn_submit.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img data-src="img/omn_submit.jpg" width="549"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="사람과-ai-분업" class="title-slide slide level1 center">
+<h1>사람과 AI 분업</h1>
+
+</section>
+<section id="아담-스미스-국부론" class="slide level2 smaller">
+<h2>아담 스미스, “국부론”</h2>
+<p><br> <br></p>
+<div class="columns">
+<div class="column">
+<h3 id="핀-공장">핀 공장</h3>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/division_of_labor.png" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img data-src="img/division_of_labor.png"></a></p>
+</figure>
+</div>
+</div><div class="column">
+<h3 id="노동의-분업">노동의 분업</h3>
+<blockquote>
+<p><strong>노동의 분업(Division of Labor)</strong>이란 생산 과정을 여러 단계로 나누어 각각의 단계를 서로 다른 사람이나 그룹이 수행함으로써 생산력을 크게 증가시킴</p>
+</blockquote>
+<ol type="1">
+<li>각 작업자가 자신의 특정 과업에 더욱 숙련되게 되므로 작업 속도가 빨라짐</li>
+<li>작업 간 전환 시간이 줄어듦</li>
+<li>분업을 통해 특화된 기계와 장비 개발과 사용</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="세무사-업무-변천과정" class="slide level2">
+<h2>세무사 업무 변천과정</h2>
+<p><br> <br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/tax-preparation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-46" title="세무 업무 변천사"><img data-src="img/tax-preparation.png"></a></p>
+<figcaption>세무 업무 변천사</figcaption>
+</figure>
+</div>
+
+<aside><div>
+<p><a href="https://statkclee.github.io/ds-authoring/ds-bundang-2019.html">이광춘 (2019-12-04), “자동화(Automation) - <del>로봇</del> 자동화가 빼앗는 일자리 그리고 나”, 분당 서현 청소년 수련관</a></p>
+</div></aside></section>
+<section id="생산성과-임금-격차" class="slide level2">
+<h2>생산성과 임금 격차</h2>
+<p><br></p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-24240abfd4c2f77b1e06" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-24240abfd4c2f77b1e06">{"x":{"data":[{"x":[1948,1949,1950,1951,1952,1953,1954,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[0,0.046900000000000004,0.011200000000000015,0.0049999999999999906,0.0047000000000000097,0.014100000000000001,0.020400000000000001,0.023199999999999998,0.072999999999999954,0.070399999999999963,0.053599999999999925,0.04830000000000001,0.05319999999999997,0.034699999999999953,0.0252,0.0017000000000000348,0.016199999999999881,0.026499999999999968,0.052499999999999991,0.053000000000000047,0.060799999999999965,0.034599999999999964,0.035399999999999987,0.054400000000000004,0.008600000000000052,0.060000000000000053,0.067800000000000082,0.11249999999999993,0.14240000000000008,0.13230000000000008,0.12609999999999999,0.14859999999999995,0.18719999999999992,0.23139999999999994,0.20669999999999988,0.26019999999999988,0.33180000000000021,0.37470000000000003,0.41029999999999989,0.44130000000000014,0.47989999999999988,0.5018999999999999,0.54580000000000028,0.56480000000000008,0.64280000000000004,0.65049999999999975,0.66649999999999987,0.68830000000000002,0.73369999999999991,0.75850000000000006,0.76939999999999975,0.81480000000000008,0.86509999999999987,0.88109999999999977,0.92009999999999992,0.99639999999999995,1.0872999999999997,1.1555999999999997,1.1773,1.1833,1.2000000000000002,1.1945000000000001,1.2722999999999998,1.2973999999999999,1.3306999999999998,1.3256000000000001,1.3383,1.3333999999999999,1.3195000000000001,1.3511,1.3728],"text":["Year: 1948<br />value: 0.0000<br />metric: gap","Year: 1949<br />value: 0.0469<br />metric: gap","Year: 1950<br />value: 0.0112<br />metric: gap","Year: 1951<br />value: 0.0050<br />metric: gap","Year: 1952<br />value: 0.0047<br />metric: gap","Year: 1953<br />value: 0.0141<br />metric: gap","Year: 1954<br />value: 0.0204<br />metric: gap","Year: 1955<br />value: 0.0232<br />metric: gap","Year: 1956<br />value: 0.0730<br />metric: gap","Year: 1957<br />value: 0.0704<br />metric: gap","Year: 1958<br />value: 0.0536<br />metric: gap","Year: 1959<br />value: 0.0483<br />metric: gap","Year: 1960<br />value: 0.0532<br />metric: gap","Year: 1961<br />value: 0.0347<br />metric: gap","Year: 1962<br />value: 0.0252<br />metric: gap","Year: 1963<br />value: 0.0017<br />metric: gap","Year: 1964<br />value: 0.0162<br />metric: gap","Year: 1965<br />value: 0.0265<br />metric: gap","Year: 1966<br />value: 0.0525<br />metric: gap","Year: 1967<br />value: 0.0530<br />metric: gap","Year: 1968<br />value: 0.0608<br />metric: gap","Year: 1969<br />value: 0.0346<br />metric: gap","Year: 1970<br />value: 0.0354<br />metric: gap","Year: 1971<br />value: 0.0544<br />metric: gap","Year: 1972<br />value: 0.0086<br />metric: gap","Year: 1973<br />value: 0.0600<br />metric: gap","Year: 1974<br />value: 0.0678<br />metric: gap","Year: 1975<br />value: 0.1125<br />metric: gap","Year: 1976<br />value: 0.1424<br />metric: gap","Year: 1977<br />value: 0.1323<br />metric: gap","Year: 1978<br />value: 0.1261<br />metric: gap","Year: 1979<br />value: 0.1486<br />metric: gap","Year: 1980<br />value: 0.1872<br />metric: gap","Year: 1981<br />value: 0.2314<br />metric: gap","Year: 1982<br />value: 0.2067<br />metric: gap","Year: 1983<br />value: 0.2602<br />metric: gap","Year: 1984<br />value: 0.3318<br />metric: gap","Year: 1985<br />value: 0.3747<br />metric: gap","Year: 1986<br />value: 0.4103<br />metric: gap","Year: 1987<br />value: 0.4413<br />metric: gap","Year: 1988<br />value: 0.4799<br />metric: gap","Year: 1989<br />value: 0.5019<br />metric: gap","Year: 1990<br />value: 0.5458<br />metric: gap","Year: 1991<br />value: 0.5648<br />metric: gap","Year: 1992<br />value: 0.6428<br />metric: gap","Year: 1993<br />value: 0.6505<br />metric: gap","Year: 1994<br />value: 0.6665<br />metric: gap","Year: 1995<br />value: 0.6883<br />metric: gap","Year: 1996<br />value: 0.7337<br />metric: gap","Year: 1997<br />value: 0.7585<br />metric: gap","Year: 1998<br />value: 0.7694<br />metric: gap","Year: 1999<br />value: 0.8148<br />metric: gap","Year: 2000<br />value: 0.8651<br />metric: gap","Year: 2001<br />value: 0.8811<br />metric: gap","Year: 2002<br />value: 0.9201<br />metric: gap","Year: 2003<br />value: 0.9964<br />metric: gap","Year: 2004<br />value: 1.0873<br />metric: gap","Year: 2005<br />value: 1.1556<br />metric: gap","Year: 2006<br />value: 1.1773<br />metric: gap","Year: 2007<br />value: 1.1833<br />metric: gap","Year: 2008<br />value: 1.2000<br />metric: gap","Year: 2009<br />value: 1.1945<br />metric: gap","Year: 2010<br />value: 1.2723<br />metric: gap","Year: 2011<br />value: 1.2974<br />metric: gap","Year: 2012<br />value: 1.3307<br />metric: gap","Year: 2013<br />value: 1.3256<br />metric: gap","Year: 2014<br />value: 1.3383<br />metric: gap","Year: 2015<br />value: 1.3334<br />metric: gap","Year: 2016<br />value: 1.3195<br />metric: gap","Year: 2017<br />value: 1.3511<br />metric: gap","Year: 2018<br />value: 1.3728<br />metric: gap"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"gap","legendgroup":"gap","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":1.1338582677165354,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1948,1949,1950,1951,1952,1953,1954,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[0,0.062400000000000004,0.10460000000000001,0.11739999999999999,0.1502,0.2082,0.23479999999999998,0.28699999999999998,0.33889999999999998,0.37079999999999996,0.38079999999999997,0.42460000000000003,0.45379999999999998,0.47839999999999994,0.5232,0.54859999999999998,0.58320000000000005,0.62270000000000003,0.64700000000000002,0.66679999999999995,0.71050000000000002,0.74390000000000001,0.7681,0.81659999999999999,0.91339999999999999,0.90960000000000008,0.87049999999999994,0.86860000000000004,0.89349999999999996,0.92819999999999991,0.95660000000000001,0.9325,0.88049999999999995,0.87360000000000004,0.877,0.88490000000000013,0.87029999999999996,0.8617999999999999,0.87250000000000005,0.8466999999999999,0.84019999999999995,0.83930000000000005,0.82369999999999988,0.82019999999999993,0.83200000000000007,0.83460000000000012,0.83889999999999998,0.8276,0.82869999999999988,0.8486999999999999,0.89269999999999994,0.91980000000000006,0.92960000000000009,0.95599999999999996,0.99490000000000012,1.0158,1.0056,0.99730000000000008,0.99879999999999991,1.0145,1.0139,1.093,1.1100000000000001,1.0847,1.0649999999999999,1.0840000000000001,1.0908,1.1241000000000001,1.1438999999999999,1.1466999999999998,1.1561999999999999],"text":["Year: 1948<br />value: 0.0000<br />metric: Hourly compensation","Year: 1949<br />value: 0.0624<br />metric: Hourly compensation","Year: 1950<br />value: 0.1046<br />metric: Hourly compensation","Year: 1951<br />value: 0.1174<br />metric: Hourly compensation","Year: 1952<br />value: 0.1502<br />metric: Hourly compensation","Year: 1953<br />value: 0.2082<br />metric: Hourly compensation","Year: 1954<br />value: 0.2348<br />metric: Hourly compensation","Year: 1955<br />value: 0.2870<br />metric: Hourly compensation","Year: 1956<br />value: 0.3389<br />metric: Hourly compensation","Year: 1957<br />value: 0.3708<br />metric: Hourly compensation","Year: 1958<br />value: 0.3808<br />metric: Hourly compensation","Year: 1959<br />value: 0.4246<br />metric: Hourly compensation","Year: 1960<br />value: 0.4538<br />metric: Hourly compensation","Year: 1961<br />value: 0.4784<br />metric: Hourly compensation","Year: 1962<br />value: 0.5232<br />metric: Hourly compensation","Year: 1963<br />value: 0.5486<br />metric: Hourly compensation","Year: 1964<br />value: 0.5832<br />metric: Hourly compensation","Year: 1965<br />value: 0.6227<br />metric: Hourly compensation","Year: 1966<br />value: 0.6470<br />metric: Hourly compensation","Year: 1967<br />value: 0.6668<br />metric: Hourly compensation","Year: 1968<br />value: 0.7105<br />metric: Hourly compensation","Year: 1969<br />value: 0.7439<br />metric: Hourly compensation","Year: 1970<br />value: 0.7681<br />metric: Hourly compensation","Year: 1971<br />value: 0.8166<br />metric: Hourly compensation","Year: 1972<br />value: 0.9134<br />metric: Hourly compensation","Year: 1973<br />value: 0.9096<br />metric: Hourly compensation","Year: 1974<br />value: 0.8705<br />metric: Hourly compensation","Year: 1975<br />value: 0.8686<br />metric: Hourly compensation","Year: 1976<br />value: 0.8935<br />metric: Hourly compensation","Year: 1977<br />value: 0.9282<br />metric: Hourly compensation","Year: 1978<br />value: 0.9566<br />metric: Hourly compensation","Year: 1979<br />value: 0.9325<br />metric: Hourly compensation","Year: 1980<br />value: 0.8805<br />metric: Hourly compensation","Year: 1981<br />value: 0.8736<br />metric: Hourly compensation","Year: 1982<br />value: 0.8770<br />metric: Hourly compensation","Year: 1983<br />value: 0.8849<br />metric: Hourly compensation","Year: 1984<br />value: 0.8703<br />metric: Hourly compensation","Year: 1985<br />value: 0.8618<br />metric: Hourly compensation","Year: 1986<br />value: 0.8725<br />metric: Hourly compensation","Year: 1987<br />value: 0.8467<br />metric: Hourly compensation","Year: 1988<br />value: 0.8402<br />metric: Hourly compensation","Year: 1989<br />value: 0.8393<br />metric: Hourly compensation","Year: 1990<br />value: 0.8237<br />metric: Hourly compensation","Year: 1991<br />value: 0.8202<br />metric: Hourly compensation","Year: 1992<br />value: 0.8320<br />metric: Hourly compensation","Year: 1993<br />value: 0.8346<br />metric: Hourly compensation","Year: 1994<br />value: 0.8389<br />metric: Hourly compensation","Year: 1995<br />value: 0.8276<br />metric: Hourly compensation","Year: 1996<br />value: 0.8287<br />metric: Hourly compensation","Year: 1997<br />value: 0.8487<br />metric: Hourly compensation","Year: 1998<br />value: 0.8927<br />metric: Hourly compensation","Year: 1999<br />value: 0.9198<br />metric: Hourly compensation","Year: 2000<br />value: 0.9296<br />metric: Hourly compensation","Year: 2001<br />value: 0.9560<br />metric: Hourly compensation","Year: 2002<br />value: 0.9949<br />metric: Hourly compensation","Year: 2003<br />value: 1.0158<br />metric: Hourly compensation","Year: 2004<br />value: 1.0056<br />metric: Hourly compensation","Year: 2005<br />value: 0.9973<br />metric: Hourly compensation","Year: 2006<br />value: 0.9988<br />metric: Hourly compensation","Year: 2007<br />value: 1.0145<br />metric: Hourly compensation","Year: 2008<br />value: 1.0139<br />metric: Hourly compensation","Year: 2009<br />value: 1.0930<br />metric: Hourly compensation","Year: 2010<br />value: 1.1100<br />metric: Hourly compensation","Year: 2011<br />value: 1.0847<br />metric: Hourly compensation","Year: 2012<br />value: 1.0650<br />metric: Hourly compensation","Year: 2013<br />value: 1.0840<br />metric: Hourly compensation","Year: 2014<br />value: 1.0908<br />metric: Hourly compensation","Year: 2015<br />value: 1.1241<br />metric: Hourly compensation","Year: 2016<br />value: 1.1439<br />metric: Hourly compensation","Year: 2017<br />value: 1.1467<br />metric: Hourly compensation","Year: 2018<br />value: 1.1562<br />metric: Hourly compensation"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)","dash":"solid"},"hoveron":"points","name":"Hourly compensation","legendgroup":"Hourly compensation","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":1,"size":1.1338582677165354,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)"}},"frame":null},{"x":[1948,1949,1950,1951,1952,1953,1954,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[0,0.0155,0.093399999999999997,0.12239999999999998,0.15490000000000001,0.19409999999999999,0.21439999999999998,0.26379999999999998,0.26590000000000003,0.3004,0.32720000000000005,0.37630000000000002,0.40060000000000001,0.44369999999999998,0.498,0.55030000000000001,0.59939999999999993,0.6492,0.69950000000000001,0.7198,0.77129999999999999,0.77849999999999997,0.80349999999999999,0.871,0.92200000000000004,0.96960000000000013,0.93830000000000002,0.98109999999999997,1.0359,1.0605,1.0827,1.0810999999999999,1.0676999999999999,1.105,1.0836999999999999,1.1451,1.2021000000000002,1.2364999999999999,1.2827999999999999,1.288,1.3200999999999998,1.3411999999999999,1.3695000000000002,1.385,1.4748000000000001,1.4850999999999999,1.5053999999999998,1.5159,1.5623999999999998,1.6072,1.6620999999999997,1.7346000000000001,1.7947,1.8370999999999997,1.915,2.0122,2.0928999999999998,2.1528999999999998,2.1760999999999999,2.1978,2.2139000000000002,2.2875000000000001,2.3822999999999999,2.3820999999999999,2.3956999999999997,2.4096000000000002,2.4291,2.4575,2.4634,2.4977999999999998,2.5289999999999999],"text":["Year: 1948<br />value: 0.0000<br />metric: Net productivity","Year: 1949<br />value: 0.0155<br />metric: Net productivity","Year: 1950<br />value: 0.0934<br />metric: Net productivity","Year: 1951<br />value: 0.1224<br />metric: Net productivity","Year: 1952<br />value: 0.1549<br />metric: Net productivity","Year: 1953<br />value: 0.1941<br />metric: Net productivity","Year: 1954<br />value: 0.2144<br />metric: Net productivity","Year: 1955<br />value: 0.2638<br />metric: Net productivity","Year: 1956<br />value: 0.2659<br />metric: Net productivity","Year: 1957<br />value: 0.3004<br />metric: Net productivity","Year: 1958<br />value: 0.3272<br />metric: Net productivity","Year: 1959<br />value: 0.3763<br />metric: Net productivity","Year: 1960<br />value: 0.4006<br />metric: Net productivity","Year: 1961<br />value: 0.4437<br />metric: Net productivity","Year: 1962<br />value: 0.4980<br />metric: Net productivity","Year: 1963<br />value: 0.5503<br />metric: Net productivity","Year: 1964<br />value: 0.5994<br />metric: Net productivity","Year: 1965<br />value: 0.6492<br />metric: Net productivity","Year: 1966<br />value: 0.6995<br />metric: Net productivity","Year: 1967<br />value: 0.7198<br />metric: Net productivity","Year: 1968<br />value: 0.7713<br />metric: Net productivity","Year: 1969<br />value: 0.7785<br />metric: Net productivity","Year: 1970<br />value: 0.8035<br />metric: Net productivity","Year: 1971<br />value: 0.8710<br />metric: Net productivity","Year: 1972<br />value: 0.9220<br />metric: Net productivity","Year: 1973<br />value: 0.9696<br />metric: Net productivity","Year: 1974<br />value: 0.9383<br />metric: Net productivity","Year: 1975<br />value: 0.9811<br />metric: Net productivity","Year: 1976<br />value: 1.0359<br />metric: Net productivity","Year: 1977<br />value: 1.0605<br />metric: Net productivity","Year: 1978<br />value: 1.0827<br />metric: Net productivity","Year: 1979<br />value: 1.0811<br />metric: Net productivity","Year: 1980<br />value: 1.0677<br />metric: Net productivity","Year: 1981<br />value: 1.1050<br />metric: Net productivity","Year: 1982<br />value: 1.0837<br />metric: Net productivity","Year: 1983<br />value: 1.1451<br />metric: Net productivity","Year: 1984<br />value: 1.2021<br />metric: Net productivity","Year: 1985<br />value: 1.2365<br />metric: Net productivity","Year: 1986<br />value: 1.2828<br />metric: Net productivity","Year: 1987<br />value: 1.2880<br />metric: Net productivity","Year: 1988<br />value: 1.3201<br />metric: Net productivity","Year: 1989<br />value: 1.3412<br />metric: Net productivity","Year: 1990<br />value: 1.3695<br />metric: Net productivity","Year: 1991<br />value: 1.3850<br />metric: Net productivity","Year: 1992<br />value: 1.4748<br />metric: Net productivity","Year: 1993<br />value: 1.4851<br />metric: Net productivity","Year: 1994<br />value: 1.5054<br />metric: Net productivity","Year: 1995<br />value: 1.5159<br />metric: Net productivity","Year: 1996<br />value: 1.5624<br />metric: Net productivity","Year: 1997<br />value: 1.6072<br />metric: Net productivity","Year: 1998<br />value: 1.6621<br />metric: Net productivity","Year: 1999<br />value: 1.7346<br />metric: Net productivity","Year: 2000<br />value: 1.7947<br />metric: Net productivity","Year: 2001<br />value: 1.8371<br />metric: Net productivity","Year: 2002<br />value: 1.9150<br />metric: Net productivity","Year: 2003<br />value: 2.0122<br />metric: Net productivity","Year: 2004<br />value: 2.0929<br />metric: Net productivity","Year: 2005<br />value: 2.1529<br />metric: Net productivity","Year: 2006<br />value: 2.1761<br />metric: Net productivity","Year: 2007<br />value: 2.1978<br />metric: Net productivity","Year: 2008<br />value: 2.2139<br />metric: Net productivity","Year: 2009<br />value: 2.2875<br />metric: Net productivity","Year: 2010<br />value: 2.3823<br />metric: Net productivity","Year: 2011<br />value: 2.3821<br />metric: Net productivity","Year: 2012<br />value: 2.3957<br />metric: Net productivity","Year: 2013<br />value: 2.4096<br />metric: Net productivity","Year: 2014<br />value: 2.4291<br />metric: Net productivity","Year: 2015<br />value: 2.4575<br />metric: Net productivity","Year: 2016<br />value: 2.4634<br />metric: Net productivity","Year: 2017<br />value: 2.4978<br />metric: Net productivity","Year: 2018<br />value: 2.5290<br />metric: Net productivity"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)","dash":"solid"},"hoveron":"points","name":"Net productivity","legendgroup":"Net productivity","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":1,"size":1.1338582677165354,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)"}},"frame":null}],"layout":{"margin":{"t":48.146118721461193,"r":7.3059360730593621,"b":29.954337899543386,"l":34.337899543379002},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"NanumGothic","size":14.611872146118724},"title":{"text":"Productivity growth and hourly compensation growth, 1948-2018","font":{"color":"rgba(0,0,0,1)","family":"NanumGothic","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1944.5,2021.5],"tickmode":"array","ticktext":["1960","1980","2000","2020"],"tickvals":[1960,1980,2000,2020],"categoryorder":"array","categoryarray":["1960","1980","2000","2020"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"NanumGothic","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"NanumGothic","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.12645000000000001,2.6554500000000001],"tickmode":"array","ticktext":["0%","50%","100%","150%","200%","250%"],"tickvals":[0,0.49999999999999994,1,1.5,2,2.5],"categoryorder":"array","categoryarray":["0%","50%","100%","150%","200%","250%"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"NanumGothic","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"NanumGothic","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"NanumGothic","size":11.68949771689498},"title":{"text":"생산성과 시간당 급여","font":{"color":"rgba(0,0,0,1)","family":"NanumGothic","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"63a06bb564f6":{"x":{},"y":{},"colour":{},"type":"scatter"},"63a01ff33241":{"x":{},"y":{},"colour":{}}},"cur_data":"63a06bb564f6","visdat":{"63a06bb564f6":["function (y) ","x"],"63a01ff33241":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+<aside><div>
+<p><a href="https://www.epi.org/productivity-pay-gap/">Economic Policy Institute, “The Productivity - Pay Gap”, July 2019</a></p>
+</div></aside></section>
+<section id="소싱전략의-변화" class="slide level2">
+<h2>소싱전략의 변화</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/outsourcing_rpa_ai.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-47"><img data-src="img/outsourcing_rpa_ai.jpg" width="713"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<p>자료출처: Kinetics consulting services / Automation Anywhere</p>
+</div></aside></section>
+<section id="아폴로-우주선" class="slide level2">
+<h2>아폴로 우주선</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/gg/man-machine-role-allocation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img data-src="img/gg/man-machine-role-allocation.png"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<p><a href="https://hal.pratt.duke.edu/sites/hal.pratt.duke.edu/files/u10/IS-29-05-Expert%20Opinion%5B1%5D_0.pdf">Mary (Missy) Cummings (2014), “Man versus Machine or Man + Machine?”, Duke University and MIT</a> <span class="citation" data-cites="cummings2014man">(<a href="#/참고문헌" role="doc-biblioref" onclick="">M. M. Cummings, 2014</a>)</span></p>
+</div></aside></section>
+<section id="인간과-기계-업무분장" class="slide level2">
+<h2>인간과 기계 업무분장</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/role-allocation-skill-rules-experties.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img data-src="img/role-allocation-skill-rules-experties.gif" width="850"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="cummings2018informing">(<a href="#/참고문헌" role="doc-biblioref" onclick="">M. Cummings, 2018</a>)</span></p>
+</div></aside></section>
+<section id="human-supervisory-control" class="slide level2">
+<h2>Human Supervisory Control</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/human-supervisory-control.png" class="lightbox" data-gallery="quarto-lightbox-gallery-50" title="human-supervisory-control"><img data-src="img/human-supervisory-control.png"></a></p>
+<figcaption>human-supervisory-control</figcaption>
+</figure>
+</div>
+
+<aside><div>
+<p><span class="citation" data-cites="cummings2018informing">(<a href="#/참고문헌" role="doc-biblioref" onclick="">M. Cummings, 2018</a>)</span></p>
+</div></aside></section>
+<section id="ai-성능-1" class="slide level2">
+<h2>AI 성능 <sup>1</sup></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/AI-performance_Dynabench-paper.png" class="lightbox" data-gallery="quarto-lightbox-gallery-51"><img data-src="img/AI-performance_Dynabench-paper.png"></a></p>
+</figure>
+</div>
+
+<aside><div>
+
+</div><ol class="aside-footnotes"><li id="fn1"><p><a href="https://ourworldindata.org/brief-history-of-ai">Max Roser (December 06, 2022), The brief history of artificial intelligence: The world has changed fast – what might be next?, Our World in Data</a></p></li></ol></aside></section>
+<section id="모라벡의-역설moravecs-paradox" class="slide level2 smaller">
+<h2>모라벡의 역설(Moravec’s paradox)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/moravec-paradox.png" class="lightbox" data-gallery="quarto-lightbox-gallery-52"><img data-src="img/moravec-paradox.png" width="1207"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<p>미국 카네기 멜론 대학 (CMU) 로봇 공학자 한스 모라벡(Hans Moravec)이 1970년대에 ’it is comparatively easy to make computers exhibit adult level performance on intelligence tests or playing checkers, and difficult or impossible to give them the skills of a one-year-old when it comes to perception and mobility’라는 표현으로 컴퓨터와 인간의 능력 차이를 역설적으로 표현하였다.</p>
+</div></aside></section>
+<section id="중국어-방-chinese-room" class="slide level2 smaller">
+<h2>중국어 방 (Chinese room)</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p><br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chinese-room-argument.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-53" title="중국어 방 주장을 모사한 도해"><img data-src="img/chinese-room-argument.jpg"></a></p>
+<figcaption>중국어 방 주장을 모사한 도해</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:65%;">
+<h3 id="ai와-인간">AI와 인간</h3>
+<p><br></p>
+<table>
+<colgroup>
+<col style="width: 31%">
+<col style="width: 31%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">인공지능</th>
+<th style="text-align: center;">컴퓨터</th>
+<th style="text-align: center;">인간</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">중국어 방</td>
+<td style="text-align: center;">하드웨어</td>
+<td style="text-align: center;">인간의 외형적인 몸체</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">영어만 할 줄 아는 사람</td>
+<td style="text-align: center;">소프트웨어</td>
+<td style="text-align: center;">인간의 지능</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">중국어로 된 질문</td>
+<td style="text-align: center;">입력(Input)</td>
+<td style="text-align: center;">인간이 외부에서 접할 수 있는 자극</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">중국어로 된 답변</td>
+<td style="text-align: center;">출력(Output)</td>
+<td style="text-align: center;">인간이 외부에서 접한 자극에 대한 반응</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">질문&amp;대답 목록</td>
+<td style="text-align: center;">데이터베이스(Database)</td>
+<td style="text-align: center;">습득된 기억</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<aside><div>
+<p><a href="http://ko.experiments.wikidok.net/wp-d/592f718da44f1a4153e80611/View">중국어 방 역설 (Chinese room argument) - 대체 누가 중국어를 이해하고 있는가?</a></p>
+</div></aside></section></section>
+<section id="참고문헌" class="title-slide slide level1 smaller scrollable">
+<h1>참고문헌</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-cummings2018informing" class="csl-entry" role="listitem">
+Cummings, M. (2018). Informing autonomous system design through the lens of skill-, rule-, and knowledge-based behaviors. <em>Journal of cognitive engineering and decision making</em>, <em>12</em>(1), 58–61.
+</div>
+<div id="ref-cummings2014man" class="csl-entry" role="listitem">
+Cummings, M. M. (2014). Man versus machine or man+ machine? <em>IEEE Intelligent Systems</em>, <em>29</em>(5), 62–69.
+</div>
+<div id="ref-eloundou2023gpts" class="csl-entry" role="listitem">
+Eloundou, T., Manning, S., Mishkin, P., &amp; Rock, D. (2023). <em>GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models</em>. <a href="https://arxiv.org/abs/2303.10130">https://arxiv.org/abs/2303.10130</a>
+</div>
+<div id="ref-openai2023gpt4" class="csl-entry" role="listitem">
+OpenAI. (2023). <em>GPT-4 Technical Report</em>. <a href="https://arxiv.org/abs/2303.08774">https://arxiv.org/abs/2303.08774</a>
+</div>
+<div id="ref-song2019digital" class="csl-entry" role="listitem">
+Song, A. K. (2019). The Digital Entrepreneurial Ecosystem—a critique and reconfiguration. <em>Small Business Economics</em>, <em>53</em>(3), 569–590.
+</div>
+<div id="ref-webtoon2021" class="csl-entry" role="listitem">
+김현진. (2021). 웹툰 이미지 제작공정 단계별 활용 가능한 스케치 관련 인공지능 기술. <em>한국정보과학회</em>.
+</div>
+<div id="ref-kpf2023survey" class="csl-entry" role="listitem">
+양정애. (2023). <em>챗GPT 이용 경험 및 인식 조사</em>. 한국언론진흥재단. <a href="https://www.kpf.or.kr/front/board/boardContentsListPage.do?board_id=246">https://www.kpf.or.kr/front/board/boardContentsListPage.do?board_id=246</a>
+</div>
+</div>
+
+
+<img src="_extensions/padsInsper/insper/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p>한국 R 사용자회 <a href="https://r2bit.com/chatGPT/">chatGPT</a>. theme <a href="https://github.com/padsInsper/quarto-insper-theme">insper</a> 소스코드 <a href="https://github.com/padsInsper/quarto-insper-theme">GitHub</a>.</p>
+</div>
+</section>
+
+
     </div>
   </div>
 
@@ -548,7 +1836,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': true,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -733,6 +2020,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -809,10 +2134,9 @@
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -822,8 +2146,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -882,4 +2215,5 @@
     
     
 
+<script src="https://platform.twitter.com/widgets.js"></script>
 </body></html>

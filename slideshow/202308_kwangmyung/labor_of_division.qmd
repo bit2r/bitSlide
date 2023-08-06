@@ -200,6 +200,11 @@ plotly::ggplotly(productivity_gap_g)
 
 ::: columns
 ::: {.column width="35%"}
+
+<br>
+<br>
+
+
 ![중국어 방 주장을 모사한 도해](img/chinese-room-argument.jpg)
 :::
 

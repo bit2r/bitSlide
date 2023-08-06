@@ -180,31 +180,7 @@ Chegg, Inc.는 캘리포니아주 산타클라라에 본사를 둔 미국 교육
 -   [中최대 광고 기업 "단기 계약직, AI로 대체한다"](https://n.news.naver.com/mnews/article/215/0001095495)
 :::
 
-## 시장 와해 사례: 에너지 기업 {{< fa solid solar-panel >}} {.smaller}
 
-<br>
-
-::: columns
-::: column
-![전 영국 지도자 보리스 존슨과 함께한 옥토퍼스 에너지 CEO 그렉 잭슨(Greg Jackson)](img/octopus_energy.webp)
-:::
-
-::: column
-##### AI가 에너지 회사에서 250명의 업무를 수행하고 숙련된 직원보다 고객을 더 잘 만족시키고 있다.
-
-영국에 본사를 둔 가정용 에너지 공급업체인 옥토퍼스 에너지의 CEO는 인공지능이 회사 직원 250명의 업무를 대신하고 있다고 말했다.
-
-런던 타임즈에 기고한 글에서 Greg Jackson은 회사가 몇 달 동안 AI를 실험해 왔다고 말했다. 그는 이 기술이 회사 시스템에 통합되어 2월부터 직원들이 일부 고객 이메일에 답장을 보내도록 허용하기 시작했다고 말했다.
-
-현재 AI는 고객 이메일의 3분의 1 이상에 답장하고 있으며, 이는 약 250명의 직원이 처리하는 업무라고 CEO는 말했다.
-
-> "AI가 작성한 이메일의 고객 만족도는 80%로, 숙련되고 훈련된 사람이 작성한 65%보다 훨씬 높았다."
-:::
-:::
-
-::: aside
--   자료출처: [CNBC, "Chegg shares drop more than 40% after company says ChatGPT is killing its business", May 2, 2023](https://www.cnbc.com/2023/05/02/chegg-drops-more-than-40percent-after-saying-chatgpt-is-killing-its-business.html)
-:::
 
 ## 시장 와해 사례: Stackoverflow {{< fa solid code >}} {.smaller}
 
@@ -330,5 +306,4 @@ kobis %>%
 
 ![](img/gg_edu_survey.jpg){width="481"}
 :::
-
 
