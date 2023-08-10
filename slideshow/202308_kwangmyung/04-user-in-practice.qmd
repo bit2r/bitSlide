@@ -124,6 +124,17 @@ solve(Diophantus_puzzle, x, dict = True)
 -   [RTutor](http://rtutor.ai/)
 :::
 
+## 수능 국영수 {.smaller}
+
+- 영어
+    - [문제지(PDF &rarr; 코드)](https://r2bit.com/quarto/sat_english.html)
+    - [문제풀이(코드 &rarr; 챗GPT)](https://r2bit.com/quarto/sat_english_solve.html)
+    - [훈련(챗GPT &rarr; 연습문제)](https://r2bit.com/quarto/sat_english_practice.html)    
+- 수학
+    - [문제지(PDF &rarr; 코드)](https://r2bit.com/quarto/sat_math.html)
+- 국어
+    - [문제지(PDF &rarr; 코드)](https://r2bit.com/quarto/sat_korean.html)
+
 ## 실습 {.smaller}
 
 ::: panel-tabset

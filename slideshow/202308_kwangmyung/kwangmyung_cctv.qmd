@@ -237,7 +237,7 @@ accident %>%
 :::
 
 
-## 광명시 카드사용금액(BC) &rarr; 작업중 {.smaller}
+## 광명시 50x50 지도 {.smaller}
 
 
 :::{layout-nrow=2}
@@ -261,4 +261,6 @@ accident %>%
 데이터출처: 경기도 데이터 분석센터 BC카드 사용내역 (2018년 1월 ~ 2022년 12월)
 :::
 
+
+# [경기도 항구](https://r2bit.com/map_challenge/gg_analytics_center.html#%EA%B2%BD%EA%B8%B0%EB%8F%84-%EC%96%B4%ED%95%AD)
 

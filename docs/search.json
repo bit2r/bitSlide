@@ -3287,7 +3287,7 @@
     "href": "kwangmyung_20230811.html#목차",
     "title": "챗GPT",
     "section": "목차",
-    "text": "목차\n\n강사소개 및 강의개요\n전통, 디지털 지표\n체험 삶의 현장\n오마이뉴스 시민기자\n노동의 분업\n수능영어와 수학\n챗GPT 행정 (오피스 프로그램)\n챗GPT 데이터 사이언스"
+    "text": "목차\n\n강사소개 및 강의개요\n전통, 디지털 지표\n체험 삶의 현장\n오마이뉴스 시민기자와 챗GPT 출판\n노동의 분업\n수능 문제풀이 국/영수\n챗GPT 행정 (오피스 프로그램)\n광명시 공공데이터와 경기도 항구\n챗GPT 데이터 사이언스"
   },
   {
     "objectID": "kwangmyung_20230811.html#강사소개-강의-개요",
@@ -4345,5 +4345,19 @@
     "title": "챗GPT",
     "section": "챗GPT 도서 제작",
     "text": "챗GPT 도서 제작\n\nGreg Wilson공동저작콘텐츠, 디자인, 경험, 네트워크챗GPT(AI)사람과 AI\n\n\n\n\n\n\n\n\nSoftware Carpentry Version 3 lessons (2007)\n\n\n\n\n\n\n\n\n\n소프트웨어 카펜트리 공동저작\n\n\n\n\n\n\n\n\n\n소프트웨어 카펜트리 : 소프트웨어\n데이터 카펜트리 : 데이터\n도서관 카펜트리 : 텍스트"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#광명시-50x50-지도",
+    "href": "kwangmyung_20230811.html#광명시-50x50-지도",
+    "title": "챗GPT",
+    "section": "광명시 50x50 지도",
+    "text": "광명시 50x50 지도\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n데이터출처: 경기도 데이터 분석센터 BC카드 사용내역 (2018년 1월 ~ 2022년 12월)"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#수능-국영수",
+    "href": "kwangmyung_20230811.html#수능-국영수",
+    "title": "챗GPT",
+    "section": "수능 국영수",
+    "text": "수능 국영수\n\n영어\n\n문제지(PDF → 코드)\n문제풀이(코드 → 챗GPT)\n훈련(챗GPT → 연습문제)\n\n\n수학\n\n문제지(PDF → 코드)\n\n국어\n\n문제지(PDF → 코드)"
   }
 ]
