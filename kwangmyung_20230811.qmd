@@ -23,14 +23,13 @@ editor_options:
 ## 목차
 
 1.  강사소개 및 강의개요
-1.  전통, 디지털 지표
-1.  체험 삶의 현장
-1.  오마이뉴스 시민기자
-1.  노동의 분업
-1.  수능영어와 수학
-1.  챗GPT 행정 (오피스 프로그램)
-1.  챗GPT 데이터 사이언스
-
+2.  전통, 디지털 지표
+3.  체험 삶의 현장
+4.  오마이뉴스 시민기자
+5.  노동의 분업
+6.  수능영어와 수학
+7.  챗GPT 행정 (오피스 프로그램)
+8.  챗GPT 데이터 사이언스
 
 {{< include slideshow/202308_kwangmyung/00-who-am-i.qmd >}}
 
@@ -41,6 +40,8 @@ editor_options:
 {{< include slideshow/202308_kwangmyung/02-life-in-action.qmd >}}
 
 {{< include slideshow/202308_kwangmyung/omn_news.qmd >}}
+
+{{< include slideshow/202308_kwangmyung/unix_shell.qmd >}}
 
 {{< include slideshow/202308_kwangmyung/labor_of_division.qmd >}}
 
@@ -53,6 +54,4 @@ editor_options:
 {{< include slideshow/202308_kwangmyung/reference.qmd >}}
 
 {{< include slideshow/202308_kwangmyung/LLM-chatGPT.qmd >}}
-
-
 

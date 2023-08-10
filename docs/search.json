@@ -4331,5 +4331,19 @@
     "title": "챗GPT",
     "section": "디지털 강대국 지표 - 종합 시각화",
     "text": "디지털 강대국 지표 - 종합 시각화"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#챗gpt-유닉스-쉘-책",
+    "href": "kwangmyung_20230811.html#챗gpt-유닉스-쉘-책",
+    "title": "챗GPT",
+    "section": "챗GPT 유닉스 쉘 책",
+    "text": "챗GPT 유닉스 쉘 책\n\n\n교보문고\n\n\n\n\n\n\n작업흐름\n\n\n\n\ngraph TB\n    A[Greg Wilson] --&gt; B[소프트웨어 카펜트리]\n    B --&gt; C[\"공동 저작\"]\n    C --&gt; D[\"콘텐츠, 디자인, 교수방법, 경험, 네트워크\"]\n    D --&gt; E[\"챗GPT(AI)\"]\n    \n    style A fill:#f9d79c,stroke:#f39c12,stroke-width:2px\n    style B fill:#aed6f1,stroke:#2e86c1,stroke-width:2px\n    style C fill:#d7bde2,stroke:#884ea0,stroke-width:2px\n    style D fill:#a2d9ce,stroke:#17a589,stroke-width:2px\n    style E fill:#fcf3cf,stroke:#f1c40f,stroke-width:2px\n\n\n\n\n\n\n\n\n\n\n교보문고: 챗GPT 유닉스 쉘: 생산성 자동화 도구"
+  },
+  {
+    "objectID": "kwangmyung_20230811.html#챗gpt-도서-제작",
+    "href": "kwangmyung_20230811.html#챗gpt-도서-제작",
+    "title": "챗GPT",
+    "section": "챗GPT 도서 제작",
+    "text": "챗GPT 도서 제작\n\nGreg Wilson공동저작콘텐츠, 디자인, 경험, 네트워크챗GPT(AI)사람과 AI\n\n\n\n\n\n\n\n\nSoftware Carpentry Version 3 lessons (2007)\n\n\n\n\n\n\n\n\n\n소프트웨어 카펜트리 공동저작\n\n\n\n\n\n\n\n\n\n소프트웨어 카펜트리 : 소프트웨어\n데이터 카펜트리 : 데이터\n도서관 카펜트리 : 텍스트"
   }
 ]
