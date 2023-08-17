@@ -1,0 +1,266 @@
+# 어린이 교통사고 <br> 광명시
+
+## 보도자료 {.smaller}
+
+
+![](img/school_zone/20191119-hankook.jpg)
+
+::: aside
+- 2019-11-19 ['민식이법' 빨리 통과되기를" 엄마 눈물의 호소에...](https://www.hankookilbo.com/News/Read/201911190828371273)
+:::
+
+<!-- ## 보도자료 {.smaller} -->
+
+<!-- ::: columns -->
+<!-- ::: {.column width="40%"} -->
+
+<!-- ::: r-stack -->
+<!-- ![2023-05-23](img/school_zone/20230520_hani.jpg){.fragment fig-align="center" width="320" height="285"} -->
+
+<!-- ::: fragment -->
+<!-- ![2023-04-28](img/school_zone/20230428_kookje.jpg){.fragment width="320" height="285"} -->
+<!-- ::: -->
+
+<!-- ::: fragment -->
+<!-- ![2021-03-19](img/school_zone/20210319-edaily.jpg){.fragment width="320" height="285"} -->
+<!-- ::: -->
+
+<!-- ::: fragment -->
+<!-- ![2022-12-17](img/school_zone/2022-12-17-inews24.jpg){.fragment width="320" height="285"} -->
+<!-- ::: -->
+
+<!-- ::: fragment -->
+<!-- ![2019-11-19](img/school_zone/20191119-hankook.jpg){.fragment width="320" height="285"} -->
+<!-- ::: -->
+
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ::: {.column width="60%"} -->
+<!-- ## 뉴스 링크 -->
+
+<!-- -   2023-05-23 [스쿨존 사고 왜 되풀이 되나요...막을 방법 있잖아요](https://www.hani.co.kr/arti/society/society_general/1092568.html) -->
+<!-- -   2023-04-28 [초등학교 등굣길 덮친 1.8t 낙하물... 안전불감증이 낳은 인재](http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0300&key=20230428.99099009103) -->
+<!-- -   2021-03-19 [등교하다 참변...같은 날 벌어진 '초등생 사망 사고'](https://www.edaily.co.kr/news/read?newsId=01348086628984960&mediaCodeNo=257) -->
+<!-- -   2022-12-17 [강남 스쿨존 인근서 초등학생 버스에 치여 숨져](https://www.inews24.com/view/1549752) -->
+<!-- -   2019-11-19 ['민식이법' 빨리 통과되기를" 엄마 눈물의 호소에...](https://www.hankookilbo.com/News/Read/201911190828371273) -->
+<!-- ::: -->
+<!-- ::: -->
+
+
+
+## 초등학교 주변 CCTV 현황 {.smaller}
+
+```{r}
+#| fig-width: 10
+#| fig-height: 6
+
+library(tidyverse)
+library(leaflet)
+library(fontawesome)
+
+cctv_tbl <- read_rds(glue::glue("{here::here()}/data/km_cctv_tbl.rds"))
+km_sf <- read_rds(glue::glue("{here::here()}/data/km_km_sf.rds"))
+km_school <- read_rds(glue::glue("{here::here()}/data/km_km_school.rds"))
+
+cctv_icons <- awesomeIconList(
+  "다목적" = makeAwesomeIcon(
+    icon = "camera",
+    markerColor = "blue",
+    library = "fa",
+    text = fa("camera")
+  ),
+  "생활방범" = makeAwesomeIcon(
+    icon = "camera",
+    markerColor = "green",
+    library = "fa",
+    text = fa("camera")
+  ),
+  "쓰레기단속" = makeAwesomeIcon(
+    icon = "camera",
+    markerColor = "purple",
+    library = "fa",
+    text = fa("camera")
+  ),
+  "어린이보호" = makeAwesomeIcon(
+    icon = "camera",
+    markerColor = "red",
+    library = "fa",
+    text = fa("camera")
+  )
+)
+
+cctv_tbl_split <- split(cctv_tbl, cctv_tbl$용도)
+
+l <- leaflet() %>% addProviderTiles(providers$OpenStreetMap)
+
+unique(cctv_tbl$용도) %>%
+  purrr::walk( function(df) {
+    l <<- l %>%
+    ## 행정동
+    addPolygons(data = km_sf, 
+                opacity = 1.0, fillOpacity = 0.0,
+              weight = 1,
+              highlightOptions = highlightOptions(color = "black", weight = 3,  bringToFront = TRUE),
+              label = ~읍면동,
+              labelOptions = labelOptions(
+              style = list("font-weight" = "normal", padding = "3px 8px"),
+              textsize = "15px",
+              direction = "auto")) %>% 
+      
+    addMarkers(data = km_school, lng=~경도, lat=~위도, clusterOptions = markerClusterOptions(),
+              popup = ~ as.character(paste0("<strong>", `학교명`, "</strong><br>",
+                                            "--------------------------------<br>",
+                                            "&middot; 주소: ", `주소`, "<br>",
+                                            "&middot; 설립형태: ", `설립형태`, "<br>",
+                                            "&middot; 설립일자: ", `설립일자`))) %>% 
+  
+    addAwesomeMarkers(data = cctv_tbl_split[[df]], 
+                      lng=~경도, lat=~위도, clusterOptions = markerClusterOptions(),
+                      group = df,
+               icon = ~ cctv_icons[용도],
+               popup = ~ as.character(paste0("<strong>", 기기번호, "</strong><br>",
+                                             "--------------------------------<br>",
+                                             "&middot; 설치위치: ", `도로명주소`, "<br>",
+                                             "&middot; 설립대수: ", 설치대수, "<br>",
+                                             "&middot; 용도: ", 용도)))
+  })
+
+  l %>%
+    addLayersControl(
+      overlayGroups = unique(cctv_tbl$용도),
+      options = layersControlOptions(collapsed = FALSE)
+    )
+
+```
+
+::: aside
+제작방법: [경기도 광명시 - 학교와 CCTV](https://r2bit.com/map_challenge/km_school.html)
+:::
+
+## 어린이 교통사고 통계
+
+:::{.panel-tabset}
+
+### 사고유형별 어린이 사망
+
+```{r}
+library(janitor)
+library(gt)
+library(gtExtras)
+library(readxl)
+
+accident_2016 <- read_excel(glue::glue("{here::here()}/data/km_accident_2014_2016.xlsx"))
+accident_2019 <- read_excel(glue::glue("{here::here()}/data/km_accident_2017_2019.xlsx"))
+accident_2022 <- read_excel(glue::glue("{here::here()}/data/km_accident_2020_2022.xlsx"))
+
+accident_tbl <- bind_rows(accident_2016, accident_2019) %>% 
+  bind_rows(accident_2022)
+
+accident_tbl %>% 
+  group_by(사고유형) %>% 
+  summarize(사망자수 = sum(사망자수),
+            중상자수 = sum(중상자수),
+            경상자수 = sum(경상자수)) %>% 
+  adorn_totals(where = "row", name = "합계") %>% 
+  adorn_totals(where = "col", name = "합계") %>% 
+  ## 표 
+  gt::gt() %>% 
+    tab_header(
+      title = md("광명시 **보행 어린이** 교통사고"),
+      subtitle = md("`TAAS` 교통사고분석시스템 (2014~2022)")
+    ) %>% 
+    gt::cols_align(align = "center") %>% 
+    tab_spanner(
+      label = "교통사고 어린이 구분",
+      columns = c(
+        사망자수, 중상자수, 경상자수
+      )
+    ) %>% 
+    gt_theme_538() %>% 
+     gt_highlight_rows(
+       rows = 사고유형 == "차대사람 - 횡단중",
+       fill = "lightgrey",
+       bold_target_only = TRUE,
+       target_col = everything()
+     )
+```
+
+
+### 교통사고건수 추세{.smaller}
+
+```{r}
+
+accident_raw <- read_excel(glue::glue("{here::here()}/data/어린이_교통사고건수_시도_시_군_구__20230624195028.xlsx"), sheet = "데이터",
+           skip = 2)
+
+accident <- accident_raw %>% 
+  select(1, 5:7) %>% 
+  set_names(c("시점", "사고건수", "사망자수", "부상자수")) %>% 
+  mutate_all(as.integer) %>% 
+  pivot_longer(cols=-시점, names_to = "구분", values_to = "건수") %>% 
+  mutate(건수 = ifelse(is.na(건수), 0, 건수))
+
+accident %>% 
+  ggplot(aes(x = 시점, y=건수, color = 구분)) +
+    geom_line() +
+    geom_point() +
+    labs(title = "광명시 어린이 교통사고건수",
+         x = "",
+         y = "교통사고건수",
+         caption = "출처: KOSIS https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL202107") +
+    theme_minimal(base_family = "MaruBuri")
+```
+
+:::
+
+
+## 광명시 유동인구(KT) {.smaller}
+
+
+:::{layout-nrow=2}
+
+![](img/kwangmyung/광명시_월별_유동인구.png)
+
+![](img/kwangmyung/광명시_월별_동별_유동인구.png)
+
+![](img/kwangmyung/광명시_월별_동별_세대별_유동인구.png)
+
+![](img/kwangmyung/광명시_월별_동별_성별_유동인구.png)
+
+![](img/kwangmyung/광명시_소하2동_연도별_유동인구.png)
+
+:::
+
+::: aside
+데이터출처: 경기도 데이터 분석센터 KT 유동인구 (2018년 1월 ~ 2022년 12월)
+:::
+
+
+## 광명시 50x50 지도 {.smaller}
+
+
+:::{layout-nrow=2}
+
+![](img/kwangmyung/korea_block.png)
+
+![](img/kwangmyung/gg_km_inset.png)
+
+![](img/kwangmyung/km_cell_grid_gg.png)
+
+![](img/kwangmyung/km_cell_point_gg.png)
+
+![](img/kwangmyung/km_cell_block_point_gg.png)
+
+![](img/kwangmyung/km_소하2동_gg_map.png)
+
+:::
+
+
+::: aside
+데이터출처: 경기도 데이터 분석센터 BC카드 사용내역 (2018년 1월 ~ 2022년 12월)
+:::
+
+
+# [경기도 항구](https://r2bit.com/map_challenge/gg_analytics_center.html#%EA%B2%BD%EA%B8%B0%EB%8F%84-%EC%96%B4%ED%95%AD)
+

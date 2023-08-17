@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-07-24T13:42:29.886Z</lastmod>
+    <lastmod>2023-04-02T23:13:02.189Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/konkuk_20230901.html</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/02-life-in-action.html</loc>
-    <lastmod>2023-07-24T13:41:55.106Z</lastmod>
+    <lastmod>2023-08-06T00:05:00.109Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/03-office-interface.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/04-user-in-practice.html</loc>
-    <lastmod>2023-07-24T13:42:01.146Z</lastmod>
+    <lastmod>2023-08-10T14:41:28.244Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/05-prompt-engineering.html</loc>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/labor_of_division.html</loc>
-    <lastmod>2023-07-24T13:42:12.078Z</lastmod>
+    <lastmod>2023-08-06T00:17:36.139Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/limitation.html</loc>
@@ -54,10 +54,94 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/seoul-r-meeup.html</loc>
-    <lastmod>2023-07-24T13:42:14.588Z</lastmod>
+    <lastmod>2023-08-06T01:32:47.583Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/setup.html</loc>
     <lastmod>2023-07-24T13:42:15.157Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_konkuk/seoul-r-meeup.html</loc>
+    <lastmod>2023-07-25T23:56:04.388Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_konkuk/00-who-am-i.html</loc>
+    <lastmod>2023-07-26T00:02:07.241Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/DT_metrics.html</loc>
+    <lastmod>2023-08-06T01:43:55.101Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/kwangmyung_cctv.html</loc>
+    <lastmod>2023-08-10T14:34:26.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/omn_news.html</loc>
+    <lastmod>2023-08-06T00:59:04.916Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202308_kwangmyung/unix_shell.html</loc>
+    <lastmod>2023-08-10T00:13:02.893Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_konkuk/curriculum.html</loc>
+    <lastmod>2023-07-25T23:42:24.851Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/defense_20230918.html</loc>
+    <lastmod>2023-08-17T03:03:03.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/unix_shell.html</loc>
+    <lastmod>2023-08-10T00:13:02.893Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/reference.html</loc>
+    <lastmod>2023-04-06T11:45:34.598Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/public_data_literacy.html</loc>
+    <lastmod>2023-06-05T01:04:15.025Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/labor_of_division.html</loc>
+    <lastmod>2023-08-06T00:17:36.139Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/05-prompt-engineering.html</loc>
+    <lastmod>2023-06-13T05:06:30.764Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/03-office-interface.html</loc>
+    <lastmod>2023-06-04T02:13:30.139Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/00-who-am-i.html</loc>
+    <lastmod>2023-08-17T02:56:49.160Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/02-life-in-action.html</loc>
+    <lastmod>2023-08-06T00:05:00.109Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/04-user-in-practice.html</loc>
+    <lastmod>2023-08-10T14:41:28.244Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/kwangmyung_cctv.html</loc>
+    <lastmod>2023-08-10T14:34:26.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/omn_news.html</loc>
+    <lastmod>2023-08-06T00:59:04.916Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/publishing.html</loc>
+    <lastmod>2023-06-26T08:39:28.995Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202309_defense/seoul-r-meeup.html</loc>
+    <lastmod>2023-08-17T02:58:21.276Z</lastmod>
   </url>
 </urlset>

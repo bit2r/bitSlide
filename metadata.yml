@@ -1,6 +1,22 @@
 # Internal slide decks
 
 
+- title: "공공 빅데이터 분석활용"
+  subtitle: "방위사업청"
+  author: "이광춘"
+  date: 2023-09-18
+  image: img/방위산업청.png
+  path: defense_20230918.qmd
+  categories:
+    - "공공 데이터"
+    - "통계"
+    - "데이터 문해력"
+    - "커뮤니케이션"
+    - "데이터 과학 사례"
+    - "한국 R 사용자회"
+    - "챗GPT"
+    - "Code Interpreter"
+
 - title: "챗GPT"
   subtitle: "광명시"
   author: "이광춘"

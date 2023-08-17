@@ -1,0 +1,39 @@
+---
+title: "공공 빅데이터 분석활용"
+subtitle: "방위사업청"
+author: "이광춘"
+institute: "공익법인 한국 R 사용자회"
+date: 2023-09-18
+format: 
+  insper-revealjs:
+    self-contained: true
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  강사소개 및 강의개요
+2.  통계학
+9.  챗GPT 데이터 사이언스
+
+{{< include slideshow/202309_defense/00-who-am-i.qmd >}}
+
+{{< include slideshow/202309_defense/seoul-r-meeup.qmd >}}
+
+{{< include slideshow/202309_defense/public_data_literacy.qmd >}}
+
+{{< include slideshow/202309_defense/reference.qmd >}}
+
+
+
+

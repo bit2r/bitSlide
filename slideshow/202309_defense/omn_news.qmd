@@ -1,0 +1,81 @@
+# 오마이뉴스 <br> 시민기자
+
+## 챗GPT 뉴스기사 {.smaller}
+
+::: columns
+::: column
+### 신문기사
+
+![](img/omn_precinct.jpg){fig-align="center" width="588"}
+:::
+
+::: column
+### 작업흐름
+
+```{mermaid}
+graph TB
+    A[기사 착상] --> B[데이터 확보]
+    B --> C[분석]
+    C --> D[표/그래프]
+    D --> E[기사작성]
+    
+    style A fill:#f9d79c,stroke:#f39c12,stroke-width:2px
+    style B fill:#aed6f1,stroke:#2e86c1,stroke-width:2px
+    style C fill:#d7bde2,stroke:#884ea0,stroke-width:2px
+    style D fill:#a2d9ce,stroke:#17a589,stroke-width:2px
+    style E fill:#fcf3cf,stroke:#f1c40f,stroke-width:2px
+```
+:::
+:::
+
+::: aside
+-   [지난 총선 민주당 데이터 보니, 수도권도 '단수공천' 집중 '총선 후보자선출규정 특별당규 개정' 청원동의 5만 넘어... 민주당의 답변에 '주목'](https://omn.kr/24x03)
+:::
+
+## 챗GPT 뉴스기사 작성 {.smaller}
+
+::: panel-tabset
+### 뉴스 착상
+
+![](img/omn_petition.jpg){fig-align="center" width="549"}
+
+-   [제22대 총선 후보자선출규정 특별당규 개정 청원](https://petitions.theminjoo.kr/23175005A8KKNN2)
+
+### 데이터셋
+
+![](img/omn_wiki.jpg){fig-align="center" width="549"}
+
+-   [대한민국 제21대 국회의원 선거 더불어민주당 후보 목록](https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%A0%9C21%EB%8C%80_%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90_%EC%84%A0%EA%B1%B0_%EB%8D%94%EB%B6%88%EC%96%B4%EB%AF%BC%EC%A3%BC%EB%8B%B9_%ED%9B%84%EB%B3%B4_%EB%AA%A9%EB%A1%9D)
+
+### 분석과 코딩
+
+![](img/omn_coding.jpg){width="549"} 
+
+
+- [제22대 국회의원 선거구](https://r2bit.com/map_challenge/precinct.html)
+
+### 표와 그래프
+
+::: columns
+![](img/omn_table.png){fig-align="center" width="192"}
+
+::: column
+:::
+
+::: column
+![](img/omn_graph.png){fig-align="center" width="500"}
+:::
+:::
+
+### 챗GPT 기사작성
+
+![](img/omn_chatGPT.jpg){fig-align="center" width="549"}
+
+- [제22대 총선 후보자선출규정 개정 청원](https://chat.openai.com/c/22df0b60-30d2-4d3a-ae5f-2115cb5893f3)
+
+### 뉴스송고
+
+![](img/omn_submit.jpg){fig-align="center" width="549"}
+
+:::
+

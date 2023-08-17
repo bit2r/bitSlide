@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.288">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>발표자료 | 한국 R 사용자회 – labor_of_division</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../img/koRea_logo.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-229551680-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+<script src="../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="../../site_libs/plotly-binding-4.10.2/plotly.js"></script>
+<script src="../../site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="../../site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="../../site_libs/crosstalk-1.2.0.9000/css/crosstalk.min.css" rel="stylesheet">
+<script src="../../site_libs/crosstalk-1.2.0.9000/js/crosstalk.min.js"></script>
+<link href="../../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="../../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/koRea_logo.png" alt="Home" class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://r2bit.com" rel="" target="">
+ <span class="menu-text">한국 R 사용자회</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bit2r/slides" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub repo">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+
+<section id="사람과-ai-분업" class="level1 page-columns page-full">
+<h1>사람과 AI 분업</h1>
+<section id="아담-스미스-국부론" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="아담-스미스-국부론">아담 스미스, “국부론”</h2>
+<p><br> <br></p>
+<div class="columns">
+<div class="column">
+<section id="핀-공장" class="level3">
+<h3 class="anchored" data-anchor-id="핀-공장">핀 공장</h3>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/division_of_labor.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/division_of_labor.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section>
+</div><div class="column">
+<section id="노동의-분업" class="level3">
+<h3 class="anchored" data-anchor-id="노동의-분업">노동의 분업</h3>
+<blockquote class="blockquote">
+<p><strong>노동의 분업(Division of Labor)</strong>이란 생산 과정을 여러 단계로 나누어 각각의 단계를 서로 다른 사람이나 그룹이 수행함으로써 생산력을 크게 증가시킴</p>
+</blockquote>
+<ol type="1">
+<li>각 작업자가 자신의 특정 과업에 더욱 숙련되게 되므로 작업 속도가 빨라짐</li>
+<li>작업 간 전환 시간이 줄어듦</li>
+<li>분업을 통해 특화된 기계와 장비 개발과 사용</li>
+</ol>
+</section>
+</div>
+</div>
+</section>
+<section id="세무사-업무-변천과정" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="세무사-업무-변천과정">세무사 업무 변천과정</h2>
+<p><br> <br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/tax-preparation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="세무 업무 변천사"><img src="img/tax-preparation.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">세무 업무 변천사</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="https://statkclee.github.io/ds-authoring/ds-bundang-2019.html">이광춘 (2019-12-04), “자동화(Automation) - <del>로봇</del> 자동화가 빼앗는 일자리 그리고 나”, 분당 서현 청소년 수련관</a></p>
+</div></div></section>
+<section id="생산성과-임금-격차" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="생산성과-임금-격차">생산성과 임금 격차</h2>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'tibble' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dplyr' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.2     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>productivity_gap <span class="ot">&lt;-</span> <span class="fu">tribble</span>(<span class="sc">~</span><span class="st">"Year"</span>,<span class="sc">~</span><span class="st">"Hourly compensation"</span>, <span class="sc">~</span><span class="st">"Net productivity"</span>,</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="st">"1948"</span>, <span class="st">"0.00%"</span>  ,<span class="st">"0.00%"</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="st">"1949"</span>, <span class="st">"6.24%"</span>  ,<span class="st">"1.55%"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="st">"1950"</span>, <span class="st">"10.46%"</span>  ,<span class="st">"9.34%"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="st">"1951"</span>, <span class="st">"11.74%"</span>  ,<span class="st">"12.24%"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="st">"1952"</span>, <span class="st">"15.02%"</span>  ,<span class="st">"15.49%"</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="st">"1953"</span>, <span class="st">"20.82%"</span>  ,<span class="st">"19.41%"</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="st">"1954"</span>, <span class="st">"23.48%"</span>  ,<span class="st">"21.44%"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="st">"1955"</span>, <span class="st">"28.70%"</span>  ,<span class="st">"26.38%"</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="st">"1956"</span>, <span class="st">"33.89%"</span>  ,<span class="st">"26.59%"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="st">"1957"</span>, <span class="st">"37.08%"</span>  ,<span class="st">"30.04%"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="st">"1958"</span>, <span class="st">"38.08%"</span>  ,<span class="st">"32.72%"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="st">"1959"</span>, <span class="st">"42.46%"</span>  ,<span class="st">"37.63%"</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="st">"1960"</span>, <span class="st">"45.38%"</span>  ,<span class="st">"40.06%"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="st">"1961"</span>, <span class="st">"47.84%"</span>  ,<span class="st">"44.37%"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="st">"1962"</span>, <span class="st">"52.32%"</span>  ,<span class="st">"49.80%"</span>,</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="st">"1963"</span>, <span class="st">"54.86%"</span>  ,<span class="st">"55.03%"</span>,</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="st">"1964"</span>, <span class="st">"58.32%"</span>  ,<span class="st">"59.94%"</span>,</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="st">"1965"</span>, <span class="st">"62.27%"</span>  ,<span class="st">"64.92%"</span>,</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="st">"1966"</span>, <span class="st">"64.70%"</span>  ,<span class="st">"69.95%"</span>,</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="st">"1967"</span>, <span class="st">"66.68%"</span>  ,<span class="st">"71.98%"</span>,</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="st">"1968"</span>, <span class="st">"71.05%"</span>  ,<span class="st">"77.13%"</span>,</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="st">"1969"</span>, <span class="st">"74.39%"</span>  ,<span class="st">"77.85%"</span>,</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="st">"1970"</span>, <span class="st">"76.81%"</span>  ,<span class="st">"80.35%"</span>,</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="st">"1971"</span>, <span class="st">"81.66%"</span>  ,<span class="st">"87.10%"</span>,</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="st">"1972"</span>, <span class="st">"91.34%"</span>  ,<span class="st">"92.20%"</span>,</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="st">"1973"</span>, <span class="st">"90.96%"</span>  ,<span class="st">"96.96%"</span>,</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="st">"1974"</span>, <span class="st">"87.05%"</span>  ,<span class="st">"93.83%"</span>,</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="st">"1975"</span>, <span class="st">"86.86%"</span>  ,<span class="st">"98.11%"</span>,</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="st">"1976"</span>, <span class="st">"89.35%"</span>  ,<span class="st">"103.59%"</span>,</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="st">"1977"</span>, <span class="st">"92.82%"</span>  ,<span class="st">"106.05%"</span>,</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="st">"1978"</span>, <span class="st">"95.66%"</span>  ,<span class="st">"108.27%"</span>,</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="st">"1979"</span>,  <span class="st">"93.25%"</span>,  <span class="st">"108.11%"</span>,</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="st">"1980"</span>, <span class="st">"88.05%"</span>  ,<span class="st">"106.77%"</span>,</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="st">"1981"</span>, <span class="st">"87.36%"</span>  ,<span class="st">"110.50%"</span>,</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="st">"1982"</span>, <span class="st">"87.70%"</span>  ,<span class="st">"108.37%"</span>,</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="st">"1983"</span>, <span class="st">"88.49%"</span>  ,<span class="st">"114.51%"</span>,</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="st">"1984"</span>, <span class="st">"87.03%"</span>  ,<span class="st">"120.21%"</span>,</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="st">"1985"</span>, <span class="st">"86.18%"</span>  ,<span class="st">"123.65%"</span>,</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="st">"1986"</span>, <span class="st">"87.25%"</span>  ,<span class="st">"128.28%"</span>,</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="st">"1987"</span>, <span class="st">"84.67%"</span>  ,<span class="st">"128.80%"</span>,</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="st">"1988"</span>, <span class="st">"84.02%"</span>,  <span class="st">"132.01%"</span>,</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="st">"1989"</span>, <span class="st">"83.93%"</span>  ,<span class="st">"134.12%"</span>,</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a><span class="st">"1990"</span>, <span class="st">"82.37%"</span>  ,<span class="st">"136.95%"</span>,</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a><span class="st">"1991"</span>, <span class="st">"82.02%"</span>  ,<span class="st">"138.50%"</span>,</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="st">"1992"</span>, <span class="st">"83.20%"</span>  ,<span class="st">"147.48%"</span>,</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a><span class="st">"1993"</span>, <span class="st">"83.46%"</span>  ,<span class="st">"148.51%"</span>,</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a><span class="st">"1994"</span>, <span class="st">"83.89%"</span>  ,<span class="st">"150.54%"</span>,</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a><span class="st">"1995"</span>, <span class="st">"82.76%"</span>  ,<span class="st">"151.59%"</span>,</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a><span class="st">"1996"</span>, <span class="st">"82.87%"</span>  ,<span class="st">"156.24%"</span>,</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a><span class="st">"1997"</span>, <span class="st">"84.87%"</span>  ,<span class="st">"160.72%"</span>,</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a><span class="st">"1998"</span>, <span class="st">"89.27%"</span>  ,<span class="st">"166.21%"</span>,</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a><span class="st">"1999"</span>, <span class="st">"91.98%"</span>  ,<span class="st">"173.46%"</span>,</span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a><span class="st">"2000"</span>, <span class="st">"92.96%"</span>  ,<span class="st">"179.47%"</span>,</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a><span class="st">"2001"</span>, <span class="st">"95.60%"</span>  ,<span class="st">"183.71%"</span>,</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a><span class="st">"2002"</span>, <span class="st">"99.49%"</span>  ,<span class="st">"191.50%"</span>,</span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a><span class="st">"2003"</span>, <span class="st">"101.58%"</span>,  <span class="st">"201.22%"</span>,</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a><span class="st">"2004"</span>, <span class="st">"100.56%"</span>,  <span class="st">"209.29%"</span>,</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a><span class="st">"2005"</span>, <span class="st">"99.73%"</span>  ,<span class="st">"215.29%"</span>,</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a><span class="st">"2006"</span>, <span class="st">"99.88%"</span>  ,<span class="st">"217.61%"</span>,</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a><span class="st">"2007"</span>, <span class="st">"101.45%"</span>,  <span class="st">"219.78%"</span>,</span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a><span class="st">"2008"</span>, <span class="st">"101.39%"</span>,  <span class="st">"221.39%"</span>,</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a><span class="st">"2009"</span>, <span class="st">"109.30%"</span>,  <span class="st">"228.75%"</span>,</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a><span class="st">"2010"</span>, <span class="st">"111.00%"</span>,  <span class="st">"238.23%"</span>,</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="st">"2011"</span>, <span class="st">"108.47%"</span>,  <span class="st">"238.21%"</span>,</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a><span class="st">"2012"</span>, <span class="st">"106.50%"</span>,  <span class="st">"239.57%"</span>,</span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="st">"2013"</span>, <span class="st">"108.40%"</span>,  <span class="st">"240.96%"</span>,</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a><span class="st">"2014"</span>, <span class="st">"109.08%"</span>,  <span class="st">"242.91%"</span>,</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a><span class="st">"2015"</span>, <span class="st">"112.41%"</span>,  <span class="st">"245.75%"</span>,</span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a><span class="st">"2016"</span>, <span class="st">"114.39%"</span>,  <span class="st">"246.34%"</span>,</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a><span class="st">"2017"</span>, <span class="st">"114.67%"</span>,  <span class="st">"249.78%"</span>,</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a><span class="st">"2018"</span>, <span class="st">"115.62%"</span>,  <span class="st">"252.90%"</span>)</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>productivity_gap_df <span class="ot">&lt;-</span> productivity_gap <span class="sc">%&gt;%</span> </span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Hourly compensation</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">parse_number</span>(<span class="st">`</span><span class="at">Hourly compensation</span><span class="st">`</span>) <span class="sc">/</span> <span class="dv">100</span>,</span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>         <span class="st">`</span><span class="at">Net productivity</span><span class="st">`</span>    <span class="ot">=</span> <span class="fu">parse_number</span>(<span class="st">`</span><span class="at">Net productivity</span><span class="st">`</span>) <span class="sc">/</span> <span class="dv">100</span>,</span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>         <span class="at">Year =</span> <span class="fu">as.integer</span>(Year)) </span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>productivity_gap_long_df <span class="ot">&lt;-</span> productivity_gap_df <span class="sc">%&gt;%</span></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">gap =</span> <span class="fu">abs</span>(<span class="st">`</span><span class="at">Net productivity</span><span class="st">`</span> <span class="sc">-</span> <span class="st">`</span><span class="at">Hourly compensation</span><span class="st">`</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gather</span>(metric, value, <span class="sc">-</span> Year)</span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'plotly' was built under R version 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>productivity_gap_g <span class="ot">&lt;-</span> productivity_gap_long_df <span class="sc">%&gt;%</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Year, <span class="at">y=</span>value, <span class="at">color=</span>metric)) <span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size=</span><span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>(<span class="at">base_family=</span><span class="st">"NanumGothic"</span>) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">""</span>, <span class="at">y=</span><span class="st">""</span>, <span class="at">title=</span><span class="st">"Productivity growth and hourly compensation growth, 1948-2018"</span>,</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">color=</span><span class="st">"생산성과 시간당 급여"</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">caption=</span><span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>plotly<span class="sc">::</span><span class="fu">ggplotly</span>(productivity_gap_g)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-02257c836570c862ef62" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-02257c836570c862ef62">{"x":{"data":[{"x":[1948,1949,1950,1951,1952,1953,1954,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[0,0.046900000000000004,0.011200000000000015,0.0049999999999999906,0.0047000000000000097,0.014100000000000001,0.020400000000000001,0.023199999999999998,0.072999999999999954,0.070399999999999963,0.053599999999999925,0.04830000000000001,0.05319999999999997,0.034699999999999953,0.0252,0.0017000000000000348,0.016199999999999881,0.026499999999999968,0.052499999999999991,0.053000000000000047,0.060799999999999965,0.034599999999999964,0.035399999999999987,0.054400000000000004,0.008600000000000052,0.060000000000000053,0.067800000000000082,0.11249999999999993,0.14240000000000008,0.13230000000000008,0.12609999999999999,0.14859999999999995,0.18719999999999992,0.23139999999999994,0.20669999999999988,0.26019999999999988,0.33180000000000021,0.37470000000000003,0.41029999999999989,0.44130000000000014,0.47989999999999988,0.5018999999999999,0.54580000000000028,0.56480000000000008,0.64280000000000004,0.65049999999999975,0.66649999999999987,0.68830000000000002,0.73369999999999991,0.75850000000000006,0.76939999999999975,0.81480000000000008,0.86509999999999987,0.88109999999999977,0.92009999999999992,0.99639999999999995,1.0872999999999997,1.1555999999999997,1.1773,1.1833,1.2000000000000002,1.1945000000000001,1.2722999999999998,1.2973999999999999,1.3306999999999998,1.3256000000000001,1.3383,1.3333999999999999,1.3195000000000001,1.3511,1.3728],"text":["Year: 1948<br />value: 0.0000<br />metric: gap","Year: 1949<br />value: 0.0469<br />metric: gap","Year: 1950<br />value: 0.0112<br />metric: gap","Year: 1951<br />value: 0.0050<br />metric: gap","Year: 1952<br />value: 0.0047<br />metric: gap","Year: 1953<br />value: 0.0141<br />metric: gap","Year: 1954<br />value: 0.0204<br />metric: gap","Year: 1955<br />value: 0.0232<br />metric: gap","Year: 1956<br />value: 0.0730<br />metric: gap","Year: 1957<br />value: 0.0704<br />metric: gap","Year: 1958<br />value: 0.0536<br />metric: gap","Year: 1959<br />value: 0.0483<br />metric: gap","Year: 1960<br />value: 0.0532<br />metric: gap","Year: 1961<br />value: 0.0347<br />metric: gap","Year: 1962<br />value: 0.0252<br />metric: gap","Year: 1963<br />value: 0.0017<br />metric: gap","Year: 1964<br />value: 0.0162<br />metric: gap","Year: 1965<br />value: 0.0265<br />metric: gap","Year: 1966<br />value: 0.0525<br />metric: gap","Year: 1967<br />value: 0.0530<br />metric: gap","Year: 1968<br />value: 0.0608<br />metric: gap","Year: 1969<br />value: 0.0346<br />metric: gap","Year: 1970<br />value: 0.0354<br />metric: gap","Year: 1971<br />value: 0.0544<br />metric: gap","Year: 1972<br />value: 0.0086<br />metric: gap","Year: 1973<br />value: 0.0600<br />metric: gap","Year: 1974<br />value: 0.0678<br />metric: gap","Year: 1975<br />value: 0.1125<br />metric: gap","Year: 1976<br />value: 0.1424<br />metric: gap","Year: 1977<br />value: 0.1323<br />metric: gap","Year: 1978<br />value: 0.1261<br />metric: gap","Year: 1979<br />value: 0.1486<br />metric: gap","Year: 1980<br />value: 0.1872<br />metric: gap","Year: 1981<br />value: 0.2314<br />metric: gap","Year: 1982<br />value: 0.2067<br />metric: gap","Year: 1983<br />value: 0.2602<br />metric: gap","Year: 1984<br />value: 0.3318<br />metric: gap","Year: 1985<br />value: 0.3747<br />metric: gap","Year: 1986<br />value: 0.4103<br />metric: gap","Year: 1987<br />value: 0.4413<br />metric: gap","Year: 1988<br />value: 0.4799<br />metric: gap","Year: 1989<br />value: 0.5019<br />metric: gap","Year: 1990<br />value: 0.5458<br />metric: gap","Year: 1991<br />value: 0.5648<br />metric: gap","Year: 1992<br />value: 0.6428<br />metric: gap","Year: 1993<br />value: 0.6505<br />metric: gap","Year: 1994<br />value: 0.6665<br />metric: gap","Year: 1995<br />value: 0.6883<br />metric: gap","Year: 1996<br />value: 0.7337<br />metric: gap","Year: 1997<br />value: 0.7585<br />metric: gap","Year: 1998<br />value: 0.7694<br />metric: gap","Year: 1999<br />value: 0.8148<br />metric: gap","Year: 2000<br />value: 0.8651<br />metric: gap","Year: 2001<br />value: 0.8811<br />metric: gap","Year: 2002<br />value: 0.9201<br />metric: gap","Year: 2003<br />value: 0.9964<br />metric: gap","Year: 2004<br />value: 1.0873<br />metric: gap","Year: 2005<br />value: 1.1556<br />metric: gap","Year: 2006<br />value: 1.1773<br />metric: gap","Year: 2007<br />value: 1.1833<br />metric: gap","Year: 2008<br />value: 1.2000<br />metric: gap","Year: 2009<br />value: 1.1945<br />metric: gap","Year: 2010<br />value: 1.2723<br />metric: gap","Year: 2011<br />value: 1.2974<br />metric: gap","Year: 2012<br />value: 1.3307<br />metric: gap","Year: 2013<br />value: 1.3256<br />metric: gap","Year: 2014<br />value: 1.3383<br />metric: gap","Year: 2015<br />value: 1.3334<br />metric: gap","Year: 2016<br />value: 1.3195<br />metric: gap","Year: 2017<br />value: 1.3511<br />metric: gap","Year: 2018<br />value: 1.3728<br />metric: gap"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"gap","legendgroup":"gap","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":1.1338582677165354,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)"}},"frame":null},{"x":[1948,1949,1950,1951,1952,1953,1954,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[0,0.062400000000000004,0.10460000000000001,0.11739999999999999,0.1502,0.2082,0.23479999999999998,0.28699999999999998,0.33889999999999998,0.37079999999999996,0.38079999999999997,0.42460000000000003,0.45379999999999998,0.47839999999999994,0.5232,0.54859999999999998,0.58320000000000005,0.62270000000000003,0.64700000000000002,0.66679999999999995,0.71050000000000002,0.74390000000000001,0.7681,0.81659999999999999,0.91339999999999999,0.90960000000000008,0.87049999999999994,0.86860000000000004,0.89349999999999996,0.92819999999999991,0.95660000000000001,0.9325,0.88049999999999995,0.87360000000000004,0.877,0.88490000000000013,0.87029999999999996,0.8617999999999999,0.87250000000000005,0.8466999999999999,0.84019999999999995,0.83930000000000005,0.82369999999999988,0.82019999999999993,0.83200000000000007,0.83460000000000012,0.83889999999999998,0.8276,0.82869999999999988,0.8486999999999999,0.89269999999999994,0.91980000000000006,0.92960000000000009,0.95599999999999996,0.99490000000000012,1.0158,1.0056,0.99730000000000008,0.99879999999999991,1.0145,1.0139,1.093,1.1100000000000001,1.0847,1.0649999999999999,1.0840000000000001,1.0908,1.1241000000000001,1.1438999999999999,1.1466999999999998,1.1561999999999999],"text":["Year: 1948<br />value: 0.0000<br />metric: Hourly compensation","Year: 1949<br />value: 0.0624<br />metric: Hourly compensation","Year: 1950<br />value: 0.1046<br />metric: Hourly compensation","Year: 1951<br />value: 0.1174<br />metric: Hourly compensation","Year: 1952<br />value: 0.1502<br />metric: Hourly compensation","Year: 1953<br />value: 0.2082<br />metric: Hourly compensation","Year: 1954<br />value: 0.2348<br />metric: Hourly compensation","Year: 1955<br />value: 0.2870<br />metric: Hourly compensation","Year: 1956<br />value: 0.3389<br />metric: Hourly compensation","Year: 1957<br />value: 0.3708<br />metric: Hourly compensation","Year: 1958<br />value: 0.3808<br />metric: Hourly compensation","Year: 1959<br />value: 0.4246<br />metric: Hourly compensation","Year: 1960<br />value: 0.4538<br />metric: Hourly compensation","Year: 1961<br />value: 0.4784<br />metric: Hourly compensation","Year: 1962<br />value: 0.5232<br />metric: Hourly compensation","Year: 1963<br />value: 0.5486<br />metric: Hourly compensation","Year: 1964<br />value: 0.5832<br />metric: Hourly compensation","Year: 1965<br />value: 0.6227<br />metric: Hourly compensation","Year: 1966<br />value: 0.6470<br />metric: Hourly compensation","Year: 1967<br />value: 0.6668<br />metric: Hourly compensation","Year: 1968<br />value: 0.7105<br />metric: Hourly compensation","Year: 1969<br />value: 0.7439<br />metric: Hourly compensation","Year: 1970<br />value: 0.7681<br />metric: Hourly compensation","Year: 1971<br />value: 0.8166<br />metric: Hourly compensation","Year: 1972<br />value: 0.9134<br />metric: Hourly compensation","Year: 1973<br />value: 0.9096<br />metric: Hourly compensation","Year: 1974<br />value: 0.8705<br />metric: Hourly compensation","Year: 1975<br />value: 0.8686<br />metric: Hourly compensation","Year: 1976<br />value: 0.8935<br />metric: Hourly compensation","Year: 1977<br />value: 0.9282<br />metric: Hourly compensation","Year: 1978<br />value: 0.9566<br />metric: Hourly compensation","Year: 1979<br />value: 0.9325<br />metric: Hourly compensation","Year: 1980<br />value: 0.8805<br />metric: Hourly compensation","Year: 1981<br />value: 0.8736<br />metric: Hourly compensation","Year: 1982<br />value: 0.8770<br />metric: Hourly compensation","Year: 1983<br />value: 0.8849<br />metric: Hourly compensation","Year: 1984<br />value: 0.8703<br />metric: Hourly compensation","Year: 1985<br />value: 0.8618<br />metric: Hourly compensation","Year: 1986<br />value: 0.8725<br />metric: Hourly compensation","Year: 1987<br />value: 0.8467<br />metric: Hourly compensation","Year: 1988<br />value: 0.8402<br />metric: Hourly compensation","Year: 1989<br />value: 0.8393<br />metric: Hourly compensation","Year: 1990<br />value: 0.8237<br />metric: Hourly compensation","Year: 1991<br />value: 0.8202<br />metric: Hourly compensation","Year: 1992<br />value: 0.8320<br />metric: Hourly compensation","Year: 1993<br />value: 0.8346<br />metric: Hourly compensation","Year: 1994<br />value: 0.8389<br />metric: Hourly compensation","Year: 1995<br />value: 0.8276<br />metric: Hourly compensation","Year: 1996<br />value: 0.8287<br />metric: Hourly compensation","Year: 1997<br />value: 0.8487<br />metric: Hourly compensation","Year: 1998<br />value: 0.8927<br />metric: Hourly compensation","Year: 1999<br />value: 0.9198<br />metric: Hourly compensation","Year: 2000<br />value: 0.9296<br />metric: Hourly compensation","Year: 2001<br />value: 0.9560<br />metric: Hourly compensation","Year: 2002<br />value: 0.9949<br />metric: Hourly compensation","Year: 2003<br />value: 1.0158<br />metric: Hourly compensation","Year: 2004<br />value: 1.0056<br />metric: Hourly compensation","Year: 2005<br />value: 0.9973<br />metric: Hourly compensation","Year: 2006<br />value: 0.9988<br />metric: Hourly compensation","Year: 2007<br />value: 1.0145<br />metric: Hourly compensation","Year: 2008<br />value: 1.0139<br />metric: Hourly compensation","Year: 2009<br />value: 1.0930<br />metric: Hourly compensation","Year: 2010<br />value: 1.1100<br />metric: Hourly compensation","Year: 2011<br />value: 1.0847<br />metric: Hourly compensation","Year: 2012<br />value: 1.0650<br />metric: Hourly compensation","Year: 2013<br />value: 1.0840<br />metric: Hourly compensation","Year: 2014<br />value: 1.0908<br />metric: Hourly compensation","Year: 2015<br />value: 1.1241<br />metric: Hourly compensation","Year: 2016<br />value: 1.1439<br />metric: Hourly compensation","Year: 2017<br />value: 1.1467<br />metric: Hourly compensation","Year: 2018<br />value: 1.1562<br />metric: Hourly compensation"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)","dash":"solid"},"hoveron":"points","name":"Hourly compensation","legendgroup":"Hourly compensation","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":1,"size":1.1338582677165354,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)"}},"frame":null},{"x":[1948,1949,1950,1951,1952,1953,1954,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],"y":[0,0.0155,0.093399999999999997,0.12239999999999998,0.15490000000000001,0.19409999999999999,0.21439999999999998,0.26379999999999998,0.26590000000000003,0.3004,0.32720000000000005,0.37630000000000002,0.40060000000000001,0.44369999999999998,0.498,0.55030000000000001,0.59939999999999993,0.6492,0.69950000000000001,0.7198,0.77129999999999999,0.77849999999999997,0.80349999999999999,0.871,0.92200000000000004,0.96960000000000013,0.93830000000000002,0.98109999999999997,1.0359,1.0605,1.0827,1.0810999999999999,1.0676999999999999,1.105,1.0836999999999999,1.1451,1.2021000000000002,1.2364999999999999,1.2827999999999999,1.288,1.3200999999999998,1.3411999999999999,1.3695000000000002,1.385,1.4748000000000001,1.4850999999999999,1.5053999999999998,1.5159,1.5623999999999998,1.6072,1.6620999999999997,1.7346000000000001,1.7947,1.8370999999999997,1.915,2.0122,2.0928999999999998,2.1528999999999998,2.1760999999999999,2.1978,2.2139000000000002,2.2875000000000001,2.3822999999999999,2.3820999999999999,2.3956999999999997,2.4096000000000002,2.4291,2.4575,2.4634,2.4977999999999998,2.5289999999999999],"text":["Year: 1948<br />value: 0.0000<br />metric: Net productivity","Year: 1949<br />value: 0.0155<br />metric: Net productivity","Year: 1950<br />value: 0.0934<br />metric: Net productivity","Year: 1951<br />value: 0.1224<br />metric: Net productivity","Year: 1952<br />value: 0.1549<br />metric: Net productivity","Year: 1953<br />value: 0.1941<br />metric: Net productivity","Year: 1954<br />value: 0.2144<br />metric: Net productivity","Year: 1955<br />value: 0.2638<br />metric: Net productivity","Year: 1956<br />value: 0.2659<br />metric: Net productivity","Year: 1957<br />value: 0.3004<br />metric: Net productivity","Year: 1958<br />value: 0.3272<br />metric: Net productivity","Year: 1959<br />value: 0.3763<br />metric: Net productivity","Year: 1960<br />value: 0.4006<br />metric: Net productivity","Year: 1961<br />value: 0.4437<br />metric: Net productivity","Year: 1962<br />value: 0.4980<br />metric: Net productivity","Year: 1963<br />value: 0.5503<br />metric: Net productivity","Year: 1964<br />value: 0.5994<br />metric: Net productivity","Year: 1965<br />value: 0.6492<br />metric: Net productivity","Year: 1966<br />value: 0.6995<br />metric: Net productivity","Year: 1967<br />value: 0.7198<br />metric: Net productivity","Year: 1968<br />value: 0.7713<br />metric: Net productivity","Year: 1969<br />value: 0.7785<br />metric: Net productivity","Year: 1970<br />value: 0.8035<br />metric: Net productivity","Year: 1971<br />value: 0.8710<br />metric: Net productivity","Year: 1972<br />value: 0.9220<br />metric: Net productivity","Year: 1973<br />value: 0.9696<br />metric: Net productivity","Year: 1974<br />value: 0.9383<br />metric: Net productivity","Year: 1975<br />value: 0.9811<br />metric: Net productivity","Year: 1976<br />value: 1.0359<br />metric: Net productivity","Year: 1977<br />value: 1.0605<br />metric: Net productivity","Year: 1978<br />value: 1.0827<br />metric: Net productivity","Year: 1979<br />value: 1.0811<br />metric: Net productivity","Year: 1980<br />value: 1.0677<br />metric: Net productivity","Year: 1981<br />value: 1.1050<br />metric: Net productivity","Year: 1982<br />value: 1.0837<br />metric: Net productivity","Year: 1983<br />value: 1.1451<br />metric: Net productivity","Year: 1984<br />value: 1.2021<br />metric: Net productivity","Year: 1985<br />value: 1.2365<br />metric: Net productivity","Year: 1986<br />value: 1.2828<br />metric: Net productivity","Year: 1987<br />value: 1.2880<br />metric: Net productivity","Year: 1988<br />value: 1.3201<br />metric: Net productivity","Year: 1989<br />value: 1.3412<br />metric: Net productivity","Year: 1990<br />value: 1.3695<br />metric: Net productivity","Year: 1991<br />value: 1.3850<br />metric: Net productivity","Year: 1992<br />value: 1.4748<br />metric: Net productivity","Year: 1993<br />value: 1.4851<br />metric: Net productivity","Year: 1994<br />value: 1.5054<br />metric: Net productivity","Year: 1995<br />value: 1.5159<br />metric: Net productivity","Year: 1996<br />value: 1.5624<br />metric: Net productivity","Year: 1997<br />value: 1.6072<br />metric: Net productivity","Year: 1998<br />value: 1.6621<br />metric: Net productivity","Year: 1999<br />value: 1.7346<br />metric: Net productivity","Year: 2000<br />value: 1.7947<br />metric: Net productivity","Year: 2001<br />value: 1.8371<br />metric: Net productivity","Year: 2002<br />value: 1.9150<br />metric: Net productivity","Year: 2003<br />value: 2.0122<br />metric: Net productivity","Year: 2004<br />value: 2.0929<br />metric: Net productivity","Year: 2005<br />value: 2.1529<br />metric: Net productivity","Year: 2006<br />value: 2.1761<br />metric: Net productivity","Year: 2007<br />value: 2.1978<br />metric: Net productivity","Year: 2008<br />value: 2.2139<br />metric: Net productivity","Year: 2009<br />value: 2.2875<br />metric: Net productivity","Year: 2010<br />value: 2.3823<br />metric: Net productivity","Year: 2011<br />value: 2.3821<br />metric: Net productivity","Year: 2012<br />value: 2.3957<br />metric: Net productivity","Year: 2013<br />value: 2.4096<br />metric: Net productivity","Year: 2014<br />value: 2.4291<br />metric: Net productivity","Year: 2015<br />value: 2.4575<br />metric: Net productivity","Year: 2016<br />value: 2.4634<br />metric: Net productivity","Year: 2017<br />value: 2.4978<br />metric: Net productivity","Year: 2018<br />value: 2.5290<br />metric: Net productivity"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)","dash":"solid"},"hoveron":"points","name":"Net productivity","legendgroup":"Net productivity","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":1,"size":1.1338582677165354,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)"}},"frame":null}],"layout":{"margin":{"t":43.762557077625573,"r":7.3059360730593621,"b":25.570776255707766,"l":34.337899543379002},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"NanumGothic","size":14.611872146118724},"title":{"text":"Productivity growth and hourly compensation growth, 1948-2018","font":{"color":"rgba(0,0,0,1)","family":"NanumGothic","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1944.5,2021.5],"tickmode":"array","ticktext":["1960","1980","2000","2020"],"tickvals":[1960,1980,2000,2020],"categoryorder":"array","categoryarray":["1960","1980","2000","2020"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"NanumGothic","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"NanumGothic","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.12645000000000001,2.6554500000000001],"tickmode":"array","ticktext":["0%","50%","100%","150%","200%","250%"],"tickvals":[0,0.49999999999999994,1,1.5,2,2.5],"categoryorder":"array","categoryarray":["0%","50%","100%","150%","200%","250%"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"NanumGothic","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"NanumGothic","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"NanumGothic","size":11.68949771689498},"title":{"text":"생산성과 시간당 급여","font":{"color":"rgba(0,0,0,1)","family":"NanumGothic","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"9ac4f9f48bd":{"x":{},"y":{},"colour":{},"type":"scatter"},"9ac412e96adc":{"x":{},"y":{},"colour":{}}},"cur_data":"9ac4f9f48bd","visdat":{"9ac4f9f48bd":["function (y) ","x"],"9ac412e96adc":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="https://www.epi.org/productivity-pay-gap/">Economic Policy Institute, “The Productivity - Pay Gap”, July 2019</a></p>
+</div></div></section>
+<section id="소싱전략의-변화" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="소싱전략의-변화">소싱전략의 변화</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/outsourcing_rpa_ai.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/outsourcing_rpa_ai.jpg" class="img-fluid figure-img" width="713"></a></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>자료출처: Kinetics consulting services / Automation Anywhere</p>
+</div></div></section>
+<section id="아폴로-우주선" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="아폴로-우주선">아폴로 우주선</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/gg/man-machine-role-allocation.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/gg/man-machine-role-allocation.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="https://hal.pratt.duke.edu/sites/hal.pratt.duke.edu/files/u10/IS-29-05-Expert%20Opinion%5B1%5D_0.pdf">Mary (Missy) Cummings (2014), “Man versus Machine or Man + Machine?”, Duke University and MIT</a> <span class="citation" data-cites="cummings2014man">[@cummings2014man]</span></p>
+</div></div></section>
+<section id="인간과-기계-업무분장" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="인간과-기계-업무분장">인간과 기계 업무분장</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/role-allocation-skill-rules-experties.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/role-allocation-skill-rules-experties.gif" class="img-fluid figure-img" width="850"></a></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="citation" data-cites="cummings2018informing">[@cummings2018informing]</span></p>
+</div></div></section>
+<section id="human-supervisory-control" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="human-supervisory-control">Human Supervisory Control</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/human-supervisory-control.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="human-supervisory-control"><img src="img/human-supervisory-control.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">human-supervisory-control</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><span class="citation" data-cites="cummings2018informing">[@cummings2018informing]</span></p>
+</div></div></section>
+<section id="ai-성능-1" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="ai-성능-1">AI 성능 <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/AI-performance_Dynabench-paper.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/AI-performance_Dynabench-paper.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+
+</div></div></section>
+<section id="모라벡의-역설moravecs-paradox" class="level2 smaller page-columns page-full">
+<h2 class="smaller anchored" data-anchor-id="모라벡의-역설moravecs-paradox">모라벡의 역설(Moravec’s paradox)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/moravec-paradox.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/moravec-paradox.png" class="img-fluid figure-img" width="1207"></a></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>미국 카네기 멜론 대학 (CMU) 로봇 공학자 한스 모라벡(Hans Moravec)이 1970년대에 ’it is comparatively easy to make computers exhibit adult level performance on intelligence tests or playing checkers, and difficult or impossible to give them the skills of a one-year-old when it comes to perception and mobility’라는 표현으로 컴퓨터와 인간의 능력 차이를 역설적으로 표현하였다.</p>
+</div></div></section>
+<section id="중국어-방-chinese-room" class="level2 smaller page-columns page-full">
+<h2 class="smaller anchored" data-anchor-id="중국어-방-chinese-room">중국어 방 (Chinese room)</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p><br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/chinese-room-argument.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="중국어 방 주장을 모사한 도해"><img src="img/chinese-room-argument.jpg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">중국어 방 주장을 모사한 도해</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:65%;">
+<section id="ai와-인간" class="level3">
+<h3 class="anchored" data-anchor-id="ai와-인간">AI와 인간</h3>
+<p><br></p>
+<table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 31%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">인공지능</th>
+<th style="text-align: center;">컴퓨터</th>
+<th style="text-align: center;">인간</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">중국어 방</td>
+<td style="text-align: center;">하드웨어</td>
+<td style="text-align: center;">인간의 외형적인 몸체</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">영어만 할 줄 아는 사람</td>
+<td style="text-align: center;">소프트웨어</td>
+<td style="text-align: center;">인간의 지능</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">중국어로 된 질문</td>
+<td style="text-align: center;">입력(Input)</td>
+<td style="text-align: center;">인간이 외부에서 접할 수 있는 자극</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">중국어로 된 답변</td>
+<td style="text-align: center;">출력(Output)</td>
+<td style="text-align: center;">인간이 외부에서 접한 자극에 대한 반응</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">질문&amp;대답 목록</td>
+<td style="text-align: center;">데이터베이스(Database)</td>
+<td style="text-align: center;">습득된 기억</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</div>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="http://ko.experiments.wikidok.net/wp-d/592f718da44f1a4153e80611/View">중국어 방 역설 (Chinese room argument) - 대체 누가 중국어를 이해하고 있는가?</a></p>
+</div></div></section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">각주</h2>
+
+<ol>
+<li id="fn1"><p><a href="https://ourworldindata.org/brief-history-of-ai">Max Roser (December 06, 2022), The brief history of artificial intelligence: The world has changed fast – what might be next?, Our World in Data</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</aside></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom","selector":".lightbox"});</script>
+
+
+
+
+</body></html>
