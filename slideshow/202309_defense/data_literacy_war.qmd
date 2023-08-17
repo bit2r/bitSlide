@@ -1,0 +1,428 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# 전쟁 데이터 사례 연구
+
+## 독일 탱크 문제 {.smaller}
+
+::: panel-tabset
+### 문제 정의
+
+![](img/german_tank.jpg){fig-align="center" width="640"}
+
+### 데이터 수집
+
+![](img/german_tank_serial.jpg){fig-align="center" width="604"}
+
+### 중요성
+
+-   **전략적 평가**: 독일의 군사 능력과 전쟁 유지 능력을 정확히 평가하기 위해서는 탱크와 같은 중요한 군사 장비의 생산 능력 파악.
+
+-   **자원 할당**: 연합국은 한정된 자원을 어디에 집중해야 할지 결정하기 위해 독일 탱크 생산 능력을 파악해야 한다. 만약 독일이 큰 규모의 탱크를 생산하고 있다면, 연합국은 더 많은 탱크나 대탱크 무기를 생산하거나 경우에 따라서 전략을 수정해야 함.
+
+-   **전술적 결정**: 탱크의 수와 종류는 전투에서 독일군의 전략과 전술에 큰 영향을 미침. 독일의 탱크 생산 능력을 알면 연합국은 독일군의 다음 전략적 움직임을 예측하고 준비할 수 있음.
+
+-   **심리적 전쟁**: 탱크 생산 능력에 대한 정보는 연합국과 독일 모두에게 중요한 심리적 요소가 됨. 연합국이 독일의 생산 능력을 과소 평가하면 자신감을 잃을 수 있으며, 반대로 과대 평가하면 필요 이상으로 자원 소비 낭비로 이어짐.
+
+-   **평화 협정 및 후속 조치**: 전쟁이 끝난 후, 독일의 군사 능력과 잠재력을 평가하기 위해 탱크와 다른 군사 장비의 생산 데이터가 필요. 평화협정 조건 결정에 중요한 자료.
+
+### 월별 탱크생산대수
+
+<br>
+<br>
+
+|    년월    | 통계 추정 | 정보기관 추정 | 독일 생산대수 |
+|:----------:|:---------:|:-------------:|:-------------:|
+| 1940년 6월 |    169    |     1,000     |      122      |
+| 1941년 6월 |    244    |     1,550     |      271      |
+| 1942년 8월 |    327    |     1,550     |      342      |
+
+
+### 통계 추정방법
+
+::::: {.columns}
+::: {.column}
+
+독일 탱크 문제의 MLE 추정치는 관측된 탱크 일련 번호 간의 평균 간격을 기반으로 총 탱크 수를 추정한다. 
+
+만약 $k$ 대의 탱크를 관측하고 최고 일련 번호가 $m$ 이라면, 
+평균 간격은 $\frac{m}{k}$으로 $m$ 이후에 관측되지 않은 탱크가 
+대략 $\frac{m}{k}$ 대 더 있을 것으로 추정할 수 있다.
+
+
+따라서 $ N $에 대한 추정치는 다음과 같다:
+
+
+$$
+N_{\text{추정치}} = m + \frac{m}{k} - 1
+$$
+
+:::
+
+:::{.column}
+독일 탱크 5대를 포획했다고 가정해보자. 
+
+탱크들의 일련 번호는 다음과 같다: 2, 5, 7, 20, 31.
+
+가장 높은 일련 번호 $m$은 31, 포획한 탱크 수 $k$는 5대.
+
+총 탱크 수 $N$의 추정치를 계산하면 다음과 같다.
+
+$$
+N_{\text{추정치}} = m + \frac{m}{k} - 1 = 31 + \frac{31}{5} - 1
+$$
+
+추정된 총 탱크 수 $N_{\text{추정치}}$는 **36.2**, 따라서, 36 혹은 37대로 추정할 수 있다.
+:::
+:::::
+
+:::
+
+
+## 나폴레옹 러시아 침공 {.smaller}
+
+::: panel-tabset
+### 나폴레옹
+
+![](img/public/about_napoleon.png)
+
+### 미나르 지도
+
+![](img/public/Minard.png)
+
+### 실제 침공
+
+![](img/public/minard-actual-map.png)
+
+### 데이터
+
+::: columns
+::: column
+**생존병사 수**
+
+```{r minard-russian-table}
+library(HistData)
+library(reactable)
+library(tidyverse)
+
+data(Minard.troops) 
+data(Minard.cities)
+data(Minard.temp)
+
+Minard.troops %>% 
+  select(-group) %>% 
+  reactable(
+    defaultPageSize = 5, minRows = 5,  filterable = FALSE, showPagination = TRUE,
+    columns = list(
+      long = colDef(name = "위도", align = "center"),
+      lat = colDef(name = "경도", align = "center" ),
+      survivors = colDef(name = "생존병사수", align = "center", format = colFormat(separators = TRUE ) ),
+      direction = colDef(name = "진격방향", align = "center")
+    )
+  )  
+```
+:::
+
+::: column
+**후퇴 기온**
+
+```{r minard-russian-city}
+
+data(Minard.temp)
+
+Minard.temp %>% 
+  reactable(
+    defaultPageSize = 5, minRows = 5,  filterable = FALSE, showPagination = TRUE,
+    columns = list(
+      long = colDef(name = "위도", align = "center"),
+      temp = colDef(name = "기온", align = "center" ),
+      days = colDef(name = "후퇴날짜", align = "center"),
+      date = colDef(name = "관측날짜", align = "center")
+    )
+  )  
+```
+:::
+:::
+
+### 시각화
+
+```{r minard-russian-invasion, eval = FALSE}
+library(HistData)
+
+data(Minard.troops)
+data(Minard.cities)
+data(Minard.temp)
+
+source("../../../swc/sungnam-report/R/theme_election.R", encoding = "UTF-8")
+
+## Not run: 
+#' ## Load required packages
+require(ggplot2)
+require(scales)
+require(gridExtra)
+
+levels(Minard.cities$city) <- c("Bobr", "Chjat", "Dorogobouge", "Gloubokoe", "Kowno", "Malo-Jarosewii", 
+                                "Minsk", "Mohilow", "Moiodexno", "Mojaisk", "모스코바", "Orscha", 
+                                "Polotzk", "Smolensk", "Smorgoni", "Studienska", "Tarantino", 
+                                "Wilna", "Witebsk", "Wixma")
+
+#' ## plot path of troops, and another layer for city names
+plot_troops <- ggplot(Minard.troops, aes(long, lat)) +
+	geom_path(aes(size = survivors, colour = direction, group = group),
+               lineend = "round", linejoin = "round")
+plot_cities <- geom_text(aes(label = city), size = 4, data = Minard.cities)
+ 
+#' ## Combine these, and add scale information, labels, etc.
+#' Set the x-axis limits for longitude explicitly, to coincide with those for temperature
+
+breaks <- c(1, 2, 3) * 10^5 
+plot_minard <- plot_troops + plot_cities +
+ 	scale_size("생존병사수", range = c(1, 10), 
+ 	            breaks = breaks, labels = scales::comma(breaks)) +
+  scale_color_manual("진격방향", 
+                     values = c("grey50", "red"), 
+                     labels=c("진격", "후퇴")) +
+  coord_cartesian(xlim = c(24, 38)) +
+  labs(x = NULL,
+       y = "경도",
+       title = "나폴레옹 러시아 침공",
+       subtitle = "1812년 6월 24일 ~ 1813년 1월 5일") +
+  theme_election() +
+  theme(legend.position=c(.8, .2), legend.box="horizontal")
+ 
+library(ggrepel)
+#' ## plot temperature vs. longitude, with labels for dates
+plot_temp <- Minard.temp %>% 
+  mutate(date = case_when(str_detect(date, "Oct") ~ str_replace(date, "Oct", "10월"),
+                          str_detect(date, "Nov") ~ str_replace(date, "Nov", "11월"),
+                          str_detect(date, "Dec") ~ str_replace(date, "Dec", "12월"),
+                           TRUE ~ "미상")) %>% 
+  mutate(date = glue::glue("{date}일")) %>% 
+  mutate(date = ifelse(date == "미상일", "미상", date)) %>% 
+  ggplot(aes(long, temp)) +
+  	geom_path(color="grey", size=1.5) +
+  	geom_point(size=2) +
+  	geom_text_repel(aes(label=glue::glue("{date}")) ) +
+  	xlab("위도") + ylab("기온") +
+  	coord_cartesian(xlim = c(24, 38)) + 
+  	theme_bw()
+	
+#' Combine the two plots into one
+minard_g <- grid.arrange(plot_minard, plot_temp, nrow=2, heights=c(3,1))
+
+ggsave( glue::glue("fig/나폴레옹_러시아.png") , 
+        minard_g,
+        device = ragg::agg_png, 
+        width = 297, height = 210, units = "mm", res = 600)
+```
+
+![](img/public/%EB%82%98%ED%8F%B4%EB%A0%88%EC%98%B9_%EB%9F%AC%EC%8B%9C%EC%95%84.png){fig-align="center" width="707"}
+:::
+
+::: aside
+[Re-Visions of Minard](https://www.datavis.ca/gallery/re-minard.php)
+:::
+
+## 나이팅게일 - 백의천사 {.smaller}
+
+::: panel-tabset
+### 나이팅게일
+
+![](img/public/nightingale-overview.png){fig-align="center" width="859"}
+
+### 크림전쟁
+
+![](img/public/nightingale-war.png){fig-align="center" width="1129"}
+
+### 데이터
+
+```{r nightingale-table}
+library(HistData)
+library(reactable)
+
+HistData::Nightingale %>% 
+  as_tibble() %>% 
+  set_names(c("일자", "월", "년", "군인수", "질병사망", "부상사망", "기타사망", "질병사망율", "부상사망율", "기타사망율")) %>% 
+  select(-월, -년) %>% 
+  mutate(질병사망율 = 질병사망율 / 100,
+         부상사망율 = 부상사망율 / 100,
+         기타사망율 = 기타사망율 / 100) %>% 
+  reactable(
+    defaultPageSize = 5, minRows = 5,  filterable = TRUE, showPagination = TRUE,
+    columns = list(
+      군인수 = colDef(align = "center", format = colFormat(separators = TRUE ) ),
+      질병사망 = colDef(align = "center", format = colFormat(separators = TRUE ) ),
+      부상사망 = colDef(align = "center", format = colFormat(separators = TRUE ) ),
+      기타사망   = colDef(align = "center", format = colFormat(separators = TRUE ) ),
+      질병사망율 = colDef(align = "center", format = colFormat(percent    = TRUE ) ),      
+      부상사망율 = colDef(align = "center", format = colFormat(percent    = TRUE ) ),      
+      기타사망율 = colDef(align = "center", format = colFormat(percent    = TRUE ) )
+    )
+  )  
+
+```
+
+### 시각화
+
+```{r nightingale-viz, eval = FALSE}
+#============================================================================
+#  R codes for recreating Rose Diagram as designed by Florence Nightingale
+#============================================================================
+# https://rpubs.com/chidungkt/819554
+
+# Clear our R environment: 
+rm(list = ls())
+
+# Load Nightingale data set: 
+data("Nightingale", package = "HistData")
+
+# Description about the data set: 
+# ?HistData::Nightingale
+
+# Load some R packages: 
+library(tidyverse) # for data manipulation and visualization.
+library(stringr) # for text prcessing.
+library(lubridate) # for date-time processing.
+library(hrbrthemes) # For using black theme.
+
+# Convert to long form and processing for some columns: 
+
+Nightingale %>% 
+  select(Date, Disease.rate, Wounds.rate, Other.rate) %>% 
+  gather(Cause, Deaths, -Date) %>% 
+  mutate(Cause = str_replace_all(Cause, "\\.rate", ""), Regime = rep(c("Before", "After"), time = 3, each = 12)) %>% 
+  mutate(Regime = factor(Regime, levels = c("Before", "After"))) %>%  
+  mutate(mo = month(Date, label = TRUE, abbr = TRUE)) -> longForm_data
+
+# Select Ubuntu Condensed font for ploting: 
+
+# Recreate Rose Diagram: 
+source("../../../swc/sungnam-report/R/theme_election.R", encoding = "UTF-8")  
+my_font <- "MaruBuri"
+
+
+nightingale_g <- longForm_data %>% 
+  mutate(Regime = ifelse(Regime == "Before", "처치 전", "처치 후")) %>% 
+  mutate(Cause = case_when(str_detect(Cause, "Disease") ~ "질병사망자",
+                           str_detect(Cause, "Wounds")  ~ "부상사망자",
+                           TRUE  ~ "기타사망자")) %>% 
+  mutate(Cause = factor(Cause, levels = c("질병사망자", "부상사망자", "기타사망자"))) %>% 
+  ggplot(aes(x = mo, y = Deaths, fill = Cause)) +
+    geom_col(color = "grey20") + 
+    theme_modern_rc(base_family = my_font, subtitle_family = my_font) + 
+    scale_fill_manual(values = c("firebrick", "orange", "#365181"), name = "") +
+    scale_y_sqrt() +
+    facet_wrap(~ Regime) + 
+    coord_equal(ratio = 1) +  
+    coord_polar() +
+    labs(title = "크림전쟁 사망원인", 
+         subtitle = "나이팅게일이 설계한 그래프", 
+         caption = "데이터출처: 크림전쟁 원일별 사망자") + 
+    theme(legend.position = "top") + 
+    theme(text = element_text(family = my_font, size = 14)) + 
+    theme(axis.title.y = element_blank()) + 
+    theme(axis.title.x = element_blank()) + 
+    theme(axis.text.y = element_blank()) + 
+    theme(axis.ticks = element_blank()) + 
+    theme(plot.margin = unit(rep(0.7, 4), "cm")) + 
+    theme(plot.title = element_text(color = "white", family = my_font, size = 25)) + 
+    theme(plot.caption = element_text(color = "grey70", family = my_font, size = 15)) + 
+    theme(plot.subtitle = element_text(color = "grey70", size = 15)) +
+    theme(legend.text = element_text(color = "white", size = 15)) + 
+    theme(strip.text = element_text(color = "white", size = 17, face = "bold", family = my_font, hjust = 0.5))
+
+
+ggsave( glue::glue("fig/나이팅게일.png") , 
+        nightingale_g,
+        device = ragg::agg_png, 
+        width = 297, height = 210, units = "mm", res = 600)
+
+```
+
+![](img/public/%EB%82%98%EC%9D%B4%ED%8C%85%EA%B2%8C%EC%9D%BC.png){fig-align="center" width="707"}
+:::
+
+::: aside
+-   [위키백과, "플로렌스 나이팅게일"](https://ko.wikipedia.org/wiki/%ED%94%8C%EB%A1%9C%EB%A0%8C%EC%8A%A4_%EB%82%98%EC%9D%B4%ED%8C%85%EA%B2%8C%EC%9D%BC), [위키백과, "크림전쟁"](https://ko.wikipedia.org/wiki/%ED%81%AC%EB%A6%BC_%EC%A0%84%EC%9F%81)
+:::
+
+
+## 폭격비행기 {.smaller}
+
+```{r download-world-war, eval = FALSE}
+
+europe_names <- glue::glue("Europe_{1939:1945}")
+pacific_names <- glue::glue("Pacific_{c(1937, 1939, 1941:1945)}")
+
+for(i in 1:length(europe_names)) {
+  # cat(europe_names[i], "\n")
+  # download.file(url = glue::glue("http://www.andrewclem.com/War/Maps/{europe_names[i]}.gif"),
+  #             destfile = glue::glue("{here::here()}/fig/world_war/{europe_names[i]}.png"), mode = "wb" )
+  cat(pacific_names[i], "\n")
+  download.file(url = glue::glue("http://www.andrewclem.com/War/Maps/{pacific_names[i]}.gif"),
+              destfile = glue::glue("{here::here()}/fig/world_war/{pacific_names[i]}.png"), mode = "wb" )
+}
+```
+
+```{r make-gif, eval = FALSE}
+library(tidyverse)
+library(magick)
+
+world_war_files <- fs::dir_ls(path = "fig/world_war", glob = "*.png")
+
+europe_files <- world_war_files[str_detect(world_war_files, "Europe")]
+pacific_files <- world_war_files[!str_detect(world_war_files, "Europe")]
+
+## 유럽 전황 
+europe_m <- magick::image_read(pacific_files[1])
+
+for (i in 2:length(europe_files)) {
+  europe_m <- c(europe_m, magick::image_read(europe_files[i]))
+}
+
+europe_ani <- magick::image_animate(europe_m, fps = 1, loop = 0, dispose = "previous")
+magick::image_write(europe_ani, "fig/world_war_europe.gif")
+
+## 태평양 전황 
+pacific_m <- magick::image_read(pacific_files[1])
+
+for (i in 2:length(pacific_files)) {
+  pacific_m <- c(pacific_m, magick::image_read(pacific_files[i]))
+}
+
+pacific_ani <- magick::image_animate(pacific_m, fps = 1, loop = 0, dispose = "previous")
+magick::image_write(pacific_ani, "fig/world_war_pacific.gif")
+
+```
+
+::: panel-tabset
+### 세계대전 - 유럽
+
+![](img/public/world_war_europe.gif)
+
+### 세계대전 - 태평양
+
+![](img/public/world_war_pacific.gif)
+
+### 대공포
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/48zE-hRAYEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+### 폭격기 데이터
+
+![](img/public/Survivorship-bias.png){fig-align="center" width="671"}
+
+### 고민
+
+![](img/public/hum_meme.jpg){fig-align="center" width="500"}
+
+### 업그레이드
+
+![](img/public/survivorship_bias_plane.png){fig-align="center" width="1698"}
+:::
+

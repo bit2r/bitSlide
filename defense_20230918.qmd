@@ -6,7 +6,7 @@ institute: "공익법인 한국 R 사용자회"
 date: 2023-09-18
 format: 
   insper-revealjs:
-    self-contained: true
+    self-contained: false
     footer: |
       한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
 date-format: long
@@ -23,17 +23,19 @@ editor_options:
 ## 목차
 
 1.  강사소개 및 강의개요
-2.  통계학
-9.  챗GPT 데이터 사이언스
+2.  생활 데이터 사례 연구
+3.  전쟁 데이터 사례 연구
+4.  통계학
+5.  데이터 사이언스
+6.  챗GPT 데이터 사이언스
 
-{{< include slideshow/202309_defense/00-who-am-i.qmd >}}
+<!-- {{< include slideshow/202309_defense/00-who-am-i.qmd >}} -->
 
-{{< include slideshow/202309_defense/seoul-r-meeup.qmd >}}
+<!-- {{< include slideshow/202309_defense/seoul-r-meeup.qmd >}} -->
 
-{{< include slideshow/202309_defense/public_data_literacy.qmd >}}
+<!-- {{< include slideshow/202309_defense/data_literacy_war.qmd >}} -->
+
+<!-- {{< include slideshow/202309_defense/data_literacy_life.qmd >}} -->
 
 {{< include slideshow/202309_defense/reference.qmd >}}
-
-
-
 

@@ -1,0 +1,354 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# 생활 데이터 사례 연구
+
+## 러시아 월드컵 (독일전)
+
+<br>
+
+![](img/public/worldcup.gif)
+
+::: aside
+[러시아 월드컵(2018) - 한국 vs 독일](https://statkclee.github.io/viz/viz-worldcup-germany.html)
+:::
+
+## 1854년 런던 코로나19 {.smaller}
+
+::: panel-tabset
+### 팬데믹
+
+![](img/public/1024px-Punch-A_Court_for_King_Cholera.png){fig-align="center" width="627"}
+
+### 데이터-1
+
+![](img/public/snow-cholera-map.jpg){width="533"}
+
+### 데이터-2
+
+```{r john-snow-hist-data, out.width="100%"}
+library(HistData)
+library(ggmap)
+library(maptools)
+library(leaflet)
+library(sp)
+library(rgdal)
+library(reactable)
+
+data(Snow.deaths); data(Snow.pumps); data(Snow.streets); data(Snow.polygons)
+
+Snow.deaths %>% 
+  reactable(
+    defaultPageSize = 7, minRows = 7, searchable = TRUE,
+    columns = list(
+      case = colDef(name = "사망자 번호"),
+      x = colDef(name = "경도"),
+      y = colDef(name = "위도")
+    )
+  )
+```
+
+### 탐정
+
+![](img/public/Pump_Handle_-_John_Snow_.jpg){fig-align="center" width="375"}
+
+### 시각화(1854)
+
+```{r london-map}
+#| eval: true
+library(ggmap)
+ggmap::register_google(key = Sys.getenv("GOOGLE_MAP_API_KEY"), write = TRUE)
+london_map <- get_map(c(-.137,51.513), zoom=17)
+london <- ggmap(london_map) 
+SnowMap(main ="스노우가 작성한 콜레라 지도", density=TRUE)
+```
+
+### 시각화(2022)
+
+```{r john-snow-hist-data-now, out.width="100%"}
+#| eval: true
+# download.file("http://rtwilson.com/downloads/SnowGIS_SHP.zip",
+#               dest="data/SnowGIS.zip", mode="wb")
+library(maptools)
+
+deaths <- readShapePoints(glue::glue("{here::here()}/data/SnowGIS_SHP/Cholera_Deaths") )
+df_deaths <- data.frame(deaths@coords)
+
+coordinates(df_deaths)=~coords.x1+coords.x2
+
+proj4string(df_deaths)=CRS("+init=epsg:27700") 
+df_deaths = spTransform(df_deaths,CRS("+proj=longlat +datum=WGS84"))
+df=data.frame(df_deaths@coords)
+
+df1 <- data.frame(df$coords.x1, df$coords.x2)
+
+Pump_area <- readShapePoints(glue::glue("{here::here()}/data/SnowGIS_SHP/Pumps") )
+pump_area <- data.frame(Pump_area@coords)
+
+coordinates(pump_area)=~coords.x1+coords.x2
+
+proj4string(pump_area)=CRS("+init=epsg:27700") 
+pump_area = spTransform(pump_area,CRS("+proj=longlat +datum=WGS84"))
+pa=data.frame(pump_area@coords)
+
+
+pa1 <- data.frame(pa$coords.x1, pa$coords.x2)
+
+df2 <- cbind(Parameter = "Deaths", df1)
+colnames(df2) <- c("Parameter", "coords.x1", "coords.x2")
+
+pa2 <- cbind(Parameter = "Pump", pa1)
+colnames(pa2) <- c("Parameter", "coords.x1", "coords.x2")
+tot <- rbind(df2, pa2)
+
+london + geom_point(mapping=aes(x=coords.x1, y=coords.x2, col=Parameter,size=Parameter , shape=Parameter), data=tot) + scale_size_discrete(range = c(2, 4)) + 
+  labs(title = " 영국 런던 펌부와 콜레라 발병으로 인한 사망자 매핑")
+```
+
+### 메타버스
+
+<iframe width="600" height="500" src="https://www.youtube.com/embed/B_UsX5vfPJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+::: aside
+-   [1854 Broad Street cholera outbreak](https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak)
+:::
+:::
+
+## 지진해일 대피소
+
+![](img/public/earthquake.png){fig-align="center" width="700"}
+
+::: aside
+[xwMOOC (2018-01-17), "지진해일 대피소 - crosstalk"](https://statkclee.github.io/viz/viz-earthquake-shelter.html)
+:::
+
+## 손씻기 역사 {.smaller}
+
+::: panel-tabset
+### 출생사망
+
+![](img/public/hand-washing.jpeg)
+
+### 데이터
+
+```{r data-science-hand-washing}
+# 0. 환경설정 -----
+library(infer)
+library(tidyverse)
+library(extrafont)
+loadfonts()
+library(ggthemes)
+library(DT)
+library(viridis)
+library(reactable)
+
+# 1. 데이터  -----
+# download.file(url="https://raw.githubusercontent.com/statkclee/statistics/gh-pages/data/yearly_deaths_by_clinic.csv", destfile = "data/yearly_deaths_by_clinic.csv")
+# download.file(url="https://raw.githubusercontent.com/statkclee/statistics/gh-pages/data/monthly_deaths.csv", destfile = "data/monthly_deaths.csv")
+
+year_df <- read_csv(glue::glue("{here::here()}/data/yearly_deaths_by_clinic.csv"))
+month_df <- read_csv(glue::glue("{here::here()}/data/monthly_deaths.csv"))
+```
+
+::: columns
+::: column
+**연도별**
+
+```{r}
+library(gtExtras)
+library(gt)
+
+year_df %>% 
+  gt::gt() %>% 
+    gt_theme_538() %>% 
+    cols_align(align = "center") %>% 
+    fmt_number(columns = births, decimals = 0)
+```
+:::
+
+::: column
+**월별**
+
+```{r}
+month_df %>% 
+  reactable(
+    defaultPageSize = 5, minRows = 5,  filterable = TRUE, showPagination = TRUE,
+    columns = list(
+      date = colDef(name = "연도", align = "center"),
+      births = colDef(name = "출생", align = "center", format = colFormat(separators = TRUE ) ),
+      deaths = colDef(name = "사망", align = "center", format = colFormat(separators = TRUE ) )
+    )
+  )
+```
+:::
+:::
+
+### 병원별 비교
+
+```{r data-science-hand-washing-viz}
+
+year_df %>% 
+  pivot_longer(cols = births:deaths) %>% 
+  mutate(clinic = factor(clinic, levels = c("clinic 1", "clinic 2"))) %>%
+  mutate(name = ifelse(name == "births", "출산", "사망")) %>% 
+  mutate(name = factor(name, levels = c("출산", "사망"))) %>% 
+  mutate(clinic = ifelse(str_detect(clinic, "clinic 1"), "병원1", "병원2")) %>% 
+  ggplot(aes(x=year, y=value, color=clinic, group = clinic)) +
+    geom_point(size = 2) +
+    geom_line() +
+    facet_wrap( ~ name, scales="free") +
+    labs(x="", y="산모숫자",
+         color = "병원: ") +
+    scale_y_continuous(labels = scales::comma) +
+    # scale_color_manual(values = c("births" = "blue",
+    #                               "deaths" = "red")) +
+    scale_color_manual(values = c("black", "blue")) +
+    theme_bw(base_family = "NanumGothic") +
+    theme(legend.position = "top") 
+
+```
+
+### 시간별 비교
+
+```{r data-science-hand-washing-before-after}
+extrafont::loadfonts()
+# 3. 손씻기 실험 결과 -----
+month_df %>% 
+  mutate(손씻기_전후 = ifelse(date >= lubridate::ymd('1847-06-01'), "깨끗한 손", "더러운 손")) %>% 
+  gather(출생사망, 산모숫자, -date, -손씻기_전후) %>% 
+  mutate(출생사망 = ifelse(str_detect(출생사망, "birth"), "출산", "사망")) %>% 
+  ggplot(aes(x=date, y=산모숫자, group=출생사망, color=손씻기_전후)) +
+    geom_point() +
+    geom_line() +
+    geom_vline(xintercept = lubridate::ymd('1847-06-01'), color="green", size=1) +
+    facet_wrap( ~ 출생사망, scales="fixed") +
+    labs(x="", y="산모숫자") +
+    scale_y_continuous(labels = scales::comma) +
+    theme_bw(base_family = "마루부리") +
+    theme(legend.position = "top")
+
+```
+
+### 사망율 분포
+
+```{r handwashing-rate}
+# 4. 통계적 유의성 검정 -----
+## 4.1. 데이터 -----
+month_test <- month_df %>% 
+  mutate(손씻기_전후 = ifelse(date >= as.Date('1847-06-01'), "깨끗한 손", "더러운 손")) %>% 
+  mutate(산모_사망률 = deaths / births)
+
+## 4.2. 시각화 -----
+ggplot(data = month_test, mapping = aes(x = 산모_사망률, fill=손씻기_전후)) +
+  geom_density(alpha = 0.7) +
+  scale_x_continuous(labels = scales::percent) +
+  scale_fill_viridis(discrete = TRUE) +
+  theme_bw(base_family="NanumGothic") +
+  labs(title="손씻기 전후 산모사망률 비교",
+       x="산모사망률", y="빈도수", fill="손씻기 전후")
+```
+
+### 통계검정
+
+<br> <br>
+
+```{r data-science-hand-washing-testing-number, results="asis"}
+## 4.3. 전통적인 통계검정 -----
+library(broom)
+t.test( 산모_사망률 ~ 손씻기_전후, data = month_test) %>%
+  tidy() %>%
+  select(!contains("estimate")) %>%
+  knitr::kable()
+
+```
+
+::: aside
+-   [이광춘, "손씻기 그리고 통계 - 제멜바이스"](http://statkclee.github.io/statistics/stat-hand-washing.html)
+:::
+:::
+
+## 정규분포 {.smaller}
+
+::: panel-tabset
+### 골턴 보드
+
+![](img/public/galton-board.png)
+
+### 동영상
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EvHiee7gs9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+### 모의실험
+
+<iframe width="560" height="315" src="img/public/yihui-animation.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-external="1">
+
+</iframe>
+
+### 실제사례 - 신장
+
+```{r}
+#| eval: false
+library(tidyverse)
+library(readxl)
+extrafont::loadfonts()
+
+body_sheets <- excel_sheets("data/육군 신체측정정보.xlsx")
+
+body_list <- list()
+
+for(i in 1:length(body_sheets)) {
+  cat(body_sheets[i], "\n")
+  body_list[[i]] <- read_excel("data/육군 신체측정정보.xlsx", sheet = body_sheets[i])
+}
+
+body_raw <- map_df(body_list, rbind)
+
+height_tbl <- body_raw %>% 
+  janitor::clean_names(ascii = FALSE) %>% 
+  select(신장 = 신장_센티미터) %>% 
+  mutate(신장 = parse_number(신장))
+
+army_height_g <- height_tbl %>% 
+  ggplot(aes(x = 신장)) +
+    geom_histogram(aes(y=..density..)) +
+    geom_density(color = "red") +
+    theme_bw() +
+    labs(x = "신장(센티미터)",
+         y = "밀도",
+         title = "육군 신체측정정보 - 신장(키)",
+         subtitle = "2022년 4월 23일 기준")
+ 
+ggsave( glue::glue("img/public/육군_신장.png") , 
+        army_height_g,
+        device = ragg::agg_png, 
+        width = 297, height = 210, units = "mm", res = 600) 
+```
+
+![](img/public/%EC%9C%A1%EA%B5%B0_%EC%8B%A0%EC%9E%A5.png){fig-align="center" width="707"}
+
+### 미국 대학생 신장
+
+![](img/public/normal-in-action.png)
+:::
+
+::: aside
+-   [육군 신체측정정보 : 육군 신체측정 데이터(수시 업데이터)](https://opendata.mnd.go.kr/openinf/sheetview2.jsp?infId=OA-9425)
+:::
+
+
+## 회귀분석 - MLB 투수 유전자는 유전이 될까?
+
+![](img/public/major-league.png){fig-align="center"}
+
+::: aside
+[회귀분석 - MLB 투수 유전자는 유전이 될까?](https://statkclee.github.io/politics/pe-baseball-era.html)
+:::
+
+
