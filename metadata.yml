@@ -1,11 +1,27 @@
 # Internal slide decks
 
 
+- title: "생성형 AI 데이터 사이언스"
+  subtitle: "경제적/교육적 함의"
+  author: "이광춘"
+  date: 2023-09-22
+  image: img/odf_logo.png
+  path: odf_20230922.qmd
+  categories:
+    - "공공 데이터"
+    - "오픈 데이터 포럼"
+    - "데이터 사이언스"
+    - "생성형 AI"
+    - "Advanced Data Analysis"
+    - "한국 R 사용자회"
+    - "챗GPT"
+    - "Code Interpreter"
+
 - title: "공공 빅데이터 분석활용"
   subtitle: "방위사업청"
   author: "이광춘"
   date: 2023-09-18
-  image: img/방위산업청.png
+  image: img/방위사업청.png
   path: defense_20230918.qmd
   categories:
     - "공공 데이터"

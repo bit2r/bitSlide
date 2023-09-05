@@ -1,0 +1,122 @@
+# 도구(문서)의 인간
+
+![](img/homo-faber.jpg)
+
+## 글쓰기(문서 제작) 현재와 미래 {.smaller}
+
+::: columns
+::: column
+### 현재
+
+<br>
+
+![](slideshow/202212-youtube/fig/jobshop.gif)
+:::
+
+::: column
+### 미래
+
+<br>
+
+![](slideshow/202212-youtube/fig/quarto_to_go.gif)
+:::
+:::
+
+## 문서제작 → 글쓰기 기본기 {.smaller}
+
+::: panel-tabset
+### 데이터 과학
+
+![](img/horst-eco-r4ds.png)
+
+### 문서 복잡성
+
+![](img/markdown-writing.png)
+
+### 문서 패러다임
+
+![](img/data-conference-three-languages.png)
+:::
+
+## (행정) 글쓰기 진화 {.smaller}
+
+::: panel-tabset
+### 글쓰기 역사
+
+![](img/writing_history.jpg)
+
+### 도구의 진화
+
+![](img/writing-evolution.jpg)
+
+### 행정 글쓰기
+
+![](img/gseek-evolution.jpg)
+
+### 챗GPT 디지털 글쓰기
+
+![](img/gseek_poster.jpg)
+
+경기도 평생학습포털(GSEEK) [챗GPT 디지털 글쓰기](https://www.gseek.kr/member/rl/live/liveCourseInfo.do?menuId=LTOP&menuStep=&pMenuId=LTOP&glcIdx=9893)
+:::
+
+## 문서화 프로그래밍 {.smaller}
+
+::: panel-tabset
+### 개발과 저작
+
+<br> <br>
+
+```{mermaid}
+graph LR
+
+    subgraph "소프트웨어"
+        direction LR
+        sourcecode[소스코드] --> package1[패키지]
+        package1 --> product1["제품(S/W)"]
+        product1 --> distribute1[배포]
+        distribute1 --> service1["서비스<br>(앱)"]
+    end
+    
+    subgraph "문서"
+        direction LR
+        text[텍스트] --> package2[패키지]
+        package2 --> product2["제품(문서)"]
+        product2 --> distribute2[배포]
+        distribute2 --> service2["서비스<br>(출판)"]
+    end
+
+    style 소프트웨어 fill:#f5f5f5,stroke:#333,stroke-width:3px
+    style 문서 fill:#b5b5b5,stroke:#111,stroke-width:3px
+
+    style sourcecode fill:#ffeeee,stroke:#f66,stroke-width:2px
+    style package1 fill:#eeffee,stroke:#6f6,stroke-width:2px
+    style product1 fill:#eeeeff,stroke:#66f,stroke-width:2px
+    style distribute1 fill:#eefeee,stroke:#6ff,stroke-width:2px
+    style service1 fill:#ffeeee,stroke:#f66,stroke-width:2px
+
+    style text fill:#ffeeee,stroke:#f66,stroke-width:2px
+    style package2 fill:#eeffee,stroke:#6f6,stroke-width:2px
+    style product2 fill:#eeeeff,stroke:#66f,stroke-width:2px
+    style distribute2 fill:#eefeee,stroke:#6ff,stroke-width:2px
+    style service2 fill:#ffeeee,stroke:#f66,stroke-width:2px
+```
+
+### 출판 워크샵
+
+![](img/chatGPT_workshop.png){fig-align="center" width="354"}
+
+### 챗GPT 유닉스 쉘
+
+![](img/chatGPT_unix_shell.jpg){fig-align="center" width="700"}
+
+### →
+
+### 출판사
+
+![](img/publisher_certificate.jpg){fig-align="center" width="394"}
+:::
+
+::: aside
+-   워크샵: <https://event-us.kr/data-science/event/64397>, 소스코드: <https://github.com/bit2r/gpt-shell>
+:::

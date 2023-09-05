@@ -1,0 +1,228 @@
+# 선거 공공데이터
+
+## 오픈 데이터 포럼 {.smaller}
+
+::: columns
+::: column
+![](img/odf_election.jpg){fig-align="center" width="237"}
+:::
+
+::: column
+### 선거관련 데이터 및 사법기관의 공공데이터 개방현황과 개선방안
+
+2022년 7월 열린세미나를 개최합니다. 이번 주제는 선거관련 데이터의 개방현황과 사법기관 공공데이터의 개방현황 그리고 개선방안을 함께 살펴보는 시간을 준비했습니다 관심있는 분들의 많은 참여와 의견 바랍니다.
+
+-   일시: 2022. 7. 28.(목) 14\~17시
+
+-   참여방법:
+
+    1.  서울창업허브(서울특별시 마포구 공덕동 백범로31길 21) 본관 10층 대강당\
+    2.  웹세미나 (유튜브/오픈데이터포럼 공식채널)
+
+-   주제: 선거관련 데이터 및 사법기관의 공공데이터 개방현황과 개선방안
+
+-   참가신청 : https://www.onoffmix.com/event/259343
+
+-   온·오프라인 사전 신청자에 한에서 이벤트를 통해 소정의 기념품 을 준비했으므로, 많은 관심과 참여 부탁드리겠습니다
+:::
+:::
+
+## 주요 선거 일정
+
+<br> <br> <br>
+
+```{r}
+#| eval: false
+
+library(googleVis)
+
+election_dat <- data.frame(type=c("대통령","대통령","대통령","대통령", "대통령", "대통령",
+                                  "국회의원","국회의원","국회의원","국회의원", "국회의원", "국회의원",
+                                  "지방선거","지방선거","지방선거","지방선거", "지방선거", "지방선거"),
+                  subtype=c("15대", "16대", "17대", "18대","19대","20대",
+                            "17대", "18대", "19대", "20대","21대", "22대",
+                            "3회","4회","5회","6회","7회","8회"),
+                  start=as.POSIXct(c("1997-12-18","2002-12-19","2007-12-19","2012-12-19","2017-5-10","2022-5-10",
+                                     "2004-5-30","2008-5-30", "2012-5-30","2016-5-30", "2020-5-30", "2024-5-30",
+                                     "2002-7-1", "2006-7-1", "2010-7-1","2014-7-1","2018-7-1","2022-7-1")),
+                    end=as.POSIXct(c("2002-12-18","2007-12-18","2012-12-19","2017-5-9", "2022-5-9", "2027-5-9",
+                                     "2008-5-29", "2012-5-29","2016-5-29","2020-5-29","2024-5-29","2028-5-29",
+                                     "2006-6-30", "2010-6-30", "2014-6-30","2018-6-30","2022-6-30","2026-6-30")))
+
+election_timeline <- gvisTimeline(data=election_dat, 
+               rowlabel="type", barlabel="subtype", 
+               start="start", end="end", options=list(width = "automatic",
+                                                      height = "automatic" ))
+
+
+cat(election_timeline$html$chart, file = "data/krvote-election.html")
+```
+
+```{r}
+#| results: 'asis'
+xfun::file_string(glue::glue('{here::here()}/data/krvote-election.html'))
+```
+
+## 중앙선관위 데이터 제공방식 {.smaller}
+
+::: panel-tabset
+### 중앙선관위: 웹사이트
+
+![](img/public/asia-nec-info.jpg){width="835"}
+
+### 중앙선관위 - 자료실
+
+![](img/public/nesdc_download_files.png){width="897"}
+
+### 공공데이터포털 - API
+
+![](img/public/asia-data-portal-api.jpg){width="869"}
+:::
+
+## 중앙선관위 제공 데이터 {.smaller}
+
+::: panel-tabset
+### 투/개표
+
+![](img/public/asia-nec-info.jpg){width="759"}
+
+-   [선거통계시스템](http://info.nec.go.kr/)
+
+### 여론조사
+
+![](img/public/nec-nesdc.jpg){width="719"}
+
+-   [중앙선거여론조사심의위원회](https://www.nesdc.go.kr/portal/main.do)
+
+### 의식조사
+
+![](img/public/nec-minds-pdf.jpg){width="399"}
+
+-   [제20대 대통령선거 유권자의식조사, PDF](https://www.nec.go.kr/site/nec/ex/bbs/View.do?cbIdx=1129&bcIdx=187615)
+
+### 정당회계
+
+![](img/public/nec-party.jpg){width="339"}
+
+-   [2020년도 정당의 활동개황 및 회계보고, PDF](https://www.nec.go.kr/site/nec/ex/bbs/View.do?cbIdx=1129&bcIdx=151337)
+
+### TV토론
+
+![](img/public/nec-debate.jpg){width="658"}
+
+-   [제 20대 대통령선거 후보자 토론회 다시보기](https://debates.go.kr/2022_vote/sub01/sub01_1.php?substg=1&id=632)
+
+### 지도
+
+![](img/public/nec-precinct-map.jpg){width="708"}
+
+-   [선거구지도 - 대한민국 행정동 경계(admdongkor)](https://github.com/vuski/admdongkor)
+
+### 정책공약
+
+![](img/public/nec-precinct-map.jpg){width="708"}
+
+-   [정책공약마당](https://policy.nec.go.kr/)
+
+### 공보물
+
+![](img/public/nec-phamplet.jpg){width="593"}
+
+-   [선거정보도서관-후보자선전물](https://http://elecinfo.nec.go.kr/)
+:::
+
+## 데이터 사이언스 사례 {.smaller}
+
+::: panel-tabset
+### 사전투표율
+
+![](img/public/nec-ds-early-voting.jpeg){width="707"}
+
+-   [제20대 대통령 선거, 사전투표 역사를 새로 쓰다](http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002815847)
+
+### 역대선거
+
+![](img/public/nec-ds-local-election.jpeg){width="707"}
+
+-   [지방선거 시도지사 절반, 5월 12일 결정된다](http://www.ohmynews.com/NWS_Web/View/at_pg_w.aspx?CNTN_CD=A0002820588)
+
+### 여론조사
+
+![](img/public/nec-ds-polls.jpeg){width="707"}
+
+-   [여론조사를 네 분류로 나눠보니, 눈에 띄는 흐름](http://www.ohmynews.com/NWS_Web/View/at_pg_w.aspx?CNTN_CD=A0002802812)
+
+### TV 토론
+
+![](img/public/nec-ds-debate.jpeg){width="707"}
+
+-   [데이터를 통해 본 대선 TV 토론회](http://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002814657)
+
+### 지도
+
+![](img/public/nec-ds-map.jpeg){width="707"}
+
+-   [대선득표율로 지방선거 판세를 가늠해보자](http://www.ohmynews.com/NWS_Web/View/at_pg_w.aspx?CNTN_CD=A0002818973)
+
+### 공약
+
+![](img/public/nec-ds-policy.jpeg){width="707"}
+
+-   [유력 대선후보 4인, 10대 공약 중 압도적 분야는 '00'](http://www.ohmynews.com/NWS_Web/View/at_pg_w.aspx?CNTN_CD=A0002810838)
+
+### 정당사무소
+
+![](img/public/nec-ds-party.jpeg){width="511"}
+
+-   [양강 구도 속 부지런히 움직이는 제3후보는?](http://www.ohmynews.com/NWS_Web/View/at_pg_w.aspx?CNTN_CD=A0002810396)
+:::
+
+## `krvote` 데이터 패키지 {.smaller}
+
+::: panel-tabset
+### 패키지
+
+![](img/public/asia-pkg-why.jpg){fig-align="center" width="933"}
+
+-   [Desirée De Leon, Alison Hill, "A Handbook for Teaching and Learning with R and RStudio", 2019-09-11](https://rstudio4edu.github.io/rstudio4edu-book/)
+
+### 데이터 패키지
+
+![](img/public/asia-pkg-overview.jpg){fig-align="center" width="776"}
+
+-   [Desirée De Leon, Alison Hill, "A Handbook for Teaching and Learning with R and RStudio", 2019-09-11](https://rstudio4edu.github.io/rstudio4edu-book/)
+
+### 전처리작업
+
+![](img/public/asia-data-workflow.png){fig-align="center" width="1330"}
+
+-   [이광춘, "krvote - 대한민국 선거 데이터 패키지", 2022-06-09](https://ai-carpentry.github.io/krvote/)
+
+### 후처리작업
+
+![](img/public/asia-data-workflow-pkg.png){fig-align="center" width="1487"}
+
+-   [이광춘, "krvote - 대한민국 선거 데이터 패키지", 2022-06-09](https://ai-carpentry.github.io/krvote/)
+
+### `krvote`
+
+```{r krvote-dataset-show, eval = TRUE, echo = FALSE}
+# remotes::install_github("ai-carpentry/krvote")
+library(tidyverse)
+library(krvote)
+
+krvote_dat <- data(package = "krvote")
+
+krvote_dat$results %>% 
+  as_tibble() %>% 
+  select(데이터셋 = Item, 데이터설명 = Title) %>% 
+  reactable::reactable(filterable = TRUE, defaultPageSize = 7 )
+```
+:::
+
+##  {background-image="img/question.jpg"}
+
+::: r-fit-text
+[[제20대 대통령 선거](https://statkclee.github.io/president/social-dashboard.html)]{style="color: blue; font-size:92px;"}
+:::
+

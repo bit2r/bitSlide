@@ -1,0 +1,321 @@
+# 데이터 과학
+
+## 데이터 과학 {.smaller}
+
+> 데이터 사이언스(Data Science)는 데이터를 다루는 과학이다. 따라서 자연법칙을 다루는 자연과학과 맥이 닿아있다. 자연법칙을 측정하여 데이터프레임(`DataFrame`)으로 나타내면 **변수(Variable)**, **관측점(Observation)**, **값(Value)**으로 표현된다.
+
+![](img/public/data-science-overview.png)
+
+
+## 데이터 과학 (넓은 의미)
+
+![](img/horst-eco-r4ds.png)
+
+## 데이터 과학 욕구단계설
+
+::: panel-tabset
+### 매슬로 욕구단계설
+
+![](img/pyramid-needs.png)
+
+### 가치 피라미드
+
+![](img/pyramid-data-science.png)
+:::
+
+## 가치 {.smaller}
+
+<small>
+
+<ul>
+
+<li>기술 분석(Descriptive Analytics): 무슨 일이 있었나? (What happened?)</li>
+
+<li>진단 분석(Diagnostic Analytics): 왜 일어났나? (Why did it happen?)</li>
+
+<li>예측 분석(Predictive Analytics): 무슨 일이 일어날까? (What will happen?)</li>
+
+<li>처방 분석(Prescriptive Analytics): 어떻게 그런 일을 일으킬까? (How can we make it happen?)</li>
+
+</ul>
+
+</small>
+
+![](img/public/ds-gartner.png){fig-align="center" width="562"}
+
+
+## 30년의 변화를 그림으로 표현
+
+![](img/public/intree-xy-f.png){fig-align="center" width="777"}
+
+::: aside
+[이광춘(2019-01-26), "Data Scientist 가 바라본 제조업의 발전 전략 및 방안", Intree 4.0 World Forum](https://statkclee.github.io/ds-authoring/intree-seminar-2019-01.html)
+:::
+
+## 데이터 경제와 산업 {.smaller}
+
+::: columns
+::: column
+### 데이터 자원
+
+![](img/public/economist-bigdata-oil.png)
+:::
+
+::: column
+### 파이프라인
+
+![](img/public/data-economy-industry.png)
+:::
+:::
+
+::: aside
+[이광춘 (2020-07-21), "기업운영혁신을 위한 데이터 과학: 기업의 활용방안", 포항산업과학연구원(RIST)](https://statkclee.github.io/ds-authoring/ds-rist.html)
+:::
+
+
+
+## AI/ML/DL 그리고 데이터 과학 {.smaller}
+
+<br>
+
+![](img/public/tidyvese_os.png){fig-align="center" width="873"}
+
+::: aside
+[한국통계학회 소식지 2019년 10월호](https://statkclee.github.io/ds-authoring/ds-stat-tidyverse.html) [@lee2019stat]
+:::
+
+## `tidyverse` {.smaller}
+
+![](img/public/maso_tidyverse.png){.smaller fig-align="center" width="925"}
+
+::: columns
+::: {.column .smaller}
+-   기존 자료구조를 재사용
+-   파이프 연산자로 간단한 함수를 조합
+-   함수형 프로그래밍을 적극 사용
+-   기계가 아닌 인간을 위한 설계
+:::
+
+::: column
+-   Reuse existing data structures.
+-   Compose simple functions with the pipe.
+-   Embrace functional programming.
+-   Design for humans.
+:::
+:::
+
+## 엑셀 선 넘네!!! {.smaller}
+
+::: panel-tabset
+### 세미나
+
+![](img/train-to-data.jpg)
+
+### 엑셀 구성
+
+::::: columns
+::: column
+
+-   스프레드쉬트는 데이터, 서식, 수식으로 구성된다.
+-   숫자 데이터를 엑셀로 가져오게 되면 엑셀 내장 함수를 통해 수식 계산을 수행한다.
+-   엑셀 사용자 본인 혹은 외부 사람을 위해 서식을 입히는 과정을 거쳐 비로소 완성된 스프레드쉬트가 된다.
+
+:::
+
+::: column
+
+![](img/ds-xls-data-format-logic.png){fig-align="center" width="540"}
+
+:::
+
+:::::
+
+### 엑셀 참사
+
+| 회사             | 손실       | 날짜     | 영향                               | 참사 개요                                |
+|------------|------------|------------|------------|-------------------------|
+| Mouchel          | £ 4.3백만  | '10.11월 | CEO 사임, 주가폭락                 | 연금펀드평가 £ 4.3백만 엑셀 오류         |
+| C&C Group        | £ 9 백만   | '09.7월  | 주가 15% 하락 등                   | 매출 3% 상승이 아니고 5% 하락, 엑셀 오류 |
+| King 펀드        | £ 130 백만 | '11.05월 | 브래드 이미지 하락                 | 웨일즈 지방 NHS 지출 엑셀 오류           |
+| AXA Rosenberg    | £ 150 백만 | '11.02월 | 은폐, 벌금, 브래드 이미지 하락     | 엑셀 오류를 감춰서 \$242 백만 벌금       |
+| JP Morgan Chase  | £ 250 백만 | '13.01월 | 명성, 고객 신뢰도 저하             | 바젤 II VaR 위험 평가 엑셀 오류          |
+| Magellan 펀드    | £ 1.6 십억 | '95.01월 | 투자자에게 약속한 배당금 지급 못함 | 음수 부호 누락으로 자본이득 과대계상     |
+| 미연방준비위원회 | £ 2.5 십억 | '10.10월 | 명확하지 않음                      | 리볼빙 카드 신용액 산출 과정에 엑셀 오류 |
+
+
+### 복잡성
+
+<br> <br> <br> ![](img/ds-xls-algo-complexity.png)
+
+
+### 6가지 이유
+
+::::: columns
+::: column
+
+> #### 스프레드쉬트 사용 이유
+>
+> -   항상 엑셀을 사용했다: 항상 데이터를 엑셀로 저장하고 분석해서 사용했다. 하지만, 버튼 하나로 데이터를 내보내기 쉽다.
+> -   데이터베이스를 사용할 만큼 데이터가 충분하지 않다: 데이터가 작아서 데이터베이스를 사용할 이유를 찾지 못하지만, 사업이 커지고, 업무량이 늘어나면서 엑셀 작업량이 높아지고, 복잡성도 커지고, 엑셀 자체에서 처리되는 시간도 늘어난다.
+
+:::
+
+::: column
+
+#### 엑셀 &rarr; 다른 도구 
+
+1.  한번에 한사람만 작업이 가능하다.
+2.  데이터 감사는 데이터베이스에서만 가능
+3.  데이터베이스는 정형화된 작업흐름을 지원한다.
+4.  데이터베이스는 엑셀보다 모형을 보다 잘 지원한다.
+5.  데이터베이스로 보고서 생성이 수월하다.
+6.  데이터베이스는 보안이 강력하고 규제하기 좋다.
+
+---
+
+7.  R은 시각화와 통계 데이터 전처리에 좋다.
+8.  파이썬은 AI 기능 도입에 좋다.
+9.  Git/GitHub 은 재현성과 버젼제어에 좋다.
+
+:::
+
+:::::
+
+### 엑셀 &rarr; 챗GPT
+
+
+![](img/excel_to_ai.jpg)
+
+:::
+
+
+::: aside
+[스터디 뽀개기 7월 (2016-07-30), 분석행(Train to data-analysis)](https://onoffmix.com/event/73626), [탈옥(jailbreakr) -- 엑셀에서 탈출... 자유](https://statkclee.github.io/data-science/ds-xls.html), ["위기의 스프레드쉬트"](https://statkclee.github.io/data-science/ds-why-not-excel.html), [THE DIRTY DOZEN 12 MODELLING HORROR STORIES & SPREADSHEET DISASTERS](http://blogs.mazars.com/the-model-auditor/files/2014/01/12-Modelling-Horror-Stories-and-Spreadsheet-Disasters-Mazars-UK.pdf)
+:::
+
+
+## openAI 마이크로소프트 3 대장 + $\alpha$
+
+![](img/openai-three-pillars.png)
+
+## chatGPT 3대장
+
+::: panel-tabset
+### 최강 3대장 {.unnumbered}
+
+![](img/big_three_original.png){width="800"}
+
+### `chatGPT` 3대장 {.unnumbered}
+
+![](img/big_three_chatGPT.png){width="800"}
+
+### --- {.unnumbered}
+
+### 글쓰기 {.unnumbered}
+
+![](img/chatgpt_writing.gif){width="700"}
+
+### 그리기 {.unnumbered}
+
+![](img/chatGPT_visual.gif){width="700"}
+
+### 코딩 {.unnumbered}
+
+![](img/chatGPT_coding.gif){width="700"}
+:::
+
+## chatGPT 3대장 + $\alpha$ 추론
+
+::: panel-tabset
+### 문제
+
+#### 디오판토스 묘비
+
+신의 축복으로 태어난 그는 인생의 $\frac{1}{6}$을 소년으로 보냈다. 그리고 다시 인생의 $\frac{1}{12}$ 이 지난 뒤에는 얼굴에 수염이 자라기 시작했다. 다시 $\frac{1}{7}$이 지난 뒤 그는 아름다운 여인을 맞이하여 화촉을 밝혔으며, 결혼한 지 5년 만에 귀한 아들을 얻었다. 아! 그러나 그의 가엾은 아들은 아버지의 반 밖에 살지 못했다. 아들을 먼저 보내고 깊은 슬픔에 빠진 그는 그 뒤 4년간 정수론에 몰입하여 스스로를 달래다가 일생을 마쳤다. \[\^1\]
+
+### 수식
+
+디오판토스가 정확히 언제 태어나고 언제 죽었는지는 명확하지 않지만, 그가 죽었을 때의 나이는 정확히 알 수 있다. 이를 방정식을 통해 풀어보자. 수식을 $x$에 대해 정리해서 풀면 84가 나온다.
+
+$$\frac {x} {6} + \frac {x} {12} + \frac {x} {7} +  5 + \frac {x} {2} + 4 = x$$
+
+### 손 풀기
+
+![](img/inference_hand.jpg){width="486"}
+
+### `Sympy`
+
+```{python tombstone}
+#| echo: true
+#| eval: false
+from sympy import *
+x = Symbol('x')
+Diophantus_puzzle = x/6 + x/12 + x/7 + 5 + x/2 + 4 - x
+solve(Diophantus_puzzle, x, dict = True)
+```
+
+```
+[{x: 84}]
+```
+
+### `chatGPT`
+
+![](img/inference_gpt4.jpg){width="400"}
+
+### Wolfram Plugin
+
+::: columns
+::: column
+![](img/wolfram_alpha.jpg){width="400"}
+:::
+
+::: column
+![](img/wolfram_alpha_website.jpg){width="400"}
+:::
+:::
+
+[울프람 웹사이트](https://www.wolframalpha.com/input?i=x%2F6+%2B+x%2F12+%2B+x%2F7+%2B+5+%2B+x%2F2+%2B+4+%3D+x)
+:::
+
+## AutoGPT: Text-to-Task
+
+<br>
+
+{{< video https://user-images.githubusercontent.com/70048414/232352935-55c6bf7c-3958-406e-8610-0913475a0b05.mp4 height="500" >}}
+
+::: aside
+-   [Auto-GPT: An Autonomous GPT-4 Experiment](https://github.com/Significant-Gravitas/Auto-GPT)
+:::
+
+## 데이터 분석: Text-to-Analytics
+
+::: panel-tabset
+### PandasAI
+
+[Pandas AI](https://github.com/gventuri/pandas-ai)는 널리 사용되는 데이터 분석 및 조작 도구인 Pandas에 생성 인공 지능 기능을 추가한 Python 라이브러리다. [Pandas AI](https://github.com/gventuri/pandas-ai)는 판다스와 함께 사용하도록 설계되었으며, 판다스를 대체할 수 없다.
+
+<br>
+<br>
+
+-   [chatGPT: 판다스 AI](https://r2bit.com/chatGPT/pandasai.html)
+
+### LlamaIndex
+
+![](img/llama-penguins.jpg){width="1274"}
+
+-   [chatGPT: 펭귄 - 라마인덱스](https://r2bit.com/chatGPT/llama_penguins.html)
+
+### 챗GPT SQL
+
+![](img/sql_workflow.jpg){width="1274"}
+
+-   [chatGPT: 챗GPT SQL](https://r2bit.com/chatGPT/sql_openai.html)
+
+### RTutor.ai
+
+{{< video https://youtube.com/shorts/n4G8UuLc0Bs?feature=share height="300" >}}
+
+- [Chat with your data with RTutor](https://youtube.com/shorts/n4G8UuLc0Bs?feature=share)
+- [RTutor](http://rtutor.ai/)
+
+:::
