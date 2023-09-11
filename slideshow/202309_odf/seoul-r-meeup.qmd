@@ -9,7 +9,16 @@
 ::: column
 ::: r-stack
 
+![](img/seoul-r-meetup-september.jpg){.fragment width="320"}
+
+::: fragment
+![](img/seoul-r-meetup-august.jpg){.fragment width="320"}
+:::
+
+
+::: fragment
 ![](img/seoul-r-meetup-july.jpg){.fragment width="320"}
+:::
 
 ::: fragment
 ![](img/seoulr-r-meetup-june.jpg){.fragment width="320"}
@@ -39,6 +48,8 @@
     -   **23년 5월 서울 R 미트업**: [link](https://www.meetup.com/seoul-r-meetup/events/292966674/)
     -   **23년 6월 서울 R 미트업**: [link](https://www.meetup.com/seoul-r-meetup/events/293485362/)
     -   **23년 7월 서울 R 미트업**: [link](https://www.meetup.com/seoul-r-meetup/events/293929603/)
+    -   **23년 8월 서울 R 미트업**: [link](https://www.meetup.com/seoul-r-meetup/events/294651161/)
+    -   **23년 9월 서울 R 미트업**: [link](https://www.meetup.com/seoul-r-meetup/events/295338359/)
 -   세계 R 미트업 현황 (Global R Meetup Dashboard): [link](https://r-community.org/usergroups/)
 -   한국 R 사용자회 (Korea R User Group): [link](https://r2bit.com/)
 -   한국 R 컨퍼런스 (Korea R Conference): [link](https://use-r.kr/)
@@ -46,5 +57,4 @@
 -   페이스북 그룹 (Facebook Group): [link](https://www.facebook.com/groups/tidyverse)
 :::
 :::
-
 

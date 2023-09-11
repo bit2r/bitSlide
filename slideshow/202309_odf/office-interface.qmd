@@ -2,7 +2,7 @@
 
 ## 구글 검색의 종말(?)
 
-![](img/chatGPT-search.jpg)
+![](img/chatGPT-search.jpg){fig-align="center" width="700"}
 
 ## 글쓰기 역사
 
@@ -11,8 +11,7 @@
 ![](img/writing_history.jpg)
 
 ::: aside
-
-- [문자와 종이 역사](https://r2bit.com/quarto/writing_history.html)
+-   [문자와 종이 역사](https://r2bit.com/quarto/writing_history.html)
 :::
 
 ## 오피스 전쟁 {.smaller}
@@ -32,11 +31,9 @@
 
 [^4]: https://www.hancom.com/product/productMain.do
 
-
 ## 오피스 전쟁: 패러다임 충돌
 
 ![](img/writing-evolution.jpg)
-
 
 ## 챗GPT 시대 사무실
 
@@ -49,7 +46,6 @@
 
 ![](img/chatGPT_interface.jpg){width="500"}
 
-
 ### 챗GPT AS-IS
 
 ![](img/chatGPT-AS-IS.jpg)
@@ -58,7 +54,6 @@
 
 ![](img/chatGPT-TO-BE.jpg)
 :::
-
 
 ## 챗GPT가 이룬 대통합
 
@@ -149,9 +144,10 @@ classDef nodeStyle fill:#fcfbfa,stroke:#000000,stroke-width:0.7px,font-weight:bo
 
 ### 명령 팔레트
 
-:::::{.columns}
-:::{.column}
+::: columns
+::: column
 #### 사례
+
 ::: r-stack
 ![](img/command-tree.gif)
 
@@ -160,28 +156,21 @@ classDef nodeStyle fill:#fcfbfa,stroke:#000000,stroke-width:0.7px,font-weight:bo
 :::
 
 ::: fragment
-{{< video https://blog.replit.com/images/ai/aimode_future.mp4 width="500" height="400"  >}}
+{{< video https://blog.replit.com/images/ai/aimode_future.mp4 width="500" height="400" >}}
+:::
 :::
 
-
+-   <https://blog.replit.com/clui>
+-   <https://blog.replit.com/ai>
 :::
 
-- <https://blog.replit.com/clui>
-- <https://blog.replit.com/ai>
-
-:::
-
-
-:::{.column}
+::: column
 #### Command Palette 역사
 
-- 60년대로 거슬러 올라가는 명령 팔레트는 최근 기술 업계에서 다시 인기를 얻고 있으며 사용자 중심 소프트웨어의 필수적인 부분으로 간주됨.
-- CLI는 개인용 컴퓨터가 대중화되기 전 초기 컴퓨팅을 지배했으며 사용자가 시스템을 작동하기 위해 특정 명령을 알아야 했다. 1984년 Apple의 매킨토시와 함께 도입된 그래픽 사용자 인터페이스(GUI)는 중요한 혁신으로 여겨졌지만, 소프트웨어의 복잡성이 증가함에 따라 GUI만으로는 탐색하기가 점점 더 어려워졌다.
-- 사용자가 항목 이름의 짧은 약어입력하여 앱과 파일을 검색할 수 있는 런처가 점점 더 보편화 되었다. 예를 들어 2001년에 출시된 Mac OS X용 LaunchBar, Quicksilver, 2005년에 출시된 Apple의 시스템 전체 Spotlight가 있다. 검색과 CLI의 결합은 **Command Palette**의 탄생으로 이어졌다.
-- 오늘날 우리가 알고 있는 현대식 명령 팔레트는 2011년 Sublime Text 2 베타 Joe Skinner가 처음 소개. 명령줄 사용에 익숙한 프로그래머들이 단축키를 모두 외울 필요 없이 더 빠르게 작업할 수 있어 중요한 발전이 됨.
+-   60년대로 거슬러 올라가는 명령 팔레트는 최근 기술 업계에서 다시 인기를 얻고 있으며 사용자 중심 소프트웨어의 필수적인 부분으로 간주됨.
+-   CLI는 개인용 컴퓨터가 대중화되기 전 초기 컴퓨팅을 지배했으며 사용자가 시스템을 작동하기 위해 특정 명령을 알아야 했다. 1984년 Apple의 매킨토시와 함께 도입된 그래픽 사용자 인터페이스(GUI)는 중요한 혁신으로 여겨졌지만, 소프트웨어의 복잡성이 증가함에 따라 GUI만으로는 탐색하기가 점점 더 어려워졌다.
+-   사용자가 항목 이름의 짧은 약어입력하여 앱과 파일을 검색할 수 있는 런처가 점점 더 보편화 되었다. 예를 들어 2001년에 출시된 Mac OS X용 LaunchBar, Quicksilver, 2005년에 출시된 Apple의 시스템 전체 Spotlight가 있다. 검색과 CLI의 결합은 **Command Palette**의 탄생으로 이어졌다.
+-   오늘날 우리가 알고 있는 현대식 명령 팔레트는 2011년 Sublime Text 2 베타 Joe Skinner가 처음 소개. 명령줄 사용에 익숙한 프로그래머들이 단축키를 모두 외울 필요 없이 더 빠르게 작업할 수 있어 중요한 발전이 됨.
 :::
-
-:::::
-
 :::
-
+:::

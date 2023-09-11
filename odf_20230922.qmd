@@ -3,7 +3,7 @@ title: "생성형 AI 데이터 사이언스"
 subtitle: "경제적/교육적 함의"
 author: "이광춘"
 institute: "비영리법인 한국 R 사용자회"
-date: 2023-09-22
+date: 2023-09-20
 format: 
   insper-revealjs:
     self-contained: false
@@ -22,30 +22,27 @@ editor_options:
 
 ## 목차
 
-1.  강사소개 및 미트업 안내
+1.  발제자 및 발제 소개
 
-2.  (디지털) 지표로 보는 대한민국
+2.  오피스 → 챗GPT 디지털 **글쓰기**
 
-3.  공공데이터 현황
+3.  데이터 사이언스 글쓰기
 
-7.  (챗GPT) 데이터 과학
+4.  챗GPT 데이터 사이언스 (Code Interpreter)
 
-8.  오피스 → 챗GPT 디지털 **글쓰기**
-
-9.  질의응답!
+5.  질의응답!
 
 {{< include slideshow/202309_odf/00-who-am-i.qmd >}}
 
-{{< include slideshow/202309_odf/public_data.qmd >}}
-
-{{< include slideshow/202309_odf/kwangmyung_school_zone.qmd >}}
-
 {{< include slideshow/202309_odf/office-interface.qmd >}}
 
-{{< include slideshow/202309_odf/coding-excel.qmd >}}
-
 {{< include slideshow/202309_odf/30-digital-writing.qmd >}}
+
+{{< include slideshow/202309_odf/code_interpreter.qmd >}}
 
 {{< include slideshow/202309_odf/reference.qmd >}}
 
 {{< include slideshow/202309_odf/seoul-r-meeup.qmd >}}
+
+
+
