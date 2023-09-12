@@ -129,8 +129,8 @@ history_tbl <- history_html |>
   add_row(연도 = 2020, link = "<a href=https://quarto.org>Quarto</a>",
           개발자 = "J.J. Allaire")
 
-# history_tbl |> 
-#   write_csv("data/history_tbl.csv")
+history_tbl |>
+  write_csv("../../data/history_tbl.csv")
 ```
 
 ```{r}
@@ -140,13 +140,13 @@ library(gt)
 library(gtExtras)
 
 history_tbl <- 
-  read_csv("data/history_tbl.csv")
+  read_csv("../../data/history_tbl.csv")
 
 history_tbl |> 
   mutate(link = map(link, gt::html)) |> 
   select(연도, 도구=link, 개발자) |> 
   gt() |> 
-    gt_theme_hangul() |> 
+    # gt_theme_hangul() |> 
     cols_align("center")
 ```
 :::

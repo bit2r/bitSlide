@@ -1,5 +1,20 @@
 # Internal slide decks
 
+- title: "챗GPT 시대 교육"
+  subtitle: "교안과 평가를 중심으로"
+  author: "이광춘"
+  date: 2023-09-19
+  image: img/cku_logo.jpg
+  path: cku_20230919.qmd
+  categories:
+    - "교안"
+    - "평가"
+    - "데이터 사이언스"
+    - "생성형 AI"
+    - "Advanced Data Analysis"
+    - "한국 R 사용자회"
+    - "챗GPT"
+    - "Code Interpreter"
 
 - title: "생성형 AI 데이터 사이언스"
   subtitle: "경제적/교육적 함의"

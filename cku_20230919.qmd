@@ -1,0 +1,36 @@
+---
+title: "챗GPT 시대 교육"
+subtitle: "교안과 평가를 중심으로"
+author: "이광춘"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-09-19
+format: 
+  insper-revealjs:
+    self-contained: false
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  강사 및 강의 소개
+
+1.  질의응답!
+
+{{< include slideshow/202309_cku/00-who-am-i.qmd >}}
+
+{{< include slideshow/202309_cku/unix_shell.qmd >}}
+
+{{< include slideshow/202309_cku/reference.qmd >}}
+
+{{< include slideshow/202309_cku/seoul-r-meeup.qmd >}}
+
