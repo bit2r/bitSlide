@@ -24,13 +24,17 @@ editor_options:
 
 1.  발제자 및 발제 소개
 
-2.  오피스 → 챗GPT 디지털 **글쓰기**
+2.  **글쓰기** : 챗GPT 인터페이스 - 오피스 전쟁  
 
-3.  데이터 사이언스 글쓰기
+3.  도구(문서)의 인간 - 데이터 사이언스 글쓰기
 
-4.  챗GPT 데이터 사이언스 (Code Interpreter)
+4.  생성형 AI - 데이터 사이언스 (Code Interpreter)
 
-5.  질의응답!
+5.  챗GPT 유닉스 쉘 (책)
+
+6.  생성형 AI 시대 ~~경제~~ 일자리와 교육
+
+7.  질의응답!
 
 {{< include slideshow/202309_odf/00-who-am-i.qmd >}}
 
@@ -40,9 +44,11 @@ editor_options:
 
 {{< include slideshow/202309_odf/code_interpreter.qmd >}}
 
-{{< include slideshow/202309_odf/reference.qmd >}}
+{{< include slideshow/202309_odf/unix_shell.qmd >}}
+
+{{< include slideshow/202309_odf/econ_edu.qmd >}}
+
+<!-- {{< include slideshow/202309_odf/reference.qmd >}} -->
 
 {{< include slideshow/202309_odf/seoul-r-meeup.qmd >}}
-
-
 

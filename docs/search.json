@@ -6297,7 +6297,7 @@
     "href": "odf_20230922.html#목차",
     "title": "생성형 AI 데이터 사이언스",
     "section": "목차",
-    "text": "목차\n\n발제자 및 발제 소개\n오피스 → 챗GPT 디지털 글쓰기\n데이터 사이언스 글쓰기\n챗GPT 데이터 사이언스 (Code Interpreter)\n질의응답!"
+    "text": "목차\n\n발제자 및 발제 소개\n글쓰기 : 챗GPT 인터페이스 - 오피스 전쟁\n도구(문서)의 인간 - 데이터 사이언스 글쓰기\n생성형 AI - 데이터 사이언스 (Code Interpreter)\n챗GPT 유닉스 쉘 (책)\n생성형 AI 시대 경제 일자리와 교육\n질의응답!"
   },
   {
     "objectID": "odf_20230922.html#강사소개-강의-개요",
@@ -6641,5 +6641,68 @@
     "title": "생성형 AI 데이터 사이언스",
     "section": "웹앱(Shiny App) 개발 사례",
     "text": "웹앱(Shiny App) 개발 사례"
+  },
+  {
+    "objectID": "odf_20230922.html#사례-챗gpt-유닉스-쉘-책",
+    "href": "odf_20230922.html#사례-챗gpt-유닉스-쉘-책",
+    "title": "생성형 AI 데이터 사이언스",
+    "section": "사례: 챗GPT 유닉스 쉘 책",
+    "text": "사례: 챗GPT 유닉스 쉘 책\n\n유닉스 쉘챗GPT 유닉스 쉘\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub.\n\n\n 📚 종이책 📱 전자책"
+  },
+  {
+    "objectID": "odf_20230922.html#경제와-교육",
+    "href": "odf_20230922.html#경제와-교육",
+    "title": "생성형 AI 데이터 사이언스",
+    "section": "경제와 교육",
+    "text": "경제와 교육\n\n변호사 입학시험OpenAI API 가격(’23.04/23.07)Stable Diffusion오픈소스 SQL\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBetter than GPT-4 for SQL queries: NSQL (Fully OpenSource)\n\n\n\n\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "odf_20230922.html#생성형-ai-경제와-교육",
+    "href": "odf_20230922.html#생성형-ai-경제와-교육",
+    "title": "생성형 AI 데이터 사이언스",
+    "section": "생성형 AI 경제와 교육",
+    "text": "생성형 AI 경제와 교육\n\n변호사 입학시험OpenAI API 가격(’23.04/23.07)Stable Diffusion오픈소스 SQLLLM 계층FM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBetter than GPT-4 for SQL queries: NSQL (Fully OpenSource)\n\n\n\n\n\n\n\n\n\nEssential Guide to Foundation Models and Large Language Models\n\n\n\n\n\n\n\n\n\nProprietary vs. Open Source Foundation Models\n\n\n\n\n\n\n\n한국 R 사용자회 chatGPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "odf_20230922.html#생성형-ai-개발-생태계",
+    "href": "odf_20230922.html#생성형-ai-개발-생태계",
+    "title": "생성형 AI 데이터 사이언스",
+    "section": "생성형 AI 개발 생태계",
+    "text": "생성형 AI 개발 생태계\n\n변호사 입학시험OpenAI API 가격(’23.04/23.07)Stable Diffusion오픈소스 SQLLLM 계층FM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBetter than GPT-4 for SQL queries: NSQL (Fully OpenSource)\n\n\n\n\n\n\n\n\n\nEssential Guide to Foundation Models and Large Language Models\n\n\n\n\n\n\n\n\n\nProprietary vs. Open Source Foundation Models"
+  },
+  {
+    "objectID": "odf_20230922.html#수능-국영수",
+    "href": "odf_20230922.html#수능-국영수",
+    "title": "생성형 AI 데이터 사이언스",
+    "section": "수능 국영수",
+    "text": "수능 국영수\n\n영어\n\n문제지(PDF → 코드)\n문제풀이(코드 → 챗GPT)\n훈련(챗GPT → 연습문제)\n\n\n수학\n\n문제지(PDF → 코드)\n\n국어\n\n문제지(PDF → 코드)"
+  },
+  {
+    "objectID": "odf_20230922.html#생성ai-입시교육",
+    "href": "odf_20230922.html#생성ai-입시교육",
+    "title": "생성형 AI 데이터 사이언스",
+    "section": "생성AI 입시교육",
+    "text": "생성AI 입시교육\n\n수능영어문제프롬프트출력결과\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n다음 지문을 보고 문제를 푸세요. 지문과 문제는 백틱(`) 세개로 감싸여 있고 다음과 같이 되어 있습니다.\n``` 지문과 문제 ```\n출력: 1. 영어지문 전체를 한글로 번역한다. 2. 정답을 제시하고 이유도 설명한다.  ``` \n다음을 듣고, 남자가 하는 말의 목적으로 가장 적절한 것을 고르시오.  M: Hello, Lockwood High School students. This is your school librarian, Mr. Wilkins. I’m sure you’re aware that our school librar y is hosting a bookmark design competition. I encourage students of all grades to par ticipate in the competition. The winning designs will be made into bookmarks, which will be distributed to librar y visitors. We’re also giving out a variety of other prizes. So don’t let this great oppor tunity slip away. Since the registration period for the bookmark design competition ends this Friday, make sure you visit our school librar y to submit your application. Come and par ticipate to display your creativity and talents.\n다음을 듣고, 남자가 하는 말의 목적으로 가장 적절한 것을 고르시오. ① 도서관의 변경된 운영 시간을 안내하려고 ② 독후감 쓰기 대회의 일정을 공지하려고 ③ 책갈피 디자인 대회 참가를 독려하려고 ④ 기한 내 도서 반납을 촉구하려고 ⑤ 전자책 이용 방법을 설명하려고  ```\n\n\n다음은 영어 지문의 한글 번역입니다:\n안녕하세요, 록우드 고등학교 학생 여러분. 저는 교사 월킨스입니다. 아마도 여러분들은 저희 학교 도서관에서 책갈피 디자인 대회를 개최한다는 사실을 알고 있을 것입니다. 저희는 모든 학년의 학생들이 이 대회에 참가하도록 권장합니다. 우승 디자인은 책갈피로 만들어져서 도서관 방문자들에게 배포될 것입니다. 우리는 또한 다양한 상품을 제공하고 있습니다. 그러니 이 좋은 기회를 놓치지 마십시오. 책갈피 디자인 대회의 등록 기간은 이번 주 금요일에 종료되기 때문에, 신청을 제출하려면 반드시 학교 도서관을 방문해야 합니다. 참여하여 여러분의 창의력과 재능을 표출해보세요.\n위 지문에 대한 문제는 다음과 같습니다:\n다음을 듣고, 남자가 하는 말의 목적으로 가장 적절한 것을 고르시오. ① 도서관의 변경된 운영 시간을 안내하려고 ② 독후감 쓰기 대회의 일정을 공지하려고 ③ 책갈피 디자인 대회 참가를 독려하려고 ④ 기한 내 도서 반납을 촉구하려고 ⑤ 전자책 이용 방법을 설명하려고\n정답은 ③ 책갈피 디자인 대회 참가를 독려하려고 입니다.\n남자의 말에서는 책갈피 디자인 대회를 언급하고, 학생들에게 대회에 참가할 것을 권장하고 있습니다. 그래서 남자의 목적은 책갈피 디자인 대회 참가를 독려하는 것입니다.\n\n\n\n\n\n\n\nShareGPT"
+  },
+  {
+    "objectID": "odf_20230922.html#챗gpt-유닉스-쉘-책",
+    "href": "odf_20230922.html#챗gpt-유닉스-쉘-책",
+    "title": "생성형 AI 데이터 사이언스",
+    "section": "챗GPT 유닉스 쉘 책",
+    "text": "챗GPT 유닉스 쉘 책\n\n유닉스 쉘챗GPT 유닉스 쉘\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n 📚 종이책 📱 전자책"
+  },
+  {
+    "objectID": "odf_20230922.html#챗gpt-유닉스-쉘-집필과정",
+    "href": "odf_20230922.html#챗gpt-유닉스-쉘-집필과정",
+    "title": "생성형 AI 데이터 사이언스",
+    "section": "챗GPT 유닉스 쉘 집필과정",
+    "text": "챗GPT 유닉스 쉘 집필과정\n\n\n교보문고\n\n\n\n\n\n\n작업흐름\n\n\n\n\ngraph TB\n    A[Greg Wilson] --&gt; B[소프트웨어 카펜트리]\n    B --&gt; C[\"공동 저작\"]\n    C --&gt; D[\"콘텐츠, 디자인, 교수방법, 경험, 네트워크\"]\n    D --&gt; E[\"챗GPT(AI)\"]\n    \n    style A fill:#f9d79c,stroke:#f39c12,stroke-width:2px\n    style B fill:#aed6f1,stroke:#2e86c1,stroke-width:2px\n    style C fill:#d7bde2,stroke:#884ea0,stroke-width:2px\n    style D fill:#a2d9ce,stroke:#17a589,stroke-width:2px\n    style E fill:#fcf3cf,stroke:#f1c40f,stroke-width:2px\n\n\n\n\n\n\n\n\n\n 📚 종이책 📱 전자책"
+  },
+  {
+    "objectID": "odf_20230922.html#챗gpt-도서-제작",
+    "href": "odf_20230922.html#챗gpt-도서-제작",
+    "title": "생성형 AI 데이터 사이언스",
+    "section": "챗GPT 도서 제작",
+    "text": "챗GPT 도서 제작\n\nGreg Wilson공동저작콘텐츠, 디자인, 경험, 네트워크책 구성사람과 AI\n\n\n\n\n\n\n\n\nSoftware Carpentry Version 3 lessons (2007)\n\n\n\n\n\n\n\n\n\n소프트웨어 카펜트리 공동저작\n\n\n\n\n\n\n\n\n\n소프트웨어 카펜트리 : 소프트웨어\n데이터 카펜트리 : 데이터\n도서관 카펜트리 : 텍스트"
   }
 ]
