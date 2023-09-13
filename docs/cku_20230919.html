@@ -11,11 +11,13 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.288">
 
   <meta name="author" content="이광춘">
-  <title>발표자료 | 한국 R 사용자회 - 챗GPT 시대 교육</title>
+  <title>발표자료 | 한국 R 사용자회 - 대학교육에서 챗GPT 활용방안</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -33,26 +35,7 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
+  </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   
   <script type="text/javascript">
@@ -366,7 +349,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">챗GPT 시대 교육</h1>
+  <h1 class="title">대학교육에서 챗GPT 활용방안</h1>
   <p class="subtitle">교안과 평가를 중심으로</p>
 
 <div class="quarto-title-authors">
@@ -386,6 +369,11 @@
 <h2>목차</h2>
 <ol type="1">
 <li><p>강사 및 강의 소개</p></li>
+<li><p>챗GPT 유닉스 쉘 (도서)</p></li>
+<li><p>대학교육 ( 통계 사례 연구 )</p></li>
+<li><p>생성형 AI <del>경제</del> 일자리와 교육</p></li>
+<li><p>생성형 AI 데이터 과학</p></li>
+<li><p>글쓰기와 오피스 전쟁</p></li>
 <li><p>질의응답!</p></li>
 </ol>
 </section>
@@ -438,13 +426,14 @@
 <ul>
 <li>날짜 : 2023. 9. 19.(화) 15:00~16:00</li>
 <li>장소 : 가톨릭관동대학교</li>
-<li>대상 : 가톨릭관동대학교 총장님 및 교수님</li>
+<li>대상 : 가톨릭관동대학교 총장님, LINK 사업단장님 및 교수님</li>
 <li>내용
 <ul>
 <li>챗GPT 유닉스 쉘 도서출판</li>
-<li>건국대 챗GPT 데이터 사이언스 과정</li>
-<li>챗GPT 데이터 사이언스</li>
-<li>챗GPT 수능문제 풀이</li>
+<li>사례연구: 통계 → 챗GPT 데이터 사이언스</li>
+<li>생성형 AI 데이터 사이언스</li>
+<li>생성형 AI 일자리와 교육 (수능)</li>
+<li>사무환경과 오피스 전쟁</li>
 </ul></li>
 </ul>
 </div>
@@ -495,7 +484,7 @@
 </div>
 
 <aside><div>
-<p><a href="img/Kyobo_Logo.svg.png" class="lightbox" title="챗GPT 유닉스 쉘: 생산성 자동화 도구" data-gallery="quarto-lightbox-gallery-4"><img data-src="img/Kyobo_Logo.svg.png" width="101" alt="챗GPT 유닉스 쉘: 생산성 자동화 도구"></a> 📚 <a href="https://product.kyobobook.co.kr/detail/S000208801484">종이책</a> 📱 <a href="https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000005358063">전자책</a></p>
+<p><a href="img/Kyobo_Logo.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="챗GPT 유닉스 쉘: 생산성 자동화 도구"><img data-src="img/Kyobo_Logo.svg.png" width="101" alt="챗GPT 유닉스 쉘: 생산성 자동화 도구"></a> 📚 <a href="https://product.kyobobook.co.kr/detail/S000208801484">종이책</a> 📱 <a href="https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000005358063">전자책</a></p>
 </div></aside></section>
 <section id="챗gpt-도서-제작" class="slide level2 smaller">
 <h2>챗GPT 도서 제작</h2>
@@ -562,13 +551,3647 @@
 </div>
 </div>
 </section></section>
-<section id="참고문헌" class="title-slide slide level1 smaller scrollable">
-<h1>참고문헌</h1>
-<div id="refs" role="list">
+<section>
+<section id="통계-챗gpt-데이터-사이언스" class="title-slide slide level1 center">
+<h1>통계 → 챗GPT 데이터 사이언스</h1>
 
+</section>
+<section id="커리큘럼" class="slide level2 smaller">
+<h2>커리큘럼</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">종이와 연필</a></li><li><a href="#tabset-3-2">SAS/SPSS 보고서</a></li><li><a href="#tabset-3-3">DS 입문</a></li><li><a href="#tabset-3-4">고급 DS</a></li><li><a href="#tabset-3-5">GS 칼텍스</a></li><li><a href="#tabset-3-6">GS 칼텍스</a></li><li><a href="#tabset-3-7">챗GPT DS</a></li><li><a href="#tabset-3-8">평가</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/cku_statistics.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="img/cku_statistics.jpg" width="413"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/cku_sas_word.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="img/cku_sas_word.png" width="715"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-3-3">
+<div class="cell">
+<div class="cell-output-display">
+<div id="wlesacwnhf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#wlesacwnhf table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#wlesacwnhf thead, #wlesacwnhf tbody, #wlesacwnhf tfoot, #wlesacwnhf tr, #wlesacwnhf td, #wlesacwnhf th {
+  border-style: none;
+}
+
+#wlesacwnhf p {
+  margin: 0;
+  padding: 0;
+}
+
+#wlesacwnhf .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 65%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#wlesacwnhf .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#wlesacwnhf .gt_title {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#wlesacwnhf .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#wlesacwnhf .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wlesacwnhf .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wlesacwnhf .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wlesacwnhf .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#wlesacwnhf .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#wlesacwnhf .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#wlesacwnhf .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#wlesacwnhf .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#wlesacwnhf .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#wlesacwnhf .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#wlesacwnhf .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#wlesacwnhf .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#wlesacwnhf .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#wlesacwnhf .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wlesacwnhf .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wlesacwnhf .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#wlesacwnhf .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#wlesacwnhf .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#wlesacwnhf .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wlesacwnhf .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#wlesacwnhf .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#wlesacwnhf .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wlesacwnhf .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wlesacwnhf .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#wlesacwnhf .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wlesacwnhf .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#wlesacwnhf .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wlesacwnhf .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wlesacwnhf .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wlesacwnhf .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wlesacwnhf .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wlesacwnhf .gt_left {
+  text-align: left;
+}
+
+#wlesacwnhf .gt_center {
+  text-align: center;
+}
+
+#wlesacwnhf .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#wlesacwnhf .gt_font_normal {
+  font-weight: normal;
+}
+
+#wlesacwnhf .gt_font_bold {
+  font-weight: bold;
+}
+
+#wlesacwnhf .gt_font_italic {
+  font-style: italic;
+}
+
+#wlesacwnhf .gt_super {
+  font-size: 65%;
+}
+
+#wlesacwnhf .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#wlesacwnhf .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#wlesacwnhf .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#wlesacwnhf .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#wlesacwnhf .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#wlesacwnhf .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#wlesacwnhf .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><div style="text-align:center;"><img src="img/curriculum_yonsei.png" style="height:30px;"></div>
+<div>
+  <strong>연세대</strong>
+  데이터 사이언스 입문
+</div></td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="주차">주차</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="학습내용">학습내용</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="날짜">날짜</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">1</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터 과학 (Data Science)</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">3월7일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">2</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">프로그래밍 기초와 마크다운 보고서</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">3월14일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">3</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터와 커뮤니티 찾기, 도움 청하기, 프로젝트 설정</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">3월21일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">4</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 수집</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">-</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">5</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">자료구조(Data Structures)</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">4월4일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">6</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터프레임과 SQL</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">4월11일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">7</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">버전제어, 협업, 그리고 저작권과 라이선스</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">4월18일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">8</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">중간고사</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">4월25일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">9</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">시각화 (Visualization)</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">5월2일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">10</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">정규표현식</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">5월9일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">11</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터 과학 프로그래밍</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">5월16일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">12</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 제품</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">-</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">13</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">함수형 프로그래밍</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">5월30일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">14</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 저작</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">6월6일(현충일)</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">15</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">R 팩키지</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">6월13일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">16</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">기말고사</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">6월20일</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://statkclee.github.io/yonsei/">연세대 “데이터 과학 입문”</a></li>
+</ul>
+</div>
+<div id="tabset-3-4">
+<div class="cell">
+<div class="cell-output-display">
+<div id="tlvmpowznr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#tlvmpowznr table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#tlvmpowznr thead, #tlvmpowznr tbody, #tlvmpowznr tfoot, #tlvmpowznr tr, #tlvmpowznr td, #tlvmpowznr th {
+  border-style: none;
+}
+
+#tlvmpowznr p {
+  margin: 0;
+  padding: 0;
+}
+
+#tlvmpowznr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 65%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#tlvmpowznr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#tlvmpowznr .gt_title {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#tlvmpowznr .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#tlvmpowznr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tlvmpowznr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tlvmpowznr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tlvmpowznr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#tlvmpowznr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#tlvmpowznr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#tlvmpowznr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#tlvmpowznr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#tlvmpowznr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#tlvmpowznr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#tlvmpowznr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#tlvmpowznr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#tlvmpowznr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#tlvmpowznr .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#tlvmpowznr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tlvmpowznr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#tlvmpowznr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#tlvmpowznr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#tlvmpowznr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tlvmpowznr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#tlvmpowznr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#tlvmpowznr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tlvmpowznr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tlvmpowznr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#tlvmpowznr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tlvmpowznr .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#tlvmpowznr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tlvmpowznr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tlvmpowznr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tlvmpowznr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tlvmpowznr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tlvmpowznr .gt_left {
+  text-align: left;
+}
+
+#tlvmpowznr .gt_center {
+  text-align: center;
+}
+
+#tlvmpowznr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#tlvmpowznr .gt_font_normal {
+  font-weight: normal;
+}
+
+#tlvmpowznr .gt_font_bold {
+  font-weight: bold;
+}
+
+#tlvmpowznr .gt_font_italic {
+  font-style: italic;
+}
+
+#tlvmpowznr .gt_super {
+  font-size: 65%;
+}
+
+#tlvmpowznr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#tlvmpowznr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#tlvmpowznr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#tlvmpowznr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#tlvmpowznr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#tlvmpowznr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#tlvmpowznr .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><div style="text-align:center;"><img src="img/curriculum_yonsei2.png" style="height:30px;"></div>
+<div>
+  <strong>연세대</strong>
+  데이터 (사이언스) 공학
+</div></td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="주차">주차</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="학습내용">학습내용</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="날짜">날짜</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">1</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 언어</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">9월6일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">2</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">[언어] R</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">9월20일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">3</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">[언어] 파이썬</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">9월27일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">4</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">[언어] API 프로그래밍</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">10월4일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">5</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 자료구조</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">10월11일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">6</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">[자료구조] 시계열 데이터</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">10월18일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">7</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">중간고사</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">10월25일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">8</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">[자료구조] 지리 공간 데이터</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">11월01일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">9</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">[자료구조] NLP - 텍스트 마이닝(R)</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">11월08일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">10</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">[자료구조] NLP - 파이썬</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">11월15일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">11</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">빅데이터 시각화</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">11월22일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">12</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">기계학습 - 예측모형</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">11월29일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">13</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">DevOps - 도커, HPC, 스파크</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">12월06일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">14</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">제품화</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">12월13일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">15</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">기말고사</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">12월20일</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://statkclee.github.io/yonsei2/">연세대 “데이터 (사이언스) 공학”</a></li>
+</ul>
+</div>
+<div id="tabset-3-5">
+<div class="cell">
+<div class="cell-output-display">
+<div id="pjuxtyrrma" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#pjuxtyrrma table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#pjuxtyrrma thead, #pjuxtyrrma tbody, #pjuxtyrrma tfoot, #pjuxtyrrma tr, #pjuxtyrrma td, #pjuxtyrrma th {
+  border-style: none;
+}
+
+#pjuxtyrrma p {
+  margin: 0;
+  padding: 0;
+}
+
+#pjuxtyrrma .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#pjuxtyrrma .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#pjuxtyrrma .gt_title {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#pjuxtyrrma .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#pjuxtyrrma .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pjuxtyrrma .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pjuxtyrrma .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pjuxtyrrma .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#pjuxtyrrma .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#pjuxtyrrma .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#pjuxtyrrma .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#pjuxtyrrma .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#pjuxtyrrma .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#pjuxtyrrma .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#pjuxtyrrma .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pjuxtyrrma .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#pjuxtyrrma .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#pjuxtyrrma .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#pjuxtyrrma .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pjuxtyrrma .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#pjuxtyrrma .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#pjuxtyrrma .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#pjuxtyrrma .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pjuxtyrrma .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#pjuxtyrrma .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#pjuxtyrrma .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pjuxtyrrma .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pjuxtyrrma .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#pjuxtyrrma .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pjuxtyrrma .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#pjuxtyrrma .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pjuxtyrrma .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pjuxtyrrma .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pjuxtyrrma .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pjuxtyrrma .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pjuxtyrrma .gt_left {
+  text-align: left;
+}
+
+#pjuxtyrrma .gt_center {
+  text-align: center;
+}
+
+#pjuxtyrrma .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#pjuxtyrrma .gt_font_normal {
+  font-weight: normal;
+}
+
+#pjuxtyrrma .gt_font_bold {
+  font-weight: bold;
+}
+
+#pjuxtyrrma .gt_font_italic {
+  font-style: italic;
+}
+
+#pjuxtyrrma .gt_super {
+  font-size: 65%;
+}
+
+#pjuxtyrrma .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#pjuxtyrrma .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#pjuxtyrrma .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#pjuxtyrrma .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#pjuxtyrrma .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#pjuxtyrrma .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#pjuxtyrrma .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><div style="text-align:center;"><img src="img/curriculum_gs_caltex.png" style="height:30px;"></div>
+<div>
+  <strong>GS 칼텍스</strong>
+  시민 데이터 과학
+</div></td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="일정">일정</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="과정">과정</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="과정상세">과정상세</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="데이터셋">데이터셋</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>1주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>Introduction</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>Defining and solving problems<br>- Quantifying performance indicators<br>- Stats and Probability for Data Science</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;">-</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><p>2주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><p>Data Science</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>Python 기초 문법 복습 및 NumPy, Pandas 등 연습<br>- Kaggle: MPG / Titanic EDA 개념과 Data science 전체흐름 습득<br>- EDA, Feature engineering, Visualization, Correlating 등 preprocessing 작업<br>- Model, predict and evaluation 의 전체 과정을 습득</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">-</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>3주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>Regression and Prediction</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>Regression에 대한 개념 및 이론 설명</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>Breast Cancer, California housing prices, Bike-sharing</p>
+</div></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><p>3주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><p>Regression and Prediction</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>EDA 및 preprocessing<br>- Linear Regression 중심, CART, SVM, Ensemble기법 적용<br>- Training &amp; Evaluation (MSE, MAE, RMSE, RMSLE, R-Squared, etc.)<br>- Basic hyperparameter tuning 수행</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">-</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>4주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>Classification and Hypothesis Testing</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>Classification과 필요 개념 및 이론 설명</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>Titanic, Iris, Penuins, San Francisco Crime</p>
+</div></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><p>4주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><p>Classification and Hypothesis Testing</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>Logistic Regression과 Decision Tree, SVC, Random Forest, XGBoost, LGBM 등 적용<br>- Training &amp; Evaluation / Basic hyperparameter tuning 수행</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">-</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>5주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>Case Studies and Projects</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>기존 수업 이론/실습 개념 바탕 Case Study 3종 (+Final Quiz)<br>- Case Study 및 Final Quiz 해설<br>- 개인 별 Project 인터뷰 및 Grouping / 공통과제 선정<br>- Project 진행, 발표, Best Project 선정 및 공유</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;">-</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://r2bit.com/curriculum/">GS 칼텍스 데이터 사이언스</a></li>
+</ul>
+</div>
+<div id="tabset-3-6">
+<div class="cell">
+<div class="cell-output-display">
+<div id="bmqfkazrxr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#bmqfkazrxr table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#bmqfkazrxr thead, #bmqfkazrxr tbody, #bmqfkazrxr tfoot, #bmqfkazrxr tr, #bmqfkazrxr td, #bmqfkazrxr th {
+  border-style: none;
+}
+
+#bmqfkazrxr p {
+  margin: 0;
+  padding: 0;
+}
+
+#bmqfkazrxr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#bmqfkazrxr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#bmqfkazrxr .gt_title {
+  color: #333333;
+  font-size: 17px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#bmqfkazrxr .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#bmqfkazrxr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#bmqfkazrxr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bmqfkazrxr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#bmqfkazrxr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#bmqfkazrxr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#bmqfkazrxr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#bmqfkazrxr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#bmqfkazrxr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#bmqfkazrxr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#bmqfkazrxr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#bmqfkazrxr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#bmqfkazrxr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#bmqfkazrxr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#bmqfkazrxr .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#bmqfkazrxr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bmqfkazrxr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#bmqfkazrxr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#bmqfkazrxr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#bmqfkazrxr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bmqfkazrxr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#bmqfkazrxr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#bmqfkazrxr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bmqfkazrxr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bmqfkazrxr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#bmqfkazrxr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bmqfkazrxr .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#bmqfkazrxr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bmqfkazrxr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#bmqfkazrxr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bmqfkazrxr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#bmqfkazrxr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bmqfkazrxr .gt_left {
+  text-align: left;
+}
+
+#bmqfkazrxr .gt_center {
+  text-align: center;
+}
+
+#bmqfkazrxr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#bmqfkazrxr .gt_font_normal {
+  font-weight: normal;
+}
+
+#bmqfkazrxr .gt_font_bold {
+  font-weight: bold;
+}
+
+#bmqfkazrxr .gt_font_italic {
+  font-style: italic;
+}
+
+#bmqfkazrxr .gt_super {
+  font-size: 65%;
+}
+
+#bmqfkazrxr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#bmqfkazrxr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#bmqfkazrxr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#bmqfkazrxr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#bmqfkazrxr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#bmqfkazrxr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#bmqfkazrxr .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><div style="text-align:center;"><img src="img/curriculum_gs_caltex.png" style="height:30px;"></div>
+<div>
+  <strong>GS 칼텍스</strong>
+  데이터 과학
+</div></td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="일정">일정</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="과목명">과목명</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="학습상세">학습상세</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="데이터셋">데이터셋</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">00주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">환경설정</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">학습 도구 설치 및 학습환경</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;">파머 펭귄, BitData</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">01주차</td>
+<td headers="과목명" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">디지털 글쓰기(보고서)</td>
+<td headers="학습상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">마크다운 / Quarto</td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">BitData</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">02주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">명령라인 데이터 분석</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">자동화(Shell)</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;">SWC</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">03주차</td>
+<td headers="과목명" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">버전 제어</td>
+<td headers="학습상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">버전제어/협업(Git / GitHub / GitLab)</td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">04주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">프로그래밍</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">SQL</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;">Data Carpentry, DVD 렌탈</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">05주차</td>
+<td headers="과목명" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">프로그래밍</td>
+<td headers="학습상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">시각화</td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">gapminder</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">06주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">프로그래밍</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">파이썬</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;"></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">07주차</td>
+<td headers="과목명" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">대쉬보드</td>
+<td headers="학습상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Flexdashboard / Shinydashboard</td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">08주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">기계학습</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">tidymodels / scikit-learn</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;"></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">09주차</td>
+<td headers="과목명" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 제품</td>
+<td headers="학습상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">RESTful API</td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">10주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">특수 데이터</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">시계열(Time Series)</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;">KOSPI</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">11주차</td>
+<td headers="과목명" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">특수 데이터</td>
+<td headers="학습상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">공간정보(Geospatial) / 텍스트 분석</td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">미디어오늘</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">12주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">비정형 데이터</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">텍스트와 이미지 (딥러닝)</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;"></td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://r2bit.com/curriculum/">GS 칼텍스 데이터 사이언스</a></li>
+</ul>
+</div>
+<div id="tabset-3-7">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div style="display: inline-block;float:left;">
+<div id="cbyfnyapla" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#cbyfnyapla table {
+  font-family: Roboto, Sunflower, NanumGothic, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#cbyfnyapla thead, #cbyfnyapla tbody, #cbyfnyapla tfoot, #cbyfnyapla tr, #cbyfnyapla td, #cbyfnyapla th {
+  border-style: none;
+}
+
+#cbyfnyapla p {
+  margin: 0;
+  padding: 0;
+}
+
+#cbyfnyapla .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#cbyfnyapla .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#cbyfnyapla .gt_title {
+  color: #333333;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#cbyfnyapla .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#cbyfnyapla .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cbyfnyapla .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cbyfnyapla .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cbyfnyapla .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#cbyfnyapla .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#cbyfnyapla .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#cbyfnyapla .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#cbyfnyapla .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#cbyfnyapla .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#cbyfnyapla .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#cbyfnyapla .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#cbyfnyapla .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#cbyfnyapla .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#cbyfnyapla .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#cbyfnyapla .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cbyfnyapla .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#cbyfnyapla .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#cbyfnyapla .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#cbyfnyapla .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cbyfnyapla .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#cbyfnyapla .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#cbyfnyapla .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cbyfnyapla .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cbyfnyapla .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#cbyfnyapla .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cbyfnyapla .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#cbyfnyapla .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cbyfnyapla .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cbyfnyapla .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cbyfnyapla .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cbyfnyapla .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cbyfnyapla .gt_left {
+  text-align: left;
+}
+
+#cbyfnyapla .gt_center {
+  text-align: center;
+}
+
+#cbyfnyapla .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#cbyfnyapla .gt_font_normal {
+  font-weight: normal;
+}
+
+#cbyfnyapla .gt_font_bold {
+  font-weight: bold;
+}
+
+#cbyfnyapla .gt_font_italic {
+  font-style: italic;
+}
+
+#cbyfnyapla .gt_super {
+  font-size: 65%;
+}
+
+#cbyfnyapla .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#cbyfnyapla .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#cbyfnyapla .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#cbyfnyapla .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#cbyfnyapla .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#cbyfnyapla .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#cbyfnyapla .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><div style="text-align:center;"><img src="img/konkuk/tools.png" style="height:30px;"></div>
+<div>
+  <strong>챗GPT 데이터 사이언스</strong>
+  건국대 전문교육과정
+</div></td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="강의주제">강의주제</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="강의내용">강의내용</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="수업방법">수업방법</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="1 주차 - 2023-07-01">1 주차 - 2023-07-01</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="1 주차 - 2023-07-01  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 언어</td>
+<td headers="1 주차 - 2023-07-01  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT와 데이터 사이언스</td>
+<td headers="1 주차 - 2023-07-01  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="1 주차 - 2023-07-01  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 사이언스 언어</td>
+<td headers="1 주차 - 2023-07-01  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Tidyverse와 챗GPT</td>
+<td headers="1 주차 - 2023-07-01  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="1 주차 - 2023-07-01  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 언어</td>
+<td headers="1 주차 - 2023-07-01  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">파이썬/R/SQL 그리고 API</td>
+<td headers="1 주차 - 2023-07-01  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="2 주차 - 2023-07-08">2 주차 - 2023-07-08</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2 주차 - 2023-07-08  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">소프트웨어 카펜트리 (기본기)</td>
+<td headers="2 주차 - 2023-07-08  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">자동화: 유닉스 쉘</td>
+<td headers="2 주차 - 2023-07-08  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="2 주차 - 2023-07-08  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">소프트웨어 카펜트리 (기본기)</td>
+<td headers="2 주차 - 2023-07-08  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">버전제어: Git / GitHub</td>
+<td headers="2 주차 - 2023-07-08  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="3 주차 - 2023-07-15">3 주차 - 2023-07-15</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="3 주차 - 2023-07-15  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">소프트웨어 카펜트리 (기본기)</td>
+<td headers="3 주차 - 2023-07-15  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">파이썬 / R</td>
+<td headers="3 주차 - 2023-07-15  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="3 주차 - 2023-07-15  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">소프트웨어 카펜트리 (기본기)</td>
+<td headers="3 주차 - 2023-07-15  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터베이스</td>
+<td headers="3 주차 - 2023-07-15  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="4 주차 - 2023-07-22">4 주차 - 2023-07-22</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="4 주차 - 2023-07-22  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 자료구조</td>
+<td headers="4 주차 - 2023-07-22  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">숫자/범주 --&gt; 데이터프레임</td>
+<td headers="4 주차 - 2023-07-22  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="4 주차 - 2023-07-22  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">데이터 과학 자료구조</td>
+<td headers="4 주차 - 2023-07-22  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">날짜/공간정보/네트워크</td>
+<td headers="4 주차 - 2023-07-22  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="4 주차 - 2023-07-22  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 자료구조</td>
+<td headers="4 주차 - 2023-07-22  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">텍스트/이미지/오디오</td>
+<td headers="4 주차 - 2023-07-22  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+<div style="display: inline-block;float:right;">
+<div id="uctpupslxl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#uctpupslxl table {
+  font-family: Roboto, Sunflower, NanumGothic, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#uctpupslxl thead, #uctpupslxl tbody, #uctpupslxl tfoot, #uctpupslxl tr, #uctpupslxl td, #uctpupslxl th {
+  border-style: none;
+}
+
+#uctpupslxl p {
+  margin: 0;
+  padding: 0;
+}
+
+#uctpupslxl .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#uctpupslxl .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#uctpupslxl .gt_title {
+  color: #333333;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#uctpupslxl .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#uctpupslxl .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uctpupslxl .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uctpupslxl .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uctpupslxl .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#uctpupslxl .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#uctpupslxl .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#uctpupslxl .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#uctpupslxl .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#uctpupslxl .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#uctpupslxl .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#uctpupslxl .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#uctpupslxl .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#uctpupslxl .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#uctpupslxl .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#uctpupslxl .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uctpupslxl .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#uctpupslxl .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#uctpupslxl .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#uctpupslxl .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uctpupslxl .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#uctpupslxl .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#uctpupslxl .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uctpupslxl .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uctpupslxl .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#uctpupslxl .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uctpupslxl .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#uctpupslxl .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uctpupslxl .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uctpupslxl .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uctpupslxl .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uctpupslxl .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uctpupslxl .gt_left {
+  text-align: left;
+}
+
+#uctpupslxl .gt_center {
+  text-align: center;
+}
+
+#uctpupslxl .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#uctpupslxl .gt_font_normal {
+  font-weight: normal;
+}
+
+#uctpupslxl .gt_font_bold {
+  font-weight: bold;
+}
+
+#uctpupslxl .gt_font_italic {
+  font-style: italic;
+}
+
+#uctpupslxl .gt_super {
+  font-size: 65%;
+}
+
+#uctpupslxl .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#uctpupslxl .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#uctpupslxl .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#uctpupslxl .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#uctpupslxl .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#uctpupslxl .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#uctpupslxl .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="강의주제">강의주제</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="강의내용">강의내용</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="수업방법">수업방법</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="5 주차 - 2023-07-29">5 주차 - 2023-07-29</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="5 주차 - 2023-07-29  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td headers="5 주차 - 2023-07-29  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">디지털 보고서(PDF, HTML, PPT)</td>
+<td headers="5 주차 - 2023-07-29  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="5 주차 - 2023-07-29  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td headers="5 주차 - 2023-07-29  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Serverless 대쉬보드, R/Python 대쉬보드</td>
+<td headers="5 주차 - 2023-07-29  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="5 주차 - 2023-07-29  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td headers="5 주차 - 2023-07-29  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">기계학습 모형 API 배포</td>
+<td headers="5 주차 - 2023-07-29  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="- 주차 - 2023-08-05">- 주차 - 2023-08-05</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="- 주차 - 2023-08-05  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">휴가</td>
+<td headers="- 주차 - 2023-08-05  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">휴가</td>
+<td headers="- 주차 - 2023-08-05  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">-</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="6 주차 - 2023-08-12">6 주차 - 2023-08-12</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="6 주차 - 2023-08-12  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT와 오픈소스</td>
+<td headers="6 주차 - 2023-08-12  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">(오픈소스) 거대언어모형(LLM)</td>
+<td headers="6 주차 - 2023-08-12  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="6 주차 - 2023-08-12  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">챗GPT와 오픈소스</td>
+<td headers="6 주차 - 2023-08-12  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Write/Draw/Coding/Reasoning</td>
+<td headers="6 주차 - 2023-08-12  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="6 주차 - 2023-08-12  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT와 오픈소스</td>
+<td headers="6 주차 - 2023-08-12  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">AI 시대 데이터 사이언스 제품개발 방법</td>
+<td headers="6 주차 - 2023-08-12  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="7 주차 - 2023-08-19">7 주차 - 2023-08-19</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="7 주차 - 2023-08-19  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Prompt Engineering</td>
+<td headers="7 주차 - 2023-08-19  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">사용자 및 개발자를 위한 프롬프트 공학</td>
+<td headers="7 주차 - 2023-08-19  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="7 주차 - 2023-08-19  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">Prompt Engineering</td>
+<td headers="7 주차 - 2023-08-19  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">OpenAI API 기반 NLP 개발</td>
+<td headers="7 주차 - 2023-08-19  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="7 주차 - 2023-08-19  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Prompt Engineering</td>
+<td headers="7 주차 - 2023-08-19  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">OPL(OpenAI, Pinecone, Langchain) 프레임워크</td>
+<td headers="7 주차 - 2023-08-19  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="8 주차 - 2023-08-26">8 주차 - 2023-08-26</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="8 주차 - 2023-08-26  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT AI 앱 프로젝트</td>
+<td headers="8 주차 - 2023-08-26  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">오픈소스 LLM 기반 AI 데이터 분석 제품</td>
+<td headers="8 주차 - 2023-08-26  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="8 주차 - 2023-08-26  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">챗GPT AI 앱 프로젝트</td>
+<td headers="8 주차 - 2023-08-26  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 사이언스 AutoGPT</td>
+<td headers="8 주차 - 2023-08-26  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="8 주차 - 2023-08-26  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT AI 앱 프로젝트</td>
+<td headers="8 주차 - 2023-08-26  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT AI 프로젝트 발표</td>
+<td headers="8 주차 - 2023-08-26  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-3-8">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/education_evaluation.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="img/education_evaluation.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://r2bit.com/curriculum/mcq_stat.html">데이터 사이언스 MCQ</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="생성형-ai-경제-일자리와-교육" class="title-slide slide level1 center">
+<h1>생성형 AI <del>경제</del> 일자리와 교육</h1>
+
+</section>
+<section id="생성형-ai-개발-생태계" class="slide level2 smaller">
+<h2>생성형 AI 개발 생태계</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">변호사 입학시험</a></li><li><a href="#tabset-4-2">OpenAI API 가격(’23.04/23.07)</a></li><li><a href="#tabset-4-3">Stable Diffusion</a></li><li><a href="#tabset-4-4">오픈소스 SQL</a></li><li><a href="#tabset-4-5">LLM 계층</a></li><li><a href="#tabset-4-6">FM</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/econ_lsat.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img data-src="img/econ_lsat.png" width="778"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/econ_pricing_202304.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img data-src="img/econ_pricing_202304.png" width="734"></a></p>
+</figure>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/econ_pricing_202306.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img data-src="img/econ_pricing_202306.png" width="778"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-4-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/Stable-Diffusion-Developer-Adoption-1-scaled.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img data-src="img/Stable-Diffusion-Developer-Adoption-1-scaled.jpg" width="672"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-4-4">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/econ_nsql.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img data-src="img/econ_nsql.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://medium.com/towards-artificial-intelligence/nsql-first-ever-fully-opensource-sql-foundation-model-f7b501d91ca4">Better than GPT-4 for SQL queries: NSQL (Fully OpenSource)</a></li>
+</ul>
+</div>
+<div id="tabset-4-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/econ_llm_bcv.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img data-src="img/econ_llm_bcv.png" width="889"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://thebabar.medium.com/essential-guide-to-foundation-models-and-large-language-models-27dab58f7404">Essential Guide to Foundation Models and Large Language Models</a></li>
+</ul>
+</div>
+<div id="tabset-4-6">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/econ_total.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img data-src="img/econ_total.png"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://tolacapital.com/2023/05/15/foundationmodels/">Proprietary vs.&nbsp;Open Source Foundation Models</a></li>
+</ul>
+</div>
+</div>
 </div>
 </section>
+<section id="수능-국영수" class="slide level2 smaller">
+<h2>수능 국영수</h2>
+<ul>
+<li>영어
+<ul>
+<li><a href="https://r2bit.com/quarto/sat_english.html">문제지(PDF → 코드)</a></li>
+<li><a href="https://r2bit.com/quarto/sat_english_solve.html">문제풀이(코드 → 챗GPT)</a></li>
+<li><a href="https://r2bit.com/quarto/sat_english_practice.html">훈련(챗GPT → 연습문제)</a><br>
+</li>
+</ul></li>
+<li>수학
+<ul>
+<li><a href="https://r2bit.com/quarto/sat_math.html">문제지(PDF → 코드)</a></li>
+</ul></li>
+<li>국어
+<ul>
+<li><a href="https://r2bit.com/quarto/sat_korean.html">문제지(PDF → 코드)</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="생성ai-입시교육" class="slide level2 smaller">
+<h2>생성AI 입시교육</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">수능영어문제</a></li><li><a href="#tabset-5-2">프롬프트</a></li><li><a href="#tabset-5-3">출력결과</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/sat_question_01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img data-src="img/sat_question_01.jpg" width="500"></a></p>
+</figure>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<audio controls="">
+<source src="data/01_문제 01.mp3" type="audio/mp3">
+</audio>
+</div>
+</div>
+</div>
+<div id="tabset-5-2">
+<p>다음 지문을 보고 문제를 푸세요. 지문과 문제는 백틱(`) 세개로 감싸여 있고 다음과 같이 되어 있습니다.</p>
+<p>``` 지문과 문제 ```</p>
+<p>출력: 1. 영어지문 전체를 한글로 번역한다. 2. 정답을 제시하고 이유도 설명한다. <br> ``` <br></p>
+<p>다음을 듣고, 남자가 하는 말의 목적으로 가장 적절한 것을 고르시오. <br> M: Hello, Lockwood High School students. This is your school librarian, Mr.&nbsp;Wilkins. I’m sure you’re aware that our school librar y is hosting a bookmark design competition. I encourage students of all grades to par ticipate in the competition. The winning designs will be made into bookmarks, which will be distributed to librar y visitors. We’re also giving out a variety of other prizes. So don’t let this great oppor tunity slip away. Since the registration period for the bookmark design competition ends this Friday, make sure you visit our school librar y to submit your application. Come and par ticipate to display your creativity and talents.</p>
+<p>다음을 듣고, 남자가 하는 말의 목적으로 가장 적절한 것을 고르시오. ① 도서관의 변경된 운영 시간을 안내하려고 ② 독후감 쓰기 대회의 일정을 공지하려고 ③ 책갈피 디자인 대회 참가를 독려하려고 ④ 기한 내 도서 반납을 촉구하려고 ⑤ 전자책 이용 방법을 설명하려고 <br> ```</p>
+</div>
+<div id="tabset-5-3">
+<p>다음은 영어 지문의 한글 번역입니다:</p>
+<p>안녕하세요, 록우드 고등학교 학생 여러분. 저는 교사 월킨스입니다. 아마도 여러분들은 저희 학교 도서관에서 책갈피 디자인 대회를 개최한다는 사실을 알고 있을 것입니다. 저희는 모든 학년의 학생들이 이 대회에 참가하도록 권장합니다. 우승 디자인은 책갈피로 만들어져서 도서관 방문자들에게 배포될 것입니다. 우리는 또한 다양한 상품을 제공하고 있습니다. 그러니 이 좋은 기회를 놓치지 마십시오. 책갈피 디자인 대회의 등록 기간은 이번 주 금요일에 종료되기 때문에, 신청을 제출하려면 반드시 학교 도서관을 방문해야 합니다. 참여하여 여러분의 창의력과 재능을 표출해보세요.</p>
+<p>위 지문에 대한 문제는 다음과 같습니다:</p>
+<p>다음을 듣고, 남자가 하는 말의 목적으로 가장 적절한 것을 고르시오. ① 도서관의 변경된 운영 시간을 안내하려고 ② 독후감 쓰기 대회의 일정을 공지하려고 ③ 책갈피 디자인 대회 참가를 독려하려고 ④ 기한 내 도서 반납을 촉구하려고 ⑤ 전자책 이용 방법을 설명하려고</p>
+<p>정답은 <strong>③ 책갈피 디자인 대회 참가를 독려하려고 </strong>입니다.</p>
+<p>남자의 말에서는 책갈피 디자인 대회를 언급하고, 학생들에게 대회에 참가할 것을 권장하고 있습니다. 그래서 남자의 목적은 책갈피 디자인 대회 참가를 독려하는 것입니다.</p>
+</div>
+</div>
+</div>
 
+<aside><div>
+<ul>
+<li><a href="https://sharegpt.com/c/hgMYJTM">ShareGPT</a></li>
+</ul>
+</div></aside></section></section>
+<section>
+<section id="생성형-ai-데이터-사이언스" class="title-slide slide level1 center">
+<h1>생성형 AI <br> 데이터 사이언스</h1>
+
+</section>
+<section id="openai-advanced-data-analysis" class="slide level2 smaller">
+<h2>OpenAI Advanced Data Analysis</h2>
+<p><br></p>
+<blockquote>
+<p>Open AI Code Interpreter → Advanced Data Analysis</p>
+</blockquote>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/km_code_interpreter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img data-src="img/km_code_interpreter.png"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<p><a href="https://r2bit.com/map_challenge/km_BitGPT.html">생성AI 광명시 데이터 분석 사례</a></p>
+</div></aside></section>
+<section id="rstudio-copilot" class="slide level2">
+<h2>RStudio Copilot</h2>
+<blockquote>
+<p><code>Tools -&gt; Global Options -&gt; Copilot -&gt; Enable Github Copilot</code></p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/rstudio_copilot.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img data-src="img/rstudio_copilot.jpg"></a></p>
+</figure>
+</div>
+</section>
+<section id="웹앱shiny-app-개발-사례" class="slide level2">
+<h2>웹앱(Shiny App) 개발 사례</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/shiny_app_ci.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img data-src="img/shiny_app_ci.gif"></a></p>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="글쓰기-챗gpt-인터페이스---오피스-전쟁" class="title-slide slide level1 center">
+<h1><strong>글쓰기</strong> <br> 챗GPT 인터페이스 - 오피스 전쟁</h1>
+
+</section>
+<section id="구글-검색의-종말" class="slide level2">
+<h2>구글 검색의 종말(?)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT-search.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img data-src="img/chatGPT-search.jpg" width="700"></a></p>
+</figure>
+</div>
+</section>
+<section id="글쓰기-역사" class="slide level2">
+<h2>글쓰기 역사</h2>
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/writing_history.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img data-src="img/writing_history.jpg"></a></p>
+</figure>
+</div>
+
+<aside><div>
+<ul>
+<li><a href="https://r2bit.com/quarto/writing_history.html">문자와 종이 역사</a></li>
+</ul>
+</div></aside></section>
+<section id="오피스-전쟁" class="slide level2 smaller">
+<h2>오피스 전쟁</h2>
+<table>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">항목</th>
+<th style="text-align: center;">MS 오피스 <sup>1</sup></th>
+<th style="text-align: center;">구글 오피스 <sup>2</sup></th>
+<th style="text-align: center;">리브레 오피스 <sup>3</sup></th>
+<th style="text-align: center;">한컴 오피스 <sup>4</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">문서 작성 및 편집</td>
+<td style="text-align: center;">워드, 엑셀, 파워포인트 등의 데스크톱 및 웹 앱 제공</td>
+<td style="text-align: center;">구글 문서, 스프레드시트, 프레젠테이션 등의 웹 앱 제공</td>
+<td style="text-align: center;">라이터, 캘크, 임프레스 등의 데스크톱 앱 제공</td>
+<td style="text-align: center;">한글, 한셀, 한쇼 등의 데스크톱 및 모바일 앱 제공</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">협업 및 공유</td>
+<td style="text-align: center;">원드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움</td>
+<td style="text-align: center;">구글 드라이브를 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정하고 실시간으로 확인 가능</td>
+<td style="text-align: center;">드롭박스나 구글 드라이브와 연동하여 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움</td>
+<td style="text-align: center;">넷프리즘을 통해 문서를 클라우드에 저장하고 공유 가능. 여러 사람이 동시에 문서를 수정할 수 있으나 실시간으로 보기 어려움</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">이메일 및 채팅</td>
+<td style="text-align: center;">Outlook을 통해 비즈니스 메일 제공. Teams을 통해 채팅 및 화상 회의 가능</td>
+<td style="text-align: center;">Gmail을 통해 비즈니스 메일 제공. Chat과 Meet을 통해 채팅 및 화상 회의 가능</td>
+<td style="text-align: center;">이메일 및 채팅 기능 없음</td>
+<td style="text-align: center;">이메일 및 채팅 기능 없음</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">가격</td>
+<td style="text-align: center;">1인당 월 5~20달러 다양한 요금제 제공. 데스크톱 앱 사용 가능한 요금제는 12.5달러부터 시작</td>
+<td style="text-align: center;">1인당 월 6~18달러까지 다양한 요금제 제공</td>
+<td style="text-align: center;">완전 무료</td>
+<td style="text-align: center;">개인용은 무료로 사용 가능하며 업무용은 별도로 견적 요청 필요</td>
+</tr>
+</tbody>
+</table>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>https://www.microsoft.com/ko-kr/microsoft-365/business</p></li><li id="fn2"><p>https://workspace.google.com/intl/ko_kr/</p></li><li id="fn3"><p>https://www.libreoffice.org/</p></li><li id="fn4"><p>https://www.hancom.com/product/productMain.do</p></li></ol></aside></section>
+<section id="오피스-전쟁-패러다임-충돌" class="slide level2">
+<h2>오피스 전쟁: 패러다임 충돌</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/writing-evolution.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img data-src="img/writing-evolution.jpg"></a></p>
+</figure>
+</div>
+</section>
+<section id="챗gpt-시대-사무실" class="slide level2">
+<h2>챗GPT 시대 사무실</h2>
+<div class="panel-tabset">
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">챗GPT 사용원인</a></li><li><a href="#tabset-6-2">인터페이스</a></li><li><a href="#tabset-6-3">챗GPT AS-IS</a></li><li><a href="#tabset-6-4">챗GPT TO-BE</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT_why.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img data-src="img/chatGPT_why.jpg" width="600"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT_interface.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img data-src="img/chatGPT_interface.jpg" width="500"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT-AS-IS.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img data-src="img/chatGPT-AS-IS.jpg"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-6-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT-TO-BE.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img data-src="img/chatGPT-TO-BE.jpg"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="챗gpt가-이룬-대통합" class="slide level2">
+<h2>챗GPT가 이룬 대통합</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatGPT-Text-to-X.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img data-src="img/chatGPT-Text-to-X.jpg"></a></p>
+</figure>
+</div>
+</section>
+<section id="인터페이스-interface" class="slide level2 smaller">
+<h2>인터페이스 (Interface)</h2>
+<div class="panel-tabset">
+<ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">진화과정</a></li><li><a href="#tabset-7-2">CLI</a></li><li><a href="#tabset-7-3">GUI</a></li><li><a href="#tabset-7-4">WUI</a></li><li><a href="#tabset-7-5">MUI</a></li><li><a href="#tabset-7-6">LUI</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1">
+<p><br> <br> <br></p>
+<div class="cell" data-reveal="true">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    
+    subgraph A["사용자 인터페이스"]
+    direction LR
+        CLI["CLI&lt;br&gt;Command Line Interface&lt;br&gt; 1950~"]     --&gt; GUI["GUI &lt;br&gt; Graphic User Inferface&lt;br&gt; 1970~"]
+        GUI               --&gt; WI["Web Interface &lt;br&gt; 1994~"]
+        WI --&gt; MI["Mobile Interface &lt;br&gt; 2007~"]
+        MI --&gt; NUI["LUI &lt;br&gt; Language User Interface &lt;br&gt; 2023~"]
+
+    end
+
+
+class A nodeStyle
+
+classDef nodeStyle fill:#fcfbfa,stroke:#000000,stroke-width:0.7px,font-weight:bold,font-size:14px;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-7-2">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_cli.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img data-src="img/ui_cli.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Computer_terminal" class="uri">https://en.wikipedia.org/wiki/Computer_terminal</a></li>
+</ul>
+</div>
+<div id="tabset-7-3">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_gui.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img data-src="img/ui_gui.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://kartsci.org/kocomu/computer-history/graphical-user-interface-history/" class="uri">https://kartsci.org/kocomu/computer-history/graphical-user-interface-history/</a></li>
+</ul>
+</div>
+<div id="tabset-7-4">
+<p><br> <br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_web.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img data-src="img/ui_web.jpg"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-7-5">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_mi.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img data-src="img/ui_mi.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://www.huffpost.com/entry/uber-your-way-through-cit_b_1205446" class="uri">https://www.huffpost.com/entry/uber-your-way-through-cit_b_1205446</a></li>
+</ul>
+</div>
+<div id="tabset-7-6">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/sam_altman_LUI.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img data-src="img/sam_altman_LUI.jpg"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://twitter.com/sama/status/1515764302904377344" class="uri">https://twitter.com/sama/status/1515764302904377344</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="챗gpt-nui" class="slide level2 smaller">
+<h2>챗GPT NUI</h2>
+<div class="panel-tabset">
+<ul id="tabset-8" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-8-1">1:1 채팅</a></li><li><a href="#tabset-8-2">클릭하여 완료</a></li><li><a href="#tabset-8-3">자동완성</a></li><li><a href="#tabset-8-4">명령 팔레트</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1">
+<ul>
+<li>챗GPT (ChatGPT)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/chatgpt_writing.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img data-src="img/chatgpt_writing.gif" width="634"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-8-2">
+<ul>
+<li>OpenAI Playground</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_playground.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img data-src="img/ui_playground.jpg" width="645"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-8-3">
+<ul>
+<li>GitHub Copilot</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/ui_copilot.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img data-src="img/ui_copilot.gif"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e" class="uri">https://towardsdatascience.com/some-experiments-using-github-copilot-with-python-90f8065fb72e</a></li>
+</ul>
+</div>
+<div id="tabset-8-4">
+<div class="columns">
+<div class="column">
+<h4 id="사례">사례</h4>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/command-tree.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img data-src="img/command-tree.gif"></a></p>
+</figure>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/generate_code.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img data-src="img/generate_code.gif"></a></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<video id="video_shortcode_videojs_video1" width="500" height="400" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="https://blog.replit.com/images/ai/aimode_future.mp4"></video>
+</div>
+</div>
+<ul>
+<li><a href="https://blog.replit.com/clui" class="uri">https://blog.replit.com/clui</a></li>
+<li><a href="https://blog.replit.com/ai" class="uri">https://blog.replit.com/ai</a></li>
+</ul>
+</div><div class="column">
+<h4 id="command-palette-역사">Command Palette 역사</h4>
+<ul>
+<li>60년대로 거슬러 올라가는 명령 팔레트는 최근 기술 업계에서 다시 인기를 얻고 있으며 사용자 중심 소프트웨어의 필수적인 부분으로 간주됨.</li>
+<li>CLI는 개인용 컴퓨터가 대중화되기 전 초기 컴퓨팅을 지배했으며 사용자가 시스템을 작동하기 위해 특정 명령을 알아야 했다. 1984년 Apple의 매킨토시와 함께 도입된 그래픽 사용자 인터페이스(GUI)는 중요한 혁신으로 여겨졌지만, 소프트웨어의 복잡성이 증가함에 따라 GUI만으로는 탐색하기가 점점 더 어려워졌다.</li>
+<li>사용자가 항목 이름의 짧은 약어입력하여 앱과 파일을 검색할 수 있는 런처가 점점 더 보편화 되었다. 예를 들어 2001년에 출시된 Mac OS X용 LaunchBar, Quicksilver, 2005년에 출시된 Apple의 시스템 전체 Spotlight가 있다. 검색과 CLI의 결합은 <strong>Command Palette</strong>의 탄생으로 이어졌다.</li>
+<li>오늘날 우리가 알고 있는 현대식 명령 팔레트는 2011년 Sublime Text 2 베타 Joe Skinner가 처음 소개. 명령줄 사용에 익숙한 프로그래머들이 단축키를 모두 외울 필요 없이 더 빠르게 작업할 수 있어 중요한 발전이 됨.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--  -->
+</section></section>
 <section>
 <section id="section" class="title-slide slide level1 center" data-background-image="img/meetup_logo.jpg">
 <h1></h1>
@@ -583,48 +4206,48 @@
 <div class="r-stack">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="img/seoul-r-meetup-september.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="img/seoul-r-meetup-september.jpg" width="320"></a></p>
+<p><a href="img/seoul-r-meetup-september.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img data-src="img/seoul-r-meetup-september.jpg" width="320"></a></p>
 </figure>
 </div>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="img/seoul-r-meetup-august.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="img/seoul-r-meetup-august.jpg" width="320"></a></p>
-</figure>
-</div>
-</div>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="img/seoul-r-meetup-july.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="img/seoul-r-meetup-july.jpg" width="320"></a></p>
+<p><a href="img/seoul-r-meetup-august.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img data-src="img/seoul-r-meetup-august.jpg" width="320"></a></p>
 </figure>
 </div>
 </div>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="img/seoulr-r-meetup-june.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img data-src="img/seoulr-r-meetup-june.jpg" width="320"></a></p>
+<p><a href="img/seoul-r-meetup-july.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img data-src="img/seoul-r-meetup-july.jpg" width="320"></a></p>
 </figure>
 </div>
 </div>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="img/seoul-r-meetup-202305.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img data-src="img/seoul-r-meetup-202305.jpg" width="320"></a></p>
+<p><a href="img/seoulr-r-meetup-june.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-46"><img data-src="img/seoulr-r-meetup-june.jpg" width="320"></a></p>
 </figure>
 </div>
 </div>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="img/seoul-r-meetup-AsiaR.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img data-src="img/seoul-r-meetup-AsiaR.jpg" width="320"></a></p>
+<p><a href="img/seoul-r-meetup-202305.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-47"><img data-src="img/seoul-r-meetup-202305.jpg" width="320"></a></p>
 </figure>
 </div>
 </div>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="img/seoul-r-meetup-202304.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img data-src="img/seoul-r-meetup-202304.jpg" width="320"></a></p>
+<p><a href="img/seoul-r-meetup-AsiaR.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img data-src="img/seoul-r-meetup-AsiaR.jpg" width="320"></a></p>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="img/seoul-r-meetup-202304.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img data-src="img/seoul-r-meetup-202304.jpg" width="320"></a></p>
 </figure>
 </div>
 </div>
@@ -657,6 +4280,7 @@
 <p>한국 R 사용자회 <a href="https://r2bit.com/chatGPT/">chatGPT</a>. theme <a href="https://github.com/padsInsper/quarto-insper-theme">insper</a> 소스코드 <a href="https://github.com/padsInsper/quarto-insper-theme">GitHub</a>.</p>
 </div>
 </section></section>
+
     </div>
   </div>
 
@@ -867,6 +4491,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -1021,6 +4683,7 @@
       }
     });
     </script>
+    
     
     
 

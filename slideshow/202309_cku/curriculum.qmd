@@ -1,0 +1,366 @@
+# 통계 → 챗GPT 데이터 사이언스
+
+## 커리큘럼 {.smaller}
+
+::: panel-tabset
+### 종이와 연필
+
+![](img/cku_statistics.jpg){fig-align="center" width="413"}
+
+### SAS/SPSS 보고서
+
+![](img/cku_sas_word.png){fig-align="center" width="715"}
+
+### DS 입문
+
+```{r}
+library(tidyverse)
+library(rvest)
+
+library(gt)
+library(gtExtras)
+
+ds_url <- "https://statkclee.github.io/yonsei/"
+ds_html <- read_html(ds_url)
+
+ds_html |> 
+  html_elements('table') |> 
+  html_table() %>%
+  .[[1]] |> 
+  slice(2:n()) |> 
+  separate(X2, into = c("학습내용", "날짜"), sep = "-") |> 
+  separate(학습내용, into = c("주차", "학습내용"), sep = "\\.") |> 
+  select(주차, 학습내용, 날짜) |> 
+  drop_na() |> 
+  mutate(날짜 = str_trim(날짜),
+         학습내용 = str_trim(학습내용))  |> 
+  mutate(날짜 = if_else(str_detect(날짜, "^\\d"), 날짜, NA_character_))  |> 
+  gt() |> 
+    gt_theme_pff() |> 
+    sub_missing(
+      columns = 날짜,
+    missing_text = "-"
+    )  |> 
+    cols_align("center") |> 
+    opt_table_font(
+      font = list(
+        google_font(name = "Sunflower"),
+        "NanumGothic"
+      )
+    ) %>% 
+    tab_style(
+      style = list(
+        "font-variant: small-caps;"
+      ),
+      locations = cells_body(columns = everything())
+    ) %>% 
+    tab_header(
+      title =
+        htmltools::tagList(
+          htmltools::tags$div(
+            style = htmltools::css(
+              `text-align` = "center"
+            ),
+            htmltools::HTML(
+              web_image("img/curriculum_yonsei.png")
+            )
+          ),
+          htmltools::tags$div(
+            htmltools::tags$strong("연세대"),
+            "데이터 사이언스 입문"
+          )
+        )
+    ) |> 
+  tab_options(
+    table.width = "65%",
+    heading.title.font.size = px(12)
+  )
+  
+```
+
+-   [연세대 "데이터 과학 입문"](https://statkclee.github.io/yonsei/)
+
+### 고급 DS
+
+```{r}
+ds2_url <- "https://statkclee.github.io/yonsei2/"
+ds2_html <- read_html(ds2_url)
+
+ds2_html |> 
+  html_elements('table') |> 
+  html_table() %>%
+  .[[1]] |> 
+  slice(2:n()) |> 
+  separate(X2, into = c("학습내용", "날짜"), sep = "&race;") |> 
+  separate(학습내용, into = c("주차", "학습내용"), sep = "\\.") |> 
+  select(주차, 학습내용, 날짜) |> 
+  drop_na() |> 
+  mutate(날짜 = str_trim(날짜),
+         학습내용 = str_trim(학습내용))  |> 
+  mutate(날짜 = if_else(str_detect(날짜, "^\\d"), 날짜, NA_character_))  |> 
+  gt() |> 
+    gt_theme_pff() |> 
+    sub_missing(
+      columns = 날짜,
+    missing_text = "-"
+    )  |> 
+    cols_align("center") |> 
+    opt_table_font(
+      font = list(
+        google_font(name = "Sunflower"),
+        "NanumGothic"
+      )
+    ) %>% 
+    tab_style(
+      style = list(
+        "font-variant: small-caps;"
+      ),
+      locations = cells_body(columns = everything())
+    ) %>% 
+    tab_header(
+      title =
+        htmltools::tagList(
+          htmltools::tags$div(
+            style = htmltools::css(
+              `text-align` = "center"
+            ),
+            htmltools::HTML(
+              web_image("img/curriculum_yonsei2.png")
+            )
+          ),
+          htmltools::tags$div(
+            htmltools::tags$strong("연세대"),
+            "데이터 (사이언스) 공학"
+          )
+        )
+    ) |> 
+  tab_options(
+    table.width = "65%",
+    heading.title.font.size = px(12)
+  )
+```
+
+-   [연세대 "데이터 (사이언스) 공학"](https://statkclee.github.io/yonsei2/)
+
+### GS 칼텍스
+
+```{r}
+#| echo: false
+library(readxl)
+library(tidyverse)
+
+citizen_courses <- read_excel(glue::glue("{here::here()}/data/curriculum_2023.xlsx"), sheet = "level_01")
+
+citizen_courses %>% 
+  fill(c(일정, 과정)) %>% 
+  mutate(과정 = str_remove(과정, "^\\d+\\.\\s+")) %>% 
+  group_by(일정, 과정, 데이터셋) %>%
+    summarize(과정상세 = str_c(과정상세, collapse = "<br>")) |> 
+  ungroup() |> 
+  relocate(데이터셋, .after = 과정상세) |>
+  ## 표 작성
+  gt() %>%
+  gt_theme_pff() %>% 
+  tab_style(
+    style = list(
+      "font-variant: small-caps;"
+    ),
+    locations = cells_body(columns = everything())
+  ) |> 
+  sub_missing(columns = everything(),
+              missing_text = "-") |> 
+  fmt_markdown(columns = TRUE) |> 
+  tab_options(
+    table.width = "100%",
+    heading.title.font.size = px(12)
+  ) |> 
+  cols_align("center") |> 
+  opt_table_font(
+      font = list(
+        google_font(name = "Sunflower"),
+        "NanumGothic"
+      )
+    ) %>% 
+  tab_header(
+    title =
+      htmltools::tagList(
+        htmltools::tags$div(
+          style = htmltools::css(
+            `text-align` = "center"
+          ),
+          htmltools::HTML(
+            web_image("img/curriculum_gs_caltex.png")
+          )
+        ),
+        htmltools::tags$div(
+          htmltools::tags$strong("GS 칼텍스"),
+          "시민 데이터 과학"
+        )
+      )
+  )
+  
+```
+
+- [GS 칼텍스 데이터 사이언스](https://r2bit.com/curriculum/)
+
+
+### GS 칼텍스
+
+```{r}
+#| echo: false
+courses <- tribble(~"과목명", ~"학습상세", ~"일정", ~"데이터셋",
+        "환경설정", "학습 도구 설치 및 학습환경",  "00주차", "파머 펭귄, BitData",
+        "디지털 글쓰기(보고서)", "마크다운 / Quarto",  "01주차", "BitData",
+        "명령라인 데이터 분석", "자동화(Shell)",  "02주차", "SWC",
+        "버전 제어", "버전제어/협업(Git / GitHub / GitLab)",  "03주차", "",
+        "프로그래밍", "SQL",  "04주차", "Data Carpentry, DVD 렌탈",
+        "프로그래밍", "시각화",  "05주차", "gapminder",
+        "프로그래밍", "파이썬",  "06주차", "",
+        "대쉬보드", "Flexdashboard / Shinydashboard",  "07주차", "",
+        "기계학습", "tidymodels / scikit-learn",  "08주차", "",
+        "데이터 과학 제품", "RESTful API",  "09주차", "",
+        "특수 데이터", "시계열(Time Series)",  "10주차", "KOSPI",
+        "특수 데이터", "공간정보(Geospatial) / 텍스트 분석",  "11주차", "미디어오늘",
+        "비정형 데이터", "텍스트와 이미지 (딥러닝)",  "12주차", "")
+
+courses %>% 
+  select(일정, everything()) %>% 
+  gt() %>%
+  gt_theme_pff() %>% 
+  tab_options(
+    table.width = "100%",
+    heading.title.font.size = px(17)
+  ) |> 
+  tab_style(
+    style = list(
+      "font-variant: small-caps;"
+    ),
+    locations = cells_body(columns = everything())
+  ) |>   
+  opt_table_font(
+    font = list(
+      google_font(name = "Sunflower"),
+        "NanumGothic"
+      )
+  ) %>% 
+  cols_align(
+    align = "center",
+    columns = everything()
+  )  |> 
+  tab_header(
+    title =
+      htmltools::tagList(
+        htmltools::tags$div(
+          style = htmltools::css(
+            `text-align` = "center"
+          ),
+          htmltools::HTML(
+            web_image("img/curriculum_gs_caltex.png")
+          )
+        ),
+        htmltools::tags$div(
+          htmltools::tags$strong("GS 칼텍스"),
+          "데이터 과학"
+        )
+      )
+  ) 
+  
+```
+
+- [GS 칼텍스 데이터 사이언스](https://r2bit.com/curriculum/)
+
+
+
+### 챗GPT DS {.smaller}
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(gt)
+library(gtExtras)
+extrafont::loadfonts()
+
+curriculum_raw <- read_excel(glue::glue("{here::here()}/data/건국대_커리큘럼.xlsx"))
+
+curriculum <- curriculum_raw %>% 
+  fill(everything(), .direction="down") %>% 
+  mutate(날짜 = as.Date(날짜)) %>% 
+  mutate(주차 = glue::glue("{주차} 주차"))
+
+## 첫번째
+curriculum_first <- curriculum %>% 
+  filter(dplyr::row_number() <=10)
+
+curriculum_first_gt <- curriculum_first %>%   
+  gt(groupname_col = c("주차", "날짜")) %>% 
+    cols_align(align = "center") %>% 
+  opt_table_font(
+    font = list(
+      google_font(name = "Sunflower"),
+      "NanumGothic"
+    )
+  ) %>% 
+  gt_theme_pff() %>% 
+  tab_style(
+    style = list(
+      "font-variant: small-caps;"
+    ),
+    locations = cells_body(columns = everything())
+  ) %>% 
+  tab_header(
+    title =
+      htmltools::tagList(
+        htmltools::tags$div(
+          style = htmltools::css(
+            `text-align` = "center"
+          ),
+          htmltools::HTML(
+            web_image("img/konkuk/tools.png")
+          )
+        ),
+        htmltools::tags$div(
+          htmltools::tags$strong("챗GPT 데이터 사이언스"),
+          "건국대 전문교육과정"
+        )
+      )
+  ) 
+
+## 두번째
+curriculum_second <- curriculum %>% 
+  filter(dplyr::row_number() > 10)
+
+curriculum_second_gt <- curriculum_second %>%   
+  gt(groupname_col = c("주차", "날짜")) %>% 
+    cols_align(align = "center") %>% 
+  opt_table_font(
+    font = list(
+      google_font(name = "Sunflower"),
+      "NanumGothic"
+    )
+  ) %>% 
+  gt_theme_pff() %>% 
+  tab_style(
+    style = list(
+      "font-variant: small-caps;"
+    ),
+    locations = cells_body(columns = everything())
+  ) 
+
+## 결합
+
+listed_tables <- list(curriculum_first_gt, curriculum_second_gt)
+
+gt_two_column_layout(listed_tables)
+```
+
+### 평가
+
+<br>
+
+![](img/education_evaluation.jpg)
+
+- [데이터 사이언스 MCQ](https://r2bit.com/curriculum/mcq_stat.html)
+
+:::
+
+

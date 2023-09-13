@@ -1,5 +1,5 @@
 ---
-title: "챗GPT 시대 교육"
+title: "대학교육에서 챗GPT 활용방안"
 subtitle: "교안과 평가를 중심으로"
 author: "이광춘"
 institute: "비영리법인 한국 R 사용자회"
@@ -24,13 +24,33 @@ editor_options:
 
 1.  강사 및 강의 소개
 
+1.  챗GPT 유닉스 쉘 (도서)
+
+1.  대학교육 ( 통계 사례 연구 )
+
+1.  생성형 AI ~~경제~~ 일자리와 교육
+
+1.  생성형 AI 데이터 과학
+
+1.  글쓰기와 오피스 전쟁
+
 1.  질의응답!
 
 {{< include slideshow/202309_cku/00-who-am-i.qmd >}}
 
 {{< include slideshow/202309_cku/unix_shell.qmd >}}
 
-{{< include slideshow/202309_cku/reference.qmd >}}
+{{< include slideshow/202309_cku/curriculum.qmd >}}
+
+{{< include slideshow/202309_cku/econ_edu.qmd >}}
+
+{{< include slideshow/202309_cku/code_interpreter.qmd >}}
+
+{{< include slideshow/202309_cku/office-interface.qmd >}}
+
+<!-- {{< include slideshow/202309_cku/reference.qmd >}} -->
 
 {{< include slideshow/202309_cku/seoul-r-meeup.qmd >}}
+
+
 
