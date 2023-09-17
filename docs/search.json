@@ -6710,7 +6710,7 @@
     "href": "cku_20230919.html#목차",
     "title": "대학교육에서 챗GPT 활용방안",
     "section": "목차",
-    "text": "목차\n\n강사 및 강의 소개\n챗GPT 유닉스 쉘 (도서)\n대학교육 ( 통계 사례 연구 )\n생성형 AI 경제 일자리와 교육\n생성형 AI 데이터 과학\n글쓰기와 오피스 전쟁\n질의응답!"
+    "text": "목차\n\n강사 및 강의 소개\n챗GPT 유닉스 쉘 (도서)\n대학교육 ( 통계 사례 연구 )\n생성형 AI 경제 일자리와 교육\n생성형 AI 데이터 과학\n챗GPT 플러그인\n글쓰기와 오피스 전쟁\n질의응답!"
   },
   {
     "objectID": "cku_20230919.html#발제자-발제-개요",
@@ -7033,5 +7033,26 @@
     "title": "발표자료 | 한국 R 사용자회",
     "section": "",
     "text": "강사 소개발제개요"
+  },
+  {
+    "objectID": "cku_20230919.html#포스터-제작",
+    "href": "cku_20230919.html#포스터-제작",
+    "title": "대학교육에서 챗GPT 활용방안",
+    "section": "포스터 제작",
+    "text": "포스터 제작\n\n포스터 시안포스터 편집최종 포스터\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShareGPT: Canva 사용사례"
+  },
+  {
+    "objectID": "cku_20230919.html#api-프로그래밍",
+    "href": "cku_20230919.html#api-프로그래밍",
+    "title": "대학교육에서 챗GPT 활용방안",
+    "section": "API 프로그래밍",
+    "text": "API 프로그래밍\n\n준비 프롬프트코드제작 프롬프트롬코드수정작업결과\n\n\n\n웹사이트를 읽고 다음 지령을 준비해 https://apis.map.kakao.com/web/documentation/\n\nKakao 지도 API 문서는 다양한 지도 관련 기능을 제공한다. 이 문서는 지도 객체 생성, 이벤트, 메서드 등에 대한 상세한 정보를 담고 있다. 아래는 주요 내용의 요약이다.\n\n### 지도 객체 생성\n- `kakao.maps.Map(container, options)`: 지도를 생성한다.\n  - `container`: 지도가 표시될 HTML element\n  - `options`: 중심 좌표, 확대 수준, 지도 종류 등을 설정할 수 있다.\n\n### 주요 메서드\n- `setCenter(latlng)`: 지도의 중심 좌표를 설정한다.\n- `getCenter()`: 지도의 중심 좌표를 반환한다.\n- `setLevel(level, options)`: 지도의 확대 수준을 설정한다.\n- `getLevel()`: 지도의 확대 수준을 반환한다.\n- `setMapTypeId(mapTypeId)`: 지도의 타입을 설정한다.\n- `getMapTypeId()`: 지도의 타입을 반환한다.\n\n### 이벤트\n- `center_changed`: 중심 좌표가 변경되면 발생한다.\n- `zoom_start`: 확대 수준이 변경되기 직전에 발생한다.\n- `zoom_changed`: 확대 수준이 변경되면 발생한다.\n- `click`: 지도를 클릭하면 발생한다.\n- `dblclick`: 지도를 더블클릭하면 발생한다.\n\n이 외에도 다양한 메서드와 이벤트가 있어, 개발자가 원하는 기능을 쉽게 구현할 수 있다.\n\n\n\n주소를 넘기면 위경도 좌표를 반환하는 R 코드를 작성해줘.\n\nR에서 주소를 위경도 좌표로 변환하기 위해 httr 패키지를 사용하여 Kakao API를 호출한 예시 코드이다.\n# 필요한 패키지를 설치하고 불러온다\ninstall.packages(\"httr\")\ninstall.packages(\"jsonlite\")\nlibrary(httr)\nlibrary(jsonlite)\n\n# 주소를 위경도로 변환하는 함수를 정의한다\nget_latlng &lt;- function(address) {\n  # Kakao API 키를 설정한다 (본인의 API 키로 교체해야 한다)\n  api_key &lt;- \"YOUR_KAKAO_API_KEY\"\n  \n  # API URL과 파라미터를 설정한다\n  url &lt;- \"https://dapi.kakao.com/v2/local/search/address.json\"\n  params &lt;- list(query = address)\n  headers &lt;- add_headers(\"Authorization\" = paste(\"KakaoAK\", api_key))\n  \n  # API를 호출한다\n  response &lt;- GET(url, query = params, headers)\n  \n  # 응답을 확인하고 JSON을 파싱한다\n  if (status_code(response) == 200) {\n    content &lt;- content(response, \"text\", encoding = \"UTF-8\")\n    json_data &lt;- fromJSON(content)\n    \n    # 위경도를 추출한다\n    if (json_data$meta$total_count &gt; 0) {\n      lat &lt;- json_data$documents[[1]]$y\n      lng &lt;- json_data$documents[[1]]$x\n      return(list(lat = lat, lng = lng))\n    } else {\n      return(NULL)\n    }\n  } else {\n    stop(\"API request failed\")\n  }\n}\n\n# 함수를 테스트한다\naddress &lt;- \"서울특별시 강남구 테헤란로 212\"\nresult &lt;- get_latlng(address)\nprint(paste(\"Latitude:\", result$lat, \"Longitude:\", result$lng))\n\n\n\nlibrary(httr)\nlibrary(jsonlite)\n\n# 주소를 위경도로 변환하는 함수를 정의한다\nget_latlng &lt;- function(address) {\n  # Kakao API 키를 설정한다 (본인의 API 키로 교체해야 한다)\n  api_key &lt;- Sys.getenv(\"KAKAO_MAP_API_KEY\")\n  \n  # API URL과 파라미터를 설정한다\n  url &lt;- \"https://dapi.kakao.com/v2/local/search/address.json\"\n  params &lt;- list(query = address)\n  headers &lt;- add_headers(\"Authorization\" = paste(\"KakaoAK\", api_key))\n  \n  # API를 호출한다\n  response &lt;- GET(url, query = params, headers)\n  \n  # 응답을 확인하고 JSON을 파싱한다\n  if (status_code(response) == 200) {\n    content &lt;- content(response, \"text\", encoding = \"UTF-8\")\n    json_data &lt;- fromJSON(content)\n    \n    # 위경도를 추출한다\n    if (json_data$meta$total_count &gt; 0) {\n      lat &lt;- json_data$documents[[1]]$y\n      lng &lt;- json_data$documents[[1]]$x\n      return(list(lat = lat, lng = lng))\n    } else {\n      return(NULL)\n    }\n  } else {\n    stop(\"API request failed\")\n  }\n}\n\n# 가톨릭관동대학교 주소\naddress &lt;- \"강원도 강릉시 범일로579번길 24\"\nresult &lt;- get_latlng(address)\nprint(paste(\"Latitude:\", result$lat, \"Longitude:\", result$lng))\n\n\n\n\n\n\n\n\n\n\n\n\nShareGPT: API 사용사례, 플러그인(Plugin) - 칸바, 카카오맵, 울프람"
+  },
+  {
+    "objectID": "cku_20230919.html#코드제작-프롬프트롬",
+    "href": "cku_20230919.html#코드제작-프롬프트롬",
+    "title": "대학교육에서 챗GPT 활용방안",
+    "section": "코드제작 프롬프트롬",
+    "text": "코드제작 프롬프트롬\n\n주소를 넘기면 위경도 좌표를 반환하는 R 코드를 작성해줘.\n\nR에서 주소를 위경도 좌표로 변환하기 위해 httr 패키지를 사용하여 Kakao API를 호출할 수 있다. 아래는 간단한 예시 코드이다.\n# 필요한 패키지를 설치하고 불러온다\ninstall.packages(\"httr\")\ninstall.packages(\"jsonlite\")\nlibrary(httr)\nlibrary(jsonlite)\n\n# 주소를 위경도로 변환하는 함수를 정의한다\nget_latlng &lt;- function(address) {\n  # Kakao API 키를 설정한다 (본인의 API 키로 교체해야 한다)\n  api_key &lt;- \"YOUR_KAKAO_API_KEY\"\n  \n  # API URL과 파라미터를 설정한다\n  url &lt;- \"https://dapi.kakao.com/v2/local/search/address.json\"\n  params &lt;- list(query = address)\n  headers &lt;- add_headers(\"Authorization\" = paste(\"KakaoAK\", api_key))\n  \n  # API를 호출한다\n  response &lt;- GET(url, query = params, headers)\n  \n  # 응답을 확인하고 JSON을 파싱한다\n  if (status_code(response) == 200) {\n    content &lt;- content(response, \"text\", encoding = \"UTF-8\")\n    json_data &lt;- fromJSON(content)\n    \n    # 위경도를 추출한다\n    if (json_data$meta$total_count &gt; 0) {\n      lat &lt;- json_data$documents[[1]]$y\n      lng &lt;- json_data$documents[[1]]$x\n      return(list(lat = lat, lng = lng))\n    } else {\n      return(NULL)\n    }\n  } else {\n    stop(\"API request failed\")\n  }\n}\n\n# 함수를 테스트한다\naddress &lt;- \"서울특별시 강남구 테헤란로 212\"\nresult &lt;- get_latlng(address)\nprint(paste(\"Latitude:\", result$lat, \"Longitude:\", result$lng))\n코드수정\n작업결과"
   }
 ]

@@ -1,0 +1,156 @@
+# 챗GPT 플러그인
+
+## 포스터 제작
+
+::: panel-tabset
+### 포스터 시안
+
+![](img/plugin_canva.jpg){fig-align="center" width="359"}
+
+### 포스터 편집
+
+![](img/plugin_canva_edit.jpg){fig-align="center" width="580"}
+
+### 최종 포스터
+
+![](img/plugin_canva_poster.jpg){fig-align="center" width="353"}
+:::
+
+-   [ShareGPT: Canva 사용사례](https://chat.openai.com/share/9689351d-6f4b-475c-96e4-618e46aca82b)
+
+## API 프로그래밍 {.smaller}
+
+::: panel-tabset
+### 준비 프롬프트
+
+> 웹사이트를 읽고 다음 지령을 준비해 https://apis.map.kakao.com/web/documentation/
+
+``` markdown
+Kakao 지도 API 문서는 다양한 지도 관련 기능을 제공한다. 이 문서는 지도 객체 생성, 이벤트, 메서드 등에 대한 상세한 정보를 담고 있다. 아래는 주요 내용의 요약이다.
+
+### 지도 객체 생성
+- `kakao.maps.Map(container, options)`: 지도를 생성한다.
+  - `container`: 지도가 표시될 HTML element
+  - `options`: 중심 좌표, 확대 수준, 지도 종류 등을 설정할 수 있다.
+
+### 주요 메서드
+- `setCenter(latlng)`: 지도의 중심 좌표를 설정한다.
+- `getCenter()`: 지도의 중심 좌표를 반환한다.
+- `setLevel(level, options)`: 지도의 확대 수준을 설정한다.
+- `getLevel()`: 지도의 확대 수준을 반환한다.
+- `setMapTypeId(mapTypeId)`: 지도의 타입을 설정한다.
+- `getMapTypeId()`: 지도의 타입을 반환한다.
+
+### 이벤트
+- `center_changed`: 중심 좌표가 변경되면 발생한다.
+- `zoom_start`: 확대 수준이 변경되기 직전에 발생한다.
+- `zoom_changed`: 확대 수준이 변경되면 발생한다.
+- `click`: 지도를 클릭하면 발생한다.
+- `dblclick`: 지도를 더블클릭하면 발생한다.
+
+이 외에도 다양한 메서드와 이벤트가 있어, 개발자가 원하는 기능을 쉽게 구현할 수 있다.
+```
+
+### 코드제작 프롬프트롬
+
+> 주소를 넘기면 위경도 좌표를 반환하는 R 코드를 작성해줘.
+
+R에서 주소를 위경도 좌표로 변환하기 위해 `httr` 패키지를 사용하여 Kakao API를 호출한 예시 코드이다.
+
+``` r
+# 필요한 패키지를 설치하고 불러온다
+install.packages("httr")
+install.packages("jsonlite")
+library(httr)
+library(jsonlite)
+
+# 주소를 위경도로 변환하는 함수를 정의한다
+get_latlng <- function(address) {
+  # Kakao API 키를 설정한다 (본인의 API 키로 교체해야 한다)
+  api_key <- "YOUR_KAKAO_API_KEY"
+  
+  # API URL과 파라미터를 설정한다
+  url <- "https://dapi.kakao.com/v2/local/search/address.json"
+  params <- list(query = address)
+  headers <- add_headers("Authorization" = paste("KakaoAK", api_key))
+  
+  # API를 호출한다
+  response <- GET(url, query = params, headers)
+  
+  # 응답을 확인하고 JSON을 파싱한다
+  if (status_code(response) == 200) {
+    content <- content(response, "text", encoding = "UTF-8")
+    json_data <- fromJSON(content)
+    
+    # 위경도를 추출한다
+    if (json_data$meta$total_count > 0) {
+      lat <- json_data$documents[[1]]$y
+      lng <- json_data$documents[[1]]$x
+      return(list(lat = lat, lng = lng))
+    } else {
+      return(NULL)
+    }
+  } else {
+    stop("API request failed")
+  }
+}
+
+# 함수를 테스트한다
+address <- "서울특별시 강남구 테헤란로 212"
+result <- get_latlng(address)
+print(paste("Latitude:", result$lat, "Longitude:", result$lng))
+```
+
+### 코드수정
+
+```{r}
+#| code-line-numbers: "10"
+#| eval: false
+#| echo: true
+
+library(httr)
+library(jsonlite)
+
+# 주소를 위경도로 변환하는 함수를 정의한다
+get_latlng <- function(address) {
+  # Kakao API 키를 설정한다 (본인의 API 키로 교체해야 한다)
+  api_key <- Sys.getenv("KAKAO_MAP_API_KEY")
+  
+  # API URL과 파라미터를 설정한다
+  url <- "https://dapi.kakao.com/v2/local/search/address.json"
+  params <- list(query = address)
+  headers <- add_headers("Authorization" = paste("KakaoAK", api_key))
+  
+  # API를 호출한다
+  response <- GET(url, query = params, headers)
+  
+  # 응답을 확인하고 JSON을 파싱한다
+  if (status_code(response) == 200) {
+    content <- content(response, "text", encoding = "UTF-8")
+    json_data <- fromJSON(content)
+    
+    # 위경도를 추출한다
+    if (json_data$meta$total_count > 0) {
+      lat <- json_data$documents[[1]]$y
+      lng <- json_data$documents[[1]]$x
+      return(list(lat = lat, lng = lng))
+    } else {
+      return(NULL)
+    }
+  } else {
+    stop("API request failed")
+  }
+}
+
+# 가톨릭관동대학교 주소
+address <- "강원도 강릉시 범일로579번길 24"
+result <- get_latlng(address)
+print(paste("Latitude:", result$lat, "Longitude:", result$lng))
+```
+
+### 작업결과
+
+![](img/plugin_map.png){fig-align="center" width="700"}
+:::
+
+-   [ShareGPT: API 사용사례](https://chat.openai.com/share/dcfee23a-0853-454b-9d8c-f76fc4474cb6), [플러그인(Plugin) - 칸바, 카카오맵, 울프람](https://r2bit.com/chatGPT/plugin.html)
