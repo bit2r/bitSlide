@@ -30,9 +30,9 @@ editor_options:
 
 4.  생성형 AI ~~경제~~ 일자리와 교육
 
-5.  생성형 AI 데이터 과학
+5.  챗GPT 플러그인
 
-6.  챗GPT 플러그인
+6.  생성형 AI 데이터 과학
 
 7.  글쓰기와 오피스 전쟁
 
@@ -46,13 +46,14 @@ editor_options:
 
 {{< include slideshow/202309_cku/econ_edu.qmd >}}
 
-{{< include slideshow/202309_cku/code_interpreter.qmd >}}
-
 {{< include slideshow/202309_cku/plugin.qmd >}}
+
+{{< include slideshow/202309_cku/code_interpreter.qmd >}}
 
 {{< include slideshow/202309_cku/office-interface.qmd >}}
 
 {{< include slideshow/202309_cku/reference.qmd >}}
 
 {{< include slideshow/202309_cku/seoul-r-meeup.qmd >}}
+
 

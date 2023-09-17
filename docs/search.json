@@ -6710,7 +6710,7 @@
     "href": "cku_20230919.html#목차",
     "title": "대학교육에서 챗GPT 활용방안",
     "section": "목차",
-    "text": "목차\n\n강사 및 강의 소개\n챗GPT 유닉스 쉘 (도서)\n대학교육 ( 통계 사례 연구 )\n생성형 AI 경제 일자리와 교육\n생성형 AI 데이터 과학\n챗GPT 플러그인\n글쓰기와 오피스 전쟁\n질의응답!"
+    "text": "목차\n\n강사 및 강의 소개\n챗GPT 유닉스 쉘 (도서)\n대학교육 ( 통계 사례 연구 )\n생성형 AI 경제 일자리와 교육\n챗GPT 플러그인\n생성형 AI 데이터 과학\n글쓰기와 오피스 전쟁\n질의응답!"
   },
   {
     "objectID": "cku_20230919.html#발제자-발제-개요",
@@ -7054,5 +7054,26 @@
     "title": "대학교육에서 챗GPT 활용방안",
     "section": "코드제작 프롬프트롬",
     "text": "코드제작 프롬프트롬\n\n주소를 넘기면 위경도 좌표를 반환하는 R 코드를 작성해줘.\n\nR에서 주소를 위경도 좌표로 변환하기 위해 httr 패키지를 사용하여 Kakao API를 호출할 수 있다. 아래는 간단한 예시 코드이다.\n# 필요한 패키지를 설치하고 불러온다\ninstall.packages(\"httr\")\ninstall.packages(\"jsonlite\")\nlibrary(httr)\nlibrary(jsonlite)\n\n# 주소를 위경도로 변환하는 함수를 정의한다\nget_latlng &lt;- function(address) {\n  # Kakao API 키를 설정한다 (본인의 API 키로 교체해야 한다)\n  api_key &lt;- \"YOUR_KAKAO_API_KEY\"\n  \n  # API URL과 파라미터를 설정한다\n  url &lt;- \"https://dapi.kakao.com/v2/local/search/address.json\"\n  params &lt;- list(query = address)\n  headers &lt;- add_headers(\"Authorization\" = paste(\"KakaoAK\", api_key))\n  \n  # API를 호출한다\n  response &lt;- GET(url, query = params, headers)\n  \n  # 응답을 확인하고 JSON을 파싱한다\n  if (status_code(response) == 200) {\n    content &lt;- content(response, \"text\", encoding = \"UTF-8\")\n    json_data &lt;- fromJSON(content)\n    \n    # 위경도를 추출한다\n    if (json_data$meta$total_count &gt; 0) {\n      lat &lt;- json_data$documents[[1]]$y\n      lng &lt;- json_data$documents[[1]]$x\n      return(list(lat = lat, lng = lng))\n    } else {\n      return(NULL)\n    }\n  } else {\n    stop(\"API request failed\")\n  }\n}\n\n# 함수를 테스트한다\naddress &lt;- \"서울특별시 강남구 테헤란로 212\"\nresult &lt;- get_latlng(address)\nprint(paste(\"Latitude:\", result$lat, \"Longitude:\", result$lng))\n코드수정\n작업결과"
+  },
+  {
+    "objectID": "cku_20230919.html#사실확인",
+    "href": "cku_20230919.html#사실확인",
+    "title": "대학교육에서 챗GPT 활용방안",
+    "section": "사실확인",
+    "text": "사실확인\n\n지구는 평평해?라면은 건강에 안 좋아?\n\n\n울프람 알파(Wolfram Alpha) 사용해서 사실관계를 확인해보자.\n\n“지구는 평평하다”라는 주장을 검증해줘.\n\n\"지구는 평평하다\"라는 주장에 대해 Wolfram Alpha를 이용해 검증해보았습니다.\n\n### 입력 해석\n- 질문: 지구는 평평하다?\n\n### 결과\n- 답변: 아니다.\n  - 지역적으로만 그렇다. 그리고 그것도 특정 지역, 예를 들어 미국 중서부에서만 해당된다.\n\n자세한 정보는 [Wolfram|Alpha 웹사이트](https://www6b3.wolframalpha.com/input?i=Is+the+Earth+flat%3F)에서 확인할 수 있다.\n\n이처럼 Wolfram Alpha는 다양한 주장이나 정보에 대한 팩트체크를 할 수 있는 유용한 도구이다.\n\nWolfram|Alpha 웹사이트\n\n\n\n\n라면을 많이 먹으면 건강에 정말 안좋은가?\n\nWolfram Alpha에서는 “라면을 많이 먹으면 건강에 정말 안 좋은가?”에 대한 구체적인 답변을 제공하지 못했다. 그러나 일반적으로 라면은 높은 나트륨, 지방, 인공 첨가물 등을 포함하고 있어, 과도하게 섭취할 경우 다음과 같은 건강 문제가 발생할 수 있다:\n\n고혈압: 라면에는 나트륨이 많이 들어있다. 나트륨 과다 섭취는 혈압을 높일 수 있다.\n비만: 라면은 칼로리가 높고, 지방도 많이 들어있다. 지속적으로 라면을 많이 먹으면 체중 증가의 위험이 있다.\n소화기 문제: 라면은 소화가 잘 되지 않는 식품 중 하나이다. 과도한 섭취는 소화기에 부담을 줄 수 있다.\n영양 불균형: 라면은 영양소가 적고, 나트륨이나 지방 등의 불필요한 성분이 많다. 이로 인해 영양 불균형이 발생할 수 있다.\n심혈관 질환: 고혈압, 높은 콜레스테롤 등은 심혈관 질환의 위험을 높인다.\n\n라면을 즐길 때는 이러한 점들을 고려하여 적당한 양과 빈도로 섭취하는 것이 중요하다."
+  },
+  {
+    "objectID": "cku_20230919.html#수능문제-풀이",
+    "href": "cku_20230919.html#수능문제-풀이",
+    "title": "대학교육에서 챗GPT 활용방안",
+    "section": "수능문제 풀이",
+    "text": "수능문제 풀이\n\n2023 수능 수학문제 풀이풀이 과정\n\n\n2023학년도 대학수학능력시험 수학영역 문제를 풀어보자.\n\n\n\n\n\n\n\n\n\\(\\left(\\frac{4}{2^{\\sqrt{2}}}\\right)^{2+\\sqrt{2}}\\) 값은?\n\n식 \\[\n\\left(\\frac{4}{2^{\\sqrt{2}}}\\right)^{2+\\sqrt{2}}\n\\] 의 값은 \\(4\\)입니다.\n정확한 형태로는 \\(2^{(2 - \\sqrt{2}) (2 + \\sqrt{2})}\\)로 표현됩니다.\n자세한 정보는 Wolfram|Alpha 웹사이트에서 확인할 수 있다.\n\n\n\n과정도 설명해줘.\n\n\n\n물론이다. 주어진 식은 \\[\n\\left(\\frac{4}{2^{\\sqrt{2}}}\\right)^{2+\\sqrt{2}}\n\\]이다. 이 식을 단계별로 분해해보자.\n\n단계 1: 분모를 간단하게 만들기  먼저, 분모인 \\(2^{\\sqrt{2}}\\)를 간단하게 만들기 위해 분자와 분모에 \\(2^{\\sqrt{2}}\\)를 곱한다. 이렇게 하면:\n\n\\[\n\\left(\\frac{4 \\times 2^{\\sqrt{2}}}{2^{\\sqrt{2}} \\times 2^{\\sqrt{2}}}\\right)^{2+\\sqrt{2}}\n\\]\n\n단계 2: 분모를 합치기  이제 분모의 \\(2^{\\sqrt{2}} \\times 2^{\\sqrt{2}}\\)를 합쳐 \\(2^{2\\sqrt{2}}\\)로 만든다.\n\n\\[\n\\left(\\frac{4 \\times 2^{\\sqrt{2}}}{2^{2\\sqrt{2}}}\\right)^{2+\\sqrt{2}}\n\\]\n\n\n단계 3: 분자를 합치기  분자의 \\(4 \\times 2^{\\sqrt{2}}\\)를 합쳐 \\(2^2 \\times 2^{\\sqrt{2}} = 2^{2+\\sqrt{2}}\\)로 만든다.\n\n\\[\n\\left(\\frac{2^{2+\\sqrt{2}}}{2^{2\\sqrt{2}}}\\right)^{2+\\sqrt{2}}\n\\]\n\n단계 4: 지수 법칙 적용  지수 법칙에 따라 분자와 분모의 지수를 빼준다.\n\n\\[\n\\left(2^{(2+\\sqrt{2}) - 2\\sqrt{2}}\\right)^{2+\\sqrt{2}} = \\left(2^{(2 - \\sqrt{2})(2 + \\sqrt{2})}\\right)^{2+\\sqrt{2}}\n\\]\n\n단계 5: 최종 계산  마지막으로, \\((2 - \\sqrt{2})(2 + \\sqrt{2})\\)를 계산하면 \\(4 - 2 = 2\\)가 된다. 따라서 최종 결과는 \\(2^2 = 4\\)이다.\n\n이렇게 해서 \\[\n\\left(\\frac{4}{2^{\\sqrt{2}}}\\right)^{2+\\sqrt{2}} = 4\n\\]임을 확인할 수 있다.\n\n\n\n\n\n\n\nShareGPT: 팩트체크와 수학문제 풀이"
+  },
+  {
+    "objectID": "cku_20230919.html#사실확인-wolfram",
+    "href": "cku_20230919.html#사실확인-wolfram",
+    "title": "대학교육에서 챗GPT 활용방안",
+    "section": "사실확인 (Wolfram)",
+    "text": "사실확인 (Wolfram)\n\n지구는 평평해?라면은 건강에 안 좋아?\n\n\n울프람 알파(Wolfram Alpha) 사용해서 사실관계를 확인해보자.\n\n“지구는 평평하다”라는 주장을 검증해줘.\n\n\"지구는 평평하다\"라는 주장에 대해 Wolfram Alpha를 이용해 검증해보았습니다.\n\n### 입력 해석\n- 질문: 지구는 평평하다?\n\n### 결과\n- 답변: 아니다.\n  - 지역적으로만 그렇다. 그리고 그것도 특정 지역, 예를 들어 미국 중서부에서만 해당된다.\n\n자세한 정보는 [Wolfram|Alpha 웹사이트](https://www6b3.wolframalpha.com/input?i=Is+the+Earth+flat%3F)에서 확인할 수 있다.\n\n이처럼 Wolfram Alpha는 다양한 주장이나 정보에 대한 팩트체크를 할 수 있는 유용한 도구이다.\n\nWolfram|Alpha 웹사이트\n\n\n\n\n라면을 많이 먹으면 건강에 정말 안좋은가?\n\nWolfram Alpha에서는 “라면을 많이 먹으면 건강에 정말 안 좋은가?”에 대한 구체적인 답변을 제공하지 못했다. 그러나 일반적으로 라면은 높은 나트륨, 지방, 인공 첨가물 등을 포함하고 있어, 과도하게 섭취할 경우 다음과 같은 건강 문제가 발생할 수 있다:\n\n고혈압: 라면에는 나트륨이 많이 들어있다. 나트륨 과다 섭취는 혈압을 높일 수 있다.\n비만: 라면은 칼로리가 높고, 지방도 많이 들어있다. 지속적으로 라면을 많이 먹으면 체중 증가의 위험이 있다.\n소화기 문제: 라면은 소화가 잘 되지 않는 식품 중 하나이다. 과도한 섭취는 소화기에 부담을 줄 수 있다.\n영양 불균형: 라면은 영양소가 적고, 나트륨이나 지방 등의 불필요한 성분이 많다. 이로 인해 영양 불균형이 발생할 수 있다.\n심혈관 질환: 고혈압, 높은 콜레스테롤 등은 심혈관 질환의 위험을 높인다.\n\n라면을 즐길 때는 이러한 점들을 고려하여 적당한 양과 빈도로 섭취하는 것이 중요하다."
   }
 ]
