@@ -54,7 +54,7 @@
     -   생성형 AI 서비스 관련 제공자 및 이용자(공공데이터 활용기업, 개발자, 일반국민 등)가 참여하여 공공데이터 개방·활용 확대를 위해 논의하는 열린 소통의 장
 :::
 
-### 진행 순서
+### 생성형 AI와 오픈데이터
 
-![](img/odf_agenda.jpg){fig-align="center" width="700"}
+![](img/odf_poster.jpg){fig-align="center" width="226"}
 :::

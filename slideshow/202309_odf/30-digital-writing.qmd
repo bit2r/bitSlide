@@ -140,7 +140,7 @@ library(gt)
 library(gtExtras)
 
 history_tbl <- 
-  read_csv("../../data/history_tbl.csv")
+  read_csv(glue::glue("{here::here()}/data/history_tbl.csv"))
 
 history_tbl |> 
   mutate(link = map(link, gt::html)) |> 
