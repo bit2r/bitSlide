@@ -46,8 +46,11 @@ format:
     backgroundcolor: "#fffbf2"
 
 filters:
+   - collapse-callout
    - lightbox
 lightbox: auto
+collapse-callout:
+  all: true
 
 execute:
   freeze: auto

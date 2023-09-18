@@ -1,0 +1,153 @@
+# 챗GPT 활용
+
+## 데이터 과학 MCQ {.smaller}
+
+::::: panel-tabset
+
+### MCQ 01번 
+
+통계에서 모든 경우의 수를 포함하는 집합을 일컷는 용어는?
+
+1. 표본 공간(Sample Space)
+1. 포함집합(Super Set)
+1. 포함공간(Super Space)
+1. 표본집합(Sample Set)
+
+:::{.callout-note collapse='true'}
+### 정답
+- 정답: 1
+- **난이도: 쉬움**
+:::
+
+### MCQ 02번 
+
+다음 데이터에서 중위수(Median)을 계산하시오.
+
+데이터: `23, 97, 12, 38, 62`
+
+1. 38
+1. 12
+1. 62
+1. 23
+
+:::{.callout-note collapse='true'}
+### 정답
+- 정답: 1
+- **난이도: 쉬움**
+:::
+
+
+### MCQ 03번 
+
+동전 던지기를 했을 때 뒷면이 나올 확률은 얼마인가?
+
+1. 1
+1. 0.5
+1. 0.25
+1. 0
+
+:::{.callout-note collapse='true'}
+### 정답
+- 정답: 2
+- **난이도: 쉬움**
+:::
+
+### `...`
+
+### MCQ 10번 
+
+독립변수를 이르는 다른 명칭은 다음 중 어느 것인가?
+
+1. 반응 변수 (Response Variable)
+1. 설명된 변수 (Explained Variable)
+1. 반응자 (Reactor)
+1. 회귀변수(Regressor)
+
+::: {.callout-caution}
+## 정답
+- 정답: 4
+- **난이도: 어려움**
+:::
+
+
+:::::
+
+- [통계와 확률](https://r2bit.com/curriculum/mcq_stat.html)
+- [데이터 과학](https://r2bit.com/curriculum/mcq_ds.html)
+- [데이터프레임과 시각화](https://r2bit.com/curriculum/mcq_pandas.html)
+
+
+## 데이터 과학 프롬프트 {.smaller}
+
+![](img/prompt_data_science.jpg)
+
+- [챗GPT - 데이터 과학 프롬프트](https://r2bit.com/chatGPT/prompt_data_science.html)
+
+## 데이터 과학 인터뷰 {.smaller}
+
+::::: panel-tabset
+
+### 질문
+
+::: {.callout-tip collapse="false" icon="false"}
+### 질문/과제{.unnumbered}
+
+기계학습 분류모형개발할 때 클래스 불균형(class imbalance) 문제를 어떻게 처리하나요? (1분)
+:::
+
+::: {.callout-tip collapse="false" icon="false"}
+### 질문/과제 {.unnumbered}
+
+기계학습모형에서 bias 와 variance trade-off에서 존재합니다. 
+어떤 기계학습 모형이 bias 와 variance를 줄이는데 효과적으로 알려져 있나요? (1분)
+:::
+
+::: {.callout-tip collapse="false" icon="false"}
+### 질문/과제 {.unnumbered}
+
+리스트와 데이터프레임 자료구조의 차이점에 대해서 말씀해 주세요. (1분)
+:::
+
+::: {.callout-tip collapse="false" icon="false"}
+### 질문/과제 {.unnumbered}
+
+feature engineering, data preprocessing, data cleansing이 어떻게 다른지 설명하세요. (1분)
+:::
+
+::: {.callout-tip collapse="false" icon="false"}
+### 질문/과제 {.unnumbered}
+
+제품 설명 등 텍스트 필드 칼럼이 있습니다. 기계학습 알고리즘 분류나 예측 모형에 적용시킬 수 있는 방법을 설명해주세요. (1분)
+:::
+
+### 주제선택 택1 발표
+
+::: {.callout-note collapse="false"}
+### 시각화 {.unnumbered}
+
+Data Analytics에서 시각화는 매우 중요합니다. 
+어떻게 가르칠것인지 커러큘럼, 교수방법, 프로젝트 진행방법, 평가방법에 대해서 말씀해주세요. (5분)
+
+:::
+
+::: {.callout-note collapse="false"}
+### EDA {.unnumbered}
+
+탐색적 데이터 분석(EDA)가 훌륭한 기계학습 알고리즘 개발과 함께 매우 중요합니다. 어떻게 가르칠것인지 커러큘럼, 교수방법, 프로젝트 진행방법, 평가방법에 대해서 말씀해주세요. (5분)
+
+:::
+
+### 문제해결
+
+::: {.callout-warning collapse="false"}
+### 문제 과제 {.unnumbered}
+
+역사가 오래된 대기업일수록 20대부터 50대까지 다양한 연령층의 직원분들이 근무를 하고 계십니다. 서로 다른 학습목적을 갖고, 다양한 연령대, 컴퓨팅 이해도와 스킬이 다르고 학습에 투여할 수 있는 시간이 다른 분들로 구성된 15명 내외 수강상을 대상으로 데이터 과학 기초과정을 강의해야 하는데 이는 동일한 연령대 동일한 기술, 동일한 관심사, 동일한 학습비용을 지불하고 동일한 시간을 투여할 수 있는 상황이 아닙니다. 이러한 여건하에서 어떻게 하면 학습목표를 달성할 수 있을까요? (20분)
+
+:::
+
+
+:::::
+
+- [데이터 과학 인터뷰 문제](https://r2bit.com/chatGPT/interview.html)
+
