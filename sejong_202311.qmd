@@ -1,0 +1,66 @@
+---
+title: "챗GPT 데이터 사이언스"
+subtitle: "행정과 규제를 넘어서"
+author: "이광춘"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-11-01
+format: 
+  insper-revealjs:
+    self-contained: false
+    footer: |
+      한국 R 사용자회 [챗GPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  강사 및 강의 소개
+
+2.  챗GPT 유닉스 쉘 (도서)
+
+3.  대학교육 ( 통계 사례 연구 )
+
+4.  챗GPT 활용 (데이터 사이언스)
+
+5.  생성형 AI ~~경제~~ 일자리와 교육
+
+6.  챗GPT 플러그인
+
+7.  생성형 AI 데이터 사이언스
+
+8.  글쓰기와 오피스 전쟁
+
+9.  챗GPT 디지털 글쓰기
+
+10.  질의응답!
+
+{{< include slideshow/202311_sejong/00-who-am-i.qmd >}}
+
+{{< include slideshow/202311_sejong/unix_shell.qmd >}}
+
+{{< include slideshow/202311_sejong/curriculum.qmd >}}
+
+{{< include slideshow/202311_sejong/interview.qmd >}}
+
+{{< include slideshow/202311_sejong/econ_edu.qmd >}}
+
+{{< include slideshow/202311_sejong/plugin.qmd >}}
+
+{{< include slideshow/202311_sejong/code_interpreter.qmd >}}
+
+{{< include slideshow/202311_sejong/office-interface.qmd >}}
+
+{{< include slideshow/202311_sejong/chtGPT-digital-writing.qmd >}}
+
+{{< include slideshow/202311_sejong/reference.qmd >}}
+
+{{< include slideshow/202311_sejong/seoul-r-meeup.qmd >}}
+

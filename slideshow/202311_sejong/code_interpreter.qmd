@@ -1,0 +1,31 @@
+# 생성형 AI <br> 데이터 사이언스
+
+## OpenAI Advanced Data Analysis {.smaller}
+
+<br>
+
+> Open AI Code Interpreter → Advanced Data Analysis
+
+<br>
+
+![](img/km_code_interpreter.png)
+
+::: aside
+[생성AI 광명시 데이터 분석 사례](https://r2bit.com/map_challenge/km_BitGPT.html)
+:::
+
+## RStudio Copilot
+
+> `Tools -> Global Options -> Copilot -> Enable Github Copilot`
+
+![](img/rstudio_copilot.jpg)
+
+## 웹앱(Shiny App) 개발 사례
+
+![](img/shiny_app_ci.gif)
+
+## 광명시 보좌관
+
+![](img/km_ai.gif){fig-align="center" width="728"}
+
+-   [소스코드](https://github.com/bit2r/BitStat2)

@@ -1,0 +1,3996 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>발표자료 | 한국 R 사용자회 – curriculum</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../img/koRea_logo.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-229551680-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/koRea_logo.png" alt="Home" class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://r2bit.com" rel="" target="">
+ <span class="menu-text">한국 R 사용자회</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bit2r/slides" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub repo">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="통계-챗gpt-데이터-사이언스" class="level1">
+<h1>통계 → 챗GPT 데이터 사이언스</h1>
+<section id="커리큘럼" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="커리큘럼">커리큘럼</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">종이와 연필</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">SAS/SPSS 보고서</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">DS 입문</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">고급 DS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">GS 칼텍스</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">GS 칼텍스</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">챗GPT DS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false">평가</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/cku_statistics.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/cku_statistics.jpg" class="img-fluid figure-img" width="413"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/cku_sas_word.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/cku_sas_word.png" class="img-fluid figure-img" width="715"></a></p>
+</figure>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.3     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'rvest'
+
+The following object is masked from 'package:readr':
+
+    guess_encoding</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtExtras)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>ds_url <span class="ot">&lt;-</span> <span class="st">"https://statkclee.github.io/yonsei/"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>ds_html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(ds_url)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>ds_html <span class="sc">|&gt;</span> </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">'table'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  .[[<span class="dv">1</span>]] <span class="sc">|&gt;</span> </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">2</span><span class="sc">:</span><span class="fu">n</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(X2, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"학습내용"</span>, <span class="st">"날짜"</span>), <span class="at">sep =</span> <span class="st">"-"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(학습내용, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"학습내용"</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">."</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(주차, 학습내용, 날짜) <span class="sc">|&gt;</span> </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(날짜 <span class="ot">=</span> <span class="fu">str_trim</span>(날짜),</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>         학습내용 <span class="ot">=</span> <span class="fu">str_trim</span>(학습내용))  <span class="sc">|&gt;</span> </span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(날짜 <span class="ot">=</span> <span class="fu">if_else</span>(<span class="fu">str_detect</span>(날짜, <span class="st">"^</span><span class="sc">\\</span><span class="st">d"</span>), 날짜, <span class="cn">NA_character_</span>))  <span class="sc">|&gt;</span> </span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gt_theme_pff</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sub_missing</span>(</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>      <span class="at">columns =</span> 날짜,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">missing_text =</span> <span class="st">"-"</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    )  <span class="sc">|&gt;</span> </span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="st">"center"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">opt_table_font</span>(</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>      <span class="at">font =</span> <span class="fu">list</span>(</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>        <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>        <span class="st">"NanumGothic"</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_style</span>(</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>      <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>        <span class="st">"font-variant: small-caps;"</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_header</span>(</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span><span class="fu">tagList</span>(</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>            <span class="at">style =</span> htmltools<span class="sc">::</span><span class="fu">css</span>(</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>              <span class="st">`</span><span class="at">text-align</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"center"</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>            htmltools<span class="sc">::</span><span class="fu">HTML</span>(</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>              <span class="fu">web_image</span>(<span class="st">"img/curriculum_yonsei.png"</span>)</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>          ),</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>            htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">strong</span>(<span class="st">"연세대"</span>),</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>            <span class="st">"데이터 사이언스 입문"</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="st">"65%"</span>,</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.title.font.size =</span> <span class="fu">px</span>(<span class="dv">12</span>)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Expected 2 pieces. Additional pieces discarded in 2 rows [4, 12].</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Expected 2 pieces. Missing pieces filled with `NA` in 1 rows [17].
+Expected 2 pieces. Missing pieces filled with `NA` in 1 rows [17].</code></pre>
+</div>
+<div class="cell-output-display">
+
+<div id="jlydglkxol" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#jlydglkxol table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#jlydglkxol thead, #jlydglkxol tbody, #jlydglkxol tfoot, #jlydglkxol tr, #jlydglkxol td, #jlydglkxol th {
+  border-style: none;
+}
+
+#jlydglkxol p {
+  margin: 0;
+  padding: 0;
+}
+
+#jlydglkxol .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 65%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jlydglkxol .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#jlydglkxol .gt_title {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jlydglkxol .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jlydglkxol .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jlydglkxol .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jlydglkxol .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jlydglkxol .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jlydglkxol .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jlydglkxol .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jlydglkxol .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jlydglkxol .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jlydglkxol .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#jlydglkxol .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#jlydglkxol .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jlydglkxol .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jlydglkxol .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jlydglkxol .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jlydglkxol .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jlydglkxol .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#jlydglkxol .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#jlydglkxol .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#jlydglkxol .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jlydglkxol .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#jlydglkxol .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#jlydglkxol .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jlydglkxol .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jlydglkxol .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jlydglkxol .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jlydglkxol .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#jlydglkxol .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jlydglkxol .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jlydglkxol .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jlydglkxol .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jlydglkxol .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jlydglkxol .gt_left {
+  text-align: left;
+}
+
+#jlydglkxol .gt_center {
+  text-align: center;
+}
+
+#jlydglkxol .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jlydglkxol .gt_font_normal {
+  font-weight: normal;
+}
+
+#jlydglkxol .gt_font_bold {
+  font-weight: bold;
+}
+
+#jlydglkxol .gt_font_italic {
+  font-style: italic;
+}
+
+#jlydglkxol .gt_super {
+  font-size: 65%;
+}
+
+#jlydglkxol .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#jlydglkxol .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#jlydglkxol .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#jlydglkxol .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#jlydglkxol .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#jlydglkxol .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#jlydglkxol .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><div style="text-align:center;"><img src="img/curriculum_yonsei.png" style="height:30px;"></div>
+<div>
+  <strong>연세대</strong>
+  데이터 사이언스 입문
+</div></td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="주차">주차</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="학습내용">학습내용</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="날짜">날짜</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">1</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터 과학 (Data Science)</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">3월7일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">2</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">프로그래밍 기초와 마크다운 보고서</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">3월14일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">3</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터와 커뮤니티 찾기, 도움 청하기, 프로젝트 설정</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">3월21일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">4</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 수집</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">-</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">5</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">자료구조(Data Structures)</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">4월4일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">6</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터프레임과 SQL</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">4월11일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">7</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">버전제어, 협업, 그리고 저작권과 라이선스</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">4월18일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">8</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">중간고사</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">4월25일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">9</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">시각화 (Visualization)</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">5월2일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">10</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">정규표현식</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">5월9일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">11</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터 과학 프로그래밍</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">5월16일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">12</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 제품</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">-</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">13</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">함수형 프로그래밍</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">5월30일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">14</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 저작</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">6월6일(현충일)</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">15</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">R 팩키지</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">6월13일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">16</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">기말고사</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">6월20일</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://statkclee.github.io/yonsei/">연세대 “데이터 과학 입문”</a></li>
+</ul>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ds2_url <span class="ot">&lt;-</span> <span class="st">"https://statkclee.github.io/yonsei2/"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>ds2_html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(ds2_url)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>ds2_html <span class="sc">|&gt;</span> </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">'table'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  .[[<span class="dv">1</span>]] <span class="sc">|&gt;</span> </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">2</span><span class="sc">:</span><span class="fu">n</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(X2, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"학습내용"</span>, <span class="st">"날짜"</span>), <span class="at">sep =</span> <span class="st">"&amp;race;"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(학습내용, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"학습내용"</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">."</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(주차, 학습내용, 날짜) <span class="sc">|&gt;</span> </span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(날짜 <span class="ot">=</span> <span class="fu">str_trim</span>(날짜),</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>         학습내용 <span class="ot">=</span> <span class="fu">str_trim</span>(학습내용))  <span class="sc">|&gt;</span> </span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(날짜 <span class="ot">=</span> <span class="fu">if_else</span>(<span class="fu">str_detect</span>(날짜, <span class="st">"^</span><span class="sc">\\</span><span class="st">d"</span>), 날짜, <span class="cn">NA_character_</span>))  <span class="sc">|&gt;</span> </span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gt_theme_pff</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sub_missing</span>(</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">columns =</span> 날짜,</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">missing_text =</span> <span class="st">"-"</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    )  <span class="sc">|&gt;</span> </span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="st">"center"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">opt_table_font</span>(</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>      <span class="at">font =</span> <span class="fu">list</span>(</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>        <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>        <span class="st">"NanumGothic"</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_style</span>(</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>        <span class="st">"font-variant: small-caps;"</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>      <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_header</span>(</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span><span class="fu">tagList</span>(</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>            <span class="at">style =</span> htmltools<span class="sc">::</span><span class="fu">css</span>(</span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>              <span class="st">`</span><span class="at">text-align</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"center"</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>            htmltools<span class="sc">::</span><span class="fu">HTML</span>(</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>              <span class="fu">web_image</span>(<span class="st">"img/curriculum_yonsei2.png"</span>)</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>          ),</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>            htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">strong</span>(<span class="st">"연세대"</span>),</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>            <span class="st">"데이터 (사이언스) 공학"</span></span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="st">"65%"</span>,</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.title.font.size =</span> <span class="fu">px</span>(<span class="dv">12</span>)</span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Expected 2 pieces. Missing pieces filled with `NA` in 1 rows [16].
+Expected 2 pieces. Missing pieces filled with `NA` in 1 rows [16].</code></pre>
+</div>
+<div class="cell-output-display">
+
+<div id="laeizsikhn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#laeizsikhn table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#laeizsikhn thead, #laeizsikhn tbody, #laeizsikhn tfoot, #laeizsikhn tr, #laeizsikhn td, #laeizsikhn th {
+  border-style: none;
+}
+
+#laeizsikhn p {
+  margin: 0;
+  padding: 0;
+}
+
+#laeizsikhn .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 65%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#laeizsikhn .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#laeizsikhn .gt_title {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#laeizsikhn .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#laeizsikhn .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#laeizsikhn .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#laeizsikhn .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#laeizsikhn .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#laeizsikhn .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#laeizsikhn .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#laeizsikhn .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#laeizsikhn .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#laeizsikhn .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#laeizsikhn .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#laeizsikhn .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#laeizsikhn .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#laeizsikhn .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#laeizsikhn .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#laeizsikhn .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#laeizsikhn .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#laeizsikhn .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#laeizsikhn .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#laeizsikhn .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#laeizsikhn .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#laeizsikhn .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#laeizsikhn .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#laeizsikhn .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#laeizsikhn .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#laeizsikhn .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#laeizsikhn .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#laeizsikhn .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#laeizsikhn .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#laeizsikhn .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#laeizsikhn .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#laeizsikhn .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#laeizsikhn .gt_left {
+  text-align: left;
+}
+
+#laeizsikhn .gt_center {
+  text-align: center;
+}
+
+#laeizsikhn .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#laeizsikhn .gt_font_normal {
+  font-weight: normal;
+}
+
+#laeizsikhn .gt_font_bold {
+  font-weight: bold;
+}
+
+#laeizsikhn .gt_font_italic {
+  font-style: italic;
+}
+
+#laeizsikhn .gt_super {
+  font-size: 65%;
+}
+
+#laeizsikhn .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#laeizsikhn .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#laeizsikhn .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#laeizsikhn .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#laeizsikhn .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#laeizsikhn .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#laeizsikhn .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><div style="text-align:center;"><img src="img/curriculum_yonsei2.png" style="height:30px;"></div>
+<div>
+  <strong>연세대</strong>
+  데이터 (사이언스) 공학
+</div></td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="주차">주차</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="학습내용">학습내용</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="날짜">날짜</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">1</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 언어</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">9월6일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">2</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">[언어] R</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">9월20일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">3</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">[언어] 파이썬</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">9월27일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">4</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">[언어] API 프로그래밍</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">10월4일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">5</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 자료구조</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">10월11일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">6</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">[자료구조] 시계열 데이터</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">10월18일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">7</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">중간고사</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">10월25일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">8</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">[자료구조] 지리 공간 데이터</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">11월01일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">9</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">[자료구조] NLP - 텍스트 마이닝(R)</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">11월08일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">10</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">[자료구조] NLP - 파이썬</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">11월15일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">11</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">빅데이터 시각화</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">11월22일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">12</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">기계학습 - 예측모형</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">11월29일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">13</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">DevOps - 도커, HPC, 스파크</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">12월06일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">14</td>
+<td headers="학습내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">제품화</td>
+<td headers="날짜" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">12월13일</td></tr>
+    <tr><td headers="주차" class="gt_row gt_center" style="font-variant: small-caps;">15</td>
+<td headers="학습내용" class="gt_row gt_center" style="font-variant: small-caps;">기말고사</td>
+<td headers="날짜" class="gt_row gt_center" style="font-variant: small-caps;">12월20일</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://statkclee.github.io/yonsei2/">연세대 “데이터 (사이언스) 공학”</a></li>
+</ul>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by '일정', '과정'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Since gt v0.3.0, `columns = TRUE` has been deprecated.
+• Please use `columns = everything()` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+
+<div id="lexjhnktlh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#lexjhnktlh table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#lexjhnktlh thead, #lexjhnktlh tbody, #lexjhnktlh tfoot, #lexjhnktlh tr, #lexjhnktlh td, #lexjhnktlh th {
+  border-style: none;
+}
+
+#lexjhnktlh p {
+  margin: 0;
+  padding: 0;
+}
+
+#lexjhnktlh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#lexjhnktlh .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#lexjhnktlh .gt_title {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#lexjhnktlh .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#lexjhnktlh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#lexjhnktlh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lexjhnktlh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#lexjhnktlh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#lexjhnktlh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#lexjhnktlh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#lexjhnktlh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#lexjhnktlh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#lexjhnktlh .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#lexjhnktlh .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#lexjhnktlh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#lexjhnktlh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#lexjhnktlh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#lexjhnktlh .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#lexjhnktlh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lexjhnktlh .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#lexjhnktlh .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#lexjhnktlh .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#lexjhnktlh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lexjhnktlh .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#lexjhnktlh .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#lexjhnktlh .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lexjhnktlh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lexjhnktlh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#lexjhnktlh .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lexjhnktlh .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#lexjhnktlh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lexjhnktlh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#lexjhnktlh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lexjhnktlh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#lexjhnktlh .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lexjhnktlh .gt_left {
+  text-align: left;
+}
+
+#lexjhnktlh .gt_center {
+  text-align: center;
+}
+
+#lexjhnktlh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#lexjhnktlh .gt_font_normal {
+  font-weight: normal;
+}
+
+#lexjhnktlh .gt_font_bold {
+  font-weight: bold;
+}
+
+#lexjhnktlh .gt_font_italic {
+  font-style: italic;
+}
+
+#lexjhnktlh .gt_super {
+  font-size: 65%;
+}
+
+#lexjhnktlh .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#lexjhnktlh .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#lexjhnktlh .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#lexjhnktlh .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#lexjhnktlh .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#lexjhnktlh .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#lexjhnktlh .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><div style="text-align:center;"><img src="img/curriculum_gs_caltex.png" style="height:30px;"></div>
+<div>
+  <strong>GS 칼텍스</strong>
+  시민 데이터 과학
+</div></td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="일정">일정</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="과정">과정</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="과정상세">과정상세</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="데이터셋">데이터셋</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>1주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>Introduction</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>Defining and solving problems<br>- Quantifying performance indicators<br>- Stats and Probability for Data Science</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;">-</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><p>2주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><p>Data Science</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>Python 기초 문법 복습 및 NumPy, Pandas 등 연습<br>- Kaggle: MPG / Titanic EDA 개념과 Data science 전체흐름 습득<br>- EDA, Feature engineering, Visualization, Correlating 등 preprocessing 작업<br>- Model, predict and evaluation 의 전체 과정을 습득</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">-</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>3주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>Regression and Prediction</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>Regression에 대한 개념 및 이론 설명</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>Breast Cancer, California housing prices, Bike-sharing</p>
+</div></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><p>3주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><p>Regression and Prediction</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>EDA 및 preprocessing<br>- Linear Regression 중심, CART, SVM, Ensemble기법 적용<br>- Training &amp; Evaluation (MSE, MAE, RMSE, RMSLE, R-Squared, etc.)<br>- Basic hyperparameter tuning 수행</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">-</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>4주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>Classification and Hypothesis Testing</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>Classification과 필요 개념 및 이론 설명</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>Titanic, Iris, Penuins, San Francisco Crime</p>
+</div></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><p>4주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><p>Classification and Hypothesis Testing</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>Logistic Regression과 Decision Tree, SVC, Random Forest, XGBoost, LGBM 등 적용<br>- Training &amp; Evaluation / Basic hyperparameter tuning 수행</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">-</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>5주차</p>
+</div></td>
+<td headers="과정" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><p>Case Studies and Projects</p>
+</div></td>
+<td headers="과정상세" class="gt_row gt_center" style="font-variant: small-caps;"><div class="gt_from_md"><ul>
+<li>기존 수업 이론/실습 개념 바탕 Case Study 3종 (+Final Quiz)<br>- Case Study 및 Final Quiz 해설<br>- 개인 별 Project 인터뷰 및 Grouping / 공통과제 선정<br>- Project 진행, 발표, Best Project 선정 및 공유</li>
+</ul>
+</div></td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;">-</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://r2bit.com/curriculum/">GS 칼텍스 데이터 사이언스</a></li>
+</ul>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="nyrnpitpko" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#nyrnpitpko table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#nyrnpitpko thead, #nyrnpitpko tbody, #nyrnpitpko tfoot, #nyrnpitpko tr, #nyrnpitpko td, #nyrnpitpko th {
+  border-style: none;
+}
+
+#nyrnpitpko p {
+  margin: 0;
+  padding: 0;
+}
+
+#nyrnpitpko .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#nyrnpitpko .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#nyrnpitpko .gt_title {
+  color: #333333;
+  font-size: 17px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#nyrnpitpko .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#nyrnpitpko .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nyrnpitpko .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nyrnpitpko .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nyrnpitpko .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#nyrnpitpko .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#nyrnpitpko .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#nyrnpitpko .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#nyrnpitpko .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#nyrnpitpko .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#nyrnpitpko .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#nyrnpitpko .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#nyrnpitpko .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#nyrnpitpko .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#nyrnpitpko .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#nyrnpitpko .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nyrnpitpko .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#nyrnpitpko .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#nyrnpitpko .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#nyrnpitpko .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nyrnpitpko .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#nyrnpitpko .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#nyrnpitpko .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nyrnpitpko .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nyrnpitpko .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#nyrnpitpko .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nyrnpitpko .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#nyrnpitpko .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nyrnpitpko .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nyrnpitpko .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nyrnpitpko .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nyrnpitpko .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nyrnpitpko .gt_left {
+  text-align: left;
+}
+
+#nyrnpitpko .gt_center {
+  text-align: center;
+}
+
+#nyrnpitpko .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#nyrnpitpko .gt_font_normal {
+  font-weight: normal;
+}
+
+#nyrnpitpko .gt_font_bold {
+  font-weight: bold;
+}
+
+#nyrnpitpko .gt_font_italic {
+  font-style: italic;
+}
+
+#nyrnpitpko .gt_super {
+  font-size: 65%;
+}
+
+#nyrnpitpko .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#nyrnpitpko .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#nyrnpitpko .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#nyrnpitpko .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#nyrnpitpko .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#nyrnpitpko .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#nyrnpitpko .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><div style="text-align:center;"><img src="img/curriculum_gs_caltex.png" style="height:30px;"></div>
+<div>
+  <strong>GS 칼텍스</strong>
+  데이터 과학
+</div></td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="일정">일정</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="과목명">과목명</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="학습상세">학습상세</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="데이터셋">데이터셋</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">00주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">환경설정</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">학습 도구 설치 및 학습환경</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;">파머 펭귄, BitData</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">01주차</td>
+<td headers="과목명" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">디지털 글쓰기(보고서)</td>
+<td headers="학습상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">마크다운 / Quarto</td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">BitData</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">02주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">명령라인 데이터 분석</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">자동화(Shell)</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;">SWC</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">03주차</td>
+<td headers="과목명" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">버전 제어</td>
+<td headers="학습상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">버전제어/협업(Git / GitHub / GitLab)</td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">04주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">프로그래밍</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">SQL</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;">Data Carpentry, DVD 렌탈</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">05주차</td>
+<td headers="과목명" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">프로그래밍</td>
+<td headers="학습상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">시각화</td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">gapminder</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">06주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">프로그래밍</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">파이썬</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;"></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">07주차</td>
+<td headers="과목명" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">대쉬보드</td>
+<td headers="학습상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Flexdashboard / Shinydashboard</td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">08주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">기계학습</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">tidymodels / scikit-learn</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;"></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">09주차</td>
+<td headers="과목명" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 제품</td>
+<td headers="학습상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">RESTful API</td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;"></td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">10주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">특수 데이터</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">시계열(Time Series)</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;">KOSPI</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">11주차</td>
+<td headers="과목명" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">특수 데이터</td>
+<td headers="학습상세" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">공간정보(Geospatial) / 텍스트 분석</td>
+<td headers="데이터셋" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">미디어오늘</td></tr>
+    <tr><td headers="일정" class="gt_row gt_center" style="font-variant: small-caps;">12주차</td>
+<td headers="과목명" class="gt_row gt_center" style="font-variant: small-caps;">비정형 데이터</td>
+<td headers="학습상세" class="gt_row gt_center" style="font-variant: small-caps;">텍스트와 이미지 (딥러닝)</td>
+<td headers="데이터셋" class="gt_row gt_center" style="font-variant: small-caps;"></td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://r2bit.com/curriculum/">GS 칼텍스 데이터 사이언스</a></li>
+</ul>
+</div>
+<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtExtras)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>extrafont<span class="sc">::</span><span class="fu">loadfonts</span>()</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumGothic</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumGothicExtraBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumGothic Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare_ac Bold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare_ac ExtraBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare_ac Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare_ac</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare Bold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare ExtraBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare Neo variable</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare Neo Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare Neo Regular</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare Neo Bold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare Neo ExtraBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare Neo Heavy</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): NanumSquare</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): MaruBuri Bold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): MaruBuri ExtraLight</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): MaruBuri Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): MaruBuri Regular</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using windowsFonts(): MaruBuri SemiBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): MaruBuri Bold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): MaruBuri ExtraLight</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): MaruBuri Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): MaruBuri Regular</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): MaruBuri SemiBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumGothic</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumGothic Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumGothicExtraBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare Bold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare ExtraBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare Neo Bold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare Neo ExtraBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare Neo Heavy</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare Neo Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare Neo Regular</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare Neo variable</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare_ac</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare_ac Bold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare_ac ExtraBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using pdfFont(): NanumSquare_ac Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): MaruBuri Bold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): MaruBuri ExtraLight</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): MaruBuri Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): MaruBuri Regular</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): MaruBuri SemiBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumGothic</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumGothic Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumGothicExtraBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare Bold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare ExtraBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare Neo Bold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare Neo ExtraBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare Neo Heavy</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare Neo Light</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare Neo Regular</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare Neo variable</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare_ac</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare_ac Bold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare_ac ExtraBold</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Registering font with R using postscriptFont(): NanumSquare_ac Light</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>curriculum_raw <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"{here::here()}/data/건국대_커리큘럼.xlsx"</span>))</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>curriculum <span class="ot">&lt;-</span> curriculum_raw <span class="sc">%&gt;%</span> </span>
+<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fill</span>(<span class="fu">everything</span>(), <span class="at">.direction=</span><span class="st">"down"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(날짜 <span class="ot">=</span> <span class="fu">as.Date</span>(날짜)) <span class="sc">%&gt;%</span> </span>
+<span id="cb79-6"><a href="#cb79-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(주차 <span class="ot">=</span> glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"{주차} 주차"</span>))</span>
+<span id="cb79-7"><a href="#cb79-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-8"><a href="#cb79-8" aria-hidden="true" tabindex="-1"></a><span class="do">## 첫번째</span></span>
+<span id="cb79-9"><a href="#cb79-9" aria-hidden="true" tabindex="-1"></a>curriculum_first <span class="ot">&lt;-</span> curriculum <span class="sc">%&gt;%</span> </span>
+<span id="cb79-10"><a href="#cb79-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dplyr<span class="sc">::</span><span class="fu">row_number</span>() <span class="sc">&lt;=</span><span class="dv">10</span>)</span>
+<span id="cb79-11"><a href="#cb79-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-12"><a href="#cb79-12" aria-hidden="true" tabindex="-1"></a>curriculum_first_gt <span class="ot">&lt;-</span> curriculum_first <span class="sc">%&gt;%</span>   </span>
+<span id="cb79-13"><a href="#cb79-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>(<span class="at">groupname_col =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"날짜"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb79-14"><a href="#cb79-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb79-15"><a href="#cb79-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_font</span>(</span>
+<span id="cb79-16"><a href="#cb79-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">font =</span> <span class="fu">list</span>(</span>
+<span id="cb79-17"><a href="#cb79-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
+<span id="cb79-18"><a href="#cb79-18" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NanumGothic"</span></span>
+<span id="cb79-19"><a href="#cb79-19" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb79-20"><a href="#cb79-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb79-21"><a href="#cb79-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_pff</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb79-22"><a href="#cb79-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb79-23"><a href="#cb79-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb79-24"><a href="#cb79-24" aria-hidden="true" tabindex="-1"></a>      <span class="st">"font-variant: small-caps;"</span></span>
+<span id="cb79-25"><a href="#cb79-25" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb79-26"><a href="#cb79-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb79-27"><a href="#cb79-27" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb79-28"><a href="#cb79-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb79-29"><a href="#cb79-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span></span>
+<span id="cb79-30"><a href="#cb79-30" aria-hidden="true" tabindex="-1"></a>      htmltools<span class="sc">::</span><span class="fu">tagList</span>(</span>
+<span id="cb79-31"><a href="#cb79-31" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb79-32"><a href="#cb79-32" aria-hidden="true" tabindex="-1"></a>          <span class="at">style =</span> htmltools<span class="sc">::</span><span class="fu">css</span>(</span>
+<span id="cb79-33"><a href="#cb79-33" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">text-align</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"center"</span></span>
+<span id="cb79-34"><a href="#cb79-34" aria-hidden="true" tabindex="-1"></a>          ),</span>
+<span id="cb79-35"><a href="#cb79-35" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span><span class="fu">HTML</span>(</span>
+<span id="cb79-36"><a href="#cb79-36" aria-hidden="true" tabindex="-1"></a>            <span class="fu">web_image</span>(<span class="st">"img/konkuk/tools.png"</span>)</span>
+<span id="cb79-37"><a href="#cb79-37" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb79-38"><a href="#cb79-38" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb79-39"><a href="#cb79-39" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb79-40"><a href="#cb79-40" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">strong</span>(<span class="st">"챗GPT 데이터 사이언스"</span>),</span>
+<span id="cb79-41"><a href="#cb79-41" aria-hidden="true" tabindex="-1"></a>          <span class="st">"건국대 전문교육과정"</span></span>
+<span id="cb79-42"><a href="#cb79-42" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb79-43"><a href="#cb79-43" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb79-44"><a href="#cb79-44" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="cb79-45"><a href="#cb79-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-46"><a href="#cb79-46" aria-hidden="true" tabindex="-1"></a><span class="do">## 두번째</span></span>
+<span id="cb79-47"><a href="#cb79-47" aria-hidden="true" tabindex="-1"></a>curriculum_second <span class="ot">&lt;-</span> curriculum <span class="sc">%&gt;%</span> </span>
+<span id="cb79-48"><a href="#cb79-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dplyr<span class="sc">::</span><span class="fu">row_number</span>() <span class="sc">&gt;</span> <span class="dv">10</span>)</span>
+<span id="cb79-49"><a href="#cb79-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-50"><a href="#cb79-50" aria-hidden="true" tabindex="-1"></a>curriculum_second_gt <span class="ot">&lt;-</span> curriculum_second <span class="sc">%&gt;%</span>   </span>
+<span id="cb79-51"><a href="#cb79-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>(<span class="at">groupname_col =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"날짜"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb79-52"><a href="#cb79-52" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb79-53"><a href="#cb79-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_font</span>(</span>
+<span id="cb79-54"><a href="#cb79-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">font =</span> <span class="fu">list</span>(</span>
+<span id="cb79-55"><a href="#cb79-55" aria-hidden="true" tabindex="-1"></a>      <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
+<span id="cb79-56"><a href="#cb79-56" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NanumGothic"</span></span>
+<span id="cb79-57"><a href="#cb79-57" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb79-58"><a href="#cb79-58" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb79-59"><a href="#cb79-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_pff</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb79-60"><a href="#cb79-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb79-61"><a href="#cb79-61" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb79-62"><a href="#cb79-62" aria-hidden="true" tabindex="-1"></a>      <span class="st">"font-variant: small-caps;"</span></span>
+<span id="cb79-63"><a href="#cb79-63" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb79-64"><a href="#cb79-64" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb79-65"><a href="#cb79-65" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="cb79-66"><a href="#cb79-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-67"><a href="#cb79-67" aria-hidden="true" tabindex="-1"></a><span class="do">## 결합</span></span>
+<span id="cb79-68"><a href="#cb79-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-69"><a href="#cb79-69" aria-hidden="true" tabindex="-1"></a>listed_tables <span class="ot">&lt;-</span> <span class="fu">list</span>(curriculum_first_gt, curriculum_second_gt)</span>
+<span id="cb79-70"><a href="#cb79-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-71"><a href="#cb79-71" aria-hidden="true" tabindex="-1"></a><span class="fu">gt_two_column_layout</span>(listed_tables)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div>
+<div style="display: inline-block;float:left;">
+<div id="qtvnpeurqw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#qtvnpeurqw table {
+  font-family: Roboto, Sunflower, NanumGothic, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#qtvnpeurqw thead, #qtvnpeurqw tbody, #qtvnpeurqw tfoot, #qtvnpeurqw tr, #qtvnpeurqw td, #qtvnpeurqw th {
+  border-style: none;
+}
+
+#qtvnpeurqw p {
+  margin: 0;
+  padding: 0;
+}
+
+#qtvnpeurqw .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#qtvnpeurqw .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#qtvnpeurqw .gt_title {
+  color: #333333;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#qtvnpeurqw .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#qtvnpeurqw .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qtvnpeurqw .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qtvnpeurqw .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qtvnpeurqw .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#qtvnpeurqw .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#qtvnpeurqw .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#qtvnpeurqw .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#qtvnpeurqw .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#qtvnpeurqw .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#qtvnpeurqw .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#qtvnpeurqw .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#qtvnpeurqw .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#qtvnpeurqw .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#qtvnpeurqw .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#qtvnpeurqw .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qtvnpeurqw .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#qtvnpeurqw .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#qtvnpeurqw .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#qtvnpeurqw .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qtvnpeurqw .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#qtvnpeurqw .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#qtvnpeurqw .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qtvnpeurqw .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qtvnpeurqw .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#qtvnpeurqw .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qtvnpeurqw .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#qtvnpeurqw .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qtvnpeurqw .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qtvnpeurqw .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qtvnpeurqw .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qtvnpeurqw .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qtvnpeurqw .gt_left {
+  text-align: left;
+}
+
+#qtvnpeurqw .gt_center {
+  text-align: center;
+}
+
+#qtvnpeurqw .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#qtvnpeurqw .gt_font_normal {
+  font-weight: normal;
+}
+
+#qtvnpeurqw .gt_font_bold {
+  font-weight: bold;
+}
+
+#qtvnpeurqw .gt_font_italic {
+  font-style: italic;
+}
+
+#qtvnpeurqw .gt_super {
+  font-size: 65%;
+}
+
+#qtvnpeurqw .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#qtvnpeurqw .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#qtvnpeurqw .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#qtvnpeurqw .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#qtvnpeurqw .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#qtvnpeurqw .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#qtvnpeurqw .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style=""><div style="text-align:center;"><img src="img/konkuk/tools.png" style="height:30px;"></div>
+<div>
+  <strong>챗GPT 데이터 사이언스</strong>
+  건국대 전문교육과정
+</div></td>
+    </tr>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="강의주제">강의주제</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="강의내용">강의내용</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="수업방법">수업방법</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="1 주차 - 2023-07-01">1 주차 - 2023-07-01</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="1 주차 - 2023-07-01  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 언어</td>
+<td headers="1 주차 - 2023-07-01  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT와 데이터 사이언스</td>
+<td headers="1 주차 - 2023-07-01  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="1 주차 - 2023-07-01  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 사이언스 언어</td>
+<td headers="1 주차 - 2023-07-01  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Tidyverse와 챗GPT</td>
+<td headers="1 주차 - 2023-07-01  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="1 주차 - 2023-07-01  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">데이터 사이언스 언어</td>
+<td headers="1 주차 - 2023-07-01  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">파이썬/R/SQL 그리고 API</td>
+<td headers="1 주차 - 2023-07-01  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="2 주차 - 2023-07-08">2 주차 - 2023-07-08</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="2 주차 - 2023-07-08  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">소프트웨어 카펜트리 (기본기)</td>
+<td headers="2 주차 - 2023-07-08  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">자동화: 유닉스 쉘</td>
+<td headers="2 주차 - 2023-07-08  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="2 주차 - 2023-07-08  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">소프트웨어 카펜트리 (기본기)</td>
+<td headers="2 주차 - 2023-07-08  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">버전제어: Git / GitHub</td>
+<td headers="2 주차 - 2023-07-08  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="3 주차 - 2023-07-15">3 주차 - 2023-07-15</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="3 주차 - 2023-07-15  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">소프트웨어 카펜트리 (기본기)</td>
+<td headers="3 주차 - 2023-07-15  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">파이썬 / R</td>
+<td headers="3 주차 - 2023-07-15  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="3 주차 - 2023-07-15  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">소프트웨어 카펜트리 (기본기)</td>
+<td headers="3 주차 - 2023-07-15  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">데이터베이스</td>
+<td headers="3 주차 - 2023-07-15  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="4 주차 - 2023-07-22">4 주차 - 2023-07-22</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="4 주차 - 2023-07-22  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 자료구조</td>
+<td headers="4 주차 - 2023-07-22  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">숫자/범주 --&gt; 데이터프레임</td>
+<td headers="4 주차 - 2023-07-22  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="4 주차 - 2023-07-22  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">데이터 과학 자료구조</td>
+<td headers="4 주차 - 2023-07-22  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">날짜/공간정보/네트워크</td>
+<td headers="4 주차 - 2023-07-22  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="4 주차 - 2023-07-22  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 과학 자료구조</td>
+<td headers="4 주차 - 2023-07-22  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">텍스트/이미지/오디오</td>
+<td headers="4 주차 - 2023-07-22  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+<div style="display: inline-block;float:right;">
+<div id="lttdvxcnbj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#lttdvxcnbj table {
+  font-family: Roboto, Sunflower, NanumGothic, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#lttdvxcnbj thead, #lttdvxcnbj tbody, #lttdvxcnbj tfoot, #lttdvxcnbj tr, #lttdvxcnbj td, #lttdvxcnbj th {
+  border-style: none;
+}
+
+#lttdvxcnbj p {
+  margin: 0;
+  padding: 0;
+}
+
+#lttdvxcnbj .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#lttdvxcnbj .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#lttdvxcnbj .gt_title {
+  color: #333333;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#lttdvxcnbj .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#lttdvxcnbj .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#lttdvxcnbj .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lttdvxcnbj .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#lttdvxcnbj .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#lttdvxcnbj .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#lttdvxcnbj .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#lttdvxcnbj .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#lttdvxcnbj .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#lttdvxcnbj .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#lttdvxcnbj .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#lttdvxcnbj .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#lttdvxcnbj .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#lttdvxcnbj .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#lttdvxcnbj .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#lttdvxcnbj .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lttdvxcnbj .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#lttdvxcnbj .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#lttdvxcnbj .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#lttdvxcnbj .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lttdvxcnbj .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#lttdvxcnbj .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#lttdvxcnbj .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lttdvxcnbj .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lttdvxcnbj .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#lttdvxcnbj .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lttdvxcnbj .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#lttdvxcnbj .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lttdvxcnbj .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#lttdvxcnbj .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lttdvxcnbj .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#lttdvxcnbj .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lttdvxcnbj .gt_left {
+  text-align: left;
+}
+
+#lttdvxcnbj .gt_center {
+  text-align: center;
+}
+
+#lttdvxcnbj .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#lttdvxcnbj .gt_font_normal {
+  font-weight: normal;
+}
+
+#lttdvxcnbj .gt_font_bold {
+  font-weight: bold;
+}
+
+#lttdvxcnbj .gt_font_italic {
+  font-style: italic;
+}
+
+#lttdvxcnbj .gt_super {
+  font-size: 65%;
+}
+
+#lttdvxcnbj .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#lttdvxcnbj .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#lttdvxcnbj .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#lttdvxcnbj .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#lttdvxcnbj .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#lttdvxcnbj .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#lttdvxcnbj .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="강의주제">강의주제</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="강의내용">강의내용</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63;" scope="col" id="수업방법">수업방법</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="5 주차 - 2023-07-29">5 주차 - 2023-07-29</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="5 주차 - 2023-07-29  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td headers="5 주차 - 2023-07-29  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">디지털 보고서(PDF, HTML, PPT)</td>
+<td headers="5 주차 - 2023-07-29  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="5 주차 - 2023-07-29  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td headers="5 주차 - 2023-07-29  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Serverless 대쉬보드, R/Python 대쉬보드</td>
+<td headers="5 주차 - 2023-07-29  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="5 주차 - 2023-07-29  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td headers="5 주차 - 2023-07-29  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">기계학습 모형 API 배포</td>
+<td headers="5 주차 - 2023-07-29  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="- 주차 - 2023-08-05">- 주차 - 2023-08-05</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="- 주차 - 2023-08-05  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">휴가</td>
+<td headers="- 주차 - 2023-08-05  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">휴가</td>
+<td headers="- 주차 - 2023-08-05  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">-</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="6 주차 - 2023-08-12">6 주차 - 2023-08-12</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="6 주차 - 2023-08-12  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT와 오픈소스</td>
+<td headers="6 주차 - 2023-08-12  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">(오픈소스) 거대언어모형(LLM)</td>
+<td headers="6 주차 - 2023-08-12  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="6 주차 - 2023-08-12  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">챗GPT와 오픈소스</td>
+<td headers="6 주차 - 2023-08-12  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Write/Draw/Coding/Reasoning</td>
+<td headers="6 주차 - 2023-08-12  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="6 주차 - 2023-08-12  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT와 오픈소스</td>
+<td headers="6 주차 - 2023-08-12  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">AI 시대 데이터 사이언스 제품개발 방법</td>
+<td headers="6 주차 - 2023-08-12  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="7 주차 - 2023-08-19">7 주차 - 2023-08-19</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="7 주차 - 2023-08-19  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Prompt Engineering</td>
+<td headers="7 주차 - 2023-08-19  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">사용자 및 개발자를 위한 프롬프트 공학</td>
+<td headers="7 주차 - 2023-08-19  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="7 주차 - 2023-08-19  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">Prompt Engineering</td>
+<td headers="7 주차 - 2023-08-19  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">OpenAI API 기반 NLP 개발</td>
+<td headers="7 주차 - 2023-08-19  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="7 주차 - 2023-08-19  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">Prompt Engineering</td>
+<td headers="7 주차 - 2023-08-19  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">OPL(OpenAI, Pinecone, Langchain) 프레임워크</td>
+<td headers="7 주차 - 2023-08-19  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="3" class="gt_group_heading" scope="colgroup" id="8 주차 - 2023-08-26">8 주차 - 2023-08-26</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="8 주차 - 2023-08-26  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT AI 앱 프로젝트</td>
+<td headers="8 주차 - 2023-08-26  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">오픈소스 LLM 기반 AI 데이터 분석 제품</td>
+<td headers="8 주차 - 2023-08-26  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="8 주차 - 2023-08-26  강의주제" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">챗GPT AI 앱 프로젝트</td>
+<td headers="8 주차 - 2023-08-26  강의내용" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">데이터 사이언스 AutoGPT</td>
+<td headers="8 주차 - 2023-08-26  수업방법" class="gt_row gt_center gt_striped" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+    <tr><td headers="8 주차 - 2023-08-26  강의주제" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT AI 앱 프로젝트</td>
+<td headers="8 주차 - 2023-08-26  강의내용" class="gt_row gt_center" style="font-variant: small-caps;">챗GPT AI 프로젝트 발표</td>
+<td headers="8 주차 - 2023-08-26  수업방법" class="gt_row gt_center" style="font-variant: small-caps;">핸즈온 실습</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="img/education_evaluation.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/education_evaluation.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ul>
+<li><a href="https://r2bit.com/curriculum/mcq_stat.html">데이터 사이언스 MCQ</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":true,"selector":".lightbox"});</script>
+
+
+
+</body></html>

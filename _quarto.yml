@@ -12,6 +12,7 @@ project:
     - "!tour-of-the-tidyverse-v2/"
 
 lang: ko-KR
+date-format: "YYYY 년 MM 월 DD일"
 
 website:
   title: "발표자료 | 한국 R 사용자회"
@@ -55,5 +56,5 @@ collapse-callout:
 execute:
   freeze: auto
 
-date-format: "YYYY 년 MM 월 DD일"
+
 

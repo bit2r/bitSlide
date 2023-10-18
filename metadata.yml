@@ -1,5 +1,26 @@
 # Internal slide decks
 
+- title: "챗GPT 데이터 사이언스"
+  subtitle: "행정과 규제를 넘어서"
+  author: "이광춘"
+  date: 2023-11-01
+  image: img/sejong_logo.png
+  path: sejong_202311.qmd
+  categories:
+    - "행정"
+    - "세종대"  
+    - "대학교육"
+    - "디지털 글쓰기"
+    - "데이터 사이언스"
+    - "생성형 AI"
+    - "Advanced Data Analysis"
+    - "한국 R 사용자회"
+    - "챗GPT"
+    - "Code Interpreter"
+    - "통계"
+    - "수능"
+    - "일자리"
+
 - title: "대학교육에서 챗GPT 활용방안"
   subtitle: "교안과 평가를 중심으로"
   author: "이광춘"
