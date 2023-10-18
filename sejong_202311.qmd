@@ -3,7 +3,7 @@ title: "챗GPT 데이터 사이언스"
 subtitle: "행정과 규제를 넘어서"
 author: "이광춘"
 institute: "비영리법인 한국 R 사용자회"
-date: 2023-11-01
+date: 2023-11-20
 format: 
   insper-revealjs:
     self-contained: false
