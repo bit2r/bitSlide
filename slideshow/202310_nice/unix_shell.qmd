@@ -1,0 +1,80 @@
+# 챗GPT 유닉스 쉘 (책)
+
+## 챗GPT 유닉스 쉘 집필과정 {.smaller}
+
+::: columns
+::: column
+### 교보문고
+
+![](img/book/2023_07_25-챗GPT-유닉스-쉘(아웃라인)-1.jpg){fig-align="center" width="319"}
+:::
+
+::: column
+### 작업흐름
+
+```{mermaid}
+graph TB
+    A[Greg Wilson] --> B[소프트웨어 카펜트리]
+    B --> C["공동 저작"]
+    C --> D["콘텐츠, 디자인, 교수방법, 경험, 네트워크"]
+    D --> E["챗GPT(AI)"]
+    
+    style A fill:#f9d79c,stroke:#f39c12,stroke-width:2px
+    style B fill:#aed6f1,stroke:#2e86c1,stroke-width:2px
+    style C fill:#d7bde2,stroke:#884ea0,stroke-width:2px
+    style D fill:#a2d9ce,stroke:#17a589,stroke-width:2px
+    style E fill:#fcf3cf,stroke:#f1c40f,stroke-width:2px
+```
+:::
+:::
+
+
+::: aside
+![챗GPT 유닉스 쉘: 생산성 자동화 도구](img/Kyobo_Logo.svg.png){width="101"} 📚 [종이책](https://product.kyobobook.co.kr/detail/S000208801484) 📱 [전자책](https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000005358063)
+:::
+
+
+## 챗GPT 도서 제작 {.smaller}
+
+::: panel-tabset
+### Greg Wilson
+
+![](img/book/software_carpentry_v3.jpg){fig-align="center" width="551"}
+
+-   [Software Carpentry Version 3 lessons (2007)](https://github.com/swcarpentry/v3)
+
+### 공동저작
+
+![](img/book/software_carpentry_github.jpg){fig-align="center" width="457"}
+
+-   [소프트웨어 카펜트리 공동저작](software_carpentry_github.jpg)
+
+### 콘텐츠, 디자인, 경험, 네트워크
+
+![](img/book/software_carpentry_community.jpg){fig-align="center" width="457"}
+
+-   [소프트웨어 카펜트리](https://software-carpentry.org/) : 소프트웨어
+-   [데이터 카펜트리](https://datacarpentry.org/) : 데이터
+-   [도서관 카펜트리](https://librarycarpentry.org/) : 텍스트
+
+### 책 구성
+
+::: columns
+::: column
+![](img/book_unix_shell.jpg)
+:::
+
+::: column
+![](img/book_sgpt.jpg){fig-align="center" width="403"}
+:::
+:::
+
+
+### 사람과 AI
+
+<br>
+
+![](img/book/software_carpentry_chatGPT.jpg){fig-align="center" width="1522"}
+:::
+
+

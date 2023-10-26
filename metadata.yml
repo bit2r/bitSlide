@@ -1,6 +1,24 @@
 # Internal slide decks
 
 - title: "챗GPT 데이터 사이언스"
+  subtitle: "전기차 충전소"
+  author: "이광춘"
+  date: 2023-10-27
+  image: img/NICE디앤알.jpg
+  path: nice_202310.qmd
+  categories:
+    - "지도"
+    - "나이스디앤알"  
+    - "전기충전소"
+    - "디지털 글쓰기"
+    - "데이터 사이언스"
+    - "생성형 AI"
+    - "Advanced Data Analysis"
+    - "한국 R 사용자회"
+    - "챗GPT"
+    - "Code Interpreter"
+
+- title: "챗GPT 데이터 사이언스"
   subtitle: "행정과 규제를 넘어서"
   author: "이광춘"
   date: 2023-11-20

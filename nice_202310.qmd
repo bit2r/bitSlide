@@ -1,0 +1,80 @@
+---
+title: "챗GPT 데이터 사이언스"
+subtitle: "전기차 충전소"
+author: "이광춘"
+institute: "비영리법인 한국 R 사용자회"
+date: 2023-10-27
+format: 
+  insper-revealjs:
+    self-contained: false
+    footer: |
+      한국 R 사용자회 [챗GPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  강사 및 강의 소개
+
+2.  챗GPT 유닉스 쉘 (도서)
+
+3.  챗GPT 활용 (데이터 사이언스)
+
+4.  챗GPT 플러그인
+
+5.  생성형 AI 데이터 사이언스
+
+6.  공공데이터 전기차 충전소
+
+7.  광명시 어린이 교통사고
+
+8.  글쓰기와 오피스 전쟁
+
+9.  챗GPT 디지털 글쓰기
+
+10.  질의응답!
+
+{{< include slideshow/202310_nice/00-who-am-i.qmd >}}
+
+{{< include slideshow/202310_nice/unix_shell.qmd >}}
+
+{{< include slideshow/202310_nice/plugin.qmd >}}
+
+{{< include slideshow/202310_nice/code_interpreter.qmd >}}
+
+{{< include slideshow/202310_nice/office-interface.qmd >}}
+
+{{< include slideshow/202310_nice/chtGPT-digital-writing.qmd >}}
+
+{{< include slideshow/202310_nice/spatial_kwangmyung.qmd >}}
+
+{{< include slideshow/202310_nice/reference.qmd >}}
+
+##  {background-image="img/ai_dalle_fin.png" background-size="contain"}
+
+[@LeeShin2023]
+
+[@lee2019stat]
+
+[@lee2020krila]
+
+[@cummings2014man]
+
+[@Chiang_2023]
+
+[@Merritt_2023a]
+
+[@Huben_2023]
+
+[@fu2022gptroadmap]
+
+[@fullstack2023]
+

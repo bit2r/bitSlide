@@ -1,0 +1,62 @@
+## 강사 & 강의 개요 {.smaller}
+
+::: panel-tabset
+### 강사 소개
+
+::: {layout-ncol="2"}
+### AI 아바타
+
+![](img/profile.png){.absolute top="0" right="0" width="300"}
+
+### 주요경력 및 학력
+
+-   (현) [공익법인 한국 R 사용자회](https://r2bit.com/): 기술 이사
+
+-   (현) 국가교육위원회 전문위원: 과학/기술 분과
+
+-   (현) [건국대학교 챗GPT 데이터 사이언스 과정](https://r2bit.com/bitSlide/kunkuk_20230701.html#/title-slide): 외래교수
+
+-   (현) 경기도 빅데이터 위원회 자문위원
+
+-   (전) TCS: GS 칼텍스 디지털 아카데미 강사
+
+-   (전) 연세대학교 데이터 사이언스: 겸임교수
+
+-   (전) 삼정 KPMG: Lighthouse AI 기술총괄
+
+-   (전) 웹젠: 데이터 과학자 TD
+
+-   (전) 현대모비스: 차량용 반도체 개발구매 <br>
+
+-   (전) 현대자동차: VAATZ / FTA <br>
+
+    <hr>
+
+-   KAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공
+
+-   [RStudio Instructor](https://education.rstudio.com/trainers/people/lee+kwangchun/) - Tidyverse
+
+-   [Seoul R Meetup Organizer](https://r2bit.com/seoul-r/)
+:::
+
+### 강의개요
+
+::: {layout-ncol="2"}
+![](img/NICE디앤알.jpg)
+
+### 강의상세
+
+-   날짜 : 2023. 10. 27.(금) 10:30\~12:00
+-   장소 : 나이스디앤알
+-   대상 : 임직원
+-   내용
+    -   챗GPT 유닉스 쉘 도서출판
+    -   생성형 AI 데이터 사이언스
+    -   사무환경과 오피스 전쟁
+    -   오픈 소스 소프트웨어 생태계
+    -   전기차 충전소
+    -   지도 시각화
+
+:::
+
+:::
