@@ -1,6 +1,25 @@
 # Internal slide decks
 
 - title: "챗GPT 데이터 사이언스"
+  subtitle: "표준현장실습학기제"
+  author: "이광춘"
+  date: 2023-10-24
+  image: img/sejong_logo.png
+  path: sejong_edu_202310.qmd
+  categories:
+    - "행정"
+    - "세종대"  
+    - "표준현장실습학기제"
+    - "디지털 글쓰기"
+    - "데이터 사이언스"
+    - "생성형 AI"
+    - "Advanced Data Analysis"
+    - "한국 R 사용자회"
+    - "챗GPT"
+    - "Code Interpreter"
+    - "통계"
+
+- title: "챗GPT 데이터 사이언스"
   subtitle: "전기차 충전소"
   author: "이광춘"
   date: 2023-10-27

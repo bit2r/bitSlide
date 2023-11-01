@@ -1,0 +1,60 @@
+## 멘토소개 & 현장실습 개요 {.smaller}
+
+::: panel-tabset
+### 멘토소개
+
+::: {layout-ncol="2"}
+### AI 아바타
+
+![](img/profile.png){.absolute top="0" right="0" width="300"}
+
+### 주요경력 및 학력
+
+-   (현) 씨지인사이드: CTO
+
+-   (현) 비영리법인 한국 R 사용자회: 기술 이사
+
+-   (현) 국가교육위원회 전문위원: 과학/기술 분과
+
+-   (현) 건국대학교 챗GPT 데이터 사이언스 과정: 외래교수
+
+-   (전) TCS: GS 칼텍스 디지털 아카데미 강사
+
+-   (전) 연세대학교 데이터 사이언스: 겸임교수
+
+-   (전) 삼정 KPMG: Lighthouse AI 기술총괄
+
+-   (전) 웹젠: 데이터 과학자 TD
+
+-   (전) 현대모비스: 차량용 반도체 개발구매 <br>
+
+-   (전) 현대자동차: VAATZ / FTA <br>
+
+    <hr> 
+
+-   KAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공
+
+-   [RStudio Instructor](https://education.rstudio.com/trainers/people/lee+kwangchun/) - Tidyverse
+
+-   [Seoul R Meetup Organizer](https://r2bit.com/seoul-r/)
+:::
+
+
+### 현장실습
+
+::: {layout-ncol="2"}
+
+![](img/sejong_logo.png)
+
+### 현장실습 상세
+
+- 강의명: 챗GPT 데이터 과학 & 행정 - 표준현장실습학기제
+- 강의일시 : 2023. 10. 24.
+- 내용
+  - 챗GPT 데이터 사이언스
+  - **표준현장실습학기제**
+  - 디지털 전환, AI/ML, 챗GPT
+  - 산학협력 및 실습교육
+  - 행정 AI / 데이터 사이언스
+:::
+:::

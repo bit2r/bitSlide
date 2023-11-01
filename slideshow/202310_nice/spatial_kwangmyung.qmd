@@ -12,7 +12,7 @@ library(tidyverse)
 library(sf)
 sf_use_s2(FALSE)
 
-korea_map <- read_sf("data/HangJeongDong_ver20230701.geojson")
+korea_map <- read_sf(glue::glue("{here::here()}/data/HangJeongDong_ver20230701.geojson"))
 
 sido_map <- korea_map |> 
   group_by(sido, sidonm) |> 
@@ -30,7 +30,7 @@ sido_map |>
 
 ```{r}
 
-charger_lnglat <-  read_rds("data/charger_lnglat.rds")
+charger_lnglat <-  read_rds(glue::glue("{here::here()}/data/charger_lnglat.rds"))
 
 charger_sf <- charger_lnglat |> 
   mutate(across(lng:lat, as.numeric)) |> 

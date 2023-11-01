@@ -1,0 +1,190 @@
+---
+title: "챗GPT 데이터 사이언스 & 행정"
+subtitle: "표준현장실습학기제"
+author: "이광춘"
+institute: "씨지인사이드"
+date: 2023-10-24
+format: 
+  insper-revealjs:
+    self-contained: false
+    code-overflow: wrap
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  멘토소개 및 현장실습
+
+2.  챗GPT 데이터 사이언스와 행정
+
+    -   회사소개
+    -   현장실습 일정
+    -   실습교육과정
+
+
+{{< include slideshow/202310_sejong/00-who-am-i.qmd >}}
+
+
+#  {background-image="img/about_cginside.png"}
+
+::: r-fit-text
+:::
+
+## 씨지인사이드 소개영상
+
+{{< video https://youtu.be/LhfxoirjzHE width="800" height="600" >}}
+
+
+## 현장실습 일정 {.smaller}
+
+
+```{r}
+library(vistime)
+library(tidyverse)
+
+intern_timeline <- tribble(
+  ~구분,      ~기간,    ~start,      ~end,
+  "개발 인턴", "8주",     "2023-12-15", "2024-02-14",
+  "지원 인턴", "4주 1차", "2023-12-15", "2024-01-14",
+  "지원 인턴", "4주 2차", "2024-01-15", "2024-02-14"
+) |> 
+    mutate(across(start:end, as.Date))
+
+# ggplot 객체 생성
+intern_timeline |> 
+  mutate(기간 = factor(기간, labels = c("8주", "4주 1차", "4주 2차"))) |> 
+  ggplot(aes(x = start, xend = end, y = 구분, yend = 구분, color = 기간)) +
+    geom_segment(size = 5) +
+    labs(x = "", y = "", title = "표준현장실습학기제",
+         subtitle = "기간: 23년 12월 15일 ~ 24년 2월 14일") +
+    theme_minimal() +
+    theme(legend.position = "top") +
+    scale_x_date(date_labels = "%m월 %d일")
+```
+
+
+## 실습교육과정 {.smaller}
+
+::::: columns
+::: column
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(gt)
+library(gtExtras)
+extrafont::loadfonts()
+
+curriculum_raw <- read_excel(glue::glue("{here::here()}/data/세종대_커리큘럼.xlsx"), sheet = "202310")
+
+curriculum <- curriculum_raw %>% 
+  fill(-비고, .direction="down") %>% 
+  mutate(날짜 = as.Date(날짜)) %>% 
+  mutate(주차 = glue::glue("{주차} 주차")) 
+
+curriculum %>%   
+  filter(날짜 <= as.Date("2024-01-15")) |> 
+  gt(groupname_col = c("주차", "날짜")) %>%
+  # gt() %>% 
+    cols_align(align = "center") %>% 
+  gt_theme_pff() %>%
+  tab_options(
+    table.font.size = 12,
+    # heading.title.font.size = 7,
+    data_row.padding = px(3)
+  ) %>% 
+  opt_table_font(
+    font = list(
+      google_font(name = "Sunflower"),
+      "NanumGothic"
+    )
+  ) %>% 
+  tab_style(
+    style = list(
+      "font-variant: small-caps;"
+    ),
+    locations = cells_body(columns = everything())
+  ) %>% 
+  tab_header(
+    title =
+      htmltools::tagList(
+        htmltools::tags$div(
+          style = htmltools::css(
+            `text-align` = "center"
+          ),
+          htmltools::HTML(
+            web_image("img/cginside_sejong_logo.jpg")
+          )
+        ),
+        htmltools::tags$div(
+          htmltools::tags$strong("세종대 씨지인사이드 표준현장실습")
+        )
+      )
+  ) |> 
+  fmt_missing(missing_text = "-")
+
+```
+
+:::
+
+::: column
+
+```{r}
+curriculum %>%   
+  filter(날짜 > as.Date("2024-01-15")) |> 
+  gt(groupname_col = c("주차", "날짜")) %>%
+  # gt() %>% 
+    cols_align(align = "center") %>% 
+  gt_theme_pff() %>%
+  tab_options(
+    table.font.size = 12,
+    # heading.title.font.size = 7,
+    data_row.padding = px(3)
+  ) %>% 
+  opt_table_font(
+    font = list(
+      google_font(name = "Sunflower"),
+      "NanumGothic"
+    )
+  ) %>% 
+  tab_style(
+    style = list(
+      "font-variant: small-caps;"
+    ),
+    locations = cells_body(columns = everything())
+  ) %>% 
+  tab_header(
+    title =
+      htmltools::tagList(
+        htmltools::tags$div(
+          style = htmltools::css(
+            `text-align` = "center"
+          ),
+          htmltools::HTML(
+            web_image("img/cginside_sejong_logo.jpg")
+          )
+        ),
+        htmltools::tags$div(
+          htmltools::tags$strong("세종대 씨지인사이드 표준현장실습")
+        )
+      )
+  ) |> 
+  fmt_missing(missing_text = "-")
+
+```
+
+:::
+
+:::::
+
+

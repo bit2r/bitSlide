@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-10-26T02:16:43.060Z</lastmod>
+    <lastmod>2023-11-01T09:58:38.430Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/konkuk_20230901.html</loc>
@@ -1138,7 +1138,7 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/00-who-am-i.html</loc>
-    <lastmod>2023-10-18T08:19:00.649Z</lastmod>
+    <lastmod>2023-11-01T07:47:13.507Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/curriculum.html</loc>
@@ -1162,6 +1162,30 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/nice_202310.html</loc>
-    <lastmod>2023-10-26T02:17:16.670Z</lastmod>
+    <lastmod>2023-11-01T07:45:13.284Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/sejong_edu_202310.html</loc>
+    <lastmod>2023-11-01T09:58:41.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202310_sejong/curriculum.html</loc>
+    <lastmod>2023-11-01T07:53:28.157Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202310_nice/unix_shell.html</loc>
+    <lastmod>2023-11-01T07:47:07.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202310_nice/spatial_kwangmyung.html</loc>
+    <lastmod>2023-11-01T07:47:06.968Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202310_sejong/00-who-am-i.html</loc>
+    <lastmod>2023-11-01T09:57:07.325Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202310_sejong/seoul-r-meeup.html</loc>
+    <lastmod>2023-11-01T07:47:10.715Z</lastmod>
   </url>
 </urlset>
