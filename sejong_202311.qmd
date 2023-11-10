@@ -40,7 +40,9 @@ editor_options:
 
 9.  챗GPT 디지털 글쓰기
 
-10.  질의응답!
+10. GPT-4 터보
+
+11. 질의응답!
 
 {{< include slideshow/202311_sejong/00-who-am-i.qmd >}}
 
@@ -59,6 +61,8 @@ editor_options:
 {{< include slideshow/202311_sejong/office-interface.qmd >}}
 
 {{< include slideshow/202311_sejong/chtGPT-digital-writing.qmd >}}
+
+{{< include slideshow/202311_sejong/gpt4_turbo.qmd >}}
 
 {{< include slideshow/202311_sejong/reference.qmd >}}
 

@@ -14606,7 +14606,7 @@
     "href": "sejong_202311.html#목차",
     "title": "챗GPT 데이터 사이언스",
     "section": "목차",
-    "text": "목차\n\n강사 및 강의 소개\n챗GPT 유닉스 쉘 (도서)\n대학교육 ( 통계 사례 연구 )\n챗GPT 활용 (데이터 사이언스)\n생성형 AI 경제 일자리와 교육\n챗GPT 플러그인\n생성형 AI 데이터 사이언스\n글쓰기와 오피스 전쟁\n챗GPT 디지털 글쓰기\n질의응답!"
+    "text": "목차\n\n강사 및 강의 소개\n챗GPT 유닉스 쉘 (도서)\n대학교육 ( 통계 사례 연구 )\n챗GPT 활용 (데이터 사이언스)\n생성형 AI 경제 일자리와 교육\n챗GPT 플러그인\n생성형 AI 데이터 사이언스\n글쓰기와 오피스 전쟁\n챗GPT 디지털 글쓰기\nGPT-4 터보\n질의응답!"
   },
   {
     "objectID": "sejong_202311.html#강사-강의-개요",
@@ -15608,5 +15608,40 @@
     "title": "챗GPT 데이터 사이언스 & 행정",
     "section": "멘토소개 & 현장실습 개요",
     "text": "멘토소개 & 현장실습 개요\n\n멘토소개현장실습\n\n\n\n\n\n\nAI 아바타\n\n\n\n\n주요경력 및 학력\n\n(현) 씨지인사이드: CTO\n(현) 비영리법인 한국 R 사용자회: 기술 이사\n(현) 국가교육위원회 전문위원: 과학/기술 분과\n(현) 건국대학교 챗GPT 데이터 사이언스 과정: 외래교수\n(전) TCS: GS 칼텍스 디지털 아카데미 강사\n(전) 연세대학교 데이터 사이언스: 겸임교수\n(전) 삼정 KPMG: Lighthouse AI 기술총괄\n(전) 웹젠: 데이터 과학자 TD\n(전) 현대모비스: 차량용 반도체 개발구매 \n(전) 현대자동차: VAATZ / FTA \n\nKAIST, CMU, 연세대 응용통계 및 컴퓨터 과학 전공\nRStudio Instructor - Tidyverse\nSeoul R Meetup Organizer\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n현장실습 상세\n\n강의명: 챗GPT 데이터 과학 & 행정 - 표준현장실습학기제\n강의일시 : 2023. 10. 24.\n내용\n\n챗GPT 데이터 사이언스\n표준현장실습학기제\n디지털 전환, AI/ML, 챗GPT\n산학협력 및 실습교육\n행정 AI / 데이터 사이언스"
+  },
+  {
+    "objectID": "sejong_202311.html#openai-devday-2023-11-06",
+    "href": "sejong_202311.html#openai-devday-2023-11-06",
+    "title": "챗GPT 데이터 사이언스",
+    "section": "OpenAI DevDay (2023-11-06)",
+    "text": "OpenAI DevDay (2023-11-06)\n\n유튜브맥락 크기비용다중 모드성\n\n\n\n\n\n\n\n\n\n\n구분\nGPT-4 Turbo\nGPT-4 32K\nGPT-3.5 Turbo\n\n\n\n\n문맥 창\n128,000 토큰\n32,000 토큰\n8,192 토큰\n\n\n페이지수\n약 300 쪽\n약 75 쪽\n약 19 쪽\n\n\n기준\n427 토큰 / 쪽\n427 토큰 / 쪽\n427 토큰 / 쪽\n\n\n\n\n\n환율(1,300월/1달러)을 적용하여 1,000개 토큰 기준 비용을 산출하면 GPT-4 Turbo가 GPT-4 와 비교하면 입력기준 \\(\\frac{1}{3}\\) 저렴하다.\n\n\n\n모형\n입력(1K 토큰)\n출력(1K 토큰)\n\n\n\n\nGPT-4 Turbo\n13.0원\n39.0원\n\n\nGPT-4\n39.0원\n78.0원\n\n\nGPT-4 32k\n78.0원\n156.0원\n\n\nGPT-3.5 Turbo\n1.3원\n2.6원\n\n\nAssistant API\n19.5원\n-\n\n\n\n\n\n“GPT-4 터보”는 다중 모드성(Multimodality)를 제공한다. 과거 텍스트, 이미지, 오디오 각각 다른 모드로 제공된 것이 “GPT-4 터보”에서 통합되어 제공된다.\n\n텍스트(GPT-4)\n이미지(DALL-E 3)\n오디오(Whisper)\n\n\n\n\n\nOpenAI DevDay, Opening Keynote"
+  },
+  {
+    "objectID": "sejong_202311.html#최신-지식",
+    "href": "sejong_202311.html#최신-지식",
+    "title": "챗GPT 데이터 사이언스",
+    "section": "최신 지식",
+    "text": "최신 지식\n2021년 9월 → 2023년 4월\n\nGPT3-5-turboGPT-4 + 빙검색GPT-4GPT-4 터보\n\n\n\n\n\n2023년 11월 7일 기준\n\n\n\n\n\n\n\n2023년 11월 7일 기준\n\n\n\n\n\n\n\n2023년 11월 7일 기준\n\n\n\n\n\n\n\n2023년 11월 7일 기준"
+  },
+  {
+    "objectID": "sejong_202311.html#gpt-스토어",
+    "href": "sejong_202311.html#gpt-스토어",
+    "title": "챗GPT 데이터 사이언스",
+    "section": "GPT 스토어",
+    "text": "GPT 스토어\n\n\n\n\n\n설치형 SW\n\n\n\n\n\n웹 SW\n\n\n\n\n\n스마트폰 앱SW\n\n\n\n\n\nGPT 플러그인\n\n\n\n\n\n\n\n스마트폰 → GPT\n\n\n\n\n\n한국 R 사용자회 챗GPT. theme insper 소스코드 GitHub."
+  },
+  {
+    "objectID": "sejong_202311.html#gpt-스토어-gpt-store",
+    "href": "sejong_202311.html#gpt-스토어-gpt-store",
+    "title": "챗GPT 데이터 사이언스",
+    "section": "GPT 스토어 1",
+    "text": "GPT 스토어 1\n\n\n\n\n\nOpenAI GPT 빌더\n\n\n\n\n\nOpenAI GPT 스토어\n\n\n\n\nApp Store for AI: OpenAI’s GPT Store lets you build (and monetize) your own GPT"
+  },
+  {
+    "objectID": "sejong_202311.html#생태계-진화",
+    "href": "sejong_202311.html#생태계-진화",
+    "title": "챗GPT 데이터 사이언스",
+    "section": "생태계 진화",
+    "text": "생태계 진화\n\n\n\n\n\n설치형 SW\n\n\n\n\n\n웹 SW\n\n\n\n\n\n스마트폰 앱SW\n\n\n\n\n\nGPT 플러그인\n\n\n\n\n\n\n\n스마트폰 → GPT"
   }
 ]
