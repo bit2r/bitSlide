@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.523">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>발표자료 | 한국 R 사용자회 – chtgpt-digital-writing</title>
+<title>발표자료 | 한국 R 사용자회</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -82,6 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "추가 검색결과",
     "search-more-matches-text": "추가 검색결과",
     "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "취소",
     "search-submit-button-title": "검색",
     "search-label": "검색"
@@ -109,9 +110,9 @@ ga('send', {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../../img/koRea_logo.png" alt="Home" class="navbar-logo">
     </a>
@@ -122,20 +123,20 @@ ga('send', {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://r2bit.com" rel="" target="">
- <span class="menu-text">한국 R 사용자회</span></a>
+    <a class="nav-link" href="https://r2bit.com"> 
+<span class="menu-text">한국 R 사용자회</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/bit2r/slides" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub repo">
+    <a class="nav-link" href="https://github.com/bit2r/slides"> <i class="bi bi-github" role="img" aria-label="GitHub repo">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -151,14 +152,11 @@ ga('send', {
 
 
 
+
 <section id="도구문서의-인간-데이터-사이언스-글쓰기" class="level1 page-columns page-full">
 <h1>도구(문서)의 인간 <br> 데이터 사이언스 글쓰기</h1>
 <p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/homo-faber.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/homo-faber.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="img/homo-faber.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/homo-faber.jpg" class="img-fluid"></a></p>
 <section id="데이터-과학-과거와-현재" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="데이터-과학-과거와-현재">데이터 과학 과거와 현재</h2>
 <p><br> <br></p>
@@ -167,21 +165,13 @@ ga('send', {
 <section id="과거" class="level3">
 <h3 class="anchored" data-anchor-id="과거">과거</h3>
 <p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="slideshow/202212-youtube/fig/jobshop.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="slideshow/202212-youtube/fig/jobshop.gif" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="slideshow/202212-youtube/fig/jobshop.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="slideshow/202212-youtube/fig/jobshop.gif" class="img-fluid"></a></p>
 </section>
 </div><div class="column">
 <section id="현재" class="level3">
 <h3 class="anchored" data-anchor-id="현재">현재</h3>
 <p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="slideshow/202212-youtube/fig/quarto_to_go.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="slideshow/202212-youtube/fig/quarto_to_go.gif" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="slideshow/202212-youtube/fig/quarto_to_go.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="slideshow/202212-youtube/fig/quarto_to_go.gif" class="img-fluid"></a></p>
 </section>
 </div>
 </div>
@@ -192,25 +182,13 @@ ga('send', {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">글쓰기 역사</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">생산성과 자동화를 넘어</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">개발과 저작</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/writing_history.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/writing_history.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="img/writing_history.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="img/writing_history.jpg" class="img-fluid"></a></p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/writing-evolution.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/writing-evolution.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="img/writing-evolution.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="img/writing-evolution.jpg" class="img-fluid"></a></p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/mermaid_docu_sw.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/mermaid_docu_sw.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="img/mermaid_docu_sw.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="img/mermaid_docu_sw.jpg" class="img-fluid"></a></p>
 <!-- ```{mermaid} -->
 <!-- graph LR -->
 <!--     subgraph "소프트웨어" -->
@@ -244,25 +222,13 @@ ga('send', {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">데이터 과학</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">문서 구성요소</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">문서 복잡성</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">문서 도구 개발 역사</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/horst-eco-r4ds.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/horst-eco-r4ds.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="img/horst-eco-r4ds.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="img/horst-eco-r4ds.png" class="img-fluid"></a></p>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/data_science_document.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/data_science_document.jpg" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
+<p><a href="img/data_science_document.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="img/data_science_document.jpg" class="img-fluid"></a></p>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/markdown-writing.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/markdown-writing.png" class="img-fluid figure-img" width="880"></a></p>
-</figure>
-</div>
+<p><a href="img/markdown-writing.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="img/markdown-writing.png" class="img-fluid" width="880"></a></p>
 </div>
 <div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
 <div class="cell">
@@ -307,24 +273,23 @@ ga('send', {
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># gt_theme_hangul() |&gt; </span></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="st">"center"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-
-<div id="qnfitpkmca" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qnfitpkmca table {
+<div id="htmkooejyi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#htmkooejyi table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qnfitpkmca thead, #qnfitpkmca tbody, #qnfitpkmca tfoot, #qnfitpkmca tr, #qnfitpkmca td, #qnfitpkmca th {
+#htmkooejyi thead, #htmkooejyi tbody, #htmkooejyi tfoot, #htmkooejyi tr, #htmkooejyi td, #htmkooejyi th {
   border-style: none;
 }
 
-#qnfitpkmca p {
+#htmkooejyi p {
   margin: 0;
   padding: 0;
 }
 
-#qnfitpkmca .gt_table {
+#htmkooejyi .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -350,12 +315,12 @@ ga('send', {
   border-left-color: #D3D3D3;
 }
 
-#qnfitpkmca .gt_caption {
+#htmkooejyi .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qnfitpkmca .gt_title {
+#htmkooejyi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -367,7 +332,7 @@ ga('send', {
   border-bottom-width: 0;
 }
 
-#qnfitpkmca .gt_subtitle {
+#htmkooejyi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -379,7 +344,7 @@ ga('send', {
   border-top-width: 0;
 }
 
-#qnfitpkmca .gt_heading {
+#htmkooejyi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -391,13 +356,13 @@ ga('send', {
   border-right-color: #D3D3D3;
 }
 
-#qnfitpkmca .gt_bottom_border {
+#htmkooejyi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qnfitpkmca .gt_col_headings {
+#htmkooejyi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -412,7 +377,7 @@ ga('send', {
   border-right-color: #D3D3D3;
 }
 
-#qnfitpkmca .gt_col_heading {
+#htmkooejyi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -432,7 +397,7 @@ ga('send', {
   overflow-x: hidden;
 }
 
-#qnfitpkmca .gt_column_spanner_outer {
+#htmkooejyi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -444,15 +409,15 @@ ga('send', {
   padding-right: 4px;
 }
 
-#qnfitpkmca .gt_column_spanner_outer:first-child {
+#htmkooejyi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qnfitpkmca .gt_column_spanner_outer:last-child {
+#htmkooejyi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qnfitpkmca .gt_column_spanner {
+#htmkooejyi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -464,11 +429,11 @@ ga('send', {
   width: 100%;
 }
 
-#qnfitpkmca .gt_spanner_row {
+#htmkooejyi .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qnfitpkmca .gt_group_heading {
+#htmkooejyi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -494,7 +459,7 @@ ga('send', {
   text-align: left;
 }
 
-#qnfitpkmca .gt_empty_group_heading {
+#htmkooejyi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -509,15 +474,15 @@ ga('send', {
   vertical-align: middle;
 }
 
-#qnfitpkmca .gt_from_md > :first-child {
+#htmkooejyi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qnfitpkmca .gt_from_md > :last-child {
+#htmkooejyi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qnfitpkmca .gt_row {
+#htmkooejyi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -536,7 +501,7 @@ ga('send', {
   overflow-x: hidden;
 }
 
-#qnfitpkmca .gt_stub {
+#htmkooejyi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -549,7 +514,7 @@ ga('send', {
   padding-right: 5px;
 }
 
-#qnfitpkmca .gt_stub_row_group {
+#htmkooejyi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -563,15 +528,15 @@ ga('send', {
   vertical-align: top;
 }
 
-#qnfitpkmca .gt_row_group_first td {
+#htmkooejyi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qnfitpkmca .gt_row_group_first th {
+#htmkooejyi .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qnfitpkmca .gt_summary_row {
+#htmkooejyi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -581,16 +546,16 @@ ga('send', {
   padding-right: 5px;
 }
 
-#qnfitpkmca .gt_first_summary_row {
+#htmkooejyi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qnfitpkmca .gt_first_summary_row.thick {
+#htmkooejyi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qnfitpkmca .gt_last_summary_row {
+#htmkooejyi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -600,7 +565,7 @@ ga('send', {
   border-bottom-color: #D3D3D3;
 }
 
-#qnfitpkmca .gt_grand_summary_row {
+#htmkooejyi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -610,7 +575,7 @@ ga('send', {
   padding-right: 5px;
 }
 
-#qnfitpkmca .gt_first_grand_summary_row {
+#htmkooejyi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -620,7 +585,7 @@ ga('send', {
   border-top-color: #D3D3D3;
 }
 
-#qnfitpkmca .gt_last_grand_summary_row_top {
+#htmkooejyi .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -630,11 +595,11 @@ ga('send', {
   border-bottom-color: #D3D3D3;
 }
 
-#qnfitpkmca .gt_striped {
+#htmkooejyi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qnfitpkmca .gt_table_body {
+#htmkooejyi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -643,7 +608,7 @@ ga('send', {
   border-bottom-color: #D3D3D3;
 }
 
-#qnfitpkmca .gt_footnotes {
+#htmkooejyi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -657,7 +622,7 @@ ga('send', {
   border-right-color: #D3D3D3;
 }
 
-#qnfitpkmca .gt_footnote {
+#htmkooejyi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -666,7 +631,7 @@ ga('send', {
   padding-right: 5px;
 }
 
-#qnfitpkmca .gt_sourcenotes {
+#htmkooejyi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -680,7 +645,7 @@ ga('send', {
   border-right-color: #D3D3D3;
 }
 
-#qnfitpkmca .gt_sourcenote {
+#htmkooejyi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -688,119 +653,144 @@ ga('send', {
   padding-right: 5px;
 }
 
-#qnfitpkmca .gt_left {
+#htmkooejyi .gt_left {
   text-align: left;
 }
 
-#qnfitpkmca .gt_center {
+#htmkooejyi .gt_center {
   text-align: center;
 }
 
-#qnfitpkmca .gt_right {
+#htmkooejyi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qnfitpkmca .gt_font_normal {
+#htmkooejyi .gt_font_normal {
   font-weight: normal;
 }
 
-#qnfitpkmca .gt_font_bold {
+#htmkooejyi .gt_font_bold {
   font-weight: bold;
 }
 
-#qnfitpkmca .gt_font_italic {
+#htmkooejyi .gt_font_italic {
   font-style: italic;
 }
 
-#qnfitpkmca .gt_super {
+#htmkooejyi .gt_super {
   font-size: 65%;
 }
 
-#qnfitpkmca .gt_footnote_marks {
+#htmkooejyi .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qnfitpkmca .gt_asterisk {
+#htmkooejyi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qnfitpkmca .gt_indent_1 {
+#htmkooejyi .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qnfitpkmca .gt_indent_2 {
+#htmkooejyi .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qnfitpkmca .gt_indent_3 {
+#htmkooejyi .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qnfitpkmca .gt_indent_4 {
+#htmkooejyi .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qnfitpkmca .gt_indent_5 {
+#htmkooejyi .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="연도">연도</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="도구">도구</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="개발자">개발자</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="연도" class="gt_row gt_center">1978</td>
-<td headers="도구" class="gt_row gt_center"><a href="https://en.wikipedia.org/wiki/TeX">TeX</a></td>
-<td headers="개발자" class="gt_row gt_center">Donald Knuth</td></tr>
-    <tr><td headers="연도" class="gt_row gt_center">1984</td>
-<td headers="도구" class="gt_row gt_center"><a href="https://en.wikipedia.org/wiki/Literate_programming">Literate Programming</a></td>
-<td headers="개발자" class="gt_row gt_center">Donald Knuth</td></tr>
-    <tr><td headers="연도" class="gt_row gt_center">1988</td>
-<td headers="도구" class="gt_row gt_center"><a href="https://www.wolfram.com/mathematica/scrapbook/">Mathematica Notebooks</a></td>
-<td headers="개발자" class="gt_row gt_center">Stephen Wolfram</td></tr>
-    <tr><td headers="연도" class="gt_row gt_center">2001</td>
-<td headers="도구" class="gt_row gt_center"><a href="https://ipython.org">IPython</a></td>
-<td headers="개발자" class="gt_row gt_center">Fernando Perez</td></tr>
-    <tr><td headers="연도" class="gt_row gt_center">2003</td>
-<td headers="도구" class="gt_row gt_center"><a href="https://en.wikipedia.org/wiki/Org-mode">Emacs org-mode</a></td>
-<td headers="개발자" class="gt_row gt_center">Carsten Dominik</td></tr>
-    <tr><td headers="연도" class="gt_row gt_center">2004</td>
-<td headers="도구" class="gt_row gt_center"><a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a></td>
-<td headers="개발자" class="gt_row gt_center">John Gruber</td></tr>
-    <tr><td headers="연도" class="gt_row gt_center">2005</td>
-<td headers="도구" class="gt_row gt_center"><a href="https://doc.sagemath.org/html/en/reference/index.html">Sage Notebook</a></td>
-<td headers="개발자" class="gt_row gt_center">William Stein</td></tr>
-    <tr><td headers="연도" class="gt_row gt_center">2006</td>
-<td headers="도구" class="gt_row gt_center"><a href="https://en.wikipedia.org/wiki/Pandoc">Pandoc</a></td>
-<td headers="개발자" class="gt_row gt_center">John MacFarlane</td></tr>
-    <tr><td headers="연도" class="gt_row gt_center">2009</td>
-<td headers="도구" class="gt_row gt_center"><a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a></td>
-<td headers="개발자" class="gt_row gt_center">Tom Preston-Werner</td></tr>
-    <tr><td headers="연도" class="gt_row gt_center">2011</td>
-<td headers="도구" class="gt_row gt_center"><a href="https://ipython.org/ipython-doc/3/notebook/">iPython Notebook</a></td>
-<td headers="개발자" class="gt_row gt_center">Fernando Perez</td></tr>
-    <tr><td headers="연도" class="gt_row gt_center">2012</td>
-<td headers="도구" class="gt_row gt_center"><a href="http://yihui.name/knitr/">knitr</a></td>
-<td headers="개발자" class="gt_row gt_center">Yihui Xie</td></tr>
-    <tr><td headers="연도" class="gt_row gt_center">2014</td>
-<td headers="도구" class="gt_row gt_center"><a href="https://juypter.org">Project Jupyter</a></td>
-<td headers="개발자" class="gt_row gt_center">Fernando Perez</td></tr>
-    <tr><td headers="연도" class="gt_row gt_center">2020</td>
-<td headers="도구" class="gt_row gt_center"><a href="https://quarto.org">Quarto</a></td>
-<td headers="개발자" class="gt_row gt_center">J.J. Allaire</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="연도" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">연도</th>
+<th id="도구" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">도구</th>
+<th id="개발자" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">개발자</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="연도">1978</td>
+<td class="gt_row gt_center" headers="도구"><a href="https://en.wikipedia.org/wiki/TeX">TeX</a></td>
+<td class="gt_row gt_center" headers="개발자">Donald Knuth</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="연도">1984</td>
+<td class="gt_row gt_center" headers="도구"><a href="https://en.wikipedia.org/wiki/Literate_programming">Literate Programming</a></td>
+<td class="gt_row gt_center" headers="개발자">Donald Knuth</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="연도">1988</td>
+<td class="gt_row gt_center" headers="도구"><a href="https://www.wolfram.com/mathematica/scrapbook/">Mathematica Notebooks</a></td>
+<td class="gt_row gt_center" headers="개발자">Stephen Wolfram</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="연도">2001</td>
+<td class="gt_row gt_center" headers="도구"><a href="https://ipython.org">IPython</a></td>
+<td class="gt_row gt_center" headers="개발자">Fernando Perez</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="연도">2003</td>
+<td class="gt_row gt_center" headers="도구"><a href="https://en.wikipedia.org/wiki/Org-mode">Emacs org-mode</a></td>
+<td class="gt_row gt_center" headers="개발자">Carsten Dominik</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="연도">2004</td>
+<td class="gt_row gt_center" headers="도구"><a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a></td>
+<td class="gt_row gt_center" headers="개발자">John Gruber</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="연도">2005</td>
+<td class="gt_row gt_center" headers="도구"><a href="https://doc.sagemath.org/html/en/reference/index.html">Sage Notebook</a></td>
+<td class="gt_row gt_center" headers="개발자">William Stein</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="연도">2006</td>
+<td class="gt_row gt_center" headers="도구"><a href="https://en.wikipedia.org/wiki/Pandoc">Pandoc</a></td>
+<td class="gt_row gt_center" headers="개발자">John MacFarlane</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="연도">2009</td>
+<td class="gt_row gt_center" headers="도구"><a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a></td>
+<td class="gt_row gt_center" headers="개발자">Tom Preston-Werner</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="연도">2011</td>
+<td class="gt_row gt_center" headers="도구"><a href="https://ipython.org/ipython-doc/3/notebook/">iPython Notebook</a></td>
+<td class="gt_row gt_center" headers="개발자">Fernando Perez</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="연도">2012</td>
+<td class="gt_row gt_center" headers="도구"><a href="http://yihui.name/knitr/">knitr</a></td>
+<td class="gt_row gt_center" headers="개발자">Yihui Xie</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="연도">2014</td>
+<td class="gt_row gt_center" headers="도구"><a href="https://juypter.org">Project Jupyter</a></td>
+<td class="gt_row gt_center" headers="개발자">Fernando Perez</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="연도">2020</td>
+<td class="gt_row gt_center" headers="도구"><a href="https://quarto.org">Quarto</a></td>
+<td class="gt_row gt_center" headers="개발자">J.J. Allaire</td>
+</tr>
+</tbody>
 </table>
+
 </div>
 </div>
 </div>
@@ -814,18 +804,10 @@ ga('send', {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">삼권분립</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">한글 디지털 글쓰기 책</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/three-pillar.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="img/three-pillar.png" class="img-fluid figure-img" width="615"></a></p>
-</figure>
-</div>
+<p><a href="img/three-pillar.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="img/three-pillar.png" class="img-fluid quarto-figure quarto-figure-center" width="615"></a></p>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="img/digital_writing_book.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="img/digital_writing_book.jpg" class="img-fluid figure-img" width="499"></a></p>
-</figure>
-</div>
+<p><a href="img/digital_writing_book.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="img/digital_writing_book.jpg" class="img-fluid quarto-figure quarto-figure-center" width="499"></a></p>
 </div>
 </div>
 </div>
@@ -917,10 +899,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -930,8 +911,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -944,6 +934,135 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -987,6 +1106,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1012,6 +1132,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1072,7 +1218,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom","loop":false});</script>
+
 
 
 

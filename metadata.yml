@@ -1,5 +1,24 @@
 # Internal slide decks
 
+- title: "챗GPT 디지털 글쓰기 with R"
+  subtitle: "과학기술 증거기반 글쓰기"
+  author: "이광춘"
+  date: 2024-01-23
+  image: img/sejong_hs_logo.png
+  path: sejong_hs_202401.qmd
+  categories:
+    - "세종과학예술영재학교"
+    - "챗GPT"
+    - "디지털 글쓰기"
+    - "데이터 과학"
+    - "생성형 AI"
+    - "Advanced Data Analysis"
+    - "한국 R 사용자회"
+    - "쿼토(Quarto)"
+    - "Code Interpreter"
+    - "통계"
+    - "R/Tidyverse"
+
 - title: "챗GPT 데이터 사이언스"
   subtitle: "표준현장실습학기제"
   author: "이광춘"

@@ -1,0 +1,4062 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.523">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>발표자료 | 한국 R 사용자회</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../../img/koRea_logo.ico" rel="icon">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+<script type="text/javascript">
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-229551680-1', 'auto');
+
+ga('send', {
+  hitType: 'pageview',
+  'anonymizeIp': true,
+});
+</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../img/koRea_logo.png" alt="Home" class="navbar-logo">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://r2bit.com"> 
+<span class="menu-text">한국 R 사용자회</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/bit2r/slides"> <i class="bi bi-github" role="img" aria-label="GitHub repo">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+
+<section id="통계-챗gpt-데이터-사이언스" class="level1">
+<h1>통계 → 챗GPT 데이터 사이언스</h1>
+<section id="커리큘럼" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="커리큘럼">커리큘럼</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">종이와 연필</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">SAS/SPSS 보고서</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">DS 입문</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">고급 DS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">GS 칼텍스</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">GS 칼텍스</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">챗GPT DS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false">평가</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><a href="img/cku_statistics.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/cku_statistics.jpg" class="img-fluid quarto-figure quarto-figure-center" width="413"></a></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><a href="img/cku_sas_word.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/cku_sas_word.png" class="img-fluid quarto-figure quarto-figure-center" width="715"></a></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rvest)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtExtras)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>ds_url <span class="ot">&lt;-</span> <span class="st">"https://statkclee.github.io/yonsei/"</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>ds_html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(ds_url)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ds_html <span class="sc">|&gt;</span> </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">'table'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  .[[<span class="dv">1</span>]] <span class="sc">|&gt;</span> </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">2</span><span class="sc">:</span><span class="fu">n</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(X2, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"학습내용"</span>, <span class="st">"날짜"</span>), <span class="at">sep =</span> <span class="st">"-"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(학습내용, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"학습내용"</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">."</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(주차, 학습내용, 날짜) <span class="sc">|&gt;</span> </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(날짜 <span class="ot">=</span> <span class="fu">str_trim</span>(날짜),</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>         학습내용 <span class="ot">=</span> <span class="fu">str_trim</span>(학습내용))  <span class="sc">|&gt;</span> </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(날짜 <span class="ot">=</span> <span class="fu">if_else</span>(<span class="fu">str_detect</span>(날짜, <span class="st">"^</span><span class="sc">\\</span><span class="st">d"</span>), 날짜, <span class="cn">NA_character_</span>))  <span class="sc">|&gt;</span> </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gt_theme_pff</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sub_missing</span>(</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>      <span class="at">columns =</span> 날짜,</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">missing_text =</span> <span class="st">"-"</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    )  <span class="sc">|&gt;</span> </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="st">"center"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">opt_table_font</span>(</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">font =</span> <span class="fu">list</span>(</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        <span class="st">"NanumGothic"</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_style</span>(</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        <span class="st">"font-variant: small-caps;"</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_header</span>(</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span><span class="fu">tagList</span>(</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>            <span class="at">style =</span> htmltools<span class="sc">::</span><span class="fu">css</span>(</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>              <span class="st">`</span><span class="at">text-align</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"center"</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>            htmltools<span class="sc">::</span><span class="fu">HTML</span>(</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>              <span class="fu">web_image</span>(<span class="st">"img/curriculum_yonsei.png"</span>)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>          ),</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>            htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">strong</span>(<span class="st">"연세대"</span>),</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>            <span class="st">"데이터 사이언스 입문"</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="st">"65%"</span>,</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.title.font.size =</span> <span class="fu">px</span>(<span class="dv">12</span>)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="setwulakxd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#setwulakxd table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#setwulakxd thead, #setwulakxd tbody, #setwulakxd tfoot, #setwulakxd tr, #setwulakxd td, #setwulakxd th {
+  border-style: none;
+}
+
+#setwulakxd p {
+  margin: 0;
+  padding: 0;
+}
+
+#setwulakxd .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 65%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#setwulakxd .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#setwulakxd .gt_title {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#setwulakxd .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#setwulakxd .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#setwulakxd .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#setwulakxd .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#setwulakxd .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#setwulakxd .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#setwulakxd .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#setwulakxd .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#setwulakxd .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#setwulakxd .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#setwulakxd .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#setwulakxd .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#setwulakxd .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#setwulakxd .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#setwulakxd .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#setwulakxd .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#setwulakxd .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#setwulakxd .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#setwulakxd .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#setwulakxd .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#setwulakxd .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#setwulakxd .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#setwulakxd .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#setwulakxd .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#setwulakxd .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#setwulakxd .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#setwulakxd .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#setwulakxd .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#setwulakxd .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#setwulakxd .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#setwulakxd .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#setwulakxd .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#setwulakxd .gt_left {
+  text-align: left;
+}
+
+#setwulakxd .gt_center {
+  text-align: center;
+}
+
+#setwulakxd .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#setwulakxd .gt_font_normal {
+  font-weight: normal;
+}
+
+#setwulakxd .gt_font_bold {
+  font-weight: bold;
+}
+
+#setwulakxd .gt_font_italic {
+  font-style: italic;
+}
+
+#setwulakxd .gt_super {
+  font-size: 65%;
+}
+
+#setwulakxd .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#setwulakxd .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#setwulakxd .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#setwulakxd .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#setwulakxd .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#setwulakxd .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#setwulakxd .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_heading">
+<th colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border"><div style="text-align:center;">
+<img src="img/curriculum_yonsei.png" class="img-fluid" style="height:30px;">
+</div>
+<div>
+<strong>연세대</strong> 데이터 사이언스 입문
+</div></th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="주차" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">주차</th>
+<th id="학습내용" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">학습내용</th>
+<th id="날짜" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">날짜</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">1</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">데이터 과학 (Data Science)</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">3월7일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">2</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">프로그래밍 기초와 마크다운 보고서</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">3월14일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">3</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">데이터와 커뮤니티 찾기, 도움 청하기, 프로젝트 설정</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">3월21일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">4</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">데이터 수집</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">-</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">5</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">자료구조(Data Structures)</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">4월4일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">6</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">데이터프레임과 SQL</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">4월11일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">7</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">버전제어, 협업, 그리고 저작권과 라이선스</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">4월18일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">8</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">중간고사</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">4월25일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">9</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">시각화 (Visualization)</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">5월2일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">10</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">정규표현식</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">5월9일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">11</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">데이터 과학 프로그래밍</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">5월16일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">12</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">데이터 과학 제품</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">-</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">13</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">함수형 프로그래밍</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">5월30일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">14</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">데이터 과학 저작</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">6월6일(현충일)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">15</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">R 팩키지</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">6월13일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">16</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">기말고사</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">6월20일</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://statkclee.github.io/yonsei/">연세대 “데이터 과학 입문”</a></li>
+</ul>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ds2_url <span class="ot">&lt;-</span> <span class="st">"https://statkclee.github.io/yonsei2/"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ds2_html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(ds2_url)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>ds2_html <span class="sc">|&gt;</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_elements</span>(<span class="st">'table'</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_table</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  .[[<span class="dv">1</span>]] <span class="sc">|&gt;</span> </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">2</span><span class="sc">:</span><span class="fu">n</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(X2, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"학습내용"</span>, <span class="st">"날짜"</span>), <span class="at">sep =</span> <span class="st">"&amp;race;"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(학습내용, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"학습내용"</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">."</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(주차, 학습내용, 날짜) <span class="sc">|&gt;</span> </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(날짜 <span class="ot">=</span> <span class="fu">str_trim</span>(날짜),</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>         학습내용 <span class="ot">=</span> <span class="fu">str_trim</span>(학습내용))  <span class="sc">|&gt;</span> </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(날짜 <span class="ot">=</span> <span class="fu">if_else</span>(<span class="fu">str_detect</span>(날짜, <span class="st">"^</span><span class="sc">\\</span><span class="st">d"</span>), 날짜, <span class="cn">NA_character_</span>))  <span class="sc">|&gt;</span> </span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gt_theme_pff</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sub_missing</span>(</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">columns =</span> 날짜,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">missing_text =</span> <span class="st">"-"</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    )  <span class="sc">|&gt;</span> </span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="st">"center"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">opt_table_font</span>(</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>      <span class="at">font =</span> <span class="fu">list</span>(</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>        <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="st">"NanumGothic"</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_style</span>(</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>      <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>        <span class="st">"font-variant: small-caps;"</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>      <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_header</span>(</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span><span class="fu">tagList</span>(</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>            <span class="at">style =</span> htmltools<span class="sc">::</span><span class="fu">css</span>(</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>              <span class="st">`</span><span class="at">text-align</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"center"</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>            htmltools<span class="sc">::</span><span class="fu">HTML</span>(</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>              <span class="fu">web_image</span>(<span class="st">"img/curriculum_yonsei2.png"</span>)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>            )</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>          ),</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>            htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">strong</span>(<span class="st">"연세대"</span>),</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>            <span class="st">"데이터 (사이언스) 공학"</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="st">"65%"</span>,</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.title.font.size =</span> <span class="fu">px</span>(<span class="dv">12</span>)</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="yzyrfuyblv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#yzyrfuyblv table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#yzyrfuyblv thead, #yzyrfuyblv tbody, #yzyrfuyblv tfoot, #yzyrfuyblv tr, #yzyrfuyblv td, #yzyrfuyblv th {
+  border-style: none;
+}
+
+#yzyrfuyblv p {
+  margin: 0;
+  padding: 0;
+}
+
+#yzyrfuyblv .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 65%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#yzyrfuyblv .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#yzyrfuyblv .gt_title {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#yzyrfuyblv .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#yzyrfuyblv .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#yzyrfuyblv .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yzyrfuyblv .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#yzyrfuyblv .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#yzyrfuyblv .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#yzyrfuyblv .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#yzyrfuyblv .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#yzyrfuyblv .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#yzyrfuyblv .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#yzyrfuyblv .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#yzyrfuyblv .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#yzyrfuyblv .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#yzyrfuyblv .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#yzyrfuyblv .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#yzyrfuyblv .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yzyrfuyblv .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#yzyrfuyblv .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#yzyrfuyblv .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#yzyrfuyblv .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yzyrfuyblv .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#yzyrfuyblv .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#yzyrfuyblv .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yzyrfuyblv .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yzyrfuyblv .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#yzyrfuyblv .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yzyrfuyblv .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#yzyrfuyblv .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yzyrfuyblv .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#yzyrfuyblv .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yzyrfuyblv .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#yzyrfuyblv .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yzyrfuyblv .gt_left {
+  text-align: left;
+}
+
+#yzyrfuyblv .gt_center {
+  text-align: center;
+}
+
+#yzyrfuyblv .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#yzyrfuyblv .gt_font_normal {
+  font-weight: normal;
+}
+
+#yzyrfuyblv .gt_font_bold {
+  font-weight: bold;
+}
+
+#yzyrfuyblv .gt_font_italic {
+  font-style: italic;
+}
+
+#yzyrfuyblv .gt_super {
+  font-size: 65%;
+}
+
+#yzyrfuyblv .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#yzyrfuyblv .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#yzyrfuyblv .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#yzyrfuyblv .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#yzyrfuyblv .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#yzyrfuyblv .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#yzyrfuyblv .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_heading">
+<th colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border"><div style="text-align:center;">
+<img src="img/curriculum_yonsei2.png" class="img-fluid" style="height:30px;">
+</div>
+<div>
+<strong>연세대</strong> 데이터 (사이언스) 공학
+</div></th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="주차" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">주차</th>
+<th id="학습내용" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">학습내용</th>
+<th id="날짜" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">날짜</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">1</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">데이터 사이언스 언어</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">9월6일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">2</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">[언어] R</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">9월20일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">3</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">[언어] 파이썬</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">9월27일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">4</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">[언어] API 프로그래밍</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">10월4일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">5</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">데이터 사이언스 자료구조</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">10월11일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">6</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">[자료구조] 시계열 데이터</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">10월18일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">7</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">중간고사</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">10월25일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">8</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">[자료구조] 지리 공간 데이터</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">11월01일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">9</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">[자료구조] NLP - 텍스트 마이닝(R)</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">11월08일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">10</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">[자료구조] NLP - 파이썬</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">11월15일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">11</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">빅데이터 시각화</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">11월22일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">12</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">기계학습 - 예측모형</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">11월29일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">13</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">DevOps - 도커, HPC, 스파크</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">12월06일</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="주차" style="font-variant: small-caps">14</td>
+<td class="gt_row gt_center gt_striped" headers="학습내용" style="font-variant: small-caps">제품화</td>
+<td class="gt_row gt_center gt_striped" headers="날짜" style="font-variant: small-caps">12월13일</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="주차" style="font-variant: small-caps">15</td>
+<td class="gt_row gt_center" headers="학습내용" style="font-variant: small-caps">기말고사</td>
+<td class="gt_row gt_center" headers="날짜" style="font-variant: small-caps">12월20일</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://statkclee.github.io/yonsei2/">연세대 “데이터 (사이언스) 공학”</a></li>
+</ul>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div id="jsoxdeatjq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#jsoxdeatjq table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#jsoxdeatjq thead, #jsoxdeatjq tbody, #jsoxdeatjq tfoot, #jsoxdeatjq tr, #jsoxdeatjq td, #jsoxdeatjq th {
+  border-style: none;
+}
+
+#jsoxdeatjq p {
+  margin: 0;
+  padding: 0;
+}
+
+#jsoxdeatjq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jsoxdeatjq .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#jsoxdeatjq .gt_title {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jsoxdeatjq .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jsoxdeatjq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jsoxdeatjq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jsoxdeatjq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jsoxdeatjq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jsoxdeatjq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jsoxdeatjq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jsoxdeatjq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jsoxdeatjq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jsoxdeatjq .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#jsoxdeatjq .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#jsoxdeatjq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jsoxdeatjq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jsoxdeatjq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jsoxdeatjq .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jsoxdeatjq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jsoxdeatjq .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#jsoxdeatjq .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#jsoxdeatjq .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#jsoxdeatjq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jsoxdeatjq .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#jsoxdeatjq .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#jsoxdeatjq .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jsoxdeatjq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jsoxdeatjq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jsoxdeatjq .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jsoxdeatjq .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#jsoxdeatjq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jsoxdeatjq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jsoxdeatjq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jsoxdeatjq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jsoxdeatjq .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jsoxdeatjq .gt_left {
+  text-align: left;
+}
+
+#jsoxdeatjq .gt_center {
+  text-align: center;
+}
+
+#jsoxdeatjq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jsoxdeatjq .gt_font_normal {
+  font-weight: normal;
+}
+
+#jsoxdeatjq .gt_font_bold {
+  font-weight: bold;
+}
+
+#jsoxdeatjq .gt_font_italic {
+  font-style: italic;
+}
+
+#jsoxdeatjq .gt_super {
+  font-size: 65%;
+}
+
+#jsoxdeatjq .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#jsoxdeatjq .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#jsoxdeatjq .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#jsoxdeatjq .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#jsoxdeatjq .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#jsoxdeatjq .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#jsoxdeatjq .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header gt_heading">
+<th colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border"><div style="text-align:center;">
+<img src="img/curriculum_gs_caltex.png" class="img-fluid" style="height:30px;">
+</div>
+<div>
+<strong>GS 칼텍스</strong> 시민 데이터 과학
+</div></th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="일정" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">일정</th>
+<th id="과정" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">과정</th>
+<th id="과정상세" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">과정상세</th>
+<th id="데이터셋" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">데이터셋</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="일정" style="font-variant: small-caps"><p>1주차</p></td>
+<td class="gt_row gt_center" headers="과정" style="font-variant: small-caps"><p>Introduction</p></td>
+<td class="gt_row gt_center" headers="과정상세" style="font-variant: small-caps"><ul>
+<li>Defining and solving problems<br>- Quantifying performance indicators<br>- Stats and Probability for Data Science</li>
+</ul></td>
+<td class="gt_row gt_center" headers="데이터셋" style="font-variant: small-caps">-</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="일정" style="font-variant: small-caps"><p>2주차</p></td>
+<td class="gt_row gt_center gt_striped" headers="과정" style="font-variant: small-caps"><p>Data Science</p></td>
+<td class="gt_row gt_center gt_striped" headers="과정상세" style="font-variant: small-caps"><ul>
+<li>Python 기초 문법 복습 및 NumPy, Pandas 등 연습<br>- Kaggle: MPG / Titanic EDA 개념과 Data science 전체흐름 습득<br>- EDA, Feature engineering, Visualization, Correlating 등 preprocessing 작업<br>- Model, predict and evaluation 의 전체 과정을 습득</li>
+</ul></td>
+<td class="gt_row gt_center gt_striped" headers="데이터셋" style="font-variant: small-caps">-</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="일정" style="font-variant: small-caps"><p>3주차</p></td>
+<td class="gt_row gt_center" headers="과정" style="font-variant: small-caps"><p>Regression and Prediction</p></td>
+<td class="gt_row gt_center" headers="과정상세" style="font-variant: small-caps"><ul>
+<li>Regression에 대한 개념 및 이론 설명</li>
+</ul></td>
+<td class="gt_row gt_center" headers="데이터셋" style="font-variant: small-caps"><p>Breast Cancer, California housing prices, Bike-sharing</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="일정" style="font-variant: small-caps"><p>3주차</p></td>
+<td class="gt_row gt_center gt_striped" headers="과정" style="font-variant: small-caps"><p>Regression and Prediction</p></td>
+<td class="gt_row gt_center gt_striped" headers="과정상세" style="font-variant: small-caps"><ul>
+<li>EDA 및 preprocessing<br>- Linear Regression 중심, CART, SVM, Ensemble기법 적용<br>- Training &amp; Evaluation (MSE, MAE, RMSE, RMSLE, R-Squared, etc.)<br>- Basic hyperparameter tuning 수행</li>
+</ul></td>
+<td class="gt_row gt_center gt_striped" headers="데이터셋" style="font-variant: small-caps">-</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="일정" style="font-variant: small-caps"><p>4주차</p></td>
+<td class="gt_row gt_center" headers="과정" style="font-variant: small-caps"><p>Classification and Hypothesis Testing</p></td>
+<td class="gt_row gt_center" headers="과정상세" style="font-variant: small-caps"><ul>
+<li>Classification과 필요 개념 및 이론 설명</li>
+</ul></td>
+<td class="gt_row gt_center" headers="데이터셋" style="font-variant: small-caps"><p>Titanic, Iris, Penuins, San Francisco Crime</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="일정" style="font-variant: small-caps"><p>4주차</p></td>
+<td class="gt_row gt_center gt_striped" headers="과정" style="font-variant: small-caps"><p>Classification and Hypothesis Testing</p></td>
+<td class="gt_row gt_center gt_striped" headers="과정상세" style="font-variant: small-caps"><ul>
+<li>Logistic Regression과 Decision Tree, SVC, Random Forest, XGBoost, LGBM 등 적용<br>- Training &amp; Evaluation / Basic hyperparameter tuning 수행</li>
+</ul></td>
+<td class="gt_row gt_center gt_striped" headers="데이터셋" style="font-variant: small-caps">-</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="일정" style="font-variant: small-caps"><p>5주차</p></td>
+<td class="gt_row gt_center" headers="과정" style="font-variant: small-caps"><p>Case Studies and Projects</p></td>
+<td class="gt_row gt_center" headers="과정상세" style="font-variant: small-caps"><ul>
+<li>기존 수업 이론/실습 개념 바탕 Case Study 3종 (+Final Quiz)<br>- Case Study 및 Final Quiz 해설<br>- 개인 별 Project 인터뷰 및 Grouping / 공통과제 선정<br>- Project 진행, 발표, Best Project 선정 및 공유</li>
+</ul></td>
+<td class="gt_row gt_center" headers="데이터셋" style="font-variant: small-caps">-</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://r2bit.com/curriculum/">GS 칼텍스 데이터 사이언스</a></li>
+</ul>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div id="sxlfzttser" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#sxlfzttser table {
+  font-family: Sunflower, NanumGothic, Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#sxlfzttser thead, #sxlfzttser tbody, #sxlfzttser tfoot, #sxlfzttser tr, #sxlfzttser td, #sxlfzttser th {
+  border-style: none;
+}
+
+#sxlfzttser p {
+  margin: 0;
+  padding: 0;
+}
+
+#sxlfzttser .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#sxlfzttser .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#sxlfzttser .gt_title {
+  color: #333333;
+  font-size: 17px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#sxlfzttser .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#sxlfzttser .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sxlfzttser .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sxlfzttser .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sxlfzttser .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#sxlfzttser .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#sxlfzttser .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#sxlfzttser .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#sxlfzttser .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#sxlfzttser .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#sxlfzttser .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#sxlfzttser .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#sxlfzttser .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#sxlfzttser .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#sxlfzttser .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#sxlfzttser .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sxlfzttser .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#sxlfzttser .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#sxlfzttser .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#sxlfzttser .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sxlfzttser .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#sxlfzttser .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#sxlfzttser .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sxlfzttser .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sxlfzttser .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#sxlfzttser .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sxlfzttser .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#sxlfzttser .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sxlfzttser .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sxlfzttser .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sxlfzttser .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sxlfzttser .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sxlfzttser .gt_left {
+  text-align: left;
+}
+
+#sxlfzttser .gt_center {
+  text-align: center;
+}
+
+#sxlfzttser .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#sxlfzttser .gt_font_normal {
+  font-weight: normal;
+}
+
+#sxlfzttser .gt_font_bold {
+  font-weight: bold;
+}
+
+#sxlfzttser .gt_font_italic {
+  font-style: italic;
+}
+
+#sxlfzttser .gt_super {
+  font-size: 65%;
+}
+
+#sxlfzttser .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#sxlfzttser .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#sxlfzttser .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#sxlfzttser .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#sxlfzttser .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#sxlfzttser .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#sxlfzttser .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header gt_heading">
+<th colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border"><div style="text-align:center;">
+<img src="img/curriculum_gs_caltex.png" class="img-fluid" style="height:30px;">
+</div>
+<div>
+<strong>GS 칼텍스</strong> 데이터 과학
+</div></th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="일정" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">일정</th>
+<th id="과목명" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">과목명</th>
+<th id="학습상세" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">학습상세</th>
+<th id="데이터셋" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">데이터셋</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="일정" style="font-variant: small-caps">00주차</td>
+<td class="gt_row gt_center" headers="과목명" style="font-variant: small-caps">환경설정</td>
+<td class="gt_row gt_center" headers="학습상세" style="font-variant: small-caps">학습 도구 설치 및 학습환경</td>
+<td class="gt_row gt_center" headers="데이터셋" style="font-variant: small-caps">파머 펭귄, BitData</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="일정" style="font-variant: small-caps">01주차</td>
+<td class="gt_row gt_center gt_striped" headers="과목명" style="font-variant: small-caps">디지털 글쓰기(보고서)</td>
+<td class="gt_row gt_center gt_striped" headers="학습상세" style="font-variant: small-caps">마크다운 / Quarto</td>
+<td class="gt_row gt_center gt_striped" headers="데이터셋" style="font-variant: small-caps">BitData</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="일정" style="font-variant: small-caps">02주차</td>
+<td class="gt_row gt_center" headers="과목명" style="font-variant: small-caps">명령라인 데이터 분석</td>
+<td class="gt_row gt_center" headers="학습상세" style="font-variant: small-caps">자동화(Shell)</td>
+<td class="gt_row gt_center" headers="데이터셋" style="font-variant: small-caps">SWC</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="일정" style="font-variant: small-caps">03주차</td>
+<td class="gt_row gt_center gt_striped" headers="과목명" style="font-variant: small-caps">버전 제어</td>
+<td class="gt_row gt_center gt_striped" headers="학습상세" style="font-variant: small-caps">버전제어/협업(Git / GitHub / GitLab)</td>
+<td class="gt_row gt_center gt_striped" headers="데이터셋" style="font-variant: small-caps"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="일정" style="font-variant: small-caps">04주차</td>
+<td class="gt_row gt_center" headers="과목명" style="font-variant: small-caps">프로그래밍</td>
+<td class="gt_row gt_center" headers="학습상세" style="font-variant: small-caps">SQL</td>
+<td class="gt_row gt_center" headers="데이터셋" style="font-variant: small-caps">Data Carpentry, DVD 렌탈</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="일정" style="font-variant: small-caps">05주차</td>
+<td class="gt_row gt_center gt_striped" headers="과목명" style="font-variant: small-caps">프로그래밍</td>
+<td class="gt_row gt_center gt_striped" headers="학습상세" style="font-variant: small-caps">시각화</td>
+<td class="gt_row gt_center gt_striped" headers="데이터셋" style="font-variant: small-caps">gapminder</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="일정" style="font-variant: small-caps">06주차</td>
+<td class="gt_row gt_center" headers="과목명" style="font-variant: small-caps">프로그래밍</td>
+<td class="gt_row gt_center" headers="학습상세" style="font-variant: small-caps">파이썬</td>
+<td class="gt_row gt_center" headers="데이터셋" style="font-variant: small-caps"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="일정" style="font-variant: small-caps">07주차</td>
+<td class="gt_row gt_center gt_striped" headers="과목명" style="font-variant: small-caps">대쉬보드</td>
+<td class="gt_row gt_center gt_striped" headers="학습상세" style="font-variant: small-caps">Flexdashboard / Shinydashboard</td>
+<td class="gt_row gt_center gt_striped" headers="데이터셋" style="font-variant: small-caps"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="일정" style="font-variant: small-caps">08주차</td>
+<td class="gt_row gt_center" headers="과목명" style="font-variant: small-caps">기계학습</td>
+<td class="gt_row gt_center" headers="학습상세" style="font-variant: small-caps">tidymodels / scikit-learn</td>
+<td class="gt_row gt_center" headers="데이터셋" style="font-variant: small-caps"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="일정" style="font-variant: small-caps">09주차</td>
+<td class="gt_row gt_center gt_striped" headers="과목명" style="font-variant: small-caps">데이터 과학 제품</td>
+<td class="gt_row gt_center gt_striped" headers="학습상세" style="font-variant: small-caps">RESTful API</td>
+<td class="gt_row gt_center gt_striped" headers="데이터셋" style="font-variant: small-caps"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="일정" style="font-variant: small-caps">10주차</td>
+<td class="gt_row gt_center" headers="과목명" style="font-variant: small-caps">특수 데이터</td>
+<td class="gt_row gt_center" headers="학습상세" style="font-variant: small-caps">시계열(Time Series)</td>
+<td class="gt_row gt_center" headers="데이터셋" style="font-variant: small-caps">KOSPI</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="일정" style="font-variant: small-caps">11주차</td>
+<td class="gt_row gt_center gt_striped" headers="과목명" style="font-variant: small-caps">특수 데이터</td>
+<td class="gt_row gt_center gt_striped" headers="학습상세" style="font-variant: small-caps">공간정보(Geospatial) / 텍스트 분석</td>
+<td class="gt_row gt_center gt_striped" headers="데이터셋" style="font-variant: small-caps">미디어오늘</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="일정" style="font-variant: small-caps">12주차</td>
+<td class="gt_row gt_center" headers="과목명" style="font-variant: small-caps">비정형 데이터</td>
+<td class="gt_row gt_center" headers="학습상세" style="font-variant: small-caps">텍스트와 이미지 (딥러닝)</td>
+<td class="gt_row gt_center" headers="데이터셋" style="font-variant: small-caps"></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<ul>
+<li><a href="https://r2bit.com/curriculum/">GS 칼텍스 데이터 사이언스</a></li>
+</ul>
+</div>
+<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtExtras)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>extrafont<span class="sc">::</span><span class="fu">loadfonts</span>()</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>curriculum_raw <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"{here::here()}/data/건국대_커리큘럼.xlsx"</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>curriculum <span class="ot">&lt;-</span> curriculum_raw <span class="sc">%&gt;%</span> </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fill</span>(<span class="fu">everything</span>(), <span class="at">.direction=</span><span class="st">"down"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(날짜 <span class="ot">=</span> <span class="fu">as.Date</span>(날짜)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(주차 <span class="ot">=</span> glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"{주차} 주차"</span>))</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="do">## 첫번째</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>curriculum_first <span class="ot">&lt;-</span> curriculum <span class="sc">%&gt;%</span> </span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dplyr<span class="sc">::</span><span class="fu">row_number</span>() <span class="sc">&lt;=</span><span class="dv">10</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>curriculum_first_gt <span class="ot">&lt;-</span> curriculum_first <span class="sc">%&gt;%</span>   </span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>(<span class="at">groupname_col =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"날짜"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_font</span>(</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">font =</span> <span class="fu">list</span>(</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NanumGothic"</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_pff</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>      <span class="st">"font-variant: small-caps;"</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>      htmltools<span class="sc">::</span><span class="fu">tagList</span>(</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>          <span class="at">style =</span> htmltools<span class="sc">::</span><span class="fu">css</span>(</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>            <span class="st">`</span><span class="at">text-align</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"center"</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>          ),</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span><span class="fu">HTML</span>(</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>            <span class="fu">web_image</span>(<span class="st">"img/konkuk/tools.png"</span>)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>          )</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>        htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>          htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">strong</span>(<span class="st">"챗GPT 데이터 사이언스"</span>),</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>          <span class="st">"건국대 전문교육과정"</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="do">## 두번째</span></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>curriculum_second <span class="ot">&lt;-</span> curriculum <span class="sc">%&gt;%</span> </span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(dplyr<span class="sc">::</span><span class="fu">row_number</span>() <span class="sc">&gt;</span> <span class="dv">10</span>)</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>curriculum_second_gt <span class="ot">&lt;-</span> curriculum_second <span class="sc">%&gt;%</span>   </span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>(<span class="at">groupname_col =</span> <span class="fu">c</span>(<span class="st">"주차"</span>, <span class="st">"날짜"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_font</span>(</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>    <span class="at">font =</span> <span class="fu">list</span>(</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>      <span class="fu">google_font</span>(<span class="at">name =</span> <span class="st">"Sunflower"</span>),</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>      <span class="st">"NanumGothic"</span></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_pff</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>      <span class="st">"font-variant: small-caps;"</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="do">## 결합</span></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>listed_tables <span class="ot">&lt;-</span> <span class="fu">list</span>(curriculum_first_gt, curriculum_second_gt)</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a><span class="fu">gt_two_column_layout</span>(listed_tables)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<div style="display: inline-block;float:left;">
+<div id="hakjaxuurk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#hakjaxuurk table {
+  font-family: Roboto, Sunflower, NanumGothic, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hakjaxuurk thead, #hakjaxuurk tbody, #hakjaxuurk tfoot, #hakjaxuurk tr, #hakjaxuurk td, #hakjaxuurk th {
+  border-style: none;
+}
+
+#hakjaxuurk p {
+  margin: 0;
+  padding: 0;
+}
+
+#hakjaxuurk .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#hakjaxuurk .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#hakjaxuurk .gt_title {
+  color: #333333;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#hakjaxuurk .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#hakjaxuurk .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hakjaxuurk .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hakjaxuurk .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hakjaxuurk .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#hakjaxuurk .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#hakjaxuurk .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#hakjaxuurk .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#hakjaxuurk .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#hakjaxuurk .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hakjaxuurk .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#hakjaxuurk .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hakjaxuurk .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#hakjaxuurk .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#hakjaxuurk .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#hakjaxuurk .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hakjaxuurk .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hakjaxuurk .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#hakjaxuurk .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hakjaxuurk .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hakjaxuurk .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#hakjaxuurk .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hakjaxuurk .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hakjaxuurk .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hakjaxuurk .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#hakjaxuurk .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hakjaxuurk .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#hakjaxuurk .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hakjaxuurk .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hakjaxuurk .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hakjaxuurk .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hakjaxuurk .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hakjaxuurk .gt_left {
+  text-align: left;
+}
+
+#hakjaxuurk .gt_center {
+  text-align: center;
+}
+
+#hakjaxuurk .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hakjaxuurk .gt_font_normal {
+  font-weight: normal;
+}
+
+#hakjaxuurk .gt_font_bold {
+  font-weight: bold;
+}
+
+#hakjaxuurk .gt_font_italic {
+  font-style: italic;
+}
+
+#hakjaxuurk .gt_super {
+  font-size: 65%;
+}
+
+#hakjaxuurk .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#hakjaxuurk .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hakjaxuurk .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hakjaxuurk .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hakjaxuurk .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hakjaxuurk .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hakjaxuurk .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_heading">
+<th colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border"><div style="text-align:center;">
+<img src="img/konkuk/tools.png" class="img-fluid" style="height:30px;">
+</div>
+<div>
+<strong>챗GPT 데이터 사이언스</strong> 건국대 전문교육과정
+</div></th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="강의주제" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">강의주제</th>
+<th id="강의내용" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">강의내용</th>
+<th id="수업방법" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">수업방법</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd gt_group_heading_row">
+<td colspan="3" id="1 주차 - 2023-07-01" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">1 주차 - 2023-07-01</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_center" headers="1 주차 - 2023-07-01  강의주제" style="font-variant: small-caps">데이터 사이언스 언어</td>
+<td class="gt_row gt_center" headers="1 주차 - 2023-07-01  강의내용" style="font-variant: small-caps">챗GPT와 데이터 사이언스</td>
+<td class="gt_row gt_center" headers="1 주차 - 2023-07-01  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center gt_striped" headers="1 주차 - 2023-07-01  강의주제" style="font-variant: small-caps">데이터 사이언스 언어</td>
+<td class="gt_row gt_center gt_striped" headers="1 주차 - 2023-07-01  강의내용" style="font-variant: small-caps">Tidyverse와 챗GPT</td>
+<td class="gt_row gt_center gt_striped" headers="1 주차 - 2023-07-01  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="1 주차 - 2023-07-01  강의주제" style="font-variant: small-caps">데이터 사이언스 언어</td>
+<td class="gt_row gt_center" headers="1 주차 - 2023-07-01  강의내용" style="font-variant: small-caps">파이썬/R/SQL 그리고 API</td>
+<td class="gt_row gt_center" headers="1 주차 - 2023-07-01  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="3" id="2 주차 - 2023-07-08" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">2 주차 - 2023-07-08</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_center gt_striped" headers="2 주차 - 2023-07-08  강의주제" style="font-variant: small-caps">소프트웨어 카펜트리 (기본기)</td>
+<td class="gt_row gt_center gt_striped" headers="2 주차 - 2023-07-08  강의내용" style="font-variant: small-caps">자동화: 유닉스 쉘</td>
+<td class="gt_row gt_center gt_striped" headers="2 주차 - 2023-07-08  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="2 주차 - 2023-07-08  강의주제" style="font-variant: small-caps">소프트웨어 카펜트리 (기본기)</td>
+<td class="gt_row gt_center" headers="2 주차 - 2023-07-08  강의내용" style="font-variant: small-caps">버전제어: Git / GitHub</td>
+<td class="gt_row gt_center" headers="2 주차 - 2023-07-08  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="even gt_group_heading_row">
+<td colspan="3" id="3 주차 - 2023-07-15" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">3 주차 - 2023-07-15</td>
+</tr>
+<tr class="odd gt_row_group_first">
+<td class="gt_row gt_center gt_striped" headers="3 주차 - 2023-07-15  강의주제" style="font-variant: small-caps">소프트웨어 카펜트리 (기본기)</td>
+<td class="gt_row gt_center gt_striped" headers="3 주차 - 2023-07-15  강의내용" style="font-variant: small-caps">파이썬 / R</td>
+<td class="gt_row gt_center gt_striped" headers="3 주차 - 2023-07-15  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="3 주차 - 2023-07-15  강의주제" style="font-variant: small-caps">소프트웨어 카펜트리 (기본기)</td>
+<td class="gt_row gt_center" headers="3 주차 - 2023-07-15  강의내용" style="font-variant: small-caps">데이터베이스</td>
+<td class="gt_row gt_center" headers="3 주차 - 2023-07-15  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="3" id="4 주차 - 2023-07-22" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">4 주차 - 2023-07-22</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_center gt_striped" headers="4 주차 - 2023-07-22  강의주제" style="font-variant: small-caps">데이터 과학 자료구조</td>
+<td class="gt_row gt_center gt_striped" headers="4 주차 - 2023-07-22  강의내용" style="font-variant: small-caps">숫자/범주 --&gt; 데이터프레임</td>
+<td class="gt_row gt_center gt_striped" headers="4 주차 - 2023-07-22  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="4 주차 - 2023-07-22  강의주제" style="font-variant: small-caps">데이터 과학 자료구조</td>
+<td class="gt_row gt_center" headers="4 주차 - 2023-07-22  강의내용" style="font-variant: small-caps">날짜/공간정보/네트워크</td>
+<td class="gt_row gt_center" headers="4 주차 - 2023-07-22  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="4 주차 - 2023-07-22  강의주제" style="font-variant: small-caps">데이터 과학 자료구조</td>
+<td class="gt_row gt_center gt_striped" headers="4 주차 - 2023-07-22  강의내용" style="font-variant: small-caps">텍스트/이미지/오디오</td>
+<td class="gt_row gt_center gt_striped" headers="4 주차 - 2023-07-22  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div style="display: inline-block;float:right;">
+<div id="hrblnglyvd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#hrblnglyvd table {
+  font-family: Roboto, Sunflower, NanumGothic, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hrblnglyvd thead, #hrblnglyvd tbody, #hrblnglyvd tfoot, #hrblnglyvd tr, #hrblnglyvd td, #hrblnglyvd th {
+  border-style: none;
+}
+
+#hrblnglyvd p {
+  margin: 0;
+  padding: 0;
+}
+
+#hrblnglyvd .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#hrblnglyvd .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#hrblnglyvd .gt_title {
+  color: #333333;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#hrblnglyvd .gt_subtitle {
+  color: #333333;
+  font-size: 16px;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#hrblnglyvd .gt_heading {
+  background-color: #FFFFFF;
+  text-align: left;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hrblnglyvd .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hrblnglyvd .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hrblnglyvd .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#hrblnglyvd .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#hrblnglyvd .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#hrblnglyvd .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#hrblnglyvd .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: rgba(255, 255, 255, 0);
+  vertical-align: bottom;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#hrblnglyvd .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hrblnglyvd .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#hrblnglyvd .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hrblnglyvd .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#hrblnglyvd .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#hrblnglyvd .gt_row {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#hrblnglyvd .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 80%;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hrblnglyvd .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hrblnglyvd .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#hrblnglyvd .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hrblnglyvd .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hrblnglyvd .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#hrblnglyvd .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hrblnglyvd .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hrblnglyvd .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hrblnglyvd .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#hrblnglyvd .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hrblnglyvd .gt_striped {
+  background-color: #F5F5F5;
+}
+
+#hrblnglyvd .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hrblnglyvd .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hrblnglyvd .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hrblnglyvd .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hrblnglyvd .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hrblnglyvd .gt_left {
+  text-align: left;
+}
+
+#hrblnglyvd .gt_center {
+  text-align: center;
+}
+
+#hrblnglyvd .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hrblnglyvd .gt_font_normal {
+  font-weight: normal;
+}
+
+#hrblnglyvd .gt_font_bold {
+  font-weight: bold;
+}
+
+#hrblnglyvd .gt_font_italic {
+  font-style: italic;
+}
+
+#hrblnglyvd .gt_super {
+  font-size: 65%;
+}
+
+#hrblnglyvd .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#hrblnglyvd .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hrblnglyvd .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hrblnglyvd .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hrblnglyvd .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hrblnglyvd .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hrblnglyvd .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="강의주제" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">강의주제</th>
+<th id="강의내용" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">강의내용</th>
+<th id="수업방법" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="background-color: #585D63; color: #FFFFFF; font-size: 10px; font-weight: bold; border-bottom-width: 2.5px; border-bottom-style: solid; border-bottom-color: #585d63" scope="col">수업방법</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd gt_group_heading_row">
+<td colspan="3" id="5 주차 - 2023-07-29" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">5 주차 - 2023-07-29</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_center" headers="5 주차 - 2023-07-29  강의주제" style="font-variant: small-caps">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td class="gt_row gt_center" headers="5 주차 - 2023-07-29  강의내용" style="font-variant: small-caps">디지털 보고서(PDF, HTML, PPT)</td>
+<td class="gt_row gt_center" headers="5 주차 - 2023-07-29  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center gt_striped" headers="5 주차 - 2023-07-29  강의주제" style="font-variant: small-caps">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td class="gt_row gt_center gt_striped" headers="5 주차 - 2023-07-29  강의내용" style="font-variant: small-caps">Serverless 대쉬보드, R/Python 대쉬보드</td>
+<td class="gt_row gt_center gt_striped" headers="5 주차 - 2023-07-29  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="5 주차 - 2023-07-29  강의주제" style="font-variant: small-caps">디지털 글쓰기, 대쉬보드, API 개발</td>
+<td class="gt_row gt_center" headers="5 주차 - 2023-07-29  강의내용" style="font-variant: small-caps">기계학습 모형 API 배포</td>
+<td class="gt_row gt_center" headers="5 주차 - 2023-07-29  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="3" id="- 주차 - 2023-08-05" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">- 주차 - 2023-08-05</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_center gt_striped" headers="- 주차 - 2023-08-05  강의주제" style="font-variant: small-caps">휴가</td>
+<td class="gt_row gt_center gt_striped" headers="- 주차 - 2023-08-05  강의내용" style="font-variant: small-caps">휴가</td>
+<td class="gt_row gt_center gt_striped" headers="- 주차 - 2023-08-05  수업방법" style="font-variant: small-caps">-</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="3" id="6 주차 - 2023-08-12" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">6 주차 - 2023-08-12</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_center" headers="6 주차 - 2023-08-12  강의주제" style="font-variant: small-caps">챗GPT와 오픈소스</td>
+<td class="gt_row gt_center" headers="6 주차 - 2023-08-12  강의내용" style="font-variant: small-caps">(오픈소스) 거대언어모형(LLM)</td>
+<td class="gt_row gt_center" headers="6 주차 - 2023-08-12  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center gt_striped" headers="6 주차 - 2023-08-12  강의주제" style="font-variant: small-caps">챗GPT와 오픈소스</td>
+<td class="gt_row gt_center gt_striped" headers="6 주차 - 2023-08-12  강의내용" style="font-variant: small-caps">Write/Draw/Coding/Reasoning</td>
+<td class="gt_row gt_center gt_striped" headers="6 주차 - 2023-08-12  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="6 주차 - 2023-08-12  강의주제" style="font-variant: small-caps">챗GPT와 오픈소스</td>
+<td class="gt_row gt_center" headers="6 주차 - 2023-08-12  강의내용" style="font-variant: small-caps">AI 시대 데이터 사이언스 제품개발 방법</td>
+<td class="gt_row gt_center" headers="6 주차 - 2023-08-12  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="3" id="7 주차 - 2023-08-19" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">7 주차 - 2023-08-19</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_center gt_striped" headers="7 주차 - 2023-08-19  강의주제" style="font-variant: small-caps">Prompt Engineering</td>
+<td class="gt_row gt_center gt_striped" headers="7 주차 - 2023-08-19  강의내용" style="font-variant: small-caps">사용자 및 개발자를 위한 프롬프트 공학</td>
+<td class="gt_row gt_center gt_striped" headers="7 주차 - 2023-08-19  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="7 주차 - 2023-08-19  강의주제" style="font-variant: small-caps">Prompt Engineering</td>
+<td class="gt_row gt_center" headers="7 주차 - 2023-08-19  강의내용" style="font-variant: small-caps">OpenAI API 기반 NLP 개발</td>
+<td class="gt_row gt_center" headers="7 주차 - 2023-08-19  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="7 주차 - 2023-08-19  강의주제" style="font-variant: small-caps">Prompt Engineering</td>
+<td class="gt_row gt_center gt_striped" headers="7 주차 - 2023-08-19  강의내용" style="font-variant: small-caps">OPL(OpenAI, Pinecone, Langchain) 프레임워크</td>
+<td class="gt_row gt_center gt_striped" headers="7 주차 - 2023-08-19  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="odd gt_group_heading_row">
+<td colspan="3" id="8 주차 - 2023-08-26" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">8 주차 - 2023-08-26</td>
+</tr>
+<tr class="even gt_row_group_first">
+<td class="gt_row gt_center" headers="8 주차 - 2023-08-26  강의주제" style="font-variant: small-caps">챗GPT AI 앱 프로젝트</td>
+<td class="gt_row gt_center" headers="8 주차 - 2023-08-26  강의내용" style="font-variant: small-caps">오픈소스 LLM 기반 AI 데이터 분석 제품</td>
+<td class="gt_row gt_center" headers="8 주차 - 2023-08-26  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center gt_striped" headers="8 주차 - 2023-08-26  강의주제" style="font-variant: small-caps">챗GPT AI 앱 프로젝트</td>
+<td class="gt_row gt_center gt_striped" headers="8 주차 - 2023-08-26  강의내용" style="font-variant: small-caps">데이터 사이언스 AutoGPT</td>
+<td class="gt_row gt_center gt_striped" headers="8 주차 - 2023-08-26  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="8 주차 - 2023-08-26  강의주제" style="font-variant: small-caps">챗GPT AI 앱 프로젝트</td>
+<td class="gt_row gt_center" headers="8 주차 - 2023-08-26  강의내용" style="font-variant: small-caps">챗GPT AI 프로젝트 발표</td>
+<td class="gt_row gt_center" headers="8 주차 - 2023-08-26  수업방법" style="font-variant: small-caps">핸즈온 실습</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
+<p><br></p>
+<p><a href="img/education_evaluation.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/education_evaluation.jpg" class="img-fluid"></a></p>
+<ul>
+<li><a href="https://r2bit.com/curriculum/mcq_stat.html">데이터 사이언스 MCQ</a></li>
+</ul>
+</div>
+</section></section></main></div>
+
+
+
+
+
+
+ <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "복사완료!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "복사완료!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+ <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});</script>
+
+
+
+
+</body></html>

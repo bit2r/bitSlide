@@ -1,0 +1,93 @@
+# GPT-4 터보
+
+## OpenAI DevDay (2023-11-06)
+
+::: panel-tabset
+### 유튜브
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U9mJuUkhUzk?si=92ZTbuZUuL8wZwUW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
+
+::: aside
+[OpenAI DevDay, Opening Keynote](https://www.youtube.com/watch?v=U9mJuUkhUzk)
+:::
+
+### 맥락 크기
+
+|   구분   |  GPT-4 Turbo  |   GPT-4 32K   | GPT-3.5 Turbo |
+|:--------:|:-------------:|:-------------:|:-------------:|
+| 문맥 창  | 128,000 토큰  |  32,000 토큰  |  8,192 토큰   |
+| 페이지수 |   약 300 쪽   |   약 75 쪽    |   약 19 쪽    |
+|   기준   | 427 토큰 / 쪽 | 427 토큰 / 쪽 | 427 토큰 / 쪽 |
+
+### 비용
+
+환율(1,300월/1달러)을 적용하여 1,000개 토큰 기준 비용을 산출하면 `GPT-4 Turbo`가 `GPT-4` 와 비교하면 입력기준 $\frac{1}{3}$ 저렴하다.
+
+|     모형      | 입력(1K 토큰) | 출력(1K 토큰) |
+|:-------------:|:-------------:|:-------------:|
+|  GPT-4 Turbo  |  **13.0원**   |  **39.0원**   |
+|     GPT-4     |    39.0원     |    78.0원     |
+|   GPT-4 32k   |    78.0원     |    156.0원    |
+| GPT-3.5 Turbo |     1.3원     |     2.6원     |
+| Assistant API |    19.5원     |      \-       |
+
+### 다중 모드성
+
+"GPT-4 터보"는 **다중 모드성(Multimodality)**를 제공한다. 과거 텍스트, 이미지, 오디오 각각 다른 모드로 제공된 것이 "GPT-4 터보"에서 통합되어 제공된다.
+
+-   텍스트(GPT-4)
+-   이미지(DALL-E 3)
+-   오디오(Whisper)
+:::
+
+## 최신 지식
+
+**2021년 9월 → 2023년 4월**
+
+::: panel-tabset
+### GPT3-5-turbo
+
+![2023년 11월 7일 기준](img/GPT4_turbo/gpt_3_5_turbo.jpg)
+
+### GPT-4 + 빙검색
+
+![2023년 11월 7일 기준](img/GPT4_turbo/gpt_4_bing.jpg)
+
+### GPT-4
+
+![2023년 11월 7일 기준](img/GPT4_turbo/gpt_4.jpg)
+
+### GPT-4 터보
+
+![2023년 11월 7일 기준](img/GPT4_turbo/gpt_4_turbo.jpg){fig-align="center" width="1093"}
+:::
+
+
+## GPT 스토어 [^gpt-store] {.smaller}
+
+:::{layout-nrow="1"}
+
+![OpenAI GPT 빌더](img/GPT4_turbo/gpt_builder.jpg)
+
+![OpenAI GPT 스토어](img/GPT4_turbo/GPT_Store.jpg)
+
+:::
+
+[^gpt-store]: [App Store for AI: OpenAI’s GPT Store lets you build (and monetize) your own GPT](https://techcrunch.com/2023/11/06/app-store-for-ai-build-your-own-gpt-and-sell-it-on-openais-gpt-store/)
+
+## 생태계 진화
+
+::: {layout-nrow="1"}
+![설치형 SW](img/GPT4_turbo/plugins_01_disk.png)
+
+![웹 SW](img/GPT4_turbo/plugins_02_web.jpg.png)
+
+![스마트폰 앱SW](img/GPT4_turbo/plugins_03_app.png)
+
+![GPT 플러그인](img/GPT4_turbo/plugins_04_gpt.png)
+:::
+
+![스마트폰 → GPT](img/GPT4_turbo/openai_ecosystem.png){fig-align="left" width="263"}
+

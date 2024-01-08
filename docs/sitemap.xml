@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2bit.com/bitSlide/index.html</loc>
-    <lastmod>2023-11-01T09:58:38.430Z</lastmod>
+    <lastmod>2023-04-02T23:13:02.189Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/konkuk_20230901.html</loc>
@@ -1114,78 +1114,158 @@
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/sejong_202311.html</loc>
-    <lastmod>2023-11-10T06:48:58.981Z</lastmod>
+    <lastmod>2024-01-08T13:03:31.973Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/unix_shell.html</loc>
-    <lastmod>2023-10-18T01:57:12.953Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.071Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/reference.html</loc>
-    <lastmod>2023-10-18T01:57:10.582Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.070Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/office-interface.html</loc>
-    <lastmod>2023-10-18T01:57:08.803Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.070Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/econ_edu.html</loc>
-    <lastmod>2023-10-18T01:57:07.826Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.056Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/code_interpreter.html</loc>
-    <lastmod>2023-10-18T01:57:00.942Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.034Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/00-who-am-i.html</loc>
-    <lastmod>2023-11-01T07:47:13.507Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.033Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/curriculum.html</loc>
-    <lastmod>2023-10-18T01:57:05.896Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.049Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/interview.html</loc>
-    <lastmod>2023-10-18T01:57:08.281Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.069Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/plugin.html</loc>
-    <lastmod>2023-10-18T01:57:10.277Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.070Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/seoul-r-meeup.html</loc>
-    <lastmod>2023-10-18T01:57:10.920Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.071Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/chtGPT-digital-writing.html</loc>
-    <lastmod>2023-10-18T02:01:31.184Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.034Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/nice_202310.html</loc>
-    <lastmod>2023-11-01T07:45:13.284Z</lastmod>
+    <lastmod>2024-01-08T13:03:31.953Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/sejong_edu_202310.html</loc>
-    <lastmod>2023-11-01T09:58:41.581Z</lastmod>
+    <lastmod>2024-01-08T13:03:31.973Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202310_sejong/curriculum.html</loc>
-    <lastmod>2023-11-01T07:53:28.157Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.032Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202310_nice/unix_shell.html</loc>
-    <lastmod>2023-11-01T07:47:07.368Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.030Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202310_nice/spatial_kwangmyung.html</loc>
-    <lastmod>2023-11-01T07:47:06.968Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.018Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202310_sejong/00-who-am-i.html</loc>
-    <lastmod>2023-11-01T09:57:07.325Z</lastmod>
+    <lastmod>2024-01-08T13:03:32.031Z</lastmod>
   </url>
   <url>
     <loc>https://r2bit.com/bitSlide/slideshow/202310_sejong/seoul-r-meeup.html</loc>
     <lastmod>2023-11-01T07:47:10.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202311_sejong/gpt4_turbo.html</loc>
+    <lastmod>2024-01-08T13:03:32.056Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202310_nice/reference.html</loc>
+    <lastmod>2024-01-08T13:03:32.017Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202310_nice/office-interface.html</loc>
+    <lastmod>2024-01-08T13:03:31.989Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202310_nice/chtGPT-digital-writing.html</loc>
+    <lastmod>2024-01-08T13:03:31.975Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202310_nice/00-who-am-i.html</loc>
+    <lastmod>2024-01-08T13:03:31.975Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202310_nice/code_interpreter.html</loc>
+    <lastmod>2024-01-08T13:03:31.975Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202310_nice/plugin.html</loc>
+    <lastmod>2024-01-08T13:03:32.009Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/sejong_hs_202401.html</loc>
+    <lastmod>2024-01-08T13:49:16.887Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202401_sejong_hs/unix_shell.html</loc>
+    <lastmod>2024-01-08T13:47:36.044Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202401_sejong_hs/reference.html</loc>
+    <lastmod>2024-01-08T13:03:32.070Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202401_sejong_hs/office-interface.html</loc>
+    <lastmod>2024-01-08T13:03:32.070Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202401_sejong_hs/gpt4_turbo.html</loc>
+    <lastmod>2024-01-08T13:03:32.056Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202401_sejong_hs/curriculum.html</loc>
+    <lastmod>2024-01-08T13:03:32.049Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202401_sejong_hs/chtGPT-digital-writing.html</loc>
+    <lastmod>2024-01-08T13:03:32.034Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202401_sejong_hs/00-who-am-i.html</loc>
+    <lastmod>2024-01-08T13:45:16.990Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202401_sejong_hs/code_interpreter.html</loc>
+    <lastmod>2024-01-08T13:03:32.034Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202401_sejong_hs/econ_edu.html</loc>
+    <lastmod>2024-01-08T13:03:32.056Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202401_sejong_hs/interview.html</loc>
+    <lastmod>2024-01-08T13:03:32.069Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202401_sejong_hs/plugin.html</loc>
+    <lastmod>2024-01-08T13:03:32.070Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2bit.com/bitSlide/slideshow/202401_sejong_hs/seoul-r-meeup.html</loc>
+    <lastmod>2024-01-08T13:03:32.071Z</lastmod>
   </url>
 </urlset>

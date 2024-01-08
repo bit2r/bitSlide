@@ -1,0 +1,71 @@
+---
+title: "챗GPT 디지털 글쓰기 with R"
+subtitle: "과학기술 증거기반 글쓰기"
+author: "이광춘"
+institute: "한국 R 사용자회"
+date: 2024-01-23
+format: 
+  insper-revealjs:
+    self-contained: false
+    code-overflow: wrap
+    footer: |
+      한국 R 사용자회 [chatGPT](https://r2bit.com/chatGPT/). theme [insper](https://github.com/padsInsper/quarto-insper-theme) 소스코드 [GitHub](https://github.com/padsInsper/quarto-insper-theme).
+date-format: long
+lang: ko
+filters:
+   - lightbox
+lightbox: auto
+bibliography: bibliography.bib
+csl: apa-single-spaced.csl  
+editor_options: 
+  chunk_output_type: console
+---
+
+## 목차
+
+1.  강사 및 강의 소개
+
+2.  챗GPT 유닉스 쉘 / 디지털 글쓰기 (도서)
+
+3.  대학교육 ( 통계 사례 연구 )
+
+4.  챗GPT 활용 (데이터 사이언스)
+
+5.  생성형 AI ~~경제~~ 일자리와 교육
+
+6.  챗GPT 플러그인
+
+7.  생성형 AI 데이터 사이언스
+
+8.  글쓰기와 오피스 전쟁
+
+9.  챗GPT 디지털 글쓰기
+
+10. GPT-4 터보
+
+11. 질의응답!
+
+{{< include slideshow/202401_sejong_hs/00-who-am-i.qmd >}}
+
+{{< include slideshow/202401_sejong_hs/unix_shell.qmd >}}
+
+<!-- {{< include slideshow/202401_sejong_hs/curriculum.qmd >}} -->
+
+{{< include slideshow/202401_sejong_hs/interview.qmd >}}
+
+{{< include slideshow/202401_sejong_hs/econ_edu.qmd >}}
+
+{{< include slideshow/202401_sejong_hs/plugin.qmd >}}
+
+{{< include slideshow/202401_sejong_hs/code_interpreter.qmd >}}
+
+{{< include slideshow/202401_sejong_hs/office-interface.qmd >}}
+
+{{< include slideshow/202401_sejong_hs/chtGPT-digital-writing.qmd >}}
+
+{{< include slideshow/202401_sejong_hs/gpt4_turbo.qmd >}}
+
+{{< include slideshow/202401_sejong_hs/reference.qmd >}}
+
+{{< include slideshow/202401_sejong_hs/seoul-r-meeup.qmd >}}
+
